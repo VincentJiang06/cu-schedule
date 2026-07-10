@@ -19,12 +19,10 @@
    | 冲突 | 所有组合都和你确定要上的课冲突 |
    | 待定 | 本学期尚未公布上课时间 |
 
-4. **读懂选课限制**。课程目录里的 `enrollment_requirement` 是自由文本，我们只解析能确定解析的部分：
+4. **读懂选课限制**。课程目录里的 `enrollment_requirement` 是自由文本，我们把先修条件解析成完整的布尔表达式（`and` / `or` / 嵌套括号 / `/` 等价写法都支持），用三值逻辑（满足 / 不满足 / 不确定）求值：
    - `Not for students who have taken X` —— 你修过 X，这门课直接从表里移除。
-   - `Pre-requisite: A or B` —— 两门都没修过，标一个「缺先修」。
-   - 混杂 `and` / `or` 的复合先修（如 `Prerequisite: BCME1205, 2001 and 2201`）**不解析**。宁可不提示，也不给错误提示。
-
-时间偏好（不上早课 / 不上夜课 / 留出午休 / 某天空堂）是硬约束，会直接参与排课与筛选。
+   - `Pre-requisite: (A or B) and C` —— 只有在能**证明**条件不满足时才标「缺先修」；铁律是宁可不提示，也不给错误提示。
+   - 成绩条件、导师/院系同意、豁免这类没法核验的条件，一律判「不确定」，按满足处理——不会因为我们读不懂一句话，就把你本来能选的课误判成不能选。
 
 ---
 
@@ -39,7 +37,7 @@
 ```text
 CUHK 公开课程目录（外部）
     ↓  scripts/scrape_all_subjects.py        （来自 EagleZhen）
-data/<year>/<SUBJ>.json                       ~38 MB / 学年
+data/raw/courses/<year>/<SUBJ>.json            ~38 MB / 学年
     ↓  scripts/build_term_bundles.py          （本项目）
 public/data/<year>/<term>.json                ~1.8 MB / 学期（gzip 后 ~220 KB）
     ↓
@@ -47,6 +45,8 @@ public/data/<year>/<term>.json                ~1.8 MB / 学期（gzip 后 ~220 K
 ```
 
 前端一次性把整学期 2973 门课全部读进内存，是"主动筛选可选课"能成立的前提 —— 每次改动课表都要对全目录重算一遍状态。压到 220 KB 才让这件事变得可行。
+
+数据目录的完整结构（课程 + 培养方案两组数据）见 [data/README.md](data/README.md)。
 
 ### 更新数据
 
@@ -65,6 +65,14 @@ python3 scripts/build_term_bundles.py          # 生成前端数据包
 npm install
 npm run dev
 npm run build
+```
+
+课程数据的字段定义、课号 key 规则、以及先修/互斥/并修的解析与三值求值，见
+[docs/schema.md](docs/schema.md)。两个校验脚本：
+
+```bash
+npx tsx scripts/check_requirements.mts   # 先修解析：全目录零误报
+npx tsx scripts/audit_data.mts           # 全量一致性审计：数据包 vs 原始对账
 ```
 
 ---
