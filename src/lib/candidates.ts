@@ -1,4 +1,5 @@
-import { checkRequirement } from './requirements.ts'
+import { evaluateRequirement } from './requirements.ts'
+import type { RequirementStatus } from './types.ts'
 import { comboMeetings, courseCombos, meetingsClash, type Plan, type Prefs } from './schedule.ts'
 import type { Course, Meeting } from './types.ts'
 
@@ -10,8 +11,10 @@ export type Candidate = {
   /** The section choice shown in the 时间 column: the one that fits, or the first if none does. */
   slots: Meeting[]
   instructors: string[]
-  /** Parsed from enrollment_requirement; empty when nothing was confidently parsed. */
-  missingPrereq: string[]
+  /** 'missing' = provably unmet prerequisite; 'unverifiable' = grade/consent we can't check. */
+  prereqStatus: RequirementStatus
+  /** Cleaned original prerequisite text, shown on hover. */
+  prereqText: string
 }
 
 export type CandidateSummary = {
@@ -58,8 +61,8 @@ export function evaluateCandidates(params: {
       continue
     }
 
-    const { ruledOut, missingPrereq } = checkRequirement(course.requirement, takenSet)
-    if (ruledOut.length > 0) {
+    const requirement = evaluateRequirement(course.requirement, takenSet, committedSet)
+    if (requirement.ruledOut.length > 0) {
       summary.ruledOut += 1
       continue
     }
@@ -75,7 +78,8 @@ export function evaluateCandidates(params: {
         status: 'tba',
         slots: [],
         instructors: combos[0].flatMap((section) => section.instructors),
-        missingPrereq,
+        prereqStatus: requirement.prereqStatus,
+        prereqText: requirement.prereqText,
       })
       continue
     }
@@ -102,7 +106,8 @@ export function evaluateCandidates(params: {
         (a, b) => a.dayIndex - b.dayIndex || a.start - b.start,
       ),
       instructors: [...new Set(shown!.flatMap((section) => section.instructors))],
-      missingPrereq,
+      prereqStatus: requirement.prereqStatus,
+      prereqText: requirement.prereqText,
     })
   }
 

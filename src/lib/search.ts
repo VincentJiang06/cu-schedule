@@ -1,6 +1,9 @@
 import type { Course } from './types.ts'
 
-/** Whole-word course codes typed into the chip inputs, e.g. "math2050, CSCI 2100". */
+/**
+ * Whole-word course codes typed into the chip inputs, e.g. "math2050, CSCI 2100".
+ * A trailing variant suffix (ENGG1000A) is accepted and preserved.
+ */
 export function parseCourseCodes(value: string): string[] {
   return [
     ...new Set(
@@ -8,7 +11,7 @@ export function parseCourseCodes(value: string): string[] {
         .toUpperCase()
         .replace(/([A-Z]{4})\s+(\d{4})/g, '$1$2')
         .split(/[^A-Z0-9]+/)
-        .filter((token) => /^[A-Z]{4}\d{4}$/.test(token)),
+        .filter((token) => /^[A-Z]{4}\d{4}[A-Z]?$/.test(token)),
     ),
   ]
 }

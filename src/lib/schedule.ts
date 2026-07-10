@@ -65,11 +65,20 @@ function violatesPrefs(meetings: Meeting[], prefs: Prefs): boolean {
 
 const MAX_COMBOS = 240
 
+/** code -> component -> pinned section id. A pin forces one section for that component. */
+export type Pins = Record<string, Record<string, string>>
+
 /** Every viable one-section-per-component choice for a course, filtered by preferences. */
-export function courseCombos(course: Course, prefs: Prefs): Combo[] {
-  const byComponent = course.components.map((component) =>
-    course.sections.filter((section) => section.component === component),
-  )
+export function courseCombos(course: Course, prefs: Prefs, pin?: Record<string, string>): Combo[] {
+  const byComponent = course.components.map((component) => {
+    const sections = course.sections.filter((section) => section.component === component)
+    const pinnedId = pin?.[component]
+    if (pinnedId) {
+      const only = sections.filter((section) => section.id === pinnedId)
+      if (only.length > 0) return only
+    }
+    return sections
+  })
   if (byComponent.some((group) => group.length === 0)) return []
 
   let combos: Combo[] = [[]]
@@ -96,10 +105,10 @@ export function courseCombos(course: Course, prefs: Prefs): Combo[] {
 const MAX_PLANS = 12
 
 /** Conflict-free timetables covering every committed course, best (fewest teaching days) first. */
-export function generatePlans(courses: Course[], prefs: Prefs): Plan[] {
+export function generatePlans(courses: Course[], prefs: Prefs, pins: Pins = {}): Plan[] {
   if (courses.length === 0) return []
 
-  const optionsPerCourse = courses.map((course) => courseCombos(course, prefs))
+  const optionsPerCourse = courses.map((course) => courseCombos(course, prefs, pins[course.code]))
   if (optionsPerCourse.some((options) => options.length === 0)) return []
 
   // Fewest options first: the search fails fast on the tightest course.
@@ -165,9 +174,9 @@ export type Clash = {
 }
 
 /** When no plan exists, surface the pairs of courses that actually collide. */
-export function findClashes(courses: Course[], prefs: Prefs): Clash[] {
+export function findClashes(courses: Course[], prefs: Prefs, pins: Pins = {}): Clash[] {
   const clashes: Clash[] = []
-  const combos = courses.map((course) => courseCombos(course, prefs))
+  const combos = courses.map((course) => courseCombos(course, prefs, pins[course.code]))
 
   for (let i = 0; i < courses.length; i += 1) {
     for (let j = i + 1; j < courses.length; j += 1) {
@@ -198,10 +207,12 @@ export function findClashes(courses: Course[], prefs: Prefs): Clash[] {
 }
 
 /** Courses whose preferences alone leave no viable section combination. */
-export function blockedByPrefs(courses: Course[], prefs: Prefs): string[] {
+export function blockedByPrefs(courses: Course[], prefs: Prefs, pins: Pins = {}): string[] {
   return courses
     .filter(
-      (course) => courseCombos(course, prefs).length === 0 && courseCombos(course, NO_PREFS).length > 0,
+      (course) =>
+        courseCombos(course, prefs, pins[course.code]).length === 0 &&
+        courseCombos(course, NO_PREFS).length > 0,
     )
     .map((course) => course.code)
 }

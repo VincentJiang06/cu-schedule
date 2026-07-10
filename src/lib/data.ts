@@ -1,15 +1,36 @@
+import { parseCode } from './courseKey.ts'
+import { EMPTY_REQUIREMENT } from './types.ts'
 import type { Course, DataManifest, RawCourse, Section, TermBundle, YearIndex } from './types.ts'
 
 const BASE = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`
 
-function dataUrl(path: string): string {
-  return `${BASE}data/${path}`
+function dataUrl(path: string, version?: string): string {
+  const url = `${BASE}data/${path}`
+  return version ? `${url}?v=${encodeURIComponent(version)}` : url
 }
 
-async function fetchJson<T>(path: string): Promise<T> {
-  const response = await fetch(dataUrl(path))
+async function fetchJson<T>(path: string, version?: string): Promise<T> {
+  const response = await fetch(dataUrl(path, version))
   if (!response.ok) throw new Error(`加载失败：${path}`)
   return (await response.json()) as T
+}
+
+// manifest.json is tiny (a few dozen bytes) and is the one file fetched with
+// `cache: 'no-cache'` so the browser always revalidates it. Its `generatedAt` is
+// the data version: every other data request appends it as `?v=`, so a fresh
+// build's URLs change and old cached responses are never reused. Memoized so a
+// page load only pays for one manifest round-trip no matter how many callers
+// need the version.
+let manifestPromise: Promise<DataManifest> | null = null
+
+function fetchManifest(): Promise<DataManifest> {
+  if (!manifestPromise) {
+    manifestPromise = fetch(dataUrl('manifest.json'), { cache: 'no-cache' }).then((response) => {
+      if (!response.ok) throw new Error('加载失败：manifest.json')
+      return response.json() as Promise<DataManifest>
+    })
+  }
+  return manifestPromise
 }
 
 function toSection(raw: RawCourse['x'][number]): Section {
@@ -31,6 +52,10 @@ function toSection(raw: RawCourse['x'][number]): Section {
   }
 }
 
+// requirements.ts's parser already ran at bundle-build time (scripts/build_bundles.mts):
+// every course's `req` field is the finished Requirement AST. toCourse only
+// deserializes — no parsing on the load path (previously a measured 1772ms for
+// 6089 courses).
 function toCourse(raw: RawCourse): Course {
   const sections = raw.x.map(toSection)
   const components: string[] = []
@@ -38,26 +63,39 @@ function toCourse(raw: RawCourse): Course {
     if (!components.includes(section.component)) components.push(section.component)
   }
   const instructors = [...new Set(sections.flatMap((section) => section.instructors))]
+  const identity = parseCode(raw.c)
   return {
     code: raw.c,
-    subject: raw.sj,
+    key: identity.key,
+    subject: raw.sj || identity.subject,
+    number: identity.number,
+    suffix: identity.suffix,
+    level: identity.level,
     title: raw.t,
     units: raw.u,
     career: raw.cr,
-    academicGroup: raw.gr,
-    requirement: raw.rq,
+    department: raw.gr,
+    requirement: raw.req ?? EMPTY_REQUIREMENT,
     sections,
     components,
     searchText: `${raw.c} ${raw.t} ${instructors.join(' ')} ${raw.gr}`.toLowerCase(),
   }
 }
 
+export type SubjectInfo = { code: string; title: string }
+
+export async function loadSubjects(year: string): Promise<SubjectInfo[]> {
+  const manifest = await fetchManifest()
+  const payload = await fetchJson<{ subjects: SubjectInfo[] }>(`${year}/subjects.json`, manifest.generatedAt)
+  return payload.subjects
+}
+
 export type TermRef = { year: string; slug: string; name: string; courseCount: number }
 
 export async function loadTermList(): Promise<TermRef[]> {
-  const manifest = await fetchJson<DataManifest>('manifest.json')
+  const manifest = await fetchManifest()
   const indexes = await Promise.all(
-    manifest.years.map((year) => fetchJson<YearIndex>(`${year}/index.json`)),
+    manifest.years.map((year) => fetchJson<YearIndex>(`${year}/index.json`, manifest.generatedAt)),
   )
   return indexes.flatMap((index) =>
     index.terms.map((term) => ({
@@ -70,8 +108,9 @@ export async function loadTermList(): Promise<TermRef[]> {
 }
 
 export async function loadTerm(term: TermRef): Promise<Course[]> {
-  const bundle = await fetchJson<TermBundle>(`${term.year}/${term.slug}.json`)
-  return bundle.courses.map(toCourse)
+  const manifest = await fetchManifest()
+  const bundle = await fetchJson<TermBundle>(`${term.year}/${term.slug}.json`, manifest.generatedAt)
+  return bundle.courses.map((raw) => toCourse(raw))
 }
 
 /** One course as offered in one term. A course offered in both terms yields two offerings. */
@@ -91,14 +130,15 @@ const MAIN_TERM_RE = /Term\s+([12])\b/
  * not the single active term the planner schedules within.
  */
 export async function loadYearOfferings(year: string): Promise<Offering[]> {
-  const index = await fetchJson<YearIndex>(`${year}/index.json`)
+  const manifest = await fetchManifest()
+  const index = await fetchJson<YearIndex>(`${year}/index.json`, manifest.generatedAt)
   const mains = index.terms
     .map((term) => ({ ...term, order: Number(term.name.match(MAIN_TERM_RE)?.[1] ?? 0) }))
     .filter((term) => term.order > 0)
     .sort((a, b) => a.order - b.order)
 
   const bundles = await Promise.all(
-    mains.map((term) => fetchJson<TermBundle>(`${year}/${term.slug}.json`)),
+    mains.map((term) => fetchJson<TermBundle>(`${year}/${term.slug}.json`, manifest.generatedAt)),
   )
 
   return bundles.flatMap((bundle, index) =>
