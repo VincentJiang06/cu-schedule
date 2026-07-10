@@ -1,0 +1,10 @@
+# 最小部署单元。TLS 由宿主机的反向代理(Caddy/Traefik/nginx)终结,
+# 本容器只讲 HTTP。详见 docs/deployment.md。
+services:
+  cu-schedule:
+    build: .
+    image: cu-schedule:latest
+    container_name: cu-schedule
+    restart: unless-stopped
+    ports:
+      - "8080:80"   # 宿主端口按需改;接反代时可改为仅内网 expose

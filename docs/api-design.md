@@ -12,6 +12,7 @@
 | 培养方案(专业)数据的字段细节 | [programs-data.md](programs-data.md) |
 | 数据目录/流水线/如何重建数据 | [../data/README.md](../data/README.md) |
 | 这套结构是怎么定下来的 | [architecture-review.md](architecture-review.md)(背景,非必读) |
+| 部署到服务器(Docker) | [deployment.md](deployment.md) |
 
 **类型的唯一权威是代码,不是文档**:课程侧 `src/lib/types.ts`,方案侧 `src/lib/programs.ts`。
 文档若与类型定义冲突,以类型为准并修文档。
