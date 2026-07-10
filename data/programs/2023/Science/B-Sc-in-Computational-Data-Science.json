@@ -1,0 +1,1031 @@
+{
+  "program_en": "B.Sc. in Computational Data Science",
+  "program_chi": "計算數據科學理學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "AIST3020",
+    "CDAS4998",
+    "CDAS4999",
+    "CENG5030",
+    "CSCI1120",
+    "CSCI2100",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3170",
+    "CSCI3220",
+    "CSCI3230",
+    "CSCI3260",
+    "CSCI3280",
+    "CSCI3290",
+    "CSCI3310",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI4160",
+    "CSCI4180",
+    "CSCI4230",
+    "CSCI4250",
+    "CSCI4430",
+    "CSCI5030",
+    "CSCI5050",
+    "CSCI5120",
+    "CSCI5150",
+    "CSCI5240",
+    "CSCI5350",
+    "CSCI5390",
+    "CSCI5550",
+    "CSCI5570",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG2440",
+    "ENGG5101",
+    "ESTR1002",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR1100",
+    "ESTR2004",
+    "ESTR2102",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3108",
+    "ESTR3110",
+    "ESTR4104",
+    "ESTR4106",
+    "ESTR4120",
+    "ESTR4122",
+    "ESTR4300",
+    "ESTR4306",
+    "ESTR4998",
+    "IERG4130",
+    "IERG4300",
+    "MATH1010",
+    "MATH1020",
+    "MATH1030",
+    "MATH1510",
+    "MATH2010",
+    "PHPC1001",
+    "PHPC1012",
+    "PHPC1017",
+    "PHPC2017",
+    "PHPC3024",
+    "PHPC3034",
+    "PHYS1110",
+    "PHYS1111",
+    "PHYS1122",
+    "PHYS2401",
+    "PHYS3061",
+    "PHYS4061",
+    "RMSC4001",
+    "RMSC4002",
+    "RMSC4003",
+    "RMSC4004",
+    "RMSC4005",
+    "RMSC4006",
+    "SEEM4630",
+    "SEEM5330",
+    "SEEM5680",
+    "SOCI2116",
+    "SOCI2203",
+    "SOCI3002",
+    "SOCI3102",
+    "SOCI3204",
+    "SOCI3208",
+    "SOCI3227",
+    "SOCI3229",
+    "SOCI3237",
+    "SOCI3238",
+    "STAT1011",
+    "STAT2001",
+    "STAT2005",
+    "STAT2006",
+    "STAT3001",
+    "STAT3003",
+    "STAT3005",
+    "STAT3006",
+    "STAT3007",
+    "STAT3008",
+    "STAT3009",
+    "STAT3210",
+    "STAT4001",
+    "STAT4002",
+    "STAT4003",
+    "STAT4004",
+    "STAT4005",
+    "STAT4006",
+    "STAT4008",
+    "STAT4010",
+    "STAT4012"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "ENGG2440/ESTR2004",
+        "codes": [
+          "ENGG2440",
+          "ESTR2004"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "AIST3020",
+        "codes": [
+          "AIST3020"
+        ],
+        "alt": false,
+        "from": "(a) Algorithms and Computer Systems: AIST3020, CSCI3160/ESTR3104"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) Algorithms and Computer Systems: AIST3020, CSCI3160/ESTR3104"
+      },
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "(b) Machine Learning: Choose 3 units from"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(b) Machine Learning: Choose 3 units from"
+      },
+      {
+        "raw": "RMSC4002",
+        "codes": [
+          "RMSC4002"
+        ],
+        "alt": false,
+        "from": "(b) Machine Learning: Choose 3 units from"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "(b) Machine Learning: Choose 3 units from"
+      },
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "(c) Operating Systems: CSCI3150/ESTR3102"
+      },
+      {
+        "raw": "STAT3003",
+        "codes": [
+          "STAT3003"
+        ],
+        "alt": false,
+        "from": "(d) Sampling: Choose 6"
+      },
+      {
+        "raw": "STAT3006",
+        "codes": [
+          "STAT3006"
+        ],
+        "alt": false,
+        "from": "(d) Sampling: Choose 6"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "(d) Sampling: Choose 6"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "(e) Statistical Inference: STAT3008, 4003"
+      },
+      {
+        "raw": "STAT4003",
+        "codes": [
+          "STAT4003"
+        ],
+        "alt": false,
+        "from": "(e) Statistical Inference: STAT3008, 4003"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "(f) Statistical Modeling: Choose 3"
+      },
+      {
+        "raw": "CDAS4998",
+        "codes": [
+          "CDAS4998"
+        ],
+        "alt": false,
+        "from": "4. Research"
+      },
+      {
+        "raw": "CDAS4999",
+        "codes": [
+          "CDAS4999"
+        ],
+        "alt": false,
+        "from": "4. Research"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CENG5030",
+        "codes": [
+          "CENG5030"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI3170",
+        "codes": [
+          "CSCI3170"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI3220/ESTR3110",
+        "codes": [
+          "CSCI3220",
+          "ESTR3110"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI3260",
+        "codes": [
+          "CSCI3260"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI3280",
+        "codes": [
+          "CSCI3280"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI3310",
+        "codes": [
+          "CSCI3310"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4130/IERG4130/ESTR4306",
+        "codes": [
+          "CSCI4130",
+          "IERG4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4160/ESTR4104",
+        "codes": [
+          "CSCI4160",
+          "ESTR4104"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4180",
+        "codes": [
+          "CSCI4180"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "ESTR4106",
+        "codes": [
+          "ESTR4106"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4230",
+        "codes": [
+          "CSCI4230"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4250/ESTR4122",
+        "codes": [
+          "CSCI4250",
+          "ESTR4122"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI4430/ESTR4120",
+        "codes": [
+          "CSCI4430",
+          "ESTR4120"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5030",
+        "codes": [
+          "CSCI5030"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5120",
+        "codes": [
+          "CSCI5120"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5150",
+        "codes": [
+          "CSCI5150"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5240",
+        "codes": [
+          "CSCI5240"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5350",
+        "codes": [
+          "CSCI5350"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5390",
+        "codes": [
+          "CSCI5390"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5550",
+        "codes": [
+          "CSCI5550"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "CSCI5570",
+        "codes": [
+          "CSCI5570"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "ENGG5101",
+        "codes": [
+          "ENGG5101"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "ESTR4300",
+        "codes": [
+          "ESTR4300"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "RMSC4001",
+        "codes": [
+          "RMSC4001"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "RMSC4004",
+        "codes": [
+          "RMSC4004"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "RMSC4005",
+        "codes": [
+          "RMSC4005"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "RMSC4006",
+        "codes": [
+          "RMSC4006"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "SEEM5330",
+        "codes": [
+          "SEEM5330"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "SEEM5680",
+        "codes": [
+          "SEEM5680"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT3001",
+        "codes": [
+          "STAT3001"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT3009",
+        "codes": [
+          "STAT3009"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT4002",
+        "codes": [
+          "STAT4002"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT4004",
+        "codes": [
+          "STAT4004"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT4008",
+        "codes": [
+          "STAT4008"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
+        ],
+        "alt": false,
+        "from": "(a) Computational"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(b) Computational Physics"
+      },
+      {
+        "raw": "PHPC2017",
+        "codes": [
+          "PHPC2017"
+        ],
+        "alt": false,
+        "from": "(c) Computational"
+      },
+      {
+        "raw": "PHPC3024",
+        "codes": [
+          "PHPC3024"
+        ],
+        "alt": false,
+        "from": "(c) Computational"
+      },
+      {
+        "raw": "PHPC3034",
+        "codes": [
+          "PHPC3034"
+        ],
+        "alt": false,
+        "from": "(c) Computational"
+      },
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "(i) Choose 3 units from the following"
+      },
+      {
+        "raw": "PHPC1012",
+        "codes": [
+          "PHPC1012"
+        ],
+        "alt": false,
+        "from": "(i) Choose 3 units from the following"
+      },
+      {
+        "raw": "PHPC1017",
+        "codes": [
+          "PHPC1017"
+        ],
+        "alt": false,
+        "from": "(i) Choose 3 units from the following"
+      },
+      {
+        "raw": "CSCI3220/ESTR3110",
+        "codes": [
+          "CSCI3220",
+          "ESTR3110"
+        ],
+        "alt": true,
+        "from": "(ii) Choose 3 units from the following"
+      },
+      {
+        "raw": "CSCI3290",
+        "codes": [
+          "CSCI3290"
+        ],
+        "alt": false,
+        "from": "(ii) Choose 3 units from the following"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(ii) Choose 3 units from the following"
+      },
+      {
+        "raw": "SOCI3102",
+        "codes": [
+          "SOCI3102"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3238",
+        "codes": [
+          "SOCI3238"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI2116",
+        "codes": [
+          "SOCI2116"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI2203",
+        "codes": [
+          "SOCI2203"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3002",
+        "codes": [
+          "SOCI3002"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3204",
+        "codes": [
+          "SOCI3204"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3208",
+        "codes": [
+          "SOCI3208"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3229",
+        "codes": [
+          "SOCI3229"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      },
+      {
+        "raw": "SOCI3237",
+        "codes": [
+          "SOCI3237"
+        ],
+        "alt": false,
+        "from": "(d) Computational Social Science"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Algorithms and Computer Systems: AIST3020, CSCI3160/ESTR3104",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Machine Learning: Choose 3 units from",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Operating Systems: CSCI3150/ESTR3102",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Sampling: Choose 6",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Statistical Inference: STAT3008, 4003",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Statistical Modeling: Choose 3",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "5.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Computational",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 43
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Computational Physics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Computational",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Choose 3 units from the following",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Choose 3 units from the following",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Computational Social Science",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    }
+  ]
+}

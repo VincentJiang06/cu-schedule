@@ -1,0 +1,378 @@
+{
+  "program_en": "B.Sc. in Public Health",
+  "program_chi": "公共衞生理學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Medicine",
+  "degree": "B.Sc",
+  "total_units": 68,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH4330",
+    "CHPR4011",
+    "CHPR4012",
+    "GPAD3255",
+    "GRON3412",
+    "MEDF1011",
+    "MEDF1021",
+    "MEDF1031",
+    "MEDF1041",
+    "PHPC1001",
+    "PHPC1012",
+    "PHPC1017",
+    "PHPC1019",
+    "PHPC1020",
+    "PHPC1022",
+    "PHPC2007",
+    "PHPC2009",
+    "PHPC2010",
+    "PHPC2011",
+    "PHPC2015",
+    "PHPC2016",
+    "PHPC2017",
+    "PHPC2018",
+    "PHPC2019",
+    "PHPC2020",
+    "PHPC3010",
+    "PHPC3012",
+    "PHPC3014",
+    "PHPC3015",
+    "PHPC3016",
+    "PHPC3017",
+    "PHPC3018",
+    "PHPC3024",
+    "PHPC3026",
+    "PHPC3027",
+    "PHPC3028",
+    "PHPC3034",
+    "PHPC3415",
+    "PHPC4025",
+    "PHPC4028",
+    "PHPC4029",
+    "PHPC4031",
+    "PHPC4032",
+    "PHPC4033",
+    "PHPC4040",
+    "PHPC4041",
+    "PHPC4042",
+    "PHPC4043",
+    "PHPC4911",
+    "PHPC4912",
+    "PHPC4913",
+    "PHPC4921",
+    "PHPC4922",
+    "PHPC4930",
+    "SOCI3227",
+    "SPED2540"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MEDF1011",
+        "codes": [
+          "MEDF1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1021",
+        "codes": [
+          "MEDF1021"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1031",
+        "codes": [
+          "MEDF1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1041",
+        "codes": [
+          "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHPC1012",
+        "codes": [
+          "PHPC1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHPC1017",
+        "codes": [
+          "PHPC1017"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC1022",
+        "codes": [
+          "PHPC1022"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2009",
+        "codes": [
+          "PHPC2009"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2010",
+        "codes": [
+          "PHPC2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2011",
+        "codes": [
+          "PHPC2011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2015",
+        "codes": [
+          "PHPC2015"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2016",
+        "codes": [
+          "PHPC2016"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2017",
+        "codes": [
+          "PHPC2017"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2018",
+        "codes": [
+          "PHPC2018"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC2019",
+        "codes": [
+          "PHPC2019"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC3012",
+        "codes": [
+          "PHPC3012"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC3027",
+        "codes": [
+          "PHPC3027"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC3028",
+        "codes": [
+          "PHPC3028"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHPC1019",
+        "codes": [
+          "PHPC1019"
+        ],
+        "alt": false,
+        "from": "4. Experiential"
+      },
+      {
+        "raw": "PHPC1020",
+        "codes": [
+          "PHPC1020"
+        ],
+        "alt": false,
+        "from": "4. Experiential"
+      },
+      {
+        "raw": "PHPC4930",
+        "codes": [
+          "PHPC4930"
+        ],
+        "alt": false,
+        "from": "4. Experiential"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ANTH4330",
+        "codes": [
+          "ANTH4330"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHPR4011",
+        "codes": [
+          "CHPR4011"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "GPAD3255",
+        "codes": [
+          "GPAD3255"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "GRON3412",
+        "codes": [
+          "GRON3412"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC2007",
+        "codes": [
+          "PHPC2007"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC2020",
+        "codes": [
+          "PHPC2020"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3010",
+        "codes": [
+          "PHPC3010"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3014",
+        "codes": [
+          "PHPC3014"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "SPED2540",
+        "codes": [
+          "SPED2540"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4911",
+        "codes": [
+          "PHPC4911"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "32",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "22",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Experiential",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    }
+  ]
+}

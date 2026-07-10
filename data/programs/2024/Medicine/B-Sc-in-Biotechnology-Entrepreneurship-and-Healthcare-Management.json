@@ -1,0 +1,358 @@
+{
+  "program_en": "B.Sc. in Biotechnology, Entrepreneurship and Healthcare Management",
+  "program_chi": "生物科技、創業與醫療管理理學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Medicine",
+  "degree": "B.Sc",
+  "total_units": 65,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2151",
+    "ACCT3151",
+    "BEHM4000",
+    "BEHM4001",
+    "BEHM4002",
+    "DOTE1030",
+    "DOTE2011",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE4020",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4260",
+    "FINA2010",
+    "FINA3080",
+    "GRON3412",
+    "GRON4411",
+    "LAWS2331",
+    "LSCI1002",
+    "MBTE2000",
+    "MBTE3000",
+    "MBTE3510",
+    "MBTE3511",
+    "MBTE3518",
+    "MBTE3521",
+    "MBTE3528",
+    "MBTE3531",
+    "MBTE3550",
+    "MBTE3558",
+    "MBTE3560",
+    "MBTE3568",
+    "MEDF1012",
+    "MGNT1020",
+    "MGNT4010",
+    "MGNT4090",
+    "PHPC1001",
+    "PHPC1017",
+    "PHPC2016",
+    "PHPC2017",
+    "PHPC3024",
+    "PHPC3034",
+    "PHPC4032",
+    "SBMS2104",
+    "SBMS3101",
+    "SBMS3202",
+    "SBMS3205",
+    "SBMS3212",
+    "SBMS3215",
+    "SBMS3216"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package: LSCI1002, MEDF1012, MGNT1020"
+      },
+      {
+        "raw": "MEDF1012",
+        "codes": [
+          "MEDF1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package: LSCI1002, MEDF1012, MGNT1020"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package: LSCI1002, MEDF1012, MGNT1020"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "BEHM4000",
+        "codes": [
+          "BEHM4000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "GRON4411",
+        "codes": [
+          "GRON4411"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "MBTE2000",
+        "codes": [
+          "MBTE2000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "PHPC1017",
+        "codes": [
+          "PHPC1017"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "PHPC2016",
+        "codes": [
+          "PHPC2016"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "SBMS2104",
+        "codes": [
+          "SBMS2104"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "BEHM4001",
+        "codes": [
+          "BEHM4001"
+        ],
+        "alt": false,
+        "from": "4. Capstone Courses: BEHM4001, 4002"
+      },
+      {
+        "raw": "BEHM4002",
+        "codes": [
+          "BEHM4002"
+        ],
+        "alt": false,
+        "from": "4. Capstone Courses: BEHM4001, 4002"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ACCT2151",
+        "codes": [
+          "ACCT2151"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "LAWS2331",
+        "codes": [
+          "LAWS2331"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3510",
+        "codes": [
+          "MBTE3510"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "DOTE2040",
+        "codes": [
+          "DOTE2040"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "PHPC3024",
+        "codes": [
+          "PHPC3024"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3216",
+        "codes": [
+          "SBMS3216"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "DOTE4020",
+        "codes": [
+          "DOTE4020"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "GRON3412",
+        "codes": [
+          "GRON3412"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "PHPC2017",
+        "codes": [
+          "PHPC2017"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3101",
+        "codes": [
+          "SBMS3101"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package: LSCI1002, MEDF1012, MGNT1020",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses: ACCT2111, BEHM4000,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "17",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Healthcare and Biomedicine Analytics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Capstone Courses: BEHM4001, 4002",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    }
+  ]
+}

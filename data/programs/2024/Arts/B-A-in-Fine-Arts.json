@@ -1,0 +1,948 @@
+{
+  "program_en": "B.A. in Fine Arts",
+  "program_chi": "藝術文學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1101",
+    "CHLL1900",
+    "CHLL4121",
+    "CHLL4332",
+    "CHLL4401",
+    "CHLL4403",
+    "CUMT1000",
+    "CUMT2007",
+    "CUMT3001",
+    "CUMT3004",
+    "CUMT3005",
+    "CUMT3008",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "CURE2031",
+    "CURE2037",
+    "CURE2407",
+    "CURE2411",
+    "CURE3017",
+    "CURE3404",
+    "CURE3405",
+    "CURE3408",
+    "ENGE1000",
+    "FAAS1100",
+    "FAAS1110",
+    "FAAS1130",
+    "FAAS1140",
+    "FAAS1600",
+    "FAAS1700",
+    "FAAS1900",
+    "FAAS2100",
+    "FAAS2102",
+    "FAAS2103",
+    "FAAS2104",
+    "FAAS2105",
+    "FAAS2106",
+    "FAAS2110",
+    "FAAS2113",
+    "FAAS2116",
+    "FAAS2117",
+    "FAAS2118",
+    "FAAS2119",
+    "FAAS2201",
+    "FAAS2203",
+    "FAAS2204",
+    "FAAS2206",
+    "FAAS2208",
+    "FAAS2211",
+    "FAAS2217",
+    "FAAS2218",
+    "FAAS2219",
+    "FAAS3102",
+    "FAAS3104",
+    "FAAS3105",
+    "FAAS3108",
+    "FAAS3109",
+    "FAAS3110",
+    "FAAS3111",
+    "FAAS3112",
+    "FAAS3113",
+    "FAAS3114",
+    "FAAS3115",
+    "FAAS3116",
+    "FAAS3117",
+    "FAAS3119",
+    "FAAS3120",
+    "FAAS3200",
+    "FAAS3201",
+    "FAAS3202",
+    "FAAS3203",
+    "FAAS3204",
+    "FAAS3206",
+    "FAAS3210",
+    "FAAS3211",
+    "FAAS3212",
+    "FAAS3216",
+    "FAAS3219",
+    "FAAS3221",
+    "FAAS3223",
+    "FAAS3224",
+    "FAAS3229",
+    "FAAS3234",
+    "FAAS3236",
+    "FAAS3246",
+    "FAAS4100",
+    "FAAS4101",
+    "FAAS4102",
+    "FAAS4106",
+    "FAAS4109",
+    "FAAS4116",
+    "FAAS4119",
+    "FAAS4180",
+    "FAAS4182",
+    "FAAS4201",
+    "FAAS4202",
+    "FAAS4203",
+    "FAAS4210",
+    "FAAS4211",
+    "FAAS4212",
+    "FAAS4213",
+    "FAAS4214",
+    "FAAS4280",
+    "FAAS4282",
+    "HIST1000",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1100",
+        "codes": [
+          "FAAS1100"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS1110",
+        "codes": [
+          "FAAS1110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS1130",
+        "codes": [
+          "FAAS1130"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS1140",
+        "codes": [
+          "FAAS1140"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS1600",
+        "codes": [
+          "FAAS1600"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS1700",
+        "codes": [
+          "FAAS1700"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS4180",
+        "codes": [
+          "FAAS4180"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS4182",
+        "codes": [
+          "FAAS4182"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS4280",
+        "codes": [
+          "FAAS4280"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FAAS4282",
+        "codes": [
+          "FAAS4282"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "FAAS2100",
+        "codes": [
+          "FAAS2100"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2102",
+        "codes": [
+          "FAAS2102"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2103",
+        "codes": [
+          "FAAS2103"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2104",
+        "codes": [
+          "FAAS2104"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2105",
+        "codes": [
+          "FAAS2105"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2106",
+        "codes": [
+          "FAAS2106"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2110",
+        "codes": [
+          "FAAS2110"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2113",
+        "codes": [
+          "FAAS2113"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3102",
+        "codes": [
+          "FAAS3102"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3104",
+        "codes": [
+          "FAAS3104"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3105",
+        "codes": [
+          "FAAS3105"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3110",
+        "codes": [
+          "FAAS3110"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3111",
+        "codes": [
+          "FAAS3111"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3112",
+        "codes": [
+          "FAAS3112"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3113",
+        "codes": [
+          "FAAS3113"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3114",
+        "codes": [
+          "FAAS3114"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3115",
+        "codes": [
+          "FAAS3115"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3116",
+        "codes": [
+          "FAAS3116"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3120",
+        "codes": [
+          "FAAS3120"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4100",
+        "codes": [
+          "FAAS4100"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4102",
+        "codes": [
+          "FAAS4102"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4106",
+        "codes": [
+          "FAAS4106"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4116",
+        "codes": [
+          "FAAS4116"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2116",
+        "codes": [
+          "FAAS2116"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2117",
+        "codes": [
+          "FAAS2117"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2118",
+        "codes": [
+          "FAAS2118"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2119",
+        "codes": [
+          "FAAS2119"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3108",
+        "codes": [
+          "FAAS3108"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3109",
+        "codes": [
+          "FAAS3109"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3117",
+        "codes": [
+          "FAAS3117"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3119",
+        "codes": [
+          "FAAS3119"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3223",
+        "codes": [
+          "FAAS3223"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4101",
+        "codes": [
+          "FAAS4101"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4109",
+        "codes": [
+          "FAAS4109"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4119",
+        "codes": [
+          "FAAS4119"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4201",
+        "codes": [
+          "FAAS4201"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2201",
+        "codes": [
+          "FAAS2201"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2203",
+        "codes": [
+          "FAAS2203"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2204",
+        "codes": [
+          "FAAS2204"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2206",
+        "codes": [
+          "FAAS2206"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2208",
+        "codes": [
+          "FAAS2208"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2211",
+        "codes": [
+          "FAAS2211"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2217",
+        "codes": [
+          "FAAS2217"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2218",
+        "codes": [
+          "FAAS2218"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS2219",
+        "codes": [
+          "FAAS2219"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3200",
+        "codes": [
+          "FAAS3200"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3201",
+        "codes": [
+          "FAAS3201"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3202",
+        "codes": [
+          "FAAS3202"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3203",
+        "codes": [
+          "FAAS3203"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3204",
+        "codes": [
+          "FAAS3204"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3206",
+        "codes": [
+          "FAAS3206"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3210",
+        "codes": [
+          "FAAS3210"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3211",
+        "codes": [
+          "FAAS3211"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3212",
+        "codes": [
+          "FAAS3212"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3216",
+        "codes": [
+          "FAAS3216"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3219",
+        "codes": [
+          "FAAS3219"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3221",
+        "codes": [
+          "FAAS3221"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3224",
+        "codes": [
+          "FAAS3224"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3229",
+        "codes": [
+          "FAAS3229"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3234",
+        "codes": [
+          "FAAS3234"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3236",
+        "codes": [
+          "FAAS3236"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS3246",
+        "codes": [
+          "FAAS3246"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4202",
+        "codes": [
+          "FAAS4202"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4203",
+        "codes": [
+          "FAAS4203"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4210",
+        "codes": [
+          "FAAS4210"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4211",
+        "codes": [
+          "FAAS4211"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4212",
+        "codes": [
+          "FAAS4212"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4213",
+        "codes": [
+          "FAAS4213"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "FAAS4214",
+        "codes": [
+          "FAAS4214"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 19
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "42",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 69
+    }
+  ]
+}

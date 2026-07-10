@@ -1,0 +1,474 @@
+{
+  "program_en": "B.Eng. in Materials Science and Engineering",
+  "program_chi": "材料科學與工程學工程學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 76,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BMEG3430",
+    "CHEM1070",
+    "CHEM4303",
+    "EEEN4020",
+    "EEEN4050",
+    "EESC4240",
+    "ELEG2202",
+    "ELEG3301",
+    "ELEG4304",
+    "ENGG1040",
+    "ENGG1110",
+    "ENGG1111",
+    "ENGG1125",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG1820",
+    "ENGG2780",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1006",
+    "ESTR1007",
+    "ESTR2020",
+    "ESTR3204",
+    "ESTR3404",
+    "ESTR4402",
+    "ESTR4410",
+    "ESTR4422",
+    "ESTR4998",
+    "IERG1080",
+    "LSCI1002",
+    "MAEG3010",
+    "MAEG3020",
+    "MAEG4020",
+    "MASE1001",
+    "MASE1002",
+    "MASE1801",
+    "MASE2002",
+    "MASE2202",
+    "MASE2601",
+    "MASE3002",
+    "MASE3102",
+    "MASE3104",
+    "MASE3202",
+    "MASE4102",
+    "MASE4202",
+    "MASE4204",
+    "MASE4206",
+    "MASE4208",
+    "MASE4302",
+    "MASE4998",
+    "MASE4999",
+    "PHYS1003",
+    "PHYS1110",
+    "PHYS3021",
+    "PHYS3023",
+    "PHYS4031",
+    "PHYS4050",
+    "PHYS4440",
+    "SEEM3500"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGG1111",
+        "codes": [
+          "ENGG1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGG1125/ESTR1007",
+        "codes": [
+          "ENGG1125",
+          "ESTR1007"
+        ],
+        "alt": true,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG1310/ESTR1003",
+        "codes": [
+          "ENGG1310",
+          "ESTR1003"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2780/ESTR2020",
+        "codes": [
+          "ENGG2780",
+          "ESTR2020"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "ELEG3301/ESTR3204",
+        "codes": [
+          "ELEG3301",
+          "ESTR3204"
+        ],
+        "alt": true,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MAEG3010",
+        "codes": [
+          "MAEG3010"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MAEG3020/ESTR3404",
+        "codes": [
+          "MAEG3020",
+          "ESTR3404"
+        ],
+        "alt": true,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE1001",
+        "codes": [
+          "MASE1001"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE4998",
+        "codes": [
+          "MASE4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component"
+      },
+      {
+        "raw": "MASE4999",
+        "codes": [
+          "MASE4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(c) Internship Course: ENGG1820"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "EEEN4020/ESTR4402",
+        "codes": [
+          "EEEN4020",
+          "ESTR4402"
+        ],
+        "alt": true,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "EEEN4050/ESTR4422",
+        "codes": [
+          "EEEN4050",
+          "ESTR4422"
+        ],
+        "alt": true,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MAEG4020/ESTR4410",
+        "codes": [
+          "MAEG4020",
+          "ESTR4410"
+        ],
+        "alt": true,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "PHYS3023",
+        "codes": [
+          "PHYS3023"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "4. Elective"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "14",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ELEG2202,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Internship Course: ENGG1820",
+      "units": "1",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 23
+    }
+  ]
+}

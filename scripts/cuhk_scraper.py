@@ -32,7 +32,7 @@ DEBUG_HTML_DIR = os.path.join(SCRAPER_OUTPUTS_DIR, "debug_html")
 TEST_PROGRESS_FILE = os.path.join(SCRAPER_OUTPUTS_DIR, "scraping_progress.json")
 
 # Course data outputs
-SOURCE_DATA_DIR = "data"
+SOURCE_DATA_DIR = os.path.join("data", "raw", "courses")
 
 # Operational logs and summaries
 LOGS_DIR = "logs"

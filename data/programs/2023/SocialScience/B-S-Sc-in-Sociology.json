@@ -1,0 +1,2326 @@
+{
+  "program_en": "B.S.Sc. in Sociology",
+  "program_chi": "社會學社會科學學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 69,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH2380",
+    "ANTH2440",
+    "ANTH2530",
+    "ANTH3324",
+    "ANTH3340",
+    "ANTH3540",
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH3321",
+    "ARCH3721",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1170",
+    "COMM1180",
+    "COMM2110",
+    "COMM2120",
+    "COMM2140",
+    "COMM2160",
+    "COMM2170",
+    "COMM2210",
+    "COMM2440",
+    "COMM2500",
+    "COMM2530",
+    "COMM2540",
+    "COMM2570",
+    "COMM2590",
+    "COMM2600",
+    "COMM2610",
+    "COMM2710",
+    "COMM2733",
+    "COMM2740",
+    "COMM2741",
+    "COMM2811",
+    "COMM2812",
+    "COMM2813",
+    "COMM2814",
+    "COMM2830",
+    "COMM2840",
+    "COMM2850",
+    "COMM2910",
+    "COMM2920",
+    "COMM2922",
+    "COMM2925",
+    "COMM2926",
+    "COMM2928",
+    "COMM2930",
+    "COMM2932",
+    "COMM2940",
+    "COMM2962",
+    "COMM3131",
+    "COMM3132",
+    "COMM3140",
+    "COMM3191",
+    "COMM3193",
+    "COMM3200",
+    "COMM3550",
+    "COMM3600",
+    "COMM3620",
+    "COMM3630",
+    "COMM3640",
+    "COMM3650",
+    "COMM3660",
+    "COMM3670",
+    "COMM3680",
+    "COMM3681",
+    "COMM3682",
+    "COMM3690",
+    "COMM3700",
+    "COMM3710",
+    "COMM3711",
+    "COMM3721",
+    "COMM3722",
+    "COMM3733",
+    "COMM3740",
+    "COMM3750",
+    "COMM3800",
+    "COMM3810",
+    "COMM3811",
+    "COMM3812",
+    "COMM3820",
+    "COMM3830",
+    "COMM3831",
+    "COMM3832",
+    "COMM3840",
+    "COMM3841",
+    "COMM3850",
+    "COMM3855",
+    "COMM3860",
+    "COMM3881",
+    "COMM3888",
+    "COMM3910",
+    "COMM3920",
+    "COMM3921",
+    "COMM3922",
+    "COMM3930",
+    "COMM3933",
+    "COMM3939",
+    "COMM3940",
+    "COMM3941",
+    "COMM3963",
+    "COMM4040",
+    "COMM4150",
+    "COMM4191",
+    "COMM4250",
+    "COMM4730",
+    "COMM4733",
+    "COMM4848",
+    "COMM4935",
+    "COMM4956",
+    "COMM4962",
+    "COMM5110",
+    "COMM5111",
+    "COMM5631",
+    "COMM5632",
+    "COMM5650",
+    "COMM5690",
+    "COMM5755",
+    "COMM6420",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "DSPS2201",
+    "DSPS2301",
+    "DSPS2501",
+    "DSPS3202",
+    "DSPS3310",
+    "DSPS3790",
+    "DSPS3803",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON3250",
+    "ECON3310",
+    "ECON3320",
+    "ECON3350",
+    "ECON3370",
+    "ECON3380",
+    "ECON3610",
+    "ECON3630",
+    "EESC1001",
+    "EESC2010",
+    "EESC2020",
+    "EESC2120",
+    "EESC2270",
+    "EESC2515",
+    "EESC2800",
+    "EESC3220",
+    "EESC3230",
+    "EESC3300",
+    "EESC3330",
+    "EESC3520",
+    "EESC3600",
+    "EESC3601",
+    "EESC3800",
+    "EESC4240",
+    "EESC4260",
+    "EESC4350",
+    "EESC4510",
+    "EESC4540",
+    "EESC4602",
+    "ENSC2270",
+    "ENSC2515",
+    "ENSC3230",
+    "ENSC3330",
+    "ENSC3520",
+    "ENSC4250",
+    "ESSC2010",
+    "ESSC2020",
+    "ESSC2120",
+    "ESSC2800",
+    "ESSC3220",
+    "ESSC3300",
+    "ESSC3600",
+    "ESSC3601",
+    "ESSC3800",
+    "ESSC4240",
+    "ESSC4260",
+    "ESSC4510",
+    "ESSC4540",
+    "ESSC4602",
+    "GDRS1001",
+    "GDRS1002",
+    "GDRS3003",
+    "GDRS3004",
+    "GDRS3005",
+    "GDRS3006",
+    "GDRS3007",
+    "GDRS3008",
+    "GDRS3024",
+    "GDRS4006",
+    "GDRS4007",
+    "GDRS4008",
+    "GDRS4011",
+    "GDRS4012",
+    "GDRS5210",
+    "GLSD1001",
+    "GLSD2501",
+    "GLSD3105",
+    "GLSD3301",
+    "GLSD3501",
+    "GLSD4102",
+    "GLSD4104",
+    "GLSD4401",
+    "GLSD4402",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GPAD1100",
+    "GPAD2070",
+    "GPAD2085",
+    "GPAD2300",
+    "GPAD2345",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2104",
+    "GRMD2105",
+    "GRMD2303",
+    "GRMD2321",
+    "GRMD2401",
+    "GRMD2404",
+    "GRMD2501",
+    "GRMD3104",
+    "GRMD3106",
+    "GRMD3202",
+    "GRMD3203",
+    "GRMD3302",
+    "GRMD3323",
+    "GRMD3402",
+    "GRMD3404",
+    "GRMD4403",
+    "GRMD4503",
+    "LAWS6001",
+    "LAWS6004",
+    "LAWS6006",
+    "LAWS6007",
+    "LAWS6011",
+    "LAWS6012",
+    "LAWS6013",
+    "LAWS6015",
+    "LAWS6017",
+    "LAWS6018",
+    "LAWS6019",
+    "LAWS6020",
+    "LAWS6021",
+    "LAWS6022",
+    "LAWS6023",
+    "LAWS6024",
+    "LAWS6089",
+    "LAWS6901",
+    "LAWS6902",
+    "PSYC1000",
+    "PSYC1630",
+    "PSYC3370",
+    "PSYC3630",
+    "SOCI1001",
+    "SOCI1002",
+    "SOCI1102",
+    "SOCI2003",
+    "SOCI2004",
+    "SOCI2101",
+    "SOCI2103",
+    "SOCI2104",
+    "SOCI2106",
+    "SOCI2116",
+    "SOCI2203",
+    "SOCI2208",
+    "SOCI2216",
+    "SOCI2218",
+    "SOCI2219",
+    "SOCI2220",
+    "SOCI3001",
+    "SOCI3002",
+    "SOCI3003",
+    "SOCI3102",
+    "SOCI3204",
+    "SOCI3207",
+    "SOCI3208",
+    "SOCI3221",
+    "SOCI3223",
+    "SOCI3224",
+    "SOCI3225",
+    "SOCI3226",
+    "SOCI3227",
+    "SOCI3229",
+    "SOCI3230",
+    "SOCI3231",
+    "SOCI3233",
+    "SOCI3234",
+    "SOCI3235",
+    "SOCI3236",
+    "SOCI3237",
+    "SOCI3238",
+    "SOCI3239",
+    "SOCI3240",
+    "SOCI3241",
+    "SOCI3242",
+    "SOCI3243",
+    "SOCI3244",
+    "SOCI3245",
+    "SOCI3451",
+    "SOCI3452",
+    "SOCI3453",
+    "SOCI4010",
+    "SOCI4020",
+    "SOCI4201",
+    "SOCI4202",
+    "SOCI4204",
+    "SOCI4205",
+    "SOCI4208",
+    "SOCI4209",
+    "SOCI4210",
+    "SOCI4211",
+    "SOCI4351",
+    "SOCI4352",
+    "SOCI4353",
+    "SOCI4410",
+    "SOCI4420",
+    "SOSC1001",
+    "SOSC1002",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "SOWK2140",
+    "SOWK2150",
+    "SOWK2160",
+    "SOWK2190",
+    "SOWK2202",
+    "SOWK2203",
+    "SOWK2204",
+    "SOWK3340",
+    "SOWK4350",
+    "URSP1001",
+    "URSP1002",
+    "URSP2010",
+    "URSP2020",
+    "URSP2030",
+    "URSP2040",
+    "URSP2050",
+    "URSP2060",
+    "URSP2070",
+    "URSP2100",
+    "URSP2200",
+    "URSP2300",
+    "URSP2400",
+    "URSP2800",
+    "URSP2900",
+    "URSP3100",
+    "URSP3200",
+    "URSP3300",
+    "URSP3400",
+    "URSP3600",
+    "URSP3700",
+    "URSP4100"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "SOCI1002",
+        "codes": [
+          "SOCI1002"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI2003",
+        "codes": [
+          "SOCI2003"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI2004",
+        "codes": [
+          "SOCI2004"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI2104",
+        "codes": [
+          "SOCI2104"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI3003",
+        "codes": [
+          "SOCI3003"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI3223",
+        "codes": [
+          "SOCI3223"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI3231",
+        "codes": [
+          "SOCI3231"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      },
+      {
+        "raw": "SOCI4010",
+        "codes": [
+          "SOCI4010"
+        ],
+        "alt": false,
+        "from": "2. Required"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "SOCI2101",
+        "codes": [
+          "SOCI2101"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2103",
+        "codes": [
+          "SOCI2103"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2106",
+        "codes": [
+          "SOCI2106"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2116",
+        "codes": [
+          "SOCI2116"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2203",
+        "codes": [
+          "SOCI2203"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2208",
+        "codes": [
+          "SOCI2208"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2216",
+        "codes": [
+          "SOCI2216"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2218",
+        "codes": [
+          "SOCI2218"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2219",
+        "codes": [
+          "SOCI2219"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2220",
+        "codes": [
+          "SOCI2220"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3001",
+        "codes": [
+          "SOCI3001"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3002",
+        "codes": [
+          "SOCI3002"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3102",
+        "codes": [
+          "SOCI3102"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3204",
+        "codes": [
+          "SOCI3204"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3207",
+        "codes": [
+          "SOCI3207"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3208",
+        "codes": [
+          "SOCI3208"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3221",
+        "codes": [
+          "SOCI3221"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3224",
+        "codes": [
+          "SOCI3224"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3225",
+        "codes": [
+          "SOCI3225"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3226",
+        "codes": [
+          "SOCI3226"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3229",
+        "codes": [
+          "SOCI3229"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3230",
+        "codes": [
+          "SOCI3230"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3233",
+        "codes": [
+          "SOCI3233"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3234",
+        "codes": [
+          "SOCI3234"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3235",
+        "codes": [
+          "SOCI3235"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3236",
+        "codes": [
+          "SOCI3236"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3237",
+        "codes": [
+          "SOCI3237"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3238",
+        "codes": [
+          "SOCI3238"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3239",
+        "codes": [
+          "SOCI3239"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3240",
+        "codes": [
+          "SOCI3240"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3241",
+        "codes": [
+          "SOCI3241"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3242",
+        "codes": [
+          "SOCI3242"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3243",
+        "codes": [
+          "SOCI3243"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3244",
+        "codes": [
+          "SOCI3244"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3245",
+        "codes": [
+          "SOCI3245"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3451",
+        "codes": [
+          "SOCI3451"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3452",
+        "codes": [
+          "SOCI3452"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI3453",
+        "codes": [
+          "SOCI3453"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4201",
+        "codes": [
+          "SOCI4201"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4202",
+        "codes": [
+          "SOCI4202"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4204",
+        "codes": [
+          "SOCI4204"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4205",
+        "codes": [
+          "SOCI4205"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4208",
+        "codes": [
+          "SOCI4208"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4209",
+        "codes": [
+          "SOCI4209"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4210",
+        "codes": [
+          "SOCI4210"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4211",
+        "codes": [
+          "SOCI4211"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4351",
+        "codes": [
+          "SOCI4351"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4352",
+        "codes": [
+          "SOCI4352"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4353",
+        "codes": [
+          "SOCI4353"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4410",
+        "codes": [
+          "SOCI4410"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI4420",
+        "codes": [
+          "SOCI4420"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "SOCI2004",
+        "codes": [
+          "SOCI2004"
+        ],
+        "alt": false,
+        "from": "(a) Quantitative Method Cluster"
+      },
+      {
+        "raw": "SOCI3229",
+        "codes": [
+          "SOCI3229"
+        ],
+        "alt": false,
+        "from": "(a) Quantitative Method Cluster"
+      },
+      {
+        "raw": "SOCI3243",
+        "codes": [
+          "SOCI3243"
+        ],
+        "alt": false,
+        "from": "(a) Quantitative Method Cluster"
+      },
+      {
+        "raw": "SOCI4201",
+        "codes": [
+          "SOCI4201"
+        ],
+        "alt": false,
+        "from": "(a) Quantitative Method Cluster"
+      },
+      {
+        "raw": "SOCI3102",
+        "codes": [
+          "SOCI3102"
+        ],
+        "alt": false,
+        "from": "(b) Computational Method Cluster"
+      },
+      {
+        "raw": "SOCI3238",
+        "codes": [
+          "SOCI3238"
+        ],
+        "alt": false,
+        "from": "(b) Computational Method Cluster"
+      },
+      {
+        "raw": "SOCI2003",
+        "codes": [
+          "SOCI2003"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3001",
+        "codes": [
+          "SOCI3001"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3221",
+        "codes": [
+          "SOCI3221"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3225",
+        "codes": [
+          "SOCI3225"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3231",
+        "codes": [
+          "SOCI3231"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3235",
+        "codes": [
+          "SOCI3235"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI3245",
+        "codes": [
+          "SOCI3245"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "DSPS2201",
+        "codes": [
+          "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "DSPS3202",
+        "codes": [
+          "DSPS3202"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "GRMD2104",
+        "codes": [
+          "GRMD2104"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "GRMD2105",
+        "codes": [
+          "GRMD2105"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "(c) Community Social Analysis Cluster"
+      },
+      {
+        "raw": "SOCI2106",
+        "codes": [
+          "SOCI2106"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "SOCI3001",
+        "codes": [
+          "SOCI3001"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "SOCI3207",
+        "codes": [
+          "SOCI3207"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "SOCI3230",
+        "codes": [
+          "SOCI3230"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "SOCI3241",
+        "codes": [
+          "SOCI3241"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3250",
+        "codes": [
+          "ECON3250"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3310",
+        "codes": [
+          "ECON3310"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3320",
+        "codes": [
+          "ECON3320"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3370",
+        "codes": [
+          "ECON3370"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3380",
+        "codes": [
+          "ECON3380"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3610",
+        "codes": [
+          "ECON3610"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "ECON3630",
+        "codes": [
+          "ECON3630"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GLSD2501",
+        "codes": [
+          "GLSD2501"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GLSD3501",
+        "codes": [
+          "GLSD3501"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GLSD4102",
+        "codes": [
+          "GLSD4102"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GLSD4104",
+        "codes": [
+          "GLSD4104"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GRMD2321",
+        "codes": [
+          "GRMD2321"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "GRMD3402",
+        "codes": [
+          "GRMD3402"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "URSP2010",
+        "codes": [
+          "URSP2010"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "URSP2200",
+        "codes": [
+          "URSP2200"
+        ],
+        "alt": false,
+        "from": "(a) Economic"
+      },
+      {
+        "raw": "SOCI2116",
+        "codes": [
+          "SOCI2116"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOCI2220",
+        "codes": [
+          "SOCI2220"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOCI3204",
+        "codes": [
+          "SOCI3204"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOCI3234",
+        "codes": [
+          "SOCI3234"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOCI3242",
+        "codes": [
+          "SOCI3242"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "ANTH2530",
+        "codes": [
+          "ANTH2530"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "ANTH3540",
+        "codes": [
+          "ANTH3540"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "COMM3600",
+        "codes": [
+          "COMM3600"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "COMM3710",
+        "codes": [
+          "COMM3710"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GDRS5210",
+        "codes": [
+          "GDRS5210"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GLSD3301",
+        "codes": [
+          "GLSD3301"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GLSD4401",
+        "codes": [
+          "GLSD4401"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GLSD4402",
+        "codes": [
+          "GLSD4402"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GPAD1100",
+        "codes": [
+          "GPAD1100"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GPAD2070",
+        "codes": [
+          "GPAD2070"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GPAD2085",
+        "codes": [
+          "GPAD2085"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GPAD2300",
+        "codes": [
+          "GPAD2300"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "GPAD2345",
+        "codes": [
+          "GPAD2345"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "PSYC3370",
+        "codes": [
+          "PSYC3370"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOWK4350",
+        "codes": [
+          "SOWK4350"
+        ],
+        "alt": false,
+        "from": "(b) Sociology"
+      },
+      {
+        "raw": "SOCI2208",
+        "codes": [
+          "SOCI2208"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI2219",
+        "codes": [
+          "SOCI2219"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI3224",
+        "codes": [
+          "SOCI3224"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI3236",
+        "codes": [
+          "SOCI3236"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI3244",
+        "codes": [
+          "SOCI3244"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI4205",
+        "codes": [
+          "SOCI4205"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "ARCH3321",
+        "codes": [
+          "ARCH3321"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "ARCH3721",
+        "codes": [
+          "ARCH3721"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "DSPS2301",
+        "codes": [
+          "DSPS2301"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "DSPS3310",
+        "codes": [
+          "DSPS3310"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "DSPS3790",
+        "codes": [
+          "DSPS3790"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "DSPS3803",
+        "codes": [
+          "DSPS3803"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS3005",
+        "codes": [
+          "GDRS3005"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS3006",
+        "codes": [
+          "GDRS3006"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS3007",
+        "codes": [
+          "GDRS3007"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS3008",
+        "codes": [
+          "GDRS3008"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS3024",
+        "codes": [
+          "GDRS3024"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS4006",
+        "codes": [
+          "GDRS4006"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS4007",
+        "codes": [
+          "GDRS4007"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS4008",
+        "codes": [
+          "GDRS4008"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS4011",
+        "codes": [
+          "GDRS4011"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GDRS4012",
+        "codes": [
+          "GDRS4012"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GLSD3105",
+        "codes": [
+          "GLSD3105"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD2303",
+        "codes": [
+          "GRMD2303"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD2401",
+        "codes": [
+          "GRMD2401"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD2404",
+        "codes": [
+          "GRMD2404"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD3202",
+        "codes": [
+          "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD3302",
+        "codes": [
+          "GRMD3302"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD3323",
+        "codes": [
+          "GRMD3323"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD4403",
+        "codes": [
+          "GRMD4403"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "PSYC3630",
+        "codes": [
+          "PSYC3630"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOWK3340",
+        "codes": [
+          "SOWK3340"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2010",
+        "codes": [
+          "URSP2010"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2020",
+        "codes": [
+          "URSP2020"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2030",
+        "codes": [
+          "URSP2030"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2040",
+        "codes": [
+          "URSP2040"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2050",
+        "codes": [
+          "URSP2050"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2060",
+        "codes": [
+          "URSP2060"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2070",
+        "codes": [
+          "URSP2070"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2100",
+        "codes": [
+          "URSP2100"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2300",
+        "codes": [
+          "URSP2300"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2400",
+        "codes": [
+          "URSP2400"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP2900",
+        "codes": [
+          "URSP2900"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3100",
+        "codes": [
+          "URSP3100"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3200",
+        "codes": [
+          "URSP3200"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3300",
+        "codes": [
+          "URSP3300"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3400",
+        "codes": [
+          "URSP3400"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP3700",
+        "codes": [
+          "URSP3700"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "URSP4100",
+        "codes": [
+          "URSP4100"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI3245",
+        "codes": [
+          "SOCI3245"
+        ],
+        "alt": false,
+        "from": "(c) Urban"
+      },
+      {
+        "raw": "SOCI2106",
+        "codes": [
+          "SOCI2106"
+        ],
+        "alt": false,
+        "from": "(a) Required"
+      },
+      {
+        "raw": "SOCI2203",
+        "codes": [
+          "SOCI2203"
+        ],
+        "alt": false,
+        "from": "(a) Required"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "(a) Required"
+      },
+      {
+        "raw": "DSPS2201",
+        "codes": [
+          "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "DSPS2301",
+        "codes": [
+          "DSPS2301"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "DSPS2501",
+        "codes": [
+          "DSPS2501"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "DSPS3202",
+        "codes": [
+          "DSPS3202"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI2116",
+        "codes": [
+          "SOCI2116"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI2208",
+        "codes": [
+          "SOCI2208"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI2216",
+        "codes": [
+          "SOCI2216"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI2218",
+        "codes": [
+          "SOCI2218"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI3204",
+        "codes": [
+          "SOCI3204"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI3208",
+        "codes": [
+          "SOCI3208"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "(b) Elective"
+      },
+      {
+        "raw": "SOCI3239",
+        "codes": [
+          "SOCI3239"
+        ],
+        "alt": false,
+        "from": "(a) Environment"
+      },
+      {
+        "raw": "SOCI3102",
+        "codes": [
+          "SOCI3102"
+        ],
+        "alt": false,
+        "from": "(a) Environment"
+      },
+      {
+        "raw": "SOCI3238",
+        "codes": [
+          "SOCI3238"
+        ],
+        "alt": false,
+        "from": "(a) Environment"
+      },
+      {
+        "raw": "SOCI3240",
+        "codes": [
+          "SOCI3240"
+        ],
+        "alt": false,
+        "from": "(a) Environment"
+      },
+      {
+        "raw": "SOCI4210",
+        "codes": [
+          "SOCI4210"
+        ],
+        "alt": false,
+        "from": "(a) Environment"
+      },
+      {
+        "raw": "SOCI3002",
+        "codes": [
+          "SOCI3002"
+        ],
+        "alt": false,
+        "from": "(b) Society"
+      },
+      {
+        "raw": "SOCI2116",
+        "codes": [
+          "SOCI2116"
+        ],
+        "alt": false,
+        "from": "(b) Society"
+      },
+      {
+        "raw": "SOCI2208",
+        "codes": [
+          "SOCI2208"
+        ],
+        "alt": false,
+        "from": "(b) Society"
+      },
+      {
+        "raw": "SOCI2216",
+        "codes": [
+          "SOCI2216"
+        ],
+        "alt": false,
+        "from": "(b) Society"
+      },
+      {
+        "raw": "SOCI2218",
+        "codes": [
+          "SOCI2218"
+        ],
+        "alt": false,
+        "from": "(b) Society"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 52
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Quantitative Method Cluster",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Computational Method Cluster",
+      "units": "3",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Community Social Analysis Cluster",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Economic",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Sociology",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 20
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Urban",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 56
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Environment",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Society",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    }
+  ]
+}

@@ -1,0 +1,1090 @@
+{
+  "program_en": "B.Eng. in Information Engineering",
+  "program_chi": "信息工程學工程學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "CSCI2100",
+    "CSCI2720",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI4180",
+    "CSCI4190",
+    "ELEG5491",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG1820",
+    "ENGG2420",
+    "ENGG2440",
+    "ENGG2720",
+    "ENGG2740",
+    "ENGG2780",
+    "ENGG5301",
+    "ENGG5302",
+    "ENGG5303",
+    "ENGG5383",
+    "ENGG5392",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR2004",
+    "ESTR2014",
+    "ESTR2016",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2300",
+    "ESTR2302",
+    "ESTR2304",
+    "ESTR2306",
+    "ESTR2308",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3300",
+    "ESTR3302",
+    "ESTR3304",
+    "ESTR3306",
+    "ESTR3308",
+    "ESTR3310",
+    "ESTR4106",
+    "ESTR4300",
+    "ESTR4302",
+    "ESTR4304",
+    "ESTR4306",
+    "ESTR4308",
+    "ESTR4312",
+    "ESTR4314",
+    "ESTR4316",
+    "ESTR4320",
+    "ESTR4322",
+    "ESTR4324",
+    "ESTR4326",
+    "ESTR4328",
+    "ESTR4998",
+    "FINA2010",
+    "FINA2020",
+    "FTEC4004",
+    "IBBA3040",
+    "IERG1000",
+    "IERG1080",
+    "IERG1810",
+    "IERG2051",
+    "IERG2060",
+    "IERG2080",
+    "IERG2310",
+    "IERG2470",
+    "IERG3010",
+    "IERG3050",
+    "IERG3060",
+    "IERG3070",
+    "IERG3080",
+    "IERG3280",
+    "IERG3300",
+    "IERG3310",
+    "IERG3320",
+    "IERG3800",
+    "IERG3810",
+    "IERG3820",
+    "IERG3830",
+    "IERG3840",
+    "IERG3842",
+    "IERG4004",
+    "IERG4030",
+    "IERG4060",
+    "IERG4080",
+    "IERG4090",
+    "IERG4100",
+    "IERG4110",
+    "IERG4120",
+    "IERG4130",
+    "IERG4150",
+    "IERG4160",
+    "IERG4180",
+    "IERG4190",
+    "IERG4210",
+    "IERG4220",
+    "IERG4230",
+    "IERG4240",
+    "IERG4300",
+    "IERG4320",
+    "IERG4330",
+    "IERG4340",
+    "IERG4350",
+    "IERG4360",
+    "IERG4831",
+    "IERG4841",
+    "IERG4851",
+    "IERG4998",
+    "IERG4999",
+    "IERG5020",
+    "IERG5040",
+    "IERG5050",
+    "IERG5090",
+    "IERG5100",
+    "IERG5110",
+    "IERG5130",
+    "IERG5140",
+    "IERG5154",
+    "IERG5200",
+    "IERG5230",
+    "IERG5240",
+    "IERG5250",
+    "IERG5254",
+    "IERG5280",
+    "IERG5290",
+    "IERG5300",
+    "IERG5310",
+    "IERG5320",
+    "IERG5330",
+    "IERG5340",
+    "IERG5350",
+    "IERG5360",
+    "IERG5380",
+    "IERG5400",
+    "IERG5450",
+    "IERG5460",
+    "IERG5470",
+    "IERG5590",
+    "IERG5670",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3070",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG2440/ESTR2004",
+        "codes": [
+          "ENGG2440",
+          "ESTR2004"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2720/ESTR2014",
+        "codes": [
+          "ENGG2720",
+          "ESTR2014"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG1000",
+        "codes": [
+          "IERG1000"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG1810",
+        "codes": [
+          "IERG1810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG2051/ESTR2302",
+        "codes": [
+          "IERG2051",
+          "ESTR2302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG2060/ESTR2304",
+        "codes": [
+          "IERG2060",
+          "ESTR2304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG2080/ESTR2306",
+        "codes": [
+          "IERG2080",
+          "ESTR2306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG2310/ESTR2300",
+        "codes": [
+          "IERG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG2470/ESTR2308",
+        "codes": [
+          "IERG2470",
+          "ESTR2308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3080/ESTR3308",
+        "codes": [
+          "IERG3080",
+          "ESTR3308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3310/ESTR3310",
+        "codes": [
+          "IERG3310",
+          "ESTR3310"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3800",
+        "codes": [
+          "IERG3800"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,"
+      },
+      {
+        "raw": "IERG3840",
+        "codes": [
+          "IERG3840"
+        ],
+        "alt": false,
+        "from": "(b) IERG3840[b] or 3842"
+      },
+      {
+        "raw": "IERG4998",
+        "codes": [
+          "IERG4998"
+        ],
+        "alt": false,
+        "from": "(c) Research Component Courses[c]"
+      },
+      {
+        "raw": "IERG4999",
+        "codes": [
+          "IERG4999"
+        ],
+        "alt": false,
+        "from": "(c) Research Component Courses[c]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3010/ESTR3300",
+        "codes": [
+          "IERG3010",
+          "ESTR3300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3070",
+        "codes": [
+          "IERG3070"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3300/ESTR3304",
+        "codes": [
+          "IERG3300",
+          "ESTR3304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3320/ESTR3306",
+        "codes": [
+          "IERG3320",
+          "ESTR3306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4030/ESTR4320",
+        "codes": [
+          "IERG4030",
+          "ESTR4320"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4060",
+        "codes": [
+          "IERG4060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4090/ESTR4302",
+        "codes": [
+          "IERG4090",
+          "ESTR4302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4100/ESTR4304",
+        "codes": [
+          "IERG4100",
+          "ESTR4304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4110/ESTR4314",
+        "codes": [
+          "IERG4110",
+          "ESTR4314"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4120/ESTR4328",
+        "codes": [
+          "IERG4120",
+          "ESTR4328"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4130/CSCI4130/ESTR4306",
+        "codes": [
+          "IERG4130",
+          "CSCI4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4150/ESTR4322",
+        "codes": [
+          "IERG4150",
+          "ESTR4322"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4180/ESTR4308",
+        "codes": [
+          "IERG4180",
+          "ESTR4308"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4240",
+        "codes": [
+          "IERG4240"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4300/ESTR4300",
+        "codes": [
+          "IERG4300",
+          "ESTR4300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4320/ESTR4324",
+        "codes": [
+          "IERG4320",
+          "ESTR4324"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4330/ESTR4316",
+        "codes": [
+          "IERG4330",
+          "ESTR4316"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4360/ESTR4326",
+        "codes": [
+          "IERG4360",
+          "ESTR4326"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4841",
+        "codes": [
+          "IERG4841"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4851",
+        "codes": [
+          "IERG4851"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5020",
+        "codes": [
+          "IERG5020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5040/ENGG5392",
+        "codes": [
+          "IERG5040",
+          "ENGG5392"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5050",
+        "codes": [
+          "IERG5050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5090",
+        "codes": [
+          "IERG5090"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5100/ENGG5303",
+        "codes": [
+          "IERG5100",
+          "ENGG5303"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5110",
+        "codes": [
+          "IERG5110"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5130",
+        "codes": [
+          "IERG5130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5140",
+        "codes": [
+          "IERG5140"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5154/ENGG5301",
+        "codes": [
+          "IERG5154",
+          "ENGG5301"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5200",
+        "codes": [
+          "IERG5200"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5230",
+        "codes": [
+          "IERG5230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5240/ENGG5383",
+        "codes": [
+          "IERG5240",
+          "ENGG5383"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5250",
+        "codes": [
+          "IERG5250"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5254",
+        "codes": [
+          "IERG5254"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5280",
+        "codes": [
+          "IERG5280"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5290",
+        "codes": [
+          "IERG5290"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5300/ENGG5302",
+        "codes": [
+          "IERG5300",
+          "ENGG5302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5310",
+        "codes": [
+          "IERG5310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5320",
+        "codes": [
+          "IERG5320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5330",
+        "codes": [
+          "IERG5330"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5340",
+        "codes": [
+          "IERG5340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5360",
+        "codes": [
+          "IERG5360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5380",
+        "codes": [
+          "IERG5380"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5400",
+        "codes": [
+          "IERG5400"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5450",
+        "codes": [
+          "IERG5450"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5460",
+        "codes": [
+          "IERG5460"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5470",
+        "codes": [
+          "IERG5470"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5590",
+        "codes": [
+          "IERG5590"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG5670",
+        "codes": [
+          "IERG5670"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI4180/ESTR4106",
+        "codes": [
+          "CSCI4180",
+          "ESTR4106"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI4190",
+        "codes": [
+          "CSCI4190"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "ELEG5491",
+        "codes": [
+          "ELEG5491"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "11",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100/ESTR2102, IERG1000, 1810, IERG2051/ESTR2302,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "IERG3840[b] or 3842",
+      "units": "1",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research Component Courses[c]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "16",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 70
+    }
+  ]
+}

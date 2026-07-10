@@ -1,0 +1,1602 @@
+{
+  "program_en": "B.B.A. (Integrated BBA Programme) and Juris Doctor",
+  "program_chi": "工商管理學士（工商管理學士綜合課程）及法律博士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.B.A",
+  "total_units": 70,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "DOTE1030",
+    "DOTE1035",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3010",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4140",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "FINA2010",
+    "FINA2020",
+    "FINA2210",
+    "FINA3010",
+    "FINA3020",
+    "FINA3030",
+    "FINA3040",
+    "FINA3060",
+    "FINA3070",
+    "FINA3080",
+    "FINA3210",
+    "FINA3220",
+    "FINA3230",
+    "FINA3240",
+    "FINA3250",
+    "FINA3280",
+    "FINA3310",
+    "FINA3330",
+    "FINA3340",
+    "FINA3350",
+    "FINA3398",
+    "FINA3399",
+    "FINA4010",
+    "FINA4020",
+    "FINA4030",
+    "FINA4040",
+    "FINA4050",
+    "FINA4060",
+    "FINA4110",
+    "FINA4120",
+    "FINA4130",
+    "FINA4140",
+    "FINA4150",
+    "FINA4160",
+    "FINA4190",
+    "FINA4210",
+    "FINA4220",
+    "FINA4230",
+    "FINA4240",
+    "FINA4250",
+    "FINA4260",
+    "FINA4270",
+    "FINA4280",
+    "FINA4291",
+    "FINA4310",
+    "FINA4320",
+    "FINA4330",
+    "FINA4340",
+    "FINA4350",
+    "FINA4370",
+    "FINA4380",
+    "FINA4390",
+    "IBBA3020",
+    "IBBA3040",
+    "LAWS1020",
+    "LAWS1030",
+    "LAWS1041",
+    "LAWS1042",
+    "LAWS2131",
+    "LAWS2132",
+    "LAWS6001",
+    "LAWS6002",
+    "LAWS6003",
+    "LAWS6004",
+    "LAWS6005",
+    "LAWS6006",
+    "LAWS6007",
+    "LAWS6011",
+    "LAWS6012",
+    "LAWS6013",
+    "LAWS6014",
+    "LAWS6015",
+    "LAWS6017",
+    "LAWS6018",
+    "LAWS6019",
+    "LAWS6020",
+    "LAWS6021",
+    "LAWS6022",
+    "LAWS6023",
+    "LAWS6024",
+    "LAWS6031",
+    "LAWS6032",
+    "LAWS6033",
+    "LAWS6034",
+    "LAWS6035",
+    "LAWS6036",
+    "LAWS6037",
+    "LAWS6038",
+    "LAWS6039",
+    "LAWS6040",
+    "LAWS6041",
+    "LAWS6042",
+    "LAWS6043",
+    "LAWS6044",
+    "LAWS6045",
+    "LAWS6046",
+    "LAWS6047",
+    "LAWS6048",
+    "LAWS6050",
+    "LAWS6051",
+    "LAWS6053",
+    "LAWS6054",
+    "LAWS6055",
+    "LAWS6056",
+    "LAWS6057",
+    "LAWS6058",
+    "LAWS6059",
+    "LAWS6060",
+    "LAWS6061",
+    "LAWS6062",
+    "LAWS6063",
+    "LAWS6064",
+    "LAWS6065",
+    "LAWS6066",
+    "LAWS6067",
+    "LAWS6068",
+    "LAWS6069",
+    "LAWS6070",
+    "LAWS6071",
+    "LAWS6072",
+    "LAWS6073",
+    "LAWS6074",
+    "LAWS6075",
+    "LAWS6076",
+    "LAWS6077",
+    "LAWS6079",
+    "LAWS6080",
+    "LAWS6082",
+    "LAWS6083",
+    "LAWS6084",
+    "LAWS6085",
+    "LAWS6086",
+    "LAWS6087",
+    "LAWS6088",
+    "LAWS6089",
+    "LAWS6090",
+    "LAWS6091",
+    "LAWS6092",
+    "LAWS6093",
+    "LAWS6101",
+    "LAWS6102",
+    "LAWS6103",
+    "LAWS6104",
+    "LAWS6111",
+    "LAWS6112",
+    "LAWS6113",
+    "LAWS6114",
+    "LAWS6115",
+    "LAWS6116",
+    "LAWS6117",
+    "LAWS6118",
+    "LAWS6119",
+    "LAWS6120",
+    "LAWS6121",
+    "LAWS6122",
+    "LAWS6123",
+    "LAWS6124",
+    "LAWS6125",
+    "LAWS6126",
+    "LAWS6127",
+    "LAWS6128",
+    "LAWS6129",
+    "LAWS6130",
+    "LAWS6131",
+    "LAWS6132",
+    "LAWS6133",
+    "LAWS6134",
+    "LAWS6201",
+    "LAWS6211",
+    "LAWS6212",
+    "LAWS6213",
+    "LAWS6214",
+    "LAWS6215",
+    "LAWS6216",
+    "LAWS6217",
+    "LAWS6218",
+    "LAWS6219",
+    "LAWS6220",
+    "LAWS6221",
+    "LAWS6222",
+    "LAWS6301",
+    "LAWS6302",
+    "LAWS6303",
+    "LAWS6304",
+    "LAWS6311",
+    "LAWS6312",
+    "LAWS6313",
+    "LAWS6314",
+    "LAWS6315",
+    "LAWS6316",
+    "LAWS6317",
+    "LAWS6318",
+    "LAWS6319",
+    "LAWS6320",
+    "LAWS6321",
+    "LAWS6322",
+    "LAWS6323",
+    "LAWS6324",
+    "LAWS6325",
+    "LAWS6326",
+    "LAWS6327",
+    "LAWS6328",
+    "LAWS6329",
+    "LAWS6330",
+    "LAWS6331",
+    "LAWS6332",
+    "LAWS6333",
+    "LAWS6334",
+    "LAWS6335",
+    "LAWS6336",
+    "LAWS6337",
+    "LAWS6338",
+    "LAWS6339",
+    "LAWS6340",
+    "LAWS6401",
+    "LAWS6402",
+    "LAWS6411",
+    "LAWS6412",
+    "LAWS6413",
+    "LAWS6414",
+    "LAWS6415",
+    "LAWS6416",
+    "LAWS6501",
+    "LAWS6901",
+    "LAWS6902",
+    "MGNT1010",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3070",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4040",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4120",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2030",
+        "codes": [
+          "DOTE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LAWS1020",
+        "codes": [
+          "LAWS1020"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      },
+      {
+        "raw": "LAWS1030",
+        "codes": [
+          "LAWS1030"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      },
+      {
+        "raw": "LAWS1041",
+        "codes": [
+          "LAWS1041"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      },
+      {
+        "raw": "LAWS1042",
+        "codes": [
+          "LAWS1042"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      },
+      {
+        "raw": "LAWS2131",
+        "codes": [
+          "LAWS2131"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      },
+      {
+        "raw": "LAWS2132",
+        "codes": [
+          "LAWS2132"
+        ],
+        "alt": false,
+        "from": "3. Law Courses[a]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021, 4110;"
+      },
+      {
+        "raw": "DOTE4110",
+        "codes": [
+          "DOTE4110"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021, 4110;"
+      },
+      {
+        "raw": "DOTE3000",
+        "codes": [
+          "DOTE3000"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE3011",
+        "codes": [
+          "DOTE3011"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE3030",
+        "codes": [
+          "DOTE3030"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE3050",
+        "codes": [
+          "DOTE3050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE3080",
+        "codes": [
+          "DOTE3080"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE3090",
+        "codes": [
+          "DOTE3090"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE4040",
+        "codes": [
+          "DOTE4040"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE4080",
+        "codes": [
+          "DOTE4080"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021, 2040, 4020;"
+      },
+      {
+        "raw": "DOTE2040",
+        "codes": [
+          "DOTE2040"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021, 2040, 4020;"
+      },
+      {
+        "raw": "DOTE4020",
+        "codes": [
+          "DOTE4020"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021, 2040, 4020;"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) one course"
+      },
+      {
+        "raw": "DOTE4070",
+        "codes": [
+          "DOTE4070"
+        ],
+        "alt": false,
+        "from": "(ii) one course"
+      },
+      {
+        "raw": "DOTE4240",
+        "codes": [
+          "DOTE4240"
+        ],
+        "alt": false,
+        "from": "(ii) one course"
+      },
+      {
+        "raw": "DOTE4260",
+        "codes": [
+          "DOTE4260"
+        ],
+        "alt": false,
+        "from": "(ii) one course"
+      },
+      {
+        "raw": "DOTE3030",
+        "codes": [
+          "DOTE3030"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "DOTE4030",
+        "codes": [
+          "DOTE4030"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "DOTE4110",
+        "codes": [
+          "DOTE4110"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "DOTE4220",
+        "codes": [
+          "DOTE4220"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "MKTG4120",
+        "codes": [
+          "MKTG4120"
+        ],
+        "alt": false,
+        "from": "(iii) one course"
+      },
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021 or"
+      },
+      {
+        "raw": "FINA2020",
+        "codes": [
+          "FINA2020"
+        ],
+        "alt": false,
+        "from": "(i) DOTE2021 or"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) 15 units selected from: DOTE3010, FINA courses at 3000 or above level"
+      },
+      {
+        "raw": "MGNT1070",
+        "codes": [
+          "MGNT1070"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070; and"
+      },
+      {
+        "raw": "MGNT2070",
+        "codes": [
+          "MGNT2070"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070; and"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3080",
+        "codes": [
+          "MGNT3080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4070",
+        "codes": [
+          "MGNT4070"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4160",
+        "codes": [
+          "MGNT4160"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4170",
+        "codes": [
+          "MGNT4170"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4270",
+        "codes": [
+          "MGNT4270"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4570",
+        "codes": [
+          "MGNT4570"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4711",
+        "codes": [
+          "MGNT4711"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4712",
+        "codes": [
+          "MGNT4712"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4713",
+        "codes": [
+          "MGNT4713"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3580",
+        "codes": [
+          "MGNT3580"
+        ],
+        "alt": false,
+        "from": "(i) MGNT3580, 4150; and"
+      },
+      {
+        "raw": "MGNT4150",
+        "codes": [
+          "MGNT4150"
+        ],
+        "alt": false,
+        "from": "(i) MGNT3580, 4150; and"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT3080",
+        "codes": [
+          "MGNT3080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT3100",
+        "codes": [
+          "MGNT3100"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4080",
+        "codes": [
+          "MGNT4080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4110",
+        "codes": [
+          "MGNT4110"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4140",
+        "codes": [
+          "MGNT4140"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4510",
+        "codes": [
+          "MGNT4510"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4530",
+        "codes": [
+          "MGNT4530"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4540",
+        "codes": [
+          "MGNT4540"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4550",
+        "codes": [
+          "MGNT4550"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT4570",
+        "codes": [
+          "MGNT4570"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,"
+      },
+      {
+        "raw": "MGNT2040",
+        "codes": [
+          "MGNT2040"
+        ],
+        "alt": false,
+        "from": "(i) MGNT2040, 3010; and"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "(i) MGNT2040, 3010; and"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3040",
+        "codes": [
+          "MGNT3040"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3060",
+        "codes": [
+          "MGNT3060"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3090",
+        "codes": [
+          "MGNT3090"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT3100",
+        "codes": [
+          "MGNT3100"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4050",
+        "codes": [
+          "MGNT4050"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4060",
+        "codes": [
+          "MGNT4060"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4080",
+        "codes": [
+          "MGNT4080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4110",
+        "codes": [
+          "MGNT4110"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MGNT4140",
+        "codes": [
+          "MGNT4140"
+        ],
+        "alt": false,
+        "from": "(ii) four courses"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020,"
+      },
+      {
+        "raw": "MKTG3020",
+        "codes": [
+          "MKTG3020"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020,"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020,"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020,"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG3040",
+        "codes": [
+          "MKTG3040"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG3050",
+        "codes": [
+          "MKTG3050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4010",
+        "codes": [
+          "MKTG4010"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4020",
+        "codes": [
+          "MKTG4020"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4030",
+        "codes": [
+          "MKTG4030"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4050",
+        "codes": [
+          "MKTG4050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4070",
+        "codes": [
+          "MKTG4070"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4080",
+        "codes": [
+          "MKTG4080"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4090",
+        "codes": [
+          "MKTG4090"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4110",
+        "codes": [
+          "MKTG4110"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4160",
+        "codes": [
+          "MKTG4160"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4200",
+        "codes": [
+          "MKTG4200"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080,"
+      },
+      {
+        "raw": "MKTG3060",
+        "codes": [
+          "MKTG3060"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080,"
+      },
+      {
+        "raw": "MKTG4080",
+        "codes": [
+          "MKTG4080"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080,"
+      },
+      {
+        "raw": "MKTG4090",
+        "codes": [
+          "MKTG4090"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080,"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG3020",
+        "codes": [
+          "MKTG3020"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4030",
+        "codes": [
+          "MKTG4030"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4050",
+        "codes": [
+          "MKTG4050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4120",
+        "codes": [
+          "MKTG4120"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4150",
+        "codes": [
+          "MKTG4150"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4160",
+        "codes": [
+          "MKTG4160"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4170",
+        "codes": [
+          "MKTG4170"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4180",
+        "codes": [
+          "MKTG4180"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4190",
+        "codes": [
+          "MKTG4190"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      },
+      {
+        "raw": "MKTG4200",
+        "codes": [
+          "MKTG4200"
+        ],
+        "alt": false,
+        "from": "(ii) two courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "28",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Law Courses[a]",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Business",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE2021, 4110;",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "one DOTE course",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Business",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE2021, 2040, 4020;",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "one course",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "one course",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Finance",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE2021 or",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "15 units selected from: DOTE3010, FINA courses at 3000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Entrepreneurship",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT1070, 2070; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "four courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Management of",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT3580, 4150; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "four courses selected from: DOTE3010, MGNT3010, 3080, 3100, 4080, 4090, 4110, 4130, 4140,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Human Resource",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT2040, 3010; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "four courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(g)",
+      "level": 2,
+      "title": "Marketing",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MKTG3010, 3020,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(h)",
+      "level": 2,
+      "title": "Big Data and Quantitative",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MKTG3010, 3060, 4080,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "General Business",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above level; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "12 units of DOTE/FINA/MGNT/MKTG",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

@@ -1,0 +1,496 @@
+{
+  "program_en": "B.A. in Linguistics",
+  "program_chi": "語言學文學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 63,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "BMBL1002",
+    "BMBL2001",
+    "BMBL2002",
+    "BMBL2003",
+    "BMBL2004",
+    "BMBL2005",
+    "BMBL3002",
+    "BMLB3003",
+    "CHES1101",
+    "CHLL1900",
+    "CHLL3162",
+    "CHLL4161",
+    "CHLT1001",
+    "CHLT1002",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "COMM3110",
+    "CURE1000",
+    "DOTE2011",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON2121",
+    "ELTU1001",
+    "ELTU2022",
+    "ELTU3011",
+    "ENGE1000",
+    "ENGG1004",
+    "FAAS1900",
+    "FREN1001",
+    "GERM1001",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2102",
+    "HIST1000",
+    "HKSL1001",
+    "JASP1090",
+    "KORE1001",
+    "LING1000",
+    "LING1001",
+    "LING1002",
+    "LING1003",
+    "LING2000",
+    "LING2003",
+    "LING2004",
+    "LING2005",
+    "LING2006",
+    "LING2007",
+    "LING2008",
+    "LING2301",
+    "LING3101",
+    "LING3102",
+    "LING3103",
+    "LING3104",
+    "LING3107",
+    "LING3108",
+    "LING3201",
+    "LING3202",
+    "LING3203",
+    "LING3204",
+    "LING3206",
+    "LING3207",
+    "LING3208",
+    "LING3401",
+    "LING3403",
+    "LING3405",
+    "LING3406",
+    "LING4000",
+    "LING4001",
+    "LING4201",
+    "LING4202",
+    "LING4401",
+    "LING4402",
+    "MUSC1000",
+    "PHIL1110",
+    "PHPC2015",
+    "PSYC1000",
+    "PSYC1020",
+    "PSYC1030",
+    "PSYC1040",
+    "PSYC1050",
+    "PSYC2010",
+    "PSYC2020",
+    "PSYC2050",
+    "PSYC2070",
+    "PSYC2190",
+    "PSYC2240",
+    "PSYC2300",
+    "PSYC2350",
+    "PSYC2540",
+    "PSYC2620",
+    "PSYC2650",
+    "PSYC2780",
+    "PSYC3001",
+    "PSYC3002",
+    "PSYC3003",
+    "PSYC3004",
+    "PSYC3005",
+    "PSYC3360",
+    "PSYC3370",
+    "PSYC3430",
+    "PSYC3440",
+    "PSYC3450",
+    "PSYC3460",
+    "PSYC3470",
+    "PSYC3550",
+    "PSYC3610",
+    "PSYC3630",
+    "PSYC3640",
+    "PSYC3660",
+    "PSYC3700",
+    "PSYC3720",
+    "PSYC3730",
+    "PSYC3740",
+    "PSYC3750",
+    "PSYC3760",
+    "PSYC3770",
+    "PSYC3810",
+    "PSYC3820",
+    "SEEM2430",
+    "SOCI1001",
+    "SOCI1201",
+    "SOCI2004",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "SPAN1001",
+    "SPED2600",
+    "STAT2001",
+    "STAT2101",
+    "THEO1000",
+    "TRAN1000",
+    "TRAN1010",
+    "TRAN1030",
+    "TRAN1120",
+    "TRAN1130",
+    "TRAN2020",
+    "TRAN2050",
+    "TRAN2070",
+    "TRAN2110",
+    "TRAN2120",
+    "TRAN2130",
+    "TRAN2140",
+    "TRAN2150",
+    "TRAN2240",
+    "TRAN2250",
+    "TRAN2610",
+    "TRAN2840",
+    "TRAN3080",
+    "TRAN3170",
+    "TRAN3180",
+    "TRAN3240",
+    "TRAN3270",
+    "TRAN3280",
+    "TRAN3620",
+    "TRAN3720",
+    "TRAN3800",
+    "TRAN3810",
+    "TRAN3820",
+    "TRAN3830",
+    "TRAN3844",
+    "TRAN3845",
+    "TRAN3850",
+    "TRAN3860",
+    "TRAN3870",
+    "TRAN3880",
+    "TRAN3890",
+    "TRAN4050",
+    "TRAN4070",
+    "TRAN4210",
+    "TRAN4800",
+    "TRAN4840",
+    "UGCP1001",
+    "URSP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1001",
+        "codes": [
+          "LING1001"
+        ],
+        "alt": false,
+        "from": "(a) LING1001#[a] or 1002#[a]"
+      },
+      {
+        "raw": "LING1003",
+        "codes": [
+          "LING1003"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING4000",
+        "codes": [
+          "LING4000"
+        ],
+        "alt": false,
+        "from": "(c) LING4000, 4001"
+      },
+      {
+        "raw": "LING4001",
+        "codes": [
+          "LING4001"
+        ],
+        "alt": false,
+        "from": "(c) LING4000, 4001"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "LING3405",
+        "codes": [
+          "LING3405"
+        ],
+        "alt": false,
+        "from": "(a) Six courses from the 3 Areas,"
+      },
+      {
+        "raw": "FREN1001",
+        "codes": [
+          "FREN1001"
+        ],
+        "alt": false,
+        "from": "(b) Language courses"
+      },
+      {
+        "raw": "GERM1001",
+        "codes": [
+          "GERM1001"
+        ],
+        "alt": false,
+        "from": "(b) Language courses"
+      },
+      {
+        "raw": "HKSL1001",
+        "codes": [
+          "HKSL1001"
+        ],
+        "alt": false,
+        "from": "(b) Language courses"
+      },
+      {
+        "raw": "KORE1001",
+        "codes": [
+          "KORE1001"
+        ],
+        "alt": false,
+        "from": "(b) Language courses"
+      },
+      {
+        "raw": "SPAN1001",
+        "codes": [
+          "SPAN1001"
+        ],
+        "alt": false,
+        "from": "(b) Language courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "LING1001#[a] or 1002#[a]",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "LING1003#, 2003,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "LING4000, 4001",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Six courses from the 3 Areas,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Language courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "program_en": "Bachelor of Pharmacy",
+  "program_chi": "藥劑學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Medicine",
+  "degree": "Bachelor of Pharmacy",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "MEDF1011",
+    "MEDF1012",
+    "MEDF1021",
+    "MEDF1031",
+    "MEDF1041",
+    "PHAR1000",
+    "PHAR1004",
+    "PHAR1110",
+    "PHAR1423",
+    "PHAR1433",
+    "PHAR1434",
+    "PHAR1440",
+    "PHAR2018",
+    "PHAR2110",
+    "PHAR2131",
+    "PHAR2211",
+    "PHAR2212",
+    "PHAR2213",
+    "PHAR2220",
+    "PHAR2313",
+    "PHAR2320",
+    "PHAR2330",
+    "PHAR2410",
+    "PHAR2520",
+    "PHAR2710",
+    "PHAR2711",
+    "PHAR2712",
+    "PHAR3330",
+    "PHAR3413",
+    "PHAR3414",
+    "PHAR3415",
+    "PHAR3420",
+    "PHAR3510",
+    "PHAR3603",
+    "PHAR3604",
+    "PHAR3605",
+    "PHAR3812",
+    "PHAR4201",
+    "PHAR4204",
+    "PHAR4205",
+    "PHAR4301",
+    "PHAR4302",
+    "PHAR4303",
+    "PHAR4304",
+    "PHAR4305",
+    "PHAR4306",
+    "PHAR4307",
+    "PHAR4308",
+    "PHAR4309",
+    "PHAR4310",
+    "PHAR4350",
+    "PHAR4401",
+    "PHAR4402",
+    "PHAR4403",
+    "PHAR4501",
+    "PHAR4601",
+    "PHAR4901",
+    "PHAR4911",
+    "PHAR4912"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MEDF1011",
+        "codes": [
+          "MEDF1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHAR1000",
+        "codes": [
+          "PHAR1000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "PHAR4201",
+        "codes": [
+          "PHAR4201"
+        ],
+        "alt": false,
+        "from": "(i) PHAR4201, 4301"
+      },
+      {
+        "raw": "PHAR4301",
+        "codes": [
+          "PHAR4301"
+        ],
+        "alt": false,
+        "from": "(i) PHAR4201, 4301"
+      },
+      {
+        "raw": "PHAR4204",
+        "codes": [
+          "PHAR4204"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4205",
+        "codes": [
+          "PHAR4205"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4302",
+        "codes": [
+          "PHAR4302"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4303",
+        "codes": [
+          "PHAR4303"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4304",
+        "codes": [
+          "PHAR4304"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4305",
+        "codes": [
+          "PHAR4305"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4306",
+        "codes": [
+          "PHAR4306"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4307",
+        "codes": [
+          "PHAR4307"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4308",
+        "codes": [
+          "PHAR4308"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4309",
+        "codes": [
+          "PHAR4309"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4310",
+        "codes": [
+          "PHAR4310"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4350",
+        "codes": [
+          "PHAR4350"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4401",
+        "codes": [
+          "PHAR4401"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4402",
+        "codes": [
+          "PHAR4402"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4403",
+        "codes": [
+          "PHAR4403"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4501",
+        "codes": [
+          "PHAR4501"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4601",
+        "codes": [
+          "PHAR4601"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4901",
+        "codes": [
+          "PHAR4901"
+        ],
+        "alt": false,
+        "from": "(ii) 2 units of courses chosen from the"
+      },
+      {
+        "raw": "PHAR4911",
+        "codes": [
+          "PHAR4911"
+        ],
+        "alt": false,
+        "from": "(i) PHAR4911, 4912"
+      },
+      {
+        "raw": "PHAR4912",
+        "codes": [
+          "PHAR4912"
+        ],
+        "alt": false,
+        "from": "(i) PHAR4911, 4912"
+      },
+      {
+        "raw": "PHAR2710",
+        "codes": [
+          "PHAR2710"
+        ],
+        "alt": false,
+        "from": "(b) At least 2 units of courses chosen"
+      },
+      {
+        "raw": "PHAR2711",
+        "codes": [
+          "PHAR2711"
+        ],
+        "alt": false,
+        "from": "(b) At least 2 units of courses chosen"
+      },
+      {
+        "raw": "PHAR2712",
+        "codes": [
+          "PHAR2712"
+        ],
+        "alt": false,
+        "from": "(b) At least 2 units of courses chosen"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "57",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Students are required to complete 6",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "PHAR4201, 4301",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "2 units of courses chosen from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "PHAR4911, 4912",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "At least 2 units of courses chosen",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "program_en": "B.A. in Philosophy",
+  "program_chi": "哲學文學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 63,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHLL1900",
+    "CURE1000",
+    "ENGE1000",
+    "FAAS1900",
+    "HIST1000",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "PHIL1210",
+    "PHIL1310",
+    "PHIL1413",
+    "PHIL2020",
+    "PHIL2030",
+    "PHIL2040",
+    "PHIL2050",
+    "PHIL2060",
+    "PHIL2202",
+    "PHIL2301",
+    "PHIL2302",
+    "PHIL2400",
+    "PHIL3000",
+    "PHIL3111",
+    "PHIL3131",
+    "PHIL3141",
+    "PHIL3152",
+    "PHIL3172",
+    "PHIL3191",
+    "PHIL3211",
+    "PHIL3233",
+    "PHIL3253",
+    "PHIL3263",
+    "PHIL3302",
+    "PHIL3313",
+    "PHIL3333",
+    "PHIL3373",
+    "PHIL3383",
+    "PHIL3531",
+    "PHIL3541",
+    "PHIL3551",
+    "PHIL3561",
+    "PHIL3592",
+    "PHIL3652",
+    "PHIL3662",
+    "PHIL3672",
+    "PHIL3683",
+    "PHIL3693",
+    "PHIL3743",
+    "PHIL3800",
+    "PHIL3803",
+    "PHIL3820",
+    "PHIL3823",
+    "PHIL3833",
+    "PHIL3843",
+    "PHIL4111",
+    "PHIL4121",
+    "PHIL4131",
+    "PHIL4141",
+    "PHIL4153",
+    "PHIL4183",
+    "PHIL4232",
+    "PHIL4242",
+    "PHIL4262",
+    "PHIL4272",
+    "PHIL4282",
+    "PHIL4292",
+    "PHIL4313",
+    "PHIL4323",
+    "PHIL4333",
+    "PHIL4343",
+    "PHIL4351",
+    "PHIL4361",
+    "PHIL4371",
+    "PHIL4381",
+    "PHIL4413",
+    "PHIL4423",
+    "PHIL4443",
+    "PHIL4522",
+    "PHIL4532",
+    "PHIL4800",
+    "PHIL5070",
+    "PHIL5090",
+    "PHIL5110",
+    "PHIL5130",
+    "PHIL5150",
+    "PHIL5170",
+    "PHIL5180",
+    "PHIL5190",
+    "PHIL5310",
+    "PHIL5320",
+    "PHIL5330",
+    "PHIL5340",
+    "PHIL5350",
+    "PHIL5360",
+    "PHIL5370",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "30",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "24",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

@@ -1,0 +1,859 @@
+{
+  "program_en": "B.S.Sc. in Global Studies",
+  "program_chi": "全球研究社會科學學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 60,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "ARCH3424",
+    "ARCH4721",
+    "CHLT1001",
+    "CHLT1002",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "COMM2100",
+    "COMM3941",
+    "COMM4191",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "DSPS3190",
+    "DSPS3310",
+    "DSPS3803",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON3140",
+    "ECON3320",
+    "ECON3350",
+    "ECON3370",
+    "ELTU1001",
+    "ELTU2020",
+    "ELTU3020",
+    "GDRS2002",
+    "GDRS3005",
+    "GDRS3012",
+    "GDRS4011",
+    "GLEF3020",
+    "GLSD1001",
+    "GLSD1003",
+    "GLSD2001",
+    "GLSD2101",
+    "GLSD2201",
+    "GLSD2301",
+    "GLSD2401",
+    "GLSD2501",
+    "GLSD2701",
+    "GLSD3101",
+    "GLSD3102",
+    "GLSD3105",
+    "GLSD3106",
+    "GLSD3111",
+    "GLSD3201",
+    "GLSD3211",
+    "GLSD3301",
+    "GLSD3302",
+    "GLSD3303",
+    "GLSD3311",
+    "GLSD3401",
+    "GLSD3402",
+    "GLSD3403",
+    "GLSD3404",
+    "GLSD3405",
+    "GLSD3411",
+    "GLSD3501",
+    "GLSD3511",
+    "GLSD3601",
+    "GLSD3701",
+    "GLSD4001",
+    "GLSD4002",
+    "GLSD4003",
+    "GLSD4004",
+    "GLSD4102",
+    "GLSD4104",
+    "GLSD4401",
+    "GLSD4402",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GPAD2185",
+    "GPAD2196",
+    "GPAD3360",
+    "GPAD3365",
+    "GPAD4225",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2321",
+    "GRMD2402",
+    "GRMD3202",
+    "GRMD3203",
+    "GRMD3224",
+    "GRMD3404",
+    "GRMD4402",
+    "PSYC1000",
+    "PSYC1630",
+    "PSYC3450",
+    "PSYC3610",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "SOWK3340",
+    "SOWK4550",
+    "URSP1001",
+    "URSP1002",
+    "URSP2030",
+    "URSP2100",
+    "URSP2200",
+    "URSP2400",
+    "URSP3300"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1003",
+        "codes": [
+          "GLSD1003"
+        ],
+        "alt": false,
+        "from": "(a) GLSD1003, 2001"
+      },
+      {
+        "raw": "GLSD2001",
+        "codes": [
+          "GLSD2001"
+        ],
+        "alt": false,
+        "from": "(a) GLSD1003, 2001"
+      },
+      {
+        "raw": "GLSD4001",
+        "codes": [
+          "GLSD4001"
+        ],
+        "alt": false,
+        "from": "(d) Capstone Courses"
+      },
+      {
+        "raw": "GLSD4003",
+        "codes": [
+          "GLSD4003"
+        ],
+        "alt": false,
+        "from": "(d) Capstone Courses"
+      },
+      {
+        "raw": "GLSD3601",
+        "codes": [
+          "GLSD3601"
+        ],
+        "alt": false,
+        "from": "4. Internship"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "COMM2100",
+        "codes": [
+          "COMM2100"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GDRS2002",
+        "codes": [
+          "GDRS2002"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD2101",
+        "codes": [
+          "GLSD2101"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD2201",
+        "codes": [
+          "GLSD2201"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD3101",
+        "codes": [
+          "GLSD3101"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD3102",
+        "codes": [
+          "GLSD3102"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD3201",
+        "codes": [
+          "GLSD3201"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GLSD3303",
+        "codes": [
+          "GLSD3303"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "URSP2030",
+        "codes": [
+          "URSP2030"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "ECON3320",
+        "codes": [
+          "ECON3320"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLEF3020",
+        "codes": [
+          "GLEF3020"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLSD2501",
+        "codes": [
+          "GLSD2501"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLSD3501",
+        "codes": [
+          "GLSD3501"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLSD3511",
+        "codes": [
+          "GLSD3511"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLSD4102",
+        "codes": [
+          "GLSD4102"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "DSPS3310",
+        "codes": [
+          "DSPS3310"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD2301",
+        "codes": [
+          "GLSD2301"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3106",
+        "codes": [
+          "GLSD3106"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3301",
+        "codes": [
+          "GLSD3301"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3302",
+        "codes": [
+          "GLSD3302"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3311",
+        "codes": [
+          "GLSD3311"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3402",
+        "codes": [
+          "GLSD3402"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3403",
+        "codes": [
+          "GLSD3403"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3404",
+        "codes": [
+          "GLSD3404"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3405",
+        "codes": [
+          "GLSD3405"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD3411",
+        "codes": [
+          "GLSD3411"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD4401",
+        "codes": [
+          "GLSD4401"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GLSD4402",
+        "codes": [
+          "GLSD4402"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GPAD2185",
+        "codes": [
+          "GPAD2185"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "DSPS3803",
+        "codes": [
+          "DSPS3803"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GLSD2401",
+        "codes": [
+          "GLSD2401"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GLSD3401",
+        "codes": [
+          "GLSD3401"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GPAD3360",
+        "codes": [
+          "GPAD3360"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "PSYC3450",
+        "codes": [
+          "PSYC3450"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "URSP2200",
+        "codes": [
+          "URSP2200"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "DSPS3190",
+        "codes": [
+          "DSPS3190"
+        ],
+        "alt": false,
+        "from": "(e) Quantitative Methods in Global"
+      },
+      {
+        "raw": "ECON3140",
+        "codes": [
+          "ECON3140"
+        ],
+        "alt": false,
+        "from": "(e) Quantitative Methods in Global"
+      },
+      {
+        "raw": "GPAD2196",
+        "codes": [
+          "GPAD2196"
+        ],
+        "alt": false,
+        "from": "(e) Quantitative Methods in Global"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 32
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "GLSD1003, 2001",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Resident Study Overseas",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Language Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Capstone Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses[a]",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Global Media and Popular",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Quantitative Methods in Global",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Internship",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

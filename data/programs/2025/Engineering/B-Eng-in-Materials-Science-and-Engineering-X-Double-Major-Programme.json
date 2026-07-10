@@ -1,0 +1,3017 @@
+{
+  "program_en": "B.Eng. in Materials Science and Engineering & X Double Major Programme",
+  "program_chi": "材料科學與工程學及X工程學士雙主修課程",
+  "admission_year": "2025",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 90,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BMEG3430",
+    "CHEM1070",
+    "CHEM2110",
+    "CHEM2120",
+    "CHEM2200",
+    "CHEM2300",
+    "CHEM2400",
+    "CHEM2868",
+    "CHEM2878",
+    "CHEM3130",
+    "CHEM3230",
+    "CHEM3320",
+    "CHEM4040",
+    "CHEM4100",
+    "CHEM4200",
+    "CHEM4280",
+    "CHEM4300",
+    "CHEM4303",
+    "CHEM4400",
+    "CHEM4630",
+    "CHEM4710",
+    "CHEM4730",
+    "CHEM4784",
+    "CHEM4785",
+    "CHEM4786",
+    "CHEM4788",
+    "CHLT1001",
+    "CHLT1002",
+    "COOP4001",
+    "EEEN2020",
+    "EEEN2030",
+    "EEEN2040",
+    "EEEN3030",
+    "EEEN4020",
+    "EEEN4050",
+    "EEEN4060",
+    "EEEN4999",
+    "EESC4240",
+    "ELEG2201",
+    "ELEG2202",
+    "ELEG2310",
+    "ELEG2602",
+    "ELEG3103",
+    "ELEG3201",
+    "ELEG3202",
+    "ELEG3207",
+    "ELEG3213",
+    "ELEG3214",
+    "ELEG3301",
+    "ELEG3302",
+    "ELEG3303",
+    "ELEG3503",
+    "ELEG3601",
+    "ELEG3701",
+    "ELEG3710",
+    "ELEG3910",
+    "ELEG4211",
+    "ELEG4214",
+    "ELEG4215",
+    "ELEG4216",
+    "ELEG4304",
+    "ELEG4311",
+    "ELEG4312",
+    "ELEG4511",
+    "ELEG4512",
+    "ELEG4701",
+    "ELEG4999",
+    "ELTU1001",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1004",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1125",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG2030",
+    "ENGG2720",
+    "ENGG2740",
+    "ENGG2760",
+    "ENGG2780",
+    "IERG1080",
+    "LSCI1002",
+    "MAEG1020",
+    "MAEG2020",
+    "MAEG2030",
+    "MAEG3010",
+    "MAEG3020",
+    "MAEG3030",
+    "MAEG3040",
+    "MAEG3050",
+    "MAEG4010",
+    "MAEG4020",
+    "MAEG4030",
+    "MAEG4080",
+    "MAEG4999",
+    "MASE1001",
+    "MASE1002",
+    "MASE1801",
+    "MASE2002",
+    "MASE2202",
+    "MASE2601",
+    "MASE3002",
+    "MASE3102",
+    "MASE3104",
+    "MASE3202",
+    "MASE4102",
+    "MASE4202",
+    "MASE4204",
+    "MASE4206",
+    "MASE4208",
+    "MASE4302",
+    "MATH1010",
+    "PHYS1110",
+    "PHYS1111",
+    "PHYS1122",
+    "PHYS1712",
+    "PHYS2041",
+    "PHYS2051",
+    "PHYS2061",
+    "PHYS2401",
+    "PHYS2711",
+    "PHYS3011",
+    "PHYS3021",
+    "PHYS3022",
+    "PHYS3023",
+    "PHYS3031",
+    "PHYS3041",
+    "PHYS3051",
+    "PHYS3061",
+    "PHYS3410",
+    "PHYS4011",
+    "PHYS4031",
+    "PHYS4041",
+    "PHYS4050",
+    "PHYS4061",
+    "PHYS4420",
+    "PHYS4430",
+    "PHYS4440",
+    "PHYS4450",
+    "PHYS4460",
+    "PHYS4610",
+    "SEEM3500",
+    "UGCP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110",
+        "codes": [
+          "ENGG1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1125/MATH1010",
+        "codes": [
+          "ENGG1125",
+          "MATH1010"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ENGG1130",
+        "codes": [
+          "ENGG1130"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ENGG2780",
+        "codes": [
+          "ENGG2780"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "MASE1001",
+        "codes": [
+          "MASE1001"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG1120",
+        "codes": [
+          "ENGG1120"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ELEG4999",
+        "codes": [
+          "ELEG4999"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG1120",
+        "codes": [
+          "ENGG1120"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2030",
+        "codes": [
+          "MAEG2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN4999",
+        "codes": [
+          "EEEN4999"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG1120",
+        "codes": [
+          "ENGG1120"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG4999",
+        "codes": [
+          "MAEG4999"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "CHEM2110",
+        "codes": [
+          "CHEM2110"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM4040",
+        "codes": [
+          "CHEM4040"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS4610",
+        "codes": [
+          "PHYS4610"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "ELEG3201",
+        "codes": [
+          "ELEG3201"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "ELEG3302",
+        "codes": [
+          "ELEG3302"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "PHYS3023",
+        "codes": [
+          "PHYS3023"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "i) Electronic Engineering (CUHK)"
+      },
+      {
+        "raw": "CHEM4280",
+        "codes": [
+          "CHEM4280"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MAEG4080",
+        "codes": [
+          "MAEG4080"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "PHYS3023",
+        "codes": [
+          "PHYS3023"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "ii) Energy and Environmental Engineering"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MAEG4010",
+        "codes": [
+          "MAEG4010"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MAEG4080",
+        "codes": [
+          "MAEG4080"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "iii) Mechanical and Automation Engineering"
+      },
+      {
+        "raw": "CHEM3230",
+        "codes": [
+          "CHEM3230"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "CHEM4786",
+        "codes": [
+          "CHEM4786"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "iv) Chemistry (CUHK)"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4208",
+        "codes": [
+          "MASE4208"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "PHYS4460",
+        "codes": [
+          "PHYS4460"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "BMEG3430",
+        "codes": [
+          "BMEG3430"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4206",
+        "codes": [
+          "MASE4206"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "v) Physics (CUHK)"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "vi) Chemistry (CUHK(SZ))"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "vii) New Energy Science and Engineering"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "viii) Physics (CUHK(SZ))"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MAEG4020",
+        "codes": [
+          "MAEG4020"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MASE3202",
+        "codes": [
+          "MASE3202"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MASE4202",
+        "codes": [
+          "MASE4202"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MASE4204",
+        "codes": [
+          "MASE4204"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "MASE4302",
+        "codes": [
+          "MASE4302"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "ix) Biomedical Science and Engineering"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG2201",
+        "codes": [
+          "ELEG2201"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3103",
+        "codes": [
+          "ELEG3103"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3202",
+        "codes": [
+          "ELEG3202"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3207",
+        "codes": [
+          "ELEG3207"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3213",
+        "codes": [
+          "ELEG3213"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3214",
+        "codes": [
+          "ELEG3214"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3301",
+        "codes": [
+          "ELEG3301"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3302",
+        "codes": [
+          "ELEG3302"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3303",
+        "codes": [
+          "ELEG3303"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3503",
+        "codes": [
+          "ELEG3503"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3701",
+        "codes": [
+          "ELEG3701"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3710",
+        "codes": [
+          "ELEG3710"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3910",
+        "codes": [
+          "ELEG3910"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4211",
+        "codes": [
+          "ELEG4211"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4214",
+        "codes": [
+          "ELEG4214"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4215",
+        "codes": [
+          "ELEG4215"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4216",
+        "codes": [
+          "ELEG4216"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4304",
+        "codes": [
+          "ELEG4304"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4311",
+        "codes": [
+          "ELEG4311"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4312",
+        "codes": [
+          "ELEG4312"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4511",
+        "codes": [
+          "ELEG4511"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4512",
+        "codes": [
+          "ELEG4512"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG4701",
+        "codes": [
+          "ELEG4701"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MASE3102",
+        "codes": [
+          "MASE3102"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MASE3104",
+        "codes": [
+          "MASE3104"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MASE4102",
+        "codes": [
+          "MASE4102"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EEEN3030",
+        "codes": [
+          "EEEN3030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EEEN4060",
+        "codes": [
+          "EEEN4060"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3207",
+        "codes": [
+          "ELEG3207"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4030",
+        "codes": [
+          "MAEG4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ENGG2720",
+        "codes": [
+          "ENGG2720"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ENGG2760",
+        "codes": [
+          "ENGG2760"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3010",
+        "codes": [
+          "MAEG3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3040",
+        "codes": [
+          "MAEG3040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3050",
+        "codes": [
+          "MAEG3050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4030",
+        "codes": [
+          "MAEG4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM3230",
+        "codes": [
+          "CHEM3230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4100",
+        "codes": [
+          "CHEM4100"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4200",
+        "codes": [
+          "CHEM4200"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4280",
+        "codes": [
+          "CHEM4280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4300",
+        "codes": [
+          "CHEM4300"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4400",
+        "codes": [
+          "CHEM4400"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4630",
+        "codes": [
+          "CHEM4630"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4710",
+        "codes": [
+          "CHEM4710"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4730",
+        "codes": [
+          "CHEM4730"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4784",
+        "codes": [
+          "CHEM4784"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4785",
+        "codes": [
+          "CHEM4785"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4786",
+        "codes": [
+          "CHEM4786"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM4788",
+        "codes": [
+          "CHEM4788"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4460",
+        "codes": [
+          "PHYS4460"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "1st Major: Materials",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "27",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Electronic Engineering (CUHK)",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 31
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Energy and Environmental Engineering",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 32
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Mechanical and Automation Engineering",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 31
+    },
+    {
+      "marker": "iv)",
+      "level": 3,
+      "title": "Chemistry (CUHK)",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 31
+    },
+    {
+      "marker": "v)",
+      "level": 3,
+      "title": "Physics (CUHK)",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 43
+    },
+    {
+      "marker": "vi)",
+      "level": 3,
+      "title": "Chemistry (CUHK(SZ))",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "vii)",
+      "level": 3,
+      "title": "New Energy Science and Engineering",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "viii)",
+      "level": 3,
+      "title": "Physics (CUHK(SZ))",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "ix)",
+      "level": 3,
+      "title": "Biomedical Science and Engineering",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "2nd Major",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Electronic Engineering (CUHK)",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "15",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "15",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Energy and Environmental Engineering",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Mechanical and Automation Engineering",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "20",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "10",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Chemistry (CUHK)",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "22",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "4",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "7",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Physics (CUHK)",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 17
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Chemistry (CUHK(SZ))",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "4",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "8",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(g)",
+      "level": 2,
+      "title": "New Energy Science and Engineering",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(h)",
+      "level": 2,
+      "title": "Physics (CUHK(SZ))",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Biomedical Science and Engineering",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

@@ -1,0 +1,4645 @@
+{
+  "program_en": "B.Sc. in Interdisciplinary Data Analytics & X Double Major Programme",
+  "program_chi": "跨學科數據分析及X理學士雙主修課程",
+  "admission_year": "2025",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Sc",
+  "total_units": 90,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "CHLT1001",
+    "CHLT1002",
+    "COOP1001",
+    "COOP2001",
+    "COOP3001",
+    "COOP3002",
+    "COOP4001",
+    "CSCI1120",
+    "CSCI1130",
+    "CSCI2040",
+    "CSCI2100",
+    "CSCI2520",
+    "CSCI3160",
+    "CSCI4130",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2030",
+    "DOTE2051",
+    "DOTE4040",
+    "DOTE4240",
+    "DOTE4280",
+    "ELTU1001",
+    "ELTU2005",
+    "ELTU2012",
+    "ELTU2018",
+    "ELTU3012",
+    "ELTU3014",
+    "ELTU3018",
+    "ENGG1003",
+    "ENGG1110",
+    "ENGG1130",
+    "ENGG2440",
+    "FINA2010",
+    "FINA3080",
+    "FINA4110",
+    "FINA4120",
+    "FTEC4004",
+    "IBBA3010",
+    "IBBA3020",
+    "IBBA3031",
+    "IBBA3032",
+    "IBBA3040",
+    "IERG2051",
+    "IERG2310",
+    "IERG2470",
+    "IERG3010",
+    "IERG3050",
+    "IERG3060",
+    "IERG3080",
+    "IERG3280",
+    "IERG3310",
+    "IERG3320",
+    "IERG3810",
+    "IERG3820",
+    "IERG3830",
+    "IERG4004",
+    "IERG4030",
+    "IERG4080",
+    "IERG4090",
+    "IERG4100",
+    "IERG4130",
+    "IERG4150",
+    "IERG4160",
+    "IERG4180",
+    "IERG4190",
+    "IERG4210",
+    "IERG4220",
+    "IERG4230",
+    "IERG4300",
+    "IERG4330",
+    "IERG4340",
+    "IERG4350",
+    "IERG4360",
+    "IERG4831",
+    "IERG4999",
+    "IERG5350",
+    "MATH1010",
+    "MATH1030",
+    "MATH2010",
+    "MATH2040",
+    "MATH2050",
+    "MATH2070",
+    "MATH2230",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3260",
+    "MATH3270",
+    "MATH3280",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3360",
+    "MATH4010",
+    "MATH4030",
+    "MATH4050",
+    "MATH4060",
+    "MATH4080",
+    "MATH4210",
+    "MATH4220",
+    "MATH4230",
+    "MATH4240",
+    "MATH4250",
+    "MATH4280",
+    "MATH4900",
+    "MGNT1020",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3070",
+    "MGNT4010",
+    "MGNT4090",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3030",
+    "MKTG4040",
+    "RMSC4002",
+    "RMSC4003",
+    "RMSC4007",
+    "SEEM2420",
+    "SEEM2460",
+    "SEEM2602",
+    "SEEM3410",
+    "SEEM3430",
+    "SEEM3440",
+    "SEEM3450",
+    "SEEM3490",
+    "SEEM3550",
+    "SEEM3580",
+    "SEEM3620",
+    "SEEM3650",
+    "SEEM4540",
+    "SEEM4570",
+    "SEEM4630",
+    "SEEM4730",
+    "SEEM4750",
+    "SEEM4760",
+    "SEEM4999",
+    "STAT1011",
+    "STAT2001",
+    "STAT2006",
+    "STAT2011",
+    "STAT3003",
+    "STAT3005",
+    "STAT3006",
+    "STAT3007",
+    "STAT3008",
+    "STAT3011",
+    "STAT4001",
+    "STAT4003",
+    "STAT4005",
+    "STAT4006",
+    "STAT4010",
+    "STAT4011",
+    "STAT4012",
+    "UGCP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGG1110",
+        "codes": [
+          "ENGG1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "ENGG2440",
+        "codes": [
+          "ENGG2440"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "SEEM2460",
+        "codes": [
+          "SEEM2460"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "i) DOTE1040#,"
+      },
+      {
+        "raw": "COOP1001",
+        "codes": [
+          "COOP1001"
+        ],
+        "alt": false,
+        "from": "ii) Field"
+      },
+      {
+        "raw": "COOP2001",
+        "codes": [
+          "COOP2001"
+        ],
+        "alt": false,
+        "from": "ii) Field"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ACCT2151",
+        "codes": [
+          "ACCT2151"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "DOTE2030",
+        "codes": [
+          "DOTE2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "IERG2051",
+        "codes": [
+          "IERG2051"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "IERG2470",
+        "codes": [
+          "IERG2470"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "IERG3310",
+        "codes": [
+          "IERG3310"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "IERG4999",
+        "codes": [
+          "IERG4999"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "CSCI2040",
+        "codes": [
+          "CSCI2040"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG1130",
+        "codes": [
+          "ENGG1130"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM2420",
+        "codes": [
+          "SEEM2420"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM2602",
+        "codes": [
+          "SEEM2602"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM3440",
+        "codes": [
+          "SEEM3440"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM3410",
+        "codes": [
+          "SEEM3410"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM3450",
+        "codes": [
+          "SEEM3450"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM3550",
+        "codes": [
+          "SEEM3550"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM3650",
+        "codes": [
+          "SEEM3650"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "SEEM4999",
+        "codes": [
+          "SEEM4999"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MATH2040",
+        "codes": [
+          "MATH2040"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MATH2050",
+        "codes": [
+          "MATH2050"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MATH2070",
+        "codes": [
+          "MATH2070"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "STAT3011",
+        "codes": [
+          "STAT3011"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "STAT4011",
+        "codes": [
+          "STAT4011"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "i) Integrated BBA Programme"
+      },
+      {
+        "raw": "CSCI1120",
+        "codes": [
+          "CSCI1120"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "ii) Information"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "iii) Systems"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "v) Statistics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "vi) Financial"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "vii) Marketing"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "viii) Computer"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "ix) Electrical"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "x) Mathematics"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "STAT3005",
+        "codes": [
+          "STAT3005"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM3620",
+        "codes": [
+          "SEEM3620"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "SEEM4760",
+        "codes": [
+          "SEEM4760"
+        ],
+        "alt": false,
+        "from": "xi) Statistics"
+      },
+      {
+        "raw": "DOTE4040",
+        "codes": [
+          "DOTE4040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "DOTE4240",
+        "codes": [
+          "DOTE4240"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IBBA3010",
+        "codes": [
+          "IBBA3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IBBA3020",
+        "codes": [
+          "IBBA3020"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IBBA3031",
+        "codes": [
+          "IBBA3031"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IBBA3032",
+        "codes": [
+          "IBBA3032"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MGNT3070",
+        "codes": [
+          "MGNT3070"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CSCI3160",
+        "codes": [
+          "CSCI3160"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG2310",
+        "codes": [
+          "IERG2310"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3010",
+        "codes": [
+          "IERG3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3080",
+        "codes": [
+          "IERG3080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3280",
+        "codes": [
+          "IERG3280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3320",
+        "codes": [
+          "IERG3320"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4030",
+        "codes": [
+          "IERG4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4080",
+        "codes": [
+          "IERG4080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4090",
+        "codes": [
+          "IERG4090"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4100",
+        "codes": [
+          "IERG4100"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4130/CSCI4130",
+        "codes": [
+          "IERG4130",
+          "CSCI4130"
+        ],
+        "alt": true,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4150",
+        "codes": [
+          "IERG4150"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4180",
+        "codes": [
+          "IERG4180"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4300",
+        "codes": [
+          "IERG4300"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4330",
+        "codes": [
+          "IERG4330"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4360",
+        "codes": [
+          "IERG4360"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CSCI1120",
+        "codes": [
+          "CSCI1120"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CSCI1130",
+        "codes": [
+          "CSCI1130"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3080",
+        "codes": [
+          "MATH3080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3260",
+        "codes": [
+          "MATH3260"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4050",
+        "codes": [
+          "MATH4050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4060",
+        "codes": [
+          "MATH4060"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4080",
+        "codes": [
+          "MATH4080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4220",
+        "codes": [
+          "MATH4220"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "RMSC4002",
+        "codes": [
+          "RMSC4002"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "RMSC4007",
+        "codes": [
+          "RMSC4007"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT2011",
+        "codes": [
+          "STAT2011"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT3003",
+        "codes": [
+          "STAT3003"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT3006",
+        "codes": [
+          "STAT3006"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT4003",
+        "codes": [
+          "STAT4003"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "1st Major: Interdisciplinary Data",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "DOTE1040#,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Field",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Integrated BBA Programme",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 41
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Information",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 40
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Systems",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 37
+    },
+    {
+      "marker": "iv)",
+      "level": 3,
+      "title": "Mathematics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 41
+    },
+    {
+      "marker": "v)",
+      "level": 3,
+      "title": "Statistics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 40
+    },
+    {
+      "marker": "vi)",
+      "level": 3,
+      "title": "Financial",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    },
+    {
+      "marker": "vii)",
+      "level": 3,
+      "title": "Marketing",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 24
+    },
+    {
+      "marker": "viii)",
+      "level": 3,
+      "title": "Computer",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 27
+    },
+    {
+      "marker": "ix)",
+      "level": 3,
+      "title": "Electrical",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "x)",
+      "level": 3,
+      "title": "Mathematics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "xi)",
+      "level": 3,
+      "title": "Statistics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 27
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "2nd Major",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Integrated BBA Programme",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "24",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 17
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Information",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "12",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "18",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 30
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Systems",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "27",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "3",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Mathematics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "15",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "15",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 22
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Statistics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Financial",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(g)",
+      "level": 2,
+      "title": "Marketing",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "15",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "15",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(h)",
+      "level": 2,
+      "title": "Computer",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Electrical",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(j)",
+      "level": 2,
+      "title": "Mathematics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "12",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "18",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(k)",
+      "level": 2,
+      "title": "Statistics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "24",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

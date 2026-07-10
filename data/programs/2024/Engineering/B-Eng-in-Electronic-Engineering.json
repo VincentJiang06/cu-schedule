@@ -1,0 +1,755 @@
+{
+  "program_en": "B.Eng. in Electronic Engineering",
+  "program_chi": "電子工程學工程學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "BMEG2300",
+    "BMEG3420",
+    "BMEG4103",
+    "CENG4120",
+    "CSCI1120",
+    "CSCI2100",
+    "CSCI2520",
+    "CSCI3100",
+    "CSCI3320",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4140",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "EEEN4020",
+    "ELEG2201",
+    "ELEG2202",
+    "ELEG2310",
+    "ELEG2601",
+    "ELEG2602",
+    "ELEG2700",
+    "ELEG3103",
+    "ELEG3201",
+    "ELEG3202",
+    "ELEG3207",
+    "ELEG3213",
+    "ELEG3214",
+    "ELEG3301",
+    "ELEG3302",
+    "ELEG3303",
+    "ELEG3503",
+    "ELEG3601",
+    "ELEG3701",
+    "ELEG3710",
+    "ELEG3910",
+    "ELEG4211",
+    "ELEG4214",
+    "ELEG4215",
+    "ELEG4216",
+    "ELEG4311",
+    "ELEG4312",
+    "ELEG4313",
+    "ELEG4511",
+    "ELEG4512",
+    "ELEG4701",
+    "ELEG4998",
+    "ELEG4999",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG2030",
+    "ENGG2450",
+    "ENGG2720",
+    "ENGG2740",
+    "ENGG2760",
+    "ENGG2780",
+    "ENGG3802",
+    "ENGG3803",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR2005",
+    "ESTR2014",
+    "ESTR2016",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2206",
+    "ESTR2300",
+    "ESTR2500",
+    "ESTR3200",
+    "ESTR3204",
+    "ESTR3206",
+    "ESTR3214",
+    "ESTR3216",
+    "ESTR3310",
+    "ESTR4216",
+    "ESTR4218",
+    "ESTR4222",
+    "ESTR4402",
+    "ESTR4998",
+    "ESTR4999",
+    "FINA2010",
+    "FINA2020",
+    "IBBA3040",
+    "IERG3080",
+    "IERG3310",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PHYS1003",
+    "PHYS1110",
+    "SEEM2440"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ELEG2700",
+        "codes": [
+          "ELEG2700"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2700"
+      },
+      {
+        "raw": "ENGG1310/ESTR1003",
+        "codes": [
+          "ENGG1310",
+          "ESTR1003"
+        ],
+        "alt": true,
+        "from": "(b) 6 units of Physics Courses"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "(b) 6 units of Physics Courses"
+      },
+      {
+        "raw": "ENGG2720/ESTR2014",
+        "codes": [
+          "ENGG2720",
+          "ESTR2014"
+        ],
+        "alt": true,
+        "from": "(c) 9 units of Mathematics Courses"
+      },
+      {
+        "raw": "ENGG2740/ESTR2016",
+        "codes": [
+          "ENGG2740",
+          "ESTR2016"
+        ],
+        "alt": true,
+        "from": "(c) 9 units of Mathematics Courses"
+      },
+      {
+        "raw": "ENGG2760/ESTR2018",
+        "codes": [
+          "ENGG2760",
+          "ESTR2018"
+        ],
+        "alt": true,
+        "from": "(c) 9 units of Mathematics Courses"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "(c) 9 units of Mathematics Courses"
+      },
+      {
+        "raw": "CSCI1120",
+        "codes": [
+          "CSCI1120"
+        ],
+        "alt": false,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG2201",
+        "codes": [
+          "ELEG2201"
+        ],
+        "alt": false,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG2310/ESTR2300",
+        "codes": [
+          "ELEG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG2601",
+        "codes": [
+          "ELEG2601"
+        ],
+        "alt": false,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG2602",
+        "codes": [
+          "ELEG2602"
+        ],
+        "alt": false,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG3201/ESTR3200",
+        "codes": [
+          "ELEG3201",
+          "ESTR3200"
+        ],
+        "alt": true,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG3213/ESTR3214",
+        "codes": [
+          "ELEG3213",
+          "ESTR3214"
+        ],
+        "alt": true,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ENGG2030/ESTR2206",
+        "codes": [
+          "ENGG2030",
+          "ESTR2206"
+        ],
+        "alt": true,
+        "from": "(a) CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,"
+      },
+      {
+        "raw": "ELEG4998",
+        "codes": [
+          "ELEG4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      },
+      {
+        "raw": "ELEG4999",
+        "codes": [
+          "ELEG4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CENG4120",
+        "codes": [
+          "CENG4120"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "CSCI3100",
+        "codes": [
+          "CSCI3100"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ESTR4402",
+        "codes": [
+          "ESTR4402"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3103/ESTR3216",
+        "codes": [
+          "ELEG3103",
+          "ESTR3216"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3202",
+        "codes": [
+          "ELEG3202"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3207",
+        "codes": [
+          "ELEG3207"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3214",
+        "codes": [
+          "ELEG3214"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3301/ESTR3204",
+        "codes": [
+          "ELEG3301",
+          "ESTR3204"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3302",
+        "codes": [
+          "ELEG3302"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3303/ESTR3206",
+        "codes": [
+          "ELEG3303",
+          "ESTR3206"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3503",
+        "codes": [
+          "ELEG3503"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3701",
+        "codes": [
+          "ELEG3701"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3710",
+        "codes": [
+          "ELEG3710"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG3910",
+        "codes": [
+          "ELEG3910"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4211",
+        "codes": [
+          "ELEG4211"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4214/ESTR4222",
+        "codes": [
+          "ELEG4214",
+          "ESTR4222"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4215",
+        "codes": [
+          "ELEG4215"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4216",
+        "codes": [
+          "ELEG4216"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4311/ESTR4216",
+        "codes": [
+          "ELEG4311",
+          "ESTR4216"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4312",
+        "codes": [
+          "ELEG4312"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4313",
+        "codes": [
+          "ELEG4313"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4511/ESTR4218",
+        "codes": [
+          "ELEG4511",
+          "ESTR4218"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4512",
+        "codes": [
+          "ELEG4512"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ELEG4701",
+        "codes": [
+          "ELEG4701"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ENGG3802",
+        "codes": [
+          "ENGG3802"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ENGG3803",
+        "codes": [
+          "ENGG3803"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "IERG3080",
+        "codes": [
+          "IERG3080"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "IERG3310",
+        "codes": [
+          "IERG3310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "ESTR3310",
+        "codes": [
+          "ESTR3310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "SEEM2440/ESTR2500",
+        "codes": [
+          "SEEM2440",
+          "ESTR2500"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses (at least 6 units"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses (at least 6 units"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ELEG2700",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "6 units of Physics Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "9 units of Mathematics Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI1120, ELEG2201, 2202, ELEG2310/ESTR2300,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[c]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses (at least 6 units",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 36
+    }
+  ]
+}

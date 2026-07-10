@@ -1,0 +1,1681 @@
+{
+  "program_en": "B.S.Sc. in Journalism and Communication",
+  "program_chi": "新聞與傳播學社會科學學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "ARCH1001",
+    "ARCH1002",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1170",
+    "COMM1180",
+    "COMM1190",
+    "COMM2100",
+    "COMM2110",
+    "COMM2120",
+    "COMM2140",
+    "COMM2160",
+    "COMM2170",
+    "COMM2180",
+    "COMM2210",
+    "COMM2240",
+    "COMM2300",
+    "COMM2320",
+    "COMM2440",
+    "COMM2500",
+    "COMM2530",
+    "COMM2540",
+    "COMM2570",
+    "COMM2590",
+    "COMM2600",
+    "COMM2610",
+    "COMM2710",
+    "COMM2733",
+    "COMM2740",
+    "COMM2741",
+    "COMM2811",
+    "COMM2812",
+    "COMM2813",
+    "COMM2814",
+    "COMM2820",
+    "COMM2830",
+    "COMM2840",
+    "COMM2850",
+    "COMM2910",
+    "COMM2920",
+    "COMM2922",
+    "COMM2925",
+    "COMM2926",
+    "COMM2928",
+    "COMM2930",
+    "COMM2932",
+    "COMM2940",
+    "COMM2962",
+    "COMM3131",
+    "COMM3132",
+    "COMM3140",
+    "COMM3191",
+    "COMM3193",
+    "COMM3200",
+    "COMM3310",
+    "COMM3400",
+    "COMM3550",
+    "COMM3600",
+    "COMM3610",
+    "COMM3620",
+    "COMM3630",
+    "COMM3640",
+    "COMM3650",
+    "COMM3660",
+    "COMM3670",
+    "COMM3680",
+    "COMM3681",
+    "COMM3682",
+    "COMM3690",
+    "COMM3700",
+    "COMM3710",
+    "COMM3711",
+    "COMM3721",
+    "COMM3722",
+    "COMM3733",
+    "COMM3740",
+    "COMM3750",
+    "COMM3800",
+    "COMM3810",
+    "COMM3811",
+    "COMM3812",
+    "COMM3820",
+    "COMM3830",
+    "COMM3831",
+    "COMM3832",
+    "COMM3840",
+    "COMM3841",
+    "COMM3850",
+    "COMM3855",
+    "COMM3860",
+    "COMM3881",
+    "COMM3888",
+    "COMM3910",
+    "COMM3920",
+    "COMM3921",
+    "COMM3922",
+    "COMM3930",
+    "COMM3933",
+    "COMM3939",
+    "COMM3940",
+    "COMM3941",
+    "COMM3963",
+    "COMM4040",
+    "COMM4150",
+    "COMM4191",
+    "COMM4250",
+    "COMM4730",
+    "COMM4733",
+    "COMM4848",
+    "COMM4935",
+    "COMM4956",
+    "COMM4962",
+    "COMM5110",
+    "COMM5111",
+    "COMM5631",
+    "COMM5632",
+    "COMM5650",
+    "COMM5690",
+    "COMM5755",
+    "COMM5775",
+    "COMM6420",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON2121",
+    "ENGE3610",
+    "ENGG1110",
+    "FINA2010",
+    "FINA2020",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2102",
+    "IBBA3040",
+    "IERG3320",
+    "LING3202",
+    "LING3403",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3070",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PHPC2015",
+    "PSYC1000",
+    "PSYC1020",
+    "PSYC1030",
+    "PSYC1040",
+    "PSYC1050",
+    "PSYC1630",
+    "PSYC2010",
+    "PSYC2020",
+    "PSYC2050",
+    "PSYC2070",
+    "PSYC2190",
+    "PSYC2240",
+    "PSYC2300",
+    "PSYC2350",
+    "PSYC2540",
+    "PSYC2620",
+    "PSYC2650",
+    "PSYC2780",
+    "PSYC3001",
+    "PSYC3002",
+    "PSYC3003",
+    "PSYC3004",
+    "PSYC3005",
+    "PSYC3360",
+    "PSYC3370",
+    "PSYC3430",
+    "PSYC3440",
+    "PSYC3450",
+    "PSYC3550",
+    "PSYC3610",
+    "PSYC3630",
+    "PSYC3640",
+    "PSYC3660",
+    "PSYC3700",
+    "PSYC3720",
+    "PSYC3730",
+    "PSYC3740",
+    "PSYC3750",
+    "PSYC3760",
+    "PSYC3770",
+    "PSYC3810",
+    "PSYC3820",
+    "PSYC4900",
+    "PSYC4901",
+    "PSYC4902",
+    "PSYC4903",
+    "PSYC4904",
+    "PSYC4905",
+    "PSYC4906",
+    "PSYC4909",
+    "PSYC4910",
+    "PSYC4920",
+    "SEEM2430",
+    "SOCI1001",
+    "SOCI1002",
+    "SOCI1201",
+    "SOCI2003",
+    "SOCI2004",
+    "SOCI2101",
+    "SOCI2103",
+    "SOCI2104",
+    "SOCI2106",
+    "SOCI2116",
+    "SOCI2203",
+    "SOCI2208",
+    "SOCI2216",
+    "SOCI2218",
+    "SOCI2219",
+    "SOCI2220",
+    "SOCI3001",
+    "SOCI3002",
+    "SOCI3003",
+    "SOCI3102",
+    "SOCI3204",
+    "SOCI3207",
+    "SOCI3208",
+    "SOCI3221",
+    "SOCI3223",
+    "SOCI3224",
+    "SOCI3225",
+    "SOCI3226",
+    "SOCI3227",
+    "SOCI3229",
+    "SOCI3230",
+    "SOCI3231",
+    "SOCI3233",
+    "SOCI3234",
+    "SOCI3235",
+    "SOCI3236",
+    "SOCI3237",
+    "SOCI3238",
+    "SOCI3239",
+    "SOCI3240",
+    "SOCI3241",
+    "SOCI3242",
+    "SOCI3243",
+    "SOCI3244",
+    "SOCI3245",
+    "SOCI3451",
+    "SOCI3452",
+    "SOCI3453",
+    "SOCI4010",
+    "SOCI4020",
+    "SOCI4201",
+    "SOCI4202",
+    "SOCI4204",
+    "SOCI4205",
+    "SOCI4208",
+    "SOCI4209",
+    "SOCI4210",
+    "SOCI4211",
+    "SOCI4351",
+    "SOCI4352",
+    "SOCI4353",
+    "SOCI4410",
+    "SOCI4420",
+    "SOSC1001",
+    "SOSC1002",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "SPED2600",
+    "STAT2001",
+    "STAT2101",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "(a) COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150"
+      },
+      {
+        "raw": "COMM2160",
+        "codes": [
+          "COMM2160"
+        ],
+        "alt": false,
+        "from": "(a) COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150"
+      },
+      {
+        "raw": "COMM2530",
+        "codes": [
+          "COMM2530"
+        ],
+        "alt": false,
+        "from": "(a) COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150"
+      },
+      {
+        "raw": "COMM3200",
+        "codes": [
+          "COMM3200"
+        ],
+        "alt": false,
+        "from": "(a) COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150"
+      },
+      {
+        "raw": "COMM3600",
+        "codes": [
+          "COMM3600"
+        ],
+        "alt": false,
+        "from": "(a) COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150"
+      },
+      {
+        "raw": "COMM1170",
+        "codes": [
+          "COMM1170"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2110",
+        "codes": [
+          "COMM2110"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2170",
+        "codes": [
+          "COMM2170"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM1180",
+        "codes": [
+          "COMM1180"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2120",
+        "codes": [
+          "COMM2120"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2180",
+        "codes": [
+          "COMM2180"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM1190",
+        "codes": [
+          "COMM1190"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2100",
+        "codes": [
+          "COMM2100"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2240",
+        "codes": [
+          "COMM2240"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2300",
+        "codes": [
+          "COMM2300"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM2320",
+        "codes": [
+          "COMM2320"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "COMM2210",
+        "codes": [
+          "COMM2210"
+        ],
+        "alt": false,
+        "from": "(a) Any two of the following theory/method courses"
+      },
+      {
+        "raw": "COMM2840",
+        "codes": [
+          "COMM2840"
+        ],
+        "alt": false,
+        "from": "(a) Any two of the following theory/method courses"
+      },
+      {
+        "raw": "COMM2940",
+        "codes": [
+          "COMM2940"
+        ],
+        "alt": false,
+        "from": "(a) Any two of the following theory/method courses"
+      },
+      {
+        "raw": "COMM3650",
+        "codes": [
+          "COMM3650"
+        ],
+        "alt": false,
+        "from": "(a) Any two of the following theory/method courses"
+      },
+      {
+        "raw": "COMM3810",
+        "codes": [
+          "COMM3810"
+        ],
+        "alt": false,
+        "from": "(a) Any two of the following theory/method courses"
+      },
+      {
+        "raw": "COMM2811",
+        "codes": [
+          "COMM2811"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2812",
+        "codes": [
+          "COMM2812"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2813",
+        "codes": [
+          "COMM2813"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2814",
+        "codes": [
+          "COMM2814"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2830",
+        "codes": [
+          "COMM2830"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2840",
+        "codes": [
+          "COMM2840"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2850",
+        "codes": [
+          "COMM2850"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3810",
+        "codes": [
+          "COMM3810"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3811",
+        "codes": [
+          "COMM3811"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3812",
+        "codes": [
+          "COMM3812"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3820",
+        "codes": [
+          "COMM3820"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3830",
+        "codes": [
+          "COMM3830"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3831",
+        "codes": [
+          "COMM3831"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3832",
+        "codes": [
+          "COMM3832"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3840",
+        "codes": [
+          "COMM3840"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3841",
+        "codes": [
+          "COMM3841"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3850",
+        "codes": [
+          "COMM3850"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3855",
+        "codes": [
+          "COMM3855"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3860",
+        "codes": [
+          "COMM3860"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3881",
+        "codes": [
+          "COMM3881"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM3888",
+        "codes": [
+          "COMM3888"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM4848",
+        "codes": [
+          "COMM4848"
+        ],
+        "alt": false,
+        "from": "(i) Advertising and Public Relations"
+      },
+      {
+        "raw": "COMM2210",
+        "codes": [
+          "COMM2210"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2440",
+        "codes": [
+          "COMM2440"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2600",
+        "codes": [
+          "COMM2600"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2610",
+        "codes": [
+          "COMM2610"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2740",
+        "codes": [
+          "COMM2740"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2741",
+        "codes": [
+          "COMM2741"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2910",
+        "codes": [
+          "COMM2910"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3620",
+        "codes": [
+          "COMM3620"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3630",
+        "codes": [
+          "COMM3630"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3640",
+        "codes": [
+          "COMM3640"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3650",
+        "codes": [
+          "COMM3650"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3660",
+        "codes": [
+          "COMM3660"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3670",
+        "codes": [
+          "COMM3670"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3680",
+        "codes": [
+          "COMM3680"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3681",
+        "codes": [
+          "COMM3681"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3682",
+        "codes": [
+          "COMM3682"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3740",
+        "codes": [
+          "COMM3740"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM3750",
+        "codes": [
+          "COMM3750"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM5631",
+        "codes": [
+          "COMM5631"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM5632",
+        "codes": [
+          "COMM5632"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM5650",
+        "codes": [
+          "COMM5650"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM5690",
+        "codes": [
+          "COMM5690"
+        ],
+        "alt": false,
+        "from": "(ii) Journalism"
+      },
+      {
+        "raw": "COMM2570",
+        "codes": [
+          "COMM2570"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2590",
+        "codes": [
+          "COMM2590"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2710",
+        "codes": [
+          "COMM2710"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2733",
+        "codes": [
+          "COMM2733"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2922",
+        "codes": [
+          "COMM2922"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2925",
+        "codes": [
+          "COMM2925"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2926",
+        "codes": [
+          "COMM2926"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2928",
+        "codes": [
+          "COMM2928"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2940",
+        "codes": [
+          "COMM2940"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2962",
+        "codes": [
+          "COMM2962"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3690",
+        "codes": [
+          "COMM3690"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3711",
+        "codes": [
+          "COMM3711"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3733",
+        "codes": [
+          "COMM3733"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3800",
+        "codes": [
+          "COMM3800"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3910",
+        "codes": [
+          "COMM3910"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3920",
+        "codes": [
+          "COMM3920"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3921",
+        "codes": [
+          "COMM3921"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3922",
+        "codes": [
+          "COMM3922"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3930",
+        "codes": [
+          "COMM3930"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3933",
+        "codes": [
+          "COMM3933"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3939",
+        "codes": [
+          "COMM3939"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3940",
+        "codes": [
+          "COMM3940"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3941",
+        "codes": [
+          "COMM3941"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM3963",
+        "codes": [
+          "COMM3963"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM4730",
+        "codes": [
+          "COMM4730"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM4733",
+        "codes": [
+          "COMM4733"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM4935",
+        "codes": [
+          "COMM4935"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM4956",
+        "codes": [
+          "COMM4956"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM4962",
+        "codes": [
+          "COMM4962"
+        ],
+        "alt": false,
+        "from": "(iii) Creative and New Media"
+      },
+      {
+        "raw": "COMM2140",
+        "codes": [
+          "COMM2140"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2500",
+        "codes": [
+          "COMM2500"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2570",
+        "codes": [
+          "COMM2570"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2590",
+        "codes": [
+          "COMM2590"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2920",
+        "codes": [
+          "COMM2920"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2930",
+        "codes": [
+          "COMM2930"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2932",
+        "codes": [
+          "COMM2932"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM3131",
+        "codes": [
+          "COMM3131"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM3132",
+        "codes": [
+          "COMM3132"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM3191",
+        "codes": [
+          "COMM3191"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM3193",
+        "codes": [
+          "COMM3193"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM3700",
+        "codes": [
+          "COMM3700"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM4040",
+        "codes": [
+          "COMM4040"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM4191",
+        "codes": [
+          "COMM4191"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM5110",
+        "codes": [
+          "COMM5110"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM5111",
+        "codes": [
+          "COMM5111"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM5775",
+        "codes": [
+          "COMM5775"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM6420",
+        "codes": [
+          "COMM6420"
+        ],
+        "alt": false,
+        "from": "(iv) Communication Studies"
+      },
+      {
+        "raw": "COMM2540",
+        "codes": [
+          "COMM2540"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM2590",
+        "codes": [
+          "COMM2590"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM2741",
+        "codes": [
+          "COMM2741"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM2811",
+        "codes": [
+          "COMM2811"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM2850",
+        "codes": [
+          "COMM2850"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3550",
+        "codes": [
+          "COMM3550"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3690",
+        "codes": [
+          "COMM3690"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3700",
+        "codes": [
+          "COMM3700"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3721",
+        "codes": [
+          "COMM3721"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3722",
+        "codes": [
+          "COMM3722"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3841",
+        "codes": [
+          "COMM3841"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM3930",
+        "codes": [
+          "COMM3930"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      },
+      {
+        "raw": "COMM4250",
+        "codes": [
+          "COMM4250"
+        ],
+        "alt": false,
+        "from": "(v) Global Communication"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 27
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "COMM1150, 2160, 2530, 3200, 3600 or 3710, 4150",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Either Chinese Journalism COMM1170, 2110, 2170 and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses (Courses that",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Any two of the following theory/method courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "At least 27 units from the following areas",
+      "units": "27",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Advertising and Public Relations",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 22
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Journalism",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 22
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Creative and New Media",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 29
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "Communication Studies",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "(v)",
+      "level": 2,
+      "title": "Global Communication",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    }
+  ]
+}

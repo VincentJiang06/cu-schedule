@@ -1,0 +1,1165 @@
+{
+  "program_en": "B.S.Sc. in Psychology",
+  "program_chi": "心理學社會科學學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 64,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "BMBL2001",
+    "BMBL2002",
+    "BMBL2003",
+    "BMBL2004",
+    "CHES1101",
+    "CHLL1900",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1190",
+    "COMM1500",
+    "COMM2140",
+    "COMM2160",
+    "COMM2210",
+    "COMM2300",
+    "COMM2320",
+    "COMM2440",
+    "COMM2530",
+    "COMM2540",
+    "COMM2570",
+    "COMM2590",
+    "COMM2600",
+    "COMM2610",
+    "COMM2710",
+    "COMM2733",
+    "COMM2740",
+    "COMM2741",
+    "COMM2811",
+    "COMM2812",
+    "COMM2813",
+    "COMM2814",
+    "COMM2830",
+    "COMM2840",
+    "COMM2850",
+    "COMM2910",
+    "COMM2920",
+    "COMM2922",
+    "COMM2925",
+    "COMM2926",
+    "COMM2928",
+    "COMM2930",
+    "COMM2932",
+    "COMM2940",
+    "COMM2962",
+    "COMM3110",
+    "COMM3131",
+    "COMM3132",
+    "COMM3191",
+    "COMM3193",
+    "COMM3200",
+    "COMM3310",
+    "COMM3550",
+    "COMM3620",
+    "COMM3630",
+    "COMM3640",
+    "COMM3650",
+    "COMM3660",
+    "COMM3670",
+    "COMM3680",
+    "COMM3681",
+    "COMM3682",
+    "COMM3690",
+    "COMM3700",
+    "COMM3710",
+    "COMM3711",
+    "COMM3721",
+    "COMM3722",
+    "COMM3733",
+    "COMM3740",
+    "COMM3750",
+    "COMM3800",
+    "COMM3810",
+    "COMM3811",
+    "COMM3812",
+    "COMM3820",
+    "COMM3830",
+    "COMM3831",
+    "COMM3832",
+    "COMM3840",
+    "COMM3841",
+    "COMM3850",
+    "COMM3855",
+    "COMM3860",
+    "COMM3881",
+    "COMM3888",
+    "COMM3910",
+    "COMM3920",
+    "COMM3921",
+    "COMM3922",
+    "COMM3930",
+    "COMM3933",
+    "COMM3939",
+    "COMM3940",
+    "COMM3941",
+    "COMM3963",
+    "COMM4040",
+    "COMM4150",
+    "COMM4191",
+    "COMM4250",
+    "COMM4730",
+    "COMM4733",
+    "COMM4848",
+    "COMM4935",
+    "COMM4956",
+    "COMM4962",
+    "CUMT1000",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "DOTE2011",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON2121",
+    "EDUC2310",
+    "ENGE1000",
+    "ENGE3610",
+    "ENGG1110",
+    "FAAS1900",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2102",
+    "HIST1000",
+    "IERG3320",
+    "JASP1090",
+    "LING1000",
+    "LING1001",
+    "LING2000",
+    "LING2003",
+    "LING2004",
+    "LING2005",
+    "LING2006",
+    "LING2007",
+    "LING2008",
+    "LING2301",
+    "LING3101",
+    "LING3102",
+    "LING3103",
+    "LING3104",
+    "LING3107",
+    "LING3108",
+    "LING3201",
+    "LING3202",
+    "LING3203",
+    "LING3204",
+    "LING3206",
+    "LING3207",
+    "LING3208",
+    "LING3401",
+    "LING3403",
+    "LING4201",
+    "LING4202",
+    "LING4401",
+    "LING4402",
+    "MUSC1000",
+    "PHIL1110",
+    "PHPC2015",
+    "PSYC1000",
+    "PSYC1020",
+    "PSYC1030",
+    "PSYC1040",
+    "PSYC1050",
+    "PSYC1091",
+    "PSYC1620",
+    "PSYC1630",
+    "PSYC2010",
+    "PSYC2020",
+    "PSYC2050",
+    "PSYC2070",
+    "PSYC2190",
+    "PSYC2240",
+    "PSYC2300",
+    "PSYC2350",
+    "PSYC2540",
+    "PSYC2620",
+    "PSYC2650",
+    "PSYC2780",
+    "PSYC3001",
+    "PSYC3002",
+    "PSYC3003",
+    "PSYC3004",
+    "PSYC3005",
+    "PSYC3360",
+    "PSYC3370",
+    "PSYC3430",
+    "PSYC3440",
+    "PSYC3450",
+    "PSYC3460",
+    "PSYC3470",
+    "PSYC3550",
+    "PSYC3610",
+    "PSYC3630",
+    "PSYC3640",
+    "PSYC3660",
+    "PSYC3700",
+    "PSYC3720",
+    "PSYC3730",
+    "PSYC3740",
+    "PSYC3750",
+    "PSYC3760",
+    "PSYC3770",
+    "PSYC3810",
+    "PSYC3820",
+    "PSYC4900",
+    "PSYC4901",
+    "PSYC4902",
+    "PSYC4903",
+    "PSYC4904",
+    "PSYC4905",
+    "PSYC4906",
+    "PSYC4909",
+    "PSYC4910",
+    "PSYC4920",
+    "SEEM2430",
+    "SOCI1001",
+    "SOCI1201",
+    "SOCI2004",
+    "SOCI3235",
+    "SOCI4210",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "SOWK2110",
+    "SOWK2120",
+    "SPED2600",
+    "STAT2001",
+    "STAT2101",
+    "THEO1000",
+    "TRAN1000",
+    "UGED2581",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1091",
+        "codes": [
+          "PSYC1091"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2010",
+        "codes": [
+          "PSYC2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "PSYC1020",
+        "codes": [
+          "PSYC1020"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC1030",
+        "codes": [
+          "PSYC1030"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC1040",
+        "codes": [
+          "PSYC1040"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC1050",
+        "codes": [
+          "PSYC1050"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC2070",
+        "codes": [
+          "PSYC2070"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC2780",
+        "codes": [
+          "PSYC2780"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3001",
+        "codes": [
+          "PSYC3001"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3002",
+        "codes": [
+          "PSYC3002"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3003",
+        "codes": [
+          "PSYC3003"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3004",
+        "codes": [
+          "PSYC3004"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3005",
+        "codes": [
+          "PSYC3005"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3360",
+        "codes": [
+          "PSYC3360"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3370",
+        "codes": [
+          "PSYC3370"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3430",
+        "codes": [
+          "PSYC3430"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3440",
+        "codes": [
+          "PSYC3440"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3450",
+        "codes": [
+          "PSYC3450"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3460",
+        "codes": [
+          "PSYC3460"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3470",
+        "codes": [
+          "PSYC3470"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3550",
+        "codes": [
+          "PSYC3550"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3610",
+        "codes": [
+          "PSYC3610"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3630",
+        "codes": [
+          "PSYC3630"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3640",
+        "codes": [
+          "PSYC3640"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3660",
+        "codes": [
+          "PSYC3660"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3700",
+        "codes": [
+          "PSYC3700"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3720",
+        "codes": [
+          "PSYC3720"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3730",
+        "codes": [
+          "PSYC3730"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3740",
+        "codes": [
+          "PSYC3740"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3750",
+        "codes": [
+          "PSYC3750"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3760",
+        "codes": [
+          "PSYC3760"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3770",
+        "codes": [
+          "PSYC3770"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3810",
+        "codes": [
+          "PSYC3810"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC3820",
+        "codes": [
+          "PSYC3820"
+        ],
+        "alt": false,
+        "from": "(a) At least five courses chosen from"
+      },
+      {
+        "raw": "PSYC4900",
+        "codes": [
+          "PSYC4900"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4901",
+        "codes": [
+          "PSYC4901"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4902",
+        "codes": [
+          "PSYC4902"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4903",
+        "codes": [
+          "PSYC4903"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4904",
+        "codes": [
+          "PSYC4904"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4905",
+        "codes": [
+          "PSYC4905"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4906",
+        "codes": [
+          "PSYC4906"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4909",
+        "codes": [
+          "PSYC4909"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4910",
+        "codes": [
+          "PSYC4910"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC4920",
+        "codes": [
+          "PSYC4920"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC1050",
+        "codes": [
+          "PSYC1050"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC2780",
+        "codes": [
+          "PSYC2780"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3001",
+        "codes": [
+          "PSYC3001"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3360",
+        "codes": [
+          "PSYC3360"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3370",
+        "codes": [
+          "PSYC3370"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3430",
+        "codes": [
+          "PSYC3430"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3440",
+        "codes": [
+          "PSYC3440"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3450",
+        "codes": [
+          "PSYC3450"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3660",
+        "codes": [
+          "PSYC3660"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC1020",
+        "codes": [
+          "PSYC1020"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC1030",
+        "codes": [
+          "PSYC1030"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC1040",
+        "codes": [
+          "PSYC1040"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC2070",
+        "codes": [
+          "PSYC2070"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3002",
+        "codes": [
+          "PSYC3002"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3550",
+        "codes": [
+          "PSYC3550"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3003",
+        "codes": [
+          "PSYC3003"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3610",
+        "codes": [
+          "PSYC3610"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3630",
+        "codes": [
+          "PSYC3630"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3640",
+        "codes": [
+          "PSYC3640"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3750",
+        "codes": [
+          "PSYC3750"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3810",
+        "codes": [
+          "PSYC3810"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3820",
+        "codes": [
+          "PSYC3820"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3004",
+        "codes": [
+          "PSYC3004"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3700",
+        "codes": [
+          "PSYC3700"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3720",
+        "codes": [
+          "PSYC3720"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3730",
+        "codes": [
+          "PSYC3730"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3740",
+        "codes": [
+          "PSYC3740"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3760",
+        "codes": [
+          "PSYC3760"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3770",
+        "codes": [
+          "PSYC3770"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3460",
+        "codes": [
+          "PSYC3460"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      },
+      {
+        "raw": "PSYC3470",
+        "codes": [
+          "PSYC3470"
+        ],
+        "alt": false,
+        "from": "(b) At least 6 units chosen from the"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 31
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "31",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "24",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "At least five courses chosen from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 32
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "At least 6 units chosen from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 41
+    }
+  ]
+}

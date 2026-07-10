@@ -1,0 +1,485 @@
+{
+  "program_en": "B.Sc. in Molecular Biotechnology",
+  "program_chi": "分子生物技術學理學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 12,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCHE2030",
+    "BCHE3030",
+    "BCHE3040",
+    "BCHE3050",
+    "BIOL2120",
+    "BIOL2313",
+    "BIOL2410",
+    "BIOL2420",
+    "BIOL3410",
+    "BMEG2001",
+    "CHEM1280",
+    "CMBI3101",
+    "LSCI1002",
+    "LSCI1003",
+    "LSCI1012",
+    "LSCI2002",
+    "LSCI2003",
+    "LSCI4000",
+    "LSCI4911",
+    "MATH1520",
+    "MBTE2000",
+    "MBTE2010",
+    "MBTE3000",
+    "MBTE3510",
+    "MBTE3511",
+    "MBTE3518",
+    "MBTE3521",
+    "MBTE3528",
+    "MBTE3531",
+    "MBTE3550",
+    "MBTE3558",
+    "MBTE3560",
+    "MBTE3568",
+    "MBTE4033",
+    "MBTE4034",
+    "MBTE4320",
+    "MBTE4510",
+    "MBTE4520",
+    "MBTE4530",
+    "MBTE4901",
+    "MBTE4902",
+    "MBTE4903",
+    "MBTE4906",
+    "PHYS1001",
+    "SBMS1440",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1012",
+    "STAT3210"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BCHE2030",
+        "codes": [
+          "BCHE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2120",
+        "codes": [
+          "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE2000",
+        "codes": [
+          "MBTE2000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE2010",
+        "codes": [
+          "MBTE2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE3000",
+        "codes": [
+          "MBTE3000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE3510",
+        "codes": [
+          "MBTE3510"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE3550",
+        "codes": [
+          "MBTE3550"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4033",
+        "codes": [
+          "MBTE4033"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4034",
+        "codes": [
+          "MBTE4034"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4320",
+        "codes": [
+          "MBTE4320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4510",
+        "codes": [
+          "MBTE4510"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4520",
+        "codes": [
+          "MBTE4520"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MBTE4530",
+        "codes": [
+          "MBTE4530"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "LSCI4000",
+        "codes": [
+          "LSCI4000"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "MBTE4901",
+        "codes": [
+          "MBTE4901"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "MBTE4902",
+        "codes": [
+          "MBTE4902"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "MBTE4903",
+        "codes": [
+          "MBTE4903"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "MBTE4906",
+        "codes": [
+          "MBTE4906"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "BCHE3040",
+        "codes": [
+          "BCHE3040"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL2420",
+        "codes": [
+          "BIOL2420"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BMEG2001",
+        "codes": [
+          "BMEG2001"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI3101",
+        "codes": [
+          "CMBI3101"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI2003",
+        "codes": [
+          "LSCI2003"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "MBTE3518",
+        "codes": [
+          "MBTE3518"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "MBTE3558",
+        "codes": [
+          "MBTE3558"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "MBTE3568",
+        "codes": [
+          "MBTE3568"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "44",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Capstone Courses and Elective Courses",
+      "units": "13",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Capstone Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses: Remaining units can be chosen from the following courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

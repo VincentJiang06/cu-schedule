@@ -1,0 +1,895 @@
+{
+  "program_en": "B.B.A. in Professional Accountancy",
+  "program_chi": "專業會計學工商管理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.B.A",
+  "total_units": 69,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT3003",
+    "ACCT3004",
+    "ACCT3005",
+    "ACCT3111",
+    "ACCT3112",
+    "ACCT3121",
+    "ACCT3142",
+    "ACCT3151",
+    "ACCT3152",
+    "ACCT3161",
+    "ACCT3241",
+    "ACCT4001",
+    "ACCT4011",
+    "ACCT4111",
+    "ACCT4131",
+    "ACCT4211",
+    "ACCT4212",
+    "ACCT4213",
+    "ACCT4215",
+    "ACCT4221",
+    "ACCT4231",
+    "ACCT4232",
+    "ACCT4242",
+    "ACCT4243",
+    "ACCT4244",
+    "ACCT4251",
+    "ACCT4252",
+    "ACCT4253",
+    "ACCT4261",
+    "ACCT4262",
+    "ACCT4263",
+    "ACCT4271",
+    "ACCT4272",
+    "ACCT4281",
+    "ACCT4282",
+    "ACCT4290",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE3010",
+    "DOTE3050",
+    "FINA2010",
+    "FINA3010",
+    "FINA3020",
+    "FINA3070",
+    "MATH1610",
+    "MATH1620",
+    "MGNT1020",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT3580",
+    "MGNT4010",
+    "MKTG2010",
+    "MKTG4070"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ACCT3005",
+        "codes": [
+          "ACCT3005"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT3241",
+        "codes": [
+          "ACCT3241"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4211",
+        "codes": [
+          "ACCT4211"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4212",
+        "codes": [
+          "ACCT4212"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4213",
+        "codes": [
+          "ACCT4213"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4221",
+        "codes": [
+          "ACCT4221"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4231",
+        "codes": [
+          "ACCT4231"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4232",
+        "codes": [
+          "ACCT4232"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4242",
+        "codes": [
+          "ACCT4242"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4243",
+        "codes": [
+          "ACCT4243"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4244",
+        "codes": [
+          "ACCT4244"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4252",
+        "codes": [
+          "ACCT4252"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4253",
+        "codes": [
+          "ACCT4253"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4261",
+        "codes": [
+          "ACCT4261"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4262",
+        "codes": [
+          "ACCT4262"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4263",
+        "codes": [
+          "ACCT4263"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4271",
+        "codes": [
+          "ACCT4271"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4272",
+        "codes": [
+          "ACCT4272"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4281",
+        "codes": [
+          "ACCT4281"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4282",
+        "codes": [
+          "ACCT4282"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4290",
+        "codes": [
+          "ACCT4290"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "MATH1610",
+        "codes": [
+          "MATH1610"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "MATH1620",
+        "codes": [
+          "MATH1620"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ACCT4261",
+        "codes": [
+          "ACCT4261"
+        ],
+        "alt": false,
+        "from": "(a) at"
+      },
+      {
+        "raw": "ACCT4262",
+        "codes": [
+          "ACCT4262"
+        ],
+        "alt": false,
+        "from": "(a) at"
+      },
+      {
+        "raw": "ACCT4263",
+        "codes": [
+          "ACCT4263"
+        ],
+        "alt": false,
+        "from": "(a) at"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
+        ],
+        "alt": false,
+        "from": "(b) at"
+      },
+      {
+        "raw": "ACCT4252",
+        "codes": [
+          "ACCT4252"
+        ],
+        "alt": false,
+        "from": "(b) at"
+      },
+      {
+        "raw": "ACCT4253",
+        "codes": [
+          "ACCT4253"
+        ],
+        "alt": false,
+        "from": "(b) at"
+      },
+      {
+        "raw": "ACCT4271",
+        "codes": [
+          "ACCT4271"
+        ],
+        "alt": false,
+        "from": "(b) at"
+      },
+      {
+        "raw": "ACCT4272",
+        "codes": [
+          "ACCT4272"
+        ],
+        "alt": false,
+        "from": "(b) at"
+      },
+      {
+        "raw": "FINA3070",
+        "codes": [
+          "FINA3070"
+        ],
+        "alt": false,
+        "from": "(a) FINA3070#,"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "ACCT4282",
+        "codes": [
+          "ACCT4282"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA3010",
+        "codes": [
+          "FINA3010"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "ACCT4242",
+        "codes": [
+          "ACCT4242"
+        ],
+        "alt": false,
+        "from": "(a) ACCT4242"
+      },
+      {
+        "raw": "ACCT3241",
+        "codes": [
+          "ACCT3241"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "ACCT4213",
+        "codes": [
+          "ACCT4213"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "ACCT4232",
+        "codes": [
+          "ACCT4232"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "ACCT4243",
+        "codes": [
+          "ACCT4243"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "ACCT4244",
+        "codes": [
+          "ACCT4244"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "ACCT3005",
+        "codes": [
+          "ACCT3005"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT3241",
+        "codes": [
+          "ACCT3241"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4211",
+        "codes": [
+          "ACCT4211"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4212",
+        "codes": [
+          "ACCT4212"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4213",
+        "codes": [
+          "ACCT4213"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4221",
+        "codes": [
+          "ACCT4221"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4231",
+        "codes": [
+          "ACCT4231"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4232",
+        "codes": [
+          "ACCT4232"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4242",
+        "codes": [
+          "ACCT4242"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4243",
+        "codes": [
+          "ACCT4243"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4244",
+        "codes": [
+          "ACCT4244"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4252",
+        "codes": [
+          "ACCT4252"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4253",
+        "codes": [
+          "ACCT4253"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4261",
+        "codes": [
+          "ACCT4261"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4262",
+        "codes": [
+          "ACCT4262"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4263",
+        "codes": [
+          "ACCT4263"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4271",
+        "codes": [
+          "ACCT4271"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4272",
+        "codes": [
+          "ACCT4272"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4281",
+        "codes": [
+          "ACCT4281"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "ACCT4282",
+        "codes": [
+          "ACCT4282"
+        ],
+        "alt": false,
+        "from": "(a) ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,"
+      },
+      {
+        "raw": "DOTE3050",
+        "codes": [
+          "DOTE3050"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MGNT3580",
+        "codes": [
+          "MGNT3580"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MKTG4070",
+        "codes": [
+          "MKTG4070"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "51",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective/Stream-specific",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "FINA3070#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "2",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective/Stream-specific",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ACCT4242",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "3",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "54",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ACCT3005, 3241, 4211, 4212, 4213, 4221, 4231, 4232,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    }
+  ]
+}

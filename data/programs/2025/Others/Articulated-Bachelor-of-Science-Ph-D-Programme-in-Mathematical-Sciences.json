@@ -1,0 +1,379 @@
+{
+  "program_en": "Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences",
+  "program_chi": "數學科學理學士哲學博士銜接課程",
+  "admission_year": "2025",
+  "faculty": "Others",
+  "degree": "Articulated Bachelor of Science – Ph.D. Programme",
+  "total_units": 71,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "IMSC1038",
+    "IMSC1113",
+    "IMSC1122",
+    "IMSC2018",
+    "IMSC2028",
+    "IMSC2048",
+    "IMSC2058",
+    "IMSC2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2221",
+    "MATH2230",
+    "MATH3030",
+    "MATH3040",
+    "MATH3093",
+    "MATH3230",
+    "MATH4030",
+    "MATH4050",
+    "MATH4060",
+    "MATH4080",
+    "MATH4220",
+    "MATH4400",
+    "MATH4900",
+    "MATH5011",
+    "MATH5012",
+    "MATH5021",
+    "MATH5022",
+    "MATH5031",
+    "MATH5032",
+    "MATH5051",
+    "MATH5052",
+    "MATH5061",
+    "MATH5062",
+    "MATH5070",
+    "MATH5211",
+    "MATH5212",
+    "MATH6011",
+    "MATH6012",
+    "MATH6021",
+    "MATH6022",
+    "MATH6031",
+    "MATH6032",
+    "MATH6033",
+    "MATH6041",
+    "MATH6042",
+    "MATH6051",
+    "MATH6052",
+    "MATH6061",
+    "MATH6062",
+    "MATH6071",
+    "MATH6072",
+    "MATH6081",
+    "MATH6082",
+    "MATH6211",
+    "MATH6212",
+    "MATH6221",
+    "MATH6222",
+    "MATH6231",
+    "MATH6232",
+    "MATH6241",
+    "MATH6242",
+    "MATH6251",
+    "MATH6261",
+    "MATH7400",
+    "MATH8006",
+    "MATH8012",
+    "PHYS2041",
+    "PHYS3011",
+    "PHYS3021",
+    "PHYS4011",
+    "PHYS4021"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "IMSC1038",
+        "codes": [
+          "IMSC1038"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC1113",
+        "codes": [
+          "IMSC1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC1122",
+        "codes": [
+          "IMSC1122"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC2018",
+        "codes": [
+          "IMSC2018"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "IMSC2028",
+        "codes": [
+          "IMSC2028"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "IMSC2048",
+        "codes": [
+          "IMSC2048"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "IMSC2058",
+        "codes": [
+          "IMSC2058"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "IMSC2068",
+        "codes": [
+          "IMSC2068"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "MATH2070",
+        "codes": [
+          "MATH2070"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "PHYS4021",
+        "codes": [
+          "PHYS4021"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(b) Capstone course: MATH4400 or 4900[a]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH5051",
+        "codes": [
+          "MATH5051"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH4080",
+        "codes": [
+          "MATH4080"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH4060",
+        "codes": [
+          "MATH4060"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH5211",
+        "codes": [
+          "MATH5211"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH5061",
+        "codes": [
+          "MATH5061"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH4050",
+        "codes": [
+          "MATH4050"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH5011",
+        "codes": [
+          "MATH5011"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH4220",
+        "codes": [
+          "MATH4220"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      },
+      {
+        "raw": "MATH5021",
+        "codes": [
+          "MATH5021"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "41",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone course: MATH4400 or 4900[a]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "(b) (c) (d) (e) (f) (g) | 3 units from MATH3030, 5051 3 units from MATH3040, 4080 3 units from MATH3093, 4060 3 units from MATH3230, 5211 3 units from MATH4030, 5061 3 units from MATH4050, 5011 3 units from MATH4220, 5021",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    }
+  ]
+}

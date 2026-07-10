@@ -1,0 +1,790 @@
+{
+  "program_en": "B.A. in History",
+  "program_chi": "歷史文學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ANTH1410",
+    "ANTH2310",
+    "ANTH2327",
+    "ANTH2350",
+    "ANTH2370",
+    "ANTH2520",
+    "ANTH2720",
+    "ANTH2730",
+    "ANTH3350",
+    "ANTH3370",
+    "ANTH3790",
+    "ANTH4210",
+    "ANTH4720",
+    "ARTS1004",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1100",
+    "CHLL1900",
+    "CUMT1000",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "ELTU1001",
+    "ELTU2011",
+    "ENGE1000",
+    "ENGE1310",
+    "ENGE1320",
+    "ENGE1500",
+    "ENGE3100",
+    "FAAS1900",
+    "HIST1000",
+    "HIST1001",
+    "HIST1002",
+    "HIST1700",
+    "HIST1701",
+    "HIST2001",
+    "HIST2002",
+    "HIST2005",
+    "HIST2006",
+    "HIST2007",
+    "HIST2010",
+    "HIST2100",
+    "HIST2101",
+    "HIST2102",
+    "HIST2103",
+    "HIST2104",
+    "HIST2105",
+    "HIST2106",
+    "HIST2110",
+    "HIST2140",
+    "HIST2141",
+    "HIST2142",
+    "HIST2180",
+    "HIST2220",
+    "HIST2301",
+    "HIST2310",
+    "HIST2320",
+    "HIST2330",
+    "HIST2360",
+    "HIST2370",
+    "HIST2380",
+    "HIST2390",
+    "HIST2500",
+    "HIST2501",
+    "HIST2700",
+    "HIST2701",
+    "HIST3103",
+    "HIST3104",
+    "HIST3105",
+    "HIST3106",
+    "HIST3107",
+    "HIST3108",
+    "HIST3118",
+    "HIST3119",
+    "HIST3140",
+    "HIST3180",
+    "HIST3181",
+    "HIST3326",
+    "HIST3327",
+    "HIST3330",
+    "HIST3331",
+    "HIST3332",
+    "HIST3340",
+    "HIST3360",
+    "HIST3361",
+    "HIST3372",
+    "HIST3373",
+    "HIST3375",
+    "HIST3380",
+    "HIST3381",
+    "HIST3400",
+    "HIST3401",
+    "HIST3402",
+    "HIST3403",
+    "HIST3404",
+    "HIST3405",
+    "HIST3406",
+    "HIST3408",
+    "HIST3420",
+    "HIST3421",
+    "HIST3441",
+    "HIST3505",
+    "HIST3600",
+    "HIST3601",
+    "HIST3602",
+    "HIST3701",
+    "HIST4010",
+    "HIST4020",
+    "HIST4100",
+    "HIST4140",
+    "HIST4141",
+    "HIST4142",
+    "HIST4180",
+    "HIST4181",
+    "HIST4260",
+    "HIST4261",
+    "HIST4304",
+    "HIST4305",
+    "HIST4306",
+    "HIST4380",
+    "HIST4390",
+    "HIST4391",
+    "HIST4392",
+    "HIST4393",
+    "HIST4400",
+    "HIST4420",
+    "HIST4500",
+    "HIST4501",
+    "HIST4502",
+    "HIST4600",
+    "HIST4603",
+    "HIST4604",
+    "HIST4700",
+    "HIST4701",
+    "HIST4702",
+    "HIST4703",
+    "HIST4704",
+    "HIST4801",
+    "HIST4802",
+    "HIST4811",
+    "HIST4812",
+    "HIST4900",
+    "HIST4910",
+    "HIST4920",
+    "HIST4980",
+    "HIST4981",
+    "HIST4982",
+    "JASP1090",
+    "JASP1120",
+    "JASP1140",
+    "JASP1160",
+    "JASP1180",
+    "JASP1190",
+    "JASP1470",
+    "JASP1480",
+    "JASP1490",
+    "JASP2000",
+    "JASP2010",
+    "JASP2030",
+    "JASP2100",
+    "JASP2200",
+    "JASP2400",
+    "JASP2470",
+    "JASP2480",
+    "JASP2520",
+    "JASP2600",
+    "JASP2720",
+    "JASP2820",
+    "JASP2910",
+    "JASP2920",
+    "JASP3110",
+    "JASP3120",
+    "JASP3180",
+    "JASP3210",
+    "JASP3430",
+    "JASP3470",
+    "JASP3480",
+    "JASP3500",
+    "JASP3700",
+    "JASP3800",
+    "JASP3900",
+    "JASP4000",
+    "JASP4100",
+    "JASP4110",
+    "JASP4410",
+    "LING1000",
+    "MGNT1010",
+    "MGNT1020",
+    "MGNT4530",
+    "MUSC1000",
+    "PHIL1110",
+    "SOCI2103",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1004",
+        "codes": [
+          "ARTS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1100",
+        "codes": [
+          "CHES1100"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1001",
+        "codes": [
+          "HIST1001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HIST1002",
+        "codes": [
+          "HIST1002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HIST4811",
+        "codes": [
+          "HIST4811"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HIST4812",
+        "codes": [
+          "HIST4812"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "HIST2002",
+        "codes": [
+          "HIST2002"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2005",
+        "codes": [
+          "HIST2005"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2006",
+        "codes": [
+          "HIST2006"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2007",
+        "codes": [
+          "HIST2007"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2301",
+        "codes": [
+          "HIST2301"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2310",
+        "codes": [
+          "HIST2310"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2320",
+        "codes": [
+          "HIST2320"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2330",
+        "codes": [
+          "HIST2330"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2360",
+        "codes": [
+          "HIST2360"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2370",
+        "codes": [
+          "HIST2370"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2380",
+        "codes": [
+          "HIST2380"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2390",
+        "codes": [
+          "HIST2390"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST2700",
+        "codes": [
+          "HIST2700"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3326",
+        "codes": [
+          "HIST3326"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3327",
+        "codes": [
+          "HIST3327"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3330",
+        "codes": [
+          "HIST3330"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3331",
+        "codes": [
+          "HIST3331"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3332",
+        "codes": [
+          "HIST3332"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3340",
+        "codes": [
+          "HIST3340"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3360",
+        "codes": [
+          "HIST3360"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3361",
+        "codes": [
+          "HIST3361"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3372",
+        "codes": [
+          "HIST3372"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3373",
+        "codes": [
+          "HIST3373"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3375",
+        "codes": [
+          "HIST3375"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3380",
+        "codes": [
+          "HIST3380"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3381",
+        "codes": [
+          "HIST3381"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3400",
+        "codes": [
+          "HIST3400"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3421",
+        "codes": [
+          "HIST3421"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST3701",
+        "codes": [
+          "HIST3701"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4020",
+        "codes": [
+          "HIST4020"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4304",
+        "codes": [
+          "HIST4304"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4305",
+        "codes": [
+          "HIST4305"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4306",
+        "codes": [
+          "HIST4306"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4380",
+        "codes": [
+          "HIST4380"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4390",
+        "codes": [
+          "HIST4390"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4391",
+        "codes": [
+          "HIST4391"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4392",
+        "codes": [
+          "HIST4392"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4393",
+        "codes": [
+          "HIST4393"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4400",
+        "codes": [
+          "HIST4400"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4420",
+        "codes": [
+          "HIST4420"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4702",
+        "codes": [
+          "HIST4702"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      },
+      {
+        "raw": "HIST4703",
+        "codes": [
+          "HIST4703"
+        ],
+        "alt": false,
+        "from": "(a) (b) | Complete 51 units of HIST courses in"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "12",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses[a]",
+      "units": "51",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "(b) | Complete 51 units of HIST courses in",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 42
+    }
+  ]
+}

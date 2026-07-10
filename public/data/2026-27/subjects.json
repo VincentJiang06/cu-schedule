@@ -1,0 +1,792 @@
+{
+  "subjects": [
+    {
+      "code": "ACCT",
+      "title": "Accountancy"
+    },
+    {
+      "code": "ACPY",
+      "title": "Anatomical & Cellular Patholog"
+    },
+    {
+      "code": "AIMS",
+      "title": "Artificial Intelligence"
+    },
+    {
+      "code": "AIST",
+      "title": "AI: Systems & Tech"
+    },
+    {
+      "code": "ANIC",
+      "title": "Anaesthesia & Intensive Care"
+    },
+    {
+      "code": "ANTH",
+      "title": "Anthropology"
+    },
+    {
+      "code": "ARAB",
+      "title": "Arabic"
+    },
+    {
+      "code": "ARCH",
+      "title": "Architectural Studies"
+    },
+    {
+      "code": "ARTS",
+      "title": "Courses offered by Arts Fac"
+    },
+    {
+      "code": "ASEI",
+      "title": "Aero Sci and Earth Info & X"
+    },
+    {
+      "code": "BASA",
+      "title": "General Business Administratio"
+    },
+    {
+      "code": "BBMS",
+      "title": "Biochemical & Biomedical Sci"
+    },
+    {
+      "code": "BCHE",
+      "title": "Biochemistry"
+    },
+    {
+      "code": "BCME",
+      "title": "Chinese Medicine"
+    },
+    {
+      "code": "BECE",
+      "title": "Early Childhood Education"
+    },
+    {
+      "code": "BEHM",
+      "title": "Biotech, Entrep & Healthc Mgt"
+    },
+    {
+      "code": "BEST",
+      "title": "Bio, Env Mgt, Sustn & Tech"
+    },
+    {
+      "code": "BIOL",
+      "title": "Biology"
+    },
+    {
+      "code": "BIOS",
+      "title": "Biostatistics"
+    },
+    {
+      "code": "BMBL",
+      "title": "Bimodal Bilingual Studies"
+    },
+    {
+      "code": "BMED",
+      "title": "Maths & Maths Education"
+    },
+    {
+      "code": "BMEG",
+      "title": "Biomedical Engineering"
+    },
+    {
+      "code": "BUDS",
+      "title": "Buddhist Studies"
+    },
+    {
+      "code": "CDAS",
+      "title": "Computational Data Science"
+    },
+    {
+      "code": "CENG",
+      "title": "Computer Engineering"
+    },
+    {
+      "code": "CGEN",
+      "title": "Clinical Gerontology & ELC"
+    },
+    {
+      "code": "CHED",
+      "title": "Early Childhood Education"
+    },
+    {
+      "code": "CHEM",
+      "title": "Chemistry"
+    },
+    {
+      "code": "CHES",
+      "title": "Chinese Studies"
+    },
+    {
+      "code": "CHLL",
+      "title": "Chinese Language & Literature"
+    },
+    {
+      "code": "CHLT",
+      "title": "Chinese Proficiency Courses"
+    },
+    {
+      "code": "CHPR",
+      "title": "Community Health Practice"
+    },
+    {
+      "code": "CHPY",
+      "title": "Chemical Pathology"
+    },
+    {
+      "code": "CLCC",
+      "title": "Cantonese"
+    },
+    {
+      "code": "CLCE",
+      "title": "CLC content courses"
+    },
+    {
+      "code": "CLCH",
+      "title": "Hokkien"
+    },
+    {
+      "code": "CLCP",
+      "title": "Putonghua"
+    },
+    {
+      "code": "CLED",
+      "title": "Chinese Language Education"
+    },
+    {
+      "code": "CMBI",
+      "title": "Cell & Molecular Biology"
+    },
+    {
+      "code": "CMSC",
+      "title": "Computer Science (TPg)"
+    },
+    {
+      "code": "CNGT",
+      "title": "Medical Genetics"
+    },
+    {
+      "code": "COMM",
+      "title": "Communication"
+    },
+    {
+      "code": "COOP",
+      "title": "Co-operative Education"
+    },
+    {
+      "code": "CSCI",
+      "title": "Computer Science"
+    },
+    {
+      "code": "CULS",
+      "title": "Cultural Studies"
+    },
+    {
+      "code": "CUMT",
+      "title": "Cultural Management"
+    },
+    {
+      "code": "CURE",
+      "title": "Cultural & Religious Studies"
+    },
+    {
+      "code": "CVSM",
+      "title": "Cardiology"
+    },
+    {
+      "code": "DBAC",
+      "title": "DBA (Chinese) Programme"
+    },
+    {
+      "code": "DOTE",
+      "title": "Dept of Decis, Oper & Tech"
+    },
+    {
+      "code": "DROI",
+      "title": "Diagnostic Radiology & Organ I"
+    },
+    {
+      "code": "DSPS",
+      "title": "Data Science & Policy Studies"
+    },
+    {
+      "code": "EASC",
+      "title": "Earth and Atmospheric Sciences"
+    },
+    {
+      "code": "ECLT",
+      "title": "E-Commerce (Business Programme"
+    },
+    {
+      "code": "ECON",
+      "title": "Economics"
+    },
+    {
+      "code": "EDUC",
+      "title": "Education"
+    },
+    {
+      "code": "EEEN",
+      "title": "Energy and Environmental Erg"
+    },
+    {
+      "code": "EESC",
+      "title": "Earth & Environmental Sci"
+    },
+    {
+      "code": "ELED",
+      "title": "English Language Education"
+    },
+    {
+      "code": "ELEG",
+      "title": "Electronic Engineering"
+    },
+    {
+      "code": "ELTU",
+      "title": "English Language Teaching Unit"
+    },
+    {
+      "code": "EMBA",
+      "title": "Executive MBA"
+    },
+    {
+      "code": "ENGE",
+      "title": "English"
+    },
+    {
+      "code": "ENGG",
+      "title": "Courses offered by Fac of Erg"
+    },
+    {
+      "code": "ENLT",
+      "title": "English Language Teaching"
+    },
+    {
+      "code": "ENSC",
+      "title": "Environmental Science"
+    },
+    {
+      "code": "EPBI",
+      "title": "Epidemiology & Biostatistics"
+    },
+    {
+      "code": "EPID",
+      "title": "Epidemiology of Infectious Dis"
+    },
+    {
+      "code": "EPIN",
+      "title": "Entrepreneurship & Innovation"
+    },
+    {
+      "code": "EPSY",
+      "title": "Prof Educational Psychology"
+    },
+    {
+      "code": "ESGS",
+      "title": "Earth System and GeoInfo Sci"
+    },
+    {
+      "code": "ESTR",
+      "title": "Courses for ELITE Stream"
+    },
+    {
+      "code": "FAAS",
+      "title": "Fine Arts"
+    },
+    {
+      "code": "FINA",
+      "title": "Finance"
+    },
+    {
+      "code": "FNSC",
+      "title": "Food & Nutritional Sciences"
+    },
+    {
+      "code": "FREN",
+      "title": "French"
+    },
+    {
+      "code": "FTEC",
+      "title": "Financial Technology"
+    },
+    {
+      "code": "GAST",
+      "title": "Gastroenterology"
+    },
+    {
+      "code": "GDRS",
+      "title": "Gender Studies"
+    },
+    {
+      "code": "GECC",
+      "title": "GE - Chung Chi College"
+    },
+    {
+      "code": "GECW",
+      "title": "GE - CW Chu College"
+    },
+    {
+      "code": "GEMC",
+      "title": "GE - Morningside College"
+    },
+    {
+      "code": "GENA",
+      "title": "GE - New Asia College"
+    },
+    {
+      "code": "GERM",
+      "title": "German"
+    },
+    {
+      "code": "GESC",
+      "title": "GE - Shaw College"
+    },
+    {
+      "code": "GESH",
+      "title": "GE - S.H. Ho College"
+    },
+    {
+      "code": "GEUC",
+      "title": "GE - United College"
+    },
+    {
+      "code": "GEWS",
+      "title": "GE - Lee Woo Sing College"
+    },
+    {
+      "code": "GEYS",
+      "title": "GE - Wu Yee Sun College"
+    },
+    {
+      "code": "GISM",
+      "title": "Geoinformation Science"
+    },
+    {
+      "code": "GLEF",
+      "title": "Global Economics and Finance"
+    },
+    {
+      "code": "GLSD",
+      "title": "Global Studies"
+    },
+    {
+      "code": "GNBF",
+      "title": "Genomics and Bioinformatics"
+    },
+    {
+      "code": "GPAD",
+      "title": "Government & Public Admin"
+    },
+    {
+      "code": "GPEC",
+      "title": "Global Political Economy"
+    },
+    {
+      "code": "GPGC",
+      "title": "Govt & Poli (Greater Chi)"
+    },
+    {
+      "code": "GPSU",
+      "title": "Global Physician-Leadership St"
+    },
+    {
+      "code": "GRMD",
+      "title": "Geography & Resource Mgt"
+    },
+    {
+      "code": "GRON",
+      "title": "Gerontology"
+    },
+    {
+      "code": "HIST",
+      "title": "History"
+    },
+    {
+      "code": "HKSL",
+      "title": "Hong Kong Sign Language"
+    },
+    {
+      "code": "HPSB",
+      "title": "Master of Public Health"
+    },
+    {
+      "code": "HSOC",
+      "title": "Health Sociomedical Sciences"
+    },
+    {
+      "code": "HSYS",
+      "title": "Health Systems"
+    },
+    {
+      "code": "HTMG",
+      "title": "Hotel And Tourism Management"
+    },
+    {
+      "code": "IASP",
+      "title": "International Asian Studies"
+    },
+    {
+      "code": "IBBA",
+      "title": "Integrated BBA Programme"
+    },
+    {
+      "code": "IEMS",
+      "title": "Information Engineering (TPg)"
+    },
+    {
+      "code": "IERG",
+      "title": "Information Engineering"
+    },
+    {
+      "code": "IMSC",
+      "title": "Artic BSc PhD Pgm in Math Sci"
+    },
+    {
+      "code": "INFD",
+      "title": "Infectious Diseases"
+    },
+    {
+      "code": "ITAL",
+      "title": "Italian"
+    },
+    {
+      "code": "JASP",
+      "title": "Japanese Studies"
+    },
+    {
+      "code": "KORE",
+      "title": "Korean"
+    },
+    {
+      "code": "LAWS",
+      "title": "Law"
+    },
+    {
+      "code": "LDTE",
+      "title": "Learning Design and Technology"
+    },
+    {
+      "code": "LING",
+      "title": "Linguistics"
+    },
+    {
+      "code": "LSCI",
+      "title": "Life Sciences Courses"
+    },
+    {
+      "code": "MAED",
+      "title": "Mathematics Education"
+    },
+    {
+      "code": "MAEG",
+      "title": "Mechanical & Automation Engg"
+    },
+    {
+      "code": "MASE",
+      "title": "Materials Sci & Erg"
+    },
+    {
+      "code": "MATH",
+      "title": "Mathematics"
+    },
+    {
+      "code": "MBAC",
+      "title": "MBA Programmes"
+    },
+    {
+      "code": "MBTE",
+      "title": "Molecular Biotechnology"
+    },
+    {
+      "code": "MCLE",
+      "title": "Chinese Lang Education (TPg)"
+    },
+    {
+      "code": "MCNS",
+      "title": "Stroke & Clinical Neuroscience"
+    },
+    {
+      "code": "MECM",
+      "title": "Early Childhood Education"
+    },
+    {
+      "code": "MEDF",
+      "title": "Medicine Faculty Package"
+    },
+    {
+      "code": "MEDM",
+      "title": "Endo, Diabetes & Metabolism"
+    },
+    {
+      "code": "MEDP",
+      "title": "Molecular Med & Biostatistics"
+    },
+    {
+      "code": "MEDU",
+      "title": "Medicine"
+    },
+    {
+      "code": "MESC",
+      "title": "Medical Sciences (PG)"
+    },
+    {
+      "code": "MGNT",
+      "title": "Management"
+    },
+    {
+      "code": "MICY",
+      "title": "Microbiology"
+    },
+    {
+      "code": "MIEG",
+      "title": "MIEG"
+    },
+    {
+      "code": "MKTG",
+      "title": "Marketing"
+    },
+    {
+      "code": "MLSC",
+      "title": "Medical Laboratory Sciences"
+    },
+    {
+      "code": "MMAT",
+      "title": "Mathematics (TPg)"
+    },
+    {
+      "code": "MPUP",
+      "title": "Public Policy"
+    },
+    {
+      "code": "MRGO",
+      "title": "Musculo Med, Rehab & Ger Orth"
+    },
+    {
+      "code": "MSEG",
+      "title": "Materials Sci & Engineering"
+    },
+    {
+      "code": "MUSC",
+      "title": "Music"
+    },
+    {
+      "code": "NSCI",
+      "title": "Natural Sciences"
+    },
+    {
+      "code": "NURS",
+      "title": "Nursing"
+    },
+    {
+      "code": "OBGY",
+      "title": "Obstetrics & Gynaecology"
+    },
+    {
+      "code": "OENV",
+      "title": "Occupational & Environmental H"
+    },
+    {
+      "code": "ORLC",
+      "title": "Otorhinol, Head & Neck Surgery"
+    },
+    {
+      "code": "ORTY",
+      "title": "Orthopaedics & Traumatology"
+    },
+    {
+      "code": "OVSC",
+      "title": "Ophthalmology & Visual Science"
+    },
+    {
+      "code": "PBHT",
+      "title": "Public Heatlh (TPg)"
+    },
+    {
+      "code": "PEDU",
+      "title": "Education (PG)"
+    },
+    {
+      "code": "PHAR",
+      "title": "Pharmacy"
+    },
+    {
+      "code": "PHEC",
+      "title": "Prehospital and Emergency Care"
+    },
+    {
+      "code": "PHED",
+      "title": "Physical Education"
+    },
+    {
+      "code": "PHIL",
+      "title": "Philosophy"
+    },
+    {
+      "code": "PHPC",
+      "title": "Public Health"
+    },
+    {
+      "code": "PHYS",
+      "title": "Physics"
+    },
+    {
+      "code": "POPG",
+      "title": "Public Heatlh (TPg)"
+    },
+    {
+      "code": "PRHC",
+      "title": "Primary Healthcare"
+    },
+    {
+      "code": "PSYC",
+      "title": "Psychology"
+    },
+    {
+      "code": "PUBH",
+      "title": "Public Health (RPg)"
+    },
+    {
+      "code": "RELS",
+      "title": "Religious Studies & Theology"
+    },
+    {
+      "code": "RMCE",
+      "title": "Reprod Med & Clin Embry"
+    },
+    {
+      "code": "RMED",
+      "title": "Research Medicine"
+    },
+    {
+      "code": "RMSC",
+      "title": "Risk Management Science"
+    },
+    {
+      "code": "ROSE",
+      "title": "Robotics"
+    },
+    {
+      "code": "RUSS",
+      "title": "Russian"
+    },
+    {
+      "code": "SBMS",
+      "title": "Biomedical Sciences"
+    },
+    {
+      "code": "SEEM",
+      "title": "Systems Engineering & Engg Mgt"
+    },
+    {
+      "code": "SGCL",
+      "title": "School Guidance & Counselling"
+    },
+    {
+      "code": "SILP",
+      "title": "School Improvement and Leaders"
+    },
+    {
+      "code": "SLPA",
+      "title": "Speech-Language Pathology"
+    },
+    {
+      "code": "SOCI",
+      "title": "Sociology"
+    },
+    {
+      "code": "SOSC",
+      "title": "Courses offered by SSc Faculty"
+    },
+    {
+      "code": "SOWK",
+      "title": "Social Work"
+    },
+    {
+      "code": "SPAN",
+      "title": "Spanish"
+    },
+    {
+      "code": "SPED",
+      "title": "Sports Science & Physical Educ"
+    },
+    {
+      "code": "SSMU",
+      "title": "Selected Study Modules"
+    },
+    {
+      "code": "SSPA",
+      "title": "MSc Sports Sci & Phy Activity"
+    },
+    {
+      "code": "SSPE",
+      "title": "Sports Sci & Phy Edu (TPg)"
+    },
+    {
+      "code": "STAR",
+      "title": "Courses for STAR Stream"
+    },
+    {
+      "code": "STAT",
+      "title": "Statistics"
+    },
+    {
+      "code": "SURY",
+      "title": "Surgery"
+    },
+    {
+      "code": "SUTM",
+      "title": "Sustainable Tourism"
+    },
+    {
+      "code": "TESL",
+      "title": "Teach Eng Spkrs Oth Langs"
+    },
+    {
+      "code": "THAI",
+      "title": "Thai"
+    },
+    {
+      "code": "THEO",
+      "title": "Theology"
+    },
+    {
+      "code": "TRAN",
+      "title": "Translation"
+    },
+    {
+      "code": "UGCP",
+      "title": "China Programme"
+    },
+    {
+      "code": "UGEA",
+      "title": "Chinese Cultural Heritage"
+    },
+    {
+      "code": "UGEB",
+      "title": "Nature, Science and Technology"
+    },
+    {
+      "code": "UGEC",
+      "title": "Society and Culture"
+    },
+    {
+      "code": "UGED",
+      "title": "Self and Humanity"
+    },
+    {
+      "code": "UGFH",
+      "title": "In Dialogue with Humanity"
+    },
+    {
+      "code": "UGFN",
+      "title": "In Dialogue with Nature"
+    },
+    {
+      "code": "URBD",
+      "title": "Urban Design"
+    },
+    {
+      "code": "URSP",
+      "title": "Urban Studies"
+    }
+  ]
+}

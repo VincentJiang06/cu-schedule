@@ -1,0 +1,818 @@
+{
+  "program_en": "B.A. in Anthropology",
+  "program_chi": "人類學文學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 66,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1010",
+    "ANTH1020",
+    "ANTH1100",
+    "ANTH1310",
+    "ANTH1410",
+    "ANTH1710",
+    "ANTH2110",
+    "ANTH2111",
+    "ANTH2200",
+    "ANTH2210",
+    "ANTH2230",
+    "ANTH2310",
+    "ANTH2324",
+    "ANTH2327",
+    "ANTH2330",
+    "ANTH2340",
+    "ANTH2350",
+    "ANTH2351",
+    "ANTH2360",
+    "ANTH2370",
+    "ANTH2380",
+    "ANTH2390",
+    "ANTH2401",
+    "ANTH2402",
+    "ANTH2403",
+    "ANTH2404",
+    "ANTH2410",
+    "ANTH2420",
+    "ANTH2450",
+    "ANTH2510",
+    "ANTH2520",
+    "ANTH2530",
+    "ANTH2540",
+    "ANTH2550",
+    "ANTH2710",
+    "ANTH2720",
+    "ANTH2730",
+    "ANTH2740",
+    "ANTH2760",
+    "ANTH2810",
+    "ANTH3321",
+    "ANTH3322",
+    "ANTH3323",
+    "ANTH3350",
+    "ANTH3360",
+    "ANTH3370",
+    "ANTH3380",
+    "ANTH3390",
+    "ANTH3440",
+    "ANTH3450",
+    "ANTH3540",
+    "ANTH3630",
+    "ANTH3770",
+    "ANTH3780",
+    "ANTH3790",
+    "ANTH3820",
+    "ANTH4210",
+    "ANTH4220",
+    "ANTH4300",
+    "ANTH4301",
+    "ANTH4321",
+    "ANTH4330",
+    "ANTH4720",
+    "ANTH4750",
+    "ARTS1005",
+    "ARTS1010",
+    "BIOL4510",
+    "BMBL1001",
+    "CHEM1072",
+    "CHES1101",
+    "CHLL1900",
+    "CUMT2004",
+    "CUMT3009",
+    "CURE1000",
+    "ENGE1000",
+    "ESSC4120",
+    "FAAS1600",
+    "FAAS1900",
+    "FAAS2102",
+    "FAAS2103",
+    "FAAS2104",
+    "FAAS2113",
+    "FAAS3104",
+    "FAAS3110",
+    "GRMD2104",
+    "GRMD2105",
+    "GRMD2209",
+    "HIST1000",
+    "HIST2140",
+    "HIST2500",
+    "HIST3106",
+    "HIST4141",
+    "HIST4142",
+    "HIST4390",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "STAT1012",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1010",
+        "codes": [
+          "ANTH1010"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH1100",
+        "codes": [
+          "ANTH1100"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH1710",
+        "codes": [
+          "ANTH1710"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH2110",
+        "codes": [
+          "ANTH2110"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH2111",
+        "codes": [
+          "ANTH2111"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH2200",
+        "codes": [
+          "ANTH2200"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH2210",
+        "codes": [
+          "ANTH2210"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH3380",
+        "codes": [
+          "ANTH3380"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH3630",
+        "codes": [
+          "ANTH3630"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1010, 1100, 1710, 2110, 2111, 2200,"
+      },
+      {
+        "raw": "ANTH4300",
+        "codes": [
+          "ANTH4300"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "ANTH4301",
+        "codes": [
+          "ANTH4301"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ANTH1310",
+        "codes": [
+          "ANTH1310"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2230",
+        "codes": [
+          "ANTH2230"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2310",
+        "codes": [
+          "ANTH2310"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2340",
+        "codes": [
+          "ANTH2340"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2350",
+        "codes": [
+          "ANTH2350"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2351",
+        "codes": [
+          "ANTH2351"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2360",
+        "codes": [
+          "ANTH2360"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2380",
+        "codes": [
+          "ANTH2380"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2390",
+        "codes": [
+          "ANTH2390"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2510",
+        "codes": [
+          "ANTH2510"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2520",
+        "codes": [
+          "ANTH2520"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2530",
+        "codes": [
+          "ANTH2530"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2540",
+        "codes": [
+          "ANTH2540"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2550",
+        "codes": [
+          "ANTH2550"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2730",
+        "codes": [
+          "ANTH2730"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2740",
+        "codes": [
+          "ANTH2740"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH2810",
+        "codes": [
+          "ANTH2810"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3321",
+        "codes": [
+          "ANTH3321"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3322",
+        "codes": [
+          "ANTH3322"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3323",
+        "codes": [
+          "ANTH3323"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3350",
+        "codes": [
+          "ANTH3350"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3360",
+        "codes": [
+          "ANTH3360"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3370",
+        "codes": [
+          "ANTH3370"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3390",
+        "codes": [
+          "ANTH3390"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3540",
+        "codes": [
+          "ANTH3540"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3770",
+        "codes": [
+          "ANTH3770"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3780",
+        "codes": [
+          "ANTH3780"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH3820",
+        "codes": [
+          "ANTH3820"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4210",
+        "codes": [
+          "ANTH4210"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4220",
+        "codes": [
+          "ANTH4220"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4321",
+        "codes": [
+          "ANTH4321"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4330",
+        "codes": [
+          "ANTH4330"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4720",
+        "codes": [
+          "ANTH4720"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH4750",
+        "codes": [
+          "ANTH4750"
+        ],
+        "alt": false,
+        "from": "(a) ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,"
+      },
+      {
+        "raw": "ANTH1410",
+        "codes": [
+          "ANTH1410"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2324",
+        "codes": [
+          "ANTH2324"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2327",
+        "codes": [
+          "ANTH2327"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2330",
+        "codes": [
+          "ANTH2330"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2370",
+        "codes": [
+          "ANTH2370"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2401",
+        "codes": [
+          "ANTH2401"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2402",
+        "codes": [
+          "ANTH2402"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2403",
+        "codes": [
+          "ANTH2403"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2404",
+        "codes": [
+          "ANTH2404"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2410",
+        "codes": [
+          "ANTH2410"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2420",
+        "codes": [
+          "ANTH2420"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2450",
+        "codes": [
+          "ANTH2450"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2710",
+        "codes": [
+          "ANTH2710"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2720",
+        "codes": [
+          "ANTH2720"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH2760",
+        "codes": [
+          "ANTH2760"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH3440",
+        "codes": [
+          "ANTH3440"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH3450",
+        "codes": [
+          "ANTH3450"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      },
+      {
+        "raw": "ANTH3790",
+        "codes": [
+          "ANTH3790"
+        ],
+        "alt": false,
+        "from": "(b) Ethnography"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ANTH1010, 1100, 1710, 2110, 2111, 2200,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "24",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ANTH1310, 2230, 2310, 2340, 2350, 2351, 2360, 2380, 2390, 2510,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 34
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Ethnography",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    }
+  ]
+}

@@ -1,0 +1,609 @@
+{
+  "program_en": "B.Sc. in Biomedical Sciences",
+  "program_chi": "生物醫學理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Medicine",
+  "degree": "B.Sc",
+  "total_units": 70,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "EPIN1020",
+    "LAWS2331",
+    "MEDF1011",
+    "MEDF1041",
+    "MEDF1042",
+    "PHAR3420",
+    "SBMS1101",
+    "SBMS1102",
+    "SBMS1103",
+    "SBMS2101",
+    "SBMS2102",
+    "SBMS2104",
+    "SBMS2105",
+    "SBMS2106",
+    "SBMS2107",
+    "SBMS2108",
+    "SBMS2201",
+    "SBMS3101",
+    "SBMS3105",
+    "SBMS3201",
+    "SBMS3202",
+    "SBMS3203",
+    "SBMS3204",
+    "SBMS3205",
+    "SBMS3206",
+    "SBMS3207",
+    "SBMS3208",
+    "SBMS3209",
+    "SBMS3210",
+    "SBMS3211",
+    "SBMS3212",
+    "SBMS3213",
+    "SBMS3214",
+    "SBMS3215",
+    "SBMS3216",
+    "SBMS4201",
+    "SBMS4202",
+    "SBMS4203",
+    "SBMS4204",
+    "SBMS4205"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MEDF1011",
+        "codes": [
+          "MEDF1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1041",
+        "codes": [
+          "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1042",
+        "codes": [
+          "MEDF1042"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SBMS1102",
+        "codes": [
+          "SBMS1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SBMS1101",
+        "codes": [
+          "SBMS1101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS1103",
+        "codes": [
+          "SBMS1103"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2101",
+        "codes": [
+          "SBMS2101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2102",
+        "codes": [
+          "SBMS2102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2104",
+        "codes": [
+          "SBMS2104"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2105",
+        "codes": [
+          "SBMS2105"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2106",
+        "codes": [
+          "SBMS2106"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2107",
+        "codes": [
+          "SBMS2107"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS2108",
+        "codes": [
+          "SBMS2108"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS3101",
+        "codes": [
+          "SBMS3101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SBMS3105",
+        "codes": [
+          "SBMS3105"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "SBMS3201",
+        "codes": [
+          "SBMS3201"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3201, 4201[e], 4202[e]"
+      },
+      {
+        "raw": "SBMS4201",
+        "codes": [
+          "SBMS4201"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3201, 4201[e], 4202[e]"
+      },
+      {
+        "raw": "SBMS3202",
+        "codes": [
+          "SBMS3202"
+        ],
+        "alt": false,
+        "from": "(ii) 6 units of"
+      },
+      {
+        "raw": "SBMS3203",
+        "codes": [
+          "SBMS3203"
+        ],
+        "alt": false,
+        "from": "(ii) 6 units of"
+      },
+      {
+        "raw": "SBMS3204",
+        "codes": [
+          "SBMS3204"
+        ],
+        "alt": false,
+        "from": "(ii) 6 units of"
+      },
+      {
+        "raw": "SBMS3205",
+        "codes": [
+          "SBMS3205"
+        ],
+        "alt": false,
+        "from": "(ii) 6 units of"
+      },
+      {
+        "raw": "SBMS3206",
+        "codes": [
+          "SBMS3206"
+        ],
+        "alt": false,
+        "from": "(ii) 6 units of"
+      },
+      {
+        "raw": "EPIN1020",
+        "codes": [
+          "EPIN1020"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "LAWS2331",
+        "codes": [
+          "LAWS2331"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "SBMS3215",
+        "codes": [
+          "SBMS3215"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "SBMS3216",
+        "codes": [
+          "SBMS3216"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "SBMS4203",
+        "codes": [
+          "SBMS4203"
+        ],
+        "alt": false,
+        "from": "(ii) 1 course chosen"
+      },
+      {
+        "raw": "SBMS4204",
+        "codes": [
+          "SBMS4204"
+        ],
+        "alt": false,
+        "from": "(ii) 1 course chosen"
+      },
+      {
+        "raw": "SBMS3207",
+        "codes": [
+          "SBMS3207"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3207, 3208, 3209, 3210, 3211"
+      },
+      {
+        "raw": "SBMS3208",
+        "codes": [
+          "SBMS3208"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3207, 3208, 3209, 3210, 3211"
+      },
+      {
+        "raw": "SBMS3209",
+        "codes": [
+          "SBMS3209"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3207, 3208, 3209, 3210, 3211"
+      },
+      {
+        "raw": "SBMS3210",
+        "codes": [
+          "SBMS3210"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3207, 3208, 3209, 3210, 3211"
+      },
+      {
+        "raw": "SBMS3211",
+        "codes": [
+          "SBMS3211"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3207, 3208, 3209, 3210, 3211"
+      },
+      {
+        "raw": "SBMS4203",
+        "codes": [
+          "SBMS4203"
+        ],
+        "alt": false,
+        "from": "(ii) 1 course chosen from the following"
+      },
+      {
+        "raw": "SBMS4204",
+        "codes": [
+          "SBMS4204"
+        ],
+        "alt": false,
+        "from": "(ii) 1 course chosen from the following"
+      },
+      {
+        "raw": "EPIN1020",
+        "codes": [
+          "EPIN1020"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "LAWS2331",
+        "codes": [
+          "LAWS2331"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "PHAR3420",
+        "codes": [
+          "PHAR3420"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS2201",
+        "codes": [
+          "SBMS2201"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3201",
+        "codes": [
+          "SBMS3201"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3202",
+        "codes": [
+          "SBMS3202"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3203",
+        "codes": [
+          "SBMS3203"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3204",
+        "codes": [
+          "SBMS3204"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3205",
+        "codes": [
+          "SBMS3205"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3206",
+        "codes": [
+          "SBMS3206"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3207",
+        "codes": [
+          "SBMS3207"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3208",
+        "codes": [
+          "SBMS3208"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3209",
+        "codes": [
+          "SBMS3209"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3210",
+        "codes": [
+          "SBMS3210"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3211",
+        "codes": [
+          "SBMS3211"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3212",
+        "codes": [
+          "SBMS3212"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3213",
+        "codes": [
+          "SBMS3213"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3214",
+        "codes": [
+          "SBMS3214"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3215",
+        "codes": [
+          "SBMS3215"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS3216",
+        "codes": [
+          "SBMS3216"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS4203",
+        "codes": [
+          "SBMS4203"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "28",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Students must",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "SBMS3201, 4201[e], 4202[e]",
+      "units": "8",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "6 units of",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "1 course chosen",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "SBMS3207, 3208, 3209, 3210, 3211",
+      "units": "13",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "1 course chosen from the following",
+      "units": "1",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "17-18[a] units of courses chosen from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    }
+  ]
+}

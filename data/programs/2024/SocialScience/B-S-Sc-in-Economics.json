@@ -1,0 +1,770 @@
+{
+  "program_en": "B.S.Sc. in Economics",
+  "program_chi": "經濟學社會科學學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "CHLT1001",
+    "CHLT1002",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "CSCI3320",
+    "CSCI4190",
+    "DOTE1030",
+    "DOTE1040",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1010",
+    "ECON1101",
+    "ECON1111",
+    "ECON1210",
+    "ECON1220",
+    "ECON1310",
+    "ECON1420",
+    "ECON1902",
+    "ECON2011",
+    "ECON2021",
+    "ECON2121",
+    "ECON2901",
+    "ECON3011",
+    "ECON3021",
+    "ECON3121",
+    "ECON3140",
+    "ECON3150",
+    "ECON3160",
+    "ECON3230",
+    "ECON3240",
+    "ECON3250",
+    "ECON3260",
+    "ECON3310",
+    "ECON3320",
+    "ECON3350",
+    "ECON3360",
+    "ECON3370",
+    "ECON3380",
+    "ECON3410",
+    "ECON3420",
+    "ECON3430",
+    "ECON3440",
+    "ECON3460",
+    "ECON3470",
+    "ECON3480",
+    "ECON3500",
+    "ECON3510",
+    "ECON3520",
+    "ECON3530",
+    "ECON3540",
+    "ECON3570",
+    "ECON3580",
+    "ECON3590",
+    "ECON3610",
+    "ECON3620",
+    "ECON3630",
+    "ECON4010",
+    "ECON4020",
+    "ECON4110",
+    "ECON4120",
+    "ECON4130",
+    "ECON4140",
+    "ECON4430",
+    "ECON4450",
+    "ECON4460",
+    "ECON4470",
+    "ECON4810",
+    "ECON4820",
+    "ECON4830",
+    "ECON4840",
+    "ECON4850",
+    "ECON4860",
+    "ECON4901",
+    "ECON4903",
+    "ECON4910",
+    "ECON4920",
+    "ELTU1001",
+    "ELTU2020",
+    "ENGG1003",
+    "ESTR3302",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "IERG3280",
+    "MATH1550",
+    "PSYC1000",
+    "PSYC1630",
+    "SEEM4630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1101",
+        "codes": [
+          "ECON1101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ECON4010",
+        "codes": [
+          "ECON4010"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ECON3160",
+        "codes": [
+          "ECON3160"
+        ],
+        "alt": false,
+        "from": "(i) At least 3 units from"
+      },
+      {
+        "raw": "ECON4110",
+        "codes": [
+          "ECON4110"
+        ],
+        "alt": false,
+        "from": "(i) At least 3 units from"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
+        ],
+        "alt": false,
+        "from": "(i) At least 3 units from"
+      },
+      {
+        "raw": "ECON4910",
+        "codes": [
+          "ECON4910"
+        ],
+        "alt": false,
+        "from": "(i) At least 3 units from"
+      },
+      {
+        "raw": "ECON3410",
+        "codes": [
+          "ECON3410"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ECON3140",
+        "codes": [
+          "ECON3140"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3520",
+        "codes": [
+          "ECON3520"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3540",
+        "codes": [
+          "ECON3540"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3580",
+        "codes": [
+          "ECON3580"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3620",
+        "codes": [
+          "ECON3620"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON4450",
+        "codes": [
+          "ECON4450"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3480",
+        "codes": [
+          "ECON3480"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ECON3320",
+        "codes": [
+          "ECON3320"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3380",
+        "codes": [
+          "ECON3380"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3430",
+        "codes": [
+          "ECON3430"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3470",
+        "codes": [
+          "ECON3470"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3570",
+        "codes": [
+          "ECON3570"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3610",
+        "codes": [
+          "ECON3610"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3620",
+        "codes": [
+          "ECON3620"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3630",
+        "codes": [
+          "ECON3630"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3310",
+        "codes": [
+          "ECON3310"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ECON3250",
+        "codes": [
+          "ECON3250"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3370",
+        "codes": [
+          "ECON3370"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "ECON4130",
+        "codes": [
+          "ECON4130"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "CSCI4190",
+        "codes": [
+          "CSCI4190"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 30
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "27",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses[b][c]",
+      "units": "36",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "At least 3 units from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "up",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    }
+  ]
+}

@@ -1,0 +1,745 @@
+{
+  "program_en": "B.Eng. in Biomedical Engineering",
+  "program_chi": "生物醫學工程學工程學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "BMEG2001",
+    "BMEG2012",
+    "BMEG2210",
+    "BMEG2218",
+    "BMEG2300",
+    "BMEG2410",
+    "BMEG2603",
+    "BMEG3102",
+    "BMEG3103",
+    "BMEG3105",
+    "BMEG3111",
+    "BMEG3130",
+    "BMEG3140",
+    "BMEG3210",
+    "BMEG3320",
+    "BMEG3330",
+    "BMEG3420",
+    "BMEG3430",
+    "BMEG3440",
+    "BMEG3910",
+    "BMEG3920",
+    "BMEG4010",
+    "BMEG4220",
+    "BMEG4320",
+    "BMEG4410",
+    "BMEG4450",
+    "BMEG4510",
+    "BMEG4520",
+    "BMEG4530",
+    "BMEG4998",
+    "BMEG4999",
+    "BMEG5530",
+    "BMEG5610",
+    "CHEM1280",
+    "CHEM1380",
+    "CMBI4101",
+    "CMBI4102",
+    "CMBI4103",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3010",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "ELEG3201",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1040",
+    "ENGG1110",
+    "ENGG1111",
+    "ENGG1120",
+    "ENGG1125",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG2450",
+    "ENGG2760",
+    "ENGG2780",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR1007",
+    "ESTR2005",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2104",
+    "ESTR2201",
+    "ESTR2204",
+    "ESTR2300",
+    "ESTR2601",
+    "ESTR2602",
+    "ESTR3200",
+    "ESTR3208",
+    "ESTR3212",
+    "ESTR3602",
+    "ESTR3603",
+    "ESTR3604",
+    "ESTR3605",
+    "ESTR4200",
+    "ESTR4202",
+    "ESTR4203",
+    "ESTR4204",
+    "ESTR4214",
+    "ESTR4300",
+    "ESTR4601",
+    "ESTR4998",
+    "ESTR4999",
+    "FINA2010",
+    "FINA2020",
+    "IBBA3040",
+    "LSCI1001",
+    "LSCI1002",
+    "MAEG5080",
+    "MBTE4320",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PHYS1003",
+    "PHYS1110",
+    "SBMS1431",
+    "SBMS1432",
+    "SBMS1440",
+    "STAT3210"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1111",
+        "codes": [
+          "ENGG1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1125/ESTR1007",
+        "codes": [
+          "ENGG1125",
+          "ESTR1007"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1310/ESTR1003",
+        "codes": [
+          "ENGG1310",
+          "ESTR1003"
+        ],
+        "alt": true,
+        "from": "(a) 6 units of Physics Courses"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "(a) 6 units of Physics Courses"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "(b) 3 units of Science Course: CHEM1280, 1380[c], LSCI1001, 1002[d]"
+      },
+      {
+        "raw": "CHEM1380",
+        "codes": [
+          "CHEM1380"
+        ],
+        "alt": false,
+        "from": "(b) 3 units of Science Course: CHEM1280, 1380[c], LSCI1001, 1002[d]"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "(b) 3 units of Science Course: CHEM1280, 1380[c], LSCI1001, 1002[d]"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "(b) 3 units of Science Course: CHEM1280, 1380[c], LSCI1001, 1002[d]"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "(c) ENGG1130/ESTR1006[e]"
+      },
+      {
+        "raw": "BMEG2001/ESTR2201",
+        "codes": [
+          "BMEG2001",
+          "ESTR2201"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2012/ESTR2602",
+        "codes": [
+          "BMEG2012",
+          "ESTR2602"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2210/ESTR2204",
+        "codes": [
+          "BMEG2210",
+          "ESTR2204"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2218",
+        "codes": [
+          "BMEG2218"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2300/ESTR2601",
+        "codes": [
+          "BMEG2300",
+          "ESTR2601"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2410",
+        "codes": [
+          "BMEG2410"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG2603",
+        "codes": [
+          "BMEG2603"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG3111/ESTR3603",
+        "codes": [
+          "BMEG3111",
+          "ESTR3603"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG3320",
+        "codes": [
+          "BMEG3320"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG3430/ESTR3208",
+        "codes": [
+          "BMEG3430",
+          "ESTR3208"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG4010/ESTR4601",
+        "codes": [
+          "BMEG4010",
+          "ESTR4601"
+        ],
+        "alt": true,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "SBMS1431",
+        "codes": [
+          "SBMS1431"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "SBMS1432",
+        "codes": [
+          "SBMS1432"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "SBMS1440",
+        "codes": [
+          "SBMS1440"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(a) BMEG2001/ESTR2201, BMEG2012/ESTR2602,"
+      },
+      {
+        "raw": "BMEG4998",
+        "codes": [
+          "BMEG4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[f]"
+      },
+      {
+        "raw": "BMEG4999",
+        "codes": [
+          "BMEG4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[f]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BMEG3102",
+        "codes": [
+          "BMEG3102"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3103",
+        "codes": [
+          "BMEG3103"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3105/ESTR3605",
+        "codes": [
+          "BMEG3105",
+          "ESTR3605"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3130",
+        "codes": [
+          "BMEG3130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3140/ESTR3604",
+        "codes": [
+          "BMEG3140",
+          "ESTR3604"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3210/ESTR3212",
+        "codes": [
+          "BMEG3210",
+          "ESTR3212"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3330/ESTR3602",
+        "codes": [
+          "BMEG3330",
+          "ESTR3602"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3420",
+        "codes": [
+          "BMEG3420"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3440",
+        "codes": [
+          "BMEG3440"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3910",
+        "codes": [
+          "BMEG3910"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG3920",
+        "codes": [
+          "BMEG3920"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4220",
+        "codes": [
+          "BMEG4220"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4320/ESTR4200",
+        "codes": [
+          "BMEG4320",
+          "ESTR4200"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4410/ESTR4203",
+        "codes": [
+          "BMEG4410",
+          "ESTR4203"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4450/ESTR4202",
+        "codes": [
+          "BMEG4450",
+          "ESTR4202"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4510/ESTR4204",
+        "codes": [
+          "BMEG4510",
+          "ESTR4204"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4520",
+        "codes": [
+          "BMEG4520"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4530/ESTR4214",
+        "codes": [
+          "BMEG4530",
+          "ESTR4214"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG5530",
+        "codes": [
+          "BMEG5530"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG5610",
+        "codes": [
+          "BMEG5610"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CMBI4101",
+        "codes": [
+          "CMBI4101"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CMBI4102",
+        "codes": [
+          "CMBI4102"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CMBI4103",
+        "codes": [
+          "CMBI4103"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "ELEG3201/ESTR3200",
+        "codes": [
+          "ELEG3201",
+          "ESTR3200"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "MAEG5080",
+        "codes": [
+          "MAEG5080"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "MBTE4320",
+        "codes": [
+          "MBTE4320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4998",
+        "codes": [
+          "BMEG4998"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "12",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "6 units of Physics Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "3 units of Science Course: CHEM1280, 1380[c], LSCI1001, 1002[d]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "ENGG1130/ESTR1006[e]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "BMEG2001/ESTR2201, BMEG2012/ESTR2602,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[f]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 27
+    }
+  ]
+}

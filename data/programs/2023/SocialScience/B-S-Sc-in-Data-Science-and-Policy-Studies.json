@@ -1,0 +1,748 @@
+{
+  "program_en": "B.S.Sc. in Data Science and Policy Studies",
+  "program_chi": "數據科學與政策研究社會科學學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM3650",
+    "DSPS1001",
+    "DSPS1002",
+    "DSPS1003",
+    "DSPS1004",
+    "DSPS2101",
+    "DSPS2102",
+    "DSPS2104",
+    "DSPS2201",
+    "DSPS2202",
+    "DSPS2301",
+    "DSPS2320",
+    "DSPS2501",
+    "DSPS2520",
+    "DSPS2730",
+    "DSPS2830",
+    "DSPS3190",
+    "DSPS3202",
+    "DSPS3310",
+    "DSPS3320",
+    "DSPS3330",
+    "DSPS3340",
+    "DSPS3350",
+    "DSPS3501",
+    "DSPS3790",
+    "DSPS3791",
+    "DSPS3801",
+    "DSPS3802",
+    "DSPS3803",
+    "DSPS4203",
+    "DSPS4310",
+    "DSPS4801",
+    "DSPS4802",
+    "DSPS4803",
+    "DSPS4804",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON2121",
+    "ECON3630",
+    "GLSD1001",
+    "GLSD2401",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GPAD2065",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "GRMD2105",
+    "GRMD2401",
+    "PSYC1000",
+    "PSYC1630",
+    "PSYC3360",
+    "PSYC3370",
+    "SOCI1001",
+    "SOCI1201",
+    "SOCI2216",
+    "SOCI3102",
+    "SOCI3241",
+    "SOCI4201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001",
+    "URSP1002",
+    "URSP3100"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
+      },
+      {
+        "raw": "DSPS3801",
+        "codes": [
+          "DSPS3801"
+        ],
+        "alt": false,
+        "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
+      },
+      {
+        "raw": "DSPS4801",
+        "codes": [
+          "DSPS4801"
+        ],
+        "alt": false,
+        "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "COMM3650",
+        "codes": [
+          "COMM3650"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2102",
+        "codes": [
+          "DSPS2102"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2104",
+        "codes": [
+          "DSPS2104"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2201",
+        "codes": [
+          "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2202",
+        "codes": [
+          "DSPS2202"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2520",
+        "codes": [
+          "DSPS2520"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2730",
+        "codes": [
+          "DSPS2730"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2830",
+        "codes": [
+          "DSPS2830"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3190",
+        "codes": [
+          "DSPS3190"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3202",
+        "codes": [
+          "DSPS3202"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3330",
+        "codes": [
+          "DSPS3330"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3350",
+        "codes": [
+          "DSPS3350"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3790",
+        "codes": [
+          "DSPS3790"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3791",
+        "codes": [
+          "DSPS3791"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS3802",
+        "codes": [
+          "DSPS3802"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "ECON2121",
+        "codes": [
+          "ECON2121"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "GRMD2105",
+        "codes": [
+          "GRMD2105"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "SOCI4201",
+        "codes": [
+          "SOCI4201"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
+        "raw": "DSPS2301",
+        "codes": [
+          "DSPS2301"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS2320",
+        "codes": [
+          "DSPS2320"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS2501",
+        "codes": [
+          "DSPS2501"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS3320",
+        "codes": [
+          "DSPS3320"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS3501",
+        "codes": [
+          "DSPS3501"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS3803",
+        "codes": [
+          "DSPS3803"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS4310",
+        "codes": [
+          "DSPS4310"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "GPAD2065",
+        "codes": [
+          "GPAD2065"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "DSPS3310",
+        "codes": [
+          "DSPS3310"
+        ],
+        "alt": false,
+        "from": "(ii) Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#"
+      },
+      {
+        "raw": "GLSD2401",
+        "codes": [
+          "GLSD2401"
+        ],
+        "alt": false,
+        "from": "(ii) Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#"
+      },
+      {
+        "raw": "SOCI3241",
+        "codes": [
+          "SOCI3241"
+        ],
+        "alt": false,
+        "from": "(ii) Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#"
+      },
+      {
+        "raw": "PSYC3360",
+        "codes": [
+          "PSYC3360"
+        ],
+        "alt": false,
+        "from": "(iii) Human Resources PSYC3360#, SOCI3102#, 3227#"
+      },
+      {
+        "raw": "SOCI3102",
+        "codes": [
+          "SOCI3102"
+        ],
+        "alt": false,
+        "from": "(iii) Human Resources PSYC3360#, SOCI3102#, 3227#"
+      },
+      {
+        "raw": "ECON3630",
+        "codes": [
+          "ECON3630"
+        ],
+        "alt": false,
+        "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
+      },
+      {
+        "raw": "PSYC3370",
+        "codes": [
+          "PSYC3370"
+        ],
+        "alt": false,
+        "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
+      },
+      {
+        "raw": "SOCI2216",
+        "codes": [
+          "SOCI2216"
+        ],
+        "alt": false,
+        "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
+      },
+      {
+        "raw": "DSPS3340",
+        "codes": [
+          "DSPS3340"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD2401",
+        "codes": [
+          "GRMD2401"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "URSP3100",
+        "codes": [
+          "URSP3100"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 27
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "DSPS1003, 1004, 3801, 4801 (capstone course), 4802",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Resident Study Overseas: Students are required to study overseas for one academic",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses[a]",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2104, 2201, 2202, 2520, 2730,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Policy Applications Any six courses from any of the following areas",
+      "units": "18",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Human Resources PSYC3360#, SOCI3102#, 3227#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(v)",
+      "level": 2,
+      "title": "Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    }
+  ]
+}

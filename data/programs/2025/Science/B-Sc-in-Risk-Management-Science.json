@@ -1,0 +1,418 @@
+{
+  "program_en": "B.Sc. in Risk Management Science",
+  "program_chi": "風險管理科學理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT1111",
+    "BUST1001",
+    "BUST1002",
+    "BUST1014",
+    "CHEM1070",
+    "CHLT1001",
+    "CHLT1002",
+    "CMSE1000",
+    "CSCI1510",
+    "CSCI1520",
+    "CSCI1530",
+    "CSCI1540",
+    "CSCI1550",
+    "CSCI1580",
+    "CSCI2100",
+    "CSCI2510",
+    "CSCI2520",
+    "CSCI2720",
+    "DOTE1030",
+    "DOTE1031",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "ECON1010",
+    "ECON2121",
+    "ECON3420",
+    "ELTU1001",
+    "ELTU2018",
+    "ENGG1003",
+    "ENGG2760",
+    "ENGG2780",
+    "ENGG5108",
+    "ESTR2018",
+    "ESTR2020",
+    "FINA2010",
+    "FINA2220",
+    "FINA3010",
+    "FINA3080",
+    "FINA3210",
+    "GRMD2102",
+    "HTMG1010",
+    "LSCI1001",
+    "MATH1000",
+    "MATH1003",
+    "MATH1006",
+    "MATH1009",
+    "MATH1010",
+    "MATH1030",
+    "MATH1050",
+    "MATH1113",
+    "MATH1118",
+    "MATH1120",
+    "MATH2010",
+    "MATH3215",
+    "MGNT1020",
+    "PHYS1001",
+    "RMSC1101",
+    "RMSC2001",
+    "RMSC2101",
+    "RMSC3001",
+    "RMSC3101",
+    "RMSC4001",
+    "RMSC4002",
+    "RMSC4003",
+    "RMSC4004",
+    "RMSC4005",
+    "RMSC4006",
+    "RMSC4007",
+    "RMSC4102",
+    "RMSC4112",
+    "RMSC4202",
+    "RMSC4212",
+    "SOCI2004",
+    "STAT1011",
+    "STAT1012",
+    "STAT2001",
+    "STAT2005",
+    "STAT2006",
+    "STAT2102",
+    "STAT3007",
+    "STAT3008",
+    "STAT4002",
+    "STAT4003",
+    "STAT4004",
+    "STAT4005",
+    "UGCP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1031",
+        "codes": [
+          "DOTE1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HTMG1010",
+        "codes": [
+          "HTMG1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ACCT1111",
+        "codes": [
+          "ACCT1111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "RMSC1101",
+        "codes": [
+          "RMSC1101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI1510",
+        "codes": [
+          "CSCI1510"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI1520",
+        "codes": [
+          "CSCI1520"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI1530",
+        "codes": [
+          "CSCI1530"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI1550",
+        "codes": [
+          "CSCI1550"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI1580",
+        "codes": [
+          "CSCI1580"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "STAT2005",
+        "codes": [
+          "STAT2005"
+        ],
+        "alt": false,
+        "from": "(a) One course from CSCI1510, 1520, 1530,"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "ECON3420",
+        "codes": [
+          "ECON3420"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "FINA3010",
+        "codes": [
+          "FINA3010"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4002",
+        "codes": [
+          "RMSC4002"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4004",
+        "codes": [
+          "RMSC4004"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4005",
+        "codes": [
+          "RMSC4005"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4006",
+        "codes": [
+          "RMSC4006"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4007",
+        "codes": [
+          "RMSC4007"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4002",
+        "codes": [
+          "STAT4002"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "RMSC4102",
+        "codes": [
+          "RMSC4102"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "42",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One course from CSCI1510, 1520, 1530,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Choose five courses from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

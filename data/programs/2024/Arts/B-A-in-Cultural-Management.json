@@ -1,0 +1,432 @@
+{
+  "program_en": "B.A. in Cultural Management",
+  "program_chi": "文化管理文學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1010",
+    "ANTH1020",
+    "ANTH1410",
+    "ANTH2370",
+    "ANTH2510",
+    "ANTH2720",
+    "ANTH2730",
+    "ANTH2760",
+    "ANTH4720",
+    "ARCH1320",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1101",
+    "CHLL1900",
+    "CUMT1000",
+    "CUMT1001",
+    "CUMT1002",
+    "CUMT1003",
+    "CUMT2001",
+    "CUMT2002",
+    "CUMT2003",
+    "CUMT2004",
+    "CUMT2005",
+    "CUMT2006",
+    "CUMT2007",
+    "CUMT2009",
+    "CUMT2010",
+    "CUMT2013",
+    "CUMT3001",
+    "CUMT3002",
+    "CUMT3003",
+    "CUMT3004",
+    "CUMT3005",
+    "CUMT3007",
+    "CUMT3008",
+    "CUMT3009",
+    "CUMT3108",
+    "CUMT4001",
+    "CUMT4003",
+    "CUMT4004",
+    "CUMT4005",
+    "CUMT4008",
+    "CUMT4101",
+    "CUMT4102",
+    "CUMT4103",
+    "CUMT4201",
+    "CUMT4301",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "CURE1401",
+    "CURE1403",
+    "CURE2001",
+    "CURE2003",
+    "CURE2047",
+    "CURE2066",
+    "CURE2403",
+    "CURE2404",
+    "CURE2405",
+    "CURE2406",
+    "CURE2407",
+    "CURE2409",
+    "CURE2410",
+    "CURE2411",
+    "CURE2412",
+    "CURE3026",
+    "CURE3030",
+    "CURE3403",
+    "CURE3404",
+    "CURE3405",
+    "CURE3407",
+    "CURE3408",
+    "CURE3409",
+    "CURE3508",
+    "CURE4401",
+    "CURE4403",
+    "CURE4404",
+    "CURE4408",
+    "CURE4411",
+    "CURE4431",
+    "CURE4441",
+    "ENGE1000",
+    "ENGE1800",
+    "ENGE3260",
+    "FAAS1600",
+    "FAAS1700",
+    "FAAS1900",
+    "FAAS2102",
+    "FAAS2117",
+    "FAAS2208",
+    "FAAS3108",
+    "FAAS3229",
+    "FAAS4201",
+    "HIST1000",
+    "JASP1090",
+    "JASP3470",
+    "LING1000",
+    "MGNT1020",
+    "MGNT2040",
+    "MGNT2510",
+    "MKTG2010",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1002",
+        "codes": [
+          "CUMT1002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE1401",
+        "codes": [
+          "CURE1401"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CUMT1001",
+        "codes": [
+          "CUMT1001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE1403",
+        "codes": [
+          "CURE1403"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CUMT1003",
+        "codes": [
+          "CUMT1003"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE4401",
+        "codes": [
+          "CURE4401"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CUMT4001",
+        "codes": [
+          "CUMT4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CUMT4102",
+        "codes": [
+          "CUMT4102"
+        ],
+        "alt": false,
+        "from": "(e) Capstone Courses: CUMT4102 or 4103"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 19
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses[a]",
+      "units": "45",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Any 9 units from Area 1",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Any 9 units from Area 3",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Any 12 units from Area 4[b]",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Any 12 units of CUMT courses, with",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Capstone Courses: CUMT4102 or 4103",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

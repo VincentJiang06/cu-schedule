@@ -21,8 +21,16 @@ as the course-catalog page, so the ddddocr technique carries over unchanged.
 Reuses techniques from scripts/cuhk_scraper.py
 (EagleZhen/another-cuhk-course-planner, AGPL-3.0). This file is therefore also AGPL-3.0.
 
+Output per programme:
+    data/raw/programs/<year>/<Faculty>/<slug>.json      metadata + extracted text
+    data/raw/programs/<year>/<Faculty>/<slug>.html.gz   COMPLETE raw detail page (lossless)
+    data/raw/programs/index.json                        manifest of everything scraped
+
+The .html.gz is the untouched server response, kept so later schema/post-processing can
+re-parse from ground truth rather than trusting the text extraction. gunzip to inspect.
+
 Usage:
-    uv run python scripts/scrape_programs.py                 # years 2023-2026
+    uv run python scripts/scrape_programs.py                 # years 2023 2024 2025
     uv run python scripts/scrape_programs.py 2024            # one year
     uv run python scripts/scrape_programs.py 2023 2024 2025  # several
     uv run python scripts/scrape_programs.py --force         # re-scrape (ignore existing)
@@ -30,6 +38,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import os
 import re
@@ -44,12 +53,12 @@ from bs4 import BeautifulSoup
 BASE_URL = "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_acad_prog.aspx"
 DIR_URL = "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/"
 
-DEFAULT_YEARS = ["2023", "2024", "2025", "2026"]
+DEFAULT_YEARS = ["2023", "2024", "2025"]
 CAREER = "UG"          # undergraduate only, per request
 STUDY_LOAD = "F"       # Full-time
 STUDY_MODE_LABEL = "Full-time"
 
-OUT_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "programs")
+OUT_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "raw", "programs")
 
 REQUEST_DELAY = 1.0        # polite delay between programme postbacks (seconds)
 CAPTCHA_MAX_TRIES = 25     # per-search captcha attempts (each search happens once per year)
@@ -215,6 +224,7 @@ class ProgramScraper:
     # ---- postback into a programme's detail page (reuses results-page ViewState) ----
     def open_program(self, results_html: str, row: dict) -> str:
         base_hidden = self._hidden(BeautifulSoup(results_html, "html.parser"))
+        last_detail: str | None = None
         for attempt in range(1, POSTBACK_MAX_TRIES + 1):
             try:
                 data = dict(base_hidden)
@@ -223,11 +233,22 @@ class ProgramScraper:
                 resp = self._request("POST", BASE_URL, data=data)
                 if "uc_scheme_lbl_study_scheme" not in resp.text:
                     raise ValueError("detail page missing study-scheme span")
-                return resp.text
+                last_detail = resp.text
+                # The postback intermittently returns a blank study-scheme span that
+                # still contains the id. Retry a few times; the content is usually there.
+                span = BeautifulSoup(resp.text, "html.parser").find(id="uc_scheme_lbl_study_scheme")
+                if span and span.get_text(strip=True):
+                    return resp.text
+                log(f"    empty study_scheme span, retry {attempt}/{POSTBACK_MAX_TRIES}")
+                time.sleep(1.5)
             except Exception as e:  # transient / corrupted HTML -> retry
                 wait = min(30, 2 ** (attempt - 1))
                 log(f"    postback retry {attempt}/{POSTBACK_MAX_TRIES} ({e}); wait {wait}s")
                 time.sleep(wait)
+        # Exhausted retries: keep the last response even if blank (genuinely empty
+        # programmes exist), so it is saved rather than dropped.
+        if last_detail is not None:
+            return last_detail
         raise RuntimeError(f"failed to open programme {row['program_en']!r}")
 
     @staticmethod
@@ -306,7 +327,7 @@ def scrape(years: list[str], force: bool) -> None:
                 seen_slugs[key] = 1
             out_dir = os.path.join(OUT_ROOT, year, fac)
             json_path = os.path.join(out_dir, base + ".json")
-            html_path = os.path.join(out_dir, base + ".html")
+            html_path = os.path.join(out_dir, base + ".html.gz")
             rel = os.path.relpath(json_path, OUT_ROOT)
 
             if os.path.exists(json_path) and not force:
@@ -351,7 +372,7 @@ def scrape(years: list[str], force: bool) -> None:
                 "scraped_at_utc": utc_now(),
                 "learning_outcomes": content["learning_outcomes"],
                 "study_scheme": content["study_scheme"],
-                "content_html_file": os.path.basename(html_path),
+                "raw_html_file": os.path.basename(html_path),
                 "_manifest": manifest_entry,
             }
 
@@ -359,14 +380,9 @@ def scrape(years: list[str], force: bool) -> None:
             with open(json_path, "w", encoding="utf-8") as f:
                 json.dump(record, f, ensure_ascii=False, indent=2)
                 f.write("\n")
-            with open(html_path, "w", encoding="utf-8") as f:
-                f.write(
-                    "<!-- CUHK Browse Program Information — content spans only "
-                    f"(program={row['program_en']}, year={year}) -->\n"
-                    + content["learning_outcomes_html"]
-                    + "\n"
-                    + content["study_scheme_html"]
-                )
+            # complete, untouched detail page — lossless ground truth for post-processing
+            with gzip.open(html_path, "wt", encoding="utf-8") as f:
+                f.write(detail_html)
             manifest.append(manifest_entry)
             totals["scraped"] += 1
             time.sleep(REQUEST_DELAY)

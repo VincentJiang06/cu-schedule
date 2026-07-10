@@ -1,0 +1,561 @@
+{
+  "program_en": "B.Ed. in Early Childhood Education",
+  "program_chi": "幼兒教育教育學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Education",
+  "degree": "B.Ed",
+  "total_units": 111,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BECE2110",
+    "BECE2120",
+    "BECE2130",
+    "BECE2140",
+    "BECE2210",
+    "BECE2310",
+    "BECE2320",
+    "BECE2330",
+    "BECE2510",
+    "BECE3110",
+    "BECE3120",
+    "BECE3130",
+    "BECE3140",
+    "BECE3150",
+    "BECE3160",
+    "BECE3170",
+    "BECE3210",
+    "BECE3220",
+    "BECE4010",
+    "BECE4020",
+    "BECE4341",
+    "BECE4540",
+    "BMBL1001",
+    "CHED4150",
+    "CHED4210",
+    "CHED4220",
+    "CHED4310",
+    "CHED4320",
+    "CHED4330",
+    "CHED4340",
+    "CHED4350",
+    "CHED4370",
+    "CHED4410",
+    "CHED4510",
+    "CHED4520",
+    "CHED4530",
+    "CHED4550",
+    "EDUC2240",
+    "EDUC3150",
+    "EDUC3200",
+    "EDUC3201",
+    "EDUC3280",
+    "EDUC3290",
+    "LING1000",
+    "LING2003",
+    "LING2004",
+    "LING3201",
+    "LING3204",
+    "LING3208",
+    "MUSC1000",
+    "MUSC2545",
+    "MUSC2872",
+    "MUSC2882",
+    "MUSC3502",
+    "MUSC3533",
+    "PSYC1000",
+    "PSYC2010",
+    "PSYC2300",
+    "PSYC2620",
+    "SPED2141",
+    "SPED3410"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "BECE2110",
+        "codes": [
+          "BECE2110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BECE2120",
+        "codes": [
+          "BECE2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE2130",
+        "codes": [
+          "BECE2130"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE2140",
+        "codes": [
+          "BECE2140"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE2320",
+        "codes": [
+          "BECE2320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE2330",
+        "codes": [
+          "BECE2330"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE2510",
+        "codes": [
+          "BECE2510"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4210",
+        "codes": [
+          "CHED4210"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4220",
+        "codes": [
+          "CHED4220"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4310",
+        "codes": [
+          "CHED4310"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4340",
+        "codes": [
+          "CHED4340"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4350",
+        "codes": [
+          "CHED4350"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4410",
+        "codes": [
+          "CHED4410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4510",
+        "codes": [
+          "CHED4510"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "EDUC3201",
+        "codes": [
+          "EDUC3201"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE4540",
+        "codes": [
+          "BECE4540"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHED4320",
+        "codes": [
+          "CHED4320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE4010",
+        "codes": [
+          "BECE4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BECE2210",
+        "codes": [
+          "BECE2210"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3110",
+        "codes": [
+          "BECE3110"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "CHED4330",
+        "codes": [
+          "CHED4330"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "CHED4530",
+        "codes": [
+          "CHED4530"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3130",
+        "codes": [
+          "BECE3130"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "BECE3140",
+        "codes": [
+          "BECE3140"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "BECE3150",
+        "codes": [
+          "BECE3150"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "CHED4150",
+        "codes": [
+          "CHED4150"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "CHED4370",
+        "codes": [
+          "CHED4370"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "CHED4520",
+        "codes": [
+          "CHED4520"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "CHED4550",
+        "codes": [
+          "CHED4550"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "EDUC3150",
+        "codes": [
+          "EDUC3150"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "EDUC3200",
+        "codes": [
+          "EDUC3200"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "EDUC3280",
+        "codes": [
+          "EDUC3280"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "EDUC3290",
+        "codes": [
+          "EDUC3290"
+        ],
+        "alt": false,
+        "from": "(b) At least 11 units of courses chosen"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "LING3208",
+        "codes": [
+          "LING3208"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC2545",
+        "codes": [
+          "MUSC2545"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC2872",
+        "codes": [
+          "MUSC2872"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC2882",
+        "codes": [
+          "MUSC2882"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC3502",
+        "codes": [
+          "MUSC3502"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "MUSC3533",
+        "codes": [
+          "MUSC3533"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "PSYC2010",
+        "codes": [
+          "PSYC2010"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "PSYC2300",
+        "codes": [
+          "PSYC2300"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "PSYC2620",
+        "codes": [
+          "PSYC2620"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "SPED2141",
+        "codes": [
+          "SPED2141"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      },
+      {
+        "raw": "SPED3410",
+        "codes": [
+          "SPED3410"
+        ],
+        "alt": false,
+        "from": "(c) A maximum of 9"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 17
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "46",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "At least 26 units of courses chosen from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "At least 11 units of courses chosen",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "A maximum of 9",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 19
+    }
+  ]
+}

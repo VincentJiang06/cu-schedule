@@ -1,0 +1,812 @@
+{
+  "program_en": "B.Sc. in Chemistry",
+  "program_chi": "化學理學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 68,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCHE2030",
+    "BCHE3050",
+    "BIOL2120",
+    "BIOL2210",
+    "BIOL2213",
+    "BIOL2313",
+    "BIOL2410",
+    "BIOL2420",
+    "BIOL3012",
+    "BIOL3022",
+    "BIOL3310",
+    "BIOL3410",
+    "BIOL3510",
+    "BIOL3530",
+    "BIOL3560",
+    "BIOL3570",
+    "BIOL3610",
+    "BIOL3620",
+    "BIOL3630",
+    "BIOL3710",
+    "BIOL4010",
+    "BIOL4120",
+    "BIOL4230",
+    "BIOL4240",
+    "BIOL4260",
+    "BIOL4310",
+    "BIOL4420",
+    "BIOL4510",
+    "BIOL4610",
+    "BIOL4901",
+    "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
+    "CHEM1300",
+    "CHEM1380",
+    "CHEM1870",
+    "CHEM2021",
+    "CHEM2071",
+    "CHEM2110",
+    "CHEM2120",
+    "CHEM2200",
+    "CHEM2270",
+    "CHEM2300",
+    "CHEM2310",
+    "CHEM2382",
+    "CHEM2400",
+    "CHEM2860",
+    "CHEM2868",
+    "CHEM2870",
+    "CHEM2878",
+    "CHEM3011",
+    "CHEM3021",
+    "CHEM3130",
+    "CHEM3220",
+    "CHEM3230",
+    "CHEM3320",
+    "CHEM3340",
+    "CHEM3410",
+    "CHEM3420",
+    "CHEM3810",
+    "CHEM3820",
+    "CHEM3830",
+    "CHEM3840",
+    "CHEM3860",
+    "CHEM3870",
+    "CHEM3880",
+    "CHEM4010",
+    "CHEM4020",
+    "CHEM4030",
+    "CHEM4040",
+    "CHEM4100",
+    "CHEM4101",
+    "CHEM4110",
+    "CHEM4200",
+    "CHEM4280",
+    "CHEM4300",
+    "CHEM4303",
+    "CHEM4400",
+    "CHEM4440",
+    "CHEM4470",
+    "CHEM4471",
+    "CHEM4480",
+    "CHEM4490",
+    "CHEM4630",
+    "CHEM4640",
+    "CHEM4710",
+    "CHEM4730",
+    "CHEM4780",
+    "CHEM4784",
+    "CHEM4785",
+    "CHEM4786",
+    "CHEM4788",
+    "CHEM4960",
+    "CHEM4970",
+    "CHEM4980",
+    "CHEM4990",
+    "CHEM5301",
+    "CHEM5303",
+    "CHEM5540",
+    "CHEM5550",
+    "CHEM5560",
+    "CHEM5620",
+    "CHEM5642",
+    "CHEM5680",
+    "CHEM5780",
+    "CHEM5784",
+    "CHEM5785",
+    "CHEM5910",
+    "CHEM5920",
+    "CHLT1001",
+    "CHLT1002",
+    "CMBI4002",
+    "EART3025",
+    "EESC3220",
+    "ELTU1001",
+    "ELTU2018",
+    "ENGG1003",
+    "ENSC4525",
+    "ENSC4535",
+    "HSTM3121",
+    "LSCI1001",
+    "LSCI1002",
+    "LSCI1012",
+    "LSCI2002",
+    "LSCI3520",
+    "MATH1520",
+    "MCEL3001",
+    "PHYS1001",
+    "PHYS1002",
+    "PHYS3021",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1011",
+    "UCIL2002",
+    "UGCP1001",
+    "UGCP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1300",
+        "codes": [
+          "CHEM1300"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2110",
+        "codes": [
+          "CHEM2110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2120",
+        "codes": [
+          "CHEM2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2200",
+        "codes": [
+          "CHEM2200"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2270",
+        "codes": [
+          "CHEM2270"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2300",
+        "codes": [
+          "CHEM2300"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2310",
+        "codes": [
+          "CHEM2310"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2400",
+        "codes": [
+          "CHEM2400"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2860",
+        "codes": [
+          "CHEM2860"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM2870",
+        "codes": [
+          "CHEM2870"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3130",
+        "codes": [
+          "CHEM3130"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3220",
+        "codes": [
+          "CHEM3220"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3320",
+        "codes": [
+          "CHEM3320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3410",
+        "codes": [
+          "CHEM3410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3810",
+        "codes": [
+          "CHEM3810"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3830",
+        "codes": [
+          "CHEM3830"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3860",
+        "codes": [
+          "CHEM3860"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM3870",
+        "codes": [
+          "CHEM3870"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHEM4030",
+        "codes": [
+          "CHEM4030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHEM3230",
+        "codes": [
+          "CHEM3230"
+        ],
+        "alt": false,
+        "from": "(a) One course from"
+      },
+      {
+        "raw": "CHEM3420",
+        "codes": [
+          "CHEM3420"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM3820",
+        "codes": [
+          "CHEM3820"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM3840",
+        "codes": [
+          "CHEM3840"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4100",
+        "codes": [
+          "CHEM4100"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4101",
+        "codes": [
+          "CHEM4101"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4200",
+        "codes": [
+          "CHEM4200"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4280",
+        "codes": [
+          "CHEM4280"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4300",
+        "codes": [
+          "CHEM4300"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4303",
+        "codes": [
+          "CHEM4303"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4400",
+        "codes": [
+          "CHEM4400"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4440",
+        "codes": [
+          "CHEM4440"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4471",
+        "codes": [
+          "CHEM4471"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4630",
+        "codes": [
+          "CHEM4630"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4640",
+        "codes": [
+          "CHEM4640"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4710",
+        "codes": [
+          "CHEM4710"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4730",
+        "codes": [
+          "CHEM4730"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4780",
+        "codes": [
+          "CHEM4780"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4784",
+        "codes": [
+          "CHEM4784"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4785",
+        "codes": [
+          "CHEM4785"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4786",
+        "codes": [
+          "CHEM4786"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM4788",
+        "codes": [
+          "CHEM4788"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5301",
+        "codes": [
+          "CHEM5301"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5303",
+        "codes": [
+          "CHEM5303"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5540",
+        "codes": [
+          "CHEM5540"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5550",
+        "codes": [
+          "CHEM5550"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5560",
+        "codes": [
+          "CHEM5560"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5620",
+        "codes": [
+          "CHEM5620"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5642",
+        "codes": [
+          "CHEM5642"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5680",
+        "codes": [
+          "CHEM5680"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5780",
+        "codes": [
+          "CHEM5780"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5784",
+        "codes": [
+          "CHEM5784"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5785",
+        "codes": [
+          "CHEM5785"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5910",
+        "codes": [
+          "CHEM5910"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CHEM5920",
+        "codes": [
+          "CHEM5920"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "BCHE3050",
+        "codes": [
+          "BCHE3050"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "CMBI4002",
+        "codes": [
+          "CMBI4002"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "ENSC4525",
+        "codes": [
+          "ENSC4525"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "(b) Four courses from the"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "49",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 19
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "10",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One course from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Four courses from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 39
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "program_en": "Bachelor of Nursing",
+  "program_chi": "護理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Medicine",
+  "degree": "Bachelor of Nursing",
+  "total_units": 112,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "MEDF1011",
+    "MEDF1012",
+    "MEDF1041",
+    "MEDF1042",
+    "NURS1151",
+    "NURS1162",
+    "NURS1163",
+    "NURS1164",
+    "NURS1242",
+    "NURS1403",
+    "NURS1603",
+    "NURS1701",
+    "NURS2111",
+    "NURS2112",
+    "NURS2113",
+    "NURS2114",
+    "NURS2115",
+    "NURS2116",
+    "NURS2118",
+    "NURS2121",
+    "NURS2122",
+    "NURS3121",
+    "NURS3126",
+    "NURS3127",
+    "NURS3131",
+    "NURS3135",
+    "NURS3136",
+    "NURS3142",
+    "NURS3143",
+    "NURS3144",
+    "NURS3145",
+    "NURS3148",
+    "NURS3152",
+    "NURS3153",
+    "NURS3154",
+    "NURS3157",
+    "NURS3159",
+    "NURS4102",
+    "NURS4121",
+    "NURS4122",
+    "NURS4123",
+    "NURS4124"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MEDF1011",
+        "codes": [
+          "MEDF1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1012",
+        "codes": [
+          "MEDF1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1041",
+        "codes": [
+          "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "NURS1151",
+        "codes": [
+          "NURS1151"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1162",
+        "codes": [
+          "NURS1162"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1163",
+        "codes": [
+          "NURS1163"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1164",
+        "codes": [
+          "NURS1164"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1242",
+        "codes": [
+          "NURS1242"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1403",
+        "codes": [
+          "NURS1403"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1603",
+        "codes": [
+          "NURS1603"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS1701",
+        "codes": [
+          "NURS1701"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3121",
+        "codes": [
+          "NURS3121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3126",
+        "codes": [
+          "NURS3126"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3127",
+        "codes": [
+          "NURS3127"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3131",
+        "codes": [
+          "NURS3131"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3135",
+        "codes": [
+          "NURS3135"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "NURS2111",
+        "codes": [
+          "NURS2111"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2112",
+        "codes": [
+          "NURS2112"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2113",
+        "codes": [
+          "NURS2113"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2114",
+        "codes": [
+          "NURS2114"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2115",
+        "codes": [
+          "NURS2115"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2116",
+        "codes": [
+          "NURS2116"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2118",
+        "codes": [
+          "NURS2118"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2121",
+        "codes": [
+          "NURS2121"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "NURS2122",
+        "codes": [
+          "NURS2122"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "99",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    }
+  ]
+}

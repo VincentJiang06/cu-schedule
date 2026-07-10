@@ -1,0 +1,26 @@
+{
+  "admission_year": "2024",
+  "academic_career": "UG",
+  "faculty": "Faculty of Medicine",
+  "study_mode": "Full-time",
+  "program_en": "B.Sc. in Community Health Practice",
+  "program_chi": "社區健康理學士",
+  "language": "English",
+  "source_url": "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_acad_prog.aspx",
+  "scraped_at_utc": "2026-07-10T16:17:18Z",
+  "learning_outcomes": "1. Major ProgrammeAt the end of the\nprogramme, students should be able to: K  |  Knowledge\noutcomes\nK.1  |  Describe the\nfundamental concepts in community health\nK.2  |  Explain the\ntheoretical models and frameworks related to health promotion\nK.3  |  Describe the\nroles of individuals and families with self-care and self-management skills,\nand the community in diseases prevention and health promotion\nS  |  Skill outcomes\nS.1  |  Assess\nindividual and community needs for health promotion\nS.2  |  Plan effective\nhealth promotion programme\nS.3  |  Implement health\npromotion plan\nS.4  |  Conduct\nevaluation and research related to health promotion\nS.5  |  Administer and\nmanage health promotion programme\nS.6  |  Serve as a\nhealth promotion resource person\nV  |  Value outcomes\nV.1  |  Demonstrate\nrespect for cultural diversity and sensitivity\nV.2  |  Demonstrate\ndedication to sustainable development\nV.3  |  Demonstrate care\nfor social equity and justice",
+  "study_scheme": "Community Health Practice Community Health Practice Applicable to students admitted in 2024-25\nMajor Programme Requirement (for\nAssociate Degree or Higher Diploma holders admitted to senior-year places)\nStudents\nare required to complete a minimum of 52 units of courses as follows:\nUnits\n1.  |  Required\nCourses:\nCHPR3001, 3002, 3008, 4001, 4002,\n4003, 4004, 4005, 4008, 4901[a], 4902[a], GRON3211#, PHPC1001#, 1012#, 1017#, 2015#, 2017#  |  46\n2.  |  Elective\nCourses:\n6 units of\ncourses chosen from the following, with a maximum of 1 course from Group\nB: Group A: CHPR4011, 4012, PHPC2007#,\n2009#, 2020#, 3010#, 3018#, 3034#,\n4025#, 4032#, 4033#, 4040#, 4041#, 4042#, 4043# Group B: ANTH4330#, GPAD3255#, SOCI3227#, SPED2540#,\n4560#, 4570#  |  6\nTotal:  |  52\nExplanatory Notes:\n1.  |  CHPR courses at 2000 and above level as well as those labeled as # will be included in the\ncalculation of Major GPA for honours classification.\n[a]  |  Capstone courses\nRecommended Course Pattern  |  Units\nFirst Year of Attendance  |  1st term Major Required: CHPR3001, PHPC1001, 2015,\n2017 Major Elective(s):  |  11\n2nd term Major Required: CHPR3002, 3008, 4002, PHPC1012, 1017 Major Elective(s): 0-3 units  |  12 0-3\nSummer Session Major Elective(s): PHPC3010 or 3018  |  0-3\nSecond Year of Attendance  |  1st term Major Required: CHPR4003, 4008,\n4901, GRON3211 Major Elective(s):  |  12\n2nd term Major Required: CHPR4001, 4004,\n4005, 4902 Major Elective(s): 0-3 units  |  11 0-3\nTotal:  |  52\nCourse List\nCourse\nCode  |  Course\nTitle  |  Unit(s)\nCHPR3001  |  Contemporary\nHealth Issues  |  3\nCHPR3002  |  Health\nEducation and Health Behaviours  |  3\nCHPR3008  |  Foundations\nof Health Promotion  |  2\nCHPR4001  |  Settings-Approach for Health Promotion  |  2\nCHPR4002  |  Health\nCommunication  |  3\nCHPR4003  |  Research\nMethods in Community Health  |  3\nCHPR4004  |  Management\nof Non-Governmental Organisations  |  1\nCHPR4005  |  Social\nMarketing Methods  |  3\nCHPR4008  |  Health\nPromotion Planning and Evaluation  |  3\nCHPR4011  |  Food\nSecurity: Global and Local Perspectives  |  3\nCHPR4012  |  Mental\nHealth as a Public Health Issue  |  3\nCHPR4901  |  Practicum\nin Community Health Practice I  |  3\nCHPR4902  |  Practicum\nin Community Health Practice II  |  5",
+  "raw_html_file": "B-Sc-in-Community-Health-Practice.html.gz",
+  "_manifest": {
+    "admission_year": "2024",
+    "academic_career": "UG",
+    "faculty": "Faculty of Medicine",
+    "faculty_short": "Medicine",
+    "study_mode": "Full-time",
+    "program_en": "B.Sc. in Community Health Practice",
+    "program_chi": "社區健康理學士",
+    "file": "2024/Medicine/B-Sc-in-Community-Health-Practice.json",
+    "has_learning_outcomes": true,
+    "study_scheme_chars": 2256
+  }
+}

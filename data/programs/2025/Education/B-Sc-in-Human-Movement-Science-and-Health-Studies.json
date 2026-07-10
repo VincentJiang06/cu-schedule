@@ -1,0 +1,313 @@
+{
+  "program_en": "B.Sc. in Human Movement Science and Health Studies",
+  "program_chi": "人體運動科學與健康研究理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Education",
+  "degree": "B.Sc",
+  "total_units": 59,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHLT1001",
+    "CHLT1002",
+    "CHPR3002",
+    "CHPR4012",
+    "ELTU1001",
+    "ELTU3013",
+    "ENGG1003",
+    "PHED1011",
+    "PHED1015",
+    "PHED1021",
+    "PHED1023",
+    "PHED1029",
+    "PHED1031",
+    "PHED1041",
+    "PHED1043",
+    "PHED1122",
+    "PHED1210",
+    "SPED1000",
+    "SPED2500",
+    "SPED2520",
+    "SPED2540",
+    "SPED2600",
+    "SPED2610",
+    "SPED2700",
+    "SPED2720",
+    "SPED2810",
+    "SPED3500",
+    "SPED3550",
+    "SPED3630",
+    "SPED3700",
+    "SPED3820",
+    "SPED3910",
+    "SPED3920",
+    "SPED4201",
+    "SPED4560",
+    "SPED4570",
+    "SPED4640",
+    "SPED4830",
+    "SPED4900",
+    "UGCP1001",
+    "UGCP1002",
+    "UGFH1000",
+    "UGFN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "SPED1000",
+        "codes": [
+          "SPED1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SPED2500",
+        "codes": [
+          "SPED2500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SPED2720",
+        "codes": [
+          "SPED2720"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SPED2520",
+        "codes": [
+          "SPED2520"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED2540",
+        "codes": [
+          "SPED2540"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED2600",
+        "codes": [
+          "SPED2600"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED2610",
+        "codes": [
+          "SPED2610"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED2700",
+        "codes": [
+          "SPED2700"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED2810",
+        "codes": [
+          "SPED2810"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED3500",
+        "codes": [
+          "SPED3500"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED3820",
+        "codes": [
+          "SPED3820"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED3920",
+        "codes": [
+          "SPED3920"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED4570",
+        "codes": [
+          "SPED4570"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Human Movement Science and Health Studies"
+      },
+      {
+        "raw": "SPED4201",
+        "codes": [
+          "SPED4201"
+        ],
+        "alt": false,
+        "from": "(b) Internship"
+      },
+      {
+        "raw": "SPED3630",
+        "codes": [
+          "SPED3630"
+        ],
+        "alt": false,
+        "from": "(c) Research Experience"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "SPED3550",
+        "codes": [
+          "SPED3550"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Human Movement Science"
+      },
+      {
+        "raw": "SPED4560",
+        "codes": [
+          "SPED4560"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Human Movement Science"
+      },
+      {
+        "raw": "SPED4640",
+        "codes": [
+          "SPED4640"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Human Movement Science"
+      },
+      {
+        "raw": "SPED4830",
+        "codes": [
+          "SPED4830"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Human Movement Science"
+      },
+      {
+        "raw": "CHPR3002",
+        "codes": [
+          "CHPR3002"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health Studies"
+      },
+      {
+        "raw": "SPED3700",
+        "codes": [
+          "SPED3700"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health Studies"
+      },
+      {
+        "raw": "SPED3910",
+        "codes": [
+          "SPED3910"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health Studies"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Core Courses in Human Movement Science and Health Studies",
+      "units": "30",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Internship",
+      "units": "2",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Theoretical Courses in Human Movement Science",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Theoretical Courses in Health Studies",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    }
+  ]
+}

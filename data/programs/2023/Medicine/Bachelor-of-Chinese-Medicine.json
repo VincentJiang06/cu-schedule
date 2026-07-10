@@ -1,0 +1,414 @@
+{
+  "program_en": "Bachelor of Chinese Medicine",
+  "program_chi": "中醫學學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Medicine",
+  "degree": "Bachelor of Chinese Medicine",
+  "total_units": 157,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCJC1201",
+    "BCME1104",
+    "BCME1206",
+    "BCME1403",
+    "BCME1600",
+    "BCME1610",
+    "BCME2001",
+    "BCME2102",
+    "BCME2103",
+    "BCME2106",
+    "BCME2107",
+    "BCME2202",
+    "BCME2203",
+    "BCME2204",
+    "BCME2206",
+    "BCME2207",
+    "BCME2208",
+    "BCME2209",
+    "BCME2301",
+    "BCME2302",
+    "BCME2303",
+    "BCME2304",
+    "BCME2305",
+    "BCME2306",
+    "BCME2308",
+    "BCME2309",
+    "BCME2310",
+    "BCME2311",
+    "BCME2312",
+    "BCME2313",
+    "BCME2314",
+    "BCME2315",
+    "BCME2401",
+    "BCME2402",
+    "BCME2403",
+    "BCME2404",
+    "BCME2405",
+    "BCME3102",
+    "BCME3103",
+    "BCME3104",
+    "BCME3105",
+    "BCME3106",
+    "BCME3108",
+    "BCME3110",
+    "BCME3202",
+    "BCME3206",
+    "BCME3208",
+    "BCME3209",
+    "BCME3210",
+    "BCME4101",
+    "BCME4103",
+    "BCME4104",
+    "BCME4106",
+    "BCME4107",
+    "BCME4108",
+    "BCME4109",
+    "BCME4200",
+    "MEDF1011",
+    "MEDF1012",
+    "MEDF1021",
+    "MEDF1031"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MEDF1011",
+        "codes": [
+          "MEDF1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1012",
+        "codes": [
+          "MEDF1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1021",
+        "codes": [
+          "MEDF1021"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1031",
+        "codes": [
+          "MEDF1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BCJC1201",
+        "codes": [
+          "BCJC1201"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME1206",
+        "codes": [
+          "BCME1206"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME1403",
+        "codes": [
+          "BCME1403"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME1600",
+        "codes": [
+          "BCME1600"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME1610",
+        "codes": [
+          "BCME1610"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2001",
+        "codes": [
+          "BCME2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2102",
+        "codes": [
+          "BCME2102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2103",
+        "codes": [
+          "BCME2103"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2106",
+        "codes": [
+          "BCME2106"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2107",
+        "codes": [
+          "BCME2107"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2202",
+        "codes": [
+          "BCME2202"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2204",
+        "codes": [
+          "BCME2204"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2206",
+        "codes": [
+          "BCME2206"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2208",
+        "codes": [
+          "BCME2208"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2209",
+        "codes": [
+          "BCME2209"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2401",
+        "codes": [
+          "BCME2401"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BCME1104",
+        "codes": [
+          "BCME1104"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2203",
+        "codes": [
+          "BCME2203"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2207",
+        "codes": [
+          "BCME2207"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2301",
+        "codes": [
+          "BCME2301"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2302",
+        "codes": [
+          "BCME2302"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2303",
+        "codes": [
+          "BCME2303"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2304",
+        "codes": [
+          "BCME2304"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2305",
+        "codes": [
+          "BCME2305"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2306",
+        "codes": [
+          "BCME2306"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2308",
+        "codes": [
+          "BCME2308"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2309",
+        "codes": [
+          "BCME2309"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2310",
+        "codes": [
+          "BCME2310"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2311",
+        "codes": [
+          "BCME2311"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2312",
+        "codes": [
+          "BCME2312"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2313",
+        "codes": [
+          "BCME2313"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2314",
+        "codes": [
+          "BCME2314"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME2315",
+        "codes": [
+          "BCME2315"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCME4106",
+        "codes": [
+          "BCME4106"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "145",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "2",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    }
+  ]
+}

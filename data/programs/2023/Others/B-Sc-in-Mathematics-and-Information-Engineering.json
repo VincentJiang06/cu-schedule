@@ -1,0 +1,2439 @@
+{
+  "program_en": "B.Sc. in Mathematics and Information Engineering",
+  "program_chi": "數學與信息工程學理學士",
+  "admission_year": "2023",
+  "faculty": "Others",
+  "degree": "B.Sc",
+  "total_units": 87,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "AIST1110",
+    "CHEM1070",
+    "CSCI1120",
+    "CSCI1130",
+    "CSCI2100",
+    "CSCI3130",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3230",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI5030",
+    "CSCI5150",
+    "CSCI5320",
+    "ENGG1110",
+    "ENGG1310",
+    "ENGG1820",
+    "ENGG5301",
+    "ENGG5302",
+    "ENGG5303",
+    "ENGG5383",
+    "ENGG5392",
+    "ENGG5501",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1100",
+    "ESTR1102",
+    "ESTR2002",
+    "ESTR2004",
+    "ESTR2102",
+    "ESTR2300",
+    "ESTR2304",
+    "ESTR2306",
+    "ESTR2360",
+    "ESTR2362",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3108",
+    "ESTR3300",
+    "ESTR3302",
+    "ESTR3304",
+    "ESTR3306",
+    "ESTR3308",
+    "ESTR3310",
+    "ESTR4300",
+    "ESTR4302",
+    "ESTR4304",
+    "ESTR4306",
+    "ESTR4308",
+    "ESTR4312",
+    "ESTR4314",
+    "ESTR4316",
+    "ESTR4320",
+    "ESTR4322",
+    "ESTR4324",
+    "ESTR4326",
+    "ESTR4328",
+    "ESTR4998",
+    "FTEC4004",
+    "IERG1080",
+    "IERG1810",
+    "IERG2060",
+    "IERG2080",
+    "IERG2310",
+    "IERG3010",
+    "IERG3050",
+    "IERG3060",
+    "IERG3080",
+    "IERG3280",
+    "IERG3300",
+    "IERG3310",
+    "IERG3320",
+    "IERG3800",
+    "IERG3810",
+    "IERG3820",
+    "IERG3830",
+    "IERG4004",
+    "IERG4030",
+    "IERG4060",
+    "IERG4080",
+    "IERG4090",
+    "IERG4100",
+    "IERG4110",
+    "IERG4120",
+    "IERG4130",
+    "IERG4150",
+    "IERG4160",
+    "IERG4180",
+    "IERG4190",
+    "IERG4210",
+    "IERG4220",
+    "IERG4230",
+    "IERG4240",
+    "IERG4300",
+    "IERG4320",
+    "IERG4330",
+    "IERG4340",
+    "IERG4350",
+    "IERG4360",
+    "IERG4831",
+    "IERG4841",
+    "IERG4851",
+    "IERG4998",
+    "IERG4999",
+    "IERG5020",
+    "IERG5040",
+    "IERG5050",
+    "IERG5090",
+    "IERG5100",
+    "IERG5110",
+    "IERG5130",
+    "IERG5140",
+    "IERG5154",
+    "IERG5200",
+    "IERG5230",
+    "IERG5240",
+    "IERG5250",
+    "IERG5254",
+    "IERG5280",
+    "IERG5290",
+    "IERG5300",
+    "IERG5310",
+    "IERG5320",
+    "IERG5330",
+    "IERG5340",
+    "IERG5350",
+    "IERG5360",
+    "IERG5380",
+    "IERG5400",
+    "IERG5450",
+    "IERG5460",
+    "IERG5470",
+    "IERG5590",
+    "IERG5670",
+    "LSCI1001",
+    "MATH1010",
+    "MATH1018",
+    "MATH1030",
+    "MATH1038",
+    "MATH1050",
+    "MATH1058",
+    "MATH2010",
+    "MATH2018",
+    "MATH2020",
+    "MATH2028",
+    "MATH2040",
+    "MATH2048",
+    "MATH2050",
+    "MATH2058",
+    "MATH2060",
+    "MATH2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2230",
+    "MATH3020",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3250",
+    "MATH3260",
+    "MATH3270",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3340",
+    "MATH3360",
+    "MATH4010",
+    "MATH4020",
+    "MATH4030",
+    "MATH4230",
+    "MATH4240",
+    "MATH4260",
+    "MATH4280",
+    "MIEG2051",
+    "MIEG2440",
+    "PHYS1001",
+    "STAT1011"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package: ENGG1110/ESTR1002,"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package: ENGG1110/ESTR1002,"
+      },
+      {
+        "raw": "MATH1050",
+        "codes": [
+          "MATH1050"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package: ENGG1110/ESTR1002,"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "(a) MATH1010/1018[a]"
+      },
+      {
+        "raw": "AIST1110",
+        "codes": [
+          "AIST1110"
+        ],
+        "alt": false,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100,"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100,"
+      },
+      {
+        "raw": "CSCI1130/ESTR1102",
+        "codes": [
+          "CSCI1130",
+          "ESTR1102"
+        ],
+        "alt": true,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100,"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100,"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG1810",
+        "codes": [
+          "IERG1810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2060/ESTR2304",
+        "codes": [
+          "IERG2060",
+          "ESTR2304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2080/ESTR2306",
+        "codes": [
+          "IERG2080",
+          "ESTR2306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2310/ESTR2300",
+        "codes": [
+          "IERG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3080/ESTR3308",
+        "codes": [
+          "IERG3080",
+          "ESTR3308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3310/ESTR3310",
+        "codes": [
+          "IERG3310",
+          "ESTR3310"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3800",
+        "codes": [
+          "IERG3800"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MIEG2051/ESTR2360",
+        "codes": [
+          "MIEG2051",
+          "ESTR2360"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MIEG2440/ESTR2362",
+        "codes": [
+          "MIEG2440",
+          "ESTR2362"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG4998",
+        "codes": [
+          "IERG4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[b]"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "MATH1050",
+        "codes": [
+          "MATH1050"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG1810",
+        "codes": [
+          "IERG1810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2060/ESTR2304",
+        "codes": [
+          "IERG2060",
+          "ESTR2304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2080/ESTR2306",
+        "codes": [
+          "IERG2080",
+          "ESTR2306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2310/ESTR2300",
+        "codes": [
+          "IERG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3080/ESTR3308",
+        "codes": [
+          "IERG3080",
+          "ESTR3308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3310/ESTR3310",
+        "codes": [
+          "IERG3310",
+          "ESTR3310"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3800",
+        "codes": [
+          "IERG3800"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MIEG2051/ESTR2360",
+        "codes": [
+          "MIEG2051",
+          "ESTR2360"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MIEG2440/ESTR2362",
+        "codes": [
+          "MIEG2440",
+          "ESTR2362"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "AIST1110",
+        "codes": [
+          "AIST1110"
+        ],
+        "alt": false,
+        "from": "(b) 3 units to be counted from ONE of"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "(b) 3 units to be counted from ONE of"
+      },
+      {
+        "raw": "CSCI1130/ESTR1102",
+        "codes": [
+          "CSCI1130",
+          "ESTR1102"
+        ],
+        "alt": true,
+        "from": "(b) 3 units to be counted from ONE of"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "(b) 3 units to be counted from ONE of"
+      },
+      {
+        "raw": "IERG4998",
+        "codes": [
+          "IERG4998"
+        ],
+        "alt": false,
+        "from": "(c) Research Component Courses[b]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI3130",
+        "codes": [
+          "CSCI3130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI5030",
+        "codes": [
+          "CSCI5030"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI5150",
+        "codes": [
+          "CSCI5150"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "CSCI5320",
+        "codes": [
+          "CSCI5320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "MATH3260",
+        "codes": [
+          "MATH3260"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "ENGG5501",
+        "codes": [
+          "ENGG5501"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3010/ESTR3300",
+        "codes": [
+          "IERG3010",
+          "ESTR3300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3300/ESTR3304",
+        "codes": [
+          "IERG3300",
+          "ESTR3304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3320/ESTR3306",
+        "codes": [
+          "IERG3320",
+          "ESTR3306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4030/ESTR4320",
+        "codes": [
+          "IERG4030",
+          "ESTR4320"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4060",
+        "codes": [
+          "IERG4060"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4090/ESTR4302",
+        "codes": [
+          "IERG4090",
+          "ESTR4302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4100/ESTR4304",
+        "codes": [
+          "IERG4100",
+          "ESTR4304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4110/ESTR4314",
+        "codes": [
+          "IERG4110",
+          "ESTR4314"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4120/ESTR4328",
+        "codes": [
+          "IERG4120",
+          "ESTR4328"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4130/CSCI4130/ESTR4306",
+        "codes": [
+          "IERG4130",
+          "CSCI4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4150/ESTR4322",
+        "codes": [
+          "IERG4150",
+          "ESTR4322"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4180/ESTR4308",
+        "codes": [
+          "IERG4180",
+          "ESTR4308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4240",
+        "codes": [
+          "IERG4240"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4300/ESTR4300",
+        "codes": [
+          "IERG4300",
+          "ESTR4300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4320/ESTR4324",
+        "codes": [
+          "IERG4320",
+          "ESTR4324"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4330/ESTR4316",
+        "codes": [
+          "IERG4330",
+          "ESTR4316"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4360/ESTR4326",
+        "codes": [
+          "IERG4360",
+          "ESTR4326"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4841",
+        "codes": [
+          "IERG4841"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG4851",
+        "codes": [
+          "IERG4851"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5020",
+        "codes": [
+          "IERG5020"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5040/ENGG5392",
+        "codes": [
+          "IERG5040",
+          "ENGG5392"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5050",
+        "codes": [
+          "IERG5050"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5090",
+        "codes": [
+          "IERG5090"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5100/ENGG5303",
+        "codes": [
+          "IERG5100",
+          "ENGG5303"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5110",
+        "codes": [
+          "IERG5110"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5130",
+        "codes": [
+          "IERG5130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5140",
+        "codes": [
+          "IERG5140"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5154/ENGG5301",
+        "codes": [
+          "IERG5154",
+          "ENGG5301"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5200",
+        "codes": [
+          "IERG5200"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "MATH4260",
+        "codes": [
+          "MATH4260"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5230",
+        "codes": [
+          "IERG5230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5240/ENGG5383",
+        "codes": [
+          "IERG5240",
+          "ENGG5383"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5250",
+        "codes": [
+          "IERG5250"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5254",
+        "codes": [
+          "IERG5254"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5280",
+        "codes": [
+          "IERG5280"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5290",
+        "codes": [
+          "IERG5290"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5300/ENGG5302",
+        "codes": [
+          "IERG5300",
+          "ENGG5302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5310",
+        "codes": [
+          "IERG5310"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5320",
+        "codes": [
+          "IERG5320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5330",
+        "codes": [
+          "IERG5330"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5340",
+        "codes": [
+          "IERG5340"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5360",
+        "codes": [
+          "IERG5360"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5380",
+        "codes": [
+          "IERG5380"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5400",
+        "codes": [
+          "IERG5400"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5450",
+        "codes": [
+          "IERG5450"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5460",
+        "codes": [
+          "IERG5460"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5470",
+        "codes": [
+          "IERG5470"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5590",
+        "codes": [
+          "IERG5590"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "IERG5670",
+        "codes": [
+          "IERG5670"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102,"
+      },
+      {
+        "raw": "MATH3020",
+        "codes": [
+          "MATH3020"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3080",
+        "codes": [
+          "MATH3080"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH4020",
+        "codes": [
+          "MATH4020"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080,"
+      },
+      {
+        "raw": "CSCI3130",
+        "codes": [
+          "CSCI3130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI5030",
+        "codes": [
+          "CSCI5030"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI5150",
+        "codes": [
+          "CSCI5150"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "CSCI5320",
+        "codes": [
+          "CSCI5320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "MATH3260",
+        "codes": [
+          "MATH3260"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "ENGG5501",
+        "codes": [
+          "ENGG5501"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3010/ESTR3300",
+        "codes": [
+          "IERG3010",
+          "ESTR3300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3300/ESTR3304",
+        "codes": [
+          "IERG3300",
+          "ESTR3304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3320/ESTR3306",
+        "codes": [
+          "IERG3320",
+          "ESTR3306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4030/ESTR4320",
+        "codes": [
+          "IERG4030",
+          "ESTR4320"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4060",
+        "codes": [
+          "IERG4060"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4090/ESTR4302",
+        "codes": [
+          "IERG4090",
+          "ESTR4302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4100/ESTR4304",
+        "codes": [
+          "IERG4100",
+          "ESTR4304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4110/ESTR4314",
+        "codes": [
+          "IERG4110",
+          "ESTR4314"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4120/ESTR4328",
+        "codes": [
+          "IERG4120",
+          "ESTR4328"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4130/CSCI4130/ESTR4306",
+        "codes": [
+          "IERG4130",
+          "CSCI4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4150/ESTR4322",
+        "codes": [
+          "IERG4150",
+          "ESTR4322"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4180/ESTR4308",
+        "codes": [
+          "IERG4180",
+          "ESTR4308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4240",
+        "codes": [
+          "IERG4240"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4300/ESTR4300",
+        "codes": [
+          "IERG4300",
+          "ESTR4300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4320/ESTR4324",
+        "codes": [
+          "IERG4320",
+          "ESTR4324"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4330/ESTR4316",
+        "codes": [
+          "IERG4330",
+          "ESTR4316"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4360/ESTR4326",
+        "codes": [
+          "IERG4360",
+          "ESTR4326"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4841",
+        "codes": [
+          "IERG4841"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG4851",
+        "codes": [
+          "IERG4851"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5020",
+        "codes": [
+          "IERG5020"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5040/ENGG5392",
+        "codes": [
+          "IERG5040",
+          "ENGG5392"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5050",
+        "codes": [
+          "IERG5050"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5090",
+        "codes": [
+          "IERG5090"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5100/ENGG5303",
+        "codes": [
+          "IERG5100",
+          "ENGG5303"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5110",
+        "codes": [
+          "IERG5110"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5130",
+        "codes": [
+          "IERG5130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5140",
+        "codes": [
+          "IERG5140"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5154/ENGG5301",
+        "codes": [
+          "IERG5154",
+          "ENGG5301"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5200",
+        "codes": [
+          "IERG5200"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "MATH4260",
+        "codes": [
+          "MATH4260"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5230",
+        "codes": [
+          "IERG5230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5240/ENGG5383",
+        "codes": [
+          "IERG5240",
+          "ENGG5383"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5250",
+        "codes": [
+          "IERG5250"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5254",
+        "codes": [
+          "IERG5254"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5280",
+        "codes": [
+          "IERG5280"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5290",
+        "codes": [
+          "IERG5290"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5300/ENGG5302",
+        "codes": [
+          "IERG5300",
+          "ENGG5302"
+        ],
+        "alt": true,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5310",
+        "codes": [
+          "IERG5310"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5320",
+        "codes": [
+          "IERG5320"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5330",
+        "codes": [
+          "IERG5330"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5340",
+        "codes": [
+          "IERG5340"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5360",
+        "codes": [
+          "IERG5360"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5380",
+        "codes": [
+          "IERG5380"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5400",
+        "codes": [
+          "IERG5400"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5450",
+        "codes": [
+          "IERG5450"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5460",
+        "codes": [
+          "IERG5460"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5470",
+        "codes": [
+          "IERG5470"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5590",
+        "codes": [
+          "IERG5590"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "IERG5670",
+        "codes": [
+          "IERG5670"
+        ],
+        "alt": false,
+        "from": "(a) CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,"
+      },
+      {
+        "raw": "MATH3020",
+        "codes": [
+          "MATH3020"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3080",
+        "codes": [
+          "MATH3080"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH4020",
+        "codes": [
+          "MATH4020"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "(b) MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package: ENGG1110/ESTR1002,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "MATH1010/1018[a]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "One of the following courses: AIST1110, CSCI1120/ESTR1100,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100/ESTR2102, CSCI3160/ESTR3104,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[b]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses: 12 units of elective courses, with",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI3130, CSCI3150/ESTR3102,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 76
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "MATH3020, 3030, 3040, 3060, 3070, 3080,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "AIST course(s) at 3000 and 4000 level, CSCI course(s) at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Science Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "51",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810, IERG2060/ESTR2304,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "3 units to be counted from ONE of",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research Component Courses[b]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses: 9 units of elective courses, with at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI3130, CSCI3150/ESTR3102, CSCI3230/ESTR3108, CSCI3320,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 76
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 3215, 3230,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "AIST course(s) at 3000 and 4000 level, CSCI course(s) at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

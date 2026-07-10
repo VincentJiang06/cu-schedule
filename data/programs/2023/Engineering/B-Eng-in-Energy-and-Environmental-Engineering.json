@@ -1,0 +1,791 @@
+{
+  "program_en": "B.Eng. in Energy and Environmental Engineering",
+  "program_chi": "能源與環境工程學工程學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "CHEM1380",
+    "CHEM4280",
+    "CSCI1020",
+    "CSCI2040",
+    "CSCI2100",
+    "EEEN2020",
+    "EEEN2030",
+    "EEEN2040",
+    "EEEN2602",
+    "EEEN3010",
+    "EEEN3020",
+    "EEEN3030",
+    "EEEN4010",
+    "EEEN4020",
+    "EEEN4030",
+    "EEEN4050",
+    "EEEN4060",
+    "EEEN4070",
+    "EEEN4998",
+    "EEEN4999",
+    "EESC2020",
+    "EESC2515",
+    "EESC2800",
+    "EESC3200",
+    "EESC3230",
+    "EESC4240",
+    "EESC4340",
+    "ELEG2202",
+    "ELEG3207",
+    "ELEG3601",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1820",
+    "ENGG2430",
+    "ENGG2720",
+    "ENGG2740",
+    "ENGG2760",
+    "ENGG2780",
+    "ESTR1002",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR2002",
+    "ESTR2014",
+    "ESTR2016",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2402",
+    "ESTR2404",
+    "ESTR3400",
+    "ESTR3402",
+    "ESTR3406",
+    "ESTR3410",
+    "ESTR4400",
+    "ESTR4402",
+    "ESTR4404",
+    "ESTR4412",
+    "ESTR4420",
+    "ESTR4422",
+    "ESTR4424",
+    "ESTR4998",
+    "FINA2010",
+    "FINA2020",
+    "GRMD2404",
+    "GRMD3202",
+    "GRMD3203",
+    "GRMD4202",
+    "GRMD4204",
+    "IBBA3040",
+    "MAEG1020",
+    "MAEG2030",
+    "MAEG2601",
+    "MAEG3030",
+    "MAEG3050",
+    "MAEG3920",
+    "MAEG4030",
+    "MAEG4080",
+    "MAEG5120",
+    "MAEG5140",
+    "MAEG5150",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3070",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PHYS1003",
+    "PHYS1110",
+    "PHYS4420"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG2720/ESTR2014",
+        "codes": [
+          "ENGG2720",
+          "ESTR2014"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "ENGG2740/ESTR2016",
+        "codes": [
+          "ENGG2740",
+          "ESTR2016"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EEEN2030",
+        "codes": [
+          "EEEN2030"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EEEN2040/ESTR2404",
+        "codes": [
+          "EEEN2040",
+          "ESTR2404"
+        ],
+        "alt": true,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EEEN2602",
+        "codes": [
+          "EEEN2602"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EEEN3030/ESTR3402",
+        "codes": [
+          "EEEN3030",
+          "ESTR3402"
+        ],
+        "alt": true,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EESC2800",
+        "codes": [
+          "EESC2800"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "MAEG2030/ESTR2402",
+        "codes": [
+          "MAEG2030",
+          "ESTR2402"
+        ],
+        "alt": true,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "MAEG2601",
+        "codes": [
+          "MAEG2601"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "MAEG3030",
+        "codes": [
+          "MAEG3030"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "MAEG4030/ESTR4412",
+        "codes": [
+          "MAEG4030",
+          "ESTR4412"
+        ],
+        "alt": true,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
+        "raw": "EEEN4998",
+        "codes": [
+          "EEEN4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      },
+      {
+        "raw": "EEEN4999",
+        "codes": [
+          "EEEN4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "EEEN3010/ESTR3410",
+        "codes": [
+          "EEEN3010",
+          "ESTR3410"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "EEEN4020/ESTR4402",
+        "codes": [
+          "EEEN4020",
+          "ESTR4402"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "EEEN4050/ESTR4422",
+        "codes": [
+          "EEEN4050",
+          "ESTR4422"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "EEEN4060/ESTR4424",
+        "codes": [
+          "EEEN4060",
+          "ESTR4424"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "MAEG3050/ESTR3406",
+        "codes": [
+          "MAEG3050",
+          "ESTR3406"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "MAEG4080/ESTR4420",
+        "codes": [
+          "MAEG4080",
+          "ESTR4420"
+        ],
+        "alt": true,
+        "from": "(a) Core Electives (at least 6"
+      },
+      {
+        "raw": "CHEM1380",
+        "codes": [
+          "CHEM1380"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "CHEM4280",
+        "codes": [
+          "CHEM4280"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "CSCI1020",
+        "codes": [
+          "CSCI1020"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "CSCI2040",
+        "codes": [
+          "CSCI2040"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ESTR2102",
+        "codes": [
+          "ESTR2102"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN3020/ESTR3400",
+        "codes": [
+          "EEEN3020",
+          "ESTR3400"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4010/ESTR4400",
+        "codes": [
+          "EEEN4010",
+          "ESTR4400"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4030/ESTR4404",
+        "codes": [
+          "EEEN4030",
+          "ESTR4404"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC2515",
+        "codes": [
+          "EESC2515"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ENGG2760/ESTR2018",
+        "codes": [
+          "ENGG2760",
+          "ESTR2018"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ENGG2780/ESTR2020",
+        "codes": [
+          "ENGG2780",
+          "ESTR2020"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD2404",
+        "codes": [
+          "GRMD2404"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD3202",
+        "codes": [
+          "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG3920",
+        "codes": [
+          "MAEG3920"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG5120",
+        "codes": [
+          "MAEG5120"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG5140",
+        "codes": [
+          "MAEG5140"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG5150",
+        "codes": [
+          "MAEG5150"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4020/ESTR4402",
+        "codes": [
+          "EEEN4020",
+          "ESTR4402"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4050/ESTR4422",
+        "codes": [
+          "EEEN4050",
+          "ESTR4422"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4060/ESTR4424",
+        "codes": [
+          "EEEN4060",
+          "ESTR4424"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN3010/ESTR3410",
+        "codes": [
+          "EEEN3010",
+          "ESTR3410"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG3050/ESTR3406",
+        "codes": [
+          "MAEG3050",
+          "ESTR3406"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3230",
+        "codes": [
+          "EESC3230"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC4340",
+        "codes": [
+          "EESC4340"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD4202",
+        "codes": [
+          "GRMD4202"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD4204",
+        "codes": [
+          "GRMD4204"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "MAEG4080/ESTR4420",
+        "codes": [
+          "MAEG4080",
+          "ESTR4420"
+        ],
+        "alt": true,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[c]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "14",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Core Electives (at least 6",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 36
+    }
+  ]
+}

@@ -1,0 +1,788 @@
+{
+  "program_en": "B.A. in Chinese Studies",
+  "program_chi": "中國研究文學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1000",
+    "CHES1101",
+    "CHES1102",
+    "CHES2001",
+    "CHES2002",
+    "CHES2003",
+    "CHES2004",
+    "CHES2005",
+    "CHES2007",
+    "CHES2102",
+    "CHES2103",
+    "CHES2104",
+    "CHES2105",
+    "CHES2106",
+    "CHES2107",
+    "CHES2108",
+    "CHES2109",
+    "CHES2111",
+    "CHES2126",
+    "CHES3000",
+    "CHES3002",
+    "CHES3004",
+    "CHES3005",
+    "CHES3006",
+    "CHES3007",
+    "CHES3008",
+    "CHES3009",
+    "CHES3010",
+    "CHES3011",
+    "CHES3012",
+    "CHES3014",
+    "CHES3102",
+    "CHES3103",
+    "CHES3104",
+    "CHES3105",
+    "CHES3106",
+    "CHES3107",
+    "CHES3200",
+    "CHES3201",
+    "CHES3300",
+    "CHES3400",
+    "CHES3401",
+    "CHES3402",
+    "CHES3403",
+    "CHES3500",
+    "CHES4003",
+    "CHES4004",
+    "CHES4005",
+    "CHES4500",
+    "CHLL1900",
+    "CLCP1113",
+    "CLCP1123",
+    "CLCP1133",
+    "CLCP1153",
+    "CLCP2213",
+    "CLCP2223",
+    "CLCP2233",
+    "CLCP2243",
+    "CLCP2253",
+    "CLCP3313",
+    "CLCP3323",
+    "CLCP3333",
+    "CLCP4413",
+    "CLCP4423",
+    "CLCP4433",
+    "CLCP4443",
+    "CLCP4453",
+    "CLCP4463",
+    "CLCP4513",
+    "CLCP4533",
+    "CUMT1000",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "ENGE1000",
+    "FAAS1900",
+    "HIST1000",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1000",
+        "codes": [
+          "CHES1000"
+        ],
+        "alt": false,
+        "from": "(a) Introductory Courses"
+      },
+      {
+        "raw": "CLCP1113",
+        "codes": [
+          "CLCP1113"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP1123",
+        "codes": [
+          "CLCP1123"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP1133",
+        "codes": [
+          "CLCP1133"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP1153",
+        "codes": [
+          "CLCP1153"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP2213",
+        "codes": [
+          "CLCP2213"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP2223",
+        "codes": [
+          "CLCP2223"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP2233",
+        "codes": [
+          "CLCP2233"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP2243",
+        "codes": [
+          "CLCP2243"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP2253",
+        "codes": [
+          "CLCP2253"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP3313",
+        "codes": [
+          "CLCP3313"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP3323",
+        "codes": [
+          "CLCP3323"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP3333",
+        "codes": [
+          "CLCP3333"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4413",
+        "codes": [
+          "CLCP4413"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4423",
+        "codes": [
+          "CLCP4423"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4433",
+        "codes": [
+          "CLCP4433"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4443",
+        "codes": [
+          "CLCP4443"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4453",
+        "codes": [
+          "CLCP4453"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4463",
+        "codes": [
+          "CLCP4463"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4513",
+        "codes": [
+          "CLCP4513"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CLCP4533",
+        "codes": [
+          "CLCP4533"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2001",
+        "codes": [
+          "CHES2001"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2002",
+        "codes": [
+          "CHES2002"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2003",
+        "codes": [
+          "CHES2003"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2004",
+        "codes": [
+          "CHES2004"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2102",
+        "codes": [
+          "CHES2102"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2103",
+        "codes": [
+          "CHES2103"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2104",
+        "codes": [
+          "CHES2104"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2105",
+        "codes": [
+          "CHES2105"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES2106",
+        "codes": [
+          "CHES2106"
+        ],
+        "alt": false,
+        "from": "(b) Stream"
+      },
+      {
+        "raw": "CHES3300",
+        "codes": [
+          "CHES3300"
+        ],
+        "alt": false,
+        "from": "(c) Experiential Learning Courses"
+      },
+      {
+        "raw": "CHES3400",
+        "codes": [
+          "CHES3400"
+        ],
+        "alt": false,
+        "from": "(c) Experiential Learning Courses"
+      },
+      {
+        "raw": "CHES3403",
+        "codes": [
+          "CHES3403"
+        ],
+        "alt": false,
+        "from": "(c) Experiential Learning Courses"
+      },
+      {
+        "raw": "CHES3500",
+        "codes": [
+          "CHES3500"
+        ],
+        "alt": false,
+        "from": "(d) Research Component Courses"
+      },
+      {
+        "raw": "CHES4500",
+        "codes": [
+          "CHES4500"
+        ],
+        "alt": false,
+        "from": "(d) Research Component Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHES2001",
+        "codes": [
+          "CHES2001"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES2002",
+        "codes": [
+          "CHES2002"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES2003",
+        "codes": [
+          "CHES2003"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES2004",
+        "codes": [
+          "CHES2004"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES2005",
+        "codes": [
+          "CHES2005"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES2007",
+        "codes": [
+          "CHES2007"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP2213",
+        "codes": [
+          "CLCP2213"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP2223",
+        "codes": [
+          "CLCP2223"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP2233",
+        "codes": [
+          "CLCP2233"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP2243",
+        "codes": [
+          "CLCP2243"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP2253",
+        "codes": [
+          "CLCP2253"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP3313",
+        "codes": [
+          "CLCP3313"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP3323",
+        "codes": [
+          "CLCP3323"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP3333",
+        "codes": [
+          "CLCP3333"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4413",
+        "codes": [
+          "CLCP4413"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4423",
+        "codes": [
+          "CLCP4423"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4433",
+        "codes": [
+          "CLCP4433"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4443",
+        "codes": [
+          "CLCP4443"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4453",
+        "codes": [
+          "CLCP4453"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4463",
+        "codes": [
+          "CLCP4463"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4513",
+        "codes": [
+          "CLCP4513"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CLCP4533",
+        "codes": [
+          "CLCP4533"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 20
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Introductory Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Stream",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 29
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Experiential Learning Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Research Component Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "33",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 22
+    }
+  ]
+}

@@ -1,0 +1,1078 @@
+{
+  "program_en": "B.B.A. in Hospitality and Real Estate",
+  "program_chi": "酒店旅遊及房地產工商管理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.B.A",
+  "total_units": 73,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT1111",
+    "DOTE1021",
+    "DOTE1031",
+    "DOTE2051",
+    "DOTE3010",
+    "ECON3440",
+    "FINA2010",
+    "FINA3010",
+    "FINA3060",
+    "FINA3080",
+    "GRMD2105",
+    "HTMG1010",
+    "HTMG1091",
+    "HTMG1092",
+    "HTMG2000",
+    "HTMG2070",
+    "HTMG2091",
+    "HTMG2092",
+    "HTMG2900",
+    "HTMG3010",
+    "HTMG3020",
+    "HTMG3030",
+    "HTMG3041",
+    "HTMG3050",
+    "HTMG3060",
+    "HTMG3091",
+    "HTMG3092",
+    "HTMG3501",
+    "HTMG3502",
+    "HTMG3504",
+    "HTMG3508",
+    "HTMG3515",
+    "HTMG3518",
+    "HTMG3519",
+    "HTMG3520",
+    "HTMG3521",
+    "HTMG3522",
+    "HTMG3523",
+    "HTMG3524",
+    "HTMG3525",
+    "HTMG3526",
+    "HTMG3527",
+    "HTMG3590",
+    "HTMG3900",
+    "HTMG4060",
+    "HTMG4070",
+    "HTMG4091",
+    "HTMG4092",
+    "HTMG4100",
+    "HTMG4120",
+    "HTMG4130",
+    "HTMG4170",
+    "HTMG4190",
+    "HTMG4200",
+    "HTMG4230",
+    "HTMG4240",
+    "HTMG4250",
+    "HTMG4260",
+    "HTMG4270",
+    "HTMG4280",
+    "HTMG4501",
+    "HTMG4502",
+    "HTMG4503",
+    "HTMG4504",
+    "HTMG4505",
+    "HTMG4506",
+    "HTMG4508",
+    "HTMG4509",
+    "HTMG4510",
+    "HTMG4511",
+    "HTMG4512",
+    "HTMG4513",
+    "HTMG4516",
+    "HTMG4517",
+    "HTMG4519",
+    "HTMG4520",
+    "HTMG4521",
+    "HTMG4522",
+    "HTMG4523",
+    "HTMG4524",
+    "HTMG4526",
+    "HTMG4527",
+    "HTMG4528",
+    "HTMG4529",
+    "HTMG4530",
+    "HTMG4531",
+    "HTMG4532",
+    "HTMG4533",
+    "HTMG4534",
+    "HTMG4535",
+    "HTMG4536",
+    "HTMG4537",
+    "HTMG4538",
+    "HTMG4539",
+    "HTMG4600",
+    "HTMG4700",
+    "HTMG4800",
+    "HTMG4900",
+    "MGNT2611",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4140",
+    "MGNT4540",
+    "MKTG2010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG4040",
+    "MKTG4080"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ACCT1111",
+        "codes": [
+          "ACCT1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1031",
+        "codes": [
+          "DOTE1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HTMG1010",
+        "codes": [
+          "HTMG1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1021",
+        "codes": [
+          "DOTE1021"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG1091",
+        "codes": [
+          "HTMG1091"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG1092",
+        "codes": [
+          "HTMG1092"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG2000",
+        "codes": [
+          "HTMG2000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG2070",
+        "codes": [
+          "HTMG2070"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG2091",
+        "codes": [
+          "HTMG2091"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG2092",
+        "codes": [
+          "HTMG2092"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG2900",
+        "codes": [
+          "HTMG2900"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3010",
+        "codes": [
+          "HTMG3010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3030",
+        "codes": [
+          "HTMG3030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3041",
+        "codes": [
+          "HTMG3041"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3091",
+        "codes": [
+          "HTMG3091"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3092",
+        "codes": [
+          "HTMG3092"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3900",
+        "codes": [
+          "HTMG3900"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG4091",
+        "codes": [
+          "HTMG4091"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG4092",
+        "codes": [
+          "HTMG4092"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG4800",
+        "codes": [
+          "HTMG4800"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG4900",
+        "codes": [
+          "HTMG4900"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "HTMG3020",
+        "codes": [
+          "HTMG3020"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "HTMG3060",
+        "codes": [
+          "HTMG3060"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "HTMG3521",
+        "codes": [
+          "HTMG3521"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "HTMG3527",
+        "codes": [
+          "HTMG3527"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "HTMG4600",
+        "codes": [
+          "HTMG4600"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "MKTG3020",
+        "codes": [
+          "MKTG3020"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "MKTG4080",
+        "codes": [
+          "MKTG4080"
+        ],
+        "alt": false,
+        "from": "(a) Hospitality"
+      },
+      {
+        "raw": "HTMG3502",
+        "codes": [
+          "HTMG3502"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "HTMG3523",
+        "codes": [
+          "HTMG3523"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "HTMG4100",
+        "codes": [
+          "HTMG4100"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "HTMG4190",
+        "codes": [
+          "HTMG4190"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "HTMG4600",
+        "codes": [
+          "HTMG4600"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "ECON3440",
+        "codes": [
+          "ECON3440"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "FINA3010",
+        "codes": [
+          "FINA3010"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "FINA3060",
+        "codes": [
+          "FINA3060"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "GRMD2105",
+        "codes": [
+          "GRMD2105"
+        ],
+        "alt": false,
+        "from": "(b) Real Estate"
+      },
+      {
+        "raw": "HTMG2000",
+        "codes": [
+          "HTMG2000"
+        ],
+        "alt": false,
+        "from": "1. HTMG courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "HTMG3504",
+        "codes": [
+          "HTMG3504"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG3522",
+        "codes": [
+          "HTMG3522"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG3525",
+        "codes": [
+          "HTMG3525"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG3526",
+        "codes": [
+          "HTMG3526"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG4060",
+        "codes": [
+          "HTMG4060"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG4230",
+        "codes": [
+          "HTMG4230"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG4250",
+        "codes": [
+          "HTMG4250"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "HTMG4270",
+        "codes": [
+          "HTMG4270"
+        ],
+        "alt": false,
+        "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG3050",
+        "codes": [
+          "HTMG3050"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG3519",
+        "codes": [
+          "HTMG3519"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG3524",
+        "codes": [
+          "HTMG3524"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG4130",
+        "codes": [
+          "HTMG4130"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG4200",
+        "codes": [
+          "HTMG4200"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG4240",
+        "codes": [
+          "HTMG4240"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG4260",
+        "codes": [
+          "HTMG4260"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "(ii) Innovative Module"
+      },
+      {
+        "raw": "HTMG3501",
+        "codes": [
+          "HTMG3501"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG3508",
+        "codes": [
+          "HTMG3508"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG3515",
+        "codes": [
+          "HTMG3515"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG3518",
+        "codes": [
+          "HTMG3518"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG3520",
+        "codes": [
+          "HTMG3520"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG4120",
+        "codes": [
+          "HTMG4120"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG4170",
+        "codes": [
+          "HTMG4170"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG4280",
+        "codes": [
+          "HTMG4280"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG4700",
+        "codes": [
+          "HTMG4700"
+        ],
+        "alt": false,
+        "from": "(iii) Experiential Module"
+      },
+      {
+        "raw": "HTMG3590",
+        "codes": [
+          "HTMG3590"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4501",
+        "codes": [
+          "HTMG4501"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4502",
+        "codes": [
+          "HTMG4502"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4503",
+        "codes": [
+          "HTMG4503"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4504",
+        "codes": [
+          "HTMG4504"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4505",
+        "codes": [
+          "HTMG4505"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4506",
+        "codes": [
+          "HTMG4506"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4508",
+        "codes": [
+          "HTMG4508"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4509",
+        "codes": [
+          "HTMG4509"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4510",
+        "codes": [
+          "HTMG4510"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4511",
+        "codes": [
+          "HTMG4511"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4512",
+        "codes": [
+          "HTMG4512"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4513",
+        "codes": [
+          "HTMG4513"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4516",
+        "codes": [
+          "HTMG4516"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4517",
+        "codes": [
+          "HTMG4517"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4519",
+        "codes": [
+          "HTMG4519"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4520",
+        "codes": [
+          "HTMG4520"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4521",
+        "codes": [
+          "HTMG4521"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4522",
+        "codes": [
+          "HTMG4522"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4523",
+        "codes": [
+          "HTMG4523"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4524",
+        "codes": [
+          "HTMG4524"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4526",
+        "codes": [
+          "HTMG4526"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4527",
+        "codes": [
+          "HTMG4527"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4528",
+        "codes": [
+          "HTMG4528"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4529",
+        "codes": [
+          "HTMG4529"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4530",
+        "codes": [
+          "HTMG4530"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4531",
+        "codes": [
+          "HTMG4531"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4532",
+        "codes": [
+          "HTMG4532"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4533",
+        "codes": [
+          "HTMG4533"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4534",
+        "codes": [
+          "HTMG4534"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4535",
+        "codes": [
+          "HTMG4535"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4536",
+        "codes": [
+          "HTMG4536"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4537",
+        "codes": [
+          "HTMG4537"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4538",
+        "codes": [
+          "HTMG4538"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      },
+      {
+        "raw": "HTMG4539",
+        "codes": [
+          "HTMG4539"
+        ],
+        "alt": false,
+        "from": "(b) Students are required to complete at"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "37",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Stream Courses",
+      "units": "15",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Hospitality",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Real Estate",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Students are required to complete 9",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Analytical Module",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Innovative Module",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Experiential Module",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Students are required to complete at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 35
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "HTMG courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

@@ -1,0 +1,699 @@
+{
+  "program_en": "LL.B. - Bachelor of Laws Programme",
+  "program_chi": "法學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Law",
+  "degree": "LL.B",
+  "total_units": 90,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH2530",
+    "ANTH3540",
+    "ARCH3321",
+    "ARCH3721",
+    "CHLL3403",
+    "CHLT1302",
+    "CLCP3703",
+    "CLCP4713",
+    "CLCP4723",
+    "COMM3600",
+    "COMM3710",
+    "DSPS2201",
+    "DSPS2301",
+    "DSPS2501",
+    "DSPS3202",
+    "DSPS3310",
+    "DSPS3790",
+    "DSPS3803",
+    "ECON3250",
+    "ECON3310",
+    "ECON3320",
+    "ECON3350",
+    "ECON3370",
+    "ECON3380",
+    "ECON3610",
+    "ECON3630",
+    "ELTU3413",
+    "ELTU3502",
+    "ENGE2100",
+    "ENGE3260",
+    "GDRS3005",
+    "GDRS3006",
+    "GDRS3007",
+    "GDRS3008",
+    "GDRS3024",
+    "GDRS4006",
+    "GDRS4007",
+    "GDRS4008",
+    "GDRS4011",
+    "GDRS4012",
+    "GDRS5210",
+    "GLSD2501",
+    "GLSD3105",
+    "GLSD3301",
+    "GLSD3501",
+    "GLSD4102",
+    "GLSD4104",
+    "GLSD4401",
+    "GLSD4402",
+    "GPAD1100",
+    "GPAD2070",
+    "GPAD2085",
+    "GPAD2300",
+    "GPAD2345",
+    "GRMD2104",
+    "GRMD2105",
+    "GRMD2303",
+    "GRMD2321",
+    "GRMD2401",
+    "GRMD2404",
+    "GRMD2501",
+    "GRMD3104",
+    "GRMD3106",
+    "GRMD3202",
+    "GRMD3203",
+    "GRMD3302",
+    "GRMD3323",
+    "GRMD3402",
+    "GRMD3404",
+    "GRMD4403",
+    "GRMD4503",
+    "LAWS1010",
+    "LAWS1020",
+    "LAWS1030",
+    "LAWS1041",
+    "LAWS1042",
+    "LAWS1100",
+    "LAWS2101",
+    "LAWS2102",
+    "LAWS2110",
+    "LAWS2121",
+    "LAWS2122",
+    "LAWS2131",
+    "LAWS2132",
+    "LAWS2200",
+    "LAWS2201",
+    "LAWS2202",
+    "LAWS2203",
+    "LAWS2204",
+    "LAWS2205",
+    "LAWS2220",
+    "LAWS2230",
+    "LAWS2240",
+    "LAWS2250",
+    "LAWS2260",
+    "LAWS2270",
+    "LAWS2280",
+    "LAWS2290",
+    "LAWS2300",
+    "LAWS2310",
+    "LAWS2320",
+    "LAWS2330",
+    "LAWS3050",
+    "LAWS3100",
+    "LAWS3110",
+    "LAWS3130",
+    "LAWS3151",
+    "LAWS3152",
+    "LAWS3200",
+    "LAWS3210",
+    "LAWS3220",
+    "LAWS3230",
+    "LAWS3260",
+    "LAWS3270",
+    "LAWS3280",
+    "LAWS3290",
+    "LAWS3300",
+    "LAWS3310",
+    "LAWS3320",
+    "LAWS3330",
+    "LAWS3340",
+    "LAWS3350",
+    "LAWS3360",
+    "LAWS3370",
+    "LAWS3380",
+    "LAWS3390",
+    "LAWS3400",
+    "LAWS3410",
+    "LAWS3420",
+    "LAWS3440",
+    "LAWS3450",
+    "LAWS3451",
+    "LAWS3452",
+    "LAWS3453",
+    "LAWS3454",
+    "LAWS3455",
+    "LAWS3456",
+    "LAWS3457",
+    "LAWS3458",
+    "LAWS3459",
+    "LAWS3461",
+    "LAWS3462",
+    "LAWS4000",
+    "LAWS4001",
+    "LAWS4002",
+    "LAWS4010",
+    "LAWS4120",
+    "LAWS4130",
+    "LAWS4151",
+    "LAWS4152",
+    "LAWS4260",
+    "LAWS4270",
+    "LAWS4280",
+    "LAWS4290",
+    "LAWS4291",
+    "LAWS4292",
+    "LAWS4300",
+    "LAWS4310",
+    "LAWS4311",
+    "LAWS4320",
+    "LAWS4330",
+    "LAWS4340",
+    "LAWS4350",
+    "LAWS4360",
+    "LAWS4370",
+    "LAWS4371",
+    "LAWS4380",
+    "LAWS4390",
+    "LAWS4400",
+    "LAWS4410",
+    "LAWS4420",
+    "LAWS4430",
+    "LAWS4440",
+    "LAWS4450",
+    "LAWS4460",
+    "LAWS4470",
+    "LAWS4480",
+    "LAWS4481",
+    "LAWS4482",
+    "LAWS4483",
+    "LAWS4484",
+    "LAWS4485",
+    "LAWS4486",
+    "LAWS4487",
+    "LAWS4488",
+    "LAWS4489",
+    "LAWS4490",
+    "LAWS4491",
+    "LAWS4494",
+    "LAWS6001",
+    "LAWS6021",
+    "PSYC3370",
+    "PSYC3630",
+    "SOCI1001",
+    "SOCI2003",
+    "SOCI2004",
+    "SOCI2101",
+    "SOCI2103",
+    "SOCI2104",
+    "SOCI2106",
+    "SOCI2116",
+    "SOCI2203",
+    "SOCI2208",
+    "SOCI2216",
+    "SOCI2218",
+    "SOCI2219",
+    "SOCI2220",
+    "SOCI3001",
+    "SOCI3002",
+    "SOCI3003",
+    "SOCI3102",
+    "SOCI3204",
+    "SOCI3207",
+    "SOCI3208",
+    "SOCI3221",
+    "SOCI3223",
+    "SOCI3224",
+    "SOCI3225",
+    "SOCI3226",
+    "SOCI3227",
+    "SOCI3229",
+    "SOCI3230",
+    "SOCI3231",
+    "SOCI3233",
+    "SOCI3234",
+    "SOCI3235",
+    "SOCI3236",
+    "SOCI3237",
+    "SOCI3238",
+    "SOCI3239",
+    "SOCI3240",
+    "SOCI3241",
+    "SOCI3242",
+    "SOCI3243",
+    "SOCI3244",
+    "SOCI3245",
+    "SOCI3451",
+    "SOCI3452",
+    "SOCI3453",
+    "SOCI4010",
+    "SOCI4020",
+    "SOCI4201",
+    "SOCI4202",
+    "SOCI4204",
+    "SOCI4205",
+    "SOCI4208",
+    "SOCI4209",
+    "SOCI4210",
+    "SOCI4211",
+    "SOCI4351",
+    "SOCI4352",
+    "SOCI4353",
+    "SOCI4410",
+    "SOCI4420",
+    "SOWK3340",
+    "SOWK4350",
+    "TRAN1010",
+    "TRAN1030",
+    "TRAN1120",
+    "TRAN1130",
+    "TRAN2020",
+    "TRAN2050",
+    "TRAN2070",
+    "TRAN2110",
+    "TRAN2120",
+    "TRAN2130",
+    "TRAN2140",
+    "TRAN2150",
+    "TRAN2240",
+    "TRAN2250",
+    "TRAN2610",
+    "TRAN2840",
+    "TRAN3080",
+    "TRAN3170",
+    "TRAN3180",
+    "TRAN3240",
+    "TRAN3270",
+    "TRAN3280",
+    "TRAN3620",
+    "TRAN3720",
+    "TRAN3800",
+    "TRAN3810",
+    "TRAN3820",
+    "TRAN3830",
+    "TRAN3844",
+    "TRAN3845",
+    "TRAN3850",
+    "TRAN3860",
+    "TRAN3870",
+    "TRAN3880",
+    "TRAN3890",
+    "TRAN4050",
+    "TRAN4070",
+    "TRAN4210",
+    "TRAN4510",
+    "TRAN4520",
+    "TRAN4800",
+    "TRAN4840",
+    "TRAN4900",
+    "URSP2010",
+    "URSP2020",
+    "URSP2030",
+    "URSP2040",
+    "URSP2050",
+    "URSP2060",
+    "URSP2070",
+    "URSP2100",
+    "URSP2200",
+    "URSP2300",
+    "URSP2400",
+    "URSP2800",
+    "URSP2900",
+    "URSP3100",
+    "URSP3200",
+    "URSP3300",
+    "URSP3400",
+    "URSP3600",
+    "URSP3700",
+    "URSP4100"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LAWS1010",
+        "codes": [
+          "LAWS1010"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "LAWS1030",
+        "codes": [
+          "LAWS1030"
+        ],
+        "alt": false,
+        "from": "(a) LAWS1030, 3290"
+      },
+      {
+        "raw": "LAWS3290",
+        "codes": [
+          "LAWS3290"
+        ],
+        "alt": false,
+        "from": "(a) LAWS1030, 3290"
+      },
+      {
+        "raw": "LAWS2201",
+        "codes": [
+          "LAWS2201"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS2220",
+        "codes": [
+          "LAWS2220"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS2310",
+        "codes": [
+          "LAWS2310"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS3440",
+        "codes": [
+          "LAWS3440"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS3461",
+        "codes": [
+          "LAWS3461"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS4311",
+        "codes": [
+          "LAWS4311"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS4371",
+        "codes": [
+          "LAWS4371"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS4488",
+        "codes": [
+          "LAWS4488"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2201, 2220,"
+      },
+      {
+        "raw": "LAWS4000",
+        "codes": [
+          "LAWS4000"
+        ],
+        "alt": false,
+        "from": "(a) LAWS4000,"
+      },
+      {
+        "raw": "LAWS4260",
+        "codes": [
+          "LAWS4260"
+        ],
+        "alt": false,
+        "from": "(a) LAWS4000,"
+      },
+      {
+        "raw": "LAWS2200",
+        "codes": [
+          "LAWS2200"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS2202",
+        "codes": [
+          "LAWS2202"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS2204",
+        "codes": [
+          "LAWS2204"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS2205",
+        "codes": [
+          "LAWS2205"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS2260",
+        "codes": [
+          "LAWS2260"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS2330",
+        "codes": [
+          "LAWS2330"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3210",
+        "codes": [
+          "LAWS3210"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3230",
+        "codes": [
+          "LAWS3230"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3400",
+        "codes": [
+          "LAWS3400"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3450",
+        "codes": [
+          "LAWS3450"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3453",
+        "codes": [
+          "LAWS3453"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS3462",
+        "codes": [
+          "LAWS3462"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4270",
+        "codes": [
+          "LAWS4270"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4280",
+        "codes": [
+          "LAWS4280"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4290",
+        "codes": [
+          "LAWS4290"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4340",
+        "codes": [
+          "LAWS4340"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4350",
+        "codes": [
+          "LAWS4350"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4420",
+        "codes": [
+          "LAWS4420"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4480",
+        "codes": [
+          "LAWS4480"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4481",
+        "codes": [
+          "LAWS4481"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4486",
+        "codes": [
+          "LAWS4486"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4487",
+        "codes": [
+          "LAWS4487"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4489",
+        "codes": [
+          "LAWS4489"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4490",
+        "codes": [
+          "LAWS4490"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      },
+      {
+        "raw": "LAWS4491",
+        "codes": [
+          "LAWS4491"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from LAWS2200, 2202,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "45",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "LAWS1030, 3290",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Two courses from LAWS2201, 2220,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "LAWS4000,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Two courses from LAWS2200, 2202,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    }
+  ]
+}

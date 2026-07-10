@@ -1,0 +1,866 @@
+{
+  "program_en": "B.Sc. in Quantitative Finance",
+  "program_chi": "計量金融學理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT1111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3142",
+    "ACCT3151",
+    "ACCT4212",
+    "ACCT4213",
+    "ACCT4214",
+    "ACCT4251",
+    "CSCI1510",
+    "CSCI1520",
+    "CSCI1530",
+    "CSCI1540",
+    "CSCI1550",
+    "CSCI1580",
+    "CSCI2100",
+    "CSCI2520",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3170",
+    "CSCI3230",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI4160",
+    "CSCI4180",
+    "CSCI4190",
+    "CSCI4230",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2051",
+    "DOTE3010",
+    "DOTE4070",
+    "DOTE4220",
+    "ECON3121",
+    "ECON4120",
+    "FINA2010",
+    "FINA2020",
+    "FINA2210",
+    "FINA3010",
+    "FINA3020",
+    "FINA3030",
+    "FINA3040",
+    "FINA3060",
+    "FINA3070",
+    "FINA3080",
+    "FINA3090",
+    "FINA3110",
+    "FINA3210",
+    "FINA3221",
+    "FINA3222",
+    "FINA3230",
+    "FINA3240",
+    "FINA3290",
+    "FINA3295",
+    "FINA3310",
+    "FINA3320",
+    "FINA3330",
+    "FINA3340",
+    "FINA3350",
+    "FINA3360",
+    "FINA3370",
+    "FINA3398",
+    "FINA3399",
+    "FINA3420",
+    "FINA4010",
+    "FINA4020",
+    "FINA4030",
+    "FINA4040",
+    "FINA4050",
+    "FINA4060",
+    "FINA4110",
+    "FINA4120",
+    "FINA4130",
+    "FINA4140",
+    "FINA4150",
+    "FINA4160",
+    "FINA4190",
+    "FINA4211",
+    "FINA4221",
+    "FINA4310",
+    "FINA4320",
+    "FINA4330",
+    "FINA4340",
+    "FINA4350",
+    "FINA4370",
+    "FINA4380",
+    "FINA4390",
+    "FINA4400",
+    "FINA4410",
+    "FINA4420",
+    "FINA4430",
+    "IBBA3040",
+    "MATH1010",
+    "MATH1018",
+    "MATH1030",
+    "MATH1038",
+    "MATH1530",
+    "MATH2010",
+    "MATH2018",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3270",
+    "MATH3280",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH4220",
+    "MATH4230",
+    "MATH4240",
+    "MATH4280",
+    "MGNT1020",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT4010",
+    "MKTG2010",
+    "SEEM3440",
+    "SEEM3550",
+    "STAT2001",
+    "STAT2006",
+    "STAT3006",
+    "STAT3007",
+    "STAT3008",
+    "STAT4001",
+    "STAT4002",
+    "STAT4003",
+    "STAT4004",
+    "STAT4005",
+    "STAT4006",
+    "STAT4008",
+    "STAT4010",
+    "STAT4012"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ACCT1111",
+        "codes": [
+          "ACCT1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "2. Faculty Co-curricular Courses"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "2. Faculty Co-curricular Courses"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "2. Faculty Co-curricular Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "(a) FINA2010, 3080"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(a) FINA2010, 3080"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
+        "raw": "ACCT3142",
+        "codes": [
+          "ACCT3142"
+        ],
+        "alt": false,
+        "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
+      },
+      {
+        "raw": "SEEM3550",
+        "codes": [
+          "SEEM3550"
+        ],
+        "alt": false,
+        "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
+      },
+      {
+        "raw": "CSCI1510",
+        "codes": [
+          "CSCI1510"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
+      },
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
+      },
+      {
+        "raw": "FINA2020",
+        "codes": [
+          "FINA2020"
+        ],
+        "alt": false,
+        "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI3150",
+        "codes": [
+          "CSCI3150"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "DOTE4070",
+        "codes": [
+          "DOTE4070"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "ECON3121",
+        "codes": [
+          "ECON3121"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA3221",
+        "codes": [
+          "FINA3221"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA3222",
+        "codes": [
+          "FINA3222"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA3290",
+        "codes": [
+          "FINA3290"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA3295",
+        "codes": [
+          "FINA3295"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA4211",
+        "codes": [
+          "FINA4211"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "FINA4221",
+        "codes": [
+          "FINA4221"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "SEEM3440",
+        "codes": [
+          "SEEM3440"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT3006",
+        "codes": [
+          "STAT3006"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT2151",
+        "codes": [
+          "ACCT2151"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA2210",
+        "codes": [
+          "FINA2210"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3010",
+        "codes": [
+          "FINA3010"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3030",
+        "codes": [
+          "FINA3030"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3040",
+        "codes": [
+          "FINA3040"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3060",
+        "codes": [
+          "FINA3060"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3070",
+        "codes": [
+          "FINA3070"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3090",
+        "codes": [
+          "FINA3090"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3110",
+        "codes": [
+          "FINA3110"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3210",
+        "codes": [
+          "FINA3210"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3230",
+        "codes": [
+          "FINA3230"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3240",
+        "codes": [
+          "FINA3240"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3310",
+        "codes": [
+          "FINA3310"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3320",
+        "codes": [
+          "FINA3320"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3330",
+        "codes": [
+          "FINA3330"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3340",
+        "codes": [
+          "FINA3340"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3350",
+        "codes": [
+          "FINA3350"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3360",
+        "codes": [
+          "FINA3360"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3370",
+        "codes": [
+          "FINA3370"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3398",
+        "codes": [
+          "FINA3398"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3399",
+        "codes": [
+          "FINA3399"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA3420",
+        "codes": [
+          "FINA3420"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4010",
+        "codes": [
+          "FINA4010"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4020",
+        "codes": [
+          "FINA4020"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4030",
+        "codes": [
+          "FINA4030"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4040",
+        "codes": [
+          "FINA4040"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4050",
+        "codes": [
+          "FINA4050"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4060",
+        "codes": [
+          "FINA4060"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4310",
+        "codes": [
+          "FINA4310"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4320",
+        "codes": [
+          "FINA4320"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4330",
+        "codes": [
+          "FINA4330"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4340",
+        "codes": [
+          "FINA4340"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4350",
+        "codes": [
+          "FINA4350"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4130",
+        "codes": [
+          "FINA4130"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Faculty Co-curricular Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "27",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "FINA2010, 3080",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "MATH1010",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "{DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "33",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "At least 9 units of Quantitative Methods courses from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "At least 12 units of Business courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 40
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "At least 12 units of Core courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    }
+  ]
+}

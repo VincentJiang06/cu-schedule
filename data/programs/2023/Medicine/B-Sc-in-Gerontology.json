@@ -1,0 +1,41 @@
+{
+  "program_en": "B.Sc. in Gerontology",
+  "program_chi": "老年學理學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Medicine",
+  "degree": "B.Sc",
+  "total_units": 52,
+  "parse_status": "prose_only",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHPR4012",
+    "GRON3111",
+    "GRON3112",
+    "GRON3113",
+    "GRON3114",
+    "GRON3211",
+    "GRON3213",
+    "GRON3214",
+    "GRON3311",
+    "GRON3412",
+    "GRON4101",
+    "GRON4102",
+    "GRON4212",
+    "GRON4312",
+    "GRON4411",
+    "PHPC1001",
+    "PHPC1017",
+    "PHPC2007",
+    "PHPC2015",
+    "PHPC2017",
+    "PHPC3015",
+    "PHPC3415"
+  ],
+  "buckets": {
+    "required": [],
+    "elective": [],
+    "stream_elective": []
+  },
+  "groups_outline": []
+}

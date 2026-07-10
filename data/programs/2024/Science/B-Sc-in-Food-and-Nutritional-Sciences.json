@@ -1,0 +1,799 @@
+{
+  "program_en": "B.Sc. in Food and Nutritional Sciences",
+  "program_chi": "食品及營養科學理學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 66,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCHE2030",
+    "BCHE4060",
+    "BIOL2120",
+    "BIOL2410",
+    "BIOL3410",
+    "CHEM1280",
+    "FNSC2001",
+    "FNSC2002",
+    "FNSC2005",
+    "FNSC3001",
+    "FNSC3002",
+    "FNSC3010",
+    "FNSC3030",
+    "FNSC3110",
+    "FNSC3180",
+    "FNSC4001",
+    "FNSC4002",
+    "FNSC4101",
+    "FNSC4102",
+    "FNSC4110",
+    "FNSC4120",
+    "FNSC4150",
+    "FNSC4160",
+    "FNSC4170",
+    "FNSC4901",
+    "FNSC4902",
+    "FNSC4903",
+    "FNSC4906",
+    "FNSC4907",
+    "FNSC5430",
+    "LSCI1002",
+    "LSCI1012",
+    "LSCI2002",
+    "LSCI2003",
+    "LSCI3012",
+    "LSCI4000",
+    "LSCI4911",
+    "LSCI4912",
+    "MATH1520",
+    "MBTE4320",
+    "PHYS1001",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1012",
+    "STAT3210"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BCHE2030",
+        "codes": [
+          "BCHE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2120",
+        "codes": [
+          "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC2001",
+        "codes": [
+          "FNSC2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC2002",
+        "codes": [
+          "FNSC2002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3001",
+        "codes": [
+          "FNSC3001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3002",
+        "codes": [
+          "FNSC3002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3010",
+        "codes": [
+          "FNSC3010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3030",
+        "codes": [
+          "FNSC3030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3110",
+        "codes": [
+          "FNSC3110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3180",
+        "codes": [
+          "FNSC3180"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BCHE2030",
+        "codes": [
+          "BCHE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2120",
+        "codes": [
+          "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC2001",
+        "codes": [
+          "FNSC2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC2002",
+        "codes": [
+          "FNSC2002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC2005",
+        "codes": [
+          "FNSC2005"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3001",
+        "codes": [
+          "FNSC3001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3002",
+        "codes": [
+          "FNSC3002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3010",
+        "codes": [
+          "FNSC3010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3030",
+        "codes": [
+          "FNSC3030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC3110",
+        "codes": [
+          "FNSC3110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4001",
+        "codes": [
+          "FNSC4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4002",
+        "codes": [
+          "FNSC4002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4101",
+        "codes": [
+          "FNSC4101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4102",
+        "codes": [
+          "FNSC4102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4110",
+        "codes": [
+          "FNSC4110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4120",
+        "codes": [
+          "FNSC4120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4150",
+        "codes": [
+          "FNSC4150"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4160",
+        "codes": [
+          "FNSC4160"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4170",
+        "codes": [
+          "FNSC4170"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FNSC4906",
+        "codes": [
+          "FNSC4906"
+        ],
+        "alt": false,
+        "from": "3. Capstone Courses"
+      },
+      {
+        "raw": "FNSC4907",
+        "codes": [
+          "FNSC4907"
+        ],
+        "alt": false,
+        "from": "3. Capstone Courses"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "FNSC4901",
+        "codes": [
+          "FNSC4901"
+        ],
+        "alt": false,
+        "from": "(i) FNSC4901 and 4902 and 4903"
+      },
+      {
+        "raw": "FNSC4902",
+        "codes": [
+          "FNSC4902"
+        ],
+        "alt": false,
+        "from": "(ii) FNSC4902 and 4903"
+      },
+      {
+        "raw": "FNSC4906",
+        "codes": [
+          "FNSC4906"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) (v) | FNSC4906 and/or LSCI4000# LSCI4911# and 4912# and 4913# LSCI4912# and 4913#"
+      },
+      {
+        "raw": "LSCI4000",
+        "codes": [
+          "LSCI4000"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) (v) | FNSC4906 and/or LSCI4000# LSCI4911# and 4912# and 4913# LSCI4912# and 4913#"
+      },
+      {
+        "raw": "LSCI4911",
+        "codes": [
+          "LSCI4911"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) (v) | FNSC4906 and/or LSCI4000# LSCI4911# and 4912# and 4913# LSCI4912# and 4913#"
+      },
+      {
+        "raw": "LSCI4912",
+        "codes": [
+          "LSCI4912"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) (v) | FNSC4906 and/or LSCI4000# LSCI4911# and 4912# and 4913# LSCI4912# and 4913#"
+      },
+      {
+        "raw": "BCHE4060",
+        "codes": [
+          "BCHE4060"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "BIOL3410",
+        "codes": [
+          "BIOL3410"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC2005",
+        "codes": [
+          "FNSC2005"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4001",
+        "codes": [
+          "FNSC4001"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4002",
+        "codes": [
+          "FNSC4002"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4101",
+        "codes": [
+          "FNSC4101"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4102",
+        "codes": [
+          "FNSC4102"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4110",
+        "codes": [
+          "FNSC4110"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4120",
+        "codes": [
+          "FNSC4120"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4150",
+        "codes": [
+          "FNSC4150"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4160",
+        "codes": [
+          "FNSC4160"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC4170",
+        "codes": [
+          "FNSC4170"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "FNSC5430",
+        "codes": [
+          "FNSC5430"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "LSCI2003",
+        "codes": [
+          "LSCI2003"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "LSCI3012",
+        "codes": [
+          "LSCI3012"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "MBTE4320",
+        "codes": [
+          "MBTE4320"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "30",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Capstone courses: one of the five options",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": "Capstone courses: one of the five options",
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "FNSC4901 and 4902 and 4903",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "FNSC4902 and 4903",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "(iv) (v) | FNSC4906 and/or LSCI4000# LSCI4911# and 4912# and 4913# LSCI4912# and 4913#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "BCHE4060#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "53",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 20
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Capstone Courses",
+      "units": "4",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

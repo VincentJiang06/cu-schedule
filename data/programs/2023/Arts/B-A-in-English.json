@@ -1,0 +1,1074 @@
+{
+  "program_en": "B.A. in English",
+  "program_chi": "英文文學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 69,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1004",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1100",
+    "CHLL1900",
+    "CUMT1000",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "ELTU1001",
+    "ELTU2011",
+    "ENGE1000",
+    "ENGE1310",
+    "ENGE1320",
+    "ENGE1500",
+    "ENGE1520",
+    "ENGE1610",
+    "ENGE1800",
+    "ENGE1900",
+    "ENGE2110",
+    "ENGE2120",
+    "ENGE2130",
+    "ENGE2140",
+    "ENGE2150",
+    "ENGE2160",
+    "ENGE2170",
+    "ENGE2180",
+    "ENGE2190",
+    "ENGE2210",
+    "ENGE2220",
+    "ENGE2310",
+    "ENGE2360",
+    "ENGE2370",
+    "ENGE2380",
+    "ENGE2390",
+    "ENGE2510",
+    "ENGE2520",
+    "ENGE2530",
+    "ENGE2540",
+    "ENGE2600",
+    "ENGE2620",
+    "ENGE2630",
+    "ENGE2640",
+    "ENGE2650",
+    "ENGE2700",
+    "ENGE2710",
+    "ENGE2720",
+    "ENGE2820",
+    "ENGE2840",
+    "ENGE2960",
+    "ENGE3100",
+    "ENGE3110",
+    "ENGE3120",
+    "ENGE3200",
+    "ENGE3220",
+    "ENGE3230",
+    "ENGE3250",
+    "ENGE3260",
+    "ENGE3270",
+    "ENGE3280",
+    "ENGE3290",
+    "ENGE3300",
+    "ENGE3310",
+    "ENGE3320",
+    "ENGE3350",
+    "ENGE3360",
+    "ENGE3370",
+    "ENGE3380",
+    "ENGE3390",
+    "ENGE3400",
+    "ENGE3410",
+    "ENGE3420",
+    "ENGE3500",
+    "ENGE3600",
+    "ENGE3610",
+    "ENGE3640",
+    "ENGE3670",
+    "ENGE3680",
+    "ENGE3690",
+    "ENGE3760",
+    "ENGE3770",
+    "ENGE3780",
+    "ENGE3800",
+    "ENGE3850",
+    "ENGE3900",
+    "ENGE3940",
+    "ENGE3950",
+    "ENGE3970",
+    "ENGE3980",
+    "ENGE3990",
+    "ENGE4100",
+    "ENGE4110",
+    "ENGE4120",
+    "ENGE4130",
+    "ENGE4140",
+    "ENGE4150",
+    "ENGE4200",
+    "ENGE4240",
+    "ENGE4510",
+    "ENGE4600",
+    "ENGE4610",
+    "ENGE4620",
+    "ENGE4650",
+    "ENGE4700",
+    "FAAS1900",
+    "HIST1000",
+    "HIST1001",
+    "HIST1002",
+    "HIST1700",
+    "HIST2002",
+    "HIST2005",
+    "HIST2006",
+    "HIST2007",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARTS1004",
+        "codes": [
+          "ARTS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHES1100",
+        "codes": [
+          "CHES1100"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGE1310",
+        "codes": [
+          "ENGE1310"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE1320",
+        "codes": [
+          "ENGE1320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE1500",
+        "codes": [
+          "ENGE1500"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE1610",
+        "codes": [
+          "ENGE1610"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE3100",
+        "codes": [
+          "ENGE3100"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE4700",
+        "codes": [
+          "ENGE4700"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ENGE1520",
+        "codes": [
+          "ENGE1520"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE1800",
+        "codes": [
+          "ENGE1800"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE1900",
+        "codes": [
+          "ENGE1900"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2110",
+        "codes": [
+          "ENGE2110"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2120",
+        "codes": [
+          "ENGE2120"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2130",
+        "codes": [
+          "ENGE2130"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2140",
+        "codes": [
+          "ENGE2140"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2150",
+        "codes": [
+          "ENGE2150"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2160",
+        "codes": [
+          "ENGE2160"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2170",
+        "codes": [
+          "ENGE2170"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2180",
+        "codes": [
+          "ENGE2180"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2190",
+        "codes": [
+          "ENGE2190"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2210",
+        "codes": [
+          "ENGE2210"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2220",
+        "codes": [
+          "ENGE2220"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2310",
+        "codes": [
+          "ENGE2310"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2360",
+        "codes": [
+          "ENGE2360"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2370",
+        "codes": [
+          "ENGE2370"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2380",
+        "codes": [
+          "ENGE2380"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2390",
+        "codes": [
+          "ENGE2390"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2510",
+        "codes": [
+          "ENGE2510"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2520",
+        "codes": [
+          "ENGE2520"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2530",
+        "codes": [
+          "ENGE2530"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2540",
+        "codes": [
+          "ENGE2540"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2600",
+        "codes": [
+          "ENGE2600"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2620",
+        "codes": [
+          "ENGE2620"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2630",
+        "codes": [
+          "ENGE2630"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2640",
+        "codes": [
+          "ENGE2640"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2650",
+        "codes": [
+          "ENGE2650"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2700",
+        "codes": [
+          "ENGE2700"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2710",
+        "codes": [
+          "ENGE2710"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2720",
+        "codes": [
+          "ENGE2720"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2820",
+        "codes": [
+          "ENGE2820"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2840",
+        "codes": [
+          "ENGE2840"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE2960",
+        "codes": [
+          "ENGE2960"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3110",
+        "codes": [
+          "ENGE3110"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3120",
+        "codes": [
+          "ENGE3120"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3200",
+        "codes": [
+          "ENGE3200"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3220",
+        "codes": [
+          "ENGE3220"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3230",
+        "codes": [
+          "ENGE3230"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3250",
+        "codes": [
+          "ENGE3250"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3260",
+        "codes": [
+          "ENGE3260"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3270",
+        "codes": [
+          "ENGE3270"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3280",
+        "codes": [
+          "ENGE3280"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3290",
+        "codes": [
+          "ENGE3290"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3300",
+        "codes": [
+          "ENGE3300"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3310",
+        "codes": [
+          "ENGE3310"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3320",
+        "codes": [
+          "ENGE3320"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3350",
+        "codes": [
+          "ENGE3350"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3360",
+        "codes": [
+          "ENGE3360"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3370",
+        "codes": [
+          "ENGE3370"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3380",
+        "codes": [
+          "ENGE3380"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3390",
+        "codes": [
+          "ENGE3390"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3400",
+        "codes": [
+          "ENGE3400"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3410",
+        "codes": [
+          "ENGE3410"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3420",
+        "codes": [
+          "ENGE3420"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3500",
+        "codes": [
+          "ENGE3500"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3600",
+        "codes": [
+          "ENGE3600"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3610",
+        "codes": [
+          "ENGE3610"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3640",
+        "codes": [
+          "ENGE3640"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3670",
+        "codes": [
+          "ENGE3670"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3680",
+        "codes": [
+          "ENGE3680"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3690",
+        "codes": [
+          "ENGE3690"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3760",
+        "codes": [
+          "ENGE3760"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3770",
+        "codes": [
+          "ENGE3770"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3780",
+        "codes": [
+          "ENGE3780"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3800",
+        "codes": [
+          "ENGE3800"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3850",
+        "codes": [
+          "ENGE3850"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3900",
+        "codes": [
+          "ENGE3900"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3940",
+        "codes": [
+          "ENGE3940"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3950",
+        "codes": [
+          "ENGE3950"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3970",
+        "codes": [
+          "ENGE3970"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3980",
+        "codes": [
+          "ENGE3980"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE3990",
+        "codes": [
+          "ENGE3990"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4100",
+        "codes": [
+          "ENGE4100"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4110",
+        "codes": [
+          "ENGE4110"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4120",
+        "codes": [
+          "ENGE4120"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4130",
+        "codes": [
+          "ENGE4130"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4140",
+        "codes": [
+          "ENGE4140"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4150",
+        "codes": [
+          "ENGE4150"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4200",
+        "codes": [
+          "ENGE4200"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4240",
+        "codes": [
+          "ENGE4240"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4510",
+        "codes": [
+          "ENGE4510"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4600",
+        "codes": [
+          "ENGE4600"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4610",
+        "codes": [
+          "ENGE4610"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4620",
+        "codes": [
+          "ENGE4620"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ENGE4650",
+        "codes": [
+          "ENGE4650"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 86
+    }
+  ]
+}

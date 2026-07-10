@@ -1,0 +1,677 @@
+{
+  "program_en": "B.A. in Translation",
+  "program_chi": "翻譯文學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 66,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "BMBL2001",
+    "BMBL2004",
+    "CHES1101",
+    "CHLL1110",
+    "CHLL1211",
+    "CHLL1401",
+    "CHLL1900",
+    "CHLL2302",
+    "CHLL2350",
+    "CHLL3403",
+    "CHLT1302",
+    "CLCP3703",
+    "CLCP4713",
+    "CLCP4723",
+    "CURE1000",
+    "ELTU3413",
+    "ELTU3502",
+    "ENGE1000",
+    "ENGE2100",
+    "ENGE3260",
+    "FAAS1900",
+    "HIST1000",
+    "JASP1090",
+    "LAWS6001",
+    "LAWS6004",
+    "LAWS6006",
+    "LAWS6007",
+    "LAWS6011",
+    "LAWS6012",
+    "LAWS6013",
+    "LAWS6014",
+    "LAWS6015",
+    "LAWS6017",
+    "LAWS6018",
+    "LAWS6019",
+    "LAWS6020",
+    "LAWS6021",
+    "LAWS6022",
+    "LAWS6023",
+    "LAWS6024",
+    "LAWS6089",
+    "LAWS6901",
+    "LAWS6902",
+    "LING1000",
+    "LING1001",
+    "LING1003",
+    "LING2003",
+    "LING2008",
+    "LING2301",
+    "LING3101",
+    "LING3102",
+    "LING3103",
+    "LING3104",
+    "LING3107",
+    "LING3108",
+    "LING3201",
+    "LING3202",
+    "LING3203",
+    "LING3204",
+    "LING3206",
+    "LING3207",
+    "LING3208",
+    "LING3401",
+    "LING3403",
+    "LING4201",
+    "LING4202",
+    "LING4401",
+    "LING4402",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000",
+    "TRAN1010",
+    "TRAN1030",
+    "TRAN1120",
+    "TRAN1130",
+    "TRAN2020",
+    "TRAN2050",
+    "TRAN2070",
+    "TRAN2110",
+    "TRAN2120",
+    "TRAN2130",
+    "TRAN2140",
+    "TRAN2150",
+    "TRAN2240",
+    "TRAN2250",
+    "TRAN2610",
+    "TRAN2840",
+    "TRAN3080",
+    "TRAN3170",
+    "TRAN3180",
+    "TRAN3240",
+    "TRAN3270",
+    "TRAN3280",
+    "TRAN3620",
+    "TRAN3720",
+    "TRAN3800",
+    "TRAN3810",
+    "TRAN3820",
+    "TRAN3830",
+    "TRAN3844",
+    "TRAN3845",
+    "TRAN3850",
+    "TRAN3860",
+    "TRAN3870",
+    "TRAN3880",
+    "TRAN3890",
+    "TRAN4050",
+    "TRAN4070",
+    "TRAN4210",
+    "TRAN4510",
+    "TRAN4520",
+    "TRAN4800",
+    "TRAN4840",
+    "TRAN4900"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1010",
+        "codes": [
+          "TRAN1010"
+        ],
+        "alt": false,
+        "from": "(a) TRAN1010, 1030, 2070,"
+      },
+      {
+        "raw": "TRAN1030",
+        "codes": [
+          "TRAN1030"
+        ],
+        "alt": false,
+        "from": "(a) TRAN1010, 1030, 2070,"
+      },
+      {
+        "raw": "TRAN2070",
+        "codes": [
+          "TRAN2070"
+        ],
+        "alt": false,
+        "from": "(a) TRAN1010, 1030, 2070,"
+      },
+      {
+        "raw": "TRAN2610",
+        "codes": [
+          "TRAN2610"
+        ],
+        "alt": false,
+        "from": "(a) TRAN1010, 1030, 2070,"
+      },
+      {
+        "raw": "TRAN4510",
+        "codes": [
+          "TRAN4510"
+        ],
+        "alt": false,
+        "from": "(b) Any 2 capstone"
+      },
+      {
+        "raw": "TRAN4520",
+        "codes": [
+          "TRAN4520"
+        ],
+        "alt": false,
+        "from": "(b) Any 2 capstone"
+      },
+      {
+        "raw": "TRAN4900",
+        "codes": [
+          "TRAN4900"
+        ],
+        "alt": false,
+        "from": "(b) Any 2 capstone"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "TRAN2120",
+        "codes": [
+          "TRAN2120"
+        ],
+        "alt": false,
+        "from": "(a) Electives"
+      },
+      {
+        "raw": "TRAN3080",
+        "codes": [
+          "TRAN3080"
+        ],
+        "alt": false,
+        "from": "(a) Electives"
+      },
+      {
+        "raw": "TRAN3720",
+        "codes": [
+          "TRAN3720"
+        ],
+        "alt": false,
+        "from": "(a) Electives"
+      },
+      {
+        "raw": "TRAN4070",
+        "codes": [
+          "TRAN4070"
+        ],
+        "alt": false,
+        "from": "(a) Electives"
+      },
+      {
+        "raw": "TRAN4210",
+        "codes": [
+          "TRAN4210"
+        ],
+        "alt": false,
+        "from": "(a) Electives"
+      },
+      {
+        "raw": "TRAN2140",
+        "codes": [
+          "TRAN2140"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN2150",
+        "codes": [
+          "TRAN2150"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN2240",
+        "codes": [
+          "TRAN2240"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN2250",
+        "codes": [
+          "TRAN2250"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN3240",
+        "codes": [
+          "TRAN3240"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN4050",
+        "codes": [
+          "TRAN4050"
+        ],
+        "alt": false,
+        "from": "(b) Electives"
+      },
+      {
+        "raw": "TRAN1120",
+        "codes": [
+          "TRAN1120"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN1130",
+        "codes": [
+          "TRAN1130"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN2020",
+        "codes": [
+          "TRAN2020"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN2050",
+        "codes": [
+          "TRAN2050"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN2110",
+        "codes": [
+          "TRAN2110"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN2130",
+        "codes": [
+          "TRAN2130"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN2840",
+        "codes": [
+          "TRAN2840"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3170",
+        "codes": [
+          "TRAN3170"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3180",
+        "codes": [
+          "TRAN3180"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3270",
+        "codes": [
+          "TRAN3270"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3280",
+        "codes": [
+          "TRAN3280"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3620",
+        "codes": [
+          "TRAN3620"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3800",
+        "codes": [
+          "TRAN3800"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3810",
+        "codes": [
+          "TRAN3810"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3820",
+        "codes": [
+          "TRAN3820"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3830",
+        "codes": [
+          "TRAN3830"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3844",
+        "codes": [
+          "TRAN3844"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3845",
+        "codes": [
+          "TRAN3845"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3850",
+        "codes": [
+          "TRAN3850"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3860",
+        "codes": [
+          "TRAN3860"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3870",
+        "codes": [
+          "TRAN3870"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3880",
+        "codes": [
+          "TRAN3880"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN3890",
+        "codes": [
+          "TRAN3890"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN4800",
+        "codes": [
+          "TRAN4800"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      },
+      {
+        "raw": "TRAN4840",
+        "codes": [
+          "TRAN4840"
+        ],
+        "alt": false,
+        "from": "(c) Other Electives"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "TRAN1010, 1030, 2070,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Any 2 capstone",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "39",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Electives",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Electives",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Other Electives",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    }
+  ]
+}

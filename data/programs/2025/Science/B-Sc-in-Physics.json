@@ -1,0 +1,698 @@
+{
+  "program_en": "B.Sc. in Physics",
+  "program_chi": "物理理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 71,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHEM1070",
+    "CHEM1072",
+    "CSCI2800",
+    "CSCI3320",
+    "EESC4010",
+    "EESC4520",
+    "EESC4810",
+    "EESC4820",
+    "ELEG2202",
+    "ELEG5491",
+    "ENGG1310",
+    "ESTR1003",
+    "LSCI1001",
+    "MATH1010",
+    "MATH2010",
+    "MATH2020",
+    "MATH2530",
+    "MATH3230",
+    "MATH3290",
+    "MATH4030",
+    "PHYS1001",
+    "PHYS1002",
+    "PHYS1003",
+    "PHYS1004",
+    "PHYS1110",
+    "PHYS1111",
+    "PHYS1113",
+    "PHYS1122",
+    "PHYS1712",
+    "PHYS2041",
+    "PHYS2051",
+    "PHYS2061",
+    "PHYS2401",
+    "PHYS2510",
+    "PHYS2520",
+    "PHYS2610",
+    "PHYS2711",
+    "PHYS2722",
+    "PHYS3011",
+    "PHYS3021",
+    "PHYS3022",
+    "PHYS3023",
+    "PHYS3031",
+    "PHYS3041",
+    "PHYS3051",
+    "PHYS3061",
+    "PHYS3403",
+    "PHYS3410",
+    "PHYS3420",
+    "PHYS3430",
+    "PHYS3440",
+    "PHYS3610",
+    "PHYS3630",
+    "PHYS3710",
+    "PHYS3730",
+    "PHYS3810",
+    "PHYS4011",
+    "PHYS4021",
+    "PHYS4031",
+    "PHYS4041",
+    "PHYS4050",
+    "PHYS4051",
+    "PHYS4061",
+    "PHYS4420",
+    "PHYS4430",
+    "PHYS4440",
+    "PHYS4450",
+    "PHYS4460",
+    "PHYS4470",
+    "PHYS4480",
+    "PHYS4490",
+    "PHYS4491",
+    "PHYS4492",
+    "PHYS4610",
+    "PHYS4620",
+    "PHYS4630",
+    "PHYS4710",
+    "PHYS4711",
+    "PHYS4712",
+    "PHYS4801",
+    "PHYS4802",
+    "PHYS4811",
+    "PHYS4812",
+    "PHYS5061",
+    "PHYS5410",
+    "PHYS5420",
+    "PHYS5430",
+    "PHYS5520",
+    "PHYS5610",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1011"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(i) One course from MATH2010, 2530"
+      },
+      {
+        "raw": "MATH2530",
+        "codes": [
+          "MATH2530"
+        ],
+        "alt": false,
+        "from": "(i) One course from MATH2010, 2530"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "(ii) One course from CHEM1070, 1072[g]"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "(ii) One course from CHEM1070, 1072[g]"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "EESC4010",
+        "codes": [
+          "EESC4010"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS2610",
+        "codes": [
+          "PHYS2610"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3023",
+        "codes": [
+          "PHYS3023"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "(a) Required courses: PHYS2061[b][h], 3051, 4620[e], 4802"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses (of which at least two courses from"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses (of which at least two courses from"
+      },
+      {
+        "raw": "PHYS4021",
+        "codes": [
+          "PHYS4021"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses (of which at least two courses from"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses (of which at least two courses from"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses (of which at least two courses from"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "(a) Required courses: PHYS4430, 4470"
+      },
+      {
+        "raw": "PHYS4470",
+        "codes": [
+          "PHYS4470"
+        ],
+        "alt": false,
+        "from": "(a) Required courses: PHYS4430, 4470"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses"
+      },
+      {
+        "raw": "PHYS3430",
+        "codes": [
+          "PHYS3430"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses"
+      },
+      {
+        "raw": "PHYS3440",
+        "codes": [
+          "PHYS3440"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses"
+      },
+      {
+        "raw": "PHYS3810",
+        "codes": [
+          "PHYS3810"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "(a) Required courses: PHYS2061[b][h], 3061, 4061"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,"
+      },
+      {
+        "raw": "ELEG5491",
+        "codes": [
+          "ELEG5491"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,"
+      },
+      {
+        "raw": "PHYS5061",
+        "codes": [
+          "PHYS5061"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,"
+      },
+      {
+        "raw": "PHYS5520",
+        "codes": [
+          "PHYS5520"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,"
+      },
+      {
+        "raw": "PHYS5610",
+        "codes": [
+          "PHYS5610"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "(a) Required courses: PHYS3022 or 3023, 4021[j]"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "(b) Elective courses: Two courses from PHYS3022 or 3023, 4031[c], 4050[j], 4440,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses[a]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Physics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Mathematics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "One course from MATH2010, 2530",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "One course from CHEM1070, 1072[g]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required courses: PHYS2061[b][h], 3051, 4620[e], 4802",
+      "units": "10",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective courses (of which at least two courses from",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required courses: PHYS4430, 4470",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required courses: PHYS2061[b][h], 3061, 4061",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective courses: One course from CSCI3320, ELEG5491, PHYS5061, 5520,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required courses: PHYS3022 or 3023, 4021[j]",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective courses: Two courses from PHYS3022 or 3023, 4031[c], 4050[j], 4440,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

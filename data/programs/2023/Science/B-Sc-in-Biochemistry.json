@@ -1,0 +1,518 @@
+{
+  "program_en": "B.Sc. in Biochemistry",
+  "program_chi": "生物化學理學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 12,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCHE2000",
+    "BCHE2030",
+    "BCHE2070",
+    "BCHE3030",
+    "BCHE3040",
+    "BCHE3050",
+    "BCHE3070",
+    "BCHE3080",
+    "BCHE3092",
+    "BCHE3110",
+    "BCHE3650",
+    "BCHE3730",
+    "BCHE4030",
+    "BCHE4040",
+    "BCHE4060",
+    "BCHE4070",
+    "BCHE4080",
+    "BCHE4090",
+    "BCHE4130",
+    "BCHE4640",
+    "BCHE4760",
+    "BCHE4830",
+    "BCHE4901",
+    "BCHE4902",
+    "BCHE4903",
+    "BIOL2120",
+    "BIOL2313",
+    "BIOL2410",
+    "BIOL2420",
+    "BIOL3410",
+    "BMEG3101",
+    "BMEG4010",
+    "CHEM1280",
+    "CMBI4001",
+    "ENSC3520",
+    "FNSC3010",
+    "LSCI1002",
+    "LSCI1012",
+    "LSCI2002",
+    "LSCI2003",
+    "LSCI3012",
+    "LSCI3520",
+    "LSCI4000",
+    "LSCI4911",
+    "LSCI4912",
+    "MATH1520",
+    "MBTE3510",
+    "PHYS1001",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1012",
+    "STAT3210"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "BCHE2000",
+        "codes": [
+          "BCHE2000"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE2030",
+        "codes": [
+          "BCHE2030"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3030",
+        "codes": [
+          "BCHE3030"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BIOL2120",
+        "codes": [
+          "BIOL2120"
+        ],
+        "alt": false,
+        "from": "(b) BIOL2120#, 2313#, 2410#,"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "(b) BIOL2120#, 2313#, 2410#,"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BCHE4901",
+        "codes": [
+          "BCHE4901"
+        ],
+        "alt": false,
+        "from": "(i) BCHE4901"
+      },
+      {
+        "raw": "BCHE4902",
+        "codes": [
+          "BCHE4902"
+        ],
+        "alt": false,
+        "from": "(ii) BCHE4902"
+      },
+      {
+        "raw": "LSCI4911",
+        "codes": [
+          "LSCI4911"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) | LSCI4911#"
+      },
+      {
+        "raw": "LSCI4912",
+        "codes": [
+          "LSCI4912"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) | LSCI4911#"
+      },
+      {
+        "raw": "LSCI4000",
+        "codes": [
+          "LSCI4000"
+        ],
+        "alt": false,
+        "from": "(v) LSCI4000#"
+      },
+      {
+        "raw": "BCHE4030",
+        "codes": [
+          "BCHE4030"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BIOL2420",
+        "codes": [
+          "BIOL2420"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "ENSC3520",
+        "codes": [
+          "ENSC3520"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "LSCI3520",
+        "codes": [
+          "LSCI3520"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "FNSC3010",
+        "codes": [
+          "FNSC3010"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "LSCI3012",
+        "codes": [
+          "LSCI3012"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "MBTE3510",
+        "codes": [
+          "MBTE3510"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE2070",
+        "codes": [
+          "BCHE2070"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE3110",
+        "codes": [
+          "BCHE3110"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BIOL3410",
+        "codes": [
+          "BIOL3410"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BMEG3101",
+        "codes": [
+          "BMEG3101"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BMEG4010",
+        "codes": [
+          "BMEG4010"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4001",
+        "codes": [
+          "CMBI4001"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "LSCI2003",
+        "codes": [
+          "LSCI2003"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "BCHE2000, 2030, 3030/3730,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "BIOL2120#, 2313#, 2410#,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Capstone",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "BCHE4901",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "BCHE4902",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "(iv) | LSCI4911#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(v)",
+      "level": 2,
+      "title": "LSCI4000#",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Of the 17 units of elective courses, at least 9 units,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

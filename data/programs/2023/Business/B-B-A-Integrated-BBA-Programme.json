@@ -1,0 +1,1276 @@
+{
+  "program_en": "B.B.A. - Integrated BBA Programme",
+  "program_chi": "工商管理學士綜合課程",
+  "admission_year": "2023",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.B.A",
+  "total_units": 56,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "ARCH1001",
+    "ARCH1002",
+    "COMM1120",
+    "COMM1150",
+    "COMM1170",
+    "COMM1180",
+    "COMM1190",
+    "COMM2100",
+    "COMM2110",
+    "COMM2120",
+    "COMM2140",
+    "COMM2160",
+    "COMM2170",
+    "COMM2180",
+    "COMM2210",
+    "COMM2240",
+    "COMM2300",
+    "COMM2320",
+    "COMM2440",
+    "COMM2500",
+    "COMM2530",
+    "COMM2540",
+    "COMM2570",
+    "COMM2590",
+    "COMM2600",
+    "COMM2610",
+    "COMM2710",
+    "COMM2733",
+    "COMM2740",
+    "COMM2741",
+    "COMM2811",
+    "COMM2812",
+    "COMM2813",
+    "COMM2814",
+    "COMM2830",
+    "COMM2840",
+    "COMM2850",
+    "COMM2910",
+    "COMM2920",
+    "COMM2922",
+    "COMM2925",
+    "COMM2926",
+    "COMM2928",
+    "COMM2930",
+    "COMM2932",
+    "COMM2940",
+    "COMM2962",
+    "COMM3131",
+    "COMM3132",
+    "COMM3140",
+    "COMM3191",
+    "COMM3193",
+    "COMM3200",
+    "COMM3550",
+    "COMM3600",
+    "COMM3620",
+    "COMM3630",
+    "COMM3640",
+    "COMM3650",
+    "COMM3660",
+    "COMM3670",
+    "COMM3680",
+    "COMM3681",
+    "COMM3682",
+    "COMM3690",
+    "COMM3700",
+    "COMM3711",
+    "COMM3721",
+    "COMM3722",
+    "COMM3733",
+    "COMM3740",
+    "COMM3750",
+    "COMM3800",
+    "COMM3810",
+    "COMM3811",
+    "COMM3812",
+    "COMM3820",
+    "COMM3830",
+    "COMM3831",
+    "COMM3832",
+    "COMM3840",
+    "COMM3841",
+    "COMM3850",
+    "COMM3855",
+    "COMM3860",
+    "COMM3881",
+    "COMM3888",
+    "COMM3910",
+    "COMM3920",
+    "COMM3921",
+    "COMM3922",
+    "COMM3930",
+    "COMM3933",
+    "COMM3939",
+    "COMM3940",
+    "COMM3941",
+    "COMM3963",
+    "COMM4040",
+    "COMM4150",
+    "COMM4191",
+    "COMM4250",
+    "COMM4730",
+    "COMM4733",
+    "COMM4848",
+    "COMM4935",
+    "COMM4956",
+    "COMM4962",
+    "COMM5110",
+    "COMM5111",
+    "COMM5631",
+    "COMM5632",
+    "COMM5650",
+    "COMM5690",
+    "COMM5775",
+    "COMM6420",
+    "CSCI1120",
+    "CSCI2100",
+    "CSCI4130",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "ECON3250",
+    "ECON3310",
+    "ECON3320",
+    "ECON3350",
+    "ECON3370",
+    "ECON3380",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG2440",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR1100",
+    "ESTR2004",
+    "ESTR2102",
+    "ESTR2520",
+    "ESTR4306",
+    "FINA2010",
+    "FINA2020",
+    "FINA2210",
+    "FINA2220",
+    "FINA2230",
+    "FINA3010",
+    "FINA3020",
+    "FINA3030",
+    "FINA3040",
+    "FINA3060",
+    "FINA3070",
+    "FINA3080",
+    "FINA3210",
+    "FINA3220",
+    "FINA3230",
+    "FINA3240",
+    "FINA3250",
+    "FINA3310",
+    "FINA3320",
+    "FINA3330",
+    "FINA3340",
+    "FINA3350",
+    "FINA3360",
+    "FINA3420",
+    "FINA4010",
+    "FINA4020",
+    "FINA4030",
+    "FINA4040",
+    "FINA4050",
+    "FINA4060",
+    "FINA4110",
+    "FINA4120",
+    "FINA4130",
+    "FINA4140",
+    "FINA4150",
+    "FINA4160",
+    "FINA4190",
+    "FINA4210",
+    "FINA4220",
+    "FINA4250",
+    "FINA4270",
+    "FINA4280",
+    "FINA4310",
+    "FINA4320",
+    "FINA4330",
+    "FINA4340",
+    "FINA4350",
+    "FINA4370",
+    "FINA4380",
+    "FINA4390",
+    "FTEC2101",
+    "FTEC3002",
+    "FTEC4001",
+    "FTEC4002",
+    "FTEC4004",
+    "FTEC4005",
+    "FTEC4006",
+    "FTEC4007",
+    "FTEC4008",
+    "FTEC4998",
+    "FTEC4999",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "IBBA3020",
+    "IBBA3032",
+    "IBBA3040",
+    "IBBA4010",
+    "IERG4004",
+    "IERG4130",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1010",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3070",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4520",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4600",
+    "MGNT4620",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PSYC1000",
+    "PSYC1630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT2151",
+        "codes": [
+          "ACCT2151"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "MKTG4120",
+        "codes": [
+          "MKTG4120"
+        ],
+        "alt": false,
+        "from": "(iii) one course selected from: DOTE[DSME]3030,"
+      },
+      {
+        "raw": "FINA2020",
+        "codes": [
+          "FINA2020"
+        ],
+        "alt": false,
+        "from": "(i) DOTE[DSME]2021 or FINA2020; and"
+      },
+      {
+        "raw": "MGNT1070",
+        "codes": [
+          "MGNT1070"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070, 3070, 4170; and"
+      },
+      {
+        "raw": "MGNT2070",
+        "codes": [
+          "MGNT2070"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070, 3070, 4170; and"
+      },
+      {
+        "raw": "MGNT3070",
+        "codes": [
+          "MGNT3070"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070, 3070, 4170; and"
+      },
+      {
+        "raw": "MGNT4170",
+        "codes": [
+          "MGNT4170"
+        ],
+        "alt": false,
+        "from": "(i) MGNT1070, 2070, 3070, 4170; and"
+      },
+      {
+        "raw": "MGNT3080",
+        "codes": [
+          "MGNT3080"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4070",
+        "codes": [
+          "MGNT4070"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4160",
+        "codes": [
+          "MGNT4160"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4270",
+        "codes": [
+          "MGNT4270"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4570",
+        "codes": [
+          "MGNT4570"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4711",
+        "codes": [
+          "MGNT4711"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4712",
+        "codes": [
+          "MGNT4712"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT4713",
+        "codes": [
+          "MGNT4713"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MGNT3080,"
+      },
+      {
+        "raw": "MGNT3580",
+        "codes": [
+          "MGNT3580"
+        ],
+        "alt": false,
+        "from": "(i) MGNT3580, 4150; and"
+      },
+      {
+        "raw": "MGNT4150",
+        "codes": [
+          "MGNT4150"
+        ],
+        "alt": false,
+        "from": "(i) MGNT3580, 4150; and"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT3080",
+        "codes": [
+          "MGNT3080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT3100",
+        "codes": [
+          "MGNT3100"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4080",
+        "codes": [
+          "MGNT4080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4090",
+        "codes": [
+          "MGNT4090"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4110",
+        "codes": [
+          "MGNT4110"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4140",
+        "codes": [
+          "MGNT4140"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4510",
+        "codes": [
+          "MGNT4510"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4530",
+        "codes": [
+          "MGNT4530"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4540",
+        "codes": [
+          "MGNT4540"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4550",
+        "codes": [
+          "MGNT4550"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT4570",
+        "codes": [
+          "MGNT4570"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3010,"
+      },
+      {
+        "raw": "MGNT2040",
+        "codes": [
+          "MGNT2040"
+        ],
+        "alt": false,
+        "from": "(i) MGNT2040, 3010; and"
+      },
+      {
+        "raw": "MGNT3010",
+        "codes": [
+          "MGNT3010"
+        ],
+        "alt": false,
+        "from": "(i) MGNT2040, 3010; and"
+      },
+      {
+        "raw": "MGNT3040",
+        "codes": [
+          "MGNT3040"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT3060",
+        "codes": [
+          "MGNT3060"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT3090",
+        "codes": [
+          "MGNT3090"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT3100",
+        "codes": [
+          "MGNT3100"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4050",
+        "codes": [
+          "MGNT4050"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4060",
+        "codes": [
+          "MGNT4060"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4080",
+        "codes": [
+          "MGNT4080"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4110",
+        "codes": [
+          "MGNT4110"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4130",
+        "codes": [
+          "MGNT4130"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MGNT4140",
+        "codes": [
+          "MGNT4140"
+        ],
+        "alt": false,
+        "from": "(ii) four courses selected from: MGNT3040,"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020, 3030, 4040; and"
+      },
+      {
+        "raw": "MKTG3020",
+        "codes": [
+          "MKTG3020"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020, 3030, 4040; and"
+      },
+      {
+        "raw": "MKTG3030",
+        "codes": [
+          "MKTG3030"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020, 3030, 4040; and"
+      },
+      {
+        "raw": "MKTG4040",
+        "codes": [
+          "MKTG4040"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3020, 3030, 4040; and"
+      },
+      {
+        "raw": "MKTG3040",
+        "codes": [
+          "MKTG3040"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG3050",
+        "codes": [
+          "MKTG3050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4010",
+        "codes": [
+          "MKTG4010"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4020",
+        "codes": [
+          "MKTG4020"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4030",
+        "codes": [
+          "MKTG4030"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4050",
+        "codes": [
+          "MKTG4050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4070",
+        "codes": [
+          "MKTG4070"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4080",
+        "codes": [
+          "MKTG4080"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4090",
+        "codes": [
+          "MKTG4090"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4110",
+        "codes": [
+          "MKTG4110"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4160",
+        "codes": [
+          "MKTG4160"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG4200",
+        "codes": [
+          "MKTG4200"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3040,"
+      },
+      {
+        "raw": "MKTG3010",
+        "codes": [
+          "MKTG3010"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080, 4090; and"
+      },
+      {
+        "raw": "MKTG3060",
+        "codes": [
+          "MKTG3060"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080, 4090; and"
+      },
+      {
+        "raw": "MKTG4080",
+        "codes": [
+          "MKTG4080"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080, 4090; and"
+      },
+      {
+        "raw": "MKTG4090",
+        "codes": [
+          "MKTG4090"
+        ],
+        "alt": false,
+        "from": "(i) MKTG3010, 3060, 4080, 4090; and"
+      },
+      {
+        "raw": "MKTG3020",
+        "codes": [
+          "MKTG3020"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4030",
+        "codes": [
+          "MKTG4030"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4050",
+        "codes": [
+          "MKTG4050"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4120",
+        "codes": [
+          "MKTG4120"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4150",
+        "codes": [
+          "MKTG4150"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4160",
+        "codes": [
+          "MKTG4160"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4170",
+        "codes": [
+          "MKTG4170"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4180",
+        "codes": [
+          "MKTG4180"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4190",
+        "codes": [
+          "MKTG4190"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      },
+      {
+        "raw": "MKTG4200",
+        "codes": [
+          "MKTG4200"
+        ],
+        "alt": false,
+        "from": "(ii) two courses selected from: MKTG3020,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "32-33",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses (Concentration)",
+      "units": "15-18",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Business Economics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE[DSME]2021, 4110;",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses selected from: DOTE[DSME]3000,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "one DOTE[DSME] course at 3000 or",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Business Analytics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE[DSME]2021, 2040, 4020;",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "one course selected from: DOTE[DSME]4070,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "one course selected from: DOTE[DSME]3030,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Finance",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "DOTE[DSME]2021 or FINA2020; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "15 units of FINA courses at 3000 or",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Entrepreneurship",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT1070, 2070, 3070, 4170; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses selected from: MGNT3080,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Management of International Business",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT3580, 4150; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "four courses selected from: MGNT3010,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Human Resource Management",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MGNT2040, 3010; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "four courses selected from: MGNT3040,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(g)",
+      "level": 2,
+      "title": "Marketing",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MKTG3010, 3020, 3030, 4040; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses selected from: MKTG3040,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(h)",
+      "level": 2,
+      "title": "Big Data and Quantitative Marketing",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MKTG3010, 3060, 4080, 4090; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "two courses selected from: MKTG3020,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "General Business",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "3 units of DOTE[DSME]/FINA/MGNT/MKTG",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "12 units of DOTE[DSME]/FINA/MGNT/MKTG",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

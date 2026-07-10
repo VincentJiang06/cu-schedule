@@ -1,0 +1,617 @@
+{
+  "program_en": "B.S.Sc. in Architectural Studies",
+  "program_chi": "建築學社會科學學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 78,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "ARCH1320",
+    "ARCH2111",
+    "ARCH2112",
+    "ARCH2222",
+    "ARCH2322",
+    "ARCH2323",
+    "ARCH2413",
+    "ARCH2422",
+    "ARCH3113",
+    "ARCH3114",
+    "ARCH3321",
+    "ARCH3424",
+    "ARCH3721",
+    "ARCH4115",
+    "ARCH4116",
+    "ARCH4131",
+    "ARCH4231",
+    "ARCH4331",
+    "ARCH4425",
+    "ARCH4426",
+    "ARCH4431",
+    "ARCH4531",
+    "ARCH4731",
+    "ARCH5131",
+    "ARCH5231",
+    "ARCH5331",
+    "ARCH5431",
+    "ARCH5731",
+    "ARCH5931",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "PSYC1000",
+    "PSYC1630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH2111",
+        "codes": [
+          "ARCH2111"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH2112",
+        "codes": [
+          "ARCH2112"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH3113",
+        "codes": [
+          "ARCH3113"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH3114",
+        "codes": [
+          "ARCH3114"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH4115",
+        "codes": [
+          "ARCH4115"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH4116",
+        "codes": [
+          "ARCH4116"
+        ],
+        "alt": false,
+        "from": "(a) Studio Courses"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH2222",
+        "codes": [
+          "ARCH2222"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH2322",
+        "codes": [
+          "ARCH2322"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH2323",
+        "codes": [
+          "ARCH2323"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH2413",
+        "codes": [
+          "ARCH2413"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH2422",
+        "codes": [
+          "ARCH2422"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH3321",
+        "codes": [
+          "ARCH3321"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH3424",
+        "codes": [
+          "ARCH3424"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH3721",
+        "codes": [
+          "ARCH3721"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH4425",
+        "codes": [
+          "ARCH4425"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH4426",
+        "codes": [
+          "ARCH4426"
+        ],
+        "alt": false,
+        "from": "(b) Other Required Courses"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. ARCH1003 and ARCH courses at 2000 and above level"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ARCH4131",
+        "codes": [
+          "ARCH4131"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH4231",
+        "codes": [
+          "ARCH4231"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH4331",
+        "codes": [
+          "ARCH4331"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH4431",
+        "codes": [
+          "ARCH4431"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH4531",
+        "codes": [
+          "ARCH4531"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH4731",
+        "codes": [
+          "ARCH4731"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5131",
+        "codes": [
+          "ARCH5131"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5231",
+        "codes": [
+          "ARCH5231"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5331",
+        "codes": [
+          "ARCH5331"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5431",
+        "codes": [
+          "ARCH5431"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5731",
+        "codes": [
+          "ARCH5731"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "ARCH5931",
+        "codes": [
+          "ARCH5931"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 30
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Studio Courses",
+      "units": "30",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Other Required Courses",
+      "units": "33",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "ARCH1003 and ARCH courses at 2000 and above level",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    }
+  ]
+}

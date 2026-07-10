@@ -1,0 +1,1416 @@
+{
+  "program_en": "B.Eng. in Artificial Intelligence: Systems and Technologies",
+  "program_chi": "人工智能：系統與科技工程學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": true,
+  "all_course_codes": [
+    "AIST1000",
+    "AIST1110",
+    "AIST2010",
+    "AIST2601",
+    "AIST2602",
+    "AIST3010",
+    "AIST3020",
+    "AIST3030",
+    "AIST3110",
+    "AIST3510",
+    "AIST4010",
+    "AIST4998",
+    "AIST4999",
+    "BMEG2001",
+    "BMEG2300",
+    "BMEG3101",
+    "BMEG3102",
+    "BMEG3103",
+    "BMEG3105",
+    "BMEG3130",
+    "BMEG3320",
+    "BMEG3420",
+    "BMEG3910",
+    "BMEG4010",
+    "BMEG4103",
+    "BMEG4320",
+    "BMEG4510",
+    "CSCI2040",
+    "CSCI2100",
+    "CSCI2520",
+    "CSCI2740",
+    "CSCI3130",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3170",
+    "CSCI3230",
+    "CSCI3260",
+    "CSCI3280",
+    "CSCI3290",
+    "CSCI3320",
+    "CSCI3330",
+    "CSCI4130",
+    "CSCI4160",
+    "CSCI4180",
+    "CSCI4230",
+    "CSCI4250",
+    "CSCI4430",
+    "CSCI5030",
+    "CSCI5120",
+    "CSCI5150",
+    "CSCI5240",
+    "CSCI5350",
+    "CSCI5550",
+    "CSCI5570",
+    "CSCI5640",
+    "CSCI5650",
+    "CSCI5660",
+    "EEEN2040",
+    "EEEN3010",
+    "ELEG3503",
+    "ELEG4511",
+    "ELEG4512",
+    "ELEG5491",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1820",
+    "ENGG2030",
+    "ENGG2440",
+    "ENGG2720",
+    "ENGG2760",
+    "ENGG2780",
+    "ENGG5103",
+    "ENGG5105",
+    "ENGG5108",
+    "ENGG5202",
+    "ENGG5501",
+    "ESTR1002",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR2004",
+    "ESTR2014",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2201",
+    "ESTR2206",
+    "ESTR2302",
+    "ESTR2400",
+    "ESTR2540",
+    "ESTR2601",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3108",
+    "ESTR3112",
+    "ESTR3114",
+    "ESTR3306",
+    "ESTR3404",
+    "ESTR3406",
+    "ESTR3408",
+    "ESTR3410",
+    "ESTR3601",
+    "ESTR4104",
+    "ESTR4106",
+    "ESTR4120",
+    "ESTR4122",
+    "ESTR4140",
+    "ESTR4200",
+    "ESTR4204",
+    "ESTR4218",
+    "ESTR4300",
+    "ESTR4306",
+    "ESTR4312",
+    "ESTR4316",
+    "ESTR4408",
+    "ESTR4410",
+    "ESTR4601",
+    "ESTR4998",
+    "FTEC4002",
+    "FTEC4003",
+    "FTEC4005",
+    "IERG2051",
+    "IERG3050",
+    "IERG3310",
+    "IERG3320",
+    "IERG4080",
+    "IERG4130",
+    "IERG4160",
+    "IERG4190",
+    "IERG4230",
+    "IERG4300",
+    "IERG4330",
+    "IERG5130",
+    "LING2003",
+    "MAEG2020",
+    "MAEG3020",
+    "MAEG3040",
+    "MAEG3050",
+    "MAEG3060",
+    "MAEG3080",
+    "MAEG4010",
+    "MAEG4020",
+    "MAEG4050",
+    "MAEG5090",
+    "MATH1020",
+    "MATH1510",
+    "PHYS1003",
+    "PHYS1110",
+    "SEEM2460",
+    "SEEM3500",
+    "SEEM3510",
+    "SEEM4630",
+    "SEEM5330",
+    "SEEM5680",
+    "STAT2001",
+    "STAT2006",
+    "STAT4001",
+    "STAT4005"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "AIST1110",
+        "codes": [
+          "AIST1110"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2440/ESTR2004",
+        "codes": [
+          "ENGG2440",
+          "ESTR2004"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2760/ESTR2018",
+        "codes": [
+          "ENGG2760",
+          "ESTR2018"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2780/ESTR2020",
+        "codes": [
+          "ENGG2780",
+          "ESTR2020"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "PHYS1003",
+        "codes": [
+          "PHYS1003"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "AIST1000",
+        "codes": [
+          "AIST1000"
+        ],
+        "alt": false,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "AIST3020",
+        "codes": [
+          "AIST3020"
+        ],
+        "alt": false,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "AIST3030/ESTR3114",
+        "codes": [
+          "AIST3030",
+          "ESTR3114"
+        ],
+        "alt": true,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(a) AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320"
+      },
+      {
+        "raw": "AIST4998",
+        "codes": [
+          "AIST4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      },
+      {
+        "raw": "AIST4999",
+        "codes": [
+          "AIST4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[c]"
+      },
+      {
+        "raw": "AIST2601",
+        "codes": [
+          "AIST2601"
+        ],
+        "alt": false,
+        "from": "(c) Practicum Courses"
+      },
+      {
+        "raw": "AIST2602",
+        "codes": [
+          "AIST2602"
+        ],
+        "alt": false,
+        "from": "(c) Practicum Courses"
+      }
+    ],
+    "elective": [],
+    "stream_elective": [
+      {
+        "stream": null,
+        "from": "(a) General Artificial Intelligence",
+        "courses": [
+          {
+            "raw": "AIST2010",
+            "codes": [
+              "AIST2010"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "AIST3110",
+            "codes": [
+              "AIST3110"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "AIST3510/SEEM3510",
+            "codes": [
+              "AIST3510",
+              "SEEM3510"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "AIST4010/ESTR4140",
+            "codes": [
+              "AIST4010",
+              "ESTR4140"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG3103",
+            "codes": [
+              "BMEG3103"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI2740",
+            "codes": [
+              "CSCI2740"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3130",
+            "codes": [
+              "CSCI3130"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3150/ESTR3102",
+            "codes": [
+              "CSCI3150",
+              "ESTR3102"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI3170",
+            "codes": [
+              "CSCI3170"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3290",
+            "codes": [
+              "CSCI3290"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3330",
+            "codes": [
+              "CSCI3330"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI4130/IERG4130/ESTR4306",
+            "codes": [
+              "CSCI4130",
+              "IERG4130",
+              "ESTR4306"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4160/ESTR4104",
+            "codes": [
+              "CSCI4160",
+              "ESTR4104"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4180/ESTR4106",
+            "codes": [
+              "CSCI4180",
+              "ESTR4106"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4230",
+            "codes": [
+              "CSCI4230"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI4250/ESTR4122",
+            "codes": [
+              "CSCI4250",
+              "ESTR4122"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4430/IERG3310/ESTR4120",
+            "codes": [
+              "CSCI4430",
+              "IERG3310",
+              "ESTR4120"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI5030",
+            "codes": [
+              "CSCI5030"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5120",
+            "codes": [
+              "CSCI5120"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5150",
+            "codes": [
+              "CSCI5150"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5240",
+            "codes": [
+              "CSCI5240"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5350",
+            "codes": [
+              "CSCI5350"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5550",
+            "codes": [
+              "CSCI5550"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5570",
+            "codes": [
+              "CSCI5570"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5640",
+            "codes": [
+              "CSCI5640"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5650",
+            "codes": [
+              "CSCI5650"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5660",
+            "codes": [
+              "CSCI5660"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ELEG5491",
+            "codes": [
+              "ELEG5491"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG1820",
+            "codes": [
+              "ENGG1820"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5103",
+            "codes": [
+              "ENGG5103"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5105",
+            "codes": [
+              "ENGG5105"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5108",
+            "codes": [
+              "ENGG5108"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5501",
+            "codes": [
+              "ENGG5501"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "FTEC4002",
+            "codes": [
+              "FTEC4002"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "FTEC4003",
+            "codes": [
+              "FTEC4003"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "FTEC4005",
+            "codes": [
+              "FTEC4005"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG2051/ESTR2302",
+            "codes": [
+              "IERG2051",
+              "ESTR2302"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG3050",
+            "codes": [
+              "IERG3050"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG4230",
+            "codes": [
+              "IERG4230"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG4300/ESTR4300",
+            "codes": [
+              "IERG4300",
+              "ESTR4300"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG4330/ESTR4316",
+            "codes": [
+              "IERG4330",
+              "ESTR4316"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG5130",
+            "codes": [
+              "IERG5130"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "MAEG3060/ESTR3408",
+            "codes": [
+              "MAEG3060",
+              "ESTR3408"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3080",
+            "codes": [
+              "MAEG3080"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "SEEM2460/ESTR2540",
+            "codes": [
+              "SEEM2460",
+              "ESTR2540"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "SEEM4630",
+            "codes": [
+              "SEEM4630"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "SEEM5330",
+            "codes": [
+              "SEEM5330"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "SEEM5680",
+            "codes": [
+              "SEEM5680"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "STAT4001",
+            "codes": [
+              "STAT4001"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "STAT4005",
+            "codes": [
+              "STAT4005"
+            ],
+            "alt": false
+          }
+        ]
+      },
+      {
+        "stream": "Stream 1: Biomedical Intelligence",
+        "from": "(b) Stream 1: Biomedical Intelligence",
+        "courses": [
+          {
+            "raw": "BMEG2001/ESTR2201",
+            "codes": [
+              "BMEG2001",
+              "ESTR2201"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG3102",
+            "codes": [
+              "BMEG3102"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG3105",
+            "codes": [
+              "BMEG3105"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG2300/ESTR2601",
+            "codes": [
+              "BMEG2300",
+              "ESTR2601"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG3101/ESTR3601",
+            "codes": [
+              "BMEG3101",
+              "ESTR3601"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG3103",
+            "codes": [
+              "BMEG3103"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG3130",
+            "codes": [
+              "BMEG3130"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG3320",
+            "codes": [
+              "BMEG3320"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG3420",
+            "codes": [
+              "BMEG3420"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG3910",
+            "codes": [
+              "BMEG3910"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG4010/ESTR4601",
+            "codes": [
+              "BMEG4010",
+              "ESTR4601"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG4103",
+            "codes": [
+              "BMEG4103"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "BMEG4320/ESTR4200",
+            "codes": [
+              "BMEG4320",
+              "ESTR4200"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "BMEG4510/ESTR4204",
+            "codes": [
+              "BMEG4510",
+              "ESTR4204"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI5660",
+            "codes": [
+              "CSCI5660"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "MAEG3060/ESTR3408",
+            "codes": [
+              "MAEG3060",
+              "ESTR3408"
+            ],
+            "alt": true
+          }
+        ]
+      },
+      {
+        "stream": null,
+        "from": "(c) Stream",
+        "courses": [
+          {
+            "raw": "CSCI3280",
+            "codes": [
+              "CSCI3280"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG2030/ESTR2206",
+            "codes": [
+              "ENGG2030",
+              "ESTR2206"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG2051/ESTR2302",
+            "codes": [
+              "IERG2051",
+              "ESTR2302"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "AIST2010",
+            "codes": [
+              "AIST2010"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "AIST3110",
+            "codes": [
+              "AIST3110"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "AIST3510/SEEM3510",
+            "codes": [
+              "AIST3510",
+              "SEEM3510"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI3260",
+            "codes": [
+              "CSCI3260"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3290",
+            "codes": [
+              "CSCI3290"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI3330",
+            "codes": [
+              "CSCI3330"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5640",
+            "codes": [
+              "CSCI5640"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ELEG3503",
+            "codes": [
+              "ELEG3503"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ELEG4511/ESTR4218",
+            "codes": [
+              "ELEG4511",
+              "ESTR4218"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "ELEG4512/IERG4160/ESTR4104",
+            "codes": [
+              "ELEG4512",
+              "IERG4160",
+              "ESTR4104"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "ELEG5491",
+            "codes": [
+              "ELEG5491"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5202",
+            "codes": [
+              "ENGG5202"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG3320/ESTR3306",
+            "codes": [
+              "IERG3320",
+              "ESTR3306"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG4190",
+            "codes": [
+              "IERG4190"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG4300/ESTR4300",
+            "codes": [
+              "IERG4300",
+              "ESTR4300"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG5130",
+            "codes": [
+              "IERG5130"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "LING2003",
+            "codes": [
+              "LING2003"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "SEEM5680",
+            "codes": [
+              "SEEM5680"
+            ],
+            "alt": false
+          }
+        ]
+      },
+      {
+        "stream": "Stream 3: Large-scale Artificial",
+        "from": "(d) Stream 3: Large-scale Artificial",
+        "courses": [
+          {
+            "raw": "CSCI3150/ESTR3102",
+            "codes": [
+              "CSCI3150",
+              "ESTR3102"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "AIST4010/ESTR4140",
+            "codes": [
+              "AIST4010",
+              "ESTR4140"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI3170",
+            "codes": [
+              "CSCI3170"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI4160/ESTR4104",
+            "codes": [
+              "CSCI4160",
+              "ESTR4104"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4180/ESTR4106",
+            "codes": [
+              "CSCI4180",
+              "ESTR4106"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI4230",
+            "codes": [
+              "CSCI4230"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI4250/ESTR4122",
+            "codes": [
+              "CSCI4250",
+              "ESTR4122"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "CSCI5030",
+            "codes": [
+              "CSCI5030"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5120",
+            "codes": [
+              "CSCI5120"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5150",
+            "codes": [
+              "CSCI5150"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5240",
+            "codes": [
+              "CSCI5240"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5350",
+            "codes": [
+              "CSCI5350"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5550",
+            "codes": [
+              "CSCI5550"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5570",
+            "codes": [
+              "CSCI5570"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "CSCI5640",
+            "codes": [
+              "CSCI5640"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5103",
+            "codes": [
+              "ENGG5103"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG5108",
+            "codes": [
+              "ENGG5108"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG3050",
+            "codes": [
+              "IERG3050"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG4080/ESTR4312",
+            "codes": [
+              "IERG4080",
+              "ESTR4312"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG4230",
+            "codes": [
+              "IERG4230"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "IERG4300/ESTR4300",
+            "codes": [
+              "IERG4300",
+              "ESTR4300"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG4330/ESTR4316",
+            "codes": [
+              "IERG4330",
+              "ESTR4316"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "IERG5130",
+            "codes": [
+              "IERG5130"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "STAT4001",
+            "codes": [
+              "STAT4001"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "STAT4005",
+            "codes": [
+              "STAT4005"
+            ],
+            "alt": false
+          }
+        ]
+      },
+      {
+        "stream": "Stream 4: Intelligent",
+        "from": "(e) Stream 4: Intelligent",
+        "courses": [
+          {
+            "raw": "ENGG2720/ESTR2014",
+            "codes": [
+              "ENGG2720",
+              "ESTR2014"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG2020/ESTR2400",
+            "codes": [
+              "MAEG2020",
+              "ESTR2400"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3040",
+            "codes": [
+              "MAEG3040"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "EEEN2040",
+            "codes": [
+              "EEEN2040"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "EEEN3010/ESTR3410",
+            "codes": [
+              "EEEN3010",
+              "ESTR3410"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3020/ESTR3404",
+            "codes": [
+              "MAEG3020",
+              "ESTR3404"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3050/ESTR3406",
+            "codes": [
+              "MAEG3050",
+              "ESTR3406"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3060/ESTR3408",
+            "codes": [
+              "MAEG3060",
+              "ESTR3408"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG3080",
+            "codes": [
+              "MAEG3080"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "MAEG4010/ESTR4408",
+            "codes": [
+              "MAEG4010",
+              "ESTR4408"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG4020/ESTR4410",
+            "codes": [
+              "MAEG4020",
+              "ESTR4410"
+            ],
+            "alt": true
+          },
+          {
+            "raw": "MAEG4050",
+            "codes": [
+              "MAEG4050"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "MAEG5090",
+            "codes": [
+              "MAEG5090"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "SEEM3500",
+            "codes": [
+              "SEEM3500"
+            ],
+            "alt": false
+          }
+        ]
+      }
+    ]
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "16",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "AIST1000, 3020, AIST3030/ESTR3114, CSCI2100/ESTR2102, CSCI3160/ESTR3104, CSCI3230/ESTR3108, CSCI3320",
+      "units": "19",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[c]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Practicum Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses (Choose any ONE",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "General Artificial Intelligence",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": null,
+      "n_courses": 50
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Stream 1: Biomedical Intelligence",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": "Stream 1: Biomedical Intelligence",
+      "n_courses": 16
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Stream",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Stream 3: Large-scale Artificial",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": "Stream 3: Large-scale Artificial",
+      "n_courses": 25
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Stream 4: Intelligent",
+      "units": null,
+      "bucket": "stream_elective",
+      "stream": "Stream 4: Intelligent",
+      "n_courses": 14
+    }
+  ]
+}

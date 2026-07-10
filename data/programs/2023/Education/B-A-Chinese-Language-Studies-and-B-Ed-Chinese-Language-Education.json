@@ -1,0 +1,1117 @@
+{
+  "program_en": "B.A. (Chinese Language Studies) and B.Ed. (Chinese Language Education)",
+  "program_chi": "文學士（中國語文研究）及教育學士（中國語文教育）",
+  "admission_year": "2023",
+  "faculty": "Faculty of Education",
+  "degree": "B.A",
+  "total_units": 117,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHLL1401",
+    "CHLL1900",
+    "CHLL1902",
+    "CHLL2121",
+    "CHLL2131",
+    "CHLL2212",
+    "CHLL2300",
+    "CHLL2301",
+    "CHLL2350",
+    "CHLL2401",
+    "CHLL3110",
+    "CHLL3141",
+    "CHLL3142",
+    "CHLL3143",
+    "CHLL3151",
+    "CHLL3162",
+    "CHLL3221",
+    "CHLL3222",
+    "CHLL3223",
+    "CHLL3231",
+    "CHLL3232",
+    "CHLL3310",
+    "CHLL3311",
+    "CHLL3312",
+    "CHLL3313",
+    "CHLL3314",
+    "CHLL3315",
+    "CHLL3316",
+    "CHLL3317",
+    "CHLL3321",
+    "CHLL3322",
+    "CHLL3323",
+    "CHLL3324",
+    "CHLL3341",
+    "CHLL3351",
+    "CHLL3402",
+    "CHLL3404",
+    "CHLL3405",
+    "CHLL3406",
+    "CHLL3407",
+    "CHLL3408",
+    "CHLL4121",
+    "CHLL4141",
+    "CHLL4161",
+    "CHLL4224",
+    "CHLL4242",
+    "CHLL4243",
+    "CHLL4244",
+    "CHLL4310",
+    "CHLL4311",
+    "CHLL4312",
+    "CHLL4313",
+    "CHLL4314",
+    "CHLL4315",
+    "CHLL4320",
+    "CHLL4321",
+    "CHLL4322",
+    "CHLL4330",
+    "CHLL4331",
+    "CHLL4332",
+    "CHLL4340",
+    "CHLL4342",
+    "CHLL4401",
+    "CHLL4402",
+    "CHLL4403",
+    "CHLL4404",
+    "CHLL4405",
+    "CHLL4411",
+    "CHLT1880",
+    "CHLT2881",
+    "CHLT2882",
+    "CHLT2883",
+    "CHLT2884",
+    "CHLT2885",
+    "CLED1030",
+    "CLED2530",
+    "CLED2540",
+    "CLED2640",
+    "CLED3510",
+    "CLED3530",
+    "CLED3540",
+    "CLED3610",
+    "CLED4510",
+    "CLED4520",
+    "CLED4620",
+    "CLED4630",
+    "CLED4640",
+    "CLED4650",
+    "CLED4660",
+    "CLED4720",
+    "CLED4730",
+    "CLED4740",
+    "CLED4750",
+    "CLED4760",
+    "EDUC2120",
+    "EDUC2210",
+    "EDUC2220",
+    "EDUC2240",
+    "EDUC2312",
+    "EDUC3140",
+    "EDUC3150",
+    "EDUC3200",
+    "EDUC3201",
+    "EDUC3260",
+    "EDUC3270",
+    "EDUC3280",
+    "EDUC3290",
+    "EDUC3311",
+    "EDUC4030",
+    "EDUC4040",
+    "EDUC4110",
+    "EDUC4131",
+    "EDUC4320",
+    "EDUC4330",
+    "EDUC4340"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "EDUC2312",
+        "codes": [
+          "EDUC2312"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1401",
+        "codes": [
+          "CHLL1401"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLL2212",
+        "codes": [
+          "CHLL2212"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLL2300",
+        "codes": [
+          "CHLL2300"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLL2350",
+        "codes": [
+          "CHLL2350"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLL3162",
+        "codes": [
+          "CHLL3162"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT1880",
+        "codes": [
+          "CHLT1880"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT2881",
+        "codes": [
+          "CHLT2881"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT2882",
+        "codes": [
+          "CHLT2882"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT2883",
+        "codes": [
+          "CHLT2883"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT2884",
+        "codes": [
+          "CHLT2884"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CHLT2885",
+        "codes": [
+          "CHLT2885"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CLED2530",
+        "codes": [
+          "CLED2530"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED3510",
+        "codes": [
+          "CLED3510"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4510",
+        "codes": [
+          "CLED4510"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED2640",
+        "codes": [
+          "CLED2640"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4630",
+        "codes": [
+          "CLED4630"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4720",
+        "codes": [
+          "CLED4720"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC3201",
+        "codes": [
+          "EDUC3201"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC3311",
+        "codes": [
+          "EDUC3311"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC4340",
+        "codes": [
+          "EDUC4340"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC4030",
+        "codes": [
+          "EDUC4030"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "EDUC4040",
+        "codes": [
+          "EDUC4040"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED1030",
+        "codes": [
+          "CLED1030"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHLL2121",
+        "codes": [
+          "CHLL2121"
+        ],
+        "alt": false,
+        "from": "(a) Any one course chosen from the"
+      },
+      {
+        "raw": "CHLL2131",
+        "codes": [
+          "CHLL2131"
+        ],
+        "alt": false,
+        "from": "(a) Any one course chosen from the"
+      },
+      {
+        "raw": "CHLL2301",
+        "codes": [
+          "CHLL2301"
+        ],
+        "alt": false,
+        "from": "(a) Any one course chosen from the"
+      },
+      {
+        "raw": "CHLL2401",
+        "codes": [
+          "CHLL2401"
+        ],
+        "alt": false,
+        "from": "(a) Any one course chosen from the"
+      },
+      {
+        "raw": "CHLL3110",
+        "codes": [
+          "CHLL3110"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL3141",
+        "codes": [
+          "CHLL3141"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL3142",
+        "codes": [
+          "CHLL3142"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL3143",
+        "codes": [
+          "CHLL3143"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL3151",
+        "codes": [
+          "CHLL3151"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL4121",
+        "codes": [
+          "CHLL4121"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL4141",
+        "codes": [
+          "CHLL4141"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL4161",
+        "codes": [
+          "CHLL4161"
+        ],
+        "alt": false,
+        "from": "(i) Language and Linguistics CHLL3110,"
+      },
+      {
+        "raw": "CHLL3221",
+        "codes": [
+          "CHLL3221"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL3222",
+        "codes": [
+          "CHLL3222"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL3223",
+        "codes": [
+          "CHLL3223"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL3231",
+        "codes": [
+          "CHLL3231"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL3232",
+        "codes": [
+          "CHLL3232"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL4224",
+        "codes": [
+          "CHLL4224"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL4242",
+        "codes": [
+          "CHLL4242"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL4243",
+        "codes": [
+          "CHLL4243"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL4244",
+        "codes": [
+          "CHLL4244"
+        ],
+        "alt": false,
+        "from": "(ii) Ancient Documents CHLL3221,"
+      },
+      {
+        "raw": "CHLL3310",
+        "codes": [
+          "CHLL3310"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3311",
+        "codes": [
+          "CHLL3311"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3312",
+        "codes": [
+          "CHLL3312"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3313",
+        "codes": [
+          "CHLL3313"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3314",
+        "codes": [
+          "CHLL3314"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3315",
+        "codes": [
+          "CHLL3315"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3316",
+        "codes": [
+          "CHLL3316"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3317",
+        "codes": [
+          "CHLL3317"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3321",
+        "codes": [
+          "CHLL3321"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3322",
+        "codes": [
+          "CHLL3322"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3323",
+        "codes": [
+          "CHLL3323"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3324",
+        "codes": [
+          "CHLL3324"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3341",
+        "codes": [
+          "CHLL3341"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3351",
+        "codes": [
+          "CHLL3351"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4310",
+        "codes": [
+          "CHLL4310"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4311",
+        "codes": [
+          "CHLL4311"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4312",
+        "codes": [
+          "CHLL4312"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4313",
+        "codes": [
+          "CHLL4313"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4314",
+        "codes": [
+          "CHLL4314"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4315",
+        "codes": [
+          "CHLL4315"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4320",
+        "codes": [
+          "CHLL4320"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4321",
+        "codes": [
+          "CHLL4321"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4322",
+        "codes": [
+          "CHLL4322"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4330",
+        "codes": [
+          "CHLL4330"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4331",
+        "codes": [
+          "CHLL4331"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4332",
+        "codes": [
+          "CHLL4332"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4340",
+        "codes": [
+          "CHLL4340"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL4342",
+        "codes": [
+          "CHLL4342"
+        ],
+        "alt": false,
+        "from": "(iii) Classical Literature CHLL3310,"
+      },
+      {
+        "raw": "CHLL3402",
+        "codes": [
+          "CHLL3402"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL3404",
+        "codes": [
+          "CHLL3404"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL3405",
+        "codes": [
+          "CHLL3405"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL3406",
+        "codes": [
+          "CHLL3406"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL3407",
+        "codes": [
+          "CHLL3407"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL3408",
+        "codes": [
+          "CHLL3408"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4401",
+        "codes": [
+          "CHLL4401"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4402",
+        "codes": [
+          "CHLL4402"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4403",
+        "codes": [
+          "CHLL4403"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4404",
+        "codes": [
+          "CHLL4404"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4405",
+        "codes": [
+          "CHLL4405"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CHLL4411",
+        "codes": [
+          "CHLL4411"
+        ],
+        "alt": false,
+        "from": "(iv) Modern"
+      },
+      {
+        "raw": "CLED2540",
+        "codes": [
+          "CLED2540"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED3540",
+        "codes": [
+          "CLED3540"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4620",
+        "codes": [
+          "CLED4620"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4640",
+        "codes": [
+          "CLED4640"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4660",
+        "codes": [
+          "CLED4660"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4740",
+        "codes": [
+          "CLED4740"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4750",
+        "codes": [
+          "CLED4750"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "CLED4760",
+        "codes": [
+          "CLED4760"
+        ],
+        "alt": false,
+        "from": "(c) A minimum of 4 units chosen from the following Language"
+      },
+      {
+        "raw": "EDUC2210",
+        "codes": [
+          "EDUC2210"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC2220",
+        "codes": [
+          "EDUC2220"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3140",
+        "codes": [
+          "EDUC3140"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3150",
+        "codes": [
+          "EDUC3150"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3200",
+        "codes": [
+          "EDUC3200"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3260",
+        "codes": [
+          "EDUC3260"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3270",
+        "codes": [
+          "EDUC3270"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3280",
+        "codes": [
+          "EDUC3280"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC3290",
+        "codes": [
+          "EDUC3290"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC4110",
+        "codes": [
+          "EDUC4110"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC4131",
+        "codes": [
+          "EDUC4131"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC4320",
+        "codes": [
+          "EDUC4320"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      },
+      {
+        "raw": "EDUC4330",
+        "codes": [
+          "EDUC4330"
+        ],
+        "alt": false,
+        "from": "(d) A minimum of 2 units chosen from the following Educational"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "(b) (c) (d) (e) | Language",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Any one course chosen from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Specialty Courses A minimum of 21 units chosen from the following specialty",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Language and Linguistics CHLL3110,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Ancient Documents CHLL3221,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Classical Literature CHLL3310,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "Modern",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "A minimum of 4 units chosen from the following Language",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "A minimum of 2 units chosen from the following Educational",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    }
+  ]
+}

@@ -1,0 +1,1042 @@
+{
+  "program_en": "B.Eng. in Systems Engineering and Engineering Management",
+  "program_chi": "系統工程與工程管理學工程學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "AIST3510",
+    "CSCI1120",
+    "CSCI1130",
+    "CSCI2040",
+    "CSCI2100",
+    "CSCI4140",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4120",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG1820",
+    "ENGG2440",
+    "ENGG2450",
+    "ENGG2720",
+    "ENGG2740",
+    "ENGG2760",
+    "ENGG2780",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR1100",
+    "ESTR1102",
+    "ESTR2004",
+    "ESTR2005",
+    "ESTR2014",
+    "ESTR2016",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2500",
+    "ESTR2540",
+    "ESTR3500",
+    "ESTR3502",
+    "ESTR3504",
+    "ESTR3506",
+    "ESTR3509",
+    "ESTR3510",
+    "ESTR3512",
+    "ESTR3514",
+    "ESTR3516",
+    "ESTR4506",
+    "ESTR4508",
+    "ESTR4510",
+    "ESTR4512",
+    "ESTR4998",
+    "FINA2010",
+    "FINA2020",
+    "FINA3010",
+    "FTEC4001",
+    "FTEC4002",
+    "FTEC4005",
+    "FTEC4007",
+    "IBBA3040",
+    "IERG4210",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "PHYS1003",
+    "PHYS1110",
+    "SEEM2420",
+    "SEEM2440",
+    "SEEM2460",
+    "SEEM2520",
+    "SEEM2550",
+    "SEEM2602",
+    "SEEM3410",
+    "SEEM3430",
+    "SEEM3440",
+    "SEEM3450",
+    "SEEM3460",
+    "SEEM3470",
+    "SEEM3490",
+    "SEEM3500",
+    "SEEM3510",
+    "SEEM3550",
+    "SEEM3580",
+    "SEEM3590",
+    "SEEM3620",
+    "SEEM3630",
+    "SEEM3650",
+    "SEEM3680",
+    "SEEM4540",
+    "SEEM4570",
+    "SEEM4630",
+    "SEEM4670",
+    "SEEM4720",
+    "SEEM4730",
+    "SEEM4750",
+    "SEEM4760",
+    "SEEM4998",
+    "SEEM4999"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130",
+        "codes": [
+          "ENGG1130"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ESTR1006",
+        "codes": [
+          "ESTR1006"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG2440/ESTR2004",
+        "codes": [
+          "ENGG2440",
+          "ESTR2004"
+        ],
+        "alt": true,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "ENGG2760/ESTR2018",
+        "codes": [
+          "ENGG2760",
+          "ESTR2018"
+        ],
+        "alt": true,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "ENGG2780",
+        "codes": [
+          "ENGG2780"
+        ],
+        "alt": false,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "ESTR2020",
+        "codes": [
+          "ESTR2020"
+        ],
+        "alt": false,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "SEEM2440/ESTR2500",
+        "codes": [
+          "SEEM2440",
+          "ESTR2500"
+        ],
+        "alt": true,
+        "from": "(a) ENGG2440/ESTR2004, ENGG2760/ESTR2018,"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "(b) Programming Courses"
+      },
+      {
+        "raw": "CSCI1130",
+        "codes": [
+          "CSCI1130"
+        ],
+        "alt": false,
+        "from": "(b) Programming Courses"
+      },
+      {
+        "raw": "ESTR1102",
+        "codes": [
+          "ESTR1102"
+        ],
+        "alt": false,
+        "from": "(b) Programming Courses"
+      },
+      {
+        "raw": "ENGG1310/ESTR1003",
+        "codes": [
+          "ENGG1310",
+          "ESTR1003"
+        ],
+        "alt": true,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "ENGG2720",
+        "codes": [
+          "ENGG2720"
+        ],
+        "alt": false,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "ESTR2014",
+        "codes": [
+          "ESTR2014"
+        ],
+        "alt": false,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "ENGG2740/ESTR2016",
+        "codes": [
+          "ENGG2740",
+          "ESTR2016"
+        ],
+        "alt": true,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "PHYS1003",
+        "codes": [
+          "PHYS1003"
+        ],
+        "alt": false,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "SEEM2460/ESTR2540",
+        "codes": [
+          "SEEM2460",
+          "ESTR2540"
+        ],
+        "alt": true,
+        "from": "(c) Other Courses[b][c]"
+      },
+      {
+        "raw": "CSCI2040",
+        "codes": [
+          "CSCI2040"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ESTR2102",
+        "codes": [
+          "ESTR2102"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM2420",
+        "codes": [
+          "SEEM2420"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM2602",
+        "codes": [
+          "SEEM2602"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM3410",
+        "codes": [
+          "SEEM3410"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM3440/ESTR3500",
+        "codes": [
+          "SEEM3440",
+          "ESTR3500"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM3450/ESTR3502",
+        "codes": [
+          "SEEM3450",
+          "ESTR3502"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM3550",
+        "codes": [
+          "SEEM3550"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "ESTR3506",
+        "codes": [
+          "ESTR3506"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM3650/ESTR3516",
+        "codes": [
+          "SEEM3650",
+          "ESTR3516"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "SEEM4998",
+        "codes": [
+          "SEEM4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[d]"
+      },
+      {
+        "raw": "SEEM4999",
+        "codes": [
+          "SEEM4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[d]"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "AIST3510",
+        "codes": [
+          "AIST3510"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3510",
+        "codes": [
+          "SEEM3510"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI4140",
+        "codes": [
+          "CSCI4140"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "FTEC4001",
+        "codes": [
+          "FTEC4001"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM2520",
+        "codes": [
+          "SEEM2520"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3460/ESTR3504",
+        "codes": [
+          "SEEM3460",
+          "ESTR3504"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3590/ESTR3509",
+        "codes": [
+          "SEEM3590",
+          "ESTR3509"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3620/ESTR3514",
+        "codes": [
+          "SEEM3620",
+          "ESTR3514"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3630/ESTR3510",
+        "codes": [
+          "SEEM3630",
+          "ESTR3510"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3680/ESTR3512",
+        "codes": [
+          "SEEM3680",
+          "ESTR3512"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4670",
+        "codes": [
+          "SEEM4670"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4720/ESTR4506",
+        "codes": [
+          "SEEM4720",
+          "ESTR4506"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4730/ESTR4508",
+        "codes": [
+          "SEEM4730",
+          "ESTR4508"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4750/ESTR4510",
+        "codes": [
+          "SEEM4750",
+          "ESTR4510"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM4760/ESTR4512",
+        "codes": [
+          "SEEM4760",
+          "ESTR4512"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3430",
+        "codes": [
+          "SEEM3430"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM4540",
+        "codes": [
+          "SEEM4540"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "AIST3510/SEEM3510",
+        "codes": [
+          "AIST3510",
+          "SEEM3510"
+        ],
+        "alt": true,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "CSCI4140",
+        "codes": [
+          "CSCI4140"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "FTEC4001",
+        "codes": [
+          "FTEC4001"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "FTEC4005",
+        "codes": [
+          "FTEC4005"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "FTEC4007",
+        "codes": [
+          "FTEC4007"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM3460/ESTR3504",
+        "codes": [
+          "SEEM3460",
+          "ESTR3504"
+        ],
+        "alt": true,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM3490",
+        "codes": [
+          "SEEM3490"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM3680/ESTR3512",
+        "codes": [
+          "SEEM3680",
+          "ESTR3512"
+        ],
+        "alt": true,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM4570",
+        "codes": [
+          "SEEM4570"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "(a) Business Information Systems"
+      },
+      {
+        "raw": "SEEM3620/ESTR3514",
+        "codes": [
+          "SEEM3620",
+          "ESTR3514"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4760/ESTR4512",
+        "codes": [
+          "SEEM4760",
+          "ESTR4512"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "FTEC4002",
+        "codes": [
+          "FTEC4002"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "FTEC4005",
+        "codes": [
+          "FTEC4005"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM2520",
+        "codes": [
+          "SEEM2520"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM3590/ESTR3509",
+        "codes": [
+          "SEEM3590",
+          "ESTR3509"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM3630/ESTR3510",
+        "codes": [
+          "SEEM3630",
+          "ESTR3510"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4630",
+        "codes": [
+          "SEEM4630"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4670",
+        "codes": [
+          "SEEM4670"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4720/ESTR4506",
+        "codes": [
+          "SEEM4720",
+          "ESTR4506"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4730/ESTR4508",
+        "codes": [
+          "SEEM4730",
+          "ESTR4508"
+        ],
+        "alt": true,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "SEEM4750",
+        "codes": [
+          "SEEM4750"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      },
+      {
+        "raw": "ESTR4510",
+        "codes": [
+          "ESTR4510"
+        ],
+        "alt": false,
+        "from": "(b) Decision Analytics"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses (all courses in",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ENGG2440/ESTR2004, ENGG2760/ESTR2018,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Programming Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Other Courses[b][c]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2040#, CSCI2100#/ESTR2102,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[d]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "18",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Business Information Systems",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Decision Analytics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 17
+    }
+  ]
+}

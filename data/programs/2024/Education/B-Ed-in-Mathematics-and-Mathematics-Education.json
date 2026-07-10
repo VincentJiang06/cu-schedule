@@ -1,0 +1,480 @@
+{
+  "program_en": "B.Ed. in Mathematics and Mathematics Education",
+  "program_chi": "數學及數學教育教育學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Education",
+  "degree": "B.Ed",
+  "total_units": 102,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BMED3011",
+    "BMED3021",
+    "BMED3031",
+    "BMED3051",
+    "BMED3071",
+    "BMED3081",
+    "BMED3091",
+    "BMED4510",
+    "BMED4520",
+    "BMED4910",
+    "BMED4920",
+    "EDUC2120",
+    "EDUC2210",
+    "EDUC2220",
+    "EDUC2240",
+    "EDUC2312",
+    "EDUC3140",
+    "EDUC3150",
+    "EDUC3200",
+    "EDUC3201",
+    "EDUC3260",
+    "EDUC3270",
+    "EDUC3280",
+    "EDUC3290",
+    "EDUC3311",
+    "EDUC4030",
+    "EDUC4040",
+    "EDUC4110",
+    "EDUC4131",
+    "EDUC4320",
+    "EDUC4330",
+    "EDUC4340",
+    "MATH1010",
+    "MATH1018",
+    "MATH1030",
+    "MATH1038",
+    "MATH1050",
+    "MATH1058",
+    "MATH2010",
+    "MATH2018",
+    "MATH2020",
+    "MATH2028",
+    "MATH2040",
+    "MATH2048",
+    "MATH2050",
+    "MATH2058",
+    "MATH2060",
+    "MATH2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2221",
+    "MATH2230",
+    "MATH3020",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3250",
+    "MATH3260",
+    "MATH3270",
+    "MATH3280",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3340",
+    "MATH3360",
+    "MATH4010",
+    "MATH4020",
+    "MATH4030",
+    "MATH4050",
+    "MATH4060",
+    "MATH4080",
+    "MATH4210",
+    "MATH4220",
+    "MATH4230",
+    "MATH4240",
+    "MATH4250",
+    "MATH4260",
+    "MATH4280",
+    "MATH4400"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "EDUC2312",
+        "codes": [
+          "EDUC2312"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "BMED3011",
+        "codes": [
+          "BMED3011"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3021",
+        "codes": [
+          "BMED3021"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3031",
+        "codes": [
+          "BMED3031"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3051",
+        "codes": [
+          "BMED3051"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3071",
+        "codes": [
+          "BMED3071"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3081",
+        "codes": [
+          "BMED3081"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "BMED3091",
+        "codes": [
+          "BMED3091"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[b]"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC3201",
+        "codes": [
+          "EDUC3201"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC3311",
+        "codes": [
+          "EDUC3311"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC4340",
+        "codes": [
+          "EDUC4340"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC4030",
+        "codes": [
+          "EDUC4030"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
+        "raw": "EDUC4040",
+        "codes": [
+          "EDUC4040"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
+        "raw": "BMED4510",
+        "codes": [
+          "BMED4510"
+        ],
+        "alt": false,
+        "from": "(e) Research Experience"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "MATH2060",
+        "codes": [
+          "MATH2060"
+        ],
+        "alt": false,
+        "from": "(i) MATH2060/2068, MATH courses at 3000"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(i) MATH2060/2068, MATH courses at 3000"
+      },
+      {
+        "raw": "EDUC2210",
+        "codes": [
+          "EDUC2210"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC2220",
+        "codes": [
+          "EDUC2220"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3140",
+        "codes": [
+          "EDUC3140"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3150",
+        "codes": [
+          "EDUC3150"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3200",
+        "codes": [
+          "EDUC3200"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3260",
+        "codes": [
+          "EDUC3260"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3270",
+        "codes": [
+          "EDUC3270"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3280",
+        "codes": [
+          "EDUC3280"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC3290",
+        "codes": [
+          "EDUC3290"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC4110",
+        "codes": [
+          "EDUC4110"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC4131",
+        "codes": [
+          "EDUC4131"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC4320",
+        "codes": [
+          "EDUC4320"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      },
+      {
+        "raw": "EDUC4330",
+        "codes": [
+          "EDUC4330"
+        ],
+        "alt": false,
+        "from": "(b) Educational Studies"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Subject Knowledge",
+      "units": "26",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Pedagogy[b]",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Educational Studies",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Teaching Practice",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "18 units of Subject Knowledge",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "MATH2060/2068, MATH courses at 3000",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "9 units of courses chosen from one",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Educational Studies",
+      "units": "2",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    }
+  ]
+}

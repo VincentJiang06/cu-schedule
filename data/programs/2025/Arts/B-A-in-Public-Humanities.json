@@ -1,0 +1,544 @@
+{
+  "program_en": "B.A. in Public Humanities",
+  "program_chi": "公共人文學文學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 66,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ANTH2370",
+    "ANTH2730",
+    "ANTH4720",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1101",
+    "CHES3101",
+    "CHES3102",
+    "CHLL1900",
+    "COMM2932",
+    "COMM3840",
+    "COMM3841",
+    "COMM3939",
+    "CURE1000",
+    "CURE1004",
+    "CURE1009",
+    "CURE1110",
+    "CURE1400",
+    "CURE1401",
+    "CURE1403",
+    "CURE2001",
+    "CURE2003",
+    "CURE2005",
+    "CURE2006",
+    "CURE2007",
+    "CURE2010",
+    "CURE2014",
+    "CURE2018",
+    "CURE2019",
+    "CURE2022",
+    "CURE2024",
+    "CURE2025",
+    "CURE2030",
+    "CURE2031",
+    "CURE2032",
+    "CURE2036",
+    "CURE2040",
+    "CURE2042",
+    "CURE2047",
+    "CURE2051",
+    "CURE2066",
+    "CURE2145",
+    "CURE2228",
+    "CURE2403",
+    "CURE2404",
+    "CURE2405",
+    "CURE2406",
+    "CURE2407",
+    "CURE2409",
+    "CURE2410",
+    "CURE2411",
+    "CURE2412",
+    "CURE3003",
+    "CURE3007",
+    "CURE3011",
+    "CURE3012",
+    "CURE3013",
+    "CURE3014",
+    "CURE3015",
+    "CURE3025",
+    "CURE3026",
+    "CURE3030",
+    "CURE3032",
+    "CURE3033",
+    "CURE3034",
+    "CURE3036",
+    "CURE3037",
+    "CURE3038",
+    "CURE3066",
+    "CURE3144",
+    "CURE3401",
+    "CURE3402",
+    "CURE3403",
+    "CURE3404",
+    "CURE3405",
+    "CURE3406",
+    "CURE3407",
+    "CURE3408",
+    "CURE3409",
+    "CURE3508",
+    "CURE4008",
+    "CURE4014",
+    "CURE4021",
+    "CURE4022",
+    "CURE4027",
+    "CURE4028",
+    "CURE4031",
+    "CURE4033",
+    "CURE4038",
+    "CURE4040",
+    "CURE4401",
+    "CURE4403",
+    "CURE4404",
+    "CURE4408",
+    "CURE4411",
+    "CURE4421",
+    "CURE4431",
+    "CURE4441",
+    "ENGE1000",
+    "FAAS1900",
+    "FAAS2117",
+    "FAAS2208",
+    "FAAS3108",
+    "FAAS3229",
+    "FAAS4201",
+    "HIST1000",
+    "HIST2010",
+    "JASP1090",
+    "JASP2200",
+    "LING1000",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1004",
+        "codes": [
+          "CURE1004"
+        ],
+        "alt": false,
+        "from": "(a) CURE1004, 1009, 1401, 1403, 2001"
+      },
+      {
+        "raw": "CURE1009",
+        "codes": [
+          "CURE1009"
+        ],
+        "alt": false,
+        "from": "(a) CURE1004, 1009, 1401, 1403, 2001"
+      },
+      {
+        "raw": "CURE1401",
+        "codes": [
+          "CURE1401"
+        ],
+        "alt": false,
+        "from": "(a) CURE1004, 1009, 1401, 1403, 2001"
+      },
+      {
+        "raw": "CURE1403",
+        "codes": [
+          "CURE1403"
+        ],
+        "alt": false,
+        "from": "(a) CURE1004, 1009, 1401, 1403, 2001"
+      },
+      {
+        "raw": "CURE2001",
+        "codes": [
+          "CURE2001"
+        ],
+        "alt": false,
+        "from": "(a) CURE1004, 1009, 1401, 1403, 2001"
+      },
+      {
+        "raw": "CURE4014",
+        "codes": [
+          "CURE4014"
+        ],
+        "alt": false,
+        "from": "(b) Capstone Course: CURE4014 or 4038"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CURE2006",
+        "codes": [
+          "CURE2006"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE2411",
+        "codes": [
+          "CURE2411"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE2412",
+        "codes": [
+          "CURE2412"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE3007",
+        "codes": [
+          "CURE3007"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE4008",
+        "codes": [
+          "CURE4008"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE4401",
+        "codes": [
+          "CURE4401"
+        ],
+        "alt": false,
+        "from": "(a) Any three courses from the"
+      },
+      {
+        "raw": "CURE2411",
+        "codes": [
+          "CURE2411"
+        ],
+        "alt": false,
+        "from": "(a) CURE2411,"
+      },
+      {
+        "raw": "CURE2412",
+        "codes": [
+          "CURE2412"
+        ],
+        "alt": false,
+        "from": "(a) CURE2411,"
+      },
+      {
+        "raw": "CURE4401",
+        "codes": [
+          "CURE4401"
+        ],
+        "alt": false,
+        "from": "(a) CURE2411,"
+      },
+      {
+        "raw": "CURE2006",
+        "codes": [
+          "CURE2006"
+        ],
+        "alt": false,
+        "from": "(a) CURE2006, 3007,"
+      },
+      {
+        "raw": "CURE3007",
+        "codes": [
+          "CURE3007"
+        ],
+        "alt": false,
+        "from": "(a) CURE2006, 3007,"
+      },
+      {
+        "raw": "CURE4008",
+        "codes": [
+          "CURE4008"
+        ],
+        "alt": false,
+        "from": "(a) CURE2006, 3007,"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 17
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CURE1004, 1009, 1401, 1403, 2001",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone Course: CURE4014 or 4038",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "39",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Any three courses from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Nine courses at 2000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One course from Religious Studies",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CURE2411,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Nine courses at 2000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One course",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CURE2006, 3007,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Nine courses at 2000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One course",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

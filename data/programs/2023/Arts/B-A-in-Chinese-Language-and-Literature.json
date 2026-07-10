@@ -1,0 +1,514 @@
+{
+  "program_en": "B.A. in Chinese Language and Literature",
+  "program_chi": "中國語言及文學文學士",
+  "admission_year": "2023",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1004",
+    "ARTS1005",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1100",
+    "CHLL1110",
+    "CHLL1211",
+    "CHLL1401",
+    "CHLL1900",
+    "CHLL2121",
+    "CHLL2131",
+    "CHLL2212",
+    "CHLL2300",
+    "CHLL2301",
+    "CHLL2350",
+    "CHLL2401",
+    "CHLL2402",
+    "CHLL3110",
+    "CHLL3121",
+    "CHLL3131",
+    "CHLL3132",
+    "CHLL3141",
+    "CHLL3142",
+    "CHLL3143",
+    "CHLL3144",
+    "CHLL3145",
+    "CHLL3146",
+    "CHLL3151",
+    "CHLL3161",
+    "CHLL3162",
+    "CHLL3221",
+    "CHLL3222",
+    "CHLL3223",
+    "CHLL3231",
+    "CHLL3232",
+    "CHLL3233",
+    "CHLL3310",
+    "CHLL3311",
+    "CHLL3312",
+    "CHLL3313",
+    "CHLL3314",
+    "CHLL3315",
+    "CHLL3316",
+    "CHLL3317",
+    "CHLL3321",
+    "CHLL3322",
+    "CHLL3323",
+    "CHLL3324",
+    "CHLL3341",
+    "CHLL3351",
+    "CHLL3402",
+    "CHLL3403",
+    "CHLL3404",
+    "CHLL3405",
+    "CHLL3406",
+    "CHLL3407",
+    "CHLL3408",
+    "CHLL3409",
+    "CHLL3410",
+    "CHLL3411",
+    "CHLL3412",
+    "CHLL3413",
+    "CHLL4001",
+    "CHLL4002",
+    "CHLL4110",
+    "CHLL4111",
+    "CHLL4121",
+    "CHLL4141",
+    "CHLL4151",
+    "CHLL4161",
+    "CHLL4224",
+    "CHLL4241",
+    "CHLL4242",
+    "CHLL4243",
+    "CHLL4244",
+    "CHLL4251",
+    "CHLL4252",
+    "CHLL4253",
+    "CHLL4254",
+    "CHLL4310",
+    "CHLL4311",
+    "CHLL4312",
+    "CHLL4313",
+    "CHLL4314",
+    "CHLL4315",
+    "CHLL4320",
+    "CHLL4321",
+    "CHLL4322",
+    "CHLL4330",
+    "CHLL4331",
+    "CHLL4332",
+    "CHLL4340",
+    "CHLL4341",
+    "CHLL4342",
+    "CHLL4343",
+    "CHLL4401",
+    "CHLL4402",
+    "CHLL4403",
+    "CHLL4404",
+    "CHLL4405",
+    "CHLL4406",
+    "CHLL4407",
+    "CHLL4408",
+    "CHLL4409",
+    "CHLL4410",
+    "CHLL4411",
+    "CHLL4412",
+    "CHLL4413",
+    "CHLL4414",
+    "CHLL4415",
+    "CHLL4416",
+    "CHLT1001",
+    "CHLT1002",
+    "CUMT1000",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "ENGE1000",
+    "FAAS1900",
+    "FAAS2117",
+    "FAAS3105",
+    "FAAS3223",
+    "FAAS4106",
+    "HIST1000",
+    "HIST1700",
+    "JASP1090",
+    "LING1000",
+    "LING1002",
+    "LING3108",
+    "MUSC1000",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000",
+    "TRAN1010",
+    "TRAN1030",
+    "TRAN1120",
+    "TRAN1130",
+    "TRAN2020",
+    "TRAN2050",
+    "TRAN2070",
+    "TRAN2110",
+    "TRAN2120",
+    "TRAN2130",
+    "TRAN2140",
+    "TRAN2150",
+    "TRAN2240",
+    "TRAN2250",
+    "TRAN2610",
+    "TRAN2840",
+    "TRAN3080",
+    "TRAN3170",
+    "TRAN3180",
+    "TRAN3240",
+    "TRAN3270",
+    "TRAN3280",
+    "TRAN3620",
+    "TRAN3720",
+    "TRAN3800",
+    "TRAN3810",
+    "TRAN3820",
+    "TRAN3830",
+    "TRAN3844",
+    "TRAN3845",
+    "TRAN3850",
+    "TRAN3860",
+    "TRAN3870",
+    "TRAN3880",
+    "TRAN3890",
+    "TRAN4050",
+    "TRAN4070",
+    "TRAN4210",
+    "TRAN4800",
+    "TRAN4840",
+    "UGCP1001",
+    "UGCP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1004",
+        "codes": [
+          "ARTS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1005",
+        "codes": [
+          "ARTS1005"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHES1100",
+        "codes": [
+          "CHES1100"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CUMT1000",
+        "codes": [
+          "CUMT1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1110",
+        "codes": [
+          "CHLL1110"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL1211",
+        "codes": [
+          "CHLL1211"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL1401",
+        "codes": [
+          "CHLL1401"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2121",
+        "codes": [
+          "CHLL2121"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2131",
+        "codes": [
+          "CHLL2131"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2212",
+        "codes": [
+          "CHLL2212"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2300",
+        "codes": [
+          "CHLL2300"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2301",
+        "codes": [
+          "CHLL2301"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2350",
+        "codes": [
+          "CHLL2350"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2401",
+        "codes": [
+          "CHLL2401"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL2402",
+        "codes": [
+          "CHLL2402"
+        ],
+        "alt": false,
+        "from": "(a) Basic courses"
+      },
+      {
+        "raw": "CHLL4001",
+        "codes": [
+          "CHLL4001"
+        ],
+        "alt": false,
+        "from": "(b) Capstone courses"
+      },
+      {
+        "raw": "CHLL4002",
+        "codes": [
+          "CHLL4002"
+        ],
+        "alt": false,
+        "from": "(b) Capstone courses"
+      }
+    ],
+    "elective": [],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "39",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Basic courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "24",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}

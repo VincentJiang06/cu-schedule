@@ -1,0 +1,1549 @@
+{
+  "program_en": "B.S.Sc. in Government and Public Administration",
+  "program_chi": "政治與行政學社會科學學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.S.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "DSPS2102",
+    "DSPS2201",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "GLSD1001",
+    "GLSD2401",
+    "GLSD3106",
+    "GLSD3302",
+    "GPAD1000",
+    "GPAD1010",
+    "GPAD1015",
+    "GPAD1016",
+    "GPAD1020",
+    "GPAD1030",
+    "GPAD1046",
+    "GPAD1050",
+    "GPAD1055",
+    "GPAD1056",
+    "GPAD1066",
+    "GPAD1070",
+    "GPAD1073",
+    "GPAD1074",
+    "GPAD1076",
+    "GPAD1077",
+    "GPAD1095",
+    "GPAD1100",
+    "GPAD2015",
+    "GPAD2020",
+    "GPAD2025",
+    "GPAD2035",
+    "GPAD2065",
+    "GPAD2070",
+    "GPAD2075",
+    "GPAD2085",
+    "GPAD2090",
+    "GPAD2095",
+    "GPAD2111",
+    "GPAD2120",
+    "GPAD2130",
+    "GPAD2140",
+    "GPAD2145",
+    "GPAD2150",
+    "GPAD2160",
+    "GPAD2170",
+    "GPAD2185",
+    "GPAD2196",
+    "GPAD2215",
+    "GPAD2300",
+    "GPAD2345",
+    "GPAD2350",
+    "GPAD2355",
+    "GPAD2370",
+    "GPAD2375",
+    "GPAD2395",
+    "GPAD2450",
+    "GPAD2555",
+    "GPAD3040",
+    "GPAD3050",
+    "GPAD3070",
+    "GPAD3071",
+    "GPAD3111",
+    "GPAD3146",
+    "GPAD3160",
+    "GPAD3161",
+    "GPAD3190",
+    "GPAD3220",
+    "GPAD3255",
+    "GPAD3260",
+    "GPAD3360",
+    "GPAD3365",
+    "GPAD3451",
+    "GPAD4010",
+    "GPAD4020",
+    "GPAD4027",
+    "GPAD4030",
+    "GPAD4065",
+    "GPAD4077",
+    "GPAD4080",
+    "GPAD4111",
+    "GPAD4142",
+    "GPAD4200",
+    "GPAD4211",
+    "GPAD4225",
+    "GPAD4335",
+    "GPAD4385",
+    "GPAD4601",
+    "GPAD4602",
+    "GPAD4701",
+    "GPAD4702",
+    "GPAD4801",
+    "GPAD4802",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "PSYC1000",
+    "PSYC1630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001",
+    "URSP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1002",
+        "codes": [
+          "URSP1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1000",
+        "codes": [
+          "GPAD1000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD1030",
+        "codes": [
+          "GPAD1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD1050",
+        "codes": [
+          "GPAD1050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD1070",
+        "codes": [
+          "GPAD1070"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD1095",
+        "codes": [
+          "GPAD1095"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD2111",
+        "codes": [
+          "GPAD2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD2130",
+        "codes": [
+          "GPAD2130"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "GPAD2345",
+        "codes": [
+          "GPAD2345"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "GLSD3302",
+        "codes": [
+          "GLSD3302"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD1016",
+        "codes": [
+          "GPAD1016"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD1046",
+        "codes": [
+          "GPAD1046"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD1055",
+        "codes": [
+          "GPAD1055"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD1056",
+        "codes": [
+          "GPAD1056"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2120",
+        "codes": [
+          "GPAD2120"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2140",
+        "codes": [
+          "GPAD2140"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2145",
+        "codes": [
+          "GPAD2145"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2196",
+        "codes": [
+          "GPAD2196"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2215",
+        "codes": [
+          "GPAD2215"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2300",
+        "codes": [
+          "GPAD2300"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2395",
+        "codes": [
+          "GPAD2395"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD2450",
+        "codes": [
+          "GPAD2450"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3040",
+        "codes": [
+          "GPAD3040"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3050",
+        "codes": [
+          "GPAD3050"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3160",
+        "codes": [
+          "GPAD3160"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3161",
+        "codes": [
+          "GPAD3161"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3190",
+        "codes": [
+          "GPAD3190"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD3360",
+        "codes": [
+          "GPAD3360"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD4080",
+        "codes": [
+          "GPAD4080"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GPAD4142",
+        "codes": [
+          "GPAD4142"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GLSD3106",
+        "codes": [
+          "GLSD3106"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD1066",
+        "codes": [
+          "GPAD1066"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD1073",
+        "codes": [
+          "GPAD1073"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD1074",
+        "codes": [
+          "GPAD1074"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD2015",
+        "codes": [
+          "GPAD2015"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD2025",
+        "codes": [
+          "GPAD2025"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD2350",
+        "codes": [
+          "GPAD2350"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD2370",
+        "codes": [
+          "GPAD2370"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD2555",
+        "codes": [
+          "GPAD2555"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD3260",
+        "codes": [
+          "GPAD3260"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD4027",
+        "codes": [
+          "GPAD4027"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD4030",
+        "codes": [
+          "GPAD4030"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD4065",
+        "codes": [
+          "GPAD4065"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD4385",
+        "codes": [
+          "GPAD4385"
+        ],
+        "alt": false,
+        "from": "(ii) Politics - Greater China"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD1100",
+        "codes": [
+          "GPAD1100"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD2020",
+        "codes": [
+          "GPAD2020"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD2065",
+        "codes": [
+          "GPAD2065"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD2075",
+        "codes": [
+          "GPAD2075"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD2300",
+        "codes": [
+          "GPAD2300"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD3070",
+        "codes": [
+          "GPAD3070"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD3071",
+        "codes": [
+          "GPAD3071"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD3146",
+        "codes": [
+          "GPAD3146"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD3220",
+        "codes": [
+          "GPAD3220"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD3365",
+        "codes": [
+          "GPAD3365"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD4077",
+        "codes": [
+          "GPAD4077"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD4200",
+        "codes": [
+          "GPAD4200"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD4211",
+        "codes": [
+          "GPAD4211"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GPAD4335",
+        "codes": [
+          "GPAD4335"
+        ],
+        "alt": false,
+        "from": "(iii) Politics - Political Theory"
+      },
+      {
+        "raw": "GLSD2401",
+        "codes": [
+          "GLSD2401"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD1066",
+        "codes": [
+          "GPAD1066"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD2185",
+        "codes": [
+          "GPAD2185"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD2300",
+        "codes": [
+          "GPAD2300"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD2350",
+        "codes": [
+          "GPAD2350"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD2355",
+        "codes": [
+          "GPAD2355"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD2375",
+        "codes": [
+          "GPAD2375"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD3160",
+        "codes": [
+          "GPAD3160"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD3161",
+        "codes": [
+          "GPAD3161"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD3360",
+        "codes": [
+          "GPAD3360"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD3365",
+        "codes": [
+          "GPAD3365"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD3451",
+        "codes": [
+          "GPAD3451"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GPAD4225",
+        "codes": [
+          "GPAD4225"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "DSPS2201",
+        "codes": [
+          "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD1046",
+        "codes": [
+          "GPAD1046"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2035",
+        "codes": [
+          "GPAD2035"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2065",
+        "codes": [
+          "GPAD2065"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2070",
+        "codes": [
+          "GPAD2070"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2085",
+        "codes": [
+          "GPAD2085"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2090",
+        "codes": [
+          "GPAD2090"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2095",
+        "codes": [
+          "GPAD2095"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2150",
+        "codes": [
+          "GPAD2150"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2160",
+        "codes": [
+          "GPAD2160"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2170",
+        "codes": [
+          "GPAD2170"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2196",
+        "codes": [
+          "GPAD2196"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD2215",
+        "codes": [
+          "GPAD2215"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD3255",
+        "codes": [
+          "GPAD3255"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD3260",
+        "codes": [
+          "GPAD3260"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD4020",
+        "codes": [
+          "GPAD4020"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "GPAD4801",
+        "codes": [
+          "GPAD4801"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS2102",
+        "codes": [
+          "DSPS2102"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD1010",
+        "codes": [
+          "GPAD1010"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD1015",
+        "codes": [
+          "GPAD1015"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD1055",
+        "codes": [
+          "GPAD1055"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD1056",
+        "codes": [
+          "GPAD1056"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2070",
+        "codes": [
+          "GPAD2070"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2095",
+        "codes": [
+          "GPAD2095"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2150",
+        "codes": [
+          "GPAD2150"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2160",
+        "codes": [
+          "GPAD2160"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2170",
+        "codes": [
+          "GPAD2170"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2196",
+        "codes": [
+          "GPAD2196"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2215",
+        "codes": [
+          "GPAD2215"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD2450",
+        "codes": [
+          "GPAD2450"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD3111",
+        "codes": [
+          "GPAD3111"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD3255",
+        "codes": [
+          "GPAD3255"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD4111",
+        "codes": [
+          "GPAD4111"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD4802",
+        "codes": [
+          "GPAD4802"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "(b) Free Major Electives (any five GPAD courses, other than"
+      },
+      {
+        "raw": "GPAD4601",
+        "codes": [
+          "GPAD4601"
+        ],
+        "alt": false,
+        "from": "(i) GPAD4601"
+      },
+      {
+        "raw": "GPAD4602",
+        "codes": [
+          "GPAD4602"
+        ],
+        "alt": false,
+        "from": "(ii) GPAD4602"
+      },
+      {
+        "raw": "GPAD4701",
+        "codes": [
+          "GPAD4701"
+        ],
+        "alt": false,
+        "from": "(iii) GPAD4701 and 4702"
+      },
+      {
+        "raw": "GPAD4801",
+        "codes": [
+          "GPAD4801"
+        ],
+        "alt": false,
+        "from": "(iv) GPAD4801"
+      },
+      {
+        "raw": "GPAD4802",
+        "codes": [
+          "GPAD4802"
+        ],
+        "alt": false,
+        "from": "(v) GPAD4802"
+      },
+      {
+        "raw": "GPAD4010",
+        "codes": [
+          "GPAD4010"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4020",
+        "codes": [
+          "GPAD4020"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4027",
+        "codes": [
+          "GPAD4027"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4030",
+        "codes": [
+          "GPAD4030"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4065",
+        "codes": [
+          "GPAD4065"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4077",
+        "codes": [
+          "GPAD4077"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4080",
+        "codes": [
+          "GPAD4080"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4111",
+        "codes": [
+          "GPAD4111"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4142",
+        "codes": [
+          "GPAD4142"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4200",
+        "codes": [
+          "GPAD4200"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4211",
+        "codes": [
+          "GPAD4211"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4225",
+        "codes": [
+          "GPAD4225"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4335",
+        "codes": [
+          "GPAD4335"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      },
+      {
+        "raw": "GPAD4385",
+        "codes": [
+          "GPAD4385"
+        ],
+        "alt": false,
+        "from": "(vi) Seminar courses at 4000 level"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 30
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "24",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Field Electives[a] [b] (six courses chosen from two of",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "Politics - Comparative Politics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Politics - Greater China",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Politics - Political Theory",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "International Relations",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(v)",
+      "level": 2,
+      "title": "Public Administration and Policy",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "(vi)",
+      "level": 3,
+      "title": "Professional Practicum (Students are required to take",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Free Major Electives (any five GPAD courses, other than",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Capstone Courses (minimum 6 units chosen from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 2,
+      "title": "GPAD4601",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "GPAD4602",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "GPAD4701 and 4702",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "GPAD4801",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(v)",
+      "level": 2,
+      "title": "GPAD4802",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(vi)",
+      "level": 3,
+      "title": "Seminar courses at 4000 level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 14
+    }
+  ]
+}

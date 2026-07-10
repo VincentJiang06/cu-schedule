@@ -1,0 +1,690 @@
+{
+  "program_en": "B.Ed. in Physical Education, Exercise Science and Health",
+  "program_chi": "健康與體育運動科學教育學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Education",
+  "degree": "B.Ed",
+  "total_units": 104,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHPR4012",
+    "EDUC2120",
+    "EDUC2210",
+    "EDUC2220",
+    "EDUC2240",
+    "EDUC2312",
+    "EDUC3140",
+    "EDUC3150",
+    "EDUC3200",
+    "EDUC3201",
+    "EDUC3260",
+    "EDUC3270",
+    "EDUC3280",
+    "EDUC3290",
+    "EDUC3311",
+    "EDUC4110",
+    "EDUC4131",
+    "EDUC4320",
+    "EDUC4330",
+    "EDUC4340",
+    "PHPC1001",
+    "PHPC2007",
+    "PHPC2016",
+    "SPED2011",
+    "SPED2021",
+    "SPED2031",
+    "SPED2041",
+    "SPED2051",
+    "SPED2061",
+    "SPED2111",
+    "SPED2112",
+    "SPED2122",
+    "SPED2131",
+    "SPED2134",
+    "SPED2141",
+    "SPED2211",
+    "SPED2520",
+    "SPED2540",
+    "SPED2600",
+    "SPED2610",
+    "SPED2710",
+    "SPED2720",
+    "SPED2810",
+    "SPED3220",
+    "SPED3250",
+    "SPED3400",
+    "SPED3410",
+    "SPED3430",
+    "SPED3440",
+    "SPED3450",
+    "SPED3550",
+    "SPED3630",
+    "SPED3700",
+    "SPED3731",
+    "SPED3820",
+    "SPED3910",
+    "SPED3920",
+    "SPED4201",
+    "SPED4400",
+    "SPED4560",
+    "SPED4570",
+    "SPED4640",
+    "SPED4830",
+    "SPED4900"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "EDUC2312",
+        "codes": [
+          "EDUC2312"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SPED2720",
+        "codes": [
+          "SPED2720"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "PHPC2016",
+        "codes": [
+          "PHPC2016"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2520",
+        "codes": [
+          "SPED2520"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2540",
+        "codes": [
+          "SPED2540"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2600",
+        "codes": [
+          "SPED2600"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2610",
+        "codes": [
+          "SPED2610"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2710",
+        "codes": [
+          "SPED2710"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2810",
+        "codes": [
+          "SPED2810"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3410",
+        "codes": [
+          "SPED3410"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3430",
+        "codes": [
+          "SPED3430"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3440",
+        "codes": [
+          "SPED3440"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3450",
+        "codes": [
+          "SPED3450"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3820",
+        "codes": [
+          "SPED3820"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED3920",
+        "codes": [
+          "SPED3920"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED4570",
+        "codes": [
+          "SPED4570"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Physical Education, Exercise Science and"
+      },
+      {
+        "raw": "SPED2011",
+        "codes": [
+          "SPED2011"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2021",
+        "codes": [
+          "SPED2021"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2031",
+        "codes": [
+          "SPED2031"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2041",
+        "codes": [
+          "SPED2041"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2051",
+        "codes": [
+          "SPED2051"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2061",
+        "codes": [
+          "SPED2061"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2111",
+        "codes": [
+          "SPED2111"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2122",
+        "codes": [
+          "SPED2122"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2131",
+        "codes": [
+          "SPED2131"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2141",
+        "codes": [
+          "SPED2141"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2211",
+        "codes": [
+          "SPED2211"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED3220",
+        "codes": [
+          "SPED3220"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED3250",
+        "codes": [
+          "SPED3250"
+        ],
+        "alt": false,
+        "from": "(b) Core Courses in Professional Skills"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3201",
+        "codes": [
+          "EDUC3201"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3311",
+        "codes": [
+          "EDUC3311"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC4340",
+        "codes": [
+          "EDUC4340"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "SPED3400",
+        "codes": [
+          "SPED3400"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
+        "raw": "SPED4201",
+        "codes": [
+          "SPED4201"
+        ],
+        "alt": false,
+        "from": "(e) Internship"
+      },
+      {
+        "raw": "SPED3630",
+        "codes": [
+          "SPED3630"
+        ],
+        "alt": false,
+        "from": "(f) Research Experience"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "PHPC2007",
+        "codes": [
+          "PHPC2007"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED3550",
+        "codes": [
+          "SPED3550"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED3700",
+        "codes": [
+          "SPED3700"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED3731",
+        "codes": [
+          "SPED3731"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED3910",
+        "codes": [
+          "SPED3910"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED4560",
+        "codes": [
+          "SPED4560"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED4640",
+        "codes": [
+          "SPED4640"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED4830",
+        "codes": [
+          "SPED4830"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
+        "raw": "SPED2112",
+        "codes": [
+          "SPED2112"
+        ],
+        "alt": false,
+        "from": "(b) Courses in Professional Skills"
+      },
+      {
+        "raw": "SPED2134",
+        "codes": [
+          "SPED2134"
+        ],
+        "alt": false,
+        "from": "(b) Courses in Professional Skills"
+      },
+      {
+        "raw": "EDUC2210",
+        "codes": [
+          "EDUC2210"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC2220",
+        "codes": [
+          "EDUC2220"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3140",
+        "codes": [
+          "EDUC3140"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3150",
+        "codes": [
+          "EDUC3150"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3200",
+        "codes": [
+          "EDUC3200"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3260",
+        "codes": [
+          "EDUC3260"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3270",
+        "codes": [
+          "EDUC3270"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3280",
+        "codes": [
+          "EDUC3280"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC3290",
+        "codes": [
+          "EDUC3290"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC4110",
+        "codes": [
+          "EDUC4110"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC4131",
+        "codes": [
+          "EDUC4131"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC4320",
+        "codes": [
+          "EDUC4320"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      },
+      {
+        "raw": "EDUC4330",
+        "codes": [
+          "EDUC4330"
+        ],
+        "alt": false,
+        "from": "(c) Courses in Educational Studies"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Core Courses in Physical Education, Exercise Science and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Core Courses in Professional Skills",
+      "units": "13",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Courses in Educational Studies",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Teaching Practice",
+      "units": "8",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Internship",
+      "units": "2",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Theoretical Courses in Physical Education, Exercise Science",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Courses in Professional Skills",
+      "units": "1",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Courses in Educational Studies",
+      "units": "2",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    }
+  ]
+}

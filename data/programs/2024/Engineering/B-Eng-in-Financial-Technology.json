@@ -1,0 +1,835 @@
+{
+  "program_en": "B.Eng. in Financial Technology",
+  "program_chi": "金融科技學工程學士",
+  "admission_year": "2024",
+  "faculty": "Faculty of Engineering",
+  "degree": "B.Eng",
+  "total_units": 75,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT2111",
+    "ACCT2121",
+    "ACCT2151",
+    "ACCT3151",
+    "AIST4010",
+    "CHLT1001",
+    "CHLT1002",
+    "CSCI1120",
+    "CSCI2040",
+    "CSCI2100",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI4160",
+    "CSCI4180",
+    "CSCI4430",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "ECON2011",
+    "ECON2021",
+    "ELTU1001",
+    "ELTU2014",
+    "ELTU3014",
+    "ENGG1004",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1130",
+    "ENGG1820",
+    "ENGG2440",
+    "ENGG2450",
+    "ENGG2760",
+    "ENGG2780",
+    "ESTR1002",
+    "ESTR1005",
+    "ESTR1006",
+    "ESTR1100",
+    "ESTR2004",
+    "ESTR2005",
+    "ESTR2018",
+    "ESTR2020",
+    "ESTR2102",
+    "ESTR2520",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3310",
+    "ESTR3502",
+    "ESTR3506",
+    "ESTR3508",
+    "ESTR3509",
+    "ESTR4104",
+    "ESTR4106",
+    "ESTR4120",
+    "ESTR4140",
+    "ESTR4306",
+    "ESTR4312",
+    "ESTR4508",
+    "ESTR4998",
+    "FINA2010",
+    "FINA2020",
+    "FINA2310",
+    "FINA3020",
+    "FINA3030",
+    "FINA3070",
+    "FINA3080",
+    "FINA3210",
+    "FINA4010",
+    "FINA4110",
+    "FTEC2001",
+    "FTEC2101",
+    "FTEC2602",
+    "FTEC3001",
+    "FTEC3002",
+    "FTEC4001",
+    "FTEC4002",
+    "FTEC4003",
+    "FTEC4005",
+    "FTEC4006",
+    "FTEC4007",
+    "FTEC4008",
+    "FTEC4998",
+    "FTEC4999",
+    "IBBA3040",
+    "IERG3310",
+    "IERG4004",
+    "IERG4080",
+    "IERG4130",
+    "IERG4210",
+    "MATH1020",
+    "MATH1510",
+    "MGNT1020",
+    "MGNT1070",
+    "MGNT2040",
+    "MGNT2070",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT3010",
+    "MGNT3040",
+    "MGNT3060",
+    "MGNT3080",
+    "MGNT3090",
+    "MGNT3100",
+    "MGNT3580",
+    "MGNT4010",
+    "MGNT4050",
+    "MGNT4060",
+    "MGNT4070",
+    "MGNT4080",
+    "MGNT4090",
+    "MGNT4110",
+    "MGNT4130",
+    "MGNT4140",
+    "MGNT4150",
+    "MGNT4160",
+    "MGNT4170",
+    "MGNT4270",
+    "MGNT4510",
+    "MGNT4530",
+    "MGNT4540",
+    "MGNT4550",
+    "MGNT4570",
+    "MGNT4711",
+    "MGNT4712",
+    "MGNT4713",
+    "MKTG2010",
+    "MKTG3010",
+    "MKTG3020",
+    "MKTG3030",
+    "MKTG3040",
+    "MKTG3050",
+    "MKTG3060",
+    "MKTG4010",
+    "MKTG4020",
+    "MKTG4030",
+    "MKTG4040",
+    "MKTG4050",
+    "MKTG4070",
+    "MKTG4080",
+    "MKTG4090",
+    "MKTG4110",
+    "MKTG4120",
+    "MKTG4150",
+    "MKTG4160",
+    "MKTG4170",
+    "MKTG4180",
+    "MKTG4190",
+    "MKTG4200",
+    "SEEM2520",
+    "SEEM3410",
+    "SEEM3450",
+    "SEEM3550",
+    "SEEM3570",
+    "SEEM3580",
+    "SEEM3590",
+    "SEEM4730",
+    "UGEA2110",
+    "UGEC1209"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120/ESTR1005",
+        "codes": [
+          "ENGG1120",
+          "ESTR1005"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1130/ESTR1006",
+        "codes": [
+          "ENGG1130",
+          "ESTR1006"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CSCI1120",
+        "codes": [
+          "CSCI1120"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ESTR1100",
+        "codes": [
+          "ESTR1100"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2440/ESTR2004",
+        "codes": [
+          "ENGG2440",
+          "ESTR2004"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2760/ESTR2018",
+        "codes": [
+          "ENGG2760",
+          "ESTR2018"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "ENGG2780/ESTR2020",
+        "codes": [
+          "ENGG2780",
+          "ESTR2020"
+        ],
+        "alt": true,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "2. Foundation Courses"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "ESTR2102",
+        "codes": [
+          "ESTR2102"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "CSCI4130",
+        "codes": [
+          "CSCI4130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "IERG4130",
+        "codes": [
+          "IERG4130"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "ESTR4306",
+        "codes": [
+          "ESTR4306"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "FINA2310",
+        "codes": [
+          "FINA2310"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "FTEC2101/ESTR2520",
+        "codes": [
+          "FTEC2101",
+          "ESTR2520"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "FTEC3001",
+        "codes": [
+          "FTEC3001"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "FTEC3002",
+        "codes": [
+          "FTEC3002"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "SEEM2520",
+        "codes": [
+          "SEEM2520"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "SEEM3550",
+        "codes": [
+          "SEEM3550"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "ESTR3506",
+        "codes": [
+          "ESTR3506"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "SEEM3590",
+        "codes": [
+          "SEEM3590"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "ESTR3509",
+        "codes": [
+          "ESTR3509"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
+      },
+      {
+        "raw": "FTEC4998",
+        "codes": [
+          "FTEC4998"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[b]"
+      },
+      {
+        "raw": "FTEC4999",
+        "codes": [
+          "FTEC4999"
+        ],
+        "alt": false,
+        "from": "(b) Research Component Courses[b]"
+      },
+      {
+        "raw": "FTEC2602",
+        "codes": [
+          "FTEC2602"
+        ],
+        "alt": false,
+        "from": "(c) Practicum Course"
+      },
+      {
+        "raw": "FTEC2001",
+        "codes": [
+          "FTEC2001"
+        ],
+        "alt": false,
+        "from": "(d) Legal Course"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "FTEC4001",
+        "codes": [
+          "FTEC4001"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4002",
+        "codes": [
+          "FTEC4002"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4003",
+        "codes": [
+          "FTEC4003"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4005",
+        "codes": [
+          "FTEC4005"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4006",
+        "codes": [
+          "FTEC4006"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4007",
+        "codes": [
+          "FTEC4007"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "FTEC4008",
+        "codes": [
+          "FTEC4008"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "IERG4004",
+        "codes": [
+          "IERG4004"
+        ],
+        "alt": false,
+        "from": "(a) At least 6 units from FTEC4001,"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "AIST4010",
+        "codes": [
+          "AIST4010"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR4140",
+        "codes": [
+          "ESTR4140"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI2040",
+        "codes": [
+          "CSCI2040"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI3150",
+        "codes": [
+          "CSCI3150"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR3102",
+        "codes": [
+          "ESTR3102"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI3160",
+        "codes": [
+          "CSCI3160"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR3104",
+        "codes": [
+          "ESTR3104"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI4160",
+        "codes": [
+          "CSCI4160"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR4104",
+        "codes": [
+          "ESTR4104"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI4180",
+        "codes": [
+          "CSCI4180"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR4106",
+        "codes": [
+          "ESTR4106"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "CSCI4430",
+        "codes": [
+          "CSCI4430"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "IERG3310",
+        "codes": [
+          "IERG3310"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR3310/ESTR4120",
+        "codes": [
+          "ESTR3310",
+          "ESTR4120"
+        ],
+        "alt": true,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ECON2021",
+        "codes": [
+          "ECON2021"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "IERG4080",
+        "codes": [
+          "IERG4080"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR4312",
+        "codes": [
+          "ESTR4312"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "MKTG4120",
+        "codes": [
+          "MKTG4120"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "SEEM3410",
+        "codes": [
+          "SEEM3410"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "SEEM3450",
+        "codes": [
+          "SEEM3450"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR3502",
+        "codes": [
+          "ESTR3502"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "SEEM3570",
+        "codes": [
+          "SEEM3570"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR3508",
+        "codes": [
+          "ESTR3508"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "SEEM3580",
+        "codes": [
+          "SEEM3580"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "SEEM4730",
+        "codes": [
+          "SEEM4730"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "ESTR4508",
+        "codes": [
+          "ESTR4508"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "13",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Component Courses[b]",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Practicum Course",
+      "units": "1",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Legal Course",
+      "units": "2",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "14",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "At least 6 units from FTEC4001,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Courses from at least 3 subject",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 31
+    }
+  ]
+}

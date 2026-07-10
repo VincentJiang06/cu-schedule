@@ -1,0 +1,577 @@
+{
+  "program_en": "B.Sc. in Biology",
+  "program_chi": "生物學理學士",
+  "admission_year": "2025",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 12,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BCHE2030",
+    "BCHE3050",
+    "BIOL2120",
+    "BIOL2210",
+    "BIOL2213",
+    "BIOL2313",
+    "BIOL2410",
+    "BIOL2420",
+    "BIOL3012",
+    "BIOL3022",
+    "BIOL3310",
+    "BIOL3410",
+    "BIOL3510",
+    "BIOL3530",
+    "BIOL3560",
+    "BIOL3570",
+    "BIOL3610",
+    "BIOL3620",
+    "BIOL3630",
+    "BIOL3710",
+    "BIOL4010",
+    "BIOL4012",
+    "BIOL4120",
+    "BIOL4230",
+    "BIOL4240",
+    "BIOL4242",
+    "BIOL4260",
+    "BIOL4310",
+    "BIOL4420",
+    "BIOL4510",
+    "BIOL4610",
+    "BIOL4901",
+    "BIOL4902",
+    "BIOL4903",
+    "BIOL4906",
+    "BIOL4907",
+    "CHEM1070",
+    "CHEM1280",
+    "CHEM1300",
+    "CHEM2110",
+    "CHEM2120",
+    "CHEM2200",
+    "CHEM2300",
+    "CHEM2400",
+    "CHEM2868",
+    "CHEM2878",
+    "CHEM3130",
+    "CHEM3220",
+    "CHEM3230",
+    "CHEM3320",
+    "CHEM3340",
+    "CHEM3410",
+    "CHEM3420",
+    "CHEM3810",
+    "CHEM3830",
+    "CHEM3860",
+    "CHEM3870",
+    "CHEM4100",
+    "CHEM4110",
+    "CHEM4200",
+    "CHEM4300",
+    "CHEM4303",
+    "CHEM4400",
+    "CHEM4440",
+    "CHEM4525",
+    "CHEM4535",
+    "CHEM4630",
+    "CHEM4640",
+    "CHEM4710",
+    "CHEM4780",
+    "CHEM4784",
+    "CHEM4785",
+    "CHEM4788",
+    "CMBI4101",
+    "FNSC3010",
+    "FNSC4101",
+    "LSCI1002",
+    "LSCI1012",
+    "LSCI2002",
+    "LSCI3520",
+    "LSCI4000",
+    "LSCI4911",
+    "LSCI4912",
+    "MATH1520",
+    "MBTE3510",
+    "MBTE4033",
+    "PHYS1001",
+    "PHYS1002",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1012",
+    "STAT3210"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "BCHE2030",
+        "codes": [
+          "BCHE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2120",
+        "codes": [
+          "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2210",
+        "codes": [
+          "BIOL2210"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2420",
+        "codes": [
+          "BIOL2420"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3012",
+        "codes": [
+          "BIOL3012"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3022",
+        "codes": [
+          "BIOL3022"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3560",
+        "codes": [
+          "BIOL3560"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3570",
+        "codes": [
+          "BIOL3570"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3610",
+        "codes": [
+          "BIOL3610"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3620",
+        "codes": [
+          "BIOL3620"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL4010",
+        "codes": [
+          "BIOL4010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BIOL2213",
+        "codes": [
+          "BIOL2213"
+        ],
+        "alt": false,
+        "from": "(a) One laboratory course from BIOL2213 or 2313 and"
+      },
+      {
+        "raw": "BIOL4012",
+        "codes": [
+          "BIOL4012"
+        ],
+        "alt": false,
+        "from": "(a) One laboratory course from BIOL2213 or 2313 and"
+      },
+      {
+        "raw": "MBTE4033",
+        "codes": [
+          "MBTE4033"
+        ],
+        "alt": false,
+        "from": "(a) One laboratory course from BIOL2213 or 2313 and"
+      },
+      {
+        "raw": "BCHE3050",
+        "codes": [
+          "BCHE3050"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL3310",
+        "codes": [
+          "BIOL3310"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL3410",
+        "codes": [
+          "BIOL3410"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL3510",
+        "codes": [
+          "BIOL3510"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL3530",
+        "codes": [
+          "BIOL3530"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL3630",
+        "codes": [
+          "BIOL3630"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "FNSC4101",
+        "codes": [
+          "FNSC4101"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "CMBI4101",
+        "codes": [
+          "CMBI4101"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "FNSC3010",
+        "codes": [
+          "FNSC3010"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3510",
+        "codes": [
+          "MBTE3510"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "STAT3210",
+        "codes": [
+          "STAT3210"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BIOL4901",
+        "codes": [
+          "BIOL4901"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "BIOL4902",
+        "codes": [
+          "BIOL4902"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "BIOL4903",
+        "codes": [
+          "BIOL4903"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "BIOL4906",
+        "codes": [
+          "BIOL4906"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "BIOL4907",
+        "codes": [
+          "BIOL4907"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "LSCI4000",
+        "codes": [
+          "LSCI4000"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "30",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "25",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One laboratory course from BIOL2213 or 2313 and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Capstone course (at least 3",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ]
+}
