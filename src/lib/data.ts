@@ -73,3 +73,40 @@ export async function loadTerm(term: TermRef): Promise<Course[]> {
   const bundle = await fetchJson<TermBundle>(`${term.year}/${term.slug}.json`)
   return bundle.courses.map(toCourse)
 }
+
+/** One course as offered in one term. A course offered in both terms yields two offerings. */
+export type Offering = {
+  course: Course
+  termSlug: string
+  termName: string
+  /** 1 = 上学期 (Term 1), 2 = 下学期 (Term 2). */
+  termOrder: number
+}
+
+const MAIN_TERM_RE = /Term\s+([12])\b/
+
+/**
+ * Loads every main term (Term 1 and Term 2) of one academic year at once. The course
+ * list view compares 上学期 against 下学期 side by side, so it needs both bundles,
+ * not the single active term the planner schedules within.
+ */
+export async function loadYearOfferings(year: string): Promise<Offering[]> {
+  const index = await fetchJson<YearIndex>(`${year}/index.json`)
+  const mains = index.terms
+    .map((term) => ({ ...term, order: Number(term.name.match(MAIN_TERM_RE)?.[1] ?? 0) }))
+    .filter((term) => term.order > 0)
+    .sort((a, b) => a.order - b.order)
+
+  const bundles = await Promise.all(
+    mains.map((term) => fetchJson<TermBundle>(`${year}/${term.slug}.json`)),
+  )
+
+  return bundles.flatMap((bundle, index) =>
+    bundle.courses.map((raw) => ({
+      course: toCourse(raw),
+      termSlug: mains[index].slug,
+      termName: mains[index].name,
+      termOrder: mains[index].order,
+    })),
+  )
+}

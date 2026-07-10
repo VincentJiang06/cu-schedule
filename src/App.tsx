@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
 import { CodeInput } from './components/CodeInput.tsx'
+import { CourseList } from './components/CourseList.tsx'
 import { CourseTable } from './components/CourseTable.tsx'
 import { Timetable } from './components/Timetable.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
-import { loadTerm, loadTermList, type TermRef } from './lib/data.ts'
+import { loadTermList, loadYearOfferings, type Offering, type TermRef } from './lib/data.ts'
 import { blockedByPrefs, findClashes, generatePlans, type Prefs } from './lib/schedule.ts'
 import { hhmm } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
 type Theme = 'light' | 'dark'
+type RightMode = 'candidates' | 'list'
 
 const EARLY_START = 9 * 60 + 30
 const EVENING_END = 18 * 60 + 30
@@ -48,7 +50,7 @@ export default function App() {
   const [theme, setTheme] = useState<Theme>(loadTheme)
   const [terms, setTerms] = useState<TermRef[]>([])
   const [termSlug, setTermSlug] = useState<string | null>(saved?.termSlug ?? null)
-  const [courses, setCourses] = useState<Course[]>([])
+  const [offerings, setOfferings] = useState<Offering[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -56,6 +58,7 @@ export default function App() {
   const [taken, setTaken] = useState<string[]>(saved?.taken ?? [])
   const [prefs, setPrefs] = useState<Prefs>(saved?.prefs ?? DEFAULT_PREFS)
   const [planIndex, setPlanIndex] = useState(0)
+  const [rightMode, setRightMode] = useState<RightMode>('candidates')
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
@@ -74,15 +77,18 @@ export default function App() {
   }, [])
 
   const term = useMemo(() => terms.find((item) => item.slug === termSlug) ?? null, [termSlug, terms])
+  const year = term?.year ?? null
 
+  // Load the whole academic year once: the planner schedules within the selected
+  // term, but the course list compares 上学期 and 下学期 side by side.
   useEffect(() => {
-    if (!term) return
+    if (!year) return
     let cancelled = false
     setLoading(true)
     setError(null)
-    loadTerm(term)
+    loadYearOfferings(year)
       .then((list) => {
-        if (!cancelled) setCourses(list)
+        if (!cancelled) setOfferings(list)
       })
       .catch((cause: Error) => {
         if (!cancelled) setError(cause.message)
@@ -93,7 +99,12 @@ export default function App() {
     return () => {
       cancelled = true
     }
-  }, [term])
+  }, [year])
+
+  const courses = useMemo(
+    () => offerings.filter((offering) => offering.termSlug === termSlug).map((offering) => offering.course),
+    [offerings, termSlug],
+  )
 
   useEffect(() => {
     if (terms.length === 0) return
@@ -336,11 +347,32 @@ export default function App() {
         </section>
 
         <section className="table-pane">
-          <h2 className="pane__title">可选课</h2>
+          <div className="pane__head">
+            <div className="pane__tabs">
+              <button
+                className={rightMode === 'candidates' ? 'pane__tab pane__tab--on' : 'pane__tab'}
+                type="button"
+                onClick={() => setRightMode('candidates')}
+              >
+                可选课
+              </button>
+              <button
+                className={rightMode === 'list' ? 'pane__tab pane__tab--on' : 'pane__tab'}
+                type="button"
+                onClick={() => setRightMode('list')}
+              >
+                课程列表
+              </button>
+            </div>
+            {rightMode === 'candidates' && <span className="pane__hint">根据你的课表主动筛选</span>}
+            {rightMode === 'list' && <span className="pane__hint">按 科目 → 首位数字 → 学期 排列</span>}
+          </div>
           {loading ? (
-            <div className="pane__loading">正在加载 {term?.name ?? ''} 全部课程…</div>
-          ) : (
+            <div className="pane__loading">正在加载 {year ?? ''} 全部课程…</div>
+          ) : rightMode === 'candidates' ? (
             <CourseTable onAdd={addCommitted} rows={candidates.rows} summary={candidates.summary} />
+          ) : (
+            <CourseList committed={committed} offerings={offerings} onAdd={addCommitted} />
           )}
         </section>
       </main>

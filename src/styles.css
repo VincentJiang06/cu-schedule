@@ -466,6 +466,240 @@ select {
   font-weight: 750;
 }
 
+.pane__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.pane__tabs {
+  display: inline-flex;
+  padding: 3px;
+  gap: 2px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.pane__tab {
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 12.5px;
+  font-weight: 650;
+  padding: 5px 12px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.pane__tab:hover {
+  color: var(--ink);
+}
+
+.pane__tab--on {
+  background: var(--brand-wash);
+  color: var(--brand-ink);
+}
+
+.pane__hint {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+
+/* ---- course list (catalog ladder) ---------------------------------------- */
+
+.cl {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.cl__filters {
+  display: flex;
+  gap: 6px;
+}
+
+.cl__subject,
+.cl__name {
+  min-width: 0;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-2);
+  padding: 6px 10px;
+  font-size: 13px;
+  outline: 0;
+}
+
+.cl__subject {
+  flex: 1.4;
+  font-family: var(--mono);
+  text-transform: uppercase;
+}
+
+.cl__name {
+  flex: 1;
+}
+
+.cl__subject:focus,
+.cl__name:focus {
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+.cl__clear {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink-3);
+  border-radius: 9px;
+  padding: 6px 12px;
+  font-size: 12.5px;
+  cursor: pointer;
+}
+
+.cl__clear:hover {
+  color: var(--bad);
+  border-color: var(--bad);
+}
+
+.cl__digits {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.cl__digits-label {
+  font-size: 12px;
+  color: var(--ink-3);
+  margin-right: 2px;
+}
+
+.digit {
+  width: 26px;
+  height: 26px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border-radius: 7px;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.digit:hover {
+  border-color: var(--brand);
+}
+
+.digit--on {
+  background: var(--brand-wash);
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.cl__count {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.cl__scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  padding: 4px;
+}
+
+.cl__empty {
+  text-align: center;
+  color: var(--ink-3);
+  padding: 34px 10px;
+}
+
+.cl-row {
+  display: grid;
+  grid-template-columns: 122px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 7px 8px;
+  border-radius: 9px;
+}
+
+.cl-row:nth-child(odd) {
+  background: var(--surface-2);
+}
+
+.cl-row__label {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 6px;
+  padding-top: 2px;
+}
+
+.cl-row__label b {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 750;
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+.cl-row__label span {
+  font-size: 11.5px;
+  color: var(--ink-2);
+}
+
+.term {
+  font-style: normal;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.term--t1 {
+  background: var(--brand-wash);
+  color: var(--brand-ink);
+}
+
+.term--t2 {
+  background: var(--warn-wash);
+  color: var(--warn);
+}
+
+.cl-row__courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cl-chip {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 650;
+  padding: 3px 8px;
+  border-radius: 7px;
+  cursor: pointer;
+  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
+  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+.cl-chip:hover {
+  filter: brightness(0.96);
+}
+
+.cl-chip--on {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+}
+
 .plans {
   display: flex;
   gap: 5px;
