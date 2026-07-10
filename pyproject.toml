@@ -1,0 +1,30 @@
+[project]
+name = "cu-schedule"
+version = "0.1.0"
+description = "CUHK course planner: pick what you'll take, see what you still can."
+requires-python = ">=3.10, <3.13"
+readme = "README.md"
+
+# Dependencies of the vendored scraper (see NOTICE.md).
+dependencies = [
+    "beautifulsoup4 (>=4.14.2,<5.0.0)",
+    "markdownify (>=1.2.0,<2.0.0)",
+    "ddddocr (>=1.5.6,<2.0.0)",
+    "requests>=2.33.0,<3.0.0",
+    "tzdata (>=2025.2,<2026.0)",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.14.0"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+# scripts/ modules import each other by bare name, so they need scripts/ on the path.
+pythonpath = ["scripts"]
+testpaths = ["scripts/tests"]
