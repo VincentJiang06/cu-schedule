@@ -1,0 +1,26 @@
+{
+  "admission_year": "2026",
+  "academic_career": "UG",
+  "faculty": "Faculty of Law",
+  "study_mode": "Full-time",
+  "program_en": "B.S.Sc. in Diplomacy and International Studies",
+  "program_chi": "外交與國際事務社會科學學士",
+  "language": "English",
+  "source_url": "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_acad_prog.aspx",
+  "scraped_at_utc": "2026-07-10T16:05:36Z",
+  "learning_outcomes_md": "",
+  "study_scheme_md": "",
+  "content_html_file": "B-S-Sc-in-Diplomacy-and-International-Studies.html",
+  "_manifest": {
+    "admission_year": "2026",
+    "academic_career": "UG",
+    "faculty": "Faculty of Law",
+    "faculty_short": "Law",
+    "study_mode": "Full-time",
+    "program_en": "B.S.Sc. in Diplomacy and International Studies",
+    "program_chi": "外交與國際事務社會科學學士",
+    "file": "2026/Law/B-S-Sc-in-Diplomacy-and-International-Studies.json",
+    "has_learning_outcomes": false,
+    "study_scheme_chars": 0
+  }
+}

@@ -80,6 +80,15 @@ export default function App() {
 
   const term = useMemo(() => terms.find((item) => item.slug === termSlug) ?? null, [termSlug, terms])
   const year = term?.year ?? null
+  const mainTerms = useMemo(() => terms.filter((item) => /Term\s*[12]/.test(item.name)), [terms])
+
+  // The header only offers Term 1 / Term 2, so keep the active term inside that set
+  // even if an older saved state pointed at Summer or the Medicine year.
+  useEffect(() => {
+    if (mainTerms.length > 0 && !mainTerms.some((item) => item.slug === termSlug)) {
+      setTermSlug(mainTerms[0].slug)
+    }
+  }, [mainTerms, termSlug])
 
   // Load the whole academic year once: the planner schedules within the selected
   // term, but the course list compares 上学期 and 下学期 side by side.
@@ -164,10 +173,29 @@ export default function App() {
   return (
     <div className="app">
       <header className="bar">
-        <div className="bar__brand">
-          <span className="bar__mark" aria-hidden />
-          <h1>CU Schedule</h1>
-          <small>中大选课助手</small>
+        <div className="bar__left">
+          <div className="bar__brand">
+            <span className="bar__mark" aria-hidden />
+            <h1>CU Schedule</h1>
+          </div>
+          {mainTerms.length > 0 && (
+            <div className="term-switch" aria-label="当前选课学期">
+              <span className="term-switch__label">当前选课</span>
+              {mainTerms.map((item) => (
+                <button
+                  className={item.slug === termSlug ? 'term-switch__btn term-switch__btn--on' : 'term-switch__btn'}
+                  key={item.slug}
+                  type="button"
+                  onClick={() => {
+                    setTermSlug(item.slug)
+                    setPlanIndex(0)
+                  }}
+                >
+                  {item.name.match(/Term\s*[12]/)?.[0] ?? item.name}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <nav className="bar__nav">
           <button
