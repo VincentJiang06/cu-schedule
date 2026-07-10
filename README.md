@@ -67,8 +67,9 @@ npm run dev
 npm run build
 ```
 
-课程数据的字段定义、课号 key 规则、以及先修/互斥/并修的解析与三值求值，见
-[docs/schema.md](docs/schema.md)。两个校验脚本：
+**前端开发从 [docs/api-design.md](docs/api-design.md) 入手**——数据契约、运行时接口面、
+改动规则与阅读地图都在那里。课程数据的字段定义、课号 key 规则、以及先修/互斥/并修的
+解析与三值求值，见 [docs/schema.md](docs/schema.md)。两个校验脚本：
 
 ```bash
 npx tsx scripts/check_requirements.mts   # 先修解析：全目录零误报
