@@ -10,6 +10,7 @@ import { hhmm } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
 type Theme = 'light' | 'dark'
+type Page = 'select' | 'timetable'
 type RightMode = 'candidates' | 'list'
 
 const EARLY_START = 9 * 60 + 30
@@ -58,6 +59,7 @@ export default function App() {
   const [taken, setTaken] = useState<string[]>(saved?.taken ?? [])
   const [prefs, setPrefs] = useState<Prefs>(saved?.prefs ?? DEFAULT_PREFS)
   const [planIndex, setPlanIndex] = useState(0)
+  const [page, setPage] = useState<Page>('select')
   const [rightMode, setRightMode] = useState<RightMode>('candidates')
 
   useEffect(() => {
@@ -167,23 +169,23 @@ export default function App() {
           <h1>CU Schedule</h1>
           <small>中大选课助手</small>
         </div>
-        <div className="bar__tools">
-          <select
-            aria-label="学期"
-            className="bar__term"
-            value={termSlug ?? ''}
-            onChange={(event) => {
-              setTermSlug(event.target.value)
-              setPlanIndex(0)
-            }}
+        <nav className="bar__nav">
+          <button
+            className={page === 'select' ? 'bar__nav-item bar__nav-item--on' : 'bar__nav-item'}
+            type="button"
+            onClick={() => setPage('select')}
           >
-            {terms.map((item) => (
-              <option key={item.slug} value={item.slug}>
-                {item.name}
-              </option>
-            ))}
-          </select>
-          <span className="bar__count">{loading ? '加载中…' : `${courses.length} 门课`}</span>
+            选课
+          </button>
+          <button
+            className={page === 'timetable' ? 'bar__nav-item bar__nav-item--on' : 'bar__nav-item'}
+            type="button"
+            onClick={() => setPage('timetable')}
+          >
+            课表
+          </button>
+        </nav>
+        <div className="bar__tools">
           <button
             aria-label="切换主题"
             className="bar__theme"
@@ -317,64 +319,66 @@ export default function App() {
           )}
         </aside>
 
-        <section className="stage">
-          <div className="stage__head">
-            <h2>课表</h2>
-            {plans.length > 0 && (
-              <div className="plans">
-                {plans.map((item, index) => (
-                  <button
-                    className={index === planIndex ? 'plan plan--on' : 'plan'}
-                    key={item.id}
-                    type="button"
-                    onClick={() => setPlanIndex(index)}
-                  >
-                    排法 {index + 1}
-                    <i>{item.teachingDays.length} 天</i>
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-          <Timetable
-            emptyMessage={
-              committedCourses.length === 0
-                ? '在左侧填入要上的课，课表会自动排出来'
-                : '这些课排不出无冲突的课表，左侧列出了卡住的地方'
-            }
-            plan={plan}
-          />
-        </section>
-
-        <section className="table-pane">
-          <div className="pane__head">
-            <div className="pane__tabs">
-              <button
-                className={rightMode === 'candidates' ? 'pane__tab pane__tab--on' : 'pane__tab'}
-                type="button"
-                onClick={() => setRightMode('candidates')}
-              >
-                可选课
-              </button>
-              <button
-                className={rightMode === 'list' ? 'pane__tab pane__tab--on' : 'pane__tab'}
-                type="button"
-                onClick={() => setRightMode('list')}
-              >
-                课程列表
-              </button>
+        {page === 'timetable' ? (
+          <section className="stage">
+            <div className="stage__head">
+              <h2>课表</h2>
+              {plans.length > 0 && (
+                <div className="plans">
+                  {plans.map((item, index) => (
+                    <button
+                      className={index === planIndex ? 'plan plan--on' : 'plan'}
+                      key={item.id}
+                      type="button"
+                      onClick={() => setPlanIndex(index)}
+                    >
+                      排法 {index + 1}
+                      <i>{item.teachingDays.length} 天</i>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
-            {rightMode === 'candidates' && <span className="pane__hint">根据你的课表主动筛选</span>}
-            {rightMode === 'list' && <span className="pane__hint">按 科目 → 首位数字 → 学期 排列</span>}
-          </div>
-          {loading ? (
-            <div className="pane__loading">正在加载 {year ?? ''} 全部课程…</div>
-          ) : rightMode === 'candidates' ? (
-            <CourseTable onAdd={addCommitted} rows={candidates.rows} summary={candidates.summary} />
-          ) : (
-            <CourseList committed={committed} offerings={offerings} onAdd={addCommitted} />
-          )}
-        </section>
+            <Timetable
+              emptyMessage={
+                committedCourses.length === 0
+                  ? '在左侧填入要上的课，课表会自动排出来'
+                  : '这些课排不出无冲突的课表，左侧列出了卡住的地方'
+              }
+              plan={plan}
+            />
+          </section>
+        ) : (
+          <section className="table-pane">
+            <div className="pane__head">
+              <div className="pane__tabs">
+                <button
+                  className={rightMode === 'candidates' ? 'pane__tab pane__tab--on' : 'pane__tab'}
+                  type="button"
+                  onClick={() => setRightMode('candidates')}
+                >
+                  可选课
+                </button>
+                <button
+                  className={rightMode === 'list' ? 'pane__tab pane__tab--on' : 'pane__tab'}
+                  type="button"
+                  onClick={() => setRightMode('list')}
+                >
+                  课程列表
+                </button>
+              </div>
+              {rightMode === 'candidates' && <span className="pane__hint">根据你的课表主动筛选</span>}
+              {rightMode === 'list' && <span className="pane__hint">按 科目 → 首位数字 → 学期 排列</span>}
+            </div>
+            {loading ? (
+              <div className="pane__loading">正在加载 {year ?? ''} 全部课程…</div>
+            ) : rightMode === 'candidates' ? (
+              <CourseTable onAdd={addCommitted} rows={candidates.rows} summary={candidates.summary} />
+            ) : (
+              <CourseList committed={committed} offerings={offerings} onAdd={addCommitted} />
+            )}
+          </section>
+        )}
       </main>
 
       <footer className="foot">
