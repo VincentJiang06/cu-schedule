@@ -87,3 +87,30 @@ export function huePaint(hue: number, shade = 0, theme: PaintTheme = 'light'): C
 export function subjectPaint(subjectOrCode: string, theme: PaintTheme = 'light'): CanvasPaint {
   return huePaint(subjectHue(subjectOrCode), subjectShade(subjectOrCode) * SHADE_STEP, theme)
 }
+
+/**
+ * #里程碑3:timetable-only palette — courseColor() above hashes only the four-letter
+ * subject prefix, which is correct for browse/catalog UI (group by subject) but
+ * wrong for a timetable, where two courses in the same subject (CSCI3130 vs
+ * CSCI3230) must NOT collapse to one color. The main app's live TimetableCompare
+ * assigns each distinct committed course a slot from this palette (append-only, so
+ * adding/removing a course never reshuffles existing colors); ShareView's read-only
+ * course list is fixed once loaded, so it can build the same slot map in one shot
+ * with courseColorPalette() below — same palette, same hsl() formula, so a course
+ * reads as the same color in the live app and in a shared link.
+ */
+export const TIMETABLE_PALETTE = [210, 145, 275, 25, 330, 190, 95, 300, 50, 240, 170, 10]
+
+/** Build a stable per-course (by key) color lookup over a fixed list of course keys —
+ * first-appearance order decides the palette slot. */
+export function courseColorPalette(keys: string[]): (key: string) => CSSProperties {
+  const slots = new Map<string, number>()
+  for (const key of keys) {
+    if (!slots.has(key)) slots.set(key, slots.size)
+  }
+  return (key: string): CSSProperties =>
+    ({
+      '--hue': TIMETABLE_PALETTE[(slots.get(key) ?? 0) % TIMETABLE_PALETTE.length],
+      '--shade': '0%',
+    }) as CSSProperties
+}

@@ -24,7 +24,7 @@ import { SubjectPicker } from './components/SubjectPicker.tsx'
 import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
 import { copyText } from './lib/clipboard.ts'
-import { courseColor, huePaint, type PaintTheme } from './lib/color.ts'
+import { courseColor, huePaint, TIMETABLE_PALETTE, type PaintTheme } from './lib/color.ts'
 import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
 import { downloadBlob } from './lib/exportImage.ts'
@@ -189,9 +189,10 @@ type Saved = {
   pins?: Pins
 }
 
-// 课表页专用配色盘：~12 个可区分的 hue。每门 committed 课进入时按顺序领取一个槽位
-// （append-only，见 colorForCode），槽位一旦分配永不重排，故新增课不会打乱既有课的颜色。
-const TIMETABLE_PALETTE = [210, 145, 275, 25, 330, 190, 95, 300, 50, 240, 170, 10]
+// 课表页专用配色盘：~12 个可区分的 hue（TIMETABLE_PALETTE 定义搬到 color.ts，
+// ShareView 的只读课程列表/课表也复用同一份，颜色口径统一）。每门 committed 课进入时
+// 按顺序领取一个槽位（append-only，见 colorForCode），槽位一旦分配永不重排，故新增课
+// 不会打乱既有课的颜色。
 
 // 页脚友链带 + 附录页「友链邀请」大卡共用同一份数据源：icon 文件已放在
 // public/assets/sib-icons/，顺序照产品给定的清单。desc 只有附录页的大卡会用到。

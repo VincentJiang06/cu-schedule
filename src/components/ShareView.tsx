@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
-import { courseColor } from '../lib/color.ts'
+import { courseColorPalette } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { loadSubjects, loadTermList, loadYearOfferings, type Offering } from '../lib/data.ts'
 import { exportPlan, type ExportFormat } from '../lib/exportPlan.ts'
@@ -91,7 +91,10 @@ export function ShareView({ id }: { id: string }) {
     const plans = generatePlans(committedCourses, NO_PREFS, instance.pins ?? {})
     const planA = plans[0] ?? null
     const totalUnits = committedCourses.reduce((sum, course) => sum + course.units, 0)
-    return { committedCourses, planA, totalUnits }
+    // #里程碑3:按课程(不是按学科)上色，与课表大格子共用同一份取色——固定列表，一次算好即可
+    // (不像主 app 的 committed 会增删，不需要 append-only 的槽位 ref)。
+    const colorForCode = courseColorPalette(committedCourses.map((course) => course.key))
+    return { committedCourses, planA, totalUnits, colorForCode }
   }, [state])
 
   async function handleExport(format: ExportFormat): Promise<void> {
@@ -127,7 +130,7 @@ export function ShareView({ id }: { id: string }) {
   }
 
   const { instance } = state
-  const { committedCourses, planA, totalUnits } = derived
+  const { committedCourses, planA, totalUnits, colorForCode } = derived
 
   return (
     <div className="sv">
@@ -139,58 +142,68 @@ export function ShareView({ id }: { id: string }) {
             <p className="sv__term">{instance.termName || '课表分享'} · 只读分享</p>
           </div>
         </div>
-        <a className="sv__home" href={window.location.pathname}>做自己的课表 →</a>
       </header>
 
-      <section className="sv__card">
-        <div className="sv__card-head">
-          <h2>课表</h2>
-          <span>{committedCourses.length} 门 · {totalUnits} 学分</span>
-        </div>
-        <div className="sv__tt">
-          <Timetable emptyMessage="这个分享里没有可排的课表" plan={planA} />
-        </div>
-      </section>
-
-      <section className="sv__card">
-        <h2 className="sv__card-head">课程</h2>
-        <ul className="sv__courses">
-          {committedCourses.map((course) => (
-            <li className="sv__course" key={course.key} style={courseColor(course.code)}>
-              <div className="sv__course-top">
-                <span className="sv__course-code">{course.code}</span>
-                <span className="sv__course-units">{course.units} 学分</span>
-              </div>
-              <div className="sv__course-title">{course.title}</div>
-              {course.sections
-                .filter((s) => s.component === 'LEC')
-                .slice(0, 4)
-                .map((s, i) => (
-                  <div className="sv__course-time" key={s.id}>
-                    LEC{course.sections.filter((x) => x.component === 'LEC').length > 1 ? ` ${i + 1}` : ''} · {sectionTimes(s)}
+      {/* #里程碑3:左右布局——左窄栏放课程列表/CTA/导出,右栏用整页高度放课表,时间轴才看得清。
+          grid-template-areas 决定视觉位置,与 DOM 顺序无关：移动端媒体查询把 tt 挪到 list 上方，
+          不需要 order/reorder 任何 DOM 节点。 */}
+      <div className="sv__layout">
+        <aside className="sv__col sv__col--list">
+          <section className="sv__card">
+            <h2 className="sv__card-head">课程</h2>
+            <ul className="sv__courses">
+              {committedCourses.map((course) => (
+                <li className="sv__course" key={course.key} style={colorForCode(course.key)}>
+                  <div className="sv__course-top">
+                    <span className="sv__course-code">{course.code}</span>
+                    <span className="sv__course-units">{course.units} 学分</span>
                   </div>
-                ))}
-            </li>
-          ))}
-          {committedCourses.length === 0 && <li className="sv__empty empty-hint">这个分享里没有课程</li>}
-        </ul>
-      </section>
+                  <div className="sv__course-title">{course.title}</div>
+                  {course.sections
+                    .filter((s) => s.component === 'LEC')
+                    .slice(0, 4)
+                    .map((s, i) => (
+                      <div className="sv__course-time" key={s.id}>
+                        LEC{course.sections.filter((x) => x.component === 'LEC').length > 1 ? ` ${i + 1}` : ''} · {sectionTimes(s)}
+                      </div>
+                    ))}
+                </li>
+              ))}
+              {committedCourses.length === 0 && <li className="sv__empty empty-hint">这个分享里没有课程</li>}
+            </ul>
+            <p className="sv__meta">{committedCourses.length} 门 · {totalUnits} 学分</p>
+          </section>
 
-      <section className="sv__card">
-        <h2 className="sv__card-head">导出</h2>
-        <div className="sv__exports">
-          <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('pdf')}>
-            表格 PDF
-          </button>
-          <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('image')}>
-            图片 PNG
-          </button>
-          <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('wallpaper')}>
-            手机壁纸
-          </button>
-        </div>
-        {exportNote && <p className="export-note">{exportNote}</p>}
-      </section>
+          <a className="sv__cta" href={window.location.pathname}>做自己的课表 →</a>
+
+          <section className="sv__card">
+            <h2 className="sv__card-head">导出</h2>
+            <div className="sv__exports">
+              <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('pdf')}>
+                表格 PDF
+              </button>
+              <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('image')}>
+                图片 PNG
+              </button>
+              <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('wallpaper')}>
+                手机壁纸
+              </button>
+            </div>
+            {exportNote && <p className="export-note">{exportNote}</p>}
+          </section>
+        </aside>
+
+        <section className="sv__col sv__col--tt">
+          <div className="sv__card sv__tt-card">
+            <div className="sv__card-head">
+              <h2>课表</h2>
+            </div>
+            <div className="sv__tt">
+              <Timetable colorForCode={colorForCode} emptyMessage="这个分享里没有可排的课表" plan={planA} />
+            </div>
+          </div>
+        </section>
+      </div>
 
       <footer className="sv__foot">
         <a

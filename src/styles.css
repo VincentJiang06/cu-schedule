@@ -4308,13 +4308,84 @@ select {
 /* ---- read-only share view (#v=<id>, mobile-first) --------------------------- */
 
 .sv {
-  max-width: 720px;
+  max-width: 1180px;
   margin: 0 auto;
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 14px 14px 28px;
+}
+
+/* #里程碑3:左右布局——左窄栏(课程列表/CTA/导出)+ 右栏(整页高度的大课表)。
+   grid-template-areas 定视觉位置，与 JSX 的 DOM 顺序无关，移动端媒体查询直接把
+   tt 挪到 list 上方即可，不需要 order 或重排 DOM。 */
+.sv__layout {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) 1fr;
+  grid-template-areas: 'list tt';
+  gap: 12px;
+  align-items: stretch;
+}
+
+.sv__col {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sv__col--list {
+  grid-area: list;
+  overflow-y: auto;
+}
+
+.sv__col--tt {
+  grid-area: tt;
+}
+
+/* 课表卡拉满整个右栏高度，卡内的 .sv__tt 再拉满卡剩余高度——时间轴终于有地方立起来。 */
+.sv__tt-card {
+  flex: 1 1 auto;
+  min-height: 520px;
+}
+
+.sv__cta {
+  display: block;
+  text-align: center;
+  font-size: 13.5px;
+  font-weight: 750;
+  color: var(--on-brand);
+  background: var(--brand);
+  text-decoration: none;
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  box-shadow: var(--shadow);
+}
+
+.sv__cta:hover {
+  opacity: 0.9;
+}
+
+.sv__meta {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 窄屏回退为上下堆叠——课表挪到课程列表上方，纵向高度给足才看得清整天的时间轴。 */
+@media (max-width: 760px) {
+  .sv__layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: 'tt' 'list';
+  }
+
+  .sv__tt-card {
+    min-height: 72vh;
+  }
 }
 
 .sv--msg {
@@ -4407,10 +4478,11 @@ select {
   font-variant-numeric: tabular-nums;
 }
 
-/* Give the reused single Timetable a concrete height so its flex/grid fills it. */
+/* Give the reused single Timetable a concrete height so its flex/grid fills it —
+   #里程碑3:不再是固定 vh，而是拉满 .sv__tt-card 的剩余高度(卡片头之外的全部空间)。 */
 .sv__tt {
-  height: 62vh;
-  min-height: 360px;
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
 }

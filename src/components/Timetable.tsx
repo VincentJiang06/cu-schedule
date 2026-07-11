@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import { courseColor } from '../lib/color.ts'
+import { courseKey } from '../lib/courseKey.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
@@ -40,7 +41,17 @@ function layOutDay(blocks: Omit<Block, 'lane' | 'lanes'>[]): Block[] {
   })
 }
 
-export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMessage: string }) {
+export function Timetable({
+  plan,
+  emptyMessage,
+  colorForCode,
+}: {
+  plan: Plan | null
+  emptyMessage: string
+  /** #里程碑3:按课程(不是按学科)上色——不传时退回 courseColor(subject)，但那样同学科
+   * 的课会全部撞色，调用方(ShareView)应该总是传一个按课程区分的取色函数。 */
+  colorForCode?: (code: string) => CSSProperties
+}) {
   const raw: Omit<Block, 'lane' | 'lanes'>[] = (plan?.entries ?? []).flatMap((entry) =>
     entry.section.meetings.map((meeting) => ({
       key: `${entry.section.id}-${meeting.dayIndex}-${meeting.start}`,
@@ -122,7 +133,7 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
                     key={block.key}
                     style={
                       {
-                        ...courseColor(block.subject),
+                        ...(colorForCode ? colorForCode(courseKey(block.code)) : courseColor(block.subject)),
                         top: `${pct(block.start)}%`,
                         height: `calc(${((shownEnd - block.start) / span) * 100}% - 3px)`,
                         left: `calc(${block.lane * width}% + 2px)`,
