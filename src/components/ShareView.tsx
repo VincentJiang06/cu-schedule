@@ -99,10 +99,8 @@ export function ShareView({ id }: { id: string }) {
     setExportNote('正在导出…')
     const result = await exportPlan({
       format,
-      planA: derived.planA,
-      planB: null,
+      plan: derived.planA,
       termName: state.instance.termName,
-      share: { termSlug: state.instance.termSlug, committed: state.instance.committed, taken: state.instance.taken, pins: state.instance.pins },
     })
     setExportNote(result.ok ? result.note : result.reason)
   }

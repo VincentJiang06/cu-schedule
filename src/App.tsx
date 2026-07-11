@@ -294,6 +294,9 @@ export default function App() {
   // 课表页 A / B 各自选中的排法下标（默认第 1、第 2 种）；plans 变化越界时重置回默认。
   const [planAIndex, setPlanAIndex] = useState(0)
   const [planBIndex, setPlanBIndex] = useState(1)
+  // 导出页:用户从可行排法里【只选一个】要导出的确定方案(不再 A / B)。默认第一种；
+  // plans 变化越界时重置回 0(与 planAIndex/planBIndex 同一套越界回退模式)。
+  const [selectedExportPlanIndex, setSelectedExportPlanIndex] = useState(0)
   // #12 单方案模式:点排法横条的方框 → 只看这一个排法(退出 A/B 对比);点 A / B 按钮回到对比。
   const [soloPlanIndex, setSoloPlanIndex] = useState<number | null>(null)
   const [page, setPage] = useState<Page>(bootPage)
@@ -688,6 +691,11 @@ export default function App() {
     if (planAIndex >= plans.length) setPlanAIndex(0)
     if (planBIndex >= plans.length) setPlanBIndex(1)
   }, [planAIndex, planBIndex, plans.length])
+  // 导出页选中方案下标同样越界回退到 0。
+  useEffect(() => {
+    if (selectedExportPlanIndex >= plans.length) setSelectedExportPlanIndex(0)
+  }, [selectedExportPlanIndex, plans.length])
+  const selectedExportPlan = plans[selectedExportPlanIndex] ?? null
 
   // #7 排法横条数据：每个排法带上它在 plans 中的真实下标（A/B 选择以此为准）、冲突判定
   // （实践中恒为 false，见 planHasConflict 注释）与「是否落在上下班窗口内」判定。
@@ -824,21 +832,25 @@ export default function App() {
     setShareNote(copied ? `只读链接已复制（一天有效）：${result.url}` : `只读链接（一天有效）：${result.url}`)
     setShareBusy(false)
   }
+  // 导出页六张卡全部只导出顶部选中的那一个方案（selectedExportPlan），不再 A / B。
   async function handleExport(format: ExportFormat): Promise<void> {
-    // The link shares the current selection even when no conflict-free plan exists;
-    // ics / image need a rendered timetable (排法 A) to export.
-    if (format !== 'link' && !planA) return
+    if (!selectedExportPlan) return
     setExportNote('正在导出…')
     const result = await exportPlan({
       format,
-      planA: planA ?? { id: '', entries: [], units: 0, teachingDays: [] },
-      planB,
+      plan: selectedExportPlan,
       termName: term?.name ?? '',
-      share: { termSlug, committed, taken, pins },
       // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射,浅色主题解析)。
       paint: (code) => paintForCode(code),
     })
     setExportNote(result.ok ? result.note : result.reason)
+  }
+  // 底部「其他」栏:导出全部配置(committed/taken/cart/pins/term/开关)为一份 Markdown。
+  // 真正实现在 configMd.ts(里程碑 3)；此处占位，避免导出页在里程碑 1 单独提交时引用尚未
+  // 落地的模块。
+  const [configNote, setConfigNote] = useState('')
+  function handleExportConfigMd(): void {
+    setConfigNote('即将支持：导出全部配置为 Markdown')
   }
 
   const candidates = useMemo(() => {
@@ -1608,43 +1620,43 @@ export default function App() {
       </p>
     ) : null
 
-  // 导出页:排法选择器复用 A / B mini-select（与课表页同源），供 .ics / 图片选定要导出的排法。
-  const abPicker =
+  // 导出页:顶部「课表导出方案」——从可行排法里只选一个（单选，非 A / B）作为要导出的确定
+  // 方案。视觉复用课表页排法横条的卡片样式（.plan-strip__rail / .plan-card），选中态直接
+  // 借用既有的 .plan-card--solo 高亮，不需要额外的 A / B 拾取按钮。
+  const exportPlanPicker =
     plans.length > 0 ? (
-      <div className="ab-legend">
-        <label className="ab-legend__item">
-          <i className="tt2__tag tt2__tag--a">A</i>
-          <select
-            className="mini-select"
-            aria-label="A 排法"
-            value={planAIndex}
-            onChange={(event) => setPlanAIndex(Number(event.target.value))}
-          >
-            {plans.map((plan, index) => (
-              <option key={plan.id} value={index}>
-                排法 {index + 1} · {plan.teachingDays.length}天
-              </option>
-            ))}
-          </select>
-        </label>
-        {plans.length >= 2 && (
-          <label className="ab-legend__item">
-            <i className="tt2__tag tt2__tag--b">B</i>
-            <select
-              className="mini-select"
-              aria-label="B 排法"
-              value={planBIndex}
-              onChange={(event) => setPlanBIndex(Number(event.target.value))}
+      <div className="plan-strip__rail">
+        {plans.map((plan, index) => {
+          const isSelected = index === selectedExportPlanIndex
+          return (
+            <div
+              className={`plan-card${isSelected ? ' plan-card--solo' : ''}`}
+              key={plan.id}
+              role="button"
+              tabIndex={0}
+              title="选为要导出的方案"
+              onClick={() => setSelectedExportPlanIndex(index)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  setSelectedExportPlanIndex(index)
+                }
+              }}
             >
-              {plans.map((plan, index) => (
-                <option key={plan.id} value={index}>
-                  排法 {index + 1} · {plan.teachingDays.length}天
-                  {index === planAIndex ? '（与 A 相同）' : ''}
-                </option>
-              ))}
-            </select>
-          </label>
-        )}
+              <div className="plan-card__info">
+                <span className="plan-card__name">排法 {index + 1}</span>
+                <span className="plan-card__meta">
+                  {plan.teachingDays.length} 天 · {plan.units} 学分
+                </span>
+              </div>
+              {isSelected && (
+                <span aria-hidden className="plan-card__selected-mark">
+                  ✓
+                </span>
+              )}
+            </div>
+          )
+        })}
       </div>
     ) : null
 
@@ -1713,113 +1725,180 @@ export default function App() {
       </div>
     ) : null
 
+  // 导出方式六卡：图标 + 名称 + 较完整介绍，2 个一行、共 3 行（.export-methods-grid 强制两列）。
+  // 每卡都只导出顶部选中的 selectedExportPlan（只读分享除外——它分享的是整份选课状态，
+  // 沿用既有 #v= 只读分享逻辑，见 handleCreateShare 注释）。
+  const exportMethods: Array<{
+    key: string
+    icon: ReactNode
+    title: string
+    desc: string
+    ctaLabel: string
+    disabled: boolean
+    busy?: boolean
+    onClick: () => void
+  }> = [
+    {
+      key: 'wallpaper',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <rect height="18" rx="3" stroke="currentColor" strokeWidth="2" width="12" x="6" y="3" />
+          <path d="M10 19h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      ),
+      title: '手机壁纸',
+      desc: '竖屏壁纸图，把选中的课表铺成手机锁屏背景，顶部留白避开系统时间。导出两张：纯背景 + 带课表。',
+      ctaLabel: '下载壁纸',
+      disabled: !selectedExportPlan,
+      onClick: () => void handleExport('wallpaper'),
+    },
+    {
+      key: 'ics',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <rect height="17" rx="2" stroke="currentColor" strokeWidth="2" width="18" x="3" y="4.5" />
+          <path d="M3 9.5h18M8 2.5v4M16 2.5v4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      ),
+      title: '日历（.ics）',
+      desc: '导入手机系统日历 / Google Calendar，每周自动重复。周期为按学期估算，开学后请回 CUSIS 核对真实起止日期。',
+      ctaLabel: '下载 .ics',
+      disabled: !selectedExportPlan,
+      onClick: () => void handleExport('ics'),
+    },
+    {
+      key: 'share',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <path
+            d="M12 3C7 3 3 7 3 12s4 9 9 9 9-4 9-9-4-9-9-9Z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4Z" stroke="currentColor" strokeWidth="2" />
+        </svg>
+      ),
+      title: '只读分享',
+      desc: '生成一个一天有效的只读链接，手机打开即可查看当前选课与课表，无需登录，对方不能编辑。',
+      ctaLabel: shareBusy ? '生成中…' : '生成只读链接',
+      disabled: committed.length === 0 || shareBusy,
+      busy: shareBusy,
+      onClick: () => void handleCreateShare(),
+    },
+    {
+      key: 'pdf',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <path
+            d="M6 2.5h8l4 4V21a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path d="M14 2.5V7h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+        </svg>
+      ),
+      title: '表格 PDF',
+      desc: '一页 A4 的课表，线条清晰，适合打印出来贴在墙上或夹进笔记本。',
+      ctaLabel: '下载 PDF',
+      disabled: !selectedExportPlan,
+      onClick: () => void handleExport('pdf'),
+    },
+    {
+      key: 'image',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <rect height="16" rx="2" stroke="currentColor" strokeWidth="2" width="18" x="3" y="4" />
+          <circle cx="8.5" cy="9.5" fill="currentColor" r="1.4" stroke="none" />
+          <path d="m4 17 5-5 4 3 3-3 4 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+        </svg>
+      ),
+      title: '图片 PNG',
+      desc: '课表截图，一张清晰的图片，发到群里或发朋友、微信问课都方便。',
+      ctaLabel: '下载图片',
+      disabled: !selectedExportPlan,
+      onClick: () => void handleExport('image'),
+    },
+    {
+      key: 'html',
+      icon: (
+        <svg aria-hidden fill="none" height="20" viewBox="0 0 24 24" width="20">
+          <path
+            d="M6 2.5h8l4 4V21a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1Z"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+          <path d="M14 2.5V7h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
+          <path d="m9.5 13-1.7 1.7 1.7 1.7M14.5 13l1.7 1.7-1.7 1.7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
+        </svg>
+      ),
+      title: '导出为 HTML',
+      desc: '独立的自包含网页文件，不依赖网络，离线也能双击打开，内含完整课表，适合长期留存。',
+      ctaLabel: '下载 HTML',
+      disabled: !selectedExportPlan,
+      onClick: () => void handleExport('html'),
+    },
+  ]
+
   const exportView = (
     <div className="page-center page-center--export">
       <section className="card">
         <h2 className="card__title">
-          导出范围
+          课表导出方案
           <span className="card__note">{term?.name ?? ''}</span>
         </h2>
         {plans.length === 0 ? (
           <p className="card__sub">先在选课页选课，才能导出课表</p>
         ) : (
           <>
-            {abPicker}
+            <p className="card__sub">从可行排法里选一个作为要导出的方案（下面所有导出方式都只导出这一个）。</p>
+            {exportPlanPicker}
             <p className="card__sub">
               已选 {committedCourses.length} 门 · {totalUnits} 学分
+              {selectedExportPlan ? ` · 排法 ${selectedExportPlanIndex + 1}（${selectedExportPlan.teachingDays.length} 天）` : ''}
             </p>
           </>
         )}
       </section>
 
-      <h3 className="export-group-title">表格格式</h3>
-      <div className="export-grid">
-        <section className="card export-card">
-          <h3 className="card__title">表格 PDF</h3>
-          <p className="card__sub">A / B 对比课表,一页 PDF,适合打印。</p>
-          <button
-            className="export-btn"
-            disabled={!planA}
-            type="button"
-            onClick={() => void handleExport('pdf')}
-          >
-            下载 PDF
-          </button>
-        </section>
-        <section className="card export-card">
-          <h3 className="card__title">图片 PNG</h3>
-          <p className="card__sub">A / B 对比图,适合分享。</p>
-          <button
-            className="export-btn"
-            disabled={!planA}
-            type="button"
-            onClick={() => void handleExport('image')}
-          >
-            下载图片
-          </button>
-        </section>
-      </div>
-
-      <h3 className="export-group-title">手机壁纸</h3>
-      <div className="export-grid">
-        <section className="card export-card">
-          <h3 className="card__title">iPhone 壁纸</h3>
-          <p className="card__sub">
-            iPhone 17 Pro 比例,顶部留白避开系统时间。导出两张:纯背景 + 带课表(排法 A)。
-          </p>
-          <button
-            className="export-btn"
-            disabled={!planA}
-            type="button"
-            onClick={() => void handleExport('wallpaper')}
-          >
-            下载壁纸
-          </button>
-        </section>
+      <h3 className="export-group-title">导出方式</h3>
+      <div className="export-methods-grid">
+        {exportMethods.map((method) => (
+          <section className="card export-card export-method-card" key={method.key}>
+            <div className="export-method-card__head">
+              <span aria-hidden className="export-method-card__icon">
+                {method.icon}
+              </span>
+              <h3 className="card__title">{method.title}</h3>
+            </div>
+            <p className="card__sub export-method-card__desc">{method.desc}</p>
+            <button
+              className="export-btn"
+              disabled={method.disabled}
+              type="button"
+              onClick={method.onClick}
+            >
+              {method.ctaLabel}
+            </button>
+          </section>
+        ))}
       </div>
 
       <h3 className="export-group-title">其他</h3>
-      <div className="export-grid">
-        <section className="card export-card">
-          <h3 className="card__title">日历 .ics</h3>
-          <p className="card__sub">导出排法 A 的每周日程,时间为估计,以 CUSIS 为准。</p>
-          <button
-            className="export-btn"
-            disabled={!planA}
-            type="button"
-            onClick={() => void handleExport('ics')}
-          >
-            下载 .ics
-          </button>
-        </section>
-        <section className="card export-card">
-          <h3 className="card__title">分享链接</h3>
-          <p className="card__sub">复制链接,打开即恢复选课(可继续编辑)。</p>
-          <button
-            className="export-btn"
-            disabled={committed.length === 0 && taken.length === 0}
-            type="button"
-            onClick={() => void handleExport('link')}
-          >
-            复制链接
-          </button>
-        </section>
-        <section className="card export-card">
-          <h3 className="card__title">只读分享 · 手机查看</h3>
-          <p className="card__sub">生成一个只读页面链接,适合手机查看,一天有效。</p>
-          <button
-            className="export-btn"
-            disabled={committed.length === 0 || shareBusy}
-            type="button"
-            onClick={() => void handleCreateShare()}
-          >
-            {shareBusy ? '生成中…' : '生成只读链接'}
-          </button>
-        </section>
-      </div>
+      <section className="card export-bar">
+        <div className="export-bar__text">
+          <h3 className="card__title">导出所有配置</h3>
+          <p className="card__sub">
+            把要上的课、已修过的课、备选课、锁定时段与筛选开关打包成一份 Markdown，方便备份或换设备导入。
+          </p>
+        </div>
+        <button className="export-btn export-bar__btn" type="button" onClick={handleExportConfigMd}>
+          下载 .md
+        </button>
+      </section>
 
       {shareNote && <p className="export-note export-note--share">{shareNote}</p>}
       {exportNote && <p className="export-note">{exportNote}</p>}
+      {configNote && <p className="export-note">{configNote}</p>}
     </div>
   )
 

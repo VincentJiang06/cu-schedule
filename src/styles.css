@@ -493,6 +493,64 @@ select {
   margin-top: auto;
 }
 
+/* 导出方式六卡：强制两列（不用 auto-fit），2 个一行、共 3 行。 */
+.export-methods-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 560px) {
+  .export-methods-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.export-method-card__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.export-method-card__icon {
+  display: inline-flex;
+  flex: none;
+  color: var(--brand-ink);
+  opacity: 0.85;
+}
+
+.export-method-card__desc {
+  flex: 1;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+/* 底部「其他」栏：一条长条，左侧标题+说明，右侧按钮。.card.export-bar 用复合选择器
+   确保覆盖 .card 默认的 flex-direction:column（选择器特异性更高，不依赖源码顺序）。 */
+.card.export-bar {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.export-bar__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 220px;
+}
+
+.export-bar__text .card__title {
+  margin: 0;
+}
+
+.export-bar__btn {
+  flex: none;
+  padding: 10px 20px;
+}
+
 .side {
   min-height: 0;
   overflow-y: auto;
@@ -1367,6 +1425,15 @@ select {
   font-size: 11.5px;
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
+}
+
+/* 导出页排法单选卡的选中勾号（复用 .plan-card / .plan-card--solo 的高亮，见 App.tsx
+   exportPlanPicker）。 */
+.plan-card__selected-mark {
+  margin-left: 2px;
+  color: var(--brand-ink);
+  font-weight: 800;
+  font-size: 13px;
 }
 
 .plan-card__actions {

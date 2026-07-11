@@ -1,20 +1,17 @@
 import { exportIcs } from './ics.ts'
 import { exportImage, exportPdf, type PaintFn } from './exportImage.ts'
+import { exportHtmlFile } from './exportHtml.ts'
 import { exportWallpaper } from './exportWallpaper.ts'
-import type { Plan, Pins } from './schedule.ts'
-import { copyShareLink, type SharePayload } from './shareLink.ts'
+import type { Plan } from './schedule.ts'
 
-export type ExportFormat = 'ics' | 'image' | 'pdf' | 'wallpaper' | 'link'
+export type ExportFormat = 'ics' | 'image' | 'pdf' | 'wallpaper' | 'html'
 
 export type ExportRequest = {
   format: ExportFormat
-  /** The two compared timetables; B may be absent when only one plan exists. */
-  planA: Plan
-  planB: Plan | null
+  /** The one user-selected timetable to export — every format renders this and only this. */
+  plan: Plan
   termName: string
-  /** Current selection, used by the share-link export (ignored by ics / image). */
-  share: { termSlug: string | null; committed: string[]; taken: string[]; pins: Pins }
-  /** Per-course canvas tint. App passes the timetable-palette painter so PNG/PDF/壁纸
+  /** Per-course canvas tint. App passes the timetable-palette painter so PNG/PDF/壁纸/HTML
    * carry the same colors as the on-screen timetable; omitted (ShareView) = subject colors. */
   paint?: PaintFn
 }
@@ -22,38 +19,36 @@ export type ExportRequest = {
 export type ExportResult = { ok: true; note: string } | { ok: false; reason: string }
 
 /**
- * Export the A/B timetable comparison. Dispatches to the three real encoders:
- *   - `ics`   → RFC 5545 calendar of 排法 A (download)
- *   - `image` → hand-drawn 2× PNG of the A/B comparison (download)
- *   - `link`  → shareable permalink of the current selection (clipboard)
- * Async because the image encoder resolves through `canvas.toBlob` and the link
- * encoder awaits the clipboard.
+ * Export one timetable. Dispatches to the encoders:
+ *   - `ics`      → RFC 5545 calendar (download)
+ *   - `image`    → hand-drawn 2× PNG (download)
+ *   - `pdf`      → single-page A4 PDF (download)
+ *   - `wallpaper`→ two portrait PNGs, iPhone ratio (download)
+ *   - `html`     → self-contained offline-openable .html (download)
+ * Async because several encoders resolve through `canvas.toBlob`.
  */
 export async function exportPlan(request: ExportRequest): Promise<ExportResult> {
   try {
     switch (request.format) {
       case 'ics': {
-        const filename = exportIcs(request.planA, request.termName)
-        return { ok: true, note: `已下载 ${filename}（排法 A）` }
+        const filename = exportIcs(request.plan, request.termName)
+        return { ok: true, note: `已下载 ${filename}` }
       }
       case 'image': {
-        const filename = await exportImage(request.planA, request.planB, request.termName, request.paint)
-        return { ok: true, note: `已下载 ${filename}（A / B 对比）` }
+        const filename = await exportImage(request.plan, request.termName, request.paint)
+        return { ok: true, note: `已下载 ${filename}` }
       }
       case 'pdf': {
-        const filename = await exportPdf(request.planA, request.planB, request.termName, request.paint)
-        return { ok: true, note: `已下载 ${filename}（A / B 对比表格）` }
+        const filename = await exportPdf(request.plan, request.termName, request.paint)
+        return { ok: true, note: `已下载 ${filename}` }
       }
       case 'wallpaper': {
-        const note = await exportWallpaper(request.planA, request.termName, request.paint)
+        const note = await exportWallpaper(request.plan, request.termName, request.paint)
         return { ok: true, note }
       }
-      case 'link': {
-        const payload: SharePayload = { ...request.share }
-        const { copied, url } = await copyShareLink(payload)
-        return copied
-          ? { ok: true, note: '链接已复制，打开即可恢复当前选课' }
-          : { ok: true, note: `无法自动复制，请手动复制链接：${url}` }
+      case 'html': {
+        const filename = exportHtmlFile(request.plan, request.termName, request.paint)
+        return { ok: true, note: `已下载 ${filename}` }
       }
     }
   } catch (cause) {

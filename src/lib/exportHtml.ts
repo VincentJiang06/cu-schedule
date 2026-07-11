@@ -1,0 +1,277 @@
+import { subjectPaint, type CanvasPaint } from './color.ts'
+import type { Plan } from './schedule.ts'
+import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
+import { displayEndMinutes, hhmm } from './time.ts'
+
+/**
+ * Self-contained, offline-openable HTML export of a single timetable (排法). No
+ * external stylesheet, font, or script — everything (CSS, colors) is inlined into
+ * one file so double-clicking it works with no network access.
+ *
+ * Layout mirrors TimetableCompare's solo mode: a left time axis, one column per
+ * weekday, course blocks absolutely positioned by percentage within each day's
+ * column. Positioning uses the same floor/ceil/displayEndMinutes rounding as the
+ * canvas exporters, so the rendered page matches what the app shows on screen.
+ */
+
+const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+const FLOOR = 8 * 60
+const CEIL = 19 * 60
+
+type Block = {
+  code: string
+  subject: string
+  title: string
+  component: string
+  location: string
+  dayIndex: number
+  start: number
+  end: number
+  lane: number
+  lanes: number
+}
+
+function blocksOf(plan: Plan): Omit<Block, 'lane' | 'lanes'>[] {
+  return plan.entries.flatMap((entry) =>
+    entry.section.meetings.map((meeting) => ({
+      code: entry.course.code,
+      subject: entry.course.subject,
+      title: entry.course.title,
+      component: entry.section.component,
+      location: meeting.location,
+      dayIndex: meeting.dayIndex,
+      start: meeting.start,
+      end: meeting.end,
+    })),
+  )
+}
+
+/** Greedy interval-graph coloring, lane occupancy tracked via the *displayed*
+ * (rounded-up) end so lane packing agrees with the rounded block height used for
+ * rendering — see exportImage.ts's layOutDay for the same reasoning. */
+function layOutDay(blocks: Omit<Block, 'lane' | 'lanes'>[]): Block[] {
+  const sorted = [...blocks].sort((a, b) => a.start - b.start || a.end - b.end)
+  const laneEnds: number[] = []
+  const placed = sorted.map((block) => {
+    const shownEnd = displayEndMinutes(block.end)
+    let lane = laneEnds.findIndex((end) => end <= block.start)
+    if (lane === -1) lane = laneEnds.length
+    laneEnds[lane] = shownEnd
+    return { ...block, lane, lanes: 1 }
+  })
+  return placed.map((block) => {
+    const blockShownEnd = displayEndMinutes(block.end)
+    const cluster = placed.filter(
+      (other) => other.start < blockShownEnd && block.start < displayEndMinutes(other.end),
+    )
+    return { ...block, lanes: Math.max(...cluster.map((item) => item.lane)) + 1 }
+  })
+}
+
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+}
+
+/** Build the full, self-contained HTML document string for one timetable. */
+export function buildScheduleHtml(
+  plan: Plan,
+  termName: string,
+  paint: PaintFn = (_code, subject) => subjectPaint(subject),
+): string {
+  const raw = blocksOf(plan)
+  const usesWeekend = raw.some((block) => block.dayIndex > 5)
+  const dayCount = usesWeekend ? 7 : 5
+
+  const floorHour = Math.floor(Math.min(FLOOR, ...raw.map((block) => block.start)) / 60)
+  const ceilHour = Math.ceil(Math.max(CEIL, ...raw.map((block) => displayEndMinutes(block.end))) / 60)
+  const span = (ceilHour - floorHour) * 60
+  const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
+
+  const hourTicks: number[] = []
+  for (let tick = floorHour * 60; tick <= ceilHour * 60; tick += 30) hourTicks.push(tick)
+
+  const dayColumns = Array.from({ length: dayCount }, (_, index) => {
+    const dayIndex = index + 1
+    const laid = layOutDay(raw.filter((block) => block.dayIndex === dayIndex))
+    const blocksHtml = laid
+      .map((block) => {
+        const shownEnd = displayEndMinutes(block.end)
+        const top = pct(block.start)
+        const height = pct(shownEnd) - pct(block.start)
+        const width = 100 / block.lanes
+        const left = block.lane * width
+        const tint: CanvasPaint = paint(block.code, block.subject)
+        const meta = block.location ? `${block.component} · ${escapeHtml(block.location)}` : block.component
+        return `<article class="block" style="top:${top}%;height:${height}%;left:${left}%;width:${width}%;background:${tint.fill};border-color:${tint.edge};color:${tint.text}">` +
+          `<span class="block__code">${escapeHtml(block.code)}</span>` +
+          `<span class="block__time">${hhmm(block.start)}–${hhmm(shownEnd)}</span>` +
+          `<span class="block__meta">${meta}</span>` +
+          `</article>`
+      })
+      .join('')
+    return `<div class="day"><div class="day__cells">${blocksHtml}</div></div>`
+  }).join('')
+
+  const dayHeaders = DAYS.slice(0, dayCount)
+    .map((day) => `<div class="head__day">${day}</div>`)
+    .join('')
+
+  const axisTicks = hourTicks
+    .filter((minutes) => minutes % 60 === 0)
+    .map((minutes) => `<span class="axis__tick" style="top:${pct(minutes)}%">${hhmm(minutes)}</span>`)
+    .join('')
+
+  const gridLines = hourTicks
+    .map((minutes) => `<div class="grid-line${minutes % 60 === 0 ? '' : ' grid-line--half'}" style="top:${pct(minutes)}%"></div>`)
+    .join('')
+
+  const now = new Date()
+  const generated = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+
+  return `<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CU Schedule · ${escapeHtml(termName)}</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 24px;
+    font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: #141a2b;
+    background: #e7e9f0;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  h1 { margin: 0 0 2px; font-size: 22px; font-weight: 750; }
+  .sub { margin: 0 0 18px; font-size: 13px; color: #6c7488; }
+  .tt {
+    display: grid;
+    grid-template-columns: 56px repeat(${dayCount}, minmax(0, 1fr));
+    background: #ffffff;
+    border: 1px solid #ccd2df;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgb(20 26 43 / 0.06), 0 3px 10px -6px rgb(20 26 43 / 0.16);
+  }
+  .corner { border-bottom: 1px solid #dde1eb; }
+  .head__day {
+    padding: 10px 4px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #dde1eb;
+    border-left: 1px solid #dde1eb;
+  }
+  .axis {
+    position: relative;
+    border-right: 1px solid #dde1eb;
+  }
+  .axis__tick {
+    position: absolute;
+    right: 8px;
+    transform: translateY(-50%);
+    font-size: 11px;
+    color: #8b93a4;
+    font-variant-numeric: tabular-nums;
+  }
+  .days {
+    display: contents;
+  }
+  .body-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 56px repeat(${dayCount}, minmax(0, 1fr));
+    grid-template-rows: 640px;
+    position: relative;
+  }
+  .axis, .day {
+    height: 100%;
+  }
+  .day {
+    position: relative;
+    border-left: 1px solid #dde1eb;
+  }
+  .day__cells {
+    position: absolute;
+    inset: 0;
+  }
+  .grid-line {
+    position: absolute;
+    left: 56px;
+    right: 0;
+    height: 1px;
+    background: #e6e8ee;
+  }
+  .grid-line--half {
+    background: #f0f1f5;
+  }
+  .block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    margin: 1px 2px;
+    padding: 5px 7px;
+    border-radius: 6px;
+    border: 1px solid;
+    border-left-width: 3px;
+    overflow: hidden;
+    font-size: 11.5px;
+  }
+  .block__code { font-weight: 750; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .block__meta { opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  footer { margin-top: 14px; font-size: 11px; color: #8b93a4; text-align: right; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0b0e16; color: #eceff6; }
+    .sub { color: #7a8397; }
+    .tt { background: #141926; border-color: #2e3648; }
+    .corner, .head__day, .axis { border-color: #242b3b; }
+    .day { border-color: #242b3b; }
+    .grid-line { background: #242b3b; }
+    .grid-line--half { background: #1c2230; }
+    .axis__tick { color: #7a8397; }
+    footer { color: #7a8397; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>CU Schedule · ${escapeHtml(termName || '课表')}</h1>
+    <p class="sub">导出于 ${generated} · 离线可直接打开 · 时间以 CUSIS 为准</p>
+    <div class="tt">
+      <div class="corner"></div>
+      ${dayHeaders}
+      <div class="body-row">
+        <div class="axis">${axisTicks}</div>
+        <div class="days">${dayColumns}</div>
+        ${gridLines}
+      </div>
+    </div>
+    <footer>数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)</footer>
+  </div>
+</body>
+</html>
+`
+}
+
+/** Build the self-contained HTML file, trigger a download, and return the file name. */
+export function exportHtmlFile(
+  plan: Plan,
+  termName: string,
+  paint: PaintFn = (_code, subject) => subjectPaint(subject),
+): string {
+  const html = buildScheduleHtml(plan, termName, paint)
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' })
+  const filename = `cu-schedule-${slugTerm(termName)}.html`
+  downloadBlob(blob, filename)
+  return filename
+}

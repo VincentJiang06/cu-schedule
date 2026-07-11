@@ -8,11 +8,11 @@ export type PaintFn = (code: string, subject: string) => CanvasPaint
 const defaultPaint: PaintFn = (_code, subject) => subjectPaint(subject)
 
 /**
- * Hand-drawn PNG export of the A / B timetable comparison. No html2canvas or any
- * DOM-capture dependency — the layout of TimetableCompare is replicated onto a 2×
- * canvas: a left time axis, one column per weekday split into A / B sub-columns,
- * and course blocks tinted with the light-theme subject colors (subjectPaint,
- * since a canvas can't read the CSS custom properties the live blocks use).
+ * Hand-drawn PNG export of a single timetable (排法). No html2canvas or any
+ * DOM-capture dependency — the layout of TimetableCompare's solo mode is replicated
+ * onto a 2× canvas: a left time axis, one column per weekday, and course blocks
+ * tinted with the light-theme subject colors (subjectPaint, since a canvas can't
+ * read the CSS custom properties the live blocks use).
  */
 
 const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -47,18 +47,27 @@ function blocksOf(plan: Plan | null): Block[] {
   )
 }
 
-/** Greedy interval-graph coloring — overlapping blocks get side-by-side lanes. */
+/** Greedy interval-graph coloring — overlapping blocks get side-by-side lanes.
+ * Lane occupancy is tracked with the *displayed* (rounded-up) end time, matching
+ * the rounding the renderer uses for block height — otherwise a lane can be marked
+ * free the instant a block's true end passes, while the block is still drawn taller
+ * than that (see time.ts's displayEndMinutes), letting the next block's rectangle
+ * overlap it visually even though nothing actually clashes in real time. */
 function layOutDay(blocks: Block[]): Laid[] {
   const sorted = [...blocks].sort((a, b) => a.start - b.start || a.end - b.end)
   const laneEnds: number[] = []
   const placed: Laid[] = sorted.map((block) => {
+    const shownEnd = displayEndMinutes(block.end)
     let lane = laneEnds.findIndex((end) => end <= block.start)
     if (lane === -1) lane = laneEnds.length
-    laneEnds[lane] = block.end
+    laneEnds[lane] = shownEnd
     return { ...block, lane, lanes: 1 }
   })
   return placed.map((block) => {
-    const cluster = placed.filter((other) => other.start < block.end && block.start < other.end)
+    const blockShownEnd = displayEndMinutes(block.end)
+    const cluster = placed.filter(
+      (other) => other.start < blockShownEnd && block.start < displayEndMinutes(other.end),
+    )
     return { ...block, lanes: Math.max(...cluster.map((item) => item.lane)) + 1 }
   })
 }
@@ -74,26 +83,19 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath()
 }
 
-function draw(
-  ctx: CanvasRenderingContext2D,
-  planA: Plan,
-  planB: Plan | null,
-  termName: string,
-  paint: PaintFn,
-): void {
-  const rawA = blocksOf(planA)
-  const rawB = blocksOf(planB)
-  const all = [...rawA, ...rawB]
+function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint: PaintFn): void {
+  const raw = blocksOf(plan)
 
-  const usesWeekend = all.some((block) => block.dayIndex > 5)
+  const usesWeekend = raw.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
-  const floorHour = Math.floor(Math.min(FLOOR, ...all.map((block) => block.start)) / 60)
+  const floorHour = Math.floor(Math.min(FLOOR, ...raw.map((block) => block.start)) / 60)
   // 用进位后的显示结束时间算下界，拉高的卡片不会溢出网格底部（与 TimetableCompare 一致）。
-  const ceilHour = Math.ceil(Math.max(CEIL, ...all.map((block) => displayEndMinutes(block.end))) / 60)
+  const ceilHour = Math.ceil(Math.max(CEIL, ...raw.map((block) => displayEndMinutes(block.end))) / 60)
   const span = (ceilHour - floorHour) * 60
 
   const ink = '#1e2532'
   const faint = '#e6e8ee'
+  const faintHalf = '#f0f1f5'
   const muted = '#8b93a4'
 
   ctx.fillStyle = '#ffffff'
@@ -104,7 +106,7 @@ function draw(
   ctx.font = '700 24px system-ui, -apple-system, "PingFang SC", sans-serif'
   ctx.textBaseline = 'alphabetic'
   ctx.textAlign = 'left'
-  ctx.fillText(`CU Schedule · ${termName} 课表对比`, 28, 44)
+  ctx.fillText(`CU Schedule · ${termName} 课表`, 28, 44)
 
   const gridTop = 108
   const gridBottom = H - 40
@@ -113,26 +115,29 @@ function draw(
   const gridW = gridRight - gridLeft
   const gridH = gridBottom - gridTop
   const colW = gridW / dayCount
-  const subW = colW / 2
   const yOf = (minutes: number) => gridTop + ((minutes - floorHour * 60) / span) * gridH
 
-  // Hour rules + axis labels.
+  // Hour + half-hour rules（半点线更浅），与网格线同一套 floor/ceil 换算——课块的
+  // top/height 也用同一个 yOf，保证课块边缘总能落在某条线上。
   ctx.font = '12px system-ui, -apple-system, sans-serif'
-  for (let hour = floorHour; hour <= ceilHour; hour += 1) {
-    const y = yOf(hour * 60)
-    ctx.strokeStyle = faint
+  for (let tick = floorHour * 60; tick <= ceilHour * 60; tick += 30) {
+    const isHour = tick % 60 === 0
+    const y = yOf(tick)
+    ctx.strokeStyle = isHour ? faint : faintHalf
     ctx.lineWidth = 1
     ctx.beginPath()
     ctx.moveTo(gridLeft, y)
     ctx.lineTo(gridRight, y)
     ctx.stroke()
-    ctx.fillStyle = muted
-    ctx.textAlign = 'right'
-    ctx.textBaseline = 'middle'
-    ctx.fillText(hhmm(hour * 60), gridLeft - 8, y)
+    if (isHour) {
+      ctx.fillStyle = muted
+      ctx.textAlign = 'right'
+      ctx.textBaseline = 'middle'
+      ctx.fillText(hhmm(tick), gridLeft - 8, y)
+    }
   }
 
-  // Day headers + A/B sub-column separators.
+  // Day headers + column separators.
   for (let day = 0; day < dayCount; day += 1) {
     const x = gridLeft + day * colW
     ctx.strokeStyle = faint
@@ -141,24 +146,12 @@ function draw(
     ctx.moveTo(x, gridTop)
     ctx.lineTo(x, gridBottom)
     ctx.stroke()
-    // dashed A|B divider
-    ctx.save()
-    ctx.setLineDash([4, 4])
-    ctx.beginPath()
-    ctx.moveTo(x + subW, gridTop)
-    ctx.lineTo(x + subW, gridBottom)
-    ctx.stroke()
-    ctx.restore()
 
     ctx.fillStyle = ink
     ctx.font = '600 15px system-ui, -apple-system, "PingFang SC", sans-serif'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'alphabetic'
-    ctx.fillText(DAYS[day], x + colW / 2, gridTop - 30)
-    ctx.font = '11px system-ui, -apple-system, sans-serif'
-    ctx.fillStyle = muted
-    ctx.fillText('A', x + subW / 2, gridTop - 12)
-    ctx.fillText('B', x + subW + subW / 2, gridTop - 12)
+    ctx.fillText(DAYS[day], x + colW / 2, gridTop - 14)
   }
   ctx.strokeStyle = faint
   ctx.beginPath()
@@ -166,20 +159,20 @@ function draw(
   ctx.lineTo(gridRight, gridBottom)
   ctx.stroke()
 
-  // Course blocks.
+  // Course blocks — one column per weekday (single plan, no A/B split).
   const drawColumn = (blocks: Block[], baseX: number) => {
     for (const block of layOutDay(blocks)) {
-      const laneW = subW / block.lanes
-      const x = baseX + block.lane * laneW + 1.5
+      const laneW = colW / block.lanes
+      const x = baseX + block.lane * laneW + 3
       const y = yOf(block.start) + 1
-      const w = laneW - 3
+      const w = laneW - 6
       // 显示用结束时间进位到下一个半点，与屏幕上的大课表卡片高度一致。
       const shownEnd = displayEndMinutes(block.end)
       const h = yOf(shownEnd) - yOf(block.start) - 2
       if (h <= 0 || w <= 0) continue
       const tint = paint(block.code, block.subject)
 
-      roundRect(ctx, x, y, w, h, 4)
+      roundRect(ctx, x, y, w, h, 5)
       ctx.fillStyle = tint.fill
       ctx.fill()
       ctx.strokeStyle = tint.edge
@@ -190,22 +183,22 @@ function draw(
       ctx.fillRect(x, y, 3, h)
 
       ctx.save()
-      roundRect(ctx, x, y, w, h, 4)
+      roundRect(ctx, x, y, w, h, 5)
       ctx.clip()
       ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
-      const tx = x + 7
-      let ty = y + 14
-      ctx.font = '700 11px system-ui, -apple-system, sans-serif'
+      const tx = x + 9
+      let ty = y + 17
+      ctx.font = '700 13px system-ui, -apple-system, sans-serif'
       ctx.fillText(block.code, tx, ty)
       if (h > 30) {
-        ty += 13
-        ctx.font = '10px system-ui, -apple-system, sans-serif'
+        ty += 16
+        ctx.font = '11px system-ui, -apple-system, sans-serif'
         ctx.fillText(`${hhmm(block.start)}–${hhmm(shownEnd)}`, tx, ty)
       }
-      if (h > 44) {
-        ty += 13
+      if (h > 50) {
+        ty += 15
         const meta = block.location ? `${block.component} · ${block.location}` : block.component
         ctx.fillText(meta, tx, ty)
       }
@@ -214,9 +207,7 @@ function draw(
   }
 
   for (let day = 1; day <= dayCount; day += 1) {
-    const baseX = gridLeft + (day - 1) * colW
-    drawColumn(rawA.filter((block) => block.dayIndex === day), baseX)
-    drawColumn(rawB.filter((block) => block.dayIndex === day), baseX + subW)
+    drawColumn(raw.filter((block) => block.dayIndex === day), gridLeft + (day - 1) * colW)
   }
 
   // AGPL / source note, bottom-right.
@@ -247,31 +238,25 @@ export function downloadBlob(blob: Blob, filename: string): void {
   URL.revokeObjectURL(url)
 }
 
-/** Draw the A / B comparison onto a fresh 2× canvas (shared by PNG and PDF exports). */
-function renderComparison(
-  planA: Plan,
-  planB: Plan | null,
-  termName: string,
-  paint: PaintFn,
-): HTMLCanvasElement {
+/** Draw one timetable onto a fresh 2× canvas (shared by PNG and PDF exports). */
+function renderTimetable(plan: Plan, termName: string, paint: PaintFn): HTMLCanvasElement {
   const canvas = document.createElement('canvas')
   canvas.width = W * SCALE
   canvas.height = H * SCALE
   const ctx = canvas.getContext('2d')
   if (!ctx) throw new Error('无法创建画布')
   ctx.scale(SCALE, SCALE)
-  draw(ctx, planA, planB, termName, paint)
+  draw(ctx, plan, termName, paint)
   return canvas
 }
 
-/** Render the A / B comparison to a 2× PNG, trigger a download, and return the file name. */
+/** Render the timetable to a 2× PNG, trigger a download, and return the file name. */
 export async function exportImage(
-  planA: Plan,
-  planB: Plan | null,
+  plan: Plan,
   termName: string,
   paint: PaintFn = defaultPaint,
 ): Promise<string> {
-  const canvas = renderComparison(planA, planB, termName, paint)
+  const canvas = renderTimetable(plan, termName, paint)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
   if (!blob) throw new Error('生成图片失败')
   const filename = `cu-schedule-${slugTerm(termName)}.png`
@@ -280,18 +265,17 @@ export async function exportImage(
 }
 
 /**
- * Export the same A / B comparison as a single-page PDF. No PDF library: the canvas is
+ * Export the same timetable as a single-page PDF. No PDF library: the canvas is
  * encoded to a JPEG and embedded directly as a `/DCTDecode` image XObject in a minimal,
  * hand-assembled PDF — the standard dependency-free trick. The page is A4 landscape,
  * with the image scaled to fit its aspect ratio.
  */
 export async function exportPdf(
-  planA: Plan,
-  planB: Plan | null,
+  plan: Plan,
   termName: string,
   paint: PaintFn = defaultPaint,
 ): Promise<string> {
-  const canvas = renderComparison(planA, planB, termName, paint)
+  const canvas = renderTimetable(plan, termName, paint)
   const dataUrl = canvas.toDataURL('image/jpeg', 0.92)
   const jpeg = base64ToBytes(dataUrl.slice(dataUrl.indexOf(',') + 1))
 
