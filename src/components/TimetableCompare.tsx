@@ -118,6 +118,7 @@ export function TimetableCompare({
   emptyMessage,
   colorForCode,
   guides = [],
+  showEmptyGrid = false,
 }: {
   planA: Plan | null
   planB: Plan | null
@@ -125,15 +126,19 @@ export function TimetableCompare({
   colorForCode: (code: string) => CSSProperties
   /** Two optional reference lines (morning / evening) the student drags to eyeball. */
   guides?: Guide[]
+  /** #4 全空空态:true 时(committed 课非空但没有可展示的排法——本来排不出 或 被过滤器清空)
+   * 渲染完整的星期/时间轴网格骨架(无课程块),而不是裸消息;emptyMessage 移到网格下方居中显示。
+   * false(默认)沿用旧行为——用于「还没选任何课」那种更简单的提示场景。 */
+  showEmptyGrid?: boolean
 }) {
   const rawA = blocksOf(planA)
   const rawB = blocksOf(planB)
   const all = [...rawA, ...rawB]
 
-  if (!planA) {
+  if (!planA && !showEmptyGrid) {
     return (
       <div className="tt2 tt2--empty">
-        <p>{emptyMessage}</p>
+        <p className="empty-hint">{emptyMessage}</p>
       </div>
     )
   }
@@ -152,7 +157,7 @@ export function TimetableCompare({
   const halfHours = Array.from({ length: (ceilHour - floorHour) * 2 + 1 }, (_, index) => floorHour * 60 + index * 30)
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
-  return (
+  const grid = (
     <div className="tt2" style={{ '--tt-days': dayCount } as CSSProperties}>
       <div className="tt2__corner" />
       <div className="tt2__head">
@@ -204,7 +209,7 @@ export function TimetableCompare({
               <Column
                 blocks={rawA.filter((block) => block.dayIndex === dayIndex)}
                 colorForCode={colorForCode}
-                empty={false}
+                empty={!planA}
                 floorHour={floorHour}
                 span={span}
                 variant="a"
@@ -212,7 +217,7 @@ export function TimetableCompare({
               <Column
                 blocks={rawB.filter((block) => block.dayIndex === dayIndex)}
                 colorForCode={colorForCode}
-                empty={!planB}
+                empty={!planA || !planB}
                 floorHour={floorHour}
                 span={span}
                 variant="b"
@@ -223,4 +228,17 @@ export function TimetableCompare({
       </div>
     </div>
   )
+
+  // #4 全空空态:committed 课非空、但没有排法能展示——保留网格骨架,提示挪到网格正下方居中、
+  // 用全站统一的 .empty-hint(明显大于正文)。
+  if (!planA) {
+    return (
+      <div className="tt2-shell">
+        {grid}
+        <p className="tt2-shell__hint empty-hint">{emptyMessage}</p>
+      </div>
+    )
+  }
+
+  return grid
 }

@@ -182,8 +182,9 @@ select {
 }
 
 .bar__mark {
-  width: 30px;
-  height: 30px;
+  /* #5 header 加大一档：30px → 38px（icon 与站名等比放大，仍在 --bar-h:48px 内垂直居中）。 */
+  width: 38px;
+  height: 38px;
   flex: none;
   /* The app icon itself (rounded-square diamond mark), not a colored bar. */
   background: url('/icon/favicon.svg') center / contain no-repeat;
@@ -192,9 +193,10 @@ select {
 
 .bar h1 {
   margin: 0;
-  font-size: 17px;
+  font-size: 21px;
   font-weight: 750;
   letter-spacing: -0.015em;
+  white-space: nowrap;
 }
 
 .bar small {
@@ -435,6 +437,17 @@ select {
   margin: 0;
   font-size: 12px;
   color: var(--ink-3);
+}
+
+/* ---- 空态提示 (全站统一) ----------------------------------------------------
+   任何「没有结果 / 排不出方案 / 列表还是空的」的提示文案都走这一个类，明显大于正文
+   （1.2rem ≈ 16.8px，正文 14px），弱化文本色沿用 --ink-3。搜索无结果、课表/分享空态、
+   已选课程列表空态都在用（见各组件里 empty-hint 的落点）。 */
+.empty-hint {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--ink-3);
+  font-weight: 600;
 }
 
 /* 导出 page: the export options sit in wrapping grids, grouped by kind. */
@@ -784,9 +797,6 @@ select {
 
 .cl__empty {
   text-align: center;
-  color: var(--ink-3);
-  font-size: 12.5px;
-  line-height: 1.6;
   padding: 26px 12px;
 }
 
@@ -1197,8 +1207,8 @@ select {
 
 .tt__placeholder p {
   margin: 0;
-  color: var(--ink-3);
-  font-size: 13px;
+  max-width: 32ch;
+  text-align: center;
 }
 
 /* ---- #7 排法横条 (plan strip: 横向滚动的所有排法, 各自选为 A / B) ------------ */
@@ -1328,6 +1338,53 @@ select {
   background: var(--surface);
 }
 
+/* ---- 上下班时间自由输入（原「辅助线」下拉，现改 <input type=time>） --------- */
+
+.time-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time-input {
+  flex: 1;
+  min-width: 0;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  padding: 6px 8px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  outline: 0;
+  color-scheme: inherit;
+}
+
+.time-input:focus {
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+.time-field__clear {
+  flex: none;
+  width: 26px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--ink-3);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.time-field__clear:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
 .tt2__tag {
   font-style: normal;
   font-weight: 800;
@@ -1375,8 +1432,26 @@ select {
   margin: 0;
   max-width: 32ch;
   text-align: center;
-  color: var(--ink-3);
-  font-size: 15px;
+}
+
+/* #4 全空空态外壳：网格骨架仍占满高度（沿用 .tt2 自身 flex:1），提示行固定高度贴在下方居中。 */
+.tt2-shell {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tt2-shell .tt2 {
+  flex: 1;
+  min-height: 0;
+}
+
+.tt2-shell__hint {
+  flex: none;
+  margin: 0;
+  text-align: center;
 }
 
 .tt2__corner {
@@ -1927,9 +2002,14 @@ select {
 /* ---- footer ---------------------------------------------------------------- */
 
 .foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
   text-align: center;
   font-size: 11.5px;
   color: var(--ink-3);
+  padding-top: 2px;
 }
 
 .foot a {
@@ -1939,6 +2019,98 @@ select {
 
 .foot a:hover {
   text-decoration: underline;
+}
+
+/* AGPL §13 源码入口：主署名必须显眼，独立一行、比其余 footer 文字更重更大。 */
+.foot__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-2);
+}
+
+.foot__byline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--ink);
+  font-weight: 750;
+}
+
+.foot__byline svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.foot__byline:hover {
+  color: var(--brand-ink);
+}
+
+.foot__sep {
+  color: var(--line);
+}
+
+.foot__note {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+/* ---- 友链带（页脚友站 chip 行，与 UniWild 系站点视觉骨架一致） ------------------ */
+
+.foot__sibs {
+  display: flex;
+  align-items: center;
+  gap: 8px 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sib-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+
+.sib-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  justify-content: center;
+}
+
+.sib-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.3rem 0.68rem 0.3rem 0.4rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  text-decoration: none;
+  font-size: 0.86rem;
+  line-height: 1;
+  transition: color 0.18s, border-color 0.18s, transform 0.18s;
+}
+
+.sib-chip:hover {
+  color: var(--brand-ink);
+  border-color: var(--brand);
+  transform: translateY(-1px);
+}
+
+.sib-chip img {
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 /* ---- select page: search filters ------------------------------------------- */
@@ -1991,6 +2163,15 @@ select {
   height: 15px;
   accent-color: var(--brand);
   cursor: pointer;
+}
+
+.check--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.check--disabled input {
+  cursor: not-allowed;
 }
 
 /* ---- search card (选课 page, left column, fields stacked) ------------------ */
@@ -3610,9 +3791,8 @@ select {
 }
 
 .sv__empty {
-  color: var(--ink-3);
-  font-size: 13px;
   padding: 8px;
+  text-align: center;
 }
 
 .sv__exports {
@@ -3697,6 +3877,16 @@ select {
 
   .bar {
     flex-wrap: wrap;
+  }
+
+  /* 窄屏收回 header 放大：--bar-h 仍是 48px，避免 38px 的 icon/21px 的站名在极窄屏挤出换行。 */
+  .bar__mark {
+    width: 30px;
+    height: 30px;
+  }
+
+  .bar h1 {
+    font-size: 17px;
   }
 
   .tt__block-meta {

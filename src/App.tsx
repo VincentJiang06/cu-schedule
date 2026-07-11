@@ -36,8 +36,17 @@ import {
   type SubjectInfo,
   type TermRef,
 } from './lib/data.ts'
-import { findClashes, generatePlans, NO_PREFS, overlaps, type Pins, type Plan } from './lib/schedule.ts'
-import { hhmm } from './lib/time.ts'
+import {
+  findClashes,
+  generatePlans,
+  NO_PREFS,
+  overlaps,
+  planFitsWindow,
+  type Pins,
+  type Plan,
+  type TimeWindow,
+} from './lib/schedule.ts'
+import { hhmm, parseHHMM } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
 type Theme = 'light' | 'dark'
@@ -156,25 +165,15 @@ type Saved = {
 // （append-only，见 colorForCode），槽位一旦分配永不重排，故新增课不会打乱既有课的颜色。
 const TIMETABLE_PALETTE = [210, 145, 275, 25, 330, 190, 95, 300, 50, 240, 170, 10]
 
-// 课表页「辅助线」的时间选项（分钟；null=不显示）。两条辅助线只在日历上画一条虚线，
-// 不参与任何自动筛选——用户据此自行目测取舍。
-const GUIDE_MORNING_OPTIONS: Array<{ value: number | null; label: string }> = [
-  { value: null, label: '不显示' },
-  { value: 8 * 60, label: '08:00' },
-  { value: 8 * 60 + 30, label: '08:30' },
-  { value: 9 * 60, label: '09:00' },
-  { value: 9 * 60 + 30, label: '09:30' },
-  { value: 10 * 60, label: '10:00' },
-  { value: 11 * 60, label: '11:00' },
-]
-const GUIDE_EVENING_OPTIONS: Array<{ value: number | null; label: string }> = [
-  { value: null, label: '不显示' },
-  { value: 16 * 60, label: '16:00' },
-  { value: 17 * 60, label: '17:00' },
-  { value: 17 * 60 + 30, label: '17:30' },
-  { value: 18 * 60, label: '18:00' },
-  { value: 18 * 60 + 30, label: '18:30' },
-  { value: 19 * 60, label: '19:00' },
+// 页脚友链带：icon 文件已放在 public/assets/sib-icons/，顺序照产品给定的清单。
+const SIBLINGS: Array<{ icon: string; url: string; name: string }> = [
+  { icon: '/assets/sib-icons/vincejiang.png', url: 'https://vincejiang.com/', name: 'VincentJiang 主站' },
+  { icon: '/assets/sib-icons/cuhkwild.png', url: 'https://cuhkwild.com/', name: '中大野史' },
+  { icon: '/assets/sib-icons/hkuwild.png', url: 'https://hkuwild.com/', name: '港大野史' },
+  { icon: '/assets/sib-icons/hkustwild.png', url: 'https://hkustwild.com/', name: '科大野史' },
+  { icon: '/assets/sib-icons/cityuwild.png', url: 'https://cityuwild.com/', name: '城大野史' },
+  { icon: '/assets/sib-icons/polyuwild.png', url: 'https://polyuwild.com/', name: '理大野史' },
+  { icon: '/assets/sib-icons/hkuniwild.png', url: 'https://hkuniwild.com/', name: '港校通门户' },
 ]
 
 // 一个排法内部两两 meeting 是否重叠。generatePlans/courseCombos 已保证返回的排法无冲突
@@ -206,6 +205,24 @@ function loadTheme(): Theme {
   const saved = window.localStorage.getItem('cu-schedule:theme')
   if (saved === 'light' || saved === 'dark') return saved
   return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+// 上下班时间的持久化：空字符串=未设置(null)，否则存分钟数字符串。默认 09:00 / 18:00，
+// 与原辅助线的默认值保持一致。用两个独立 key（不是一个 JSON blob），风格对齐
+// cu-schedule:year / cu-schedule:program 那种单值 key。
+function loadWorkStart(): number | null {
+  const raw = window.localStorage.getItem('cu-schedule:work-start')
+  if (raw === null) return 9 * 60
+  if (raw === '') return null
+  const minutes = Number(raw)
+  return Number.isFinite(minutes) ? minutes : 9 * 60
+}
+function loadWorkEnd(): number | null {
+  const raw = window.localStorage.getItem('cu-schedule:work-end')
+  if (raw === null) return 18 * 60
+  if (raw === '') return null
+  const minutes = Number(raw)
+  return Number.isFinite(minutes) ? minutes : 18 * 60
 }
 
 // A share link (`…#s=<payload>`) overrides localStorage on this first load, so
@@ -268,12 +285,34 @@ export default function App() {
     return () => window.clearTimeout(timer)
   }, [transition])
 
-  // 课表页两条「辅助线」（早上 / 晚上）。仅在日历上画一条虚线供目测，不参与排课筛选。
-  const [guideMorning, setGuideMorning] = useState<number | null>(9 * 60)
-  const [guideEvening, setGuideEvening] = useState<number | null>(18 * 60)
+  // 课表页「上下班时间」（原「辅助线」）。用户自由输入 <input type="time">，两条虚线画在日历上
+  // 供目测；同时也是「不展示不符合上下班限制的方案」与搜索卡「符合上下班时间」两个过滤开关的窗口来源。
+  // null=不设该条线。持久化到 localStorage（cu-schedule:work-start / -end），默认 09:00 / 18:00。
+  const [workStart, setWorkStart] = useState<number | null>(loadWorkStart)
+  const [workEnd, setWorkEnd] = useState<number | null>(loadWorkEnd)
+  useEffect(() => {
+    window.localStorage.setItem('cu-schedule:work-start', workStart === null ? '' : String(workStart))
+  }, [workStart])
+  useEffect(() => {
+    window.localStorage.setItem('cu-schedule:work-end', workEnd === null ? '' : String(workEnd))
+  }, [workEnd])
   // 「不展示冲突的方案」开关（默认开），与排法横条配合过滤显示的排法。
   const [hideConflicts, setHideConflicts] = useState(true)
-  // 排课不再做时间自动筛选（辅助线是纯视觉）；prefs 恒为空，scheduler 只负责排出无冲突课表。
+  // 「不展示不符合上下班限制的方案」（默认关——比 hideConflicts 更容易把方案全滤空，交给用户主动开）。
+  const [hideOutOfHours, setHideOutOfHours] = useState(false)
+  // 搜索卡「符合上下班时间」（默认关，同上）。
+  const [meetsOfficeHours, setMeetsOfficeHours] = useState(false)
+  // 两头都没设时间 → 上面两个开关都禁用，且自动关闭（避免「勾着但禁用」的悬空态）。
+  const officeWindow = useMemo<TimeWindow>(() => ({ start: workStart, end: workEnd }), [workEnd, workStart])
+  const officeWindowUnset = workStart === null && workEnd === null
+  useEffect(() => {
+    if (officeWindowUnset) {
+      setHideOutOfHours(false)
+      setMeetsOfficeHours(false)
+    }
+  }, [officeWindowUnset])
+  // 排课不再做时间自动筛选（上下班窗口是排法横条/搜索卡的显示过滤，不是 scheduler 输入）；
+  // prefs 恒为空，scheduler 只负责排出无冲突课表。
   const prefs = NO_PREFS
 
   // 选课 page filters — subjects support positive (include) and negative (exclude),
@@ -512,9 +551,33 @@ export default function App() {
     if (planBIndex >= plans.length) setPlanBIndex(1)
   }, [planAIndex, planBIndex, plans.length])
 
-  // The 课表 page compares two user-picked conflict-free timetables side by side.
-  const planA = plans[planAIndex] ?? plans[0] ?? null
-  const planB = plans.length < 2 ? null : (plans[planBIndex] ?? plans[1] ?? null)
+  // #7 排法横条数据：每个排法带上它在 plans 中的真实下标（A/B 选择以此为准）、冲突判定
+  // （实践中恒为 false，见 planHasConflict 注释）与「是否落在上下班窗口内」判定。
+  const planViews = useMemo(
+    () =>
+      plans.map((plan, index) => ({
+        plan,
+        index,
+        conflict: planHasConflict(plan),
+        outOfHours: !planFitsWindow(plan, officeWindow),
+      })),
+    [officeWindow, plans],
+  )
+  const shownPlanViews = planViews.filter(
+    (view) => (!hideConflicts || !view.conflict) && (!hideOutOfHours || !view.outOfHours),
+  )
+  // 过滤后仍「可见」的排法下标集合——A / B 的实际展示要跟着这两个开关走，而不是盲选 plans[index]，
+  // 否则「不展示不符合上下班限制的方案」开着时,日历仍可能画出一个被过滤掉的排法。
+  const visiblePlanIndices = useMemo(() => new Set(shownPlanViews.map((view) => view.index)), [shownPlanViews])
+
+  // The 课表 page compares two user-picked conflict-free timetables side by side, but only
+  // among the plans that survive the current filters (见上 visiblePlanIndices)。全部被滤掉时
+  // 两者都是 null —— TimetableCompare 据此渲染 #4 全空空态（网格骨架 + 居中提示）。
+  // B 允许与 A 相同(用户在排法横条上把同一张卡同时设为 A 和 B——原设计允许,plan-strip 上有
+  // 「与 A 相同」的显式标注),这里只在 planBIndex 本身被过滤掉时才回退到另一张可见的排法。
+  const visiblePlans = shownPlanViews.map((view) => view.plan)
+  const planA = visiblePlanIndices.has(planAIndex) ? plans[planAIndex] : (visiblePlans[0] ?? null)
+  const planB = visiblePlans.length < 2 ? null : (visiblePlanIndices.has(planBIndex) ? plans[planBIndex] : (visiblePlans[1] ?? null))
   const totalUnits = committedCourses.reduce((sum, course) => sum + course.units, 0)
 
   // #5 append-only 每课配色：课号（按 courseKey 归一）→ 调色盘槽位。committed 变化时只给
@@ -535,13 +598,6 @@ export default function App() {
     }
     return { '--hue': TIMETABLE_PALETTE[slot % TIMETABLE_PALETTE.length], '--shade': '0%' } as CSSProperties
   }, [])
-
-  // #7 排法横条数据：每个排法带上它在 plans 中的真实下标（A/B 选择以此为准）与冲突判定。
-  const planViews = useMemo(
-    () => plans.map((plan, index) => ({ plan, index, conflict: planHasConflict(plan) })),
-    [plans],
-  )
-  const shownPlanViews = hideConflicts ? planViews.filter((view) => !view.conflict) : planViews
 
   const [exportNote, setExportNote] = useState('')
   // 只读分享（方案 2）：把当前选择存到后端换一个 /#v=<id> 只读链接（手机可看，一天有效）。
@@ -653,6 +709,7 @@ export default function App() {
     excludeSubjects,
     meetsPrereq,
     lecFits,
+    meetsOfficeHours,
     units,
     levels,
     // 「仅本科」硬编码:非本科课恒被排除,无对应开关。
@@ -841,52 +898,71 @@ export default function App() {
     </section>
   )
 
-  // 课表页左栏卡：两条「辅助线」（早上 / 晚上）+「不展示冲突的方案」。辅助线只在日历上画一条
-  // 虚线供目测，不做任何自动筛选——用户据此自己判断早课/晚课是否可接受。
+  // 课表页左栏卡：「上下班时间」（上班 / 下班，原「辅助线」）+ 两个 check-row 开关
+  // （不展示冲突的方案 / 不展示不符合上下班限制的方案）。两条时间线在日历上画虚线供目测，
+  // 同时驱动下面「不展示…」开关与搜索卡「符合上下班时间」的过滤判定。
   const guideLines = useMemo(
     () =>
       [
-        guideMorning != null ? { minutes: guideMorning, label: '早', tone: 'am' as const } : null,
-        guideEvening != null ? { minutes: guideEvening, label: '晚', tone: 'pm' as const } : null,
+        workStart != null ? { minutes: workStart, label: '上班', tone: 'am' as const } : null,
+        workEnd != null ? { minutes: workEnd, label: '下班', tone: 'pm' as const } : null,
       ].filter((g): g is { minutes: number; label: string; tone: 'am' | 'pm' } => g != null),
-    [guideEvening, guideMorning],
+    [workEnd, workStart],
   )
   const scheduleFilterCard = (
     <section className="card">
       <h2 className="card__title">
-        辅助线
-        <span className="card__note">日历上的目测参考线</span>
+        上下班时间
+        <span className="card__note">日历参考线 · 排法过滤</span>
       </h2>
-      <p className="card__sub">在日历上画两条虚线标出早/晚时间，方便自己取舍——不参与自动筛选。</p>
+      <p className="card__sub">
+        上班时间=希望一天的课不早于此；下班时间=不晚于此。清空某项＝不设该条线，只在日历上画虚线。
+      </p>
       <div className="field">
-        <span className="field__label">早上辅助线</span>
-        <select
-          className="mini-select"
-          aria-label="早上辅助线时间"
-          value={guideMorning ?? ''}
-          onChange={(event) => setGuideMorning(event.target.value === '' ? null : Number(event.target.value))}
-        >
-          {GUIDE_MORNING_OPTIONS.map((option) => (
-            <option key={option.label} value={option.value ?? ''}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+        <span className="field__label">上班时间</span>
+        <div className="time-field">
+          <input
+            aria-label="上班时间"
+            className="time-input"
+            step={300}
+            type="time"
+            value={workStart != null ? hhmm(workStart) : ''}
+            onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
+          />
+          {workStart != null && (
+            <button
+              aria-label="清除上班时间"
+              className="time-field__clear"
+              type="button"
+              onClick={() => setWorkStart(null)}
+            >
+              ×
+            </button>
+          )}
+        </div>
       </div>
       <div className="field">
-        <span className="field__label">晚上辅助线</span>
-        <select
-          className="mini-select"
-          aria-label="晚上辅助线时间"
-          value={guideEvening ?? ''}
-          onChange={(event) => setGuideEvening(event.target.value === '' ? null : Number(event.target.value))}
-        >
-          {GUIDE_EVENING_OPTIONS.map((option) => (
-            <option key={option.label} value={option.value ?? ''}>
-              {option.label}
-            </option>
-          ))}
-        </select>
+        <span className="field__label">下班时间</span>
+        <div className="time-field">
+          <input
+            aria-label="下班时间"
+            className="time-input"
+            step={300}
+            type="time"
+            value={workEnd != null ? hhmm(workEnd) : ''}
+            onChange={(event) => setWorkEnd(parseHHMM(event.target.value))}
+          />
+          {workEnd != null && (
+            <button
+              aria-label="清除下班时间"
+              className="time-field__clear"
+              type="button"
+              onClick={() => setWorkEnd(null)}
+            >
+              ×
+            </button>
+          )}
+        </div>
       </div>
       <div className="check-row">
         <label className="check">
@@ -896,6 +972,18 @@ export default function App() {
             onChange={(event) => setHideConflicts(event.target.checked)}
           />
           <span>不展示冲突的方案</span>
+        </label>
+        <label
+          className={`check${officeWindowUnset ? ' check--disabled' : ''}`}
+          title={officeWindowUnset ? '先设置上下班时间' : undefined}
+        >
+          <input
+            checked={hideOutOfHours}
+            disabled={officeWindowUnset}
+            type="checkbox"
+            onChange={(event) => setHideOutOfHours(event.target.checked)}
+          />
+          <span>不展示不符合上下班限制的方案</span>
         </label>
       </div>
     </section>
@@ -1098,6 +1186,14 @@ export default function App() {
         <span className="filter-block__title">时间约束 · 可选性</span>
         <Toggle checked={lecFits} onChange={setLecFits}>
           符合时间表（仅LEC）
+        </Toggle>
+        <Toggle
+          checked={meetsOfficeHours}
+          disabled={officeWindowUnset}
+          title={officeWindowUnset ? '先在课表页设置上下班时间' : undefined}
+          onChange={setMeetsOfficeHours}
+        >
+          符合上下班时间
         </Toggle>
         <Toggle checked={currentTermOnly} onChange={setCurrentTermOnly}>
           只包括当前学期
@@ -1403,6 +1499,8 @@ export default function App() {
                   filters={filters}
                   lecBusy={lecBusy}
                   offerings={offerings}
+                  officeEnd={workEnd}
+                  officeStart={workStart}
                   standingByKey={standingByKey}
                   statusByCode={statusByCode}
                   prereqByCode={prereqByCode}
@@ -1441,11 +1539,12 @@ export default function App() {
                 emptyMessage={
                   committedCourses.length === 0
                     ? '在左侧选择当前选择课程，A / B 两种排法会自动排出来'
-                    : '这些课排不出无冲突的课表，左侧列出了卡住的地方'
+                    : '当前无可行方案'
                 }
                 guides={guideLines}
                 planA={planA}
                 planB={planB}
+                showEmptyGrid={committedCourses.length > 0}
               />
             </section>
           </>
@@ -1519,11 +1618,45 @@ export default function App() {
       </main>
 
       <footer className="foot">
-        抓取管线来自{' '}
-        <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
-          EagleZhen
-        </a>{' '}
-        (AGPL-3.0) · 课程和项目信息以 CUSIS 为准
+        <div className="foot__main">
+          <a
+            className="foot__byline"
+            href="https://github.com/VincentJiang06/cu-schedule"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg aria-hidden fill="currentColor" viewBox="0 0 16 16">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </svg>
+            by VincentJiang
+          </a>
+          <span className="foot__sep" aria-hidden>·</span>
+          <span>课程和项目信息以 CUSIS 为准</span>
+        </div>
+        <p className="foot__note">
+          抓取管线来自{' '}
+          <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
+            EagleZhen
+          </a>{' '}
+          (AGPL-3.0)
+        </p>
+        <div className="foot__sibs">
+          <span className="sib-label">友链</span>
+          <div className="sib-row">
+            {SIBLINGS.map((sib) => (
+              <a
+                className="sib-chip"
+                href={sib.url}
+                key={sib.url}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <img alt="" src={sib.icon} />
+                {sib.name}
+              </a>
+            ))}
+          </div>
+        </div>
       </footer>
 
       {detailCourse && (

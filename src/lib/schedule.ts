@@ -26,6 +26,21 @@ export function overlaps(left: Meeting, right: Meeting): boolean {
   return left.dayIndex === right.dayIndex && left.start < right.end && right.start < left.end
 }
 
+/** 上下班时间窗口：null 一侧=不限。用于「不展示不符合上下班限制的方案」与
+ * 搜索卡「符合上下班时间」——两处判定共用同一套时间比较逻辑。 */
+export type TimeWindow = { start: number | null; end: number | null }
+
+/** True when every meeting starts at/after `window.start` (if set) and ends at/before
+ * `window.end` (if set). A meeting-less list (TBA-only) trivially fits — nothing to judge. */
+export function meetingsFitWindow(meetings: Meeting[], window: TimeWindow): boolean {
+  if (window.start === null && window.end === null) return true
+  return meetings.every((meeting) => {
+    if (window.start !== null && meeting.start < window.start) return false
+    if (window.end !== null && meeting.end > window.end) return false
+    return true
+  })
+}
+
 export function comboMeetings(combo: Combo): Meeting[] {
   return combo.flatMap((section) => section.meetings)
 }
@@ -102,6 +117,13 @@ export function courseCombos(course: Course, prefs: Prefs, pin?: Record<string, 
   )
 }
 
+/** 符合上下班时间(搜索卡开关):课程只要存在一种全组件 section 组合、其每个 meeting 都落在
+ * window 内,就算「符合」——不考虑当前已选课/pins,纯粹是这门课本身的可选时段是否够早/够晚。 */
+export function courseFitsWindow(course: Course, window: TimeWindow): boolean {
+  if (window.start === null && window.end === null) return true
+  return courseCombos(course, NO_PREFS).some((combo) => meetingsFitWindow(comboMeetings(combo), window))
+}
+
 const MAX_PLANS = 12
 
 /** Conflict-free timetables covering every committed course, best (fewest teaching days) first. */
@@ -143,6 +165,15 @@ export function generatePlans(courses: Course[], prefs: Prefs, pins: Pins = {}):
 
   return plans.sort(
     (a, b) => a.teachingDays.length - b.teachingDays.length || a.id.localeCompare(b.id),
+  )
+}
+
+/** 排法过滤「不展示不符合上下班限制的方案」:排法里所有 section 的所有 meeting 都要落在
+ * window 内才算符合(两头都没设时 meetingsFitWindow 恒真,调用方应连同 disabled 一起处理)。 */
+export function planFitsWindow(plan: Plan, window: TimeWindow): boolean {
+  return meetingsFitWindow(
+    plan.entries.flatMap((entry) => entry.section.meetings),
+    window,
   )
 }
 

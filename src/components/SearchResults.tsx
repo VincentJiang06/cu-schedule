@@ -4,6 +4,7 @@ import { courseColor } from '../lib/color.ts'
 import type { Offering } from '../lib/data.ts'
 import { STANDING_LABEL, type CourseStanding } from '../lib/programs.ts'
 import { scoreCourse } from '../lib/search.ts'
+import { courseFitsWindow, type TimeWindow } from '../lib/schedule.ts'
 import { subjectBlurb } from '../lib/subjectNames.ts'
 import type { Course, RequirementStatus } from '../lib/types.ts'
 
@@ -23,6 +24,8 @@ export type SearchFilters = {
   meetsPrereq: boolean
   /** Keep only courses whose LEC can still fit the committed timetable (仅LEC). */
   lecFits: boolean
+  /** Keep only courses with at least one full section combo entirely inside 上下班时间. */
+  meetsOfficeHours: boolean
   /** Selected credit buckets (floor of units); empty = no credit filter. */
   units: UnitPick[]
   /** Selected level buckets; empty = no level filter. */
@@ -77,6 +80,8 @@ export function SearchResults({
   barredKeys,
   standingByKey,
   lecBusy,
+  officeStart,
+  officeEnd,
   filters,
   titleByCode,
   onCommit,
@@ -99,6 +104,10 @@ export function SearchResults({
   standingByKey: Map<string, CourseStanding> | null
   /** Fixed LEC time intervals occupied by committed courses (for the 符合时间表 toggle). */
   lecBusy: LecBusy[]
+  /** 上班时间(null=不限). */
+  officeStart: number | null
+  /** 下班时间(null=不限). */
+  officeEnd: number | null
   filters: SearchFilters
   titleByCode: Map<string, string>
   onCommit: (code: string) => void
@@ -134,6 +143,20 @@ export function SearchResults({
     return fit
   }, [lecBusy, offerings])
 
+  // 符合上下班时间:每门课是否存在至少一种全组件组合、每个 meeting 都落在 [officeStart, officeEnd]
+  // 内(courseFitsWindow,见 schedule.ts)。同 lecFitSet 的记忆化套路——只随 offerings / 窗口变化重算。
+  const officeWindow = useMemo<TimeWindow>(() => ({ start: officeStart, end: officeEnd }), [officeEnd, officeStart])
+  const officeFitSet = useMemo(() => {
+    const fit = new Set<Course>()
+    const seen = new Set<Course>()
+    for (const { course } of offerings) {
+      if (seen.has(course)) continue
+      seen.add(course)
+      if (courseFitsWindow(course, officeWindow)) fit.add(course)
+    }
+    return fit
+  }, [offerings, officeWindow])
+
   const filtered = useMemo(() => {
     const include = new Set(filters.includeSubjects)
     const exclude = new Set(filters.excludeSubjects)
@@ -161,10 +184,12 @@ export function SearchResults({
       if (filters.meetsPrereq && prereqByCode.get(course.key)?.status === 'missing') return false
       // 符合时间表(仅LEC):只保留 LEC 能塞进已选课表的课(见 lecFitSet)。
       if (filters.lecFits && !lecFitSet.has(course)) return false
+      // 符合上下班时间:只保留有组合能全落进 [上班,下班] 窗口的课(见 officeFitSet)。
+      if (filters.meetsOfficeHours && !officeFitSet.has(course)) return false
       if (filters.query.trim() && scoreCourse(course, filters.query) <= 0) return false
       return true
     })
-  }, [filters, lecFitSet, offerings, prereqByCode, statusByCode, takenSet])
+  }, [filters, lecFitSet, offerings, officeFitSet, prereqByCode, statusByCode, takenSet])
 
   const groups = useMemo<SubjectGroup[]>(() => {
     const bySubject = new Map<string, Map<number, Course[]>>()
@@ -219,7 +244,7 @@ export function SearchResults({
       </p>
       <div className="cg__scroll">
         {total === 0 ? (
-          <div className="cg__empty">没有符合条件的课程</div>
+          <div className="cg__empty empty-hint">没有符合条件的课程</div>
         ) : (
           shownGroups.map((group) => (
             <Fragment key={group.subject}>

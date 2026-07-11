@@ -142,7 +142,7 @@ export function CommittedList({
   return (
     <div className="cl">
       {codes.length === 0 ? (
-        <p className="cl__empty">{emptyHint ?? '还没有课程。在中间的课程列表点「必定学」来添加。'}</p>
+        <p className="cl__empty empty-hint">{emptyHint ?? '还没有课程。在中间的课程列表点「必定学」来添加。'}</p>
       ) : (
         <ul className="cl__rows">
           {codes.map((code) => {

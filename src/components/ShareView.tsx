@@ -174,7 +174,7 @@ export function ShareView({ id }: { id: string }) {
                 ))}
             </li>
           ))}
-          {committedCourses.length === 0 && <li className="sv__empty">这个分享里没有课程</li>}
+          {committedCourses.length === 0 && <li className="sv__empty empty-hint">这个分享里没有课程</li>}
         </ul>
       </section>
 

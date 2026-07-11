@@ -135,7 +135,7 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
 
         {!plan && (
           <div className="tt__placeholder">
-            <p>{emptyMessage}</p>
+            <p className="empty-hint">{emptyMessage}</p>
           </div>
         )}
       </div>
