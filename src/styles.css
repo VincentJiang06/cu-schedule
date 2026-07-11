@@ -13,16 +13,20 @@
   /* Tool-first palette: monochrome slate chrome so the per-subject course colors carry
      all the meaning. The UI brand is a neutral near-black (no theme hue). --accent stays
      the indigo hue from the app icon, reserved for functional A/B plan accents only —
-     it is NOT part of the general UI chrome. */
+     it is NOT part of the general UI chrome.
+     #里程碑6(mid-tone):--bg 从近白的 #e9eaed 压到真正读得出「中等灰」的 #d6d8dd——
+     浅色主题不再是「白加了点灰边」，卡片(--surface 仍纯白)在这层灰底上才立得起来。
+     --ink-3 同步从 #6b707b 调深到 #575c67,配合新 --bg 仍过 WCAG AA(4.7:1，原组合
+     只有 4.1:1，反而更稳)。 */
   --accent: 239;
-  --bg: #e9eaed;
+  --bg: #d6d8dd;
   --surface: #ffffff;
-  --surface-2: #f1f2f4;
-  --line: #d2d4db;
-  --line-soft: #e0e2e6;
+  --surface-2: #e7e9ed;
+  --line: #b9bcc4;
+  --line-soft: #c7c9d0;
   --ink: #1a1d23;
   --ink-2: #434751;
-  --ink-3: #6b707b;
+  --ink-3: #575c67;
 
   --brand: #21242b;
   --brand-ink: #252931;
@@ -55,22 +59,26 @@
      can reference the same value without duplicating the number. */
   --bar-h: 48px;
 
-  /* #里程碑6:header 毛玻璃底色——半透明版 --bg，配合 backdrop-filter:blur() 用，
+  /* header 毛玻璃底色——半透明版 --bg，配合 backdrop-filter:blur() 用，
      内容从下方滚过时透出模糊的影子，而不是完全遮挡。 */
-  --glass-bg: rgb(233 234 237 / 0.72);
+  --glass-bg: rgb(214 216 221 / 0.72);
 
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --bg: #0d0e11;
-  --surface: #181b20;
-  --surface-2: #21242b;
-  --line: #353841;
-  --line-soft: #2b2e36;
+  /* #里程碑6(mid-tone):--bg 从近黑的 #0d0e11 提到真正中间偏深的灰 #2b2d33——用户两次
+     反馈"中间色调主题还没上线"，根因就是这个近黑背景。--surface/--surface-2 跟着往上抬
+     一档，保持"卡片比页面亮一点"的层次；--ink-3 从 #838791 提亮到 #a1a7b2，配合新
+     --bg/--surface 仍过 WCAG AA(对 --bg 5.7:1，对 --surface 4.9:1)。 */
+  --bg: #2b2d33;
+  --surface: #35373e;
+  --surface-2: #3f424a;
+  --line: #52555f;
+  --line-soft: #454850;
   --ink: #f0f1f4;
   --ink-2: #babdc5;
-  --ink-3: #838791;
+  --ink-3: #a1a7b2;
 
   --brand: #f0f1f4;
   --brand-ink: #dcdfe4;
@@ -93,7 +101,7 @@
   --edge-l: 52%;
   --text-l: 82%;
 
-  --glass-bg: rgb(13 14 17 / 0.68);
+  --glass-bg: rgb(43 45 51 / 0.68);
 
   color-scheme: dark;
 }
