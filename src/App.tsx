@@ -289,6 +289,13 @@ function loadWorkEnd(): number | null {
   return Number.isFinite(minutes) ? minutes : 18 * 60
 }
 
+// 上下班时间锁定开关。默认锁住（防止拖动虚线 / 改时间输入框被误操作），持久化到
+// localStorage（cu-schedule:work-locked）。读取口径与其它布尔开关不同——只有存了
+// 显式 'false' 才判定为解锁，其余任何值（含缺省/首次访问）一律按「锁定」处理。
+function loadWorkLocked(): boolean {
+  return window.localStorage.getItem('cu-schedule:work-locked') !== 'false'
+}
+
 // URL 承载会话状态,三层来源互斥,优先级从高到低:
 // 1) #st= —— 本会话的实时状态("URL 实时状态同步",见下方 App 组件内的 effect),写入
 //    时机由用户操作驱动(切 tab → pushState;编辑 → 防抖 replaceState)。含 page + 选课
@@ -399,6 +406,12 @@ export default function App() {
   useEffect(() => {
     window.localStorage.setItem('cu-schedule:work-end', workEnd === null ? '' : String(workEnd))
   }, [workEnd])
+  // 上下班时间上锁：默认锁住,防止大课表上的拖动虚线 / 卡片里的时间输入框被误改。纯本地设置
+  // （不进 #st= URL 状态、不进配置 Markdown 导出）,与 hideConflicts 等排课口径开关不同。
+  const [workTimeLocked, setWorkTimeLocked] = useState<boolean>(loadWorkLocked)
+  useEffect(() => {
+    window.localStorage.setItem('cu-schedule:work-locked', workTimeLocked ? 'true' : 'false')
+  }, [workTimeLocked])
   // 「不展示冲突的方案」开关（默认开），与排法横条配合过滤显示的排法。
   const [hideConflicts, setHideConflicts] = useState(live?.hideConflicts ?? true)
   // 「不展示不符合上下班限制的方案」（默认关——比 hideConflicts 更容易把方案全滤空，交给用户主动开）。
@@ -1382,7 +1395,8 @@ export default function App() {
         上下班时间
         <span className="card__note">日历参考线 · 排法过滤</span>
       </h2>
-      {/* 上班 / 下班同一排,省纵向空间;语义(不早于/不晚于)收进 title,不再占一行说明。 */}
+      {/* 上班 / 下班同一排,省纵向空间;语义(不早于/不晚于)收进 title,不再占一行说明。
+          锁按钮同排靠右——默认锁住,防止拖动虚线 / 改这两个输入框被误操作,解锁后才恢复可改。 */}
       <div className="time-row">
         <div className="field" title="希望一天的课不早于此;清空＝不设线">
           <span className="field__label">上班时间</span>
@@ -1390,6 +1404,7 @@ export default function App() {
             <input
               aria-label="上班时间"
               className="time-input"
+              disabled={workTimeLocked}
               step={300}
               type="time"
               value={workStart != null ? hhmm(workStart) : ''}
@@ -1399,6 +1414,7 @@ export default function App() {
               <button
                 aria-label="清除上班时间"
                 className="time-field__clear"
+                disabled={workTimeLocked}
                 type="button"
                 onClick={() => setWorkStart(null)}
               >
@@ -1413,6 +1429,7 @@ export default function App() {
             <input
               aria-label="下班时间"
               className="time-input"
+              disabled={workTimeLocked}
               step={300}
               type="time"
               value={workEnd != null ? hhmm(workEnd) : ''}
@@ -1422,6 +1439,7 @@ export default function App() {
               <button
                 aria-label="清除下班时间"
                 className="time-field__clear"
+                disabled={workTimeLocked}
                 type="button"
                 onClick={() => setWorkEnd(null)}
               >
@@ -1430,6 +1448,20 @@ export default function App() {
             )}
           </div>
         </div>
+        <button
+          aria-label={workTimeLocked ? '解锁上下班时间设置' : '锁定上下班时间设置'}
+          className={`lock-toggle${workTimeLocked ? '' : ' lock-toggle--unlocked'}`}
+          title={
+            workTimeLocked
+              ? '已锁定：日历上的拖动虚线与上方两个输入框都已禁用，点击解锁'
+              : '已解锁：可拖动虚线、修改时间，点击重新锁定防止误改'
+          }
+          type="button"
+          onClick={() => setWorkTimeLocked((locked) => !locked)}
+        >
+          <span aria-hidden>{workTimeLocked ? '🔒' : '🔓'}</span>
+          <span className="lock-toggle__label">{workTimeLocked ? '锁定' : '解锁'}</span>
+        </button>
       </div>
       <div className="check-row">
         <label className="check">
@@ -2125,6 +2157,7 @@ export default function App() {
                     : '当前无可行方案'
                 }
                 guides={guideLines}
+                locked={workTimeLocked}
                 planA={shownPlanA}
                 planB={shownPlanB}
                 showEmptyGrid={committedCourses.length > 0}

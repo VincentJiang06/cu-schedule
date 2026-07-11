@@ -127,6 +127,7 @@ export function TimetableCompare({
   cartA = [],
   cartB = [],
   solo = false,
+  locked = false,
   onGuideChange,
 }: {
   planA: Plan | null
@@ -144,6 +145,9 @@ export function TimetableCompare({
   cartB?: GhostBlock[]
   /** 单方案模式(点排法横条的方框进入):每天只画一整列(planA),不再 A/B 对比。 */
   solo?: boolean
+  /** 上下班时间上锁(默认锁住,由 App 的锁按钮控制):true 时虚线不可拖——即便传了
+   * onGuideChange,拖动手势也在起手时直接放弃,鼠标样式也不再示意「可拖」。 */
+  locked?: boolean
   /** 上下班虚线的拖动回调(吸附 15 分钟由本组件完成);不传 = 线不可拖。 */
   onGuideChange?: (tone: 'am' | 'pm', minutes: number) => void
 }) {
@@ -184,8 +188,10 @@ export function TimetableCompare({
   // 上下班线拖动:pointerdown 在虚线上 → window 级 pointermove 实时换算成分钟(按网格身高
   // 线性映射),吸附 15 分钟并夹在网格范围内,每次变化直接回调 App(state → time input +
   // localStorage 同步)。用 window 监听而非指针捕获:guide 元素每次重渲染都会换,捕获会丢。
+  // 锁住时(locked)直接不启动这套拖动 —— 连第一次 pointerdown 换算都不做。
+  const draggable = Boolean(onGuideChange) && !locked
   const beginGuideDrag = (tone: 'am' | 'pm') => (event: ReactPointerEvent<HTMLDivElement>) => {
-    if (!onGuideChange || !bodyRef.current) return
+    if (!draggable || !onGuideChange || !bodyRef.current) return
     event.preventDefault()
     const rect = bodyRef.current.getBoundingClientRect()
     const pointerId = event.pointerId
@@ -288,10 +294,10 @@ export function TimetableCompare({
         })}
         {shownGuides.map((guide) => (
           <div
-            className={`tt2__guide tt2__guide--${guide.tone}${onGuideChange ? ' tt2__guide--drag' : ''}`}
+            className={`tt2__guide tt2__guide--${guide.tone}${draggable ? ' tt2__guide--drag' : ''}`}
             key={guide.tone}
             style={{ top: `${pct(guide.minutes)}%` }}
-            title={onGuideChange ? '按住上下拖动调整时间（15 分钟粒度）' : undefined}
+            title={draggable ? '按住上下拖动调整时间（15 分钟粒度）' : undefined}
             onPointerDown={beginGuideDrag(guide.tone)}
           >
             <span className="tt2__guide-tag">

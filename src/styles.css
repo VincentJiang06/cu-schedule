@@ -1715,6 +1715,11 @@ select {
   background: var(--surface);
 }
 
+.time-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 .time-field__clear {
   flex: none;
   width: 26px;
@@ -1734,6 +1739,46 @@ select {
 .time-field__clear:hover {
   border-color: var(--brand);
   color: var(--brand-ink);
+}
+
+.time-field__clear:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 上下班时间锁按钮：默认「锁定」态与卡片其它控件同色(中性);「解锁」态借用既有 --warn
+   语义色提醒「当前可被误改」——不是新引入的高饱和色,复用全站已有的警示色变量。 */
+.lock-toggle {
+  flex: none;
+  align-self: flex-end;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  padding: 0 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lock-toggle:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.lock-toggle--unlocked {
+  border-color: var(--warn);
+  background: var(--warn-wash);
+  color: var(--warn);
+}
+
+.lock-toggle__label {
+  white-space: nowrap;
 }
 
 .tt2__tag {
