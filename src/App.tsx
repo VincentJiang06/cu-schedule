@@ -8,6 +8,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from 'react'
+import { AppendixPage } from './components/AppendixPage.tsx'
 import { CommittedList } from './components/CommittedList.tsx'
 import { CourseModal } from './components/CourseModal.tsx'
 import { ProgramPicker } from './components/ProgramPicker.tsx'
@@ -65,7 +66,7 @@ import { hhmm, parseHHMM } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
 type Theme = 'light' | 'dark'
-type Page = 'info' | 'select' | 'timetable' | 'export'
+type Page = 'info' | 'select' | 'timetable' | 'export' | 'appendix'
 // 全部课程 / 本专业 — narrows search to the chosen programme's course set (by course key).
 type ProgramScope = 'all' | 'program'
 
@@ -74,10 +75,11 @@ const PAGES: Array<{ value: Page; label: string }> = [
   { value: 'select', label: '选课' },
   { value: 'timetable', label: '课表' },
   { value: 'export', label: '导出' },
+  { value: 'appendix', label: '附录' },
 ]
 
 // 页面在导航栏里的先后顺序。切换方向据此决定：切到更靠后的页 → 旧页向左滑出、新页从右滑入。
-const PAGE_ORDER: Record<Page, number> = { info: 0, select: 1, timetable: 2, export: 3 }
+const PAGE_ORDER: Record<Page, number> = { info: 0, select: 1, timetable: 2, export: 3, appendix: 4 }
 
 // 一次切页动画的描述：从哪一页来、方向（1=前进向左滑 / -1=后退向右滑）。
 type PageTransition = { from: Page; dir: 1 | -1 }
@@ -165,6 +167,17 @@ const PAGE_ICON: Record<Page, ReactNode> = {
       <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
     </svg>
   ),
+  appendix: (
+    <svg aria-hidden fill="none" height="18" viewBox="0 0 24 24" width="18">
+      <path
+        d="M4 5.5C4 4.4 5 4 7 4c2.5 0 4 .9 5 1.8C13 4.9 14.5 4 17 4c2 0 3 .4 3 1.5v13c0 1-1 .5-3 .5-2.5 0-4 .9-5 1.8-1-.9-2.5-1.8-5-1.8-2 0-3 .5-3-.5v-13Z"
+        stroke="currentColor"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+      <path d="M12 5.8V19" stroke="currentColor" strokeLinecap="round" strokeWidth="1.7" />
+    </svg>
+  ),
 }
 
 type Saved = {
@@ -180,15 +193,51 @@ type Saved = {
 // （append-only，见 colorForCode），槽位一旦分配永不重排，故新增课不会打乱既有课的颜色。
 const TIMETABLE_PALETTE = [210, 145, 275, 25, 330, 190, 95, 300, 50, 240, 170, 10]
 
-// 页脚友链带：icon 文件已放在 public/assets/sib-icons/，顺序照产品给定的清单。
-const SIBLINGS: Array<{ icon: string; url: string; name: string }> = [
-  { icon: '/assets/sib-icons/vincejiang.png', url: 'https://vincejiang.com/', name: 'VincentJiang 主站' },
-  { icon: '/assets/sib-icons/cuhkwild.png', url: 'https://cuhkwild.com/', name: '中大野史' },
-  { icon: '/assets/sib-icons/hkuwild.png', url: 'https://hkuwild.com/', name: '港大野史' },
-  { icon: '/assets/sib-icons/hkustwild.png', url: 'https://hkustwild.com/', name: '科大野史' },
-  { icon: '/assets/sib-icons/cityuwild.png', url: 'https://cityuwild.com/', name: '城大野史' },
-  { icon: '/assets/sib-icons/polyuwild.png', url: 'https://polyuwild.com/', name: '理大野史' },
-  { icon: '/assets/sib-icons/hkuniwild.png', url: 'https://hkuniwild.com/', name: '港校通门户' },
+// 页脚友链带 + 附录页「友链邀请」大卡共用同一份数据源：icon 文件已放在
+// public/assets/sib-icons/，顺序照产品给定的清单。desc 只有附录页的大卡会用到。
+const SIBLINGS: Array<{ icon: string; url: string; name: string; desc: string }> = [
+  {
+    icon: '/assets/sib-icons/vincejiang.png',
+    url: 'https://vincejiang.com/',
+    name: 'VincentJiang 主站',
+    desc: '本站作者的个人主页：博客与作品集',
+  },
+  {
+    icon: '/assets/sib-icons/cuhkwild.png',
+    url: 'https://cuhkwild.com/',
+    name: '中大野史',
+    desc: '中大生的野史吐槽站，你不知道的校园故事',
+  },
+  {
+    icon: '/assets/sib-icons/hkuwild.png',
+    url: 'https://hkuwild.com/',
+    name: '港大野史',
+    desc: '港大生的野史吐槽站',
+  },
+  {
+    icon: '/assets/sib-icons/hkustwild.png',
+    url: 'https://hkustwild.com/',
+    name: '科大野史',
+    desc: '科大生的野史吐槽站',
+  },
+  {
+    icon: '/assets/sib-icons/cityuwild.png',
+    url: 'https://cityuwild.com/',
+    name: '城大野史',
+    desc: '城大生的野史吐槽站',
+  },
+  {
+    icon: '/assets/sib-icons/polyuwild.png',
+    url: 'https://polyuwild.com/',
+    name: '理大野史',
+    desc: '理大生的野史吐槽站',
+  },
+  {
+    icon: '/assets/sib-icons/hkuniwild.png',
+    url: 'https://hkuniwild.com/',
+    name: '港校通门户',
+    desc: '港校信息门户，五校资讯一站看',
+  },
 ]
 
 // 一个排法内部两两 meeting 是否重叠。generatePlans/courseCombos 已保证返回的排法无冲突
@@ -2089,6 +2138,8 @@ export default function App() {
         )
       case 'export':
         return exportView
+      case 'appendix':
+        return <AppendixPage siblings={SIBLINGS} />
     }
   }
 

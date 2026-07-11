@@ -17,11 +17,11 @@ export type SharePayload = {
 
 const MARKER = '#s='
 
-// The 4 tabs, duplicated here (rather than imported from App.tsx) to avoid a
+// The 5 tabs, duplicated here (rather than imported from App.tsx) to avoid a
 // lib → App import cycle. Structurally identical to App.tsx's `Page` union, so
 // TypeScript treats values of either type as interchangeable at call sites.
-type PageSlug = 'info' | 'select' | 'timetable' | 'export'
-const PAGE_SLUGS: readonly PageSlug[] = ['info', 'select', 'timetable', 'export']
+type PageSlug = 'info' | 'select' | 'timetable' | 'export' | 'appendix'
+const PAGE_SLUGS: readonly PageSlug[] = ['info', 'select', 'timetable', 'export', 'appendix']
 
 // Exported so other modules that need the same UTF-8-safe base64 envelope (e.g.
 // configMd.ts's machine-readable block) don't have to reinvent it.

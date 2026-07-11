@@ -337,6 +337,13 @@ select {
   padding: 2px;
 }
 
+/* 附录 page：同样是单栏、自行滚动的居中列。 */
+.grid--appendix {
+  display: block;
+  overflow-y: auto;
+  padding: 2px;
+}
+
 /* 信息 page: two columns — 培养方案大课表 on the left, 我的情况 + 已完成课程 on the right,
    each scrolling independently. */
 .grid--info {
@@ -443,6 +450,155 @@ select {
 
 .page-center--export {
   max-width: 880px;
+}
+
+.page-center--appendix {
+  max-width: 880px;
+}
+
+/* ---- 附录 page -------------------------------------------------------------- */
+
+.appendix-body {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.65;
+}
+
+.appendix-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.appendix-cal-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  padding: 12px 14px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 650;
+  font-size: 13px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.appendix-cal-card:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.appendix-cal-card svg {
+  flex: none;
+  opacity: 0.8;
+}
+
+.appendix-dates {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+
+/* 选课时间轴：左侧一条竖线 + 每站一个圆点，日期加粗、说明弱化。 */
+.appendix-timeline {
+  list-style: none;
+  margin: 4px 0 4px 6px;
+  padding: 0 0 0 20px;
+  border-left: 2px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.appendix-timeline li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.appendix-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 4px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--brand);
+  border: 2px solid var(--surface);
+}
+
+.appendix-timeline__date {
+  font-weight: 750;
+  font-size: 13.5px;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.appendix-timeline__desc {
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.5;
+}
+
+/* 友链邀请：比页脚 .sib-chip 更大更完整的展示卡，带图标 + 站名 + 一句话简介。 */
+.appendix-sib-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 10px;
+}
+
+.appendix-sib-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+  padding: 12px 14px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.appendix-sib-card:hover {
+  border-color: var(--brand);
+  background: var(--brand-wash);
+  transform: translateY(-1px);
+}
+
+.appendix-sib-card img {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex: none;
+}
+
+.appendix-sib-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.appendix-sib-card__name {
+  font-weight: 750;
+  font-size: 13.5px;
+}
+
+.appendix-sib-card__desc {
+  font-size: 12px;
+  color: var(--ink-3);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Muted one-liner explaining what the 信息 page fields are for. */
