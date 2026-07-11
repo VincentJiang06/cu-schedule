@@ -1,4 +1,13 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type CSSProperties,
+  type PointerEvent as ReactPointerEvent,
+  type ReactNode,
+} from 'react'
 import { CommittedList } from './components/CommittedList.tsx'
 import { CourseModal } from './components/CourseModal.tsx'
 import { ProgramPicker } from './components/ProgramPicker.tsx'
@@ -11,9 +20,9 @@ import {
   type UnitPick,
 } from './components/SearchResults.tsx'
 import { SubjectPicker } from './components/SubjectPicker.tsx'
-import { TimetableCompare } from './components/TimetableCompare.tsx'
+import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
-import { courseColor } from './lib/color.ts'
+import { courseColor, huePaint } from './lib/color.ts'
 import { courseKey } from './lib/courseKey.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
 import {
@@ -37,8 +46,11 @@ import {
   type TermRef,
 } from './lib/data.ts'
 import {
+  comboMeetings,
+  courseCombos,
   findClashes,
   generatePlans,
+  meetingsClash,
   NO_PREFS,
   overlaps,
   planFitsWindow,
@@ -262,6 +274,8 @@ export default function App() {
   // 课表页 A / B 各自选中的排法下标（默认第 1、第 2 种）；plans 变化越界时重置回默认。
   const [planAIndex, setPlanAIndex] = useState(0)
   const [planBIndex, setPlanBIndex] = useState(1)
+  // #12 单方案模式:点排法横条的方框 → 只看这一个排法(退出 A/B 对比);点 A / B 按钮回到对比。
+  const [soloPlanIndex, setSoloPlanIndex] = useState<number | null>(null)
   const [page, setPage] = useState<Page>('select')
   // 当前正在播放的切页动画（null = 无动画，直接渲染单页）。
   const [transition, setTransition] = useState<PageTransition | null>(null)
@@ -580,15 +594,24 @@ export default function App() {
   const planB = visiblePlans.length < 2 ? null : (visiblePlanIndices.has(planBIndex) ? plans[planBIndex] : (visiblePlans[1] ?? null))
   const totalUnits = committedCourses.reduce((sum, course) => sum + course.units, 0)
 
+  // #12 单方案模式只在被点的排法仍可见时生效;它被过滤掉/列表变化越界时自动退出。
+  useEffect(() => {
+    if (soloPlanIndex !== null && !visiblePlanIndices.has(soloPlanIndex)) setSoloPlanIndex(null)
+  }, [soloPlanIndex, visiblePlanIndices])
+  const soloActive = soloPlanIndex !== null && visiblePlanIndices.has(soloPlanIndex)
+  // 大课表实际展示的排法:单方案模式 → 只有被点的那个;否则 A / B 对比。
+  const shownPlanA = soloActive ? plans[soloPlanIndex!] : planA
+  const shownPlanB = soloActive ? null : planB
+
   // #5 append-only 每课配色：课号（按 courseKey 归一）→ 调色盘槽位。committed 变化时只给
   // 尚未登记的 key 追加 map.size 作为槽位，已有 key 永不改动，故新增课不会重排既有课的颜色。
-  // 仅课表页使用（传入 TimetableCompare）；信息/选课页仍走 subject 配色，互不影响。
+  // 课表页（TimetableCompare / 右栏列表）与导出图共用；信息/选课页仍走 subject 配色。
   const colorSlotRef = useRef<Map<string, number>>(new Map())
   for (const code of committed) {
     const key = courseKey(code)
     if (!colorSlotRef.current.has(key)) colorSlotRef.current.set(key, colorSlotRef.current.size)
   }
-  const colorForCode = useCallback((code: string): CSSProperties => {
+  const slotForCode = useCallback((code: string): number => {
     const map = colorSlotRef.current
     const key = courseKey(code)
     let slot = map.get(key)
@@ -596,8 +619,62 @@ export default function App() {
       slot = map.size
       map.set(key, slot)
     }
-    return { '--hue': TIMETABLE_PALETTE[slot % TIMETABLE_PALETTE.length], '--shade': '0%' } as CSSProperties
+    return slot
   }, [])
+  const colorForCode = useCallback(
+    (code: string): CSSProperties =>
+      ({
+        '--hue': TIMETABLE_PALETTE[slotForCode(code) % TIMETABLE_PALETTE.length],
+        '--shade': '0%',
+      }) as CSSProperties,
+    [slotForCode],
+  )
+  // 导出 PNG/PDF/壁纸 用的画布配色:同一槽位映射解析成具体 hsl() 串(浅色主题基准),
+  // 使导出图与屏幕上的大课表颜色一致(#1)。
+  const paintForCode = useCallback(
+    (code: string) => huePaint(TIMETABLE_PALETTE[slotForCode(code) % TIMETABLE_PALETTE.length]),
+    [slotForCode],
+  )
+
+  // #3 候选(可能学)课程的试排块:对每门 cart 课取「与该排法不冲突的第一种全组件组合」
+  //（没有就退回第一种带时间的组合,与选课页 candidates 的展示口径一致),分别为 A / B
+  // (或单方案) 各算一份,叠加到大课表上,右上角小角块标记。
+  const ghostBlocksFor = useCallback(
+    (plan: Plan | null): GhostBlock[] => {
+      if (!plan) return []
+      const planMeetings = plan.entries.flatMap((entry) => entry.section.meetings)
+      const out: GhostBlock[] = []
+      for (const code of cart) {
+        const course = byCode.get(courseKey(code))
+        if (!course) continue
+        const combos = courseCombos(course, NO_PREFS)
+        const timed = combos.filter((combo) => comboMeetings(combo).length > 0)
+        if (timed.length === 0) continue
+        const fit =
+          timed.find((combo) => !meetingsClash(comboMeetings(combo), planMeetings)) ?? timed[0]
+        for (const section of fit) {
+          for (const meeting of section.meetings) {
+            out.push({
+              key: `ghost-${course.key}-${section.id}-${meeting.dayIndex}-${meeting.start}`,
+              code: course.code,
+              subject: course.subject,
+              title: course.title,
+              component: section.component,
+              location: meeting.location,
+              dayIndex: meeting.dayIndex,
+              start: meeting.start,
+              end: meeting.end,
+              cart: true,
+            })
+          }
+        }
+      }
+      return out
+    },
+    [byCode, cart],
+  )
+  const cartGhostsA = useMemo(() => ghostBlocksFor(shownPlanA), [ghostBlocksFor, shownPlanA])
+  const cartGhostsB = useMemo(() => ghostBlocksFor(shownPlanB), [ghostBlocksFor, shownPlanB])
 
   const [exportNote, setExportNote] = useState('')
   // 只读分享（方案 2）：把当前选择存到后端换一个 /#v=<id> 只读链接（手机可看，一天有效）。
@@ -640,6 +717,8 @@ export default function App() {
       planB,
       termName: term?.name ?? '',
       share: { termSlug, committed, taken, pins },
+      // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射,浅色主题解析)。
+      paint: (code) => paintForCode(code),
     })
     setExportNote(result.ok ? result.note : result.reason)
   }
@@ -838,6 +917,143 @@ export default function App() {
     setCart((codes) => codes.filter((item) => !sameCourse(item, code)))
   }
 
+  // ---- #4 拖拽(选课页):按住课程卡/列表行拖到「必定学 / 可能学」目标卡 --------------------
+  // 原生 pointer events 实现,零依赖。移动 6px 后才算拖拽(之前松手仍是普通点击);拖拽成立后
+  // 用一次性的捕获阶段 click 监听吞掉紧随其后的 click,避免误开课程详情。触摸端浏览器会在
+  // 滚动接管时发 pointercancel,拖拽自然让位于滚动,点按不受影响。
+  type DragSource = 'catalog' | 'committed' | 'cart'
+  type DropTarget = 'committed' | 'cart' | null
+  const [dragCourse, setDragCourse] = useState<{ code: string; from: DragSource } | null>(null)
+  const [dropHover, setDropHover] = useState<DropTarget>(null)
+  const dragInfoRef = useRef<{
+    code: string
+    from: DragSource
+    startX: number
+    startY: number
+    active: boolean
+    pointerId: number
+  } | null>(null)
+  const dragGhostRef = useRef<HTMLDivElement | null>(null)
+  const dragPosRef = useRef({ x: 0, y: 0 })
+  const committedDropRef = useRef<HTMLElement | null>(null)
+  const cartDropRef = useRef<HTMLElement | null>(null)
+
+  const hitDropTarget = useCallback((x: number, y: number): DropTarget => {
+    const within = (el: HTMLElement | null) => {
+      if (!el) return false
+      const rect = el.getBoundingClientRect()
+      return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom
+    }
+    if (within(committedDropRef.current)) return 'committed'
+    if (within(cartDropRef.current)) return 'cart'
+    return null
+  }, [])
+
+  // 拖拽落点动作。目标卡:catalog/另一桶 → 加入该桶(互斥桶自动清理,必定学尊重硬挡);
+  // 拖出到空白处:从原桶移除(catalog 来源则什么都不做)。
+  const performDrop = (info: { code: string; from: DragSource }, target: DropTarget): void => {
+    const key = courseKey(info.code)
+    if (target === 'committed') {
+      if (info.from === 'committed' || committedSet.has(key)) return
+      const status = statusByCode.get(key)
+      if (barredKeys.has(key) || status === 'conflict' || status === 'tba') return
+      setPlanIndex(0)
+      setTaken((codes) => codes.filter((item) => !sameCourse(item, info.code)))
+      setCart((codes) => codes.filter((item) => !sameCourse(item, info.code)))
+      setCommitted((codes) =>
+        codes.some((item) => sameCourse(item, info.code)) ? codes : [...codes, info.code],
+      )
+    } else if (target === 'cart') {
+      if (info.from === 'cart' || cartSet.has(key)) return
+      setPlanIndex(0)
+      setCommitted((codes) => codes.filter((item) => !sameCourse(item, info.code)))
+      dropPins(info.code)
+      setTaken((codes) => codes.filter((item) => !sameCourse(item, info.code)))
+      setCart((codes) => (codes.some((item) => sameCourse(item, info.code)) ? codes : [...codes, info.code]))
+    } else if (info.from === 'committed') {
+      removeCommitted(info.code)
+    } else if (info.from === 'cart') {
+      removeCart(info.code)
+    }
+  }
+
+  // window 级监听器必须是稳定引用才能成对增删;真正的处理逻辑每次渲染刷新到 ref 里,
+  // 使拖拽途中始终读到最新的 state(committedSet / statusByCode 等)。
+  const dragMoveImplRef = useRef<(event: PointerEvent) => void>(() => {})
+  const dragEndImplRef = useRef<(event: PointerEvent) => void>(() => {})
+  const onDragMove = useCallback((event: PointerEvent) => dragMoveImplRef.current(event), [])
+  const onDragEnd = useCallback((event: PointerEvent) => dragEndImplRef.current(event), [])
+  const squelchClick = useCallback((event: MouseEvent) => {
+    event.stopPropagation()
+    event.preventDefault()
+    window.removeEventListener('click', squelchClick, true)
+  }, [])
+  const stopDragListeners = useCallback(() => {
+    window.removeEventListener('pointermove', onDragMove)
+    window.removeEventListener('pointerup', onDragEnd)
+    window.removeEventListener('pointercancel', onDragEnd)
+  }, [onDragEnd, onDragMove])
+
+  dragMoveImplRef.current = (event: PointerEvent) => {
+    const info = dragInfoRef.current
+    if (!info || event.pointerId !== info.pointerId) return
+    if (!info.active) {
+      if (Math.hypot(event.clientX - info.startX, event.clientY - info.startY) < 6) return
+      info.active = true
+      setDragCourse({ code: info.code, from: info.from })
+      // 拖拽已成立:吞掉这次手势松手后的 click,避免触发卡片的「查看详情」。
+      window.addEventListener('click', squelchClick, true)
+    }
+    event.preventDefault()
+    dragPosRef.current = { x: event.clientX, y: event.clientY }
+    const ghost = dragGhostRef.current
+    if (ghost) ghost.style.transform = `translate(${event.clientX + 14}px, ${event.clientY + 12}px)`
+    setDropHover((current) => {
+      const next = hitDropTarget(event.clientX, event.clientY)
+      return next === current ? current : next
+    })
+  }
+
+  dragEndImplRef.current = (event: PointerEvent) => {
+    const info = dragInfoRef.current
+    if (!info || event.pointerId !== info.pointerId) return
+    stopDragListeners()
+    dragInfoRef.current = null
+    if (info.active && event.type === 'pointerup') {
+      performDrop(info, hitDropTarget(event.clientX, event.clientY))
+    }
+    setDragCourse(null)
+    setDropHover(null)
+  }
+
+  // 拖拽起点(选课页课程卡 / 右栏列表行都走这里)。点在按钮、输入框等控件上不启动。
+  function beginCourseDrag(code: string, from: DragSource, event: ReactPointerEvent<HTMLElement>): void {
+    if (event.pointerType === 'mouse' && event.button !== 0) return
+    const target = event.target as HTMLElement
+    if (target.closest('button, input, select, a')) return
+    dragInfoRef.current = {
+      code,
+      from,
+      startX: event.clientX,
+      startY: event.clientY,
+      active: false,
+      pointerId: event.pointerId,
+    }
+    dragPosRef.current = { x: event.clientX, y: event.clientY }
+    window.addEventListener('pointermove', onDragMove)
+    window.addEventListener('pointerup', onDragEnd)
+    window.addEventListener('pointercancel', onDragEnd)
+  }
+
+  // ghost 初次挂载时先落到当前指针位置(其后由 pointermove 直接改 transform,不走 React)。
+  useEffect(() => {
+    if (!dragCourse) return
+    const ghost = dragGhostRef.current
+    if (ghost) {
+      ghost.style.transform = `translate(${dragPosRef.current.x + 14}px, ${dragPosRef.current.y + 12}px)`
+    }
+  }, [dragCourse])
+
   // 信息页「入学年份」旁的刷新:强制重载 programs.json(走版本化通道,非裸 fetch),
   // 并按当前入学年份重解析所选方案——若存在 name_en 相同、year===enrollYear 的另一版本,
   // 则切过去,让「改了入学年份 → 刷新 → 大课表切到该年份版本」成立。无所选/无匹配则仅重载。
@@ -861,8 +1077,14 @@ export default function App() {
     }
   }
 
+  // 选课页右栏两张卡同时是 #4 拖拽的落点:拖拽中高亮示意,悬停到卡上再加一档。
   const committedCard = (
-    <section className="card committed-card">
+    <section
+      className={`card committed-card${dragCourse ? ' card--droppable' : ''}${dropHover === 'committed' ? ' card--drop-hover' : ''}`}
+      ref={(el) => {
+        committedDropRef.current = el
+      }}
+    >
       <h2 className="card__title">
         当前必修课程
         <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分` : '一课一行'}</span>
@@ -873,6 +1095,7 @@ export default function App() {
         currentTermOrder={currentTermOrder}
         termOrdersByKey={termOrdersByKey}
         onRemove={removeCommitted}
+        onRowPointerDown={(code, _isCart, event) => beginCourseDrag(code, 'committed', event)}
       />
       {unknownCommitted.length > 0 && (
         <p className="card__warn">本学期没有开设：{unknownCommitted.join('、')}</p>
@@ -882,18 +1105,25 @@ export default function App() {
 
   // 「当前可能课程」= 可能学 waitlist / cart，单独一张圆角卡，紧接在「当前必修课程」下方（选课页）。
   const cartCard = (
-    <section className="card cart-card">
+    <section
+      className={`card cart-card${dragCourse ? ' card--droppable' : ''}${dropHover === 'cart' ? ' card--drop-hover' : ''}`}
+      ref={(el) => {
+        cartDropRef.current = el
+      }}
+    >
       <h2 className="card__title">
         当前可能课程
         <span className="card__note">{cart.length > 0 ? `${cart.length} 门候选` : '可能会学'}</span>
       </h2>
       <CommittedList
         byCode={byCode}
-        codes={cart}
+        cartCodes={cart}
+        codes={[]}
         currentTermOrder={currentTermOrder}
         emptyHint="还没有候选课程。在中间的课程列表点「可能学」来添加。"
         termOrdersByKey={termOrdersByKey}
         onRemove={removeCart}
+        onRowPointerDown={(code, _isCart, event) => beginCourseDrag(code, 'cart', event)}
       />
     </section>
   )
@@ -915,53 +1145,53 @@ export default function App() {
         上下班时间
         <span className="card__note">日历参考线 · 排法过滤</span>
       </h2>
-      <p className="card__sub">
-        上班时间=希望一天的课不早于此；下班时间=不晚于此。清空某项＝不设该条线，只在日历上画虚线。
-      </p>
-      <div className="field">
-        <span className="field__label">上班时间</span>
-        <div className="time-field">
-          <input
-            aria-label="上班时间"
-            className="time-input"
-            step={300}
-            type="time"
-            value={workStart != null ? hhmm(workStart) : ''}
-            onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
-          />
-          {workStart != null && (
-            <button
-              aria-label="清除上班时间"
-              className="time-field__clear"
-              type="button"
-              onClick={() => setWorkStart(null)}
-            >
-              ×
-            </button>
-          )}
+      {/* 上班 / 下班同一排,省纵向空间;语义(不早于/不晚于)收进 title,不再占一行说明。 */}
+      <div className="time-row">
+        <div className="field" title="希望一天的课不早于此;清空＝不设线">
+          <span className="field__label">上班时间</span>
+          <div className="time-field">
+            <input
+              aria-label="上班时间"
+              className="time-input"
+              step={300}
+              type="time"
+              value={workStart != null ? hhmm(workStart) : ''}
+              onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
+            />
+            {workStart != null && (
+              <button
+                aria-label="清除上班时间"
+                className="time-field__clear"
+                type="button"
+                onClick={() => setWorkStart(null)}
+              >
+                ×
+              </button>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="field">
-        <span className="field__label">下班时间</span>
-        <div className="time-field">
-          <input
-            aria-label="下班时间"
-            className="time-input"
-            step={300}
-            type="time"
-            value={workEnd != null ? hhmm(workEnd) : ''}
-            onChange={(event) => setWorkEnd(parseHHMM(event.target.value))}
-          />
-          {workEnd != null && (
-            <button
-              aria-label="清除下班时间"
-              className="time-field__clear"
-              type="button"
-              onClick={() => setWorkEnd(null)}
-            >
-              ×
-            </button>
-          )}
+        <div className="field" title="希望一天的课不晚于此;清空＝不设线">
+          <span className="field__label">下班时间</span>
+          <div className="time-field">
+            <input
+              aria-label="下班时间"
+              className="time-input"
+              step={300}
+              type="time"
+              value={workEnd != null ? hhmm(workEnd) : ''}
+              onChange={(event) => setWorkEnd(parseHHMM(event.target.value))}
+            />
+            {workEnd != null && (
+              <button
+                aria-label="清除下班时间"
+                className="time-field__clear"
+                type="button"
+                onClick={() => setWorkEnd(null)}
+              >
+                ×
+              </button>
+            )}
+          </div>
         </div>
       </div>
       <div className="check-row">
@@ -989,20 +1219,24 @@ export default function App() {
     </section>
   )
 
+  // #2 课表页右栏列表:必修 + 候选(可能学)一起展示,颜色与大课表一致(colorForCode),
+  // 候选行右上角小角块标记;不带「上/下学期」徽标、不提供删除(删课回选课页)。
   const committedCardTT = (
     <section className="card committed-card">
       <h2 className="card__title">
-        当前必修课程
+        当前课程
         <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分 · 选时段` : '选时段'}</span>
       </h2>
       <CommittedList
         byCode={byCode}
+        cartCodes={cart}
         codes={committed}
+        colorFor={colorForCode}
         currentTermOrder={currentTermOrder}
         pins={pins}
+        showTermBadge={false}
         termOrdersByKey={termOrdersByKey}
         onPin={togglePin}
-        onRemove={removeCommitted}
       />
       {unknownCommitted.length > 0 && (
         <p className="card__warn">本学期没有开设：{unknownCommitted.join('、')}</p>
@@ -1297,17 +1531,29 @@ export default function App() {
     ) : null
 
   // #7 排法横条（课表页右主区顶部，可横向滚动）：每张扁平小卡左侧显示 排法N · 天数 · 学分，
-  // 右侧两个方形小按钮「A」「B」分别设为该排法（选中态高亮），压低纵向占用、给大课表让空间。
+  // 右侧两个方形小按钮「A」「B」分别设为该排法（选中态高亮）。#12 点卡片本体 → 单方案模式
+  //（只看这一个排法,退出 A/B 对比）；点任意 A / B 按钮 → 回到对比模式。
   const planStrip =
     plans.length > 0 ? (
       <div className="plan-strip__rail">
         {shownPlanViews.map(({ plan, index }) => {
           const isA = index === planAIndex
           const isB = plans.length >= 2 && index === planBIndex
+          const isSolo = soloActive && index === soloPlanIndex
           return (
             <div
-              className={`plan-card${isA ? ' plan-card--a' : ''}${isB ? ' plan-card--b' : ''}`}
+              className={`plan-card${isA ? ' plan-card--a' : ''}${isB ? ' plan-card--b' : ''}${isSolo ? ' plan-card--solo' : ''}`}
               key={plan.id}
+              role="button"
+              tabIndex={0}
+              title="点击单独查看此排法"
+              onClick={() => setSoloPlanIndex(index)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault()
+                  setSoloPlanIndex(index)
+                }
+              }}
             >
               <div className="plan-card__info">
                 <span className="plan-card__name">排法 {index + 1}</span>
@@ -1319,18 +1565,26 @@ export default function App() {
                 <button
                   aria-label={`排法 ${index + 1} 设为 A`}
                   className={`plan-card__pick plan-card__pick--a${isA ? ' plan-card__pick--on' : ''}`}
-                  title="设为 A"
+                  title="设为 A（回到 A/B 对比）"
                   type="button"
-                  onClick={() => setPlanAIndex(index)}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    setSoloPlanIndex(null)
+                    setPlanAIndex(index)
+                  }}
                 >
                   A
                 </button>
                 <button
                   aria-label={`排法 ${index + 1} 设为 B`}
                   className={`plan-card__pick plan-card__pick--b${isB ? ' plan-card__pick--on' : ''}`}
-                  title="设为 B"
+                  title="设为 B（回到 A/B 对比）"
                   type="button"
-                  onClick={() => setPlanBIndex(index)}
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    setSoloPlanIndex(null)
+                    setPlanBIndex(index)
+                  }}
                 >
                   B
                 </button>
@@ -1506,6 +1760,7 @@ export default function App() {
                   prereqByCode={prereqByCode}
                   takenSet={takenSet}
                   titleByCode={titleByCode}
+                  onCardPointerDown={(course, event) => beginCourseDrag(course.code, 'catalog', event)}
                   onCart={toggleCart}
                   onCommit={toggleCommitted}
                   onOpenDetail={setDetailCourse}
@@ -1535,6 +1790,8 @@ export default function App() {
             <section className="stage">
               {planStrip}
               <TimetableCompare
+                cartA={cartGhostsA}
+                cartB={cartGhostsB}
                 colorForCode={colorForCode}
                 emptyMessage={
                   committedCourses.length === 0
@@ -1542,9 +1799,13 @@ export default function App() {
                     : '当前无可行方案'
                 }
                 guides={guideLines}
-                planA={planA}
-                planB={planB}
+                planA={shownPlanA}
+                planB={shownPlanB}
                 showEmptyGrid={committedCourses.length > 0}
+                solo={soloActive}
+                onGuideChange={(tone, minutes) =>
+                  tone === 'am' ? setWorkStart(minutes) : setWorkEnd(minutes)
+                }
               />
             </section>
           </>
@@ -1555,7 +1816,22 @@ export default function App() {
   }
 
   return (
-    <div className="app">
+    <div className={`app${dragCourse ? ' app--dragging' : ''}`}>
+      {/* #4 拖拽跟随 ghost:固定定位小签,pointermove 直接改 transform(不经 React)。 */}
+      {dragCourse && (
+        <div aria-hidden className="drag-ghost" ref={dragGhostRef}>
+          <span className="drag-ghost__code">{dragCourse.code}</span>
+          <span className="drag-ghost__hint">
+            {dropHover === 'committed'
+              ? '放开 → 必定学'
+              : dropHover === 'cart'
+                ? '放开 → 可能学'
+                : dragCourse.from === 'catalog'
+                  ? '拖到右侧「必定学 / 可能学」'
+                  : '拖到另一栏移动 · 拖到空白处移除'}
+          </span>
+        </div>
+      )}
       <header className="bar">
         <div className="bar__left">
           <div className="bar__brand">

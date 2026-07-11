@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react'
+import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
@@ -16,9 +16,14 @@ type Block = {
   dayIndex: number
   start: number
   end: number
+  /** true = 候选(可能学)课程的试排块,右上角带小角块标记。 */
+  cart?: boolean
   lane: number
   lanes: number
 }
+
+/** 候选(可能学)课程的试排块——App 按「不与该排法冲突的第一种组合」算好后传入。 */
+export type GhostBlock = Omit<Block, 'lane' | 'lanes'>
 
 function blocksOf(plan: Plan | null): Omit<Block, 'lane' | 'lanes'>[] {
   return (plan?.entries ?? []).flatMap((entry) =>
@@ -81,7 +86,7 @@ function Column({
         const isLec = block.component === 'LEC'
         return (
           <article
-            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}`}
+            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}`}
             key={block.key}
             style={
               {
@@ -92,7 +97,7 @@ function Column({
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
           >
             <span className="tt2__block-top">
               <b className="tt2__block-comp">{block.component}</b>
@@ -109,7 +114,7 @@ function Column({
   )
 }
 
-/** A user-placed dashed reference line drawn across the whole grid (purely visual). */
+/** A user-placed dashed reference line drawn across the whole grid (also draggable). */
 export type Guide = { minutes: number; label: string; tone: 'am' | 'pm' }
 
 export function TimetableCompare({
@@ -119,20 +124,32 @@ export function TimetableCompare({
   colorForCode,
   guides = [],
   showEmptyGrid = false,
+  cartA = [],
+  cartB = [],
+  solo = false,
+  onGuideChange,
 }: {
   planA: Plan | null
   planB: Plan | null
   emptyMessage: string
   colorForCode: (code: string) => CSSProperties
-  /** Two optional reference lines (morning / evening) the student drags to eyeball. */
+  /** Two optional reference lines (上班 / 下班) — draggable when onGuideChange is set. */
   guides?: Guide[]
   /** #4 全空空态:true 时(committed 课非空但没有可展示的排法——本来排不出 或 被过滤器清空)
    * 渲染完整的星期/时间轴网格骨架(无课程块),而不是裸消息;emptyMessage 移到网格下方居中显示。
    * false(默认)沿用旧行为——用于「还没选任何课」那种更简单的提示场景。 */
   showEmptyGrid?: boolean
+  /** 候选(可能学)课程的试排块,分别叠加到 A / B 子列(右上角小角块标记)。 */
+  cartA?: GhostBlock[]
+  cartB?: GhostBlock[]
+  /** 单方案模式(点排法横条的方框进入):每天只画一整列(planA),不再 A/B 对比。 */
+  solo?: boolean
+  /** 上下班虚线的拖动回调(吸附 15 分钟由本组件完成);不传 = 线不可拖。 */
+  onGuideChange?: (tone: 'am' | 'pm', minutes: number) => void
 }) {
-  const rawA = blocksOf(planA)
-  const rawB = blocksOf(planB)
+  const bodyRef = useRef<HTMLDivElement | null>(null)
+  const rawA = [...blocksOf(planA), ...cartA]
+  const rawB = solo ? [] : [...blocksOf(planB), ...cartB]
   const all = [...rawA, ...rawB]
 
   if (!planA && !showEmptyGrid) {
@@ -157,17 +174,57 @@ export function TimetableCompare({
   const halfHours = Array.from({ length: (ceilHour - floorHour) * 2 + 1 }, (_, index) => floorHour * 60 + index * 30)
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
+  // 只画落在当前网格范围内的参考线;上/下班线各自驱动一层很轻的渐变遮罩(见下)。
+  const shownGuides = guides.filter(
+    (guide) => guide.minutes >= floorHour * 60 && guide.minutes <= ceilHour * 60,
+  )
+  const amGuide = shownGuides.find((guide) => guide.tone === 'am') ?? null
+  const pmGuide = shownGuides.find((guide) => guide.tone === 'pm') ?? null
+
+  // 上下班线拖动:pointerdown 在虚线上 → window 级 pointermove 实时换算成分钟(按网格身高
+  // 线性映射),吸附 15 分钟并夹在网格范围内,每次变化直接回调 App(state → time input +
+  // localStorage 同步)。用 window 监听而非指针捕获:guide 元素每次重渲染都会换,捕获会丢。
+  const beginGuideDrag = (tone: 'am' | 'pm') => (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (!onGuideChange || !bodyRef.current) return
+    event.preventDefault()
+    const rect = bodyRef.current.getBoundingClientRect()
+    const pointerId = event.pointerId
+    const toMinutes = (clientY: number) => {
+      const frac = Math.min(1, Math.max(0, (clientY - rect.top) / rect.height))
+      const raw = floorHour * 60 + frac * span
+      const snapped = Math.round(raw / 15) * 15
+      return Math.min(ceilHour * 60, Math.max(floorHour * 60, snapped))
+    }
+    const move = (ev: PointerEvent) => {
+      if (ev.pointerId !== pointerId) return
+      ev.preventDefault()
+      onGuideChange(tone, toMinutes(ev.clientY))
+    }
+    const finish = (ev: PointerEvent) => {
+      if (ev.pointerId !== pointerId) return
+      window.removeEventListener('pointermove', move)
+      window.removeEventListener('pointerup', finish)
+      window.removeEventListener('pointercancel', finish)
+    }
+    window.addEventListener('pointermove', move)
+    window.addEventListener('pointerup', finish)
+    window.addEventListener('pointercancel', finish)
+    onGuideChange(tone, toMinutes(event.clientY))
+  }
+
   const grid = (
-    <div className="tt2" style={{ '--tt-days': dayCount } as CSSProperties}>
+    <div className={`tt2${solo ? ' tt2--solo' : ''}`} style={{ '--tt-days': dayCount } as CSSProperties}>
       <div className="tt2__corner" />
       <div className="tt2__head">
         {DAYS.slice(0, dayCount).map((day) => (
           <div className="tt2__day-name" key={day}>
             <span>{day}</span>
-            <div className="tt2__ab-labels">
-              <i className="tt2__tag tt2__tag--a">A</i>
-              <i className="tt2__tag tt2__tag--b">B</i>
-            </div>
+            {!solo && (
+              <div className="tt2__ab-labels">
+                <i className="tt2__tag tt2__tag--a">A</i>
+                <i className="tt2__tag tt2__tag--b">B</i>
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -180,7 +237,7 @@ export function TimetableCompare({
         ))}
       </div>
 
-      <div className="tt2__body">
+      <div className="tt2__body" ref={bodyRef}>
         {halfHours.slice(1, -1).map((minutes) => (
           <div
             aria-hidden
@@ -189,19 +246,21 @@ export function TimetableCompare({
             style={{ top: `${pct(minutes)}%` }}
           />
         ))}
-        {guides
-          .filter((guide) => guide.minutes >= floorHour * 60 && guide.minutes <= ceilHour * 60)
-          .map((guide) => (
-            <div
-              className={`tt2__guide tt2__guide--${guide.tone}`}
-              key={guide.tone}
-              style={{ top: `${pct(guide.minutes)}%` }}
-            >
-              <span className="tt2__guide-tag">
-                {guide.label} {hhmm(guide.minutes)}
-              </span>
-            </div>
-          ))}
+        {/* 上班线上方 / 下班线下方:很轻的半透明渐变遮罩,从边缘向线的方向渐隐(不抢戏)。 */}
+        {amGuide && (
+          <div
+            aria-hidden
+            className="tt2__offmask tt2__offmask--am"
+            style={{ height: `${pct(amGuide.minutes)}%` }}
+          />
+        )}
+        {pmGuide && (
+          <div
+            aria-hidden
+            className="tt2__offmask tt2__offmask--pm"
+            style={{ top: `${pct(pmGuide.minutes)}%` }}
+          />
+        )}
         {Array.from({ length: dayCount }, (_, index) => {
           const dayIndex = index + 1
           return (
@@ -214,17 +273,32 @@ export function TimetableCompare({
                 span={span}
                 variant="a"
               />
-              <Column
-                blocks={rawB.filter((block) => block.dayIndex === dayIndex)}
-                colorForCode={colorForCode}
-                empty={!planA || !planB}
-                floorHour={floorHour}
-                span={span}
-                variant="b"
-              />
+              {!solo && (
+                <Column
+                  blocks={rawB.filter((block) => block.dayIndex === dayIndex)}
+                  colorForCode={colorForCode}
+                  empty={!planA || !planB}
+                  floorHour={floorHour}
+                  span={span}
+                  variant="b"
+                />
+              )}
             </div>
           )
         })}
+        {shownGuides.map((guide) => (
+          <div
+            className={`tt2__guide tt2__guide--${guide.tone}${onGuideChange ? ' tt2__guide--drag' : ''}`}
+            key={guide.tone}
+            style={{ top: `${pct(guide.minutes)}%` }}
+            title={onGuideChange ? '按住上下拖动调整时间（15 分钟粒度）' : undefined}
+            onPointerDown={beginGuideDrag(guide.tone)}
+          >
+            <span className="tt2__guide-tag">
+              {guide.label} {hhmm(guide.minutes)}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   )

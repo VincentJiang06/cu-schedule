@@ -493,6 +493,58 @@ select {
   gap: 9px;
 }
 
+/* ---- #4 拖拽(选课页):落点高亮 + 跟随 ghost + 拖拽期全局态 --------------------- */
+
+/* 正在拖拽:两张落点卡（必定学 / 可能学）虚线描边提示可放。 */
+.card--droppable {
+  border-style: dashed;
+  border-color: var(--brand);
+}
+
+/* 指针悬停在落点卡上:实线 + brand 水洗底,一眼可辨「就放这」。 */
+.card--drop-hover {
+  border-style: solid;
+  background: var(--brand-wash);
+  box-shadow: inset 0 0 0 1px var(--brand), var(--shadow);
+}
+
+/* 拖拽中的全局态:禁掉文字选中,指针统一为抓取。 */
+.app--dragging {
+  cursor: grabbing;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* 跟随指针的小签:课号 + 落点提示。transform 由 pointermove 直接驱动(不经 React)。 */
+.drag-ghost {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 10px;
+  border-radius: 9px;
+  border: 1px solid var(--brand);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.drag-ghost__code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.drag-ghost__hint {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+
 .card__title {
   margin: 0;
   font-size: 13px;
@@ -820,6 +872,23 @@ select {
   border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-radius: 9px;
   padding: 7px 9px 8px;
+}
+
+/* #3 候选(可能学)行:右上角小角块标记,与大课表上候选试排块的视觉语言一致。 */
+.cl-row--cart {
+  position: relative;
+  overflow: hidden;
+}
+
+.cl-row--cart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 13px 13px 0;
+  border-color: transparent hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade))) transparent transparent;
+  pointer-events: none;
 }
 
 .cl-row__head {
@@ -1232,6 +1301,20 @@ select {
   border-radius: 9px;
   background: var(--surface-2);
   padding: 4px 5px 4px 10px;
+  /* #12 卡片本体可点:单独查看该排法(A/B 按钮各自 stopPropagation)。 */
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.plan-card:hover {
+  border-color: var(--brand);
+}
+
+/* #12 单方案模式中被选中的排法卡。 */
+.plan-card--solo {
+  border-color: var(--brand);
+  background: var(--brand-wash);
+  box-shadow: inset 0 0 0 1px var(--brand);
 }
 
 .plan-card--a {
@@ -1339,6 +1422,17 @@ select {
 }
 
 /* ---- 上下班时间自由输入（原「辅助线」下拉，现改 <input type=time>） --------- */
+
+/* 上班 / 下班两个输入同一排,各占一半(省纵向空间)。 */
+.time-row {
+  display: flex;
+  gap: 8px;
+}
+
+.time-row .field {
+  flex: 1;
+  min-width: 0;
+}
 
 .time-field {
   display: flex;
@@ -1543,13 +1637,45 @@ select {
   border-top-color: color-mix(in srgb, var(--line) 30%, transparent);
 }
 
-/* 用户放置的辅助线（早/晚）：一条穿过整张日历的虚线，浮在课程块之上供目测，不拦点击。 */
+/* 上下班参考线：一条穿过整张日历的虚线，浮在课程块之上。默认不拦点击;可拖(--drag)时
+   自己接住指针,加宽不可见热区便于按住上下拖动(#8,吸附 15 分钟在组件里做)。 */
 .tt2__guide {
   position: absolute;
   inset-inline: 0;
   border-top: 2px dashed hsl(var(--accent) 62% 55%);
   pointer-events: none;
   z-index: 3;
+}
+
+.tt2__guide--drag {
+  pointer-events: auto;
+  cursor: ns-resize;
+  touch-action: none;
+}
+
+.tt2__guide--drag::before {
+  content: '';
+  position: absolute;
+  inset: -8px 0;
+}
+
+/* #10/#11 上班线上方 / 下班线下方:很轻的渐变遮罩,从边缘向线渐隐,示意「非上班时段」。
+   z-index 2:盖在课程块(1)之上但被参考线(3)压着;7% 的 --ink 淡到只降一点点亮度,不抢戏。 */
+.tt2__offmask {
+  position: absolute;
+  inset-inline: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.tt2__offmask--am {
+  top: 0;
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--ink) 7%, transparent), transparent);
+}
+
+.tt2__offmask--pm {
+  bottom: 0;
+  background: linear-gradient(to top, color-mix(in srgb, var(--ink) 7%, transparent), transparent);
 }
 
 .tt2__guide--pm {
@@ -1599,6 +1725,15 @@ select {
   border-right: 1px dashed color-mix(in srgb, var(--line) 75%, transparent);
 }
 
+/* #12 单方案模式:每天只有一整列(仅 A 子列),去掉 A|B 内分隔虚线。 */
+.tt2--solo .tt2__col {
+  grid-template-columns: 1fr;
+}
+
+.tt2--solo .tt2__sub--a {
+  border-right: none;
+}
+
 .tt2__sub--b {
   background: #f4f5f8;
 }
@@ -1643,6 +1778,19 @@ select {
   background: color-mix(in srgb, hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade))) 55%, var(--surface));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.6);
   border-left: 3px dashed hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+/* #3 候选(可能学)试排块:与必修块同一套色块样式,右上角加小角块标记(块自带 overflow:hidden,
+   角块贴角不会溢出圆角),与右栏列表候选行的角块视觉语言一致。 */
+.tt2__block--cart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 12px 12px 0;
+  border-color: transparent hsl(var(--hue) calc(var(--sat) + 18%) calc(var(--edge-l) + var(--shade) - 4%)) transparent transparent;
+  pointer-events: none;
 }
 
 /* 第一行：component 角标 + 课号 —— 45 分钟块内也必须完整可读，最优先保留、不换行不收缩。 */
@@ -2750,11 +2898,26 @@ select {
   border: 1px solid var(--line);
   /* accent bar on the right edge (matches the 信息 page tiles) */
   border-right: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  /* #5 选中态整卡变色的流畅过渡。 */
+  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
 }
 
+/* #5 必定学选中 → 整卡吃满该课色调(强度对齐导航 tab 选中的「整块变色」),配 brand 描边。 */
 .cc--committed {
+  background: hsl(var(--hue) calc(var(--sat) + 14%) calc(var(--fill-l) + var(--shade) - 5%));
   box-shadow: inset 0 0 0 1.5px var(--brand);
   border-color: var(--brand);
+  border-right-color: hsl(var(--hue) calc(var(--sat) + 14%) calc(var(--edge-l) + var(--shade)));
+}
+
+/* #5 可能学选中 → 同色调但更淡(半透明版):色块与 surface 调和,一眼看出「还没定」。 */
+.cc--cart {
+  background: color-mix(
+    in srgb,
+    hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade))) 55%,
+    var(--surface)
+  );
+  border-color: color-mix(in srgb, hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade))) 55%, var(--line));
 }
 
 .cc--taken {
@@ -2790,7 +2953,7 @@ select {
   font-variant-numeric: tabular-nums;
 }
 
-/* Top-right status tags (缺先修 / 看先修 / 时间冲突 / 待定 / 需换排法 / 已修替代课):
+/* Top-right status tags (缺先修 / 看先修 / 时间冲突 / 待定 / 时间可能冲突 / 已修替代课):
    a plain rounded-rectangle chip with a wash background. */
 .cc__tags {
   margin-left: auto;

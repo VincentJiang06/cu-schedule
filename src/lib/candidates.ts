@@ -3,6 +3,13 @@ import type { RequirementStatus } from './types.ts'
 import { comboMeetings, courseCombos, meetingsClash, type Plan, type Prefs } from './schedule.ts'
 import type { Course, Meeting } from './types.ts'
 
+/**
+ * 'open'      — 至少一种 section 组合能塞进「当前选中的排法」。
+ * 'rearrange' — 塞不进当前排法，但能塞进已选课的其他某个可行排法(UI 标「时间可能冲突」)。
+ * 'conflict'  — 该课的所有 section 组合对已选课的所有可行排法(generatePlans 枚举到的全部,
+ *               上限 MAX_PLANS)都无法共存,才判死「时间冲突」。
+ * 'tba'       — 没有任何带时间的组合(时间待定)。
+ */
 export type CandidateStatus = 'open' | 'rearrange' | 'conflict' | 'tba'
 
 export type Candidate = {
@@ -28,8 +35,6 @@ export type CandidateSummary = {
 
 export type CandidateResult = { rows: Candidate[]; summary: CandidateSummary }
 
-const MAX_ALTERNATES = 5
-
 function planMeetings(plan: Plan): Meeting[] {
   return plan.entries.flatMap((entry) => entry.section.meetings)
 }
@@ -46,9 +51,11 @@ export function evaluateCandidates(params: {
   const committedSet = new Set(params.committed)
   const selected = params.plans[params.selectedPlanIndex] ?? null
   const selectedMeetings = selected ? planMeetings(selected) : []
+  // 「冲突」的判定基准是已选课的**全部**可行排法(不再截断到前几个):候选课只要能与其中
+  // 任何一个共存就不算死冲突,只算「时间可能冲突」(rearrange)。generatePlans 本身已按
+  // MAX_PLANS 枚举了所有 section 组合下的可行排法(封顶 12 个,与课表页可选的排法一致)。
   const alternates = params.plans
     .filter((plan) => plan.id !== selected?.id)
-    .slice(0, MAX_ALTERNATES)
     .map(planMeetings)
 
   const rows: Candidate[] = []

@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react'
+import { Fragment, useMemo, type PointerEvent as ReactPointerEvent } from 'react'
 import type { CandidateStatus } from '../lib/candidates.ts'
 import { courseColor } from '../lib/color.ts'
 import type { Offering } from '../lib/data.ts'
@@ -58,7 +58,8 @@ function flagFor(status: CandidateStatus | undefined, isBarred: boolean): CardFl
   if (isBarred) return { kind: 'blocked', tone: 'bad', text: '已修替代课' }
   if (status === 'conflict') return { kind: 'blocked', tone: 'bad', text: '时间冲突' }
   if (status === 'tba') return { kind: 'blocked', tone: 'mute', text: '时间待定' }
-  if (status === 'rearrange') return { kind: 'neutral', tone: 'warn', text: '需换排法' }
+  // rearrange: 塞不进当前排法,但换一种可行排法就能共存 —— 中性提示,不禁用。
+  if (status === 'rearrange') return { kind: 'neutral', tone: 'warn', text: '时间可能冲突' }
   return null
 }
 
@@ -88,6 +89,7 @@ export function SearchResults({
   onTaken,
   onCart,
   onOpenDetail,
+  onCardPointerDown,
 }: {
   offerings: Offering[]
   statusByCode: Map<string, CandidateStatus>
@@ -115,6 +117,8 @@ export function SearchResults({
   onCart: (code: string) => void
   /** Open the course-detail popup for a course. */
   onOpenDetail: (course: Course) => void
+  /** 拖拽起点(可选):按住课程卡拖到右侧「必定学 / 可能学」目标区,由 App 统一实现。 */
+  onCardPointerDown?: (course: Course, event: ReactPointerEvent<HTMLElement>) => void
 }) {
   // Precompute the set of courses whose LEC can fit the committed timetable, so the
   // 符合时间表(仅LEC) toggle never re-walks sections on every keystroke — it only
@@ -265,14 +269,14 @@ export function SearchResults({
                       const isCart = cartSet.has(course.key)
                       const isBarred = barredKeys.has(course.key)
                       // 统一「不可选」判定:已修互斥课 / 时间冲突 / 时间待定 → 硬挡(灰化 + 禁用马上学);
-                      // 换排法 → 中性提示但不禁用;open 保持醒目可点。
+                      // 时间可能冲突(rearrange) → 中性提示但不禁用;open 保持醒目可点。
                       const flag = flagFor(status, isBarred)
                       const blocked = flag?.kind === 'blocked'
                       // 本专业地位:选了主修才有(map 命中 = 必修/选修,未命中 = 自由选修);未选主修则不标。
                       const standing = standingByKey
                         ? (standingByKey.get(course.key) ?? FREE_STANDING)
                         : null
-                      // 右上角角标:缺先修 / 看先修 + 时间类提示(冲突/待定/换排法/已修替代课),特殊切角格式。
+                      // 右上角角标:缺先修 / 看先修 + 时间类提示(冲突/待定/时间可能冲突/已修替代课),特殊切角格式。
                       const tags: Array<{ tone: 'bad' | 'warn' | 'mute'; text: string; title: string }> = []
                       if (prereq?.status === 'missing') {
                         tags.push({ tone: 'bad', text: '缺先修', title: `先修未满足：${prereq.text}` })
@@ -284,9 +288,12 @@ export function SearchResults({
                       }
                       return (
                         <article
-                          className={`cc${isCommitted ? ' cc--committed' : ''}${isTaken ? ' cc--taken' : ''}${blocked ? ' cc--blocked' : ''}`}
+                          className={`cc${isCommitted ? ' cc--committed' : ''}${isCart ? ' cc--cart' : ''}${isTaken ? ' cc--taken' : ''}${blocked ? ' cc--blocked' : ''}`}
                           key={`${course.code}-${term.termOrder}`}
                           style={courseColor(course.subject)}
+                          onPointerDown={
+                            onCardPointerDown ? (event) => onCardPointerDown(course, event) : undefined
+                          }
                         >
                           <div
                             className="cc__info"

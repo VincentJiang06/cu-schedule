@@ -1,6 +1,6 @@
 import { subjectPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
-import { downloadBlob, slugTerm } from './exportImage.ts'
+import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
 
 /**
@@ -109,7 +109,12 @@ function paintBackground(ctx: CanvasRenderingContext2D): void {
 }
 
 /** Draw the timetable (plan A) into the lower panel. */
-function paintSchedule(ctx: CanvasRenderingContext2D, plan: Plan, termName: string): void {
+function paintSchedule(
+  ctx: CanvasRenderingContext2D,
+  plan: Plan,
+  termName: string,
+  paint: PaintFn,
+): void {
   const raw = blocksOf(plan)
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
@@ -189,18 +194,18 @@ function paintSchedule(ctx: CanvasRenderingContext2D, plan: Plan, termName: stri
       const w = laneW - 4
       const h = yOf(shownEnd) - yOf(block.start) - 4
       if (h <= 0 || w <= 0) continue
-      const paint = subjectPaint(block.subject)
+      const tint = paint(block.code, block.subject)
 
       roundRect(ctx, x, y, w, h, 10)
-      ctx.fillStyle = paint.fill
+      ctx.fillStyle = tint.fill
       ctx.fill()
-      ctx.fillStyle = paint.text
+      ctx.fillStyle = tint.text
       ctx.fillRect(x, y, 5, h)
 
       ctx.save()
       roundRect(ctx, x, y, w, h, 10)
       ctx.clip()
-      ctx.fillStyle = paint.text
+      ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 14
@@ -242,7 +247,11 @@ function freshCanvas(): { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext
  * Produce two wallpapers and download both: the plain indigo background, and the same
  * background with the timetable in the lower panel. Returns a short summary note.
  */
-export async function exportWallpaper(plan: Plan, termName: string): Promise<string> {
+export async function exportWallpaper(
+  plan: Plan,
+  termName: string,
+  paint: PaintFn = (_code, subject) => subjectPaint(subject),
+): Promise<string> {
   const slug = slugTerm(termName)
 
   // 1) Plain background.
@@ -253,7 +262,7 @@ export async function exportWallpaper(plan: Plan, termName: string): Promise<str
   // 2) Background + schedule.
   const withSchedule = freshCanvas()
   paintBackground(withSchedule.ctx)
-  paintSchedule(withSchedule.ctx, plan, termName)
+  paintSchedule(withSchedule.ctx, plan, termName, paint)
   downloadBlob(await canvasToPng(withSchedule.canvas), `cu-schedule-壁纸-${slug}.png`)
 
   return '已下载两张壁纸（纯背景 + 带课表），iPhone 比例 1206×2622'

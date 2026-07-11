@@ -1,3 +1,4 @@
+import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import type { Pins } from '../lib/schedule.ts'
@@ -123,10 +124,15 @@ export function CommittedList({
   termOrdersByKey,
   currentTermOrder,
   emptyHint,
+  cartCodes,
+  colorFor,
+  showTermBadge = true,
+  onRowPointerDown,
 }: {
   codes: string[]
   byCode: Map<string, Course>
-  onRemove: (code: string) => void
+  /** 移除按钮(×)。不传 = 该列表不允许删课(课表页,删课去选课页)。 */
+  onRemove?: (code: string) => void
   /** When provided, components render as pinnable T01/T02-style chips (课表 page). */
   pins?: Pins
   onPin?: (code: string, component: string, sectionId: string) => void
@@ -136,31 +142,53 @@ export function CommittedList({
   currentTermOrder: number
   /** Placeholder line when the list is empty. */
   emptyHint?: string
+  /** 候选(可能学)课程,渲染在 codes 之后,带右上角小角块标记;不参与 pin 选时段。 */
+  cartCodes?: string[]
+  /** 每行的配色来源。默认按学科 hash(courseColor);课表页传 colorForCode,与大课表一致。 */
+  colorFor?: (code: string) => CSSProperties
+  /** 「上学期/下学期」徽标开关。课表页关掉(学期语境已经确定,徽标是噪音)。 */
+  showTermBadge?: boolean
+  /** 拖拽起点(可选,选课页):按住整行拖到「必定学 / 可能学」目标区或拖出移除。 */
+  onRowPointerDown?: (code: string, isCart: boolean, event: ReactPointerEvent<HTMLElement>) => void
 }) {
   const interactive = Boolean(onPin)
+  const rows: Array<{ code: string; isCart: boolean }> = [
+    ...codes.map((code) => ({ code, isCart: false })),
+    ...(cartCodes ?? []).map((code) => ({ code, isCart: true })),
+  ]
 
   return (
     <div className="cl">
-      {codes.length === 0 ? (
+      {rows.length === 0 ? (
         <p className="cl__empty empty-hint">{emptyHint ?? '还没有课程。在中间的课程列表点「必定学」来添加。'}</p>
       ) : (
         <ul className="cl__rows">
-          {codes.map((code) => {
+          {rows.map(({ code, isCart }) => {
             const course = byCode.get(courseKey(code))
             const orders = termOrdersByKey.get(courseKey(code)) ?? []
             const badge = orders.includes(currentTermOrder) ? currentTermOrder : orders[0]
             return (
-              <li className="cl-row" key={code} style={courseColor(code)}>
+              <li
+                className={isCart ? 'cl-row cl-row--cart' : 'cl-row'}
+                key={code}
+                style={(colorFor ?? courseColor)(code)}
+                title={isCart ? '可能学（候选课程）' : undefined}
+                onPointerDown={
+                  onRowPointerDown ? (event) => onRowPointerDown(code, isCart, event) : undefined
+                }
+              >
                 <div className="cl-row__head">
                   <span className="cl-row__code">{code}</span>
                   {course && <span className="cl-row__units">{course.units}学分</span>}
-                  {badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
-                  <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
-                    ×
-                  </button>
+                  {showTermBadge && badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
+                  {onRemove && (
+                    <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
+                      ×
+                    </button>
+                  )}
                 </div>
                 {course ? (
-                  interactive && onPin ? (
+                  interactive && onPin && !isCart ? (
                     <CoursePicker
                       course={course}
                       pinned={pins?.[code] ?? {}}

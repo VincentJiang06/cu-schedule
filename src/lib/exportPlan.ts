@@ -1,5 +1,5 @@
 import { exportIcs } from './ics.ts'
-import { exportImage, exportPdf } from './exportImage.ts'
+import { exportImage, exportPdf, type PaintFn } from './exportImage.ts'
 import { exportWallpaper } from './exportWallpaper.ts'
 import type { Plan, Pins } from './schedule.ts'
 import { copyShareLink, type SharePayload } from './shareLink.ts'
@@ -14,6 +14,9 @@ export type ExportRequest = {
   termName: string
   /** Current selection, used by the share-link export (ignored by ics / image). */
   share: { termSlug: string | null; committed: string[]; taken: string[]; pins: Pins }
+  /** Per-course canvas tint. App passes the timetable-palette painter so PNG/PDF/壁纸
+   * carry the same colors as the on-screen timetable; omitted (ShareView) = subject colors. */
+  paint?: PaintFn
 }
 
 export type ExportResult = { ok: true; note: string } | { ok: false; reason: string }
@@ -34,15 +37,15 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
         return { ok: true, note: `已下载 ${filename}（排法 A）` }
       }
       case 'image': {
-        const filename = await exportImage(request.planA, request.planB, request.termName)
+        const filename = await exportImage(request.planA, request.planB, request.termName, request.paint)
         return { ok: true, note: `已下载 ${filename}（A / B 对比）` }
       }
       case 'pdf': {
-        const filename = await exportPdf(request.planA, request.planB, request.termName)
+        const filename = await exportPdf(request.planA, request.planB, request.termName, request.paint)
         return { ok: true, note: `已下载 ${filename}（A / B 对比表格）` }
       }
       case 'wallpaper': {
-        const note = await exportWallpaper(request.planA, request.termName)
+        const note = await exportWallpaper(request.planA, request.termName, request.paint)
         return { ok: true, note }
       }
       case 'link': {

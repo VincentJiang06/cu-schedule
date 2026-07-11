@@ -1,6 +1,11 @@
-import { subjectPaint } from './color.ts'
+import { subjectPaint, type CanvasPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { hhmm } from './time.ts'
+
+/** Resolve a block's canvas tint. Defaults to the subject-hash colors; App passes the
+ * timetable-palette painter so exports carry exactly the on-screen timetable colors. */
+export type PaintFn = (code: string, subject: string) => CanvasPaint
+const defaultPaint: PaintFn = (_code, subject) => subjectPaint(subject)
 
 /**
  * Hand-drawn PNG export of the A / B timetable comparison. No html2canvas or any
@@ -69,7 +74,13 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath()
 }
 
-function draw(ctx: CanvasRenderingContext2D, planA: Plan, planB: Plan | null, termName: string): void {
+function draw(
+  ctx: CanvasRenderingContext2D,
+  planA: Plan,
+  planB: Plan | null,
+  termName: string,
+  paint: PaintFn,
+): void {
   const rawA = blocksOf(planA)
   const rawB = blocksOf(planB)
   const all = [...rawA, ...rawB]
@@ -163,22 +174,22 @@ function draw(ctx: CanvasRenderingContext2D, planA: Plan, planB: Plan | null, te
       const w = laneW - 3
       const h = yOf(block.end) - yOf(block.start) - 2
       if (h <= 0 || w <= 0) continue
-      const paint = subjectPaint(block.subject)
+      const tint = paint(block.code, block.subject)
 
       roundRect(ctx, x, y, w, h, 4)
-      ctx.fillStyle = paint.fill
+      ctx.fillStyle = tint.fill
       ctx.fill()
-      ctx.strokeStyle = paint.edge
+      ctx.strokeStyle = tint.edge
       ctx.lineWidth = 1
       ctx.stroke()
       // left accent bar
-      ctx.fillStyle = paint.text
+      ctx.fillStyle = tint.text
       ctx.fillRect(x, y, 3, h)
 
       ctx.save()
       roundRect(ctx, x, y, w, h, 4)
       ctx.clip()
-      ctx.fillStyle = paint.text
+      ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 7
@@ -234,20 +245,30 @@ export function downloadBlob(blob: Blob, filename: string): void {
 }
 
 /** Draw the A / B comparison onto a fresh 2× canvas (shared by PNG and PDF exports). */
-function renderComparison(planA: Plan, planB: Plan | null, termName: string): HTMLCanvasElement {
+function renderComparison(
+  planA: Plan,
+  planB: Plan | null,
+  termName: string,
+  paint: PaintFn,
+): HTMLCanvasElement {
   const canvas = document.createElement('canvas')
   canvas.width = W * SCALE
   canvas.height = H * SCALE
   const ctx = canvas.getContext('2d')
   if (!ctx) throw new Error('无法创建画布')
   ctx.scale(SCALE, SCALE)
-  draw(ctx, planA, planB, termName)
+  draw(ctx, planA, planB, termName, paint)
   return canvas
 }
 
 /** Render the A / B comparison to a 2× PNG, trigger a download, and return the file name. */
-export async function exportImage(planA: Plan, planB: Plan | null, termName: string): Promise<string> {
-  const canvas = renderComparison(planA, planB, termName)
+export async function exportImage(
+  planA: Plan,
+  planB: Plan | null,
+  termName: string,
+  paint: PaintFn = defaultPaint,
+): Promise<string> {
+  const canvas = renderComparison(planA, planB, termName, paint)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
   if (!blob) throw new Error('生成图片失败')
   const filename = `cu-schedule-${slugTerm(termName)}.png`
@@ -261,8 +282,13 @@ export async function exportImage(planA: Plan, planB: Plan | null, termName: str
  * hand-assembled PDF — the standard dependency-free trick. The page is A4 landscape,
  * with the image scaled to fit its aspect ratio.
  */
-export async function exportPdf(planA: Plan, planB: Plan | null, termName: string): Promise<string> {
-  const canvas = renderComparison(planA, planB, termName)
+export async function exportPdf(
+  planA: Plan,
+  planB: Plan | null,
+  termName: string,
+  paint: PaintFn = defaultPaint,
+): Promise<string> {
+  const canvas = renderComparison(planA, planB, termName, paint)
   const dataUrl = canvas.toDataURL('image/jpeg', 0.92)
   const jpeg = base64ToBytes(dataUrl.slice(dataUrl.indexOf(',') + 1))
 

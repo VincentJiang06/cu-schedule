@@ -53,21 +53,31 @@ export function courseColor(subjectOrCode: string): CSSProperties {
   } as CSSProperties
 }
 
+/** Concrete hsl() strings for canvas rendering (fill / edge / text of one block). */
+export type CanvasPaint = { fill: string; edge: string; text: string }
+
 /**
- * The same subject tint resolved to concrete `hsl()` strings for canvas rendering.
- * A `<canvas>` cannot read the `--hue`/`--shade`/`--sat`/… custom properties that
- * the DOM blocks rely on, so this mirrors the **light theme** values from styles.css
- * (`--sat: 38%`, `--fill-l: 93%`, `--edge-l: 54%`, `--text-l: 29%`) plus the same
- * per-subject shade offset, keeping the exported PNG consistent with the on-screen
- * light-mode timetable.
+ * Resolve one hue (+ optional shade offset) into the light-theme block tint used by
+ * the canvas exporters — mirrors styles.css light values (`--sat: 38%`,
+ * `--fill-l: 93%`, `--edge-l: 54%`, `--text-l: 29%`). Shared by subjectPaint (subject
+ * hash colors) and the timetable-palette painter App builds for exports, so the
+ * exported PNG/PDF/壁纸 carries exactly the on-screen timetable colors.
  */
-export function subjectPaint(subjectOrCode: string): { fill: string; edge: string; text: string } {
-  const hue = subjectHue(subjectOrCode)
-  const shade = subjectShade(subjectOrCode) * SHADE_STEP
+export function huePaint(hue: number, shade = 0): CanvasPaint {
   const sat = 38
   return {
     fill: `hsl(${hue} ${sat}% ${93 + shade}%)`,
     edge: `hsl(${hue} ${sat}% ${54 + shade}%)`,
     text: `hsl(${hue} ${sat}% ${29 + shade}%)`,
   }
+}
+
+/**
+ * The same subject tint resolved to concrete `hsl()` strings for canvas rendering.
+ * A `<canvas>` cannot read the `--hue`/`--shade`/`--sat`/… custom properties that
+ * the DOM blocks rely on, so this mirrors the **light theme** values from styles.css
+ * plus the same per-subject shade offset (see huePaint).
+ */
+export function subjectPaint(subjectOrCode: string): CanvasPaint {
+  return huePaint(subjectHue(subjectOrCode), subjectShade(subjectOrCode) * SHADE_STEP)
 }
