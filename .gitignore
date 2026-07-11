@@ -7,3 +7,6 @@ __pycache__/
 .DS_Store
 .vite/
 *.tsbuildinfo
+
+# 一次性审计产物(生成物,不入库)
+req-audit.jsonl
