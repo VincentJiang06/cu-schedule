@@ -229,7 +229,10 @@ export function buildScheduleHtml(
   .block__code { font-weight: 750; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__meta { opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  footer { margin-top: 14px; font-size: 11px; color: #8b93a4; text-align: right; }
+  footer { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+  .foot-byline { font-size: 12.5px; font-weight: 750; color: #141a2b; text-decoration: none; }
+  .foot-byline:hover { text-decoration: underline; }
+  .foot-note { margin: 0; font-size: 10.5px; color: #8b93a4; }
   @media (prefers-color-scheme: dark) {
     body { background: #0b0e16; color: #eceff6; }
     .sub { color: #7a8397; }
@@ -239,7 +242,8 @@ export function buildScheduleHtml(
     .grid-line { background: #242b3b; }
     .grid-line--half { background: #1c2230; }
     .axis__tick { color: #7a8397; }
-    footer { color: #7a8397; }
+    .foot-byline { color: #eceff6; }
+    .foot-note { color: #7a8397; }
   }
 </style>
 </head>
@@ -256,7 +260,10 @@ export function buildScheduleHtml(
         ${gridLines}
       </div>
     </div>
-    <footer>数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)</footer>
+    <footer>
+      <a class="foot-byline" href="https://github.com/VincentJiang06/cu-schedule" rel="noreferrer" target="_blank">CUS by VinceJiang</a>
+      <p class="foot-note">数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)</p>
+    </footer>
   </div>
 </body>
 </html>

@@ -109,7 +109,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
   ctx.fillText(`CU Schedule · ${termName} 课表`, 28, 44)
 
   const gridTop = 108
-  const gridBottom = H - 40
+  const gridBottom = H - 48
   const gridLeft = 28 + 60
   const gridRight = W - 28
   const gridW = gridRight - gridLeft
@@ -210,15 +210,18 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
     drawColumn(raw.filter((block) => block.dayIndex === day), gridLeft + (day - 1) * colW)
   }
 
-  // AGPL / source note, bottom-right.
-  ctx.fillStyle = muted
-  ctx.font = '10px system-ui, -apple-system, sans-serif'
+  // #里程碑1:角标署名统一——主行「CUS by VinceJiang」显眼，AGPL/数据来源致谢降到极小字。
   ctx.textAlign = 'right'
   ctx.textBaseline = 'alphabetic'
+  ctx.fillStyle = ink
+  ctx.font = '700 13px system-ui, -apple-system, sans-serif'
+  ctx.fillText('CUS by VinceJiang', gridRight, H - 26)
+  ctx.fillStyle = muted
+  ctx.font = '9px system-ui, -apple-system, sans-serif'
   ctx.fillText(
     '数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)',
     gridRight,
-    H - 16,
+    H - 12,
   )
 }
 

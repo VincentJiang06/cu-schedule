@@ -193,11 +193,21 @@ export function ShareView({ id }: { id: string }) {
       </section>
 
       <footer className="sv__foot">
-        课程和项目信息以 CUSIS 为准 · 抓取管线{' '}
-        <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
-          EagleZhen
-        </a>{' '}
-        (AGPL-3.0)
+        <a
+          className="sv__foot-byline"
+          href="https://github.com/VincentJiang06/cu-schedule"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          CUS by VinceJiang
+        </a>
+        <p className="sv__foot-note">
+          课程和项目信息以 CUSIS 为准 · 抓取管线{' '}
+          <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
+            EagleZhen
+          </a>{' '}
+          (AGPL-3.0)
+        </p>
       </footer>
     </div>
   )

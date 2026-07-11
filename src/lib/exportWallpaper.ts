@@ -117,6 +117,12 @@ function paintBackground(ctx: CanvasRenderingContext2D): void {
   glow.addColorStop(1, 'rgba(99, 102, 241, 0)')
   ctx.fillStyle = glow
   ctx.fillRect(0, 0, W, H)
+
+  // #里程碑1:纯背景款也留一处极淡的署名——不抢锁屏視觉，但每张导出图都带 CUS by VinceJiang。
+  ctx.textAlign = 'center'
+  ctx.fillStyle = 'rgba(199, 210, 254, 0.28)'
+  ctx.font = '600 22px system-ui, -apple-system, sans-serif'
+  ctx.fillText('CUS by VinceJiang', W / 2, H - 60)
 }
 
 /** Draw the timetable (plan A) into the lower panel. */
@@ -244,10 +250,13 @@ function paintSchedule(
     }
   }
 
-  // Footer note.
-  ctx.fillStyle = 'rgba(165, 180, 252, 0.55)'
-  ctx.font = '400 22px system-ui, -apple-system, sans-serif'
+  // #里程碑1:角标署名统一——主行「CUS by VinceJiang」更亮更重，数据来源致谢降一档做小字。
   ctx.textAlign = 'center'
+  ctx.fillStyle = 'rgba(224, 231, 255, 0.92)'
+  ctx.font = '700 26px system-ui, -apple-system, sans-serif'
+  ctx.fillText('CUS by VinceJiang', W / 2, H - 122)
+  ctx.fillStyle = 'rgba(165, 180, 252, 0.55)'
+  ctx.font = '400 20px system-ui, -apple-system, sans-serif'
   ctx.fillText('数据来自 CUHK 公开课程目录 · 名额以 CUSIS 为准', W / 2, H - 90)
 }
 
