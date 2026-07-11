@@ -333,6 +333,122 @@ const bootPins = live?.pins ?? shared?.pins ?? saved?.pins ?? {}
 const bootCart = saved?.cart ?? []
 const bootPage: Page = live?.page ?? 'info'
 
+// ---- #里程碑4 排法横条:隐藏原生滚动条 + 按住拖动(pan) + 边缘自动滚动 ----------------------
+// 6px 阈值区分 tap(触发选中)与 drag(平移,不触发选中)——与选课页课程卡的拖拽判定同一手法
+// (见 App 组件内 dragMoveImplRef 附近的 6px 阈值 + squelchClick 吞点击)，这里是独立的一份
+// 实现(纯 DOM/ref，不依赖任何组件 state)，供排法横条与导出页的单选横条共用。
+const PLAN_PAN_THRESHOLD = 6
+const PLAN_EDGE_ZONE = 36
+const PLAN_EDGE_SPEED = 11
+
+function usePlanStripPan() {
+  const railRef = useRef<HTMLDivElement | null>(null)
+  const panRef = useRef<{ pointerId: number; startX: number; startScrollLeft: number; moved: boolean } | null>(null)
+  const autoScrollFrame = useRef<number | null>(null)
+  const pointerXRef = useRef(0)
+
+  // 拖拽成立后吞掉紧随其后的 click，避免松手时误触发卡片的「单独查看该排法」选中。
+  const squelchClick = useCallback((event: MouseEvent) => {
+    event.stopPropagation()
+    event.preventDefault()
+    window.removeEventListener('click', squelchClick, true)
+  }, [])
+
+  const stopAutoScroll = useCallback(() => {
+    if (autoScrollFrame.current != null) {
+      cancelAnimationFrame(autoScrollFrame.current)
+      autoScrollFrame.current = null
+    }
+  }, [])
+
+  // 拖动到横条左/右边缘附近时自动继续滚动，越靠边缘滚动越快；离开边缘区或松手就停。
+  const runAutoScroll = useCallback(() => {
+    const rail = railRef.current
+    if (!rail || !panRef.current) {
+      autoScrollFrame.current = null
+      return
+    }
+    const rect = rail.getBoundingClientRect()
+    const x = pointerXRef.current
+    let dx = 0
+    if (x < rect.left + PLAN_EDGE_ZONE) {
+      dx = -PLAN_EDGE_SPEED * Math.min(1, (rect.left + PLAN_EDGE_ZONE - x) / PLAN_EDGE_ZONE)
+    } else if (x > rect.right - PLAN_EDGE_ZONE) {
+      dx = PLAN_EDGE_SPEED * Math.min(1, (x - (rect.right - PLAN_EDGE_ZONE)) / PLAN_EDGE_ZONE)
+    }
+    if (dx !== 0) {
+      rail.scrollLeft += dx
+      autoScrollFrame.current = requestAnimationFrame(runAutoScroll)
+    } else {
+      autoScrollFrame.current = null
+    }
+  }, [])
+
+  const onMove = useCallback(
+    (event: PointerEvent) => {
+      const pan = panRef.current
+      const rail = railRef.current
+      if (!pan || !rail || event.pointerId !== pan.pointerId) return
+      const dx = event.clientX - pan.startX
+      if (!pan.moved && Math.abs(dx) > PLAN_PAN_THRESHOLD) {
+        pan.moved = true
+        window.addEventListener('click', squelchClick, true)
+      }
+      if (pan.moved) {
+        event.preventDefault()
+        rail.scrollLeft = pan.startScrollLeft - dx
+        pointerXRef.current = event.clientX
+        if (autoScrollFrame.current == null) autoScrollFrame.current = requestAnimationFrame(runAutoScroll)
+      }
+    },
+    [runAutoScroll, squelchClick],
+  )
+
+  const onUp = useCallback(
+    (event: PointerEvent) => {
+      if (!panRef.current || event.pointerId !== panRef.current.pointerId) return
+      panRef.current = null
+      stopAutoScroll()
+      window.removeEventListener('pointermove', onMove)
+      window.removeEventListener('pointerup', onUp)
+      window.removeEventListener('pointercancel', onUp)
+    },
+    [onMove, stopAutoScroll],
+  )
+
+  const onPointerDown = useCallback(
+    (event: ReactPointerEvent<HTMLDivElement>) => {
+      if (event.pointerType === 'mouse' && event.button !== 0) return
+      const rail = railRef.current
+      if (!rail) return
+      panRef.current = { pointerId: event.pointerId, startX: event.clientX, startScrollLeft: rail.scrollLeft, moved: false }
+      pointerXRef.current = event.clientX
+      window.addEventListener('pointermove', onMove)
+      window.addEventListener('pointerup', onUp)
+      window.addEventListener('pointercancel', onUp)
+    },
+    [onMove, onUp],
+  )
+
+  return { railRef, onPointerDown }
+}
+
+/** 排法横条 / 导出页单选横条共用的滚动容器:隐藏滚动条(CSS)、支持按住拖动平移、选中项
+ * 变化时自动 scrollIntoView 到可见区。子项需要各自带 data-plan-index 供这里定位。 */
+function PlanStripRail({ selectedIndex, children }: { selectedIndex: number | null; children: ReactNode }) {
+  const { railRef, onPointerDown } = usePlanStripPan()
+  useEffect(() => {
+    if (selectedIndex == null) return
+    const card = railRef.current?.querySelector<HTMLElement>(`[data-plan-index="${selectedIndex}"]`)
+    card?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+  }, [selectedIndex])
+  return (
+    <div className="plan-strip__rail" onPointerDown={onPointerDown} ref={railRef}>
+      {children}
+    </div>
+  )
+}
+
 export default function App() {
   const [theme, setTheme] = useState<Theme>(loadTheme)
   const [terms, setTerms] = useState<TermRef[]>([])
@@ -798,6 +914,15 @@ export default function App() {
   // 大课表实际展示的排法:单方案模式 → 只有被点的那个;否则 A / B 对比。
   const shownPlanA = soloActive ? plans[soloPlanIndex!] : planA
   const shownPlanB = soloActive ? null : planB
+
+  // #里程碑4(#11):课表页当前选中的排法(单方案模式的 soloPlanIndex，或对比模式下的 A)
+  // 同步到导出页的 selectedExportPlanIndex——课表选了排法 5,进导出页时默认就是排法 5。
+  // 单向同步:只在"课表这边的选择"变化时推一次,导出页自己再挑(exportPlanPicker 直接
+  // setSelectedExportPlanIndex)不会被这里覆盖回去,因为这个 effect 不依赖它。
+  useEffect(() => {
+    const source = soloActive ? soloPlanIndex : planAIndex
+    if (source !== null && source < plans.length) setSelectedExportPlanIndex(source)
+  }, [planAIndex, plans.length, soloActive, soloPlanIndex])
 
   // #5 append-only 每课配色：课号（按 courseKey 归一）→ 调色盘槽位。committed 变化时只给
   // 尚未登记的 key 追加 map.size 作为槽位，已有 key 永不改动，故新增课不会重排既有课的颜色。
@@ -1762,15 +1887,17 @@ export default function App() {
 
   // 导出页:顶部「课表导出方案」——从可行排法里只选一个（单选，非 A / B）作为要导出的确定
   // 方案。视觉复用课表页排法横条的卡片样式（.plan-strip__rail / .plan-card），选中态直接
-  // 借用既有的 .plan-card--solo 高亮，不需要额外的 A / B 拾取按钮。
+  // 借用既有的 .plan-card--solo 高亮，不需要额外的 A / B 拾取按钮。#里程碑4:同样套
+  // PlanStripRail(去滚动条 + 按住拖动 + 选中项自动滚入可见区)。
   const exportPlanPicker =
     plans.length > 0 ? (
-      <div className="plan-strip__rail">
+      <PlanStripRail selectedIndex={selectedExportPlanIndex}>
         {plans.map((plan, index) => {
           const isSelected = index === selectedExportPlanIndex
           return (
             <div
               className={`plan-card${isSelected ? ' plan-card--solo' : ''}`}
+              data-plan-index={index}
               key={plan.id}
               role="button"
               tabIndex={0}
@@ -1797,22 +1924,27 @@ export default function App() {
             </div>
           )
         })}
-      </div>
+      </PlanStripRail>
     ) : null
 
   // #7 排法横条（课表页右主区顶部，可横向滚动）：每张扁平小卡左侧显示 排法N · 天数 · 学分，
   // 右侧两个方形小按钮「A」「B」分别设为该排法（选中态高亮）。#12 点卡片本体 → 单方案模式
   //（只看这一个排法,退出 A/B 对比）；点任意 A / B 按钮 → 回到对比模式。
+  // #里程碑4(#10):isA/isB 都额外 && !soloActive——单方案模式下不再显示任何 A/B 徽标/
+  // 特殊样式(哪怕某张卡片下标恰好等于 planAIndex/planBIndex)，只有被选中的单排法本身
+  // 高亮(plan-card--solo)。点 A / B 按钮会先 setSoloPlanIndex(null) 退出单方案模式，
+  // 回到对比态后 isA/isB 才重新按 !soloActive 生效。
   const planStrip =
     plans.length > 0 ? (
-      <div className="plan-strip__rail">
+      <PlanStripRail selectedIndex={soloActive ? soloPlanIndex : planAIndex}>
         {shownPlanViews.map(({ plan, index }) => {
-          const isA = index === planAIndex
-          const isB = plans.length >= 2 && index === planBIndex
+          const isA = !soloActive && index === planAIndex
+          const isB = !soloActive && plans.length >= 2 && index === planBIndex
           const isSolo = soloActive && index === soloPlanIndex
           return (
             <div
               className={`plan-card${isA ? ' plan-card--a' : ''}${isB ? ' plan-card--b' : ''}${isSolo ? ' plan-card--solo' : ''}`}
+              data-plan-index={index}
               key={plan.id}
               role="button"
               tabIndex={0}
@@ -1862,7 +1994,7 @@ export default function App() {
             </div>
           )
         })}
-      </div>
+      </PlanStripRail>
     ) : null
 
   // 导出方式六卡：图标 + 名称 + 较完整介绍，2 个一行、共 3 行（.export-methods-grid 强制两列）。

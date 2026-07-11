@@ -1588,13 +1588,25 @@ select {
 
 /* ---- #7 排法横条 (plan strip: 横向滚动的所有排法, 各自选为 A / B) ------------ */
 
-/* 扁平横排：每张小卡一行高——左侧 排法N · 天数 · 学分，右侧两个方形 A / B 按钮。 */
+/* 扁平横排：每张小卡一行高——左侧 排法N · 天数 · 学分，右侧两个方形 A / B 按钮。
+   #里程碑4:隐藏原生滚动条(滚动能力保留，靠按住拖动/滚轮/触摸横滑)，鼠标悬停时用
+   grab/grabbing 光标提示"这里能拖"。 */
 .plan-strip__rail {
   display: flex;
   gap: 8px;
   overflow-x: auto;
   padding-bottom: 4px;
-  scrollbar-width: thin;
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.plan-strip__rail::-webkit-scrollbar {
+  display: none;
+}
+
+.plan-strip__rail:active {
+  cursor: grabbing;
 }
 
 .plan-card {
