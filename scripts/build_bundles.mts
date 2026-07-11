@@ -287,6 +287,24 @@ const PROGRAM_YEARS = ['2023', '2024', '2025']
 
 type ProgramCourseRef = { codes?: string[] }
 type ProgramStreamBucket = { stream?: string; from?: string; courses?: ProgramCourseRef[] }
+
+// The faithful hierarchical rebuild of the Major Programme Requirement produced by
+// scripts/parse_programs.py's build_structure(). Passed through verbatim so the
+// frontend can render the scheme's numbered / lettered / prose layers as printed.
+type ProgramCourse = { code: string; alts: string[] }
+type SectionNode = {
+  marker: string
+  title: string
+  units: number | null
+  note: string | null
+  courses: ProgramCourse[]
+  children: SectionNode[]
+  /** Set on the top node of an optional post-total segment: 'concentration' for a
+   * "Concentration Area:" block, 'stream' for a "Streams:" block; absent on every other
+   * node. Passed through verbatim. */
+  kind?: 'concentration' | 'stream'
+}
+
 type ProgramFile = {
   program_en: string
   program_chi: string
@@ -301,6 +319,7 @@ type ProgramFile = {
     elective?: ProgramCourseRef[]
     stream_elective?: ProgramStreamBucket[]
   }
+  structure?: SectionNode[]
 }
 
 type BuiltProgram = {
@@ -316,6 +335,7 @@ type BuiltProgram = {
   elective: string[]
   streams: Array<{ name: string; courses: string[] }>
   all: string[]
+  structure: SectionNode[]
   faculties?: string[]
 }
 
@@ -353,6 +373,7 @@ function buildProgram(p: ProgramFile): BuiltProgram {
     elective: flatCodes(b.elective ?? []),
     streams,
     all: p.all_course_codes ?? [],
+    structure: p.structure ?? [],
   }
 }
 

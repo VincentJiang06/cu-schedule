@@ -1035,7 +1035,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Language and Linguistics CHLL3110,",
       "units": null,
       "bucket": "elective",
@@ -1086,6 +1086,550 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 13
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "EDUC2312",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHLL1401",
+          "alts": []
+        },
+        {
+          "code": "CHLL2212",
+          "alts": []
+        },
+        {
+          "code": "CHLL2302",
+          "alts": []
+        },
+        {
+          "code": "CHLL2350",
+          "alts": []
+        },
+        {
+          "code": "CHLL3162",
+          "alts": []
+        },
+        {
+          "code": "CHLT1880",
+          "alts": []
+        },
+        {
+          "code": "CHLT2881",
+          "alts": []
+        },
+        {
+          "code": "CHLT2882",
+          "alts": []
+        },
+        {
+          "code": "CHLT2883",
+          "alts": []
+        },
+        {
+          "code": "CHLT2884",
+          "alts": []
+        },
+        {
+          "code": "CHLT2885",
+          "alts": []
+        }
+      ],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "CLED2530",
+              "alts": []
+            },
+            {
+              "code": "CLED3510",
+              "alts": []
+            },
+            {
+              "code": "CLED4510",
+              "alts": []
+            },
+            {
+              "code": "CLED2640",
+              "alts": []
+            },
+            {
+              "code": "CLED4630",
+              "alts": []
+            },
+            {
+              "code": "CLED4720",
+              "alts": []
+            },
+            {
+              "code": "EDUC2240",
+              "alts": []
+            },
+            {
+              "code": "EDUC3201",
+              "alts": []
+            },
+            {
+              "code": "EDUC3311",
+              "alts": []
+            },
+            {
+              "code": "EDUC4340",
+              "alts": []
+            },
+            {
+              "code": "EDUC4030",
+              "alts": []
+            },
+            {
+              "code": "EDUC4040",
+              "alts": []
+            },
+            {
+              "code": "CLED1030",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": "Any one course chosen from the",
+          "courses": [
+            {
+              "code": "CHLL2121",
+              "alts": []
+            },
+            {
+              "code": "CHLL2131",
+              "alts": []
+            },
+            {
+              "code": "CHLL2403",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Specialty Courses A minimum of 21 units chosen from the following specialty",
+          "units": 21,
+          "note": "courses, with at least one course from category (i) or (ii) and at least one course from category (iii) or (iv)",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHLL3110",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHLL3221",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHLL3310",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3311",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3314",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3315",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3316",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3317",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3321",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3322",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3323",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3324",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3341",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3351",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4310",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4311",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4312",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4313",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4314",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4315",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4320",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4321",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4322",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4330",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4331",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4332",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4340",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4342",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHLL3402",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3404",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3405",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3406",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3407",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3408",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4401",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4402",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4403",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4404",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4405",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4411",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 4,
+          "note": "A minimum of 4 units chosen from the following Language",
+          "courses": [
+            {
+              "code": "CLED2540",
+              "alts": []
+            },
+            {
+              "code": "CLED3540",
+              "alts": []
+            },
+            {
+              "code": "CLED4620",
+              "alts": []
+            },
+            {
+              "code": "CLED4640",
+              "alts": []
+            },
+            {
+              "code": "CLED4660",
+              "alts": []
+            },
+            {
+              "code": "CLED4740",
+              "alts": []
+            },
+            {
+              "code": "CLED4750",
+              "alts": []
+            },
+            {
+              "code": "CLED4760",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 2,
+          "note": "A minimum of 2 units chosen from the following Educational",
+          "courses": [
+            {
+              "code": "EDUC2210",
+              "alts": []
+            },
+            {
+              "code": "EDUC2220",
+              "alts": []
+            },
+            {
+              "code": "EDUC3140",
+              "alts": []
+            },
+            {
+              "code": "EDUC3150",
+              "alts": []
+            },
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "EDUC3260",
+              "alts": []
+            },
+            {
+              "code": "EDUC3270",
+              "alts": []
+            },
+            {
+              "code": "EDUC3280",
+              "alts": []
+            },
+            {
+              "code": "EDUC3290",
+              "alts": []
+            },
+            {
+              "code": "EDUC4110",
+              "alts": []
+            },
+            {
+              "code": "EDUC4131",
+              "alts": []
+            },
+            {
+              "code": "EDUC4320",
+              "alts": []
+            },
+            {
+              "code": "EDUC4330",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CHLL3141",
+          "alts": []
+        },
+        {
+          "code": "CHLL3142",
+          "alts": []
+        },
+        {
+          "code": "CHLL3143",
+          "alts": []
+        },
+        {
+          "code": "CHLL3151",
+          "alts": []
+        },
+        {
+          "code": "CHLL4121",
+          "alts": []
+        },
+        {
+          "code": "CHLL4141",
+          "alts": []
+        },
+        {
+          "code": "CHLL4161",
+          "alts": []
+        },
+        {
+          "code": "CHLL3222",
+          "alts": []
+        },
+        {
+          "code": "CHLL3223",
+          "alts": []
+        },
+        {
+          "code": "CHLL3231",
+          "alts": []
+        },
+        {
+          "code": "CHLL3232",
+          "alts": []
+        },
+        {
+          "code": "CHLL4224",
+          "alts": []
+        },
+        {
+          "code": "CHLL4242",
+          "alts": []
+        },
+        {
+          "code": "CHLL4243",
+          "alts": []
+        },
+        {
+          "code": "CHLL4244",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

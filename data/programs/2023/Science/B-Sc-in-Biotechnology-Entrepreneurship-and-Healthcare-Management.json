@@ -15,6 +15,22 @@
     "BEHM4000",
     "BEHM4001",
     "BEHM4002",
+    "DOTE1030",
+    "DOTE2011",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE4020",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4260",
+    "DSME1030",
+    "DSME2011",
+    "DSME2030",
+    "DSME2040",
+    "DSME4020",
+    "DSME4110",
+    "DSME4220",
+    "DSME4260",
     "FINA2010",
     "FINA3080",
     "GRON3412",
@@ -90,6 +106,23 @@
         "raw": "BEHM4000",
         "codes": [
           "BEHM4000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "DOTE[DSME]1030",
+        "codes": [
+          "DOTE1030",
+          "DSME1030"
+        ],
+        "alt": true,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
         ],
         "alt": false,
         "from": "2. Required Courses: ACCT2111, BEHM4000,"
@@ -209,6 +242,15 @@
         "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
       },
       {
+        "raw": "DOTE[DSME]2040",
+        "codes": [
+          "DOTE2040",
+          "DSME2040"
+        ],
+        "alt": true,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
         "raw": "PHPC3024",
         "codes": [
           "PHPC3024"
@@ -222,6 +264,15 @@
           "SBMS3216"
         ],
         "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "DOTE[DSME]4020",
+        "codes": [
+          "DOTE4020",
+          "DSME4020"
+        ],
+        "alt": true,
         "from": "(b) Healthcare and Biomedicine Analytics"
       },
       {
@@ -276,7 +327,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 11
     },
     {
       "marker": "3.",
@@ -303,7 +354,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 8
     },
     {
       "marker": "4.",
@@ -313,6 +364,212 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 2
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "",
+      "units": 9,
+      "note": "Faculty Package",
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "MEDF1012",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 33,
+      "note": "Required Courses",
+      "courses": [
+        {
+          "code": "ACCT2111",
+          "alts": []
+        },
+        {
+          "code": "BEHM4000",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": [
+            "DSME1030"
+          ]
+        },
+        {
+          "code": "DOTE2011",
+          "alts": []
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "GRON4411",
+          "alts": []
+        },
+        {
+          "code": "MBTE2000",
+          "alts": []
+        },
+        {
+          "code": "PHPC1001",
+          "alts": []
+        },
+        {
+          "code": "PHPC1017",
+          "alts": []
+        },
+        {
+          "code": "PHPC2016",
+          "alts": []
+        },
+        {
+          "code": "SBMS2104",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 17,
+      "note": "Students must choose at least one concentration area by taking at least 17 units of courses from the following",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Biotechnology Entrepreneurship and Innovation Required Courses",
+          "courses": [
+            {
+              "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "LAWS2331",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "MGNT4090",
+              "alts": []
+            }
+          ],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "MBTE3510",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 11,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "DOTE2040",
+                  "alts": [
+                    "DSME2040"
+                  ]
+                },
+                {
+                  "code": "PHPC3024",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3216",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "DOTE4020",
+                  "alts": [
+                    "DSME4020"
+                  ]
+                },
+                {
+                  "code": "GRON3412",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4010",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC2017",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3101",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 6,
+      "note": "Capstone Courses",
+      "courses": [
+        {
+          "code": "BEHM4001",
+          "alts": []
+        },
+        {
+          "code": "BEHM4002",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

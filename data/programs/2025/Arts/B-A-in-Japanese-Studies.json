@@ -1771,7 +1771,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Business and Management",
       "units": null,
       "bucket": "elective",
@@ -1843,7 +1843,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Business and Management",
       "units": null,
       "bucket": "elective",
@@ -1867,6 +1867,527 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 7
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 33,
+          "note": null,
+          "courses": [
+            {
+              "code": "JASP1470",
+              "alts": []
+            },
+            {
+              "code": "JASP4601",
+              "alts": []
+            },
+            {
+              "code": "JASP4602",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 18,
+          "note": "participate in one academic year (not less than eight calendar months) of resident study in Japan and complete Japanese language and Japanese studies courses with prior approval from the Department of Japanese Studies before graduation. With the approval from the Department, students can apply to take the Local Study Scheme (see below) if they have strong justifications or when resident study in Japan is not possible due to unpredictable circumstances such as restrictions on travel due to epidemic outbreaks or limitations of exchange places. Units obtained from Japanese universities will be recognized as up to 18 Major units. Academic results obtained from Japanese universities will not be included in the calculation of the Major GPA. Students who are unable to obtain the required units in Japanese universities should make up the shortfall by taking courses at 4000 and above level for language courses and all levels for non-language courses after their return to this University.",
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": "Students may choose to specialize in one of the streams or not to specialize in any stream. Students not specializing in any stream are required to take 6 units of 2000 or above level courses from",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Non-language/(b) language course as listed below, with at least 3",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "JASP1120",
+              "alts": []
+            },
+            {
+              "code": "JASP1140",
+              "alts": []
+            },
+            {
+              "code": "JASP1160",
+              "alts": []
+            },
+            {
+              "code": "JASP1180",
+              "alts": []
+            },
+            {
+              "code": "JASP1190",
+              "alts": []
+            },
+            {
+              "code": "JASP2100",
+              "alts": []
+            },
+            {
+              "code": "JASP2200",
+              "alts": []
+            },
+            {
+              "code": "JASP2400",
+              "alts": []
+            },
+            {
+              "code": "JASP2520",
+              "alts": []
+            },
+            {
+              "code": "JASP2600",
+              "alts": []
+            },
+            {
+              "code": "JASP2720",
+              "alts": []
+            },
+            {
+              "code": "JASP2820",
+              "alts": []
+            },
+            {
+              "code": "JASP2910",
+              "alts": []
+            },
+            {
+              "code": "JASP2920",
+              "alts": []
+            },
+            {
+              "code": "JASP3110",
+              "alts": []
+            },
+            {
+              "code": "JASP3120",
+              "alts": []
+            },
+            {
+              "code": "JASP3210",
+              "alts": []
+            },
+            {
+              "code": "JASP3430",
+              "alts": []
+            },
+            {
+              "code": "JASP3470",
+              "alts": []
+            },
+            {
+              "code": "JASP3480",
+              "alts": []
+            },
+            {
+              "code": "JASP3500",
+              "alts": []
+            },
+            {
+              "code": "JASP3700",
+              "alts": []
+            },
+            {
+              "code": "JASP3800",
+              "alts": []
+            },
+            {
+              "code": "JASP3900",
+              "alts": []
+            },
+            {
+              "code": "JASP4000",
+              "alts": []
+            },
+            {
+              "code": "JASP4100",
+              "alts": []
+            },
+            {
+              "code": "JASP4110",
+              "alts": []
+            },
+            {
+              "code": "JASP4410",
+              "alts": []
+            },
+            {
+              "code": "ANTH2350",
+              "alts": []
+            },
+            {
+              "code": "HIST3380",
+              "alts": []
+            },
+            {
+              "code": "LING1000",
+              "alts": []
+            },
+            {
+              "code": "MGNT1010",
+              "alts": []
+            },
+            {
+              "code": "MGNT1020",
+              "alts": []
+            },
+            {
+              "code": "MGNT4530",
+              "alts": []
+            },
+            {
+              "code": "SOCI2103",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Language Courses",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "JASP1490",
+              "alts": []
+            },
+            {
+              "code": "JASP2000",
+              "alts": []
+            },
+            {
+              "code": "JASP3180",
+              "alts": []
+            }
+          ],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "JASP2600",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4180",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT1010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT1020",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4390",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4510",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4520",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4530",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ANTH2350",
+                  "alts": []
+                },
+                {
+                  "code": "JASP2520",
+                  "alts": []
+                },
+                {
+                  "code": "JASP2600",
+                  "alts": []
+                },
+                {
+                  "code": "JASP2910",
+                  "alts": []
+                },
+                {
+                  "code": "JASP2920",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3480",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3500",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3700",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3900",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4110",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2103",
+                  "alts": []
+                },
+                {
+                  "code": "JASP1160",
+                  "alts": []
+                },
+                {
+                  "code": "JASP1180",
+                  "alts": []
+                },
+                {
+                  "code": "JASP2400",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3110",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3430",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3470",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4100",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "JASP1120",
+                  "alts": []
+                },
+                {
+                  "code": "JASP3700",
+                  "alts": []
+                },
+                {
+                  "code": "LING1000",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4100",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4390",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4510",
+                  "alts": []
+                },
+                {
+                  "code": "JASP4520",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "JASP3200",
+          "alts": []
+        },
+        {
+          "code": "JASP3310",
+          "alts": []
+        },
+        {
+          "code": "JASP3320",
+          "alts": []
+        },
+        {
+          "code": "JASP3330",
+          "alts": []
+        },
+        {
+          "code": "JASP3340",
+          "alts": []
+        },
+        {
+          "code": "JASP3350",
+          "alts": []
+        },
+        {
+          "code": "JASP3360",
+          "alts": []
+        },
+        {
+          "code": "JASP3380",
+          "alts": []
+        },
+        {
+          "code": "JASP3390",
+          "alts": []
+        },
+        {
+          "code": "JASP3600",
+          "alts": []
+        },
+        {
+          "code": "JASP4350",
+          "alts": []
+        },
+        {
+          "code": "JASP4380",
+          "alts": []
+        },
+        {
+          "code": "JASP4440",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

@@ -72,13 +72,76 @@ tt_dsp_acad_prog.aspx (CUHK)
       "streams": [                                    // 分流/选项的选修池
         { "name": "Stream 1: Embedded Systems", "courses": ["BMEG3111", ...] }
       ],
-      "all": ["ACCT2111", ...]                        // 完整 inventory：study scheme 里出现过的所有课号
+      "all": ["ACCT2111", ...],                       // 完整 inventory：study scheme 里出现过的所有课号
+      "structure": [ /* SectionNode[]，见下节「structure 树」 */ ]
     }
   ]
 }
 ```
 
 **课号约定**：都是纯 8 位 `SUBJ####`。`CENG3430/ESTR3100` 这种「等价课」会**两个都列进去**（修任一门都算命中）。`required`/`elective`/各 `stream.courses` 之间可能有重叠；`all` 是全集但不区分必修/选修。
+
+---
+
+## `structure` 树（培养方案的忠实层级重建）
+
+`structure` 是 Major Programme Requirement 的**忠实层级重建**：镜像日历里编号 / 字母 / 散文各层，让信息页大课表（`ProgramTable`）能按印刷版原样递归渲染。扁平的 `required`/`elective`/`streams` 仍保留供搜索过滤；`structure` 是新的树。
+
+### Schema
+
+```ts
+type SectionNode = {
+  marker: string              // 列表标记："1." | "(a)" | "(i)" | ""（散文拆出的伪子块）
+  title: string               // 分区标题，如 "Faculty Package" / "Stream 2: …"；纯课组为 ""
+  units: number | null        // 本区要求学分；未标注为 null（区间取下限，如 "15-18" → 15）
+  note: string | null         // 散文规则，如 "Choose any one course from the following"；无则 null
+  courses: ProgramCourse[]    // 直接挂在本节点的课程
+  children: SectionNode[]     // 嵌套子节点
+  kind?: 'concentration' | 'stream'   // 仅特殊可选段的顶层节点带；其余节点不带（见下）
+}
+
+type ProgramCourse = {
+  code: string                // 8 位主 key（SUBJ####），与 Course.key 一致，直接 .has() 匹配
+  alts: string[]              // 等价 key（如 ESTR 孪生课：["ESTR2102"]），命中任一即算修过
+}
+```
+
+### 顶层节点构成
+
+1. **Major Programme Requirement 的编号项**（`1.` / `2.` / `3.` / …）—— 主修块的强制要求，`kind` 不带。
+2. **可选的 Concentration Area / Streams 段**（带 `kind`）—— 日历在主修块**总学分（Total）之后**印的可选段，被单独解析成一个顶层节点，`children` 是各方向。
+
+### `kind` 语义（关键区分）
+
+| 值 | 来源 | 含义 |
+| --- | --- | --- |
+| 不带（`undefined`） | 主修块内的编号/字母/散文节点 | 强制要求。**包括** `"Choose any ONE from the following N options"` 这类**内联 N 选一分流**：它作为主修块内的一个顶层编号节点，`children` 是各方向（`General` + `Stream 1..N`），**这些内联 stream 一律不带 `kind`**（它是强制 N 选一，属主修块）。 |
+| `'concentration'` | `Concentration Area:` 段 | 可选的**专业方向**（学生可选 0–2 个）。顶层节点 `title:"专业方向 · Concentration Area"`，`children` 为各方向。 |
+| `'stream'` | Total 之后的 `Streams:` 段 | 可选的**选修方向 / 分流**（学生可自愿声明）。顶层节点 `title:"选修方向 · Streams"`，`children` 为各 stream。 |
+
+> ⚠️ 别把内联 `Choose any ONE` 的 stream 和 `kind:'stream'` 混淆：前者是**主修块内的强制 N 选一**（无 `kind`），后者是 **Total 之后的可选段**（有 `kind`）。前端凭 `kind` 是否存在来决定是否打「可选/选修方向」徽章。
+
+### 兜底节点约定（零丢失保证）
+
+任何在 Major 块文本里出现、但没能被结构化归位到上述分区的课程，都会被扫进**一个 catch-all 节点**：
+
+```jsonc
+{ "marker": "", "title": "其他相关课程",
+  "note": "本方案文本中列出、未归入上述分区的课程",
+  "courses": [ /* 未归位的课 */ ], "children": [] }
+```
+
+它保证信息页课表**绝不静默丢课**（`missing_codes` 恒为 0）。前端遇到它照常渲染即可（它就是一个普通 `SectionNode`，`title` 固定为 `"其他相关课程"`）。
+
+### `prose_only` 方案
+
+叙述式培养方案（`parse_status:"prose_only"`，如 M.B.,Ch.B.）没有可解析的层级，`structure` 为 `[]`。前端此时回退用 `program.all`（整个课号 inventory）渲染，不要指望 `structure`。
+
+### 真实例子（摘要）
+
+- **B.Sc. in Computer Science（内联 7 选一，无 kind）**：顶层 `4. Choose any ONE from the following seven options`，`children` = `(a) General Computer Science` / `(b) Stream 1: Intelligence Science` / … `(g) Stream 6: Data Analytics`，共 7 个，**均不带 `kind`**（强制 N 选一）。
+- **B.S.Sc. in Economics（Concentration Area，kind='concentration'）**：主修编号项之后多一个 `kind:'concentration'` 顶层节点，`children` = `Economic Theory` / `Financial Economics` / `Business Economics` / `Chinese Economy` / `Data Analytics`，各方向下再挂 `(a)/(b)` 必修/选修子树。
+- **B.Sc. in Physics（Streams，kind='stream'）**：主修 Total 之后一个 `kind:'stream'` 顶层节点 `选修方向 · Streams`，`children` = `Enrichment Stream in Theoretical Physics` / `Astrophysics and Particle Physics Stream` / `Computational and Data Physics Stream` / `Quantum Science and Technology Stream`，各 stream 下挂 `(a) Required courses` / `(b) Elective courses`。
 
 ---
 

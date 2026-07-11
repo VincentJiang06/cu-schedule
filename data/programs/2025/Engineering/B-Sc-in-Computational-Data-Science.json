@@ -67,6 +67,7 @@
     "ESTR4300",
     "ESTR4306",
     "ESTR4998",
+    "ESTR4999",
     "IERG4130",
     "IERG4300",
     "MATH1010",
@@ -1039,7 +1040,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Choose at least 3 units from the",
       "units": null,
       "bucket": "elective",
@@ -1063,6 +1064,624 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 10
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1111",
+          "alts": []
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "MATH1030",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 18,
+      "note": null,
+      "courses": [
+        {
+          "code": "CSCI1120",
+          "alts": [
+            "ESTR1100"
+          ]
+        },
+        {
+          "code": "CSCI2100",
+          "alts": [
+            "ESTR2102"
+          ]
+        },
+        {
+          "code": "ENGG2440",
+          "alts": [
+            "ESTR2004"
+          ]
+        },
+        {
+          "code": "STAT2001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 24,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Algorithms and Computer Systems",
+          "courses": [
+            {
+              "code": "AIST3020",
+              "alts": []
+            },
+            {
+              "code": "CSCI3160",
+              "alts": [
+                "ESTR3104"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Machine Learning: Choose 3 units from",
+          "courses": [
+            {
+              "code": "CSCI3230",
+              "alts": [
+                "ESTR3108"
+              ]
+            },
+            {
+              "code": "CSCI3320",
+              "alts": []
+            },
+            {
+              "code": "RMSC4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Sampling and Computing Methods: Choose 6",
+          "courses": [
+            {
+              "code": "STAT3003",
+              "alts": []
+            },
+            {
+              "code": "STAT3006",
+              "alts": []
+            },
+            {
+              "code": "STAT3010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": "Statistical Inference",
+          "courses": [
+            {
+              "code": "STAT3008",
+              "alts": []
+            },
+            {
+              "code": "STAT4003",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": "Statistical Modeling: Choose 3",
+          "courses": [
+            {
+              "code": "STAT3005",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Research Component Courses[b]",
+      "units": 6,
+      "note": null,
+      "courses": [
+        {
+          "code": "CDAS4998",
+          "alts": []
+        },
+        {
+          "code": "CDAS4999",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "5.",
+      "title": "Elective Courses Choose any ONE from the following four options",
+      "units": 18,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CENG5030",
+              "alts": []
+            },
+            {
+              "code": "CSCI3150",
+              "alts": [
+                "ESTR3102"
+              ]
+            },
+            {
+              "code": "CSCI3170",
+              "alts": []
+            },
+            {
+              "code": "CSCI3220",
+              "alts": [
+                "ESTR3110"
+              ]
+            },
+            {
+              "code": "CSCI3260",
+              "alts": []
+            },
+            {
+              "code": "CSCI3280",
+              "alts": []
+            },
+            {
+              "code": "CSCI3310",
+              "alts": []
+            },
+            {
+              "code": "CSCI4130",
+              "alts": [
+                "IERG4130",
+                "ESTR4306"
+              ]
+            },
+            {
+              "code": "CSCI4160",
+              "alts": [
+                "ESTR4104"
+              ]
+            },
+            {
+              "code": "CSCI4180",
+              "alts": [
+                "ESTR4106"
+              ]
+            },
+            {
+              "code": "CSCI4200",
+              "alts": []
+            },
+            {
+              "code": "CSCI4230",
+              "alts": []
+            },
+            {
+              "code": "CSCI4250",
+              "alts": [
+                "ESTR4122"
+              ]
+            },
+            {
+              "code": "CSCI4430",
+              "alts": [
+                "ESTR4120"
+              ]
+            },
+            {
+              "code": "CSCI5030",
+              "alts": []
+            },
+            {
+              "code": "CSCI5120",
+              "alts": []
+            },
+            {
+              "code": "CSCI5150",
+              "alts": []
+            },
+            {
+              "code": "CSCI5240",
+              "alts": []
+            },
+            {
+              "code": "CSCI5350",
+              "alts": []
+            },
+            {
+              "code": "CSCI5390",
+              "alts": []
+            },
+            {
+              "code": "CSCI5540",
+              "alts": []
+            },
+            {
+              "code": "CSCI5550",
+              "alts": []
+            },
+            {
+              "code": "CSCI5570",
+              "alts": []
+            },
+            {
+              "code": "ENGG1130",
+              "alts": [
+                "ESTR1006"
+              ]
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
+            },
+            {
+              "code": "ENGG5101",
+              "alts": []
+            },
+            {
+              "code": "IERG4300",
+              "alts": [
+                "ESTR4300"
+              ]
+            },
+            {
+              "code": "RMSC4001",
+              "alts": []
+            },
+            {
+              "code": "RMSC4003",
+              "alts": []
+            },
+            {
+              "code": "RMSC4004",
+              "alts": []
+            },
+            {
+              "code": "RMSC4005",
+              "alts": []
+            },
+            {
+              "code": "RMSC4006",
+              "alts": []
+            },
+            {
+              "code": "SEEM4630",
+              "alts": []
+            },
+            {
+              "code": "SEEM5330",
+              "alts": []
+            },
+            {
+              "code": "SEEM5680",
+              "alts": []
+            },
+            {
+              "code": "STAT3001",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT3009",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            },
+            {
+              "code": "STAT4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4008",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 3,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "CSCI3350",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5370",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1110",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1111",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Computational Medicine",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "PHPC2017",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC3024",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC3034",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Elective Courses",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "Choose at least 3 units from the",
+              "courses": [
+                {
+                  "code": "PHPC1001",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC1012",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC1017",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "Choose at least 3 units from the",
+              "courses": [
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI3290",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3210",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4008",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "SOCI3102",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3238",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "SOCI2116",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2203",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3002",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3204",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3208",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3227",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3229",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3237",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

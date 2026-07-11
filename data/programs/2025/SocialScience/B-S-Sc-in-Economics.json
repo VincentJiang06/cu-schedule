@@ -107,6 +107,7 @@
     "PSYC1000",
     "PSYC1630",
     "SEEM4630",
+    "SEEM4730",
     "SOCI1001",
     "SOCI1201",
     "SOSC1001",
@@ -360,265 +361,7 @@
         "from": "2. Required Courses"
       }
     ],
-    "elective": [
-      {
-        "raw": "ECON4010",
-        "codes": [
-          "ECON4010"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "ECON3160",
-        "codes": [
-          "ECON3160"
-        ],
-        "alt": false,
-        "from": "(i) At least 3 units from"
-      },
-      {
-        "raw": "ECON4110",
-        "codes": [
-          "ECON4110"
-        ],
-        "alt": false,
-        "from": "(i) At least 3 units from"
-      },
-      {
-        "raw": "ECON4120",
-        "codes": [
-          "ECON4120"
-        ],
-        "alt": false,
-        "from": "(i) At least 3 units from"
-      },
-      {
-        "raw": "ECON4910",
-        "codes": [
-          "ECON4910"
-        ],
-        "alt": false,
-        "from": "(i) At least 3 units from"
-      },
-      {
-        "raw": "ECON3410",
-        "codes": [
-          "ECON3410"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "ECON3140",
-        "codes": [
-          "ECON3140"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3520",
-        "codes": [
-          "ECON3520"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3540",
-        "codes": [
-          "ECON3540"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3580",
-        "codes": [
-          "ECON3580"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3620",
-        "codes": [
-          "ECON3620"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON4120",
-        "codes": [
-          "ECON4120"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON4450",
-        "codes": [
-          "ECON4450"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3480",
-        "codes": [
-          "ECON3480"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "ECON3320",
-        "codes": [
-          "ECON3320"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3380",
-        "codes": [
-          "ECON3380"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3430",
-        "codes": [
-          "ECON3430"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3470",
-        "codes": [
-          "ECON3470"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3570",
-        "codes": [
-          "ECON3570"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3610",
-        "codes": [
-          "ECON3610"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3620",
-        "codes": [
-          "ECON3620"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3630",
-        "codes": [
-          "ECON3630"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3310",
-        "codes": [
-          "ECON3310"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "ECON3250",
-        "codes": [
-          "ECON3250"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3350",
-        "codes": [
-          "ECON3350"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON3370",
-        "codes": [
-          "ECON3370"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "ECON4120",
-        "codes": [
-          "ECON4120"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "ECON4130",
-        "codes": [
-          "ECON4130"
-        ],
-        "alt": false,
-        "from": "(a) Required Courses"
-      },
-      {
-        "raw": "CSCI3320",
-        "codes": [
-          "CSCI3320"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "CSCI4190",
-        "codes": [
-          "CSCI4190"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "IERG3280/ESTR3302",
-        "codes": [
-          "IERG3280",
-          "ESTR3302"
-        ],
-        "alt": true,
-        "from": "(b) Elective Courses"
-      },
-      {
-        "raw": "SEEM4630",
-        "codes": [
-          "SEEM4630"
-        ],
-        "alt": false,
-        "from": "(b) Elective Courses"
-      }
-    ],
+    "elective": [],
     "stream_elective": []
   },
   "groups_outline": [
@@ -648,114 +391,486 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        }
+      ],
+      "children": []
     },
     {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 1
+      "marker": "2.",
+      "title": "",
+      "units": 27,
+      "note": null,
+      "courses": [
+        {
+          "code": "ECON1101",
+          "alts": []
+        }
+      ],
+      "children": []
     },
     {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 0
+      "marker": "3.",
+      "title": "",
+      "units": 36,
+      "note": "36 units of elective ECON courses at 3000 or above level",
+      "courses": [],
+      "children": []
     },
     {
-      "marker": "(i)",
-      "level": 2,
-      "title": "At least 3 units from",
+      "marker": "",
+      "kind": "concentration",
+      "title": "专业方向 · Concentration Area",
       "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 4
-    },
-    {
-      "marker": "(ii)",
-      "level": 3,
-      "title": "up",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 0
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 7
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 8
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 3
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 2
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 4
+      "note": "Students may choose to declare one, or up to two concentration areas by taking at least 15 units in the relevant area(s)",
+      "courses": [],
+      "children": [
+        {
+          "marker": "",
+          "title": "Economic Theory",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON4010",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4020",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "Elective Courses",
+              "units": 9,
+              "note": null,
+              "courses": [],
+              "children": [
+                {
+                  "marker": "(i)",
+                  "title": "",
+                  "units": null,
+                  "note": "At least 3 units from",
+                  "courses": [
+                    {
+                      "code": "ECON3160",
+                      "alts": []
+                    },
+                    {
+                      "code": "ECON4110",
+                      "alts": []
+                    },
+                    {
+                      "code": "ECON4120",
+                      "alts": []
+                    },
+                    {
+                      "code": "ECON4910",
+                      "alts": []
+                    },
+                    {
+                      "code": "ECON4920",
+                      "alts": []
+                    }
+                  ],
+                  "children": []
+                },
+                {
+                  "marker": "(ii)",
+                  "title": "",
+                  "units": null,
+                  "note": "to 6 units MATH courses at 3000 or above level",
+                  "courses": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Financial Economics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3410",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3420",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3140",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3520",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3540",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3580",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3620",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4120",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4450",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4470",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Business Economics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3480",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3590",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3320",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3380",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3430",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3470",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3570",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3610",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3620",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3630",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4120",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Chinese Economy",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3310",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3460",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3250",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3350",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3370",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3580",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Data Analytics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON4120",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4130",
+                  "alts": []
+                },
+                {
+                  "code": "ECON4140",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI3320",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4190",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": [
+                    "ESTR3302"
+                  ]
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -371,5 +371,159 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "STAT1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 43,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCHE2030",
+          "alts": []
+        },
+        {
+          "code": "BIOL2120",
+          "alts": []
+        },
+        {
+          "code": "CMBI2200",
+          "alts": []
+        },
+        {
+          "code": "CMBI3010",
+          "alts": []
+        },
+        {
+          "code": "CMBI3020",
+          "alts": []
+        },
+        {
+          "code": "CMBI3030",
+          "alts": []
+        },
+        {
+          "code": "CMBI3040",
+          "alts": []
+        },
+        {
+          "code": "CMBI3100",
+          "alts": []
+        },
+        {
+          "code": "LSCI2002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 8,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCHE3030",
+          "alts": []
+        },
+        {
+          "code": "BIOL3410",
+          "alts": []
+        },
+        {
+          "code": "BMEG2001",
+          "alts": []
+        },
+        {
+          "code": "CMBI2500",
+          "alts": []
+        },
+        {
+          "code": "CMBI4901",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        },
+        {
+          "code": "LSCI2003",
+          "alts": []
+        },
+        {
+          "code": "MBTE3510",
+          "alts": []
+        },
+        {
+          "code": "STAT3210",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

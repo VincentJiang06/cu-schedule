@@ -354,5 +354,205 @@
       "stream": null,
       "n_courses": 2
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "",
+      "units": 9,
+      "note": "Faculty Package",
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "MEDF1012",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 33,
+      "note": "Required Courses",
+      "courses": [
+        {
+          "code": "ACCT2111",
+          "alts": []
+        },
+        {
+          "code": "BEHM4000",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE2011",
+          "alts": []
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "GRON4411",
+          "alts": []
+        },
+        {
+          "code": "MBTE2000",
+          "alts": []
+        },
+        {
+          "code": "PHPC1001",
+          "alts": []
+        },
+        {
+          "code": "PHPC1017",
+          "alts": []
+        },
+        {
+          "code": "PHPC2016",
+          "alts": []
+        },
+        {
+          "code": "SBMS2104",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 17,
+      "note": "Students must choose at least one concentration area by taking at least 17 units of courses from the following",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Biotechnology Entrepreneurship and Innovation Required Courses",
+          "courses": [
+            {
+              "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "LAWS2331",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "MGNT4090",
+              "alts": []
+            }
+          ],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "MBTE3510",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 11,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "DOTE2040",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC3024",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3216",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "DOTE4020",
+                  "alts": []
+                },
+                {
+                  "code": "GRON3412",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4010",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC2017",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3101",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 6,
+      "note": "Capstone Courses",
+      "courses": [
+        {
+          "code": "BEHM4001",
+          "alts": []
+        },
+        {
+          "code": "BEHM4002",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

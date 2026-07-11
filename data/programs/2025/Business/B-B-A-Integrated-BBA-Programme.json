@@ -68,8 +68,11 @@
     "COMM3191",
     "COMM3193",
     "COMM3200",
+    "COMM3310",
+    "COMM3400",
     "COMM3550",
     "COMM3600",
+    "COMM3610",
     "COMM3620",
     "COMM3630",
     "COMM3640",
@@ -1300,7 +1303,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "DOTE2021, 4110;",
       "units": null,
       "bucket": "elective",
@@ -1336,7 +1339,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "DOTE2021, 2040, 4020;",
       "units": null,
       "bucket": "elective",
@@ -1372,7 +1375,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "DOTE2021 or FINA2020; and",
       "units": null,
       "bucket": "elective",
@@ -1399,7 +1402,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "MGNT1070, 2070; and",
       "units": null,
       "bucket": "elective",
@@ -1426,7 +1429,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "MGNT3580, 4150; and",
       "units": null,
       "bucket": "elective",
@@ -1453,7 +1456,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "MGNT2040, 3010; and",
       "units": null,
       "bucket": "elective",
@@ -1480,7 +1483,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "MKTG3010, 3020, 3030, 4040; and",
       "units": null,
       "bucket": "elective",
@@ -1525,7 +1528,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "General Business",
       "units": null,
       "bucket": "elective",
@@ -1534,7 +1537,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "3 units of DOTE/FINA/MGNT/MKTG",
       "units": null,
       "bucket": "elective",
@@ -1549,6 +1552,753 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 32,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT2111",
+          "alts": []
+        },
+        {
+          "code": "ACCT2121",
+          "alts": []
+        },
+        {
+          "code": "ACCT2151",
+          "alts": []
+        },
+        {
+          "code": "DOTE2011",
+          "alts": []
+        },
+        {
+          "code": "DOTE2030",
+          "alts": []
+        },
+        {
+          "code": "DOTE2051",
+          "alts": []
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "IBBA3040",
+          "alts": []
+        },
+        {
+          "code": "MGNT2511",
+          "alts": []
+        },
+        {
+          "code": "MGNT2512",
+          "alts": []
+        },
+        {
+          "code": "MGNT2611",
+          "alts": []
+        },
+        {
+          "code": "MGNT4010",
+          "alts": []
+        },
+        {
+          "code": "MKTG2010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses (Concentration)",
+      "units": 15,
+      "note": "Students must choose at least one concentration and take five or six courses among the courses prescribed under respective concentration area as follows",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Business Economics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DOTE2021",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4110",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "two courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3000",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "one DOTE course at 3000 or above",
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Business Analytics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DOTE2021",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE2040",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4020",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "one course selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4070",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "one course selected from",
+              "courses": [
+                {
+                  "code": "DOTE3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4120",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Finance",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DOTE2021",
+                  "alts": []
+                },
+                {
+                  "code": "FINA2020",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "15 units selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "Entrepreneurship",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MGNT1070",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT2070",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "four courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4070",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4160",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4170",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4270",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4570",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4711",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4712",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4713",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(e)",
+          "title": "Management of International Business",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MGNT3580",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4150",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "four courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3100",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4110",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4140",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4510",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4530",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4540",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4550",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4570",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(f)",
+          "title": "Human Resource Management",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MGNT2040",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "four courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3040",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3060",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3100",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4050",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4060",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4110",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4140",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(g)",
+          "title": "Marketing",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3020",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "two courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3040",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4020",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4070",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4080",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4090",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4110",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4160",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4200",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(h)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(i)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MKTG3010",
+              "alts": []
+            },
+            {
+              "code": "MKTG3060",
+              "alts": []
+            },
+            {
+              "code": "MKTG4080",
+              "alts": []
+            },
+            {
+              "code": "MKTG4090",
+              "alts": []
+            }
+          ],
+          "children": [
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "two courses selected from",
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3020",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4120",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4150",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "General Business",
+              "units": null,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "3 units of DOTE/FINA/MGNT/MKTG",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "12 units of DOTE/FINA/MGNT/MKTG",
+              "courses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "DOTE3011",
+          "alts": []
+        },
+        {
+          "code": "DOTE3050",
+          "alts": []
+        },
+        {
+          "code": "DOTE3080",
+          "alts": []
+        },
+        {
+          "code": "DOTE3090",
+          "alts": []
+        },
+        {
+          "code": "DOTE4040",
+          "alts": []
+        },
+        {
+          "code": "DOTE4080",
+          "alts": []
+        },
+        {
+          "code": "DOTE4240",
+          "alts": []
+        },
+        {
+          "code": "DOTE4260",
+          "alts": []
+        },
+        {
+          "code": "DOTE4030",
+          "alts": []
+        },
+        {
+          "code": "DOTE4220",
+          "alts": []
+        },
+        {
+          "code": "DOTE4280",
+          "alts": []
+        },
+        {
+          "code": "MKTG4170",
+          "alts": []
+        },
+        {
+          "code": "MKTG4180",
+          "alts": []
+        },
+        {
+          "code": "MKTG4190",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

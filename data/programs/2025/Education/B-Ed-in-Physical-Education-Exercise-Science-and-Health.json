@@ -686,5 +686,363 @@
       "stream": null,
       "n_courses": 13
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "EDUC2312",
+          "alts": []
+        },
+        {
+          "code": "SPED2720",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Core Courses in Physical Education, Exercise Science and",
+          "courses": [
+            {
+              "code": "PHPC1001",
+              "alts": []
+            },
+            {
+              "code": "PHPC2016",
+              "alts": []
+            },
+            {
+              "code": "SPED2520",
+              "alts": []
+            },
+            {
+              "code": "SPED2540",
+              "alts": []
+            },
+            {
+              "code": "SPED2600",
+              "alts": []
+            },
+            {
+              "code": "SPED2610",
+              "alts": []
+            },
+            {
+              "code": "SPED2710",
+              "alts": []
+            },
+            {
+              "code": "SPED2810",
+              "alts": []
+            },
+            {
+              "code": "SPED3410",
+              "alts": []
+            },
+            {
+              "code": "SPED3430",
+              "alts": []
+            },
+            {
+              "code": "SPED3440",
+              "alts": []
+            },
+            {
+              "code": "SPED3450",
+              "alts": []
+            },
+            {
+              "code": "SPED3820",
+              "alts": []
+            },
+            {
+              "code": "SPED3920",
+              "alts": []
+            },
+            {
+              "code": "SPED4570",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 13,
+          "note": "Core Courses in Professional Skills",
+          "courses": [
+            {
+              "code": "SPED2011",
+              "alts": []
+            },
+            {
+              "code": "SPED2021",
+              "alts": []
+            },
+            {
+              "code": "SPED2031",
+              "alts": []
+            },
+            {
+              "code": "SPED2041",
+              "alts": []
+            },
+            {
+              "code": "SPED2051",
+              "alts": []
+            },
+            {
+              "code": "SPED2061",
+              "alts": []
+            },
+            {
+              "code": "SPED2111",
+              "alts": []
+            },
+            {
+              "code": "SPED2122",
+              "alts": []
+            },
+            {
+              "code": "SPED2131",
+              "alts": []
+            },
+            {
+              "code": "SPED2141",
+              "alts": []
+            },
+            {
+              "code": "SPED2211",
+              "alts": []
+            },
+            {
+              "code": "SPED3220",
+              "alts": []
+            },
+            {
+              "code": "SPED3250",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 10,
+          "note": "Courses in Educational Studies",
+          "courses": [
+            {
+              "code": "EDUC2240",
+              "alts": []
+            },
+            {
+              "code": "EDUC3201",
+              "alts": []
+            },
+            {
+              "code": "EDUC3311",
+              "alts": []
+            },
+            {
+              "code": "EDUC4340",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 8,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED3400",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED4201",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(f)",
+          "title": "Research Experience",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED3630",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Theoretical Courses in Physical Education, Exercise Science",
+          "courses": [
+            {
+              "code": "CHPR4012",
+              "alts": []
+            },
+            {
+              "code": "PHPC2007",
+              "alts": []
+            },
+            {
+              "code": "SPED3550",
+              "alts": []
+            },
+            {
+              "code": "SPED3700",
+              "alts": []
+            },
+            {
+              "code": "SPED3731",
+              "alts": []
+            },
+            {
+              "code": "SPED3910",
+              "alts": []
+            },
+            {
+              "code": "SPED4560",
+              "alts": []
+            },
+            {
+              "code": "SPED4640",
+              "alts": []
+            },
+            {
+              "code": "SPED4830",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 1,
+          "note": "Courses in Professional Skills",
+          "courses": [
+            {
+              "code": "SPED2112",
+              "alts": []
+            },
+            {
+              "code": "SPED2134",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 2,
+          "note": "Courses in Educational Studies",
+          "courses": [
+            {
+              "code": "EDUC2210",
+              "alts": []
+            },
+            {
+              "code": "EDUC2220",
+              "alts": []
+            },
+            {
+              "code": "EDUC3140",
+              "alts": []
+            },
+            {
+              "code": "EDUC3150",
+              "alts": []
+            },
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "EDUC3260",
+              "alts": []
+            },
+            {
+              "code": "EDUC3270",
+              "alts": []
+            },
+            {
+              "code": "EDUC3280",
+              "alts": []
+            },
+            {
+              "code": "EDUC3290",
+              "alts": []
+            },
+            {
+              "code": "EDUC4110",
+              "alts": []
+            },
+            {
+              "code": "EDUC4131",
+              "alts": []
+            },
+            {
+              "code": "EDUC4320",
+              "alts": []
+            },
+            {
+              "code": "EDUC4330",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
   ]
 }

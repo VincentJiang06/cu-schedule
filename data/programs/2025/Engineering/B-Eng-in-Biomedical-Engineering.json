@@ -655,6 +655,14 @@
         ],
         "alt": false,
         "from": "4. Elective Courses"
+      },
+      {
+        "raw": "BMEG4999",
+        "codes": [
+          "BMEG4999"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
       }
     ],
     "stream_elective": []
@@ -739,7 +747,358 @@
       "units": "12",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 27
+      "n_courses": 28
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1111",
+          "alts": []
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1125",
+          "alts": [
+            "ESTR1007"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 12,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "6 units of Physics Courses",
+          "courses": [
+            {
+              "code": "ENGG1310",
+              "alts": [
+                "ESTR1003"
+              ]
+            },
+            {
+              "code": "PHYS1110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "3 units of Science Course",
+          "courses": [
+            {
+              "code": "CHEM1280",
+              "alts": []
+            },
+            {
+              "code": "CHEM1380",
+              "alts": []
+            },
+            {
+              "code": "LSCI1001",
+              "alts": []
+            },
+            {
+              "code": "LSCI1002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGG1130",
+              "alts": [
+                "ESTR1006"
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 36,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMEG2001",
+              "alts": [
+                "ESTR2201"
+              ]
+            },
+            {
+              "code": "BMEG2012",
+              "alts": [
+                "ESTR2602"
+              ]
+            },
+            {
+              "code": "BMEG2210",
+              "alts": [
+                "ESTR2204"
+              ]
+            },
+            {
+              "code": "BMEG2218",
+              "alts": []
+            },
+            {
+              "code": "BMEG2300",
+              "alts": [
+                "ESTR2601"
+              ]
+            },
+            {
+              "code": "BMEG2410",
+              "alts": []
+            },
+            {
+              "code": "BMEG2603",
+              "alts": []
+            },
+            {
+              "code": "BMEG3111",
+              "alts": [
+                "ESTR3603"
+              ]
+            },
+            {
+              "code": "BMEG3320",
+              "alts": []
+            },
+            {
+              "code": "BMEG3430",
+              "alts": [
+                "ESTR3208"
+              ]
+            },
+            {
+              "code": "BMEG4010",
+              "alts": [
+                "ESTR4601"
+              ]
+            },
+            {
+              "code": "SBMS1431",
+              "alts": []
+            },
+            {
+              "code": "SBMS1432",
+              "alts": []
+            },
+            {
+              "code": "SBMS1440",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMEG4998",
+              "alts": []
+            },
+            {
+              "code": "BMEG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 12,
+      "note": null,
+      "courses": [
+        {
+          "code": "BMEG3102",
+          "alts": []
+        },
+        {
+          "code": "BMEG3103",
+          "alts": []
+        },
+        {
+          "code": "BMEG3105",
+          "alts": [
+            "ESTR3605"
+          ]
+        },
+        {
+          "code": "BMEG3130",
+          "alts": []
+        },
+        {
+          "code": "BMEG3140",
+          "alts": [
+            "ESTR3604"
+          ]
+        },
+        {
+          "code": "BMEG3210",
+          "alts": [
+            "ESTR3212"
+          ]
+        },
+        {
+          "code": "BMEG3330",
+          "alts": [
+            "ESTR3602"
+          ]
+        },
+        {
+          "code": "BMEG3420",
+          "alts": []
+        },
+        {
+          "code": "BMEG3440",
+          "alts": []
+        },
+        {
+          "code": "BMEG3910",
+          "alts": []
+        },
+        {
+          "code": "BMEG3920",
+          "alts": []
+        },
+        {
+          "code": "BMEG4220",
+          "alts": []
+        },
+        {
+          "code": "BMEG4320",
+          "alts": [
+            "ESTR4200"
+          ]
+        },
+        {
+          "code": "BMEG4410",
+          "alts": [
+            "ESTR4203"
+          ]
+        },
+        {
+          "code": "BMEG4450",
+          "alts": [
+            "ESTR4202"
+          ]
+        },
+        {
+          "code": "BMEG4510",
+          "alts": [
+            "ESTR4204"
+          ]
+        },
+        {
+          "code": "BMEG4520",
+          "alts": []
+        },
+        {
+          "code": "BMEG4530",
+          "alts": [
+            "ESTR4214"
+          ]
+        },
+        {
+          "code": "BMEG5530",
+          "alts": []
+        },
+        {
+          "code": "BMEG5610",
+          "alts": []
+        },
+        {
+          "code": "CMBI4101",
+          "alts": []
+        },
+        {
+          "code": "CMBI4102",
+          "alts": []
+        },
+        {
+          "code": "CMBI4103",
+          "alts": []
+        },
+        {
+          "code": "ELEG3201",
+          "alts": [
+            "ESTR3200"
+          ]
+        },
+        {
+          "code": "MAEG5080",
+          "alts": []
+        },
+        {
+          "code": "MBTE4320",
+          "alts": []
+        },
+        {
+          "code": "BMEG4998",
+          "alts": []
+        },
+        {
+          "code": "BMEG4999",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

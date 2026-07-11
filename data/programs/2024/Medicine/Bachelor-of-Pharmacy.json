@@ -331,7 +331,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "PHAR4201, 4301",
       "units": null,
       "bucket": "elective",
@@ -349,7 +349,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "PHAR4911, 4912",
       "units": null,
       "bucket": "elective",
@@ -364,6 +364,188 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 3
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 10,
+      "note": null,
+      "courses": [
+        {
+          "code": "MEDF1011",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 57,
+      "note": null,
+      "courses": [
+        {
+          "code": "PHAR1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Students are required to complete 6",
+          "units": null,
+          "note": "units of capstone courses from one of the Areas of Concentration. | 6 Area of Concentration: Pharmacy Clerkship",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHAR4201",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4301",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "2 units of courses chosen from the",
+              "courses": [
+                {
+                  "code": "PHAR4204",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4205",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4302",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4303",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4304",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4305",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4306",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4307",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4308",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4309",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4310",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4350",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4401",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4402",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4403",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4501",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4601",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4901",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHAR4911",
+                  "alts": []
+                },
+                {
+                  "code": "PHAR4912",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "At least 2 units of courses chosen",
+          "courses": [
+            {
+              "code": "PHAR2710",
+              "alts": []
+            },
+            {
+              "code": "PHAR2711",
+              "alts": []
+            },
+            {
+              "code": "PHAR2712",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

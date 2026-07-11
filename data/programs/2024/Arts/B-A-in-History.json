@@ -34,6 +34,7 @@
     "CURE1400",
     "ELTU1001",
     "ELTU2011",
+    "ELTU3011",
     "ENGE1000",
     "ENGE1310",
     "ENGE1320",
@@ -777,6 +778,308 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 42
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 12,
+      "note": null,
+      "courses": [
+        {
+          "code": "HIST1001",
+          "alts": []
+        },
+        {
+          "code": "HIST1002",
+          "alts": []
+        },
+        {
+          "code": "HIST4811",
+          "alts": []
+        },
+        {
+          "code": "HIST4812",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 51,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "(b) | Complete 51 units of HIST courses in",
+          "courses": [
+            {
+              "code": "HIST2002",
+              "alts": []
+            },
+            {
+              "code": "HIST2005",
+              "alts": []
+            },
+            {
+              "code": "HIST2006",
+              "alts": []
+            },
+            {
+              "code": "HIST2007",
+              "alts": []
+            },
+            {
+              "code": "HIST2301",
+              "alts": []
+            },
+            {
+              "code": "HIST2310",
+              "alts": []
+            },
+            {
+              "code": "HIST2320",
+              "alts": []
+            },
+            {
+              "code": "HIST2330",
+              "alts": []
+            },
+            {
+              "code": "HIST2360",
+              "alts": []
+            },
+            {
+              "code": "HIST2370",
+              "alts": []
+            },
+            {
+              "code": "HIST2380",
+              "alts": []
+            },
+            {
+              "code": "HIST2390",
+              "alts": []
+            },
+            {
+              "code": "HIST2700",
+              "alts": []
+            },
+            {
+              "code": "HIST3326",
+              "alts": []
+            },
+            {
+              "code": "HIST3327",
+              "alts": []
+            },
+            {
+              "code": "HIST3330",
+              "alts": []
+            },
+            {
+              "code": "HIST3331",
+              "alts": []
+            },
+            {
+              "code": "HIST3332",
+              "alts": []
+            },
+            {
+              "code": "HIST3340",
+              "alts": []
+            },
+            {
+              "code": "HIST3360",
+              "alts": []
+            },
+            {
+              "code": "HIST3361",
+              "alts": []
+            },
+            {
+              "code": "HIST3372",
+              "alts": []
+            },
+            {
+              "code": "HIST3373",
+              "alts": []
+            },
+            {
+              "code": "HIST3375",
+              "alts": []
+            },
+            {
+              "code": "HIST3380",
+              "alts": []
+            },
+            {
+              "code": "HIST3381",
+              "alts": []
+            },
+            {
+              "code": "HIST3400",
+              "alts": []
+            },
+            {
+              "code": "HIST3421",
+              "alts": []
+            },
+            {
+              "code": "HIST3701",
+              "alts": []
+            },
+            {
+              "code": "HIST4020",
+              "alts": []
+            },
+            {
+              "code": "HIST4304",
+              "alts": []
+            },
+            {
+              "code": "HIST4305",
+              "alts": []
+            },
+            {
+              "code": "HIST4306",
+              "alts": []
+            },
+            {
+              "code": "HIST4380",
+              "alts": []
+            },
+            {
+              "code": "HIST4390",
+              "alts": []
+            },
+            {
+              "code": "HIST4391",
+              "alts": []
+            },
+            {
+              "code": "HIST4392",
+              "alts": []
+            },
+            {
+              "code": "HIST4393",
+              "alts": []
+            },
+            {
+              "code": "HIST4400",
+              "alts": []
+            },
+            {
+              "code": "HIST4420",
+              "alts": []
+            },
+            {
+              "code": "HIST4702",
+              "alts": []
+            },
+            {
+              "code": "HIST4703",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

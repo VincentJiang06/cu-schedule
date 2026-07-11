@@ -37,6 +37,7 @@
     "ESTR4410",
     "ESTR4422",
     "ESTR4998",
+    "ESTR4999",
     "IERG1080",
     "LSCI1002",
     "MAEG3010",
@@ -469,6 +470,251 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 23
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1111",
+          "alts": []
+        },
+        {
+          "code": "ENGG1125",
+          "alts": [
+            "ESTR1007"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 14,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "ENGG1310",
+          "alts": [
+            "ESTR1003"
+          ]
+        },
+        {
+          "code": "ENGG2780",
+          "alts": [
+            "ESTR2020"
+          ]
+        },
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1110",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 31,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "ELEG3301",
+              "alts": [
+                "ESTR3204"
+              ]
+            },
+            {
+              "code": "MAEG3010",
+              "alts": []
+            },
+            {
+              "code": "MAEG3020",
+              "alts": [
+                "ESTR3404"
+              ]
+            },
+            {
+              "code": "MASE1001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "MASE4998",
+              "alts": []
+            },
+            {
+              "code": "MASE4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 1,
+          "note": "Internship Course",
+          "courses": [
+            {
+              "code": "ENGG1820",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "BMEG3430",
+          "alts": []
+        },
+        {
+          "code": "CHEM4303",
+          "alts": []
+        },
+        {
+          "code": "EEEN4020",
+          "alts": [
+            "ESTR4402"
+          ]
+        },
+        {
+          "code": "EEEN4050",
+          "alts": [
+            "ESTR4422"
+          ]
+        },
+        {
+          "code": "EESC4240",
+          "alts": []
+        },
+        {
+          "code": "ELEG4304",
+          "alts": []
+        },
+        {
+          "code": "IERG1080",
+          "alts": []
+        },
+        {
+          "code": "MAEG4020",
+          "alts": [
+            "ESTR4410"
+          ]
+        },
+        {
+          "code": "MASE3102",
+          "alts": []
+        },
+        {
+          "code": "MASE3104",
+          "alts": []
+        },
+        {
+          "code": "MASE3202",
+          "alts": []
+        },
+        {
+          "code": "MASE4102",
+          "alts": []
+        },
+        {
+          "code": "MASE4202",
+          "alts": []
+        },
+        {
+          "code": "MASE4204",
+          "alts": []
+        },
+        {
+          "code": "MASE4206",
+          "alts": []
+        },
+        {
+          "code": "MASE4208",
+          "alts": []
+        },
+        {
+          "code": "MASE4302",
+          "alts": []
+        },
+        {
+          "code": "PHYS3021",
+          "alts": []
+        },
+        {
+          "code": "PHYS3023",
+          "alts": []
+        },
+        {
+          "code": "PHYS4031",
+          "alts": []
+        },
+        {
+          "code": "PHYS4050",
+          "alts": []
+        },
+        {
+          "code": "PHYS4440",
+          "alts": []
+        },
+        {
+          "code": "SEEM3500",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

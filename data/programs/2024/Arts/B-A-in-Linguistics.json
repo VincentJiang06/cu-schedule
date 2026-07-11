@@ -25,6 +25,7 @@
     "CHES1101",
     "CHLL1900",
     "CHLL3162",
+    "CHLL4110",
     "CHLL4161",
     "CHLT1001",
     "CHLT1002",
@@ -37,6 +38,8 @@
     "CURE1000",
     "CURE1110",
     "CURE1400",
+    "DOTE2011",
+    "DSME2011",
     "DSPS1001",
     "DSPS1003",
     "DSPS1004",
@@ -156,7 +159,9 @@
     "SPAN1001",
     "SPED2600",
     "STAT2001",
+    "STAT2006",
     "STAT2101",
+    "STAT2102",
     "THEO1000",
     "TRAN1000",
     "TRAN1010",
@@ -400,6 +405,14 @@
         "from": "(a) Six courses from the 3 Areas,"
       },
       {
+        "raw": "LING3406",
+        "codes": [
+          "LING3406"
+        ],
+        "alt": false,
+        "from": "(a) Six courses from the 3 Areas,"
+      },
+      {
         "raw": "FREN1001",
         "codes": [
           "FREN1001"
@@ -504,7 +517,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -514,6 +527,200 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 5
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "LING1001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "2004, 2005, 2006, 2007, 2008, | 21 Research Components/ Capstone Courses/ Final Year Project",
+          "courses": [
+            {
+              "code": "LING1003",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "LING4000",
+              "alts": []
+            },
+            {
+              "code": "LING4001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 18,
+          "note": "Six courses from the 3 Areas,",
+          "courses": [
+            {
+              "code": "LING3405",
+              "alts": []
+            },
+            {
+              "code": "LING3406",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "FREN1001",
+              "alts": []
+            },
+            {
+              "code": "GERM1001",
+              "alts": []
+            },
+            {
+              "code": "HKSL1001",
+              "alts": []
+            },
+            {
+              "code": "KORE1001",
+              "alts": []
+            },
+            {
+              "code": "SPAN1001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

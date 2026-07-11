@@ -68,7 +68,8 @@
     "BCME4200",
     "MEDF1011",
     "MEDF1012",
-    "MEDF1041"
+    "MEDF1041",
+    "MEDF1042"
   ],
   "buckets": {
     "required": [
@@ -92,6 +93,14 @@
         "raw": "MEDF1041",
         "codes": [
           "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1042",
+        "codes": [
+          "MEDF1042"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -381,7 +390,7 @@
       "units": "10",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -400,6 +409,187 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 18
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 10,
+      "note": null,
+      "courses": [
+        {
+          "code": "MEDF1011",
+          "alts": []
+        },
+        {
+          "code": "MEDF1012",
+          "alts": []
+        },
+        {
+          "code": "MEDF1041",
+          "alts": []
+        },
+        {
+          "code": "MEDF1042",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 145,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCJC1201",
+          "alts": []
+        },
+        {
+          "code": "BCME1206",
+          "alts": []
+        },
+        {
+          "code": "BCME1403",
+          "alts": []
+        },
+        {
+          "code": "BCME1600",
+          "alts": []
+        },
+        {
+          "code": "BCME1610",
+          "alts": []
+        },
+        {
+          "code": "BCME2001",
+          "alts": []
+        },
+        {
+          "code": "BCME2102",
+          "alts": []
+        },
+        {
+          "code": "BCME2103",
+          "alts": []
+        },
+        {
+          "code": "BCME2106",
+          "alts": []
+        },
+        {
+          "code": "BCME2107",
+          "alts": []
+        },
+        {
+          "code": "BCME2202",
+          "alts": []
+        },
+        {
+          "code": "BCME2204",
+          "alts": []
+        },
+        {
+          "code": "BCME2206",
+          "alts": []
+        },
+        {
+          "code": "BCME2208",
+          "alts": []
+        },
+        {
+          "code": "BCME2209",
+          "alts": []
+        },
+        {
+          "code": "BCME2401",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 2,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCME1104",
+          "alts": []
+        },
+        {
+          "code": "BCME2203",
+          "alts": []
+        },
+        {
+          "code": "BCME2207",
+          "alts": []
+        },
+        {
+          "code": "BCME2301",
+          "alts": []
+        },
+        {
+          "code": "BCME2302",
+          "alts": []
+        },
+        {
+          "code": "BCME2303",
+          "alts": []
+        },
+        {
+          "code": "BCME2304",
+          "alts": []
+        },
+        {
+          "code": "BCME2305",
+          "alts": []
+        },
+        {
+          "code": "BCME2306",
+          "alts": []
+        },
+        {
+          "code": "BCME2308",
+          "alts": []
+        },
+        {
+          "code": "BCME2309",
+          "alts": []
+        },
+        {
+          "code": "BCME2310",
+          "alts": []
+        },
+        {
+          "code": "BCME2311",
+          "alts": []
+        },
+        {
+          "code": "BCME2312",
+          "alts": []
+        },
+        {
+          "code": "BCME2313",
+          "alts": []
+        },
+        {
+          "code": "BCME2314",
+          "alts": []
+        },
+        {
+          "code": "BCME2315",
+          "alts": []
+        },
+        {
+          "code": "BCME4106",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

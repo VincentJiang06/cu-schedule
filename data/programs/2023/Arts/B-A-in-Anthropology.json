@@ -857,5 +857,411 @@
       "stream": null,
       "n_courses": 19
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1004",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1100",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 27,
+          "note": null,
+          "courses": [
+            {
+              "code": "ANTH1010",
+              "alts": []
+            },
+            {
+              "code": "ANTH1100",
+              "alts": []
+            },
+            {
+              "code": "ANTH1710",
+              "alts": []
+            },
+            {
+              "code": "ANTH2110",
+              "alts": []
+            },
+            {
+              "code": "ANTH2111",
+              "alts": []
+            },
+            {
+              "code": "ANTH2200",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research components (field project I and II)",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "ANTH4300",
+              "alts": []
+            },
+            {
+              "code": "ANTH4301",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 27,
+      "note": "Nine courses from (a) and/or (b) below, with at least four courses from (b) Ethnography and Area Studies",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ANTH1310",
+              "alts": []
+            },
+            {
+              "code": "ANTH2230",
+              "alts": []
+            },
+            {
+              "code": "ANTH2310",
+              "alts": []
+            },
+            {
+              "code": "ANTH2320",
+              "alts": []
+            },
+            {
+              "code": "ANTH2321",
+              "alts": []
+            },
+            {
+              "code": "ANTH2340",
+              "alts": []
+            },
+            {
+              "code": "ANTH2350",
+              "alts": []
+            },
+            {
+              "code": "ANTH2351",
+              "alts": []
+            },
+            {
+              "code": "ANTH2360",
+              "alts": []
+            },
+            {
+              "code": "ANTH2380",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ANTH1410",
+              "alts": []
+            },
+            {
+              "code": "ANTH2324",
+              "alts": []
+            },
+            {
+              "code": "ANTH2327",
+              "alts": []
+            },
+            {
+              "code": "ANTH2330",
+              "alts": []
+            },
+            {
+              "code": "ANTH2370",
+              "alts": []
+            },
+            {
+              "code": "ANTH2401",
+              "alts": []
+            },
+            {
+              "code": "ANTH2402",
+              "alts": []
+            },
+            {
+              "code": "ANTH2403",
+              "alts": []
+            },
+            {
+              "code": "ANTH2404",
+              "alts": []
+            },
+            {
+              "code": "ANTH2410",
+              "alts": []
+            },
+            {
+              "code": "ANTH2420",
+              "alts": []
+            },
+            {
+              "code": "ANTH2450",
+              "alts": []
+            },
+            {
+              "code": "ANTH2710",
+              "alts": []
+            },
+            {
+              "code": "ANTH2720",
+              "alts": []
+            },
+            {
+              "code": "ANTH2760",
+              "alts": []
+            },
+            {
+              "code": "ANTH3430",
+              "alts": []
+            },
+            {
+              "code": "ANTH3440",
+              "alts": []
+            },
+            {
+              "code": "ANTH3450",
+              "alts": []
+            },
+            {
+              "code": "ANTH3790",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "ANTH2210",
+          "alts": []
+        },
+        {
+          "code": "ANTH3380",
+          "alts": []
+        },
+        {
+          "code": "ANTH3630",
+          "alts": []
+        },
+        {
+          "code": "ANTH2390",
+          "alts": []
+        },
+        {
+          "code": "ANTH2510",
+          "alts": []
+        },
+        {
+          "code": "ANTH2520",
+          "alts": []
+        },
+        {
+          "code": "ANTH2530",
+          "alts": []
+        },
+        {
+          "code": "ANTH2540",
+          "alts": []
+        },
+        {
+          "code": "ANTH2550",
+          "alts": []
+        },
+        {
+          "code": "ANTH2730",
+          "alts": []
+        },
+        {
+          "code": "ANTH2740",
+          "alts": []
+        },
+        {
+          "code": "ANTH2810",
+          "alts": []
+        },
+        {
+          "code": "ANTH3310",
+          "alts": []
+        },
+        {
+          "code": "ANTH3321",
+          "alts": []
+        },
+        {
+          "code": "ANTH3322",
+          "alts": []
+        },
+        {
+          "code": "ANTH3323",
+          "alts": []
+        },
+        {
+          "code": "ANTH3340",
+          "alts": []
+        },
+        {
+          "code": "ANTH3350",
+          "alts": []
+        },
+        {
+          "code": "ANTH3360",
+          "alts": []
+        },
+        {
+          "code": "ANTH3370",
+          "alts": []
+        },
+        {
+          "code": "ANTH3390",
+          "alts": []
+        },
+        {
+          "code": "ANTH3540",
+          "alts": []
+        },
+        {
+          "code": "ANTH3770",
+          "alts": []
+        },
+        {
+          "code": "ANTH3780",
+          "alts": []
+        },
+        {
+          "code": "ANTH3820",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

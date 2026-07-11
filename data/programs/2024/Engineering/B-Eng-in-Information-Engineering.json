@@ -102,6 +102,7 @@
     "ESTR4326",
     "ESTR4328",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "IBBA3040",
@@ -1110,6 +1111,524 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 70
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 11,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG2440",
+          "alts": [
+            "ESTR2004"
+          ]
+        },
+        {
+          "code": "ENGG2720",
+          "alts": [
+            "ESTR2014"
+          ]
+        },
+        {
+          "code": "IERG1080",
+          "alts": []
+        },
+        {
+          "code": "MATH1510",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 32,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2100",
+              "alts": [
+                "ESTR2102"
+              ]
+            },
+            {
+              "code": "IERG1000",
+              "alts": []
+            },
+            {
+              "code": "IERG1810",
+              "alts": []
+            },
+            {
+              "code": "IERG2051",
+              "alts": [
+                "ESTR2302"
+              ]
+            },
+            {
+              "code": "IERG2060",
+              "alts": [
+                "ESTR2304"
+              ]
+            },
+            {
+              "code": "IERG2080",
+              "alts": [
+                "ESTR2306"
+              ]
+            },
+            {
+              "code": "IERG2310",
+              "alts": [
+                "ESTR2300"
+              ]
+            },
+            {
+              "code": "IERG2470",
+              "alts": [
+                "ESTR2308"
+              ]
+            },
+            {
+              "code": "IERG3060",
+              "alts": []
+            },
+            {
+              "code": "IERG3080",
+              "alts": [
+                "ESTR3308"
+              ]
+            },
+            {
+              "code": "IERG3310",
+              "alts": [
+                "ESTR3310"
+              ]
+            },
+            {
+              "code": "IERG3800",
+              "alts": []
+            },
+            {
+              "code": "IERG3810",
+              "alts": []
+            },
+            {
+              "code": "IERG3820",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 1,
+          "note": null,
+          "courses": [
+            {
+              "code": "IERG3840",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "IERG4998",
+              "alts": []
+            },
+            {
+              "code": "IERG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 16,
+      "note": null,
+      "courses": [
+        {
+          "code": "CSCI3150",
+          "alts": [
+            "ESTR3102"
+          ]
+        },
+        {
+          "code": "CSCI3160",
+          "alts": [
+            "ESTR3104"
+          ]
+        },
+        {
+          "code": "ENGG1820",
+          "alts": []
+        },
+        {
+          "code": "IERG3010",
+          "alts": [
+            "ESTR3300"
+          ]
+        },
+        {
+          "code": "IERG3050",
+          "alts": []
+        },
+        {
+          "code": "IERG3070",
+          "alts": []
+        },
+        {
+          "code": "IERG3280",
+          "alts": [
+            "ESTR3302"
+          ]
+        },
+        {
+          "code": "IERG3300",
+          "alts": [
+            "ESTR3304"
+          ]
+        },
+        {
+          "code": "IERG3320",
+          "alts": [
+            "ESTR3306"
+          ]
+        },
+        {
+          "code": "IERG3830",
+          "alts": []
+        },
+        {
+          "code": "IERG4004",
+          "alts": []
+        },
+        {
+          "code": "IERG4030",
+          "alts": [
+            "ESTR4320"
+          ]
+        },
+        {
+          "code": "IERG4060",
+          "alts": []
+        },
+        {
+          "code": "IERG4080",
+          "alts": [
+            "ESTR4312"
+          ]
+        },
+        {
+          "code": "IERG4090",
+          "alts": [
+            "ESTR4302"
+          ]
+        },
+        {
+          "code": "IERG4100",
+          "alts": [
+            "ESTR4304"
+          ]
+        },
+        {
+          "code": "IERG4110",
+          "alts": [
+            "ESTR4314"
+          ]
+        },
+        {
+          "code": "IERG4120",
+          "alts": [
+            "ESTR4328"
+          ]
+        },
+        {
+          "code": "IERG4130",
+          "alts": [
+            "CSCI4130",
+            "ESTR4306"
+          ]
+        },
+        {
+          "code": "IERG4150",
+          "alts": [
+            "ESTR4322"
+          ]
+        },
+        {
+          "code": "IERG4160",
+          "alts": []
+        },
+        {
+          "code": "IERG4180",
+          "alts": [
+            "ESTR4308"
+          ]
+        },
+        {
+          "code": "IERG4190",
+          "alts": []
+        },
+        {
+          "code": "IERG4210",
+          "alts": []
+        },
+        {
+          "code": "IERG4220",
+          "alts": []
+        },
+        {
+          "code": "IERG4230",
+          "alts": []
+        },
+        {
+          "code": "IERG4240",
+          "alts": []
+        },
+        {
+          "code": "IERG4300",
+          "alts": [
+            "ESTR4300"
+          ]
+        },
+        {
+          "code": "IERG4320",
+          "alts": [
+            "ESTR4324"
+          ]
+        },
+        {
+          "code": "IERG4330",
+          "alts": [
+            "ESTR4316"
+          ]
+        },
+        {
+          "code": "IERG4340",
+          "alts": []
+        },
+        {
+          "code": "IERG4350",
+          "alts": []
+        },
+        {
+          "code": "IERG4360",
+          "alts": [
+            "ESTR4326"
+          ]
+        },
+        {
+          "code": "IERG4831",
+          "alts": []
+        },
+        {
+          "code": "IERG4841",
+          "alts": []
+        },
+        {
+          "code": "IERG4851",
+          "alts": []
+        },
+        {
+          "code": "IERG5020",
+          "alts": []
+        },
+        {
+          "code": "IERG5040",
+          "alts": [
+            "ENGG5392"
+          ]
+        },
+        {
+          "code": "IERG5050",
+          "alts": []
+        },
+        {
+          "code": "IERG5090",
+          "alts": []
+        },
+        {
+          "code": "IERG5100",
+          "alts": [
+            "ENGG5303"
+          ]
+        },
+        {
+          "code": "IERG5110",
+          "alts": []
+        },
+        {
+          "code": "IERG5130",
+          "alts": []
+        },
+        {
+          "code": "IERG5140",
+          "alts": []
+        },
+        {
+          "code": "IERG5154",
+          "alts": [
+            "ENGG5301"
+          ]
+        },
+        {
+          "code": "IERG5200",
+          "alts": []
+        },
+        {
+          "code": "IERG5230",
+          "alts": []
+        },
+        {
+          "code": "IERG5240",
+          "alts": [
+            "ENGG5383"
+          ]
+        },
+        {
+          "code": "IERG5250",
+          "alts": []
+        },
+        {
+          "code": "IERG5254",
+          "alts": []
+        },
+        {
+          "code": "IERG5280",
+          "alts": []
+        },
+        {
+          "code": "IERG5290",
+          "alts": []
+        },
+        {
+          "code": "IERG5300",
+          "alts": [
+            "ENGG5302"
+          ]
+        },
+        {
+          "code": "IERG5310",
+          "alts": []
+        },
+        {
+          "code": "IERG5320",
+          "alts": []
+        },
+        {
+          "code": "IERG5330",
+          "alts": []
+        },
+        {
+          "code": "IERG5340",
+          "alts": []
+        },
+        {
+          "code": "IERG5350",
+          "alts": []
+        },
+        {
+          "code": "IERG5360",
+          "alts": []
+        },
+        {
+          "code": "IERG5380",
+          "alts": []
+        },
+        {
+          "code": "IERG5400",
+          "alts": []
+        },
+        {
+          "code": "IERG5450",
+          "alts": []
+        },
+        {
+          "code": "IERG5460",
+          "alts": []
+        },
+        {
+          "code": "IERG5470",
+          "alts": []
+        },
+        {
+          "code": "IERG5590",
+          "alts": []
+        },
+        {
+          "code": "IERG5670",
+          "alts": []
+        },
+        {
+          "code": "CSCI3320",
+          "alts": []
+        },
+        {
+          "code": "CSCI4180",
+          "alts": [
+            "ESTR4106"
+          ]
+        },
+        {
+          "code": "CSCI4190",
+          "alts": []
+        },
+        {
+          "code": "ELEG5491",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

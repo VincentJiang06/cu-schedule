@@ -309,5 +309,167 @@
       "stream": null,
       "n_courses": 3
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "SPED1000",
+          "alts": []
+        },
+        {
+          "code": "SPED2500",
+          "alts": []
+        },
+        {
+          "code": "SPED2720",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 30,
+          "note": "Core Courses in Human Movement Science and Health Studies",
+          "courses": [
+            {
+              "code": "SPED2520",
+              "alts": []
+            },
+            {
+              "code": "SPED2540",
+              "alts": []
+            },
+            {
+              "code": "SPED2600",
+              "alts": []
+            },
+            {
+              "code": "SPED2610",
+              "alts": []
+            },
+            {
+              "code": "SPED2700",
+              "alts": []
+            },
+            {
+              "code": "SPED2810",
+              "alts": []
+            },
+            {
+              "code": "SPED3500",
+              "alts": []
+            },
+            {
+              "code": "SPED3820",
+              "alts": []
+            },
+            {
+              "code": "SPED3920",
+              "alts": []
+            },
+            {
+              "code": "SPED4570",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED4201",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Research Experience",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED3630",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": "Theoretical Courses in Human Movement Science",
+          "courses": [
+            {
+              "code": "SPED3550",
+              "alts": []
+            },
+            {
+              "code": "SPED4560",
+              "alts": []
+            },
+            {
+              "code": "SPED4640",
+              "alts": []
+            },
+            {
+              "code": "SPED4830",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 6,
+          "note": "Theoretical Courses in Health Studies",
+          "courses": [
+            {
+              "code": "CHPR3002",
+              "alts": []
+            },
+            {
+              "code": "SPED3700",
+              "alts": []
+            },
+            {
+              "code": "SPED3910",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
   ]
 }

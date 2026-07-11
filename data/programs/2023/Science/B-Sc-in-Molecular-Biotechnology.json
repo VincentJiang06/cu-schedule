@@ -481,5 +481,221 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "STAT1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 44,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCHE2030",
+          "alts": []
+        },
+        {
+          "code": "BIOL2120",
+          "alts": []
+        },
+        {
+          "code": "LSCI2002",
+          "alts": []
+        },
+        {
+          "code": "MBTE2000",
+          "alts": []
+        },
+        {
+          "code": "MBTE2010",
+          "alts": []
+        },
+        {
+          "code": "MBTE3000",
+          "alts": []
+        },
+        {
+          "code": "MBTE3510",
+          "alts": []
+        },
+        {
+          "code": "MBTE3550",
+          "alts": []
+        },
+        {
+          "code": "MBTE4033",
+          "alts": []
+        },
+        {
+          "code": "MBTE4034",
+          "alts": []
+        },
+        {
+          "code": "MBTE4320",
+          "alts": []
+        },
+        {
+          "code": "MBTE4510",
+          "alts": []
+        },
+        {
+          "code": "MBTE4520",
+          "alts": []
+        },
+        {
+          "code": "MBTE4530",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Capstone Courses and Elective Courses",
+      "units": 13,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LSCI4000",
+              "alts": []
+            },
+            {
+              "code": "MBTE4901",
+              "alts": []
+            },
+            {
+              "code": "MBTE4902",
+              "alts": []
+            },
+            {
+              "code": "MBTE4903",
+              "alts": []
+            },
+            {
+              "code": "MBTE4906",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Elective Courses: Remaining units can be chosen from the following courses",
+          "courses": [
+            {
+              "code": "BCHE3040",
+              "alts": []
+            },
+            {
+              "code": "BIOL2420",
+              "alts": []
+            },
+            {
+              "code": "BMEG2001",
+              "alts": []
+            },
+            {
+              "code": "CMBI3101",
+              "alts": []
+            },
+            {
+              "code": "LSCI1012",
+              "alts": []
+            },
+            {
+              "code": "LSCI2003",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            },
+            {
+              "code": "MBTE3518",
+              "alts": []
+            },
+            {
+              "code": "MBTE3558",
+              "alts": []
+            },
+            {
+              "code": "MBTE3568",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

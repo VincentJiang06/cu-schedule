@@ -368,9 +368,25 @@
         "from": "(d) Capstone Courses"
       },
       {
+        "raw": "GLSD4002",
+        "codes": [
+          "GLSD4002"
+        ],
+        "alt": false,
+        "from": "(d) Capstone Courses"
+      },
+      {
         "raw": "GLSD4003",
         "codes": [
           "GLSD4003"
+        ],
+        "alt": false,
+        "from": "(d) Capstone Courses"
+      },
+      {
+        "raw": "GLSD4004",
+        "codes": [
+          "GLSD4004"
         ],
         "alt": false,
         "from": "(d) Capstone Courses"
@@ -384,9 +400,25 @@
         "from": "(a) Required Courses"
       },
       {
+        "raw": "GLSD3101",
+        "codes": [
+          "GLSD3101"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
         "raw": "GLSD2201",
         "codes": [
           "GLSD2201"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "GLSD3201",
+        "codes": [
+          "GLSD3201"
         ],
         "alt": false,
         "from": "(a) Required Courses"
@@ -400,6 +432,14 @@
         "from": "(a) Required Courses"
       },
       {
+        "raw": "GLSD3301",
+        "codes": [
+          "GLSD3301"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
         "raw": "GLSD2401",
         "codes": [
           "GLSD2401"
@@ -408,9 +448,25 @@
         "from": "(a) Required Courses"
       },
       {
+        "raw": "GLSD3401",
+        "codes": [
+          "GLSD3401"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
         "raw": "GLSD2501",
         "codes": [
           "GLSD2501"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "GLSD3501",
+        "codes": [
+          "GLSD3501"
         ],
         "alt": false,
         "from": "(a) Required Courses"
@@ -461,6 +517,14 @@
         "raw": "GLSD3303",
         "codes": [
           "GLSD3303"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GLSD3701",
+        "codes": [
+          "GLSD3701"
         ],
         "alt": false,
         "from": "(b) Elective Courses"
@@ -1081,7 +1145,7 @@
       "units": "6",
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 4
     },
     {
       "marker": "3.",
@@ -1099,61 +1163,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 5
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": null,
-      "bucket": "required",
-      "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 8
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": null,
-      "bucket": "required",
-      "stream": null,
-      "n_courses": 1
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective Courses",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 13
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required Courses",
-      "units": null,
-      "bucket": "required",
-      "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -1171,7 +1181,61 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -1199,6 +1263,665 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 1
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        },
+        {
+          "code": "URSP1002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD1003",
+              "alts": []
+            },
+            {
+              "code": "GLSD2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 9,
+          "note": "Students are required to study overseas for one academic term in a partner institution via an exchange programme administered by the Office of Academic Links or the Colleges, and complete at least 9 units of courses related to Global Studies approved by the Programme Director. Grades obtained in these courses are not included in the calculation of GPA. Students who are unable to obtain the required units from partner institutions must make up the shortfall by completing appropriate courses at CUHK, subject to the approval of the Programme Director.",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 6,
+          "note": "Students are required to take 6 units of language courses other than those on Chinese (Cantonese/Putonghua) or English. Non-local students whose native language is not Chinese or English must take courses on a language that is approved by the Programme Director.",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD4001",
+              "alts": []
+            },
+            {
+              "code": "GLSD4002",
+              "alts": []
+            },
+            {
+              "code": "GLSD4003",
+              "alts": []
+            },
+            {
+              "code": "GLSD4004",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Concentrations",
+      "units": 24,
+      "note": "Students are required to declare two Concentrations, each requires 12 units of courses, out of the following five options: Global Media",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2101",
+              "alts": []
+            },
+            {
+              "code": "GLSD3101",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "COMM3941",
+              "alts": []
+            },
+            {
+              "code": "GLSD2701",
+              "alts": []
+            },
+            {
+              "code": "GLSD3102",
+              "alts": []
+            },
+            {
+              "code": "GLSD3111",
+              "alts": []
+            },
+            {
+              "code": "GLSD3303",
+              "alts": []
+            },
+            {
+              "code": "GLSD3701",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2201",
+              "alts": []
+            },
+            {
+              "code": "GLSD3201",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GDRS2002",
+              "alts": []
+            },
+            {
+              "code": "GLSD2701",
+              "alts": []
+            },
+            {
+              "code": "GLSD3105",
+              "alts": []
+            },
+            {
+              "code": "GLSD3211",
+              "alts": []
+            },
+            {
+              "code": "GLSD3303",
+              "alts": []
+            },
+            {
+              "code": "GLSD3701",
+              "alts": []
+            },
+            {
+              "code": "PSYC3610",
+              "alts": []
+            },
+            {
+              "code": "URSP2400",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2301",
+              "alts": []
+            },
+            {
+              "code": "GLSD3301",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2701",
+              "alts": []
+            },
+            {
+              "code": "GLSD3106",
+              "alts": []
+            },
+            {
+              "code": "GLSD3302",
+              "alts": []
+            },
+            {
+              "code": "GLSD3311",
+              "alts": []
+            },
+            {
+              "code": "GLSD3402",
+              "alts": []
+            },
+            {
+              "code": "GLSD3403",
+              "alts": []
+            },
+            {
+              "code": "GLSD3404",
+              "alts": []
+            },
+            {
+              "code": "GLSD3405",
+              "alts": []
+            },
+            {
+              "code": "GLSD3701",
+              "alts": []
+            },
+            {
+              "code": "GLSD4401",
+              "alts": []
+            },
+            {
+              "code": "GLSD4402",
+              "alts": []
+            },
+            {
+              "code": "GPAD2185",
+              "alts": []
+            },
+            {
+              "code": "SOWK3340",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2401",
+              "alts": []
+            },
+            {
+              "code": "GLSD3401",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ARCH3424",
+              "alts": []
+            },
+            {
+              "code": "GLSD2701",
+              "alts": []
+            },
+            {
+              "code": "GLSD3411",
+              "alts": []
+            },
+            {
+              "code": "GLSD3701",
+              "alts": []
+            },
+            {
+              "code": "GRMD2404",
+              "alts": []
+            },
+            {
+              "code": "URSP2100",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLSD2501",
+              "alts": []
+            },
+            {
+              "code": "GLSD3501",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ECON3320",
+              "alts": []
+            },
+            {
+              "code": "GLSD2701",
+              "alts": []
+            },
+            {
+              "code": "GLSD3511",
+              "alts": []
+            },
+            {
+              "code": "GLSD3701",
+              "alts": []
+            },
+            {
+              "code": "GLSD4102",
+              "alts": []
+            },
+            {
+              "code": "GLSD4104",
+              "alts": []
+            },
+            {
+              "code": "GRMD2321",
+              "alts": []
+            },
+            {
+              "code": "SOWK4550",
+              "alts": []
+            },
+            {
+              "code": "URSP2200",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "ARCH3424",
+          "alts": []
+        },
+        {
+          "code": "COMM3941",
+          "alts": []
+        },
+        {
+          "code": "ECON3320",
+          "alts": []
+        },
+        {
+          "code": "GDRS3005",
+          "alts": []
+        },
+        {
+          "code": "GLSD2701",
+          "alts": []
+        },
+        {
+          "code": "GLSD3101",
+          "alts": []
+        },
+        {
+          "code": "GLSD3102",
+          "alts": []
+        },
+        {
+          "code": "GLSD3105",
+          "alts": []
+        },
+        {
+          "code": "GLSD3106",
+          "alts": []
+        },
+        {
+          "code": "GLSD3111",
+          "alts": []
+        },
+        {
+          "code": "GLSD3201",
+          "alts": []
+        },
+        {
+          "code": "GLSD3211",
+          "alts": []
+        },
+        {
+          "code": "GLSD3301",
+          "alts": []
+        },
+        {
+          "code": "GLSD3302",
+          "alts": []
+        },
+        {
+          "code": "GLSD3303",
+          "alts": []
+        },
+        {
+          "code": "GLSD3311",
+          "alts": []
+        },
+        {
+          "code": "GLSD3401",
+          "alts": []
+        },
+        {
+          "code": "GLSD3402",
+          "alts": []
+        },
+        {
+          "code": "GLSD3403",
+          "alts": []
+        },
+        {
+          "code": "GLSD3404",
+          "alts": []
+        },
+        {
+          "code": "GLSD3405",
+          "alts": []
+        },
+        {
+          "code": "GLSD3411",
+          "alts": []
+        },
+        {
+          "code": "GLSD3501",
+          "alts": []
+        },
+        {
+          "code": "GLSD3511",
+          "alts": []
+        },
+        {
+          "code": "GLSD3701",
+          "alts": []
+        },
+        {
+          "code": "GLSD4102",
+          "alts": []
+        },
+        {
+          "code": "GLSD4104",
+          "alts": []
+        },
+        {
+          "code": "GLSD4401",
+          "alts": []
+        },
+        {
+          "code": "GLSD4402",
+          "alts": []
+        },
+        {
+          "code": "GPAD3365",
+          "alts": []
+        },
+        {
+          "code": "GRMD3202",
+          "alts": []
+        },
+        {
+          "code": "PSYC3610",
+          "alts": []
+        },
+        {
+          "code": "SOWK3340",
+          "alts": []
+        },
+        {
+          "code": "URSP3300",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "5.",
+      "title": "",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "GLSD3601",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

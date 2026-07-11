@@ -446,5 +446,199 @@
       "stream": null,
       "n_courses": 1
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1004",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1100",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 18,
+      "note": null,
+      "courses": [
+        {
+          "code": "CUMT1002",
+          "alts": []
+        },
+        {
+          "code": "CURE1401",
+          "alts": []
+        },
+        {
+          "code": "CUMT1001",
+          "alts": []
+        },
+        {
+          "code": "CURE1403",
+          "alts": []
+        },
+        {
+          "code": "CUMT1003",
+          "alts": []
+        },
+        {
+          "code": "CURE4401",
+          "alts": []
+        },
+        {
+          "code": "CUMT4001",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        },
+        {
+          "code": "MKTG2010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 45,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Any 9 units from Area 1",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Any 9 units from Area 3",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Any 12 units from Area 4",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": "Any 12 units of CUMT courses, with",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": "Capstone Courses",
+          "courses": [
+            {
+              "code": "CUMT4102",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
   ]
 }

@@ -446,5 +446,242 @@
       "stream": null,
       "n_courses": 17
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "ENGG1110",
+          "alts": []
+        },
+        {
+          "code": "LDTE1300",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 21,
+      "note": null,
+      "courses": [
+        {
+          "code": "CSCI1130",
+          "alts": []
+        },
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "ENGG2440",
+          "alts": []
+        },
+        {
+          "code": "LDTE2100",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "STAT2005",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 35,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "LDTE3100",
+              "alts": []
+            },
+            {
+              "code": "LDTE3110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ENGG1920",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3120",
+              "alts": []
+            },
+            {
+              "code": "MAEG1020",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3500",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "Research Experience",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3510",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": 7,
+      "note": null,
+      "courses": [
+        {
+          "code": "AIST2010",
+          "alts": []
+        },
+        {
+          "code": "AIST3510",
+          "alts": [
+            "SEEM3510"
+          ]
+        },
+        {
+          "code": "CSCI1580",
+          "alts": []
+        },
+        {
+          "code": "CSCI2720",
+          "alts": []
+        },
+        {
+          "code": "CSCI3170",
+          "alts": []
+        },
+        {
+          "code": "CSCI3230",
+          "alts": []
+        },
+        {
+          "code": "CSCI3310",
+          "alts": []
+        },
+        {
+          "code": "EDUC3311",
+          "alts": []
+        },
+        {
+          "code": "ELEG3810",
+          "alts": []
+        },
+        {
+          "code": "LDTE3200",
+          "alts": []
+        },
+        {
+          "code": "LDTE4200",
+          "alts": []
+        },
+        {
+          "code": "LDTE4210",
+          "alts": []
+        },
+        {
+          "code": "LDTE4300",
+          "alts": []
+        },
+        {
+          "code": "LSCI2002",
+          "alts": []
+        },
+        {
+          "code": "MAEG2050",
+          "alts": []
+        },
+        {
+          "code": "PHYS1712",
+          "alts": []
+        },
+        {
+          "code": "PHYS2061",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

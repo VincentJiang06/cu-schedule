@@ -253,7 +253,9 @@
     "SOWK2120",
     "SPED2600",
     "STAT2001",
+    "STAT2006",
     "STAT2101",
+    "STAT2102",
     "THEO1000",
     "TRAN1000",
     "UGED2581",
@@ -863,254 +865,6 @@
         ],
         "alt": false,
         "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC1050",
-        "codes": [
-          "PSYC1050"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC2780",
-        "codes": [
-          "PSYC2780"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3001",
-        "codes": [
-          "PSYC3001"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3360",
-        "codes": [
-          "PSYC3360"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3370",
-        "codes": [
-          "PSYC3370"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3430",
-        "codes": [
-          "PSYC3430"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3440",
-        "codes": [
-          "PSYC3440"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3450",
-        "codes": [
-          "PSYC3450"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3660",
-        "codes": [
-          "PSYC3660"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC1020",
-        "codes": [
-          "PSYC1020"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC1030",
-        "codes": [
-          "PSYC1030"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC1040",
-        "codes": [
-          "PSYC1040"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC2070",
-        "codes": [
-          "PSYC2070"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3002",
-        "codes": [
-          "PSYC3002"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3550",
-        "codes": [
-          "PSYC3550"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3003",
-        "codes": [
-          "PSYC3003"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3610",
-        "codes": [
-          "PSYC3610"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3630",
-        "codes": [
-          "PSYC3630"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3640",
-        "codes": [
-          "PSYC3640"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3750",
-        "codes": [
-          "PSYC3750"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3810",
-        "codes": [
-          "PSYC3810"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3820",
-        "codes": [
-          "PSYC3820"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3004",
-        "codes": [
-          "PSYC3004"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3700",
-        "codes": [
-          "PSYC3700"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3720",
-        "codes": [
-          "PSYC3720"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3730",
-        "codes": [
-          "PSYC3730"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3740",
-        "codes": [
-          "PSYC3740"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3760",
-        "codes": [
-          "PSYC3760"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3770",
-        "codes": [
-          "PSYC3770"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3460",
-        "codes": [
-          "PSYC3460"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
-      },
-      {
-        "raw": "PSYC3470",
-        "codes": [
-          "PSYC3470"
-        ],
-        "alt": false,
-        "from": "(b) At least 6 units chosen from the"
       }
     ],
     "stream_elective": []
@@ -1159,7 +913,622 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 41
+      "n_courses": 10
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        },
+        {
+          "code": "URSP1002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 31,
+      "note": null,
+      "courses": [
+        {
+          "code": "PSYC1091",
+          "alts": []
+        },
+        {
+          "code": "PSYC2010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 24,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "At least five courses chosen from",
+          "courses": [
+            {
+              "code": "PSYC1020",
+              "alts": []
+            },
+            {
+              "code": "PSYC1030",
+              "alts": []
+            },
+            {
+              "code": "PSYC1040",
+              "alts": []
+            },
+            {
+              "code": "PSYC1050",
+              "alts": []
+            },
+            {
+              "code": "PSYC2070",
+              "alts": []
+            },
+            {
+              "code": "PSYC2780",
+              "alts": []
+            },
+            {
+              "code": "PSYC3001",
+              "alts": []
+            },
+            {
+              "code": "PSYC3002",
+              "alts": []
+            },
+            {
+              "code": "PSYC3003",
+              "alts": []
+            },
+            {
+              "code": "PSYC3004",
+              "alts": []
+            },
+            {
+              "code": "PSYC3005",
+              "alts": []
+            },
+            {
+              "code": "PSYC3360",
+              "alts": []
+            },
+            {
+              "code": "PSYC3370",
+              "alts": []
+            },
+            {
+              "code": "PSYC3430",
+              "alts": []
+            },
+            {
+              "code": "PSYC3440",
+              "alts": []
+            },
+            {
+              "code": "PSYC3450",
+              "alts": []
+            },
+            {
+              "code": "PSYC3460",
+              "alts": []
+            },
+            {
+              "code": "PSYC3470",
+              "alts": []
+            },
+            {
+              "code": "PSYC3550",
+              "alts": []
+            },
+            {
+              "code": "PSYC3610",
+              "alts": []
+            },
+            {
+              "code": "PSYC3630",
+              "alts": []
+            },
+            {
+              "code": "PSYC3640",
+              "alts": []
+            },
+            {
+              "code": "PSYC3660",
+              "alts": []
+            },
+            {
+              "code": "PSYC3700",
+              "alts": []
+            },
+            {
+              "code": "PSYC3720",
+              "alts": []
+            },
+            {
+              "code": "PSYC3730",
+              "alts": []
+            },
+            {
+              "code": "PSYC3740",
+              "alts": []
+            },
+            {
+              "code": "PSYC3750",
+              "alts": []
+            },
+            {
+              "code": "PSYC3760",
+              "alts": []
+            },
+            {
+              "code": "PSYC3770",
+              "alts": []
+            },
+            {
+              "code": "PSYC3810",
+              "alts": []
+            },
+            {
+              "code": "PSYC3820",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "At least 6 units chosen from the",
+          "courses": [
+            {
+              "code": "PSYC4900",
+              "alts": []
+            },
+            {
+              "code": "PSYC4901",
+              "alts": []
+            },
+            {
+              "code": "PSYC4902",
+              "alts": []
+            },
+            {
+              "code": "PSYC4903",
+              "alts": []
+            },
+            {
+              "code": "PSYC4904",
+              "alts": []
+            },
+            {
+              "code": "PSYC4905",
+              "alts": []
+            },
+            {
+              "code": "PSYC4906",
+              "alts": []
+            },
+            {
+              "code": "PSYC4909",
+              "alts": []
+            },
+            {
+              "code": "PSYC4910",
+              "alts": []
+            },
+            {
+              "code": "PSYC4920",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "kind": "concentration",
+      "title": "专业方向 · Concentration Area",
+      "units": null,
+      "note": "Students may choose to declare one, or up to two concentration areas by taking at least 15 units (18 units for Training in Guided Self-Help for Low Intensity Psychological Interventions) in the following",
+      "courses": [],
+      "children": [
+        {
+          "marker": "",
+          "title": "Cognitive Science",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC1050",
+              "alts": []
+            },
+            {
+              "code": "PSYC2780",
+              "alts": []
+            },
+            {
+              "code": "PSYC3001",
+              "alts": []
+            },
+            {
+              "code": "PSYC3360",
+              "alts": []
+            },
+            {
+              "code": "PSYC3370",
+              "alts": []
+            },
+            {
+              "code": "PSYC3430",
+              "alts": []
+            },
+            {
+              "code": "PSYC3440",
+              "alts": []
+            },
+            {
+              "code": "PSYC3450",
+              "alts": []
+            },
+            {
+              "code": "PSYC3660",
+              "alts": []
+            },
+            {
+              "code": "PSYC4901",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "Education and Human Development",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC1020",
+              "alts": []
+            },
+            {
+              "code": "PSYC1030",
+              "alts": []
+            },
+            {
+              "code": "PSYC1040",
+              "alts": []
+            },
+            {
+              "code": "PSYC2070",
+              "alts": []
+            },
+            {
+              "code": "PSYC3002",
+              "alts": []
+            },
+            {
+              "code": "PSYC3360",
+              "alts": []
+            },
+            {
+              "code": "PSYC3430",
+              "alts": []
+            },
+            {
+              "code": "PSYC3450",
+              "alts": []
+            },
+            {
+              "code": "PSYC3550",
+              "alts": []
+            },
+            {
+              "code": "PSYC3660",
+              "alts": []
+            },
+            {
+              "code": "PSYC4902",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "Social and Industrial-Organizational Psychology",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC2070",
+              "alts": []
+            },
+            {
+              "code": "PSYC3003",
+              "alts": []
+            },
+            {
+              "code": "PSYC3370",
+              "alts": []
+            },
+            {
+              "code": "PSYC3610",
+              "alts": []
+            },
+            {
+              "code": "PSYC3630",
+              "alts": []
+            },
+            {
+              "code": "PSYC3640",
+              "alts": []
+            },
+            {
+              "code": "PSYC3750",
+              "alts": []
+            },
+            {
+              "code": "PSYC3810",
+              "alts": []
+            },
+            {
+              "code": "PSYC3820",
+              "alts": []
+            },
+            {
+              "code": "PSYC4903",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "Clinical and Health Psychology",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC1020",
+              "alts": []
+            },
+            {
+              "code": "PSYC1040",
+              "alts": []
+            },
+            {
+              "code": "PSYC2780",
+              "alts": []
+            },
+            {
+              "code": "PSYC3004",
+              "alts": []
+            },
+            {
+              "code": "PSYC3700",
+              "alts": []
+            },
+            {
+              "code": "PSYC3720",
+              "alts": []
+            },
+            {
+              "code": "PSYC3730",
+              "alts": []
+            },
+            {
+              "code": "PSYC3740",
+              "alts": []
+            },
+            {
+              "code": "PSYC4904",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "Training in Guided Self-Help for Low Intensity Psychological Interventions",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC3730",
+              "alts": []
+            },
+            {
+              "code": "PSYC3740",
+              "alts": []
+            },
+            {
+              "code": "PSYC3760",
+              "alts": []
+            },
+            {
+              "code": "PSYC3770",
+              "alts": []
+            },
+            {
+              "code": "PSYC4906",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "Computational Psychology and Artificial Intelligence",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "PSYC2780",
+              "alts": []
+            },
+            {
+              "code": "PSYC3360",
+              "alts": []
+            },
+            {
+              "code": "PSYC3430",
+              "alts": []
+            },
+            {
+              "code": "PSYC3450",
+              "alts": []
+            },
+            {
+              "code": "PSYC3460",
+              "alts": []
+            },
+            {
+              "code": "PSYC3470",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

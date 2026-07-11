@@ -853,5 +853,411 @@
       "stream": null,
       "n_courses": 3
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT1111",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Faculty Co-curricular Courses",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "IBBA3040",
+          "alts": []
+        },
+        {
+          "code": "MGNT2511",
+          "alts": []
+        },
+        {
+          "code": "MGNT2512",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 27,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "FINA2010",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": []
+            },
+            {
+              "code": "MATH1030",
+              "alts": []
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ACCT3142",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "DOTE2051",
+              "alts": []
+            },
+            {
+              "code": "SEEM3550",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1510",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE2011",
+              "alts": []
+            },
+            {
+              "code": "DOTE2021",
+              "alts": []
+            },
+            {
+              "code": "FINA2020",
+              "alts": []
+            },
+            {
+              "code": "STAT2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 33,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "At least 9 units of Quantitative Methods courses from",
+          "courses": [
+            {
+              "code": "CSCI3150",
+              "alts": []
+            },
+            {
+              "code": "DOTE4070",
+              "alts": []
+            },
+            {
+              "code": "ECON3121",
+              "alts": []
+            },
+            {
+              "code": "FINA3221",
+              "alts": []
+            },
+            {
+              "code": "FINA3222",
+              "alts": []
+            },
+            {
+              "code": "FINA3290",
+              "alts": []
+            },
+            {
+              "code": "FINA3295",
+              "alts": []
+            },
+            {
+              "code": "FINA4211",
+              "alts": []
+            },
+            {
+              "code": "FINA4221",
+              "alts": []
+            },
+            {
+              "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "SEEM3440",
+              "alts": []
+            },
+            {
+              "code": "STAT3006",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "At least 12 units of Business courses",
+          "courses": [
+            {
+              "code": "ACCT2121",
+              "alts": []
+            },
+            {
+              "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "FINA2210",
+              "alts": []
+            },
+            {
+              "code": "FINA3010",
+              "alts": []
+            },
+            {
+              "code": "FINA3020",
+              "alts": []
+            },
+            {
+              "code": "FINA3030",
+              "alts": []
+            },
+            {
+              "code": "FINA3040",
+              "alts": []
+            },
+            {
+              "code": "FINA3060",
+              "alts": []
+            },
+            {
+              "code": "FINA3070",
+              "alts": []
+            },
+            {
+              "code": "FINA3090",
+              "alts": []
+            },
+            {
+              "code": "FINA3110",
+              "alts": []
+            },
+            {
+              "code": "FINA3210",
+              "alts": []
+            },
+            {
+              "code": "FINA3230",
+              "alts": []
+            },
+            {
+              "code": "FINA3240",
+              "alts": []
+            },
+            {
+              "code": "FINA3310",
+              "alts": []
+            },
+            {
+              "code": "FINA3320",
+              "alts": []
+            },
+            {
+              "code": "FINA3330",
+              "alts": []
+            },
+            {
+              "code": "FINA3340",
+              "alts": []
+            },
+            {
+              "code": "FINA3350",
+              "alts": []
+            },
+            {
+              "code": "FINA3360",
+              "alts": []
+            },
+            {
+              "code": "FINA3370",
+              "alts": []
+            },
+            {
+              "code": "FINA3398",
+              "alts": []
+            },
+            {
+              "code": "FINA3399",
+              "alts": []
+            },
+            {
+              "code": "FINA3420",
+              "alts": []
+            },
+            {
+              "code": "FINA4010",
+              "alts": []
+            },
+            {
+              "code": "FINA4020",
+              "alts": []
+            },
+            {
+              "code": "FINA4030",
+              "alts": []
+            },
+            {
+              "code": "FINA4040",
+              "alts": []
+            },
+            {
+              "code": "FINA4050",
+              "alts": []
+            },
+            {
+              "code": "FINA4060",
+              "alts": []
+            },
+            {
+              "code": "FINA4310",
+              "alts": []
+            },
+            {
+              "code": "FINA4320",
+              "alts": []
+            },
+            {
+              "code": "FINA4330",
+              "alts": []
+            },
+            {
+              "code": "FINA4340",
+              "alts": []
+            },
+            {
+              "code": "FINA4350",
+              "alts": []
+            },
+            {
+              "code": "MGNT1020",
+              "alts": []
+            },
+            {
+              "code": "MGNT2611",
+              "alts": []
+            },
+            {
+              "code": "MGNT4010",
+              "alts": []
+            },
+            {
+              "code": "MKTG2010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "At least 12 units of Core courses",
+          "courses": [
+            {
+              "code": "FINA4110",
+              "alts": []
+            },
+            {
+              "code": "FINA4120",
+              "alts": []
+            },
+            {
+              "code": "FINA4130",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
   ]
 }

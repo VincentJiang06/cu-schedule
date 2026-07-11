@@ -521,5 +521,253 @@
       "stream": null,
       "n_courses": 1
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        },
+        {
+          "code": "URSP1002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 51,
+      "note": null,
+      "courses": [
+        {
+          "code": "SOWK2001",
+          "alts": []
+        },
+        {
+          "code": "SOWK2020",
+          "alts": []
+        },
+        {
+          "code": "SOWK2110",
+          "alts": []
+        },
+        {
+          "code": "SOWK2140",
+          "alts": []
+        },
+        {
+          "code": "SOWK2210",
+          "alts": []
+        },
+        {
+          "code": "SOWK2220",
+          "alts": []
+        },
+        {
+          "code": "SOWK2230",
+          "alts": []
+        },
+        {
+          "code": "SOWK2430",
+          "alts": []
+        },
+        {
+          "code": "SOWK3310",
+          "alts": []
+        },
+        {
+          "code": "SOWK3320",
+          "alts": []
+        },
+        {
+          "code": "SOWK3340",
+          "alts": []
+        },
+        {
+          "code": "SOWK3410",
+          "alts": []
+        },
+        {
+          "code": "SOWK3420",
+          "alts": []
+        },
+        {
+          "code": "SOWK4020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "SOWK2050",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 9,
+          "note": "(capstone course), 4510, 4520, 4530, 4540, 4550, 4570, 4580, 4590, 4591, 4592",
+          "courses": [
+            {
+              "code": "SOWK4030",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "SOWK3240",
+          "alts": []
+        },
+        {
+          "code": "SOWK3250",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

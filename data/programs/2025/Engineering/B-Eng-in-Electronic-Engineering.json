@@ -763,5 +763,360 @@
       "stream": null,
       "n_courses": 36
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1111",
+          "alts": []
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1125",
+          "alts": [
+            "ESTR1007"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 18,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELEG2700",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "6 units of Physics Courses",
+          "courses": [
+            {
+              "code": "ENGG1310",
+              "alts": [
+                "ESTR1003"
+              ]
+            },
+            {
+              "code": "PHYS1110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "9 units of Mathematics Courses",
+          "courses": [
+            {
+              "code": "ENGG1130",
+              "alts": [
+                "ESTR1006"
+              ]
+            },
+            {
+              "code": "ENGG2720",
+              "alts": [
+                "ESTR2014"
+              ]
+            },
+            {
+              "code": "ENGG2740",
+              "alts": [
+                "ESTR2016"
+              ]
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 24,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1120",
+              "alts": []
+            },
+            {
+              "code": "ELEG2201",
+              "alts": []
+            },
+            {
+              "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "ELEG2310",
+              "alts": [
+                "ESTR2300"
+              ]
+            },
+            {
+              "code": "ELEG2601",
+              "alts": []
+            },
+            {
+              "code": "ELEG2602",
+              "alts": []
+            },
+            {
+              "code": "ELEG3201",
+              "alts": [
+                "ESTR3200"
+              ]
+            },
+            {
+              "code": "ELEG3213",
+              "alts": [
+                "ESTR3214"
+              ]
+            },
+            {
+              "code": "ENGG2030",
+              "alts": [
+                "ESTR2206"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELEG4998",
+              "alts": []
+            },
+            {
+              "code": "ELEG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": null,
+      "note": "Elective Courses (at least 6 units",
+      "courses": [
+        {
+          "code": "CENG4120",
+          "alts": []
+        },
+        {
+          "code": "CSCI2100",
+          "alts": [
+            "ESTR2102"
+          ]
+        },
+        {
+          "code": "CSCI2520",
+          "alts": []
+        },
+        {
+          "code": "CSCI3100",
+          "alts": []
+        },
+        {
+          "code": "CSCI3320",
+          "alts": []
+        },
+        {
+          "code": "EEEN4020",
+          "alts": []
+        },
+        {
+          "code": "ESTR4402",
+          "alts": []
+        },
+        {
+          "code": "ELEG3103",
+          "alts": [
+            "ESTR3216"
+          ]
+        },
+        {
+          "code": "ELEG3202",
+          "alts": []
+        },
+        {
+          "code": "ELEG3207",
+          "alts": []
+        },
+        {
+          "code": "ELEG3214",
+          "alts": []
+        },
+        {
+          "code": "ELEG3301",
+          "alts": [
+            "ESTR3204"
+          ]
+        },
+        {
+          "code": "ELEG3302",
+          "alts": []
+        },
+        {
+          "code": "ELEG3303",
+          "alts": [
+            "ESTR3206"
+          ]
+        },
+        {
+          "code": "ELEG3503",
+          "alts": []
+        },
+        {
+          "code": "ELEG3601",
+          "alts": []
+        },
+        {
+          "code": "ELEG3701",
+          "alts": []
+        },
+        {
+          "code": "ELEG3710",
+          "alts": []
+        },
+        {
+          "code": "ELEG3910",
+          "alts": []
+        },
+        {
+          "code": "ELEG4211",
+          "alts": []
+        },
+        {
+          "code": "ELEG4214",
+          "alts": [
+            "ESTR4222"
+          ]
+        },
+        {
+          "code": "ELEG4215",
+          "alts": []
+        },
+        {
+          "code": "ELEG4216",
+          "alts": []
+        },
+        {
+          "code": "ELEG4311",
+          "alts": [
+            "ESTR4216"
+          ]
+        },
+        {
+          "code": "ELEG4312",
+          "alts": []
+        },
+        {
+          "code": "ELEG4313",
+          "alts": []
+        },
+        {
+          "code": "ELEG4511",
+          "alts": [
+            "ESTR4218"
+          ]
+        },
+        {
+          "code": "ELEG4512",
+          "alts": []
+        },
+        {
+          "code": "ELEG4701",
+          "alts": []
+        },
+        {
+          "code": "ENGG3802",
+          "alts": []
+        },
+        {
+          "code": "ENGG3803",
+          "alts": []
+        },
+        {
+          "code": "IERG3080",
+          "alts": []
+        },
+        {
+          "code": "IERG3310",
+          "alts": []
+        },
+        {
+          "code": "ESTR3310",
+          "alts": []
+        },
+        {
+          "code": "SEEM2440",
+          "alts": [
+            "ESTR2500"
+          ]
+        },
+        {
+          "code": "DOTE1030",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

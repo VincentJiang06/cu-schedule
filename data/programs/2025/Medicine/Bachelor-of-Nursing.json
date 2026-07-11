@@ -46,6 +46,7 @@
     "NURS3154",
     "NURS3157",
     "NURS3159",
+    "NURS3315",
     "NURS4102",
     "NURS4121",
     "NURS4122",
@@ -74,6 +75,14 @@
         "raw": "MEDF1041",
         "codes": [
           "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1042",
+        "codes": [
+          "MEDF1042"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -267,7 +276,7 @@
       "units": "10",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -286,6 +295,139 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 9
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 10,
+      "note": null,
+      "courses": [
+        {
+          "code": "MEDF1011",
+          "alts": []
+        },
+        {
+          "code": "MEDF1012",
+          "alts": []
+        },
+        {
+          "code": "MEDF1041",
+          "alts": []
+        },
+        {
+          "code": "MEDF1042",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 99,
+      "note": null,
+      "courses": [
+        {
+          "code": "NURS1151",
+          "alts": []
+        },
+        {
+          "code": "NURS1162",
+          "alts": []
+        },
+        {
+          "code": "NURS1163",
+          "alts": []
+        },
+        {
+          "code": "NURS1164",
+          "alts": []
+        },
+        {
+          "code": "NURS1242",
+          "alts": []
+        },
+        {
+          "code": "NURS1403",
+          "alts": []
+        },
+        {
+          "code": "NURS1603",
+          "alts": []
+        },
+        {
+          "code": "NURS1701",
+          "alts": []
+        },
+        {
+          "code": "NURS3121",
+          "alts": []
+        },
+        {
+          "code": "NURS3126",
+          "alts": []
+        },
+        {
+          "code": "NURS3127",
+          "alts": []
+        },
+        {
+          "code": "NURS3131",
+          "alts": []
+        },
+        {
+          "code": "NURS3135",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "NURS2111",
+          "alts": []
+        },
+        {
+          "code": "NURS2112",
+          "alts": []
+        },
+        {
+          "code": "NURS2113",
+          "alts": []
+        },
+        {
+          "code": "NURS2114",
+          "alts": []
+        },
+        {
+          "code": "NURS2115",
+          "alts": []
+        },
+        {
+          "code": "NURS2116",
+          "alts": []
+        },
+        {
+          "code": "NURS2118",
+          "alts": []
+        },
+        {
+          "code": "NURS2121",
+          "alts": []
+        },
+        {
+          "code": "NURS2122",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

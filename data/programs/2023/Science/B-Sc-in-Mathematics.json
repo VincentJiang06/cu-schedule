@@ -692,5 +692,410 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": 35,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH3060",
+              "alts": []
+            },
+            {
+              "code": "STAT2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH4400",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 27,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "9 units of MATH courses at 3000 or above level, and",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "18 units of courses chosen according to any one",
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 12,
+              "note": "For students who specialize in Enrichment Stream",
+              "courses": [
+                {
+                  "code": "MATH3030",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3040",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3060",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3093",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3340",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4030",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4050",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4060",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4080",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4220",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5011",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5012",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5021",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5022",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5031",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5032",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5051",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5052",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5061",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5062",
+                  "alts": []
+                },
+                {
+                  "code": "MATH5070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3240",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4230",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "For students who specialize in Computational and Applied Mathematics Stream",
+              "courses": [
+                {
+                  "code": "CSCI1540",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3093",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5124",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3550",
+                  "alts": []
+                },
+                {
+                  "code": "ESTR3506",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3570",
+                  "alts": []
+                },
+                {
+                  "code": "ESTR3508",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "For students who specialize in Computational Big Data Analytics Stream",
+              "courses": [
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3340",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3290",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3310",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3360",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4240",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5124",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3550",
+                  "alts": []
+                },
+                {
+                  "code": "ESTR3506",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 12,
+              "note": "For students in the Mathematics Stream",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "For students who specialize in Mathematics-Education Stream",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "For students who specialize in Mathematics-Multidisciplinary Stream",
+              "courses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

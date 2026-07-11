@@ -19,6 +19,40 @@
     "CSCI2040",
     "CSCI2100",
     "CSCI4140",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4120",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "DSME1030",
+    "DSME1040",
+    "DSME2011",
+    "DSME2021",
+    "DSME2030",
+    "DSME2051",
+    "DSME3000",
+    "DSME3030",
+    "DSME4070",
+    "DSME4120",
     "ELTU2014",
     "ELTU3014",
     "ENGG1110",
@@ -61,6 +95,7 @@
     "ESTR4510",
     "ESTR4512",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "FINA3010",
@@ -1014,6 +1049,524 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 17
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": []
+        },
+        {
+          "code": "ESTR1006",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses (all courses in group (a), one course from group (b), and one course from group (c) are required)",
+      "units": 18,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGG2440",
+              "alts": [
+                "ESTR2004"
+              ]
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            },
+            {
+              "code": "ENGG2780",
+              "alts": []
+            },
+            {
+              "code": "ESTR2020",
+              "alts": []
+            },
+            {
+              "code": "MATH1510",
+              "alts": []
+            },
+            {
+              "code": "SEEM2440",
+              "alts": [
+                "ESTR2500"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1120",
+              "alts": [
+                "ESTR1100"
+              ]
+            },
+            {
+              "code": "CSCI1130",
+              "alts": []
+            },
+            {
+              "code": "ESTR1102",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGG1310",
+              "alts": [
+                "ESTR1003"
+              ]
+            },
+            {
+              "code": "ENGG2720",
+              "alts": []
+            },
+            {
+              "code": "ESTR2014",
+              "alts": []
+            },
+            {
+              "code": "ENGG2740",
+              "alts": [
+                "ESTR2016"
+              ]
+            },
+            {
+              "code": "PHYS1003",
+              "alts": []
+            },
+            {
+              "code": "PHYS1110",
+              "alts": []
+            },
+            {
+              "code": "SEEM2460",
+              "alts": [
+                "ESTR2540"
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 24,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ESTR2102",
+              "alts": []
+            },
+            {
+              "code": "SEEM2420",
+              "alts": []
+            },
+            {
+              "code": "SEEM2602",
+              "alts": []
+            },
+            {
+              "code": "SEEM3410",
+              "alts": []
+            },
+            {
+              "code": "SEEM3440",
+              "alts": [
+                "ESTR3500"
+              ]
+            },
+            {
+              "code": "SEEM3450",
+              "alts": [
+                "ESTR3502"
+              ]
+            },
+            {
+              "code": "SEEM3550",
+              "alts": []
+            },
+            {
+              "code": "ESTR3506",
+              "alts": []
+            },
+            {
+              "code": "SEEM3650",
+              "alts": [
+                "ESTR3516"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "SEEM4998",
+              "alts": []
+            },
+            {
+              "code": "SEEM4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 18,
+      "note": null,
+      "courses": [
+        {
+          "code": "AIST3510",
+          "alts": []
+        },
+        {
+          "code": "SEEM3510",
+          "alts": []
+        },
+        {
+          "code": "CSCI4140",
+          "alts": []
+        },
+        {
+          "code": "ENGG1820",
+          "alts": []
+        },
+        {
+          "code": "FTEC4001",
+          "alts": []
+        },
+        {
+          "code": "IERG4210",
+          "alts": []
+        },
+        {
+          "code": "MKTG2010",
+          "alts": []
+        },
+        {
+          "code": "SEEM2520",
+          "alts": []
+        },
+        {
+          "code": "SEEM3430",
+          "alts": []
+        },
+        {
+          "code": "SEEM3460",
+          "alts": [
+            "ESTR3504"
+          ]
+        },
+        {
+          "code": "SEEM3490",
+          "alts": []
+        },
+        {
+          "code": "SEEM3500",
+          "alts": []
+        },
+        {
+          "code": "SEEM3580",
+          "alts": []
+        },
+        {
+          "code": "SEEM3590",
+          "alts": [
+            "ESTR3509"
+          ]
+        },
+        {
+          "code": "SEEM3620",
+          "alts": [
+            "ESTR3514"
+          ]
+        },
+        {
+          "code": "SEEM3630",
+          "alts": [
+            "ESTR3510"
+          ]
+        },
+        {
+          "code": "SEEM3680",
+          "alts": [
+            "ESTR3512"
+          ]
+        },
+        {
+          "code": "SEEM4540",
+          "alts": []
+        },
+        {
+          "code": "SEEM4570",
+          "alts": []
+        },
+        {
+          "code": "SEEM4630",
+          "alts": []
+        },
+        {
+          "code": "SEEM4670",
+          "alts": []
+        },
+        {
+          "code": "SEEM4720",
+          "alts": [
+            "ESTR4506"
+          ]
+        },
+        {
+          "code": "SEEM4730",
+          "alts": [
+            "ESTR4508"
+          ]
+        },
+        {
+          "code": "SEEM4750",
+          "alts": [
+            "ESTR4510"
+          ]
+        },
+        {
+          "code": "SEEM4760",
+          "alts": [
+            "ESTR4512"
+          ]
+        }
+      ],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "SEEM3430",
+              "alts": []
+            },
+            {
+              "code": "SEEM4540",
+              "alts": []
+            },
+            {
+              "code": "AIST3510",
+              "alts": [
+                "SEEM3510"
+              ]
+            },
+            {
+              "code": "CSCI4140",
+              "alts": []
+            },
+            {
+              "code": "ENGG1820",
+              "alts": []
+            },
+            {
+              "code": "FTEC4001",
+              "alts": []
+            },
+            {
+              "code": "FTEC4005",
+              "alts": []
+            },
+            {
+              "code": "FTEC4007",
+              "alts": []
+            },
+            {
+              "code": "IERG4210",
+              "alts": []
+            },
+            {
+              "code": "SEEM3460",
+              "alts": [
+                "ESTR3504"
+              ]
+            },
+            {
+              "code": "SEEM3490",
+              "alts": []
+            },
+            {
+              "code": "SEEM3680",
+              "alts": [
+                "ESTR3512"
+              ]
+            },
+            {
+              "code": "SEEM4570",
+              "alts": []
+            },
+            {
+              "code": "SEEM4630",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "SEEM3620",
+              "alts": [
+                "ESTR3514"
+              ]
+            },
+            {
+              "code": "SEEM4760",
+              "alts": [
+                "ESTR4512"
+              ]
+            },
+            {
+              "code": "ENGG1820",
+              "alts": []
+            },
+            {
+              "code": "FTEC4002",
+              "alts": []
+            },
+            {
+              "code": "FTEC4005",
+              "alts": []
+            },
+            {
+              "code": "MKTG2010",
+              "alts": []
+            },
+            {
+              "code": "SEEM2520",
+              "alts": []
+            },
+            {
+              "code": "SEEM3500",
+              "alts": []
+            },
+            {
+              "code": "SEEM3580",
+              "alts": []
+            },
+            {
+              "code": "SEEM3590",
+              "alts": [
+                "ESTR3509"
+              ]
+            },
+            {
+              "code": "SEEM3630",
+              "alts": [
+                "ESTR3510"
+              ]
+            },
+            {
+              "code": "SEEM4630",
+              "alts": []
+            },
+            {
+              "code": "SEEM4670",
+              "alts": []
+            },
+            {
+              "code": "SEEM4720",
+              "alts": [
+                "ESTR4506"
+              ]
+            },
+            {
+              "code": "SEEM4730",
+              "alts": [
+                "ESTR4508"
+              ]
+            },
+            {
+              "code": "SEEM4750",
+              "alts": []
+            },
+            {
+              "code": "ESTR4510",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

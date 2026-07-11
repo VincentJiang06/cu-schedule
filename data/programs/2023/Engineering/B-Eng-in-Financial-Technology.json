@@ -26,6 +26,38 @@
     "CSCI4160",
     "CSCI4180",
     "CSCI4430",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "DSME1030",
+    "DSME1040",
+    "DSME2011",
+    "DSME2021",
+    "DSME2030",
+    "DSME2051",
+    "DSME3000",
+    "DSME3030",
+    "DSME4070",
     "ECON2011",
     "ECON2021",
     "ELTU1001",
@@ -65,6 +97,7 @@
     "ESTR4312",
     "ESTR4508",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "FINA2310",
@@ -810,6 +843,393 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 31
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 13,
+      "note": null,
+      "courses": [
+        {
+          "code": "CSCI1120",
+          "alts": []
+        },
+        {
+          "code": "ESTR1100",
+          "alts": []
+        },
+        {
+          "code": "ENGG2440",
+          "alts": [
+            "ESTR2004"
+          ]
+        },
+        {
+          "code": "ENGG2760",
+          "alts": [
+            "ESTR2018"
+          ]
+        },
+        {
+          "code": "ENGG2780",
+          "alts": [
+            "ESTR2020"
+          ]
+        },
+        {
+          "code": "MATH1510",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 30,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ESTR2102",
+              "alts": []
+            },
+            {
+              "code": "CSCI4130",
+              "alts": []
+            },
+            {
+              "code": "IERG4130",
+              "alts": []
+            },
+            {
+              "code": "ESTR4306",
+              "alts": []
+            },
+            {
+              "code": "ECON2011",
+              "alts": []
+            },
+            {
+              "code": "FINA2310",
+              "alts": []
+            },
+            {
+              "code": "FTEC2101",
+              "alts": [
+                "ESTR2520"
+              ]
+            },
+            {
+              "code": "FTEC3001",
+              "alts": []
+            },
+            {
+              "code": "FTEC3002",
+              "alts": []
+            },
+            {
+              "code": "SEEM2520",
+              "alts": []
+            },
+            {
+              "code": "SEEM3550",
+              "alts": []
+            },
+            {
+              "code": "ESTR3506",
+              "alts": []
+            },
+            {
+              "code": "SEEM3590",
+              "alts": []
+            },
+            {
+              "code": "ESTR3509",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "FTEC4998",
+              "alts": []
+            },
+            {
+              "code": "FTEC4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 1,
+          "note": null,
+          "courses": [
+            {
+              "code": "FTEC2602",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "FTEC2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 14,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "FTEC4001",
+              "alts": []
+            },
+            {
+              "code": "FTEC4004",
+              "alts": [
+                "IERG4004"
+              ]
+            },
+            {
+              "code": "FTEC4005",
+              "alts": []
+            },
+            {
+              "code": "FTEC4006",
+              "alts": []
+            },
+            {
+              "code": "FTEC4007",
+              "alts": []
+            },
+            {
+              "code": "FTEC4008",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Courses from at least 3 subject",
+          "courses": [
+            {
+              "code": "ACCT2111",
+              "alts": []
+            },
+            {
+              "code": "AIST4010",
+              "alts": []
+            },
+            {
+              "code": "ESTR4140",
+              "alts": []
+            },
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI3150",
+              "alts": []
+            },
+            {
+              "code": "ESTR3102",
+              "alts": []
+            },
+            {
+              "code": "CSCI3160",
+              "alts": []
+            },
+            {
+              "code": "ESTR3104",
+              "alts": []
+            },
+            {
+              "code": "CSCI3320",
+              "alts": []
+            },
+            {
+              "code": "CSCI4160",
+              "alts": []
+            },
+            {
+              "code": "ESTR4104",
+              "alts": []
+            },
+            {
+              "code": "CSCI4180",
+              "alts": []
+            },
+            {
+              "code": "ESTR4106",
+              "alts": []
+            },
+            {
+              "code": "CSCI4430",
+              "alts": []
+            },
+            {
+              "code": "IERG3310",
+              "alts": []
+            },
+            {
+              "code": "ESTR3310",
+              "alts": [
+                "ESTR4120"
+              ]
+            },
+            {
+              "code": "ECON2021",
+              "alts": []
+            },
+            {
+              "code": "ENGG1820",
+              "alts": []
+            },
+            {
+              "code": "FINA3020",
+              "alts": []
+            },
+            {
+              "code": "IERG4080",
+              "alts": []
+            },
+            {
+              "code": "ESTR4312",
+              "alts": []
+            },
+            {
+              "code": "IERG4210",
+              "alts": []
+            },
+            {
+              "code": "MKTG4120",
+              "alts": []
+            },
+            {
+              "code": "SEEM3410",
+              "alts": []
+            },
+            {
+              "code": "SEEM3450",
+              "alts": []
+            },
+            {
+              "code": "ESTR3502",
+              "alts": []
+            },
+            {
+              "code": "SEEM3570",
+              "alts": []
+            },
+            {
+              "code": "ESTR3508",
+              "alts": []
+            },
+            {
+              "code": "SEEM3580",
+              "alts": []
+            },
+            {
+              "code": "SEEM4730",
+              "alts": []
+            },
+            {
+              "code": "ESTR4508",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "FTEC4002",
+          "alts": []
+        },
+        {
+          "code": "FTEC4003",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

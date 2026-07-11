@@ -102,6 +102,7 @@
     "ESTR4422",
     "ESTR4424",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "IBBA3040",
@@ -1291,6 +1292,660 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 9
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1111",
+          "alts": []
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1125",
+          "alts": [
+            "ESTR1007"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 13,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        },
+        {
+          "code": "ENGG2720",
+          "alts": [
+            "ESTR2014"
+          ]
+        },
+        {
+          "code": "ENGG2740",
+          "alts": [
+            "ESTR2016"
+          ]
+        },
+        {
+          "code": "MAEG1020",
+          "alts": []
+        },
+        {
+          "code": "PHYS1110",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 33,
+          "note": null,
+          "courses": [
+            {
+              "code": "EEEN3030",
+              "alts": [
+                "ESTR3402"
+              ]
+            },
+            {
+              "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "MAEG2020",
+              "alts": [
+                "ESTR2400"
+              ]
+            },
+            {
+              "code": "MAEG2030",
+              "alts": [
+                "ESTR2402"
+              ]
+            },
+            {
+              "code": "MAEG2601",
+              "alts": []
+            },
+            {
+              "code": "MAEG2602",
+              "alts": []
+            },
+            {
+              "code": "MAEG3010",
+              "alts": []
+            },
+            {
+              "code": "MAEG3020",
+              "alts": [
+                "ESTR3404"
+              ]
+            },
+            {
+              "code": "MAEG3030",
+              "alts": []
+            },
+            {
+              "code": "MAEG3040",
+              "alts": []
+            },
+            {
+              "code": "MAEG3050",
+              "alts": [
+                "ESTR3406"
+              ]
+            },
+            {
+              "code": "MAEG4030",
+              "alts": [
+                "ESTR4412"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "MAEG4998",
+              "alts": []
+            },
+            {
+              "code": "MAEG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses (at least 6 units",
+      "units": 14,
+      "note": "of MAEG courses at 4000 and above level or their reciprocal ESTR courses or ENGG courses at 5000 level)",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Breadth Electives (at least 6 units chosen from the following courses)",
+          "courses": [
+            {
+              "code": "BMEG3420",
+              "alts": []
+            },
+            {
+              "code": "CSCI1020",
+              "alts": []
+            },
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ESTR2102",
+              "alts": []
+            },
+            {
+              "code": "CSCI3170",
+              "alts": []
+            },
+            {
+              "code": "EEEN2020",
+              "alts": []
+            },
+            {
+              "code": "ELEG3701",
+              "alts": []
+            },
+            {
+              "code": "ENGG1820",
+              "alts": []
+            },
+            {
+              "code": "ENGG2020",
+              "alts": [
+                "ESTR2104"
+              ]
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            },
+            {
+              "code": "ENGG2780",
+              "alts": [
+                "ESTR2020"
+              ]
+            },
+            {
+              "code": "ENGG5404",
+              "alts": []
+            },
+            {
+              "code": "MAEG1010",
+              "alts": []
+            },
+            {
+              "code": "MAEG2050",
+              "alts": []
+            },
+            {
+              "code": "MAEG3060",
+              "alts": [
+                "ESTR3408"
+              ]
+            },
+            {
+              "code": "MAEG3070",
+              "alts": []
+            },
+            {
+              "code": "MAEG3080",
+              "alts": []
+            },
+            {
+              "code": "MAEG3920",
+              "alts": []
+            },
+            {
+              "code": "MAEG5080",
+              "alts": []
+            },
+            {
+              "code": "MAEG5120",
+              "alts": []
+            },
+            {
+              "code": "MAEG5130",
+              "alts": []
+            },
+            {
+              "code": "MAEG5140",
+              "alts": []
+            },
+            {
+              "code": "MAEG5160",
+              "alts": []
+            },
+            {
+              "code": "MGNT1010",
+              "alts": []
+            },
+            {
+              "code": "MGNT4090",
+              "alts": []
+            },
+            {
+              "code": "SEEM2440",
+              "alts": []
+            },
+            {
+              "code": "ESTR2500",
+              "alts": []
+            },
+            {
+              "code": "DOTE1030",
+              "alts": []
+            },
+            {
+              "code": "SEEM3450",
+              "alts": []
+            },
+            {
+              "code": "ESTR3502",
+              "alts": []
+            },
+            {
+              "code": "SEEM3490",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Depth Electives (at least 6 units chosen from the following courses)",
+          "courses": [
+            {
+              "code": "EEEN4010",
+              "alts": [
+                "ESTR4400"
+              ]
+            },
+            {
+              "code": "EEEN4020",
+              "alts": [
+                "ESTR4402"
+              ]
+            },
+            {
+              "code": "EEEN4030",
+              "alts": [
+                "ESTR4404"
+              ]
+            },
+            {
+              "code": "EEEN4050",
+              "alts": [
+                "ESTR4422"
+              ]
+            },
+            {
+              "code": "EEEN4060",
+              "alts": [
+                "ESTR4424"
+              ]
+            },
+            {
+              "code": "ENGG5402",
+              "alts": []
+            },
+            {
+              "code": "ENGG5403",
+              "alts": []
+            },
+            {
+              "code": "ENGG5405",
+              "alts": []
+            },
+            {
+              "code": "MAEG4010",
+              "alts": [
+                "ESTR4408"
+              ]
+            },
+            {
+              "code": "MAEG4020",
+              "alts": [
+                "ESTR4410"
+              ]
+            },
+            {
+              "code": "MAEG4040",
+              "alts": [
+                "ESTR4414"
+              ]
+            },
+            {
+              "code": "MAEG4050",
+              "alts": [
+                "ESTR4416"
+              ]
+            },
+            {
+              "code": "MAEG4060",
+              "alts": []
+            },
+            {
+              "code": "MAEG4070",
+              "alts": [
+                "ESTR4418"
+              ]
+            },
+            {
+              "code": "MAEG4080",
+              "alts": [
+                "ESTR4420"
+              ]
+            },
+            {
+              "code": "MAEG5030",
+              "alts": []
+            },
+            {
+              "code": "MAEG5060",
+              "alts": []
+            },
+            {
+              "code": "MAEG5070",
+              "alts": []
+            },
+            {
+              "code": "MAEG5090",
+              "alts": []
+            },
+            {
+              "code": "MAEG5110",
+              "alts": []
+            },
+            {
+              "code": "MAEG5150",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Required Courses",
+          "courses": [
+            {
+              "code": "CSCI1020",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Elective Courses",
+          "courses": [
+            {
+              "code": "ENGG5404",
+              "alts": []
+            },
+            {
+              "code": "ENGG5405",
+              "alts": []
+            },
+            {
+              "code": "MAEG2050",
+              "alts": []
+            },
+            {
+              "code": "MAEG3060",
+              "alts": [
+                "ESTR3408"
+              ]
+            },
+            {
+              "code": "MAEG3070",
+              "alts": []
+            },
+            {
+              "code": "MAEG3080",
+              "alts": []
+            },
+            {
+              "code": "MAEG3920",
+              "alts": []
+            },
+            {
+              "code": "MAEG4010",
+              "alts": [
+                "ESTR4408"
+              ]
+            },
+            {
+              "code": "MAEG4020",
+              "alts": [
+                "ESTR4410"
+              ]
+            },
+            {
+              "code": "MAEG4060",
+              "alts": []
+            },
+            {
+              "code": "MAEG4070",
+              "alts": [
+                "ESTR4418"
+              ]
+            },
+            {
+              "code": "MAEG5030",
+              "alts": []
+            },
+            {
+              "code": "MAEG5120",
+              "alts": []
+            },
+            {
+              "code": "MAEG5130",
+              "alts": []
+            },
+            {
+              "code": "MAEG5160",
+              "alts": []
+            },
+            {
+              "code": "SEEM3500",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Required Courses",
+          "courses": [
+            {
+              "code": "CSCI1020",
+              "alts": []
+            },
+            {
+              "code": "MAEG4040",
+              "alts": [
+                "ESTR4414"
+              ]
+            },
+            {
+              "code": "MAEG4050",
+              "alts": [
+                "ESTR4416"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Elective Courses",
+          "courses": [
+            {
+              "code": "ELEG3701",
+              "alts": []
+            },
+            {
+              "code": "ENGG2020",
+              "alts": [
+                "ESTR2104"
+              ]
+            },
+            {
+              "code": "ENGG5404",
+              "alts": []
+            },
+            {
+              "code": "MAEG2050",
+              "alts": []
+            },
+            {
+              "code": "MAEG3080",
+              "alts": []
+            },
+            {
+              "code": "MAEG5080",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Required Courses",
+          "courses": [
+            {
+              "code": "CSCI1020",
+              "alts": []
+            },
+            {
+              "code": "MAEG3060",
+              "alts": [
+                "ESTR3408"
+              ]
+            },
+            {
+              "code": "MAEG4050",
+              "alts": [
+                "ESTR4416"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Elective Courses",
+          "courses": [
+            {
+              "code": "BMEG3420",
+              "alts": []
+            },
+            {
+              "code": "ENGG5402",
+              "alts": []
+            },
+            {
+              "code": "ENGG5403",
+              "alts": []
+            },
+            {
+              "code": "ENGG5404",
+              "alts": []
+            },
+            {
+              "code": "MAEG1010",
+              "alts": []
+            },
+            {
+              "code": "MAEG4010",
+              "alts": [
+                "ESTR4408"
+              ]
+            },
+            {
+              "code": "MAEG5090",
+              "alts": []
+            },
+            {
+              "code": "MAEG5120",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

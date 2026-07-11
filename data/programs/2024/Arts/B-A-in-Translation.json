@@ -702,5 +702,332 @@
       "stream": null,
       "n_courses": 25
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 12,
+          "note": null,
+          "courses": [
+            {
+              "code": "TRAN1010",
+              "alts": []
+            },
+            {
+              "code": "TRAN1030",
+              "alts": []
+            },
+            {
+              "code": "TRAN2070",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "TRAN4510",
+              "alts": []
+            },
+            {
+              "code": "TRAN4520",
+              "alts": []
+            },
+            {
+              "code": "TRAN4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 42,
+      "note": "Students are required to complete 42 units of elective courses from the following lists of courses, including at least one course from each of Electives Cluster A and Electives Cluster B",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "TRAN2120",
+              "alts": []
+            },
+            {
+              "code": "TRAN3080",
+              "alts": []
+            },
+            {
+              "code": "TRAN3720",
+              "alts": []
+            },
+            {
+              "code": "TRAN4070",
+              "alts": []
+            },
+            {
+              "code": "TRAN4210",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "TRAN2140",
+              "alts": []
+            },
+            {
+              "code": "TRAN2150",
+              "alts": []
+            },
+            {
+              "code": "TRAN2240",
+              "alts": []
+            },
+            {
+              "code": "TRAN2250",
+              "alts": []
+            },
+            {
+              "code": "TRAN3240",
+              "alts": []
+            },
+            {
+              "code": "TRAN4050",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "TRAN1120",
+              "alts": []
+            },
+            {
+              "code": "TRAN1130",
+              "alts": []
+            },
+            {
+              "code": "TRAN2020",
+              "alts": []
+            },
+            {
+              "code": "TRAN2050",
+              "alts": []
+            },
+            {
+              "code": "TRAN2110",
+              "alts": []
+            },
+            {
+              "code": "TRAN2130",
+              "alts": []
+            },
+            {
+              "code": "TRAN2840",
+              "alts": []
+            },
+            {
+              "code": "TRAN3170",
+              "alts": []
+            },
+            {
+              "code": "TRAN3180",
+              "alts": []
+            },
+            {
+              "code": "TRAN3270",
+              "alts": []
+            },
+            {
+              "code": "TRAN3280",
+              "alts": []
+            },
+            {
+              "code": "TRAN3620",
+              "alts": []
+            },
+            {
+              "code": "TRAN3800",
+              "alts": []
+            },
+            {
+              "code": "TRAN3810",
+              "alts": []
+            },
+            {
+              "code": "TRAN3820",
+              "alts": []
+            },
+            {
+              "code": "TRAN3830",
+              "alts": []
+            },
+            {
+              "code": "TRAN3844",
+              "alts": []
+            },
+            {
+              "code": "TRAN3845",
+              "alts": []
+            },
+            {
+              "code": "TRAN3850",
+              "alts": []
+            },
+            {
+              "code": "TRAN3860",
+              "alts": []
+            },
+            {
+              "code": "TRAN3870",
+              "alts": []
+            },
+            {
+              "code": "TRAN3880",
+              "alts": []
+            },
+            {
+              "code": "TRAN3890",
+              "alts": []
+            },
+            {
+              "code": "TRAN4800",
+              "alts": []
+            },
+            {
+              "code": "TRAN4840",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "TRAN2610",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

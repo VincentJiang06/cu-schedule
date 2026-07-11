@@ -573,5 +573,250 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "STAT1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 30,
+      "note": null,
+      "courses": [
+        {
+          "code": "BCHE2030",
+          "alts": []
+        },
+        {
+          "code": "BIOL2120",
+          "alts": []
+        },
+        {
+          "code": "BIOL2210",
+          "alts": []
+        },
+        {
+          "code": "BIOL2410",
+          "alts": []
+        },
+        {
+          "code": "BIOL2420",
+          "alts": []
+        },
+        {
+          "code": "BIOL3012",
+          "alts": []
+        },
+        {
+          "code": "BIOL3022",
+          "alts": []
+        },
+        {
+          "code": "BIOL3560",
+          "alts": []
+        },
+        {
+          "code": "BIOL3570",
+          "alts": []
+        },
+        {
+          "code": "BIOL3610",
+          "alts": []
+        },
+        {
+          "code": "BIOL3620",
+          "alts": []
+        },
+        {
+          "code": "BIOL4010",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 25,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "BIOL2213",
+              "alts": []
+            },
+            {
+              "code": "BIOL4012",
+              "alts": []
+            },
+            {
+              "code": "MBTE4033",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "BCHE3050",
+              "alts": []
+            },
+            {
+              "code": "BIOL3310",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL3510",
+              "alts": []
+            },
+            {
+              "code": "BIOL3530",
+              "alts": []
+            },
+            {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "FNSC4101",
+              "alts": []
+            },
+            {
+              "code": "CMBI4101",
+              "alts": []
+            },
+            {
+              "code": "FNSC3010",
+              "alts": []
+            },
+            {
+              "code": "LSCI2002",
+              "alts": []
+            },
+            {
+              "code": "MBTE3510",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Capstone course (at least 3",
+          "courses": [
+            {
+              "code": "BIOL4901",
+              "alts": []
+            },
+            {
+              "code": "BIOL4902",
+              "alts": []
+            },
+            {
+              "code": "BIOL4903",
+              "alts": []
+            },
+            {
+              "code": "BIOL4906",
+              "alts": []
+            },
+            {
+              "code": "BIOL4907",
+              "alts": []
+            },
+            {
+              "code": "LSCI4000",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

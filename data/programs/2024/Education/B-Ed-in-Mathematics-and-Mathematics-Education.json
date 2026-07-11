@@ -94,7 +94,8 @@
     "MATH4250",
     "MATH4260",
     "MATH4280",
-    "MATH4400"
+    "MATH4400",
+    "MATH4900"
   ],
   "buckets": {
     "required": [
@@ -256,6 +257,14 @@
         "raw": "MATH4400",
         "codes": [
           "MATH4400"
+        ],
+        "alt": false,
+        "from": "(i) MATH2060/2068, MATH courses at 3000"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
         ],
         "alt": false,
         "from": "(i) MATH2060/2068, MATH courses at 3000"
@@ -451,12 +460,12 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "MATH2060/2068, MATH courses at 3000",
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "(ii)",
@@ -475,6 +484,251 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 13
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "EDUC2312",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 26,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 21,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMED3011",
+              "alts": []
+            },
+            {
+              "code": "BMED3021",
+              "alts": []
+            },
+            {
+              "code": "BMED3031",
+              "alts": []
+            },
+            {
+              "code": "BMED3051",
+              "alts": []
+            },
+            {
+              "code": "BMED3071",
+              "alts": []
+            },
+            {
+              "code": "BMED3081",
+              "alts": []
+            },
+            {
+              "code": "BMED3091",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 10,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC2240",
+              "alts": []
+            },
+            {
+              "code": "EDUC3201",
+              "alts": []
+            },
+            {
+              "code": "EDUC3311",
+              "alts": []
+            },
+            {
+              "code": "EDUC4340",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 10,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC4030",
+              "alts": []
+            },
+            {
+              "code": "EDUC4040",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "Research Experience",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMED4510",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "18 units of Subject Knowledge courses chosen from (i) OR (i) and (ii)",
+          "units": 18,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH2060",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4400",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4900",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "9 units of courses chosen from one",
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC2210",
+              "alts": []
+            },
+            {
+              "code": "EDUC2220",
+              "alts": []
+            },
+            {
+              "code": "EDUC3140",
+              "alts": []
+            },
+            {
+              "code": "EDUC3150",
+              "alts": []
+            },
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "EDUC3260",
+              "alts": []
+            },
+            {
+              "code": "EDUC3270",
+              "alts": []
+            },
+            {
+              "code": "EDUC3280",
+              "alts": []
+            },
+            {
+              "code": "EDUC3290",
+              "alts": []
+            },
+            {
+              "code": "EDUC4110",
+              "alts": []
+            },
+            {
+              "code": "EDUC4131",
+              "alts": []
+            },
+            {
+              "code": "EDUC4320",
+              "alts": []
+            },
+            {
+              "code": "EDUC4330",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

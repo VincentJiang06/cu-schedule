@@ -106,14 +106,30 @@ Candidate = { course, status: 'open'|'rearrange'|'conflict'|'tba',
 无法核验条件(灰标「看先修」,悬停展示 `prereqText`)。**绝不把 `unverifiable` 渲染成
 拦截性提示**——引擎的铁律是宁可漏报不误报,UI 不得推翻这条语义(详见 schema.md)。
 
-### 培养方案 — `src/lib/programs.ts`(in-flight,数据已就绪)
+### 培养方案 — `src/lib/programs.ts`(已接入信息页大课表 `ProgramTable`)
 ```ts
 loadPrograms(): Promise<Program[]>             // programs.json,模块级缓存
 searchPrograms(programs, query, year?)         // 中英文名 type-ahead
 requiredCourseKeys(p) / programCourseKeys(p, scope) / allCourseKeys(p): Set<string>
 ```
-返回的都是与 `Course.key` 同构的 8 字符 key,可直接 `set.has(course.key)` 做
-"本专业需要"筛选。预期接入点:个人信息卡 + 搜索过滤。
+上面几个返回的都是与 `Course.key` 同构的 8 字符 key,可直接 `set.has(course.key)` 做
+"本专业需要"筛选。接入点:个人信息卡 + 搜索过滤,以及信息页大课表。
+
+**`Program.structure`(`SectionNode[]`)** 是培养方案的忠实层级树,字段级 schema 见
+[programs-data.md 的「structure 树」](programs-data.md)(以 `programs.ts` 的
+`SectionNode` / `ProgramCourse` 类型为权威)。前端(`ProgramTable`)的渲染约定:
+
+1. **递归渲染** `SectionNode` 树:`marker` + `title` 作标题行,`units`/`note` 作辅助行,
+   `courses` 渲染成课程卡,`children` 递归下一层。
+2. **按 `kind` 打徽章**:`kind==='concentration'` → 「可选方向」,`kind==='stream'` →
+   「选修方向」,二者共用可选段底纹(`.pg-section--concentration`,stream 另加
+   `.pg-section--stream` 细分描边);`kind` 不存在的节点(含内联 `Choose any ONE` 的强制
+   N 选一 stream)**不打徽章**,照普通分区渲染。
+3. **叶子 `courses` 用 courseKey 匹配 taken**:每门课的 `code`(及 `alts`)已是 8 字符 key,
+   命中任一即视为已修——直接 `takenSet.has(code)`,不要再 `courseKey()` 二次规范化。
+4. **兜底节点照常渲染**:`title==="其他相关课程"` 的 catch-all 就是一个普通 `SectionNode`
+   (它保证零丢课),无需特殊分支,递归到它时按常规分区画即可。
+5. **`structure` 为 `[]`**(prose_only 方案)时回退用 `program.all` 渲染整份课号 inventory。
 
 ### 已修/要上判定 — `src/lib/requirements.ts`
 前端一般只消费 `Candidate.prereqStatus`;若需自行求值,用

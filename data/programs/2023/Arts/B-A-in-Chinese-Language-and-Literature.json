@@ -133,12 +133,14 @@
     "FAAS3105",
     "FAAS3223",
     "FAAS4106",
+    "FAAS4109",
     "HIST1000",
     "HIST1700",
     "JASP1090",
     "LING1000",
     "LING1002",
     "LING3108",
+    "LING4401",
     "MUSC1000",
     "PHIL1110",
     "THEO1000",
@@ -509,6 +511,188 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1004",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1100",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": 39,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHLL1110",
+              "alts": []
+            },
+            {
+              "code": "CHLL1211",
+              "alts": []
+            },
+            {
+              "code": "CHLL1401",
+              "alts": []
+            },
+            {
+              "code": "CHLL2121",
+              "alts": []
+            },
+            {
+              "code": "CHLL2131",
+              "alts": []
+            },
+            {
+              "code": "CHLL2212",
+              "alts": []
+            },
+            {
+              "code": "CHLL2300",
+              "alts": []
+            },
+            {
+              "code": "CHLL2301",
+              "alts": []
+            },
+            {
+              "code": "CHLL2350",
+              "alts": []
+            },
+            {
+              "code": "CHLL2401",
+              "alts": []
+            },
+            {
+              "code": "CHLL2402",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHLL4001",
+              "alts": []
+            },
+            {
+              "code": "CHLL4002",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 24,
+      "note": "Students are required to complete 24 units of elective courses from the following Speciality courses, of which at least one course from category (1) or (2) and one course from category (3) or (4). Speciality courses: (1) Language and Linguistics | CHLL | 3110, 3121, 3131, 3132, 3141, 3142, 3143, 3144, 3145, 3146, 3151, 3161, 3162, 4110, 4111, 4121, 4141, 4151, 4161 (2) Ancient Documents | CHLL | 3221, 3222, 3223, 3231, 3232, 3233, 4224, 4241, 4242, 4243, 4244, 4251, 4252, 4253, 4254 (3) Classical Literature | CHLL | 3310, 3311, 3312, 3313, 3314, 3315, 3316, 3317, 3321, 3322, 3323, 3324, 3341, 3351, 4310, 4311, 4312, 4313, 4314, 4315, 4320, 4321, 4322, 4330, 4331, 4332, 4340, 4341, 4342, 4343 (4) Modern Chinese Literature | CHLL | 3402, 3403, 3404, 3405, 3406, 3407, 3408, 3409, 3410, 3411, 3412, 3413, 4401, 4402, 4403, 4404, 4405, 4406, 4407, 4408, 4409, 4410, 4411, 4412, 4413, 4414, 4415, 4416",
+      "courses": [],
+      "children": []
     }
   ]
 }

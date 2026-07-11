@@ -442,5 +442,236 @@
       "stream": null,
       "n_courses": 4
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT1111",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1510",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 39,
+          "note": null,
+          "courses": [
+            {
+              "code": "ACCT2121",
+              "alts": []
+            },
+            {
+              "code": "FINA2010",
+              "alts": []
+            },
+            {
+              "code": "FINA2200",
+              "alts": []
+            },
+            {
+              "code": "FINA2220",
+              "alts": []
+            },
+            {
+              "code": "FINA2230",
+              "alts": []
+            },
+            {
+              "code": "MGNT1020",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 18,
+          "note": "18 units of courses from the following",
+          "courses": [
+            {
+              "code": "ACCT3151",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "DOTE2051",
+              "alts": []
+            },
+            {
+              "code": "FINA3010",
+              "alts": []
+            },
+            {
+              "code": "FINA3030",
+              "alts": []
+            },
+            {
+              "code": "FINA3070",
+              "alts": []
+            },
+            {
+              "code": "FINA3250",
+              "alts": []
+            },
+            {
+              "code": "IBBA3040",
+              "alts": []
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
+            },
+            {
+              "code": "MKTG2010",
+              "alts": []
+            },
+            {
+              "code": "MGNT2511",
+              "alts": []
+            },
+            {
+              "code": "MGNT2512",
+              "alts": []
+            },
+            {
+              "code": "MGNT2611",
+              "alts": []
+            },
+            {
+              "code": "RMSC4001",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "3 units of Capstone course from the",
+          "courses": [
+            {
+              "code": "FINA4270",
+              "alts": []
+            },
+            {
+              "code": "FINA4290",
+              "alts": []
+            },
+            {
+              "code": "FINA4291",
+              "alts": []
+            },
+            {
+              "code": "MGNT4010",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "FINA3080",
+          "alts": []
+        },
+        {
+          "code": "FINA3210",
+          "alts": []
+        },
+        {
+          "code": "FINA3221",
+          "alts": []
+        },
+        {
+          "code": "FINA3222",
+          "alts": []
+        },
+        {
+          "code": "FINA3230",
+          "alts": []
+        },
+        {
+          "code": "FINA3240",
+          "alts": []
+        },
+        {
+          "code": "FINA3290",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

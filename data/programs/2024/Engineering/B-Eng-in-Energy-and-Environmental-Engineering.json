@@ -100,6 +100,7 @@
     "ESTR4422",
     "ESTR4424",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "GRMD2404",
@@ -808,6 +809,396 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 36
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 13,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG2720",
+          "alts": [
+            "ESTR2014"
+          ]
+        },
+        {
+          "code": "ENGG2740",
+          "alts": [
+            "ESTR2016"
+          ]
+        },
+        {
+          "code": "MAEG1020",
+          "alts": []
+        },
+        {
+          "code": "MATH1510",
+          "alts": []
+        },
+        {
+          "code": "PHYS1110",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 33,
+          "note": null,
+          "courses": [
+            {
+              "code": "EEEN2020",
+              "alts": []
+            },
+            {
+              "code": "EEEN2030",
+              "alts": []
+            },
+            {
+              "code": "EEEN2040",
+              "alts": [
+                "ESTR2404"
+              ]
+            },
+            {
+              "code": "EEEN2602",
+              "alts": []
+            },
+            {
+              "code": "EEEN3030",
+              "alts": [
+                "ESTR3402"
+              ]
+            },
+            {
+              "code": "EESC2800",
+              "alts": []
+            },
+            {
+              "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "MAEG2030",
+              "alts": [
+                "ESTR2402"
+              ]
+            },
+            {
+              "code": "MAEG2601",
+              "alts": []
+            },
+            {
+              "code": "MAEG3030",
+              "alts": []
+            },
+            {
+              "code": "MAEG4030",
+              "alts": [
+                "ESTR4412"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "EEEN4998",
+              "alts": []
+            },
+            {
+              "code": "EEEN4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 14,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Core Electives (at least 6",
+          "courses": [
+            {
+              "code": "EEEN3010",
+              "alts": [
+                "ESTR3410"
+              ]
+            },
+            {
+              "code": "EEEN4020",
+              "alts": [
+                "ESTR4402"
+              ]
+            },
+            {
+              "code": "EEEN4050",
+              "alts": [
+                "ESTR4422"
+              ]
+            },
+            {
+              "code": "EEEN4060",
+              "alts": [
+                "ESTR4424"
+              ]
+            },
+            {
+              "code": "EEEN4070",
+              "alts": []
+            },
+            {
+              "code": "EESC4240",
+              "alts": []
+            },
+            {
+              "code": "MAEG3050",
+              "alts": [
+                "ESTR3406"
+              ]
+            },
+            {
+              "code": "MAEG4080",
+              "alts": [
+                "ESTR4420"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Non-core Electives",
+          "courses": [
+            {
+              "code": "CHEM1380",
+              "alts": []
+            },
+            {
+              "code": "CHEM4280",
+              "alts": []
+            },
+            {
+              "code": "CSCI1020",
+              "alts": []
+            },
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ESTR2102",
+              "alts": []
+            },
+            {
+              "code": "EEEN3020",
+              "alts": [
+                "ESTR3400"
+              ]
+            },
+            {
+              "code": "EEEN4010",
+              "alts": [
+                "ESTR4400"
+              ]
+            },
+            {
+              "code": "EEEN4030",
+              "alts": [
+                "ESTR4404"
+              ]
+            },
+            {
+              "code": "EESC2020",
+              "alts": []
+            },
+            {
+              "code": "EESC2515",
+              "alts": []
+            },
+            {
+              "code": "EESC3200",
+              "alts": []
+            },
+            {
+              "code": "ELEG3601",
+              "alts": []
+            },
+            {
+              "code": "ENGG1820",
+              "alts": []
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            },
+            {
+              "code": "ENGG2780",
+              "alts": [
+                "ESTR2020"
+              ]
+            },
+            {
+              "code": "GRMD2404",
+              "alts": []
+            },
+            {
+              "code": "GRMD3202",
+              "alts": []
+            },
+            {
+              "code": "MAEG3920",
+              "alts": []
+            },
+            {
+              "code": "MAEG5120",
+              "alts": []
+            },
+            {
+              "code": "MAEG5140",
+              "alts": []
+            },
+            {
+              "code": "MAEG5150",
+              "alts": []
+            },
+            {
+              "code": "PHYS4420",
+              "alts": []
+            },
+            {
+              "code": "CHEM4280",
+              "alts": []
+            },
+            {
+              "code": "EEEN4020",
+              "alts": [
+                "ESTR4402"
+              ]
+            },
+            {
+              "code": "EEEN4050",
+              "alts": [
+                "ESTR4422"
+              ]
+            },
+            {
+              "code": "EEEN4060",
+              "alts": [
+                "ESTR4424"
+              ]
+            },
+            {
+              "code": "EEEN3010",
+              "alts": [
+                "ESTR3410"
+              ]
+            },
+            {
+              "code": "EEEN4070",
+              "alts": []
+            },
+            {
+              "code": "MAEG3050",
+              "alts": [
+                "ESTR3406"
+              ]
+            },
+            {
+              "code": "EESC3230",
+              "alts": []
+            },
+            {
+              "code": "EESC4240",
+              "alts": []
+            },
+            {
+              "code": "EESC4340",
+              "alts": []
+            },
+            {
+              "code": "GRMD3203",
+              "alts": []
+            },
+            {
+              "code": "GRMD4202",
+              "alts": []
+            },
+            {
+              "code": "GRMD4204",
+              "alts": []
+            },
+            {
+              "code": "MAEG4080",
+              "alts": [
+                "ESTR4420"
+              ]
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

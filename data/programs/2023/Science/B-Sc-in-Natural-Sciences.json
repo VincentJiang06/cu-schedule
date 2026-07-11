@@ -328,5 +328,56 @@
     "elective": [],
     "stream_elective": []
   },
-  "groups_outline": []
+  "groups_outline": [],
+  "structure": [
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "ESSC2010",
+          "alts": []
+        },
+        {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
+          "code": "MATH2055",
+          "alts": []
+        },
+        {
+          "code": "MATH2070",
+          "alts": []
+        },
+        {
+          "code": "MATH2230",
+          "alts": []
+        },
+        {
+          "code": "MATH3010",
+          "alts": []
+        },
+        {
+          "code": "MATH3230",
+          "alts": []
+        },
+        {
+          "code": "MATH3240",
+          "alts": []
+        },
+        {
+          "code": "MATH4220",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
 }

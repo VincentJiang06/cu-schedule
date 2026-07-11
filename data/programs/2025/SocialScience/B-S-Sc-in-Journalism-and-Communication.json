@@ -359,7 +359,9 @@
     "SOWK1114",
     "SPED2600",
     "STAT2001",
+    "STAT2006",
     "STAT2101",
+    "STAT2102",
     "URSP1001"
   ],
   "buckets": {
@@ -653,6 +655,14 @@
         "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
       },
       {
+        "raw": "COMM3140",
+        "codes": [
+          "COMM3140"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
         "raw": "COMM1180",
         "codes": [
           "COMM1180"
@@ -672,6 +682,14 @@
         "raw": "COMM2180",
         "codes": [
           "COMM2180"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM3610",
+        "codes": [
+          "COMM3610"
         ],
         "alt": false,
         "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
@@ -701,6 +719,14 @@
         "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
       },
       {
+        "raw": "COMM3400",
+        "codes": [
+          "COMM3400"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
         "raw": "COMM2300",
         "codes": [
           "COMM2300"
@@ -712,6 +738,14 @@
         "raw": "COMM2320",
         "codes": [
           "COMM2320"
+        ],
+        "alt": false,
+        "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
+      },
+      {
+        "raw": "COMM3310",
+        "codes": [
+          "COMM3310"
         ],
         "alt": false,
         "from": "(b) Either Chinese Journalism COMM1170, 2110, 2170 and"
@@ -1540,7 +1574,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 15
     },
     {
       "marker": "3.",
@@ -1571,7 +1605,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Advertising and Public Relations",
       "units": null,
       "bucket": "elective",
@@ -1607,12 +1641,715 @@
     },
     {
       "marker": "(v)",
-      "level": 2,
+      "level": 3,
       "title": "Global Communication",
       "units": null,
       "bucket": "elective",
       "stream": null,
       "n_courses": 14
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 18,
+          "note": null,
+          "courses": [
+            {
+              "code": "COMM1150",
+              "alts": []
+            },
+            {
+              "code": "COMM2160",
+              "alts": []
+            },
+            {
+              "code": "COMM2530",
+              "alts": []
+            },
+            {
+              "code": "COMM3200",
+              "alts": []
+            },
+            {
+              "code": "COMM3600",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 12,
+          "note": null,
+          "courses": [
+            {
+              "code": "COMM1170",
+              "alts": []
+            },
+            {
+              "code": "COMM2110",
+              "alts": []
+            },
+            {
+              "code": "COMM2170",
+              "alts": []
+            },
+            {
+              "code": "COMM1180",
+              "alts": []
+            },
+            {
+              "code": "COMM2120",
+              "alts": []
+            },
+            {
+              "code": "COMM2180",
+              "alts": []
+            },
+            {
+              "code": "COMM3610",
+              "alts": []
+            },
+            {
+              "code": "COMM1190",
+              "alts": []
+            },
+            {
+              "code": "COMM2100",
+              "alts": []
+            },
+            {
+              "code": "COMM2240",
+              "alts": []
+            },
+            {
+              "code": "COMM3400",
+              "alts": []
+            },
+            {
+              "code": "COMM2300",
+              "alts": []
+            },
+            {
+              "code": "COMM2320",
+              "alts": []
+            },
+            {
+              "code": "COMM3310",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses (Courses that",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": "Any two of the following theory/method courses",
+          "courses": [
+            {
+              "code": "COMM2210",
+              "alts": []
+            },
+            {
+              "code": "COMM2840",
+              "alts": []
+            },
+            {
+              "code": "COMM2940",
+              "alts": []
+            },
+            {
+              "code": "COMM3650",
+              "alts": []
+            },
+            {
+              "code": "COMM3810",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "At least 27 units from the following areas",
+          "units": 27,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COMM2811",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2812",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2813",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2814",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2830",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2840",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2850",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3810",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3811",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3812",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3820",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3830",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3831",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3832",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3840",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3841",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3850",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3855",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3860",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3881",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3888",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4848",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COMM2210",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2440",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2600",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2610",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2740",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2741",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2910",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3620",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3630",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3640",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3650",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3660",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3670",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3680",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3681",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3682",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3740",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3750",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COMM2570",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2590",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2710",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2733",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2922",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2925",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2926",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2928",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2940",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2962",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3690",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3711",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3733",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3800",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3910",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3920",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3921",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3922",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3930",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3933",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3939",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3940",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3941",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3963",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4730",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4733",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4935",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4956",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4962",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COMM2140",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2920",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2930",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2932",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3131",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3132",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3191",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3193",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4040",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4191",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COMM1500",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2540",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2590",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2741",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2811",
+                  "alts": []
+                },
+                {
+                  "code": "COMM2850",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3550",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3690",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3700",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3721",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3722",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3841",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3930",
+                  "alts": []
+                },
+                {
+                  "code": "COMM4250",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "COMM3140",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

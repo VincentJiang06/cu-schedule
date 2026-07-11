@@ -18,6 +18,7 @@
     "CHLL4121",
     "CHLL4332",
     "CHLL4401",
+    "CHLL4402",
     "CHLL4403",
     "CURE1000",
     "CURE2031",
@@ -909,6 +910,415 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 69
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 20,
+      "note": null,
+      "courses": [
+        {
+          "code": "FAAS1100",
+          "alts": []
+        },
+        {
+          "code": "FAAS1110",
+          "alts": []
+        },
+        {
+          "code": "FAAS1130",
+          "alts": []
+        },
+        {
+          "code": "FAAS1140",
+          "alts": []
+        },
+        {
+          "code": "FAAS1600",
+          "alts": []
+        },
+        {
+          "code": "FAAS1700",
+          "alts": []
+        },
+        {
+          "code": "FAAS4180",
+          "alts": []
+        },
+        {
+          "code": "FAAS4183",
+          "alts": []
+        },
+        {
+          "code": "FAAS4280",
+          "alts": []
+        },
+        {
+          "code": "FAAS4283",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 36,
+      "note": null,
+      "courses": [
+        {
+          "code": "FAAS2100",
+          "alts": []
+        },
+        {
+          "code": "FAAS2102",
+          "alts": []
+        },
+        {
+          "code": "FAAS2103",
+          "alts": []
+        },
+        {
+          "code": "FAAS2104",
+          "alts": []
+        },
+        {
+          "code": "FAAS2105",
+          "alts": []
+        },
+        {
+          "code": "FAAS2106",
+          "alts": []
+        },
+        {
+          "code": "FAAS2110",
+          "alts": []
+        },
+        {
+          "code": "FAAS2113",
+          "alts": []
+        },
+        {
+          "code": "FAAS3102",
+          "alts": []
+        },
+        {
+          "code": "FAAS3104",
+          "alts": []
+        },
+        {
+          "code": "FAAS3105",
+          "alts": []
+        },
+        {
+          "code": "FAAS3110",
+          "alts": []
+        },
+        {
+          "code": "FAAS3111",
+          "alts": []
+        },
+        {
+          "code": "FAAS3112",
+          "alts": []
+        },
+        {
+          "code": "FAAS3113",
+          "alts": []
+        },
+        {
+          "code": "FAAS3114",
+          "alts": []
+        },
+        {
+          "code": "FAAS3115",
+          "alts": []
+        },
+        {
+          "code": "FAAS3116",
+          "alts": []
+        },
+        {
+          "code": "FAAS3120",
+          "alts": []
+        },
+        {
+          "code": "FAAS4100",
+          "alts": []
+        },
+        {
+          "code": "FAAS4102",
+          "alts": []
+        },
+        {
+          "code": "FAAS4106",
+          "alts": []
+        },
+        {
+          "code": "FAAS4116",
+          "alts": []
+        },
+        {
+          "code": "FAAS2116",
+          "alts": []
+        },
+        {
+          "code": "FAAS2117",
+          "alts": []
+        },
+        {
+          "code": "FAAS2118",
+          "alts": []
+        },
+        {
+          "code": "FAAS2119",
+          "alts": []
+        },
+        {
+          "code": "FAAS3108",
+          "alts": []
+        },
+        {
+          "code": "FAAS3109",
+          "alts": []
+        },
+        {
+          "code": "FAAS3117",
+          "alts": []
+        },
+        {
+          "code": "FAAS3119",
+          "alts": []
+        },
+        {
+          "code": "FAAS3223",
+          "alts": []
+        },
+        {
+          "code": "FAAS4101",
+          "alts": []
+        },
+        {
+          "code": "FAAS4109",
+          "alts": []
+        },
+        {
+          "code": "FAAS4119",
+          "alts": []
+        },
+        {
+          "code": "FAAS4201",
+          "alts": []
+        },
+        {
+          "code": "FAAS2201",
+          "alts": []
+        },
+        {
+          "code": "FAAS2203",
+          "alts": []
+        },
+        {
+          "code": "FAAS2204",
+          "alts": []
+        },
+        {
+          "code": "FAAS2206",
+          "alts": []
+        },
+        {
+          "code": "FAAS2208",
+          "alts": []
+        },
+        {
+          "code": "FAAS2211",
+          "alts": []
+        },
+        {
+          "code": "FAAS2217",
+          "alts": []
+        },
+        {
+          "code": "FAAS2218",
+          "alts": []
+        },
+        {
+          "code": "FAAS2219",
+          "alts": []
+        },
+        {
+          "code": "FAAS3200",
+          "alts": []
+        },
+        {
+          "code": "FAAS3201",
+          "alts": []
+        },
+        {
+          "code": "FAAS3202",
+          "alts": []
+        },
+        {
+          "code": "FAAS3203",
+          "alts": []
+        },
+        {
+          "code": "FAAS3204",
+          "alts": []
+        },
+        {
+          "code": "FAAS3206",
+          "alts": []
+        },
+        {
+          "code": "FAAS3210",
+          "alts": []
+        },
+        {
+          "code": "FAAS3211",
+          "alts": []
+        },
+        {
+          "code": "FAAS3212",
+          "alts": []
+        },
+        {
+          "code": "FAAS3216",
+          "alts": []
+        },
+        {
+          "code": "FAAS3219",
+          "alts": []
+        },
+        {
+          "code": "FAAS3221",
+          "alts": []
+        },
+        {
+          "code": "FAAS3224",
+          "alts": []
+        },
+        {
+          "code": "FAAS3229",
+          "alts": []
+        },
+        {
+          "code": "FAAS3234",
+          "alts": []
+        },
+        {
+          "code": "FAAS3236",
+          "alts": []
+        },
+        {
+          "code": "FAAS3246",
+          "alts": []
+        },
+        {
+          "code": "FAAS4202",
+          "alts": []
+        },
+        {
+          "code": "FAAS4203",
+          "alts": []
+        },
+        {
+          "code": "FAAS4210",
+          "alts": []
+        },
+        {
+          "code": "FAAS4211",
+          "alts": []
+        },
+        {
+          "code": "FAAS4212",
+          "alts": []
+        },
+        {
+          "code": "FAAS4213",
+          "alts": []
+        },
+        {
+          "code": "FAAS4214",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

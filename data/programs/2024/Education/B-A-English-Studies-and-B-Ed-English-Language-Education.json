@@ -1343,5 +1343,674 @@
       "stream": null,
       "n_courses": 13
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "EDUC2312",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 30,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGE1310",
+              "alts": []
+            },
+            {
+              "code": "ENGE1500",
+              "alts": []
+            },
+            {
+              "code": "ENGE1520",
+              "alts": []
+            },
+            {
+              "code": "ENGE1610",
+              "alts": []
+            },
+            {
+              "code": "ENGE2360",
+              "alts": []
+            },
+            {
+              "code": "ENGE2390",
+              "alts": []
+            },
+            {
+              "code": "ENGE2510",
+              "alts": []
+            },
+            {
+              "code": "ENGE2620",
+              "alts": []
+            },
+            {
+              "code": "ENGE2840",
+              "alts": []
+            },
+            {
+              "code": "ENGE3320",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 9,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELTU2202",
+              "alts": []
+            },
+            {
+              "code": "ELTU2203",
+              "alts": []
+            },
+            {
+              "code": "ELTU2403",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 18,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELED2810",
+              "alts": []
+            },
+            {
+              "code": "ELED4720",
+              "alts": []
+            },
+            {
+              "code": "ELED4730",
+              "alts": []
+            },
+            {
+              "code": "ELED4740",
+              "alts": []
+            },
+            {
+              "code": "ELED4840",
+              "alts": []
+            },
+            {
+              "code": "ELED4920",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Research Project",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELED4850",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC2240",
+              "alts": []
+            },
+            {
+              "code": "EDUC3201",
+              "alts": []
+            },
+            {
+              "code": "EDUC3311",
+              "alts": []
+            },
+            {
+              "code": "EDUC4340",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(f)",
+          "title": "",
+          "units": 10,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC4030",
+              "alts": []
+            },
+            {
+              "code": "EDUC4040",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(g)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELED1010",
+              "alts": []
+            },
+            {
+              "code": "ELED1020",
+              "alts": []
+            },
+            {
+              "code": "ELED1030",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 12,
+          "note": "Subject Knowledge 12 units of courses chosen from the following",
+          "courses": [
+            {
+              "code": "ENGE1800",
+              "alts": []
+            },
+            {
+              "code": "ENGE1900",
+              "alts": []
+            },
+            {
+              "code": "ENGE2110",
+              "alts": []
+            },
+            {
+              "code": "ENGE2120",
+              "alts": []
+            },
+            {
+              "code": "ENGE2130",
+              "alts": []
+            },
+            {
+              "code": "ENGE2140",
+              "alts": []
+            },
+            {
+              "code": "ENGE2150",
+              "alts": []
+            },
+            {
+              "code": "ENGE2160",
+              "alts": []
+            },
+            {
+              "code": "ENGE2170",
+              "alts": []
+            },
+            {
+              "code": "ENGE2180",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELTU2003",
+              "alts": []
+            },
+            {
+              "code": "ELTU2004",
+              "alts": []
+            },
+            {
+              "code": "ELTU2005",
+              "alts": []
+            },
+            {
+              "code": "ELTU3104",
+              "alts": []
+            },
+            {
+              "code": "ELTU3413",
+              "alts": []
+            },
+            {
+              "code": "ELTU3414",
+              "alts": []
+            },
+            {
+              "code": "ELTU3502",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "ELED4870",
+              "alts": []
+            },
+            {
+              "code": "ELED4880",
+              "alts": []
+            },
+            {
+              "code": "ELED4890",
+              "alts": []
+            },
+            {
+              "code": "ELED4960",
+              "alts": []
+            },
+            {
+              "code": "ELED4970",
+              "alts": []
+            },
+            {
+              "code": "ELED4990",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 2,
+          "note": "Educational Studies 2 units of course chosen from the following",
+          "courses": [
+            {
+              "code": "EDUC2210",
+              "alts": []
+            },
+            {
+              "code": "EDUC2220",
+              "alts": []
+            },
+            {
+              "code": "EDUC3140",
+              "alts": []
+            },
+            {
+              "code": "EDUC3150",
+              "alts": []
+            },
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "EDUC3260",
+              "alts": []
+            },
+            {
+              "code": "EDUC3270",
+              "alts": []
+            },
+            {
+              "code": "EDUC3280",
+              "alts": []
+            },
+            {
+              "code": "EDUC3290",
+              "alts": []
+            },
+            {
+              "code": "EDUC4110",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "ENGE2190",
+          "alts": []
+        },
+        {
+          "code": "ENGE2210",
+          "alts": []
+        },
+        {
+          "code": "ENGE2220",
+          "alts": []
+        },
+        {
+          "code": "ENGE2310",
+          "alts": []
+        },
+        {
+          "code": "ENGE2380",
+          "alts": []
+        },
+        {
+          "code": "ENGE2520",
+          "alts": []
+        },
+        {
+          "code": "ENGE2530",
+          "alts": []
+        },
+        {
+          "code": "ENGE2540",
+          "alts": []
+        },
+        {
+          "code": "ENGE2600",
+          "alts": []
+        },
+        {
+          "code": "ENGE2630",
+          "alts": []
+        },
+        {
+          "code": "ENGE2640",
+          "alts": []
+        },
+        {
+          "code": "ENGE2650",
+          "alts": []
+        },
+        {
+          "code": "ENGE2700",
+          "alts": []
+        },
+        {
+          "code": "ENGE2710",
+          "alts": []
+        },
+        {
+          "code": "ENGE2720",
+          "alts": []
+        },
+        {
+          "code": "ENGE2820",
+          "alts": []
+        },
+        {
+          "code": "ENGE3110",
+          "alts": []
+        },
+        {
+          "code": "ENGE3120",
+          "alts": []
+        },
+        {
+          "code": "ENGE3200",
+          "alts": []
+        },
+        {
+          "code": "ENGE3220",
+          "alts": []
+        },
+        {
+          "code": "ENGE3230",
+          "alts": []
+        },
+        {
+          "code": "ENGE3250",
+          "alts": []
+        },
+        {
+          "code": "ENGE3260",
+          "alts": []
+        },
+        {
+          "code": "ENGE3270",
+          "alts": []
+        },
+        {
+          "code": "ENGE3280",
+          "alts": []
+        },
+        {
+          "code": "ENGE3290",
+          "alts": []
+        },
+        {
+          "code": "ENGE3300",
+          "alts": []
+        },
+        {
+          "code": "ENGE3310",
+          "alts": []
+        },
+        {
+          "code": "ENGE3350",
+          "alts": []
+        },
+        {
+          "code": "ENGE3360",
+          "alts": []
+        },
+        {
+          "code": "ENGE3370",
+          "alts": []
+        },
+        {
+          "code": "ENGE3380",
+          "alts": []
+        },
+        {
+          "code": "ENGE3390",
+          "alts": []
+        },
+        {
+          "code": "ENGE3400",
+          "alts": []
+        },
+        {
+          "code": "ENGE3410",
+          "alts": []
+        },
+        {
+          "code": "ENGE3420",
+          "alts": []
+        },
+        {
+          "code": "ENGE3500",
+          "alts": []
+        },
+        {
+          "code": "ENGE3600",
+          "alts": []
+        },
+        {
+          "code": "ENGE3610",
+          "alts": []
+        },
+        {
+          "code": "ENGE3670",
+          "alts": []
+        },
+        {
+          "code": "ENGE3680",
+          "alts": []
+        },
+        {
+          "code": "ENGE3690",
+          "alts": []
+        },
+        {
+          "code": "ENGE3760",
+          "alts": []
+        },
+        {
+          "code": "ENGE3770",
+          "alts": []
+        },
+        {
+          "code": "ENGE3780",
+          "alts": []
+        },
+        {
+          "code": "ENGE3800",
+          "alts": []
+        },
+        {
+          "code": "ENGE3850",
+          "alts": []
+        },
+        {
+          "code": "ENGE3940",
+          "alts": []
+        },
+        {
+          "code": "ENGE3950",
+          "alts": []
+        },
+        {
+          "code": "ENGE3970",
+          "alts": []
+        },
+        {
+          "code": "ENGE3980",
+          "alts": []
+        },
+        {
+          "code": "ENGE3990",
+          "alts": []
+        },
+        {
+          "code": "ENGE4100",
+          "alts": []
+        },
+        {
+          "code": "ENGE4110",
+          "alts": []
+        },
+        {
+          "code": "ENGE4120",
+          "alts": []
+        },
+        {
+          "code": "ENGE4130",
+          "alts": []
+        },
+        {
+          "code": "ENGE4140",
+          "alts": []
+        },
+        {
+          "code": "ENGE4150",
+          "alts": []
+        },
+        {
+          "code": "ENGE4200",
+          "alts": []
+        },
+        {
+          "code": "ENGE4240",
+          "alts": []
+        },
+        {
+          "code": "ENGE4510",
+          "alts": []
+        },
+        {
+          "code": "ENGE4600",
+          "alts": []
+        },
+        {
+          "code": "ENGE4610",
+          "alts": []
+        },
+        {
+          "code": "ENGE4620",
+          "alts": []
+        },
+        {
+          "code": "ENGE4650",
+          "alts": []
+        },
+        {
+          "code": "EDUC4131",
+          "alts": []
+        },
+        {
+          "code": "EDUC4320",
+          "alts": []
+        },
+        {
+          "code": "EDUC4330",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

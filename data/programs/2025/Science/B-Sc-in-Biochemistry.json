@@ -203,6 +203,30 @@
           "BCHE4902"
         ],
         "alt": false,
+        "from": "(i) BCHE4901"
+      },
+      {
+        "raw": "BCHE4903",
+        "codes": [
+          "BCHE4903"
+        ],
+        "alt": false,
+        "from": "(i) BCHE4901"
+      },
+      {
+        "raw": "BCHE4902",
+        "codes": [
+          "BCHE4902"
+        ],
+        "alt": false,
+        "from": "(ii) BCHE4902"
+      },
+      {
+        "raw": "BCHE4903",
+        "codes": [
+          "BCHE4903"
+        ],
+        "alt": false,
         "from": "(ii) BCHE4902"
       },
       {
@@ -417,12 +441,12 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "BCHE4901",
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 3
     },
     {
       "marker": "(ii)",
@@ -431,7 +455,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(iii)",
@@ -444,7 +468,7 @@
     },
     {
       "marker": "(v)",
-      "level": 2,
+      "level": 3,
       "title": "LSCI4000#",
       "units": null,
       "bucket": "elective",
@@ -504,6 +528,264 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "STAT1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 23,
+          "note": null,
+          "courses": [
+            {
+              "code": "BCHE2000",
+              "alts": []
+            },
+            {
+              "code": "BCHE2030",
+              "alts": []
+            },
+            {
+              "code": "BCHE3030",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BIOL2120",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Capstone Courses: One",
+          "units": 3,
+          "note": "of the five options (at least 3 units, with a maximum of 6 units)",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "BCHE4901",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "BCHE4902",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "LSCI4911",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI4912",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "LSCI4000",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 17,
+          "note": "Of the 17 units of elective courses, at least 9 units,",
+          "courses": [
+            {
+              "code": "BCHE4030",
+              "alts": []
+            },
+            {
+              "code": "BIOL2420",
+              "alts": []
+            },
+            {
+              "code": "ENSC3520",
+              "alts": []
+            },
+            {
+              "code": "LSCI3520",
+              "alts": []
+            },
+            {
+              "code": "FNSC3010",
+              "alts": []
+            },
+            {
+              "code": "LSCI2002",
+              "alts": []
+            },
+            {
+              "code": "MBTE3510",
+              "alts": []
+            },
+            {
+              "code": "BCHE2070",
+              "alts": []
+            },
+            {
+              "code": "BCHE3110",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BMEG3101",
+              "alts": []
+            },
+            {
+              "code": "BMEG4010",
+              "alts": []
+            },
+            {
+              "code": "CMBI4001",
+              "alts": []
+            },
+            {
+              "code": "LSCI1012",
+              "alts": []
+            },
+            {
+              "code": "LSCI2003",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "BCHE4903",
+          "alts": []
+        },
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

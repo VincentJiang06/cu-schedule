@@ -170,6 +170,7 @@
     "ESTR4306",
     "ESTR4316",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "IBBA3040",
@@ -559,6 +560,13 @@
             "alt": false
           },
           {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
+          },
+          {
             "raw": "IERG4300/ESTR4300",
             "codes": [
               "IERG4300",
@@ -753,6 +761,13 @@
             "raw": "ENGG3802",
             "codes": [
               "ENGG3802"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
             ],
             "alt": false
           },
@@ -967,6 +982,13 @@
             "alt": false
           },
           {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
+          },
+          {
             "raw": "STAT2005",
             "codes": [
               "STAT2005"
@@ -1121,6 +1143,13 @@
             "raw": "ENGG3802",
             "codes": [
               "ENGG3802"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
             ],
             "alt": false
           },
@@ -1300,6 +1329,13 @@
             "alt": false
           },
           {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
+          },
+          {
             "raw": "STAT2005",
             "codes": [
               "STAT2005"
@@ -1418,6 +1454,13 @@
             "raw": "ENGG3802",
             "codes": [
               "ENGG3802"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
             ],
             "alt": false
           },
@@ -1652,6 +1695,13 @@
             "alt": false
           },
           {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
+          },
+          {
             "raw": "IERG4300/ESTR4300",
             "codes": [
               "IERG4300",
@@ -1766,7 +1816,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Choose any ONE from the following seven options",
-      "n_courses": 12
+      "n_courses": 13
     },
     {
       "marker": "(b)",
@@ -1775,7 +1825,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 1: Intelligence Science",
-      "n_courses": 25
+      "n_courses": 26
     },
     {
       "marker": "(c)",
@@ -1784,7 +1834,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 2: Database and",
-      "n_courses": 28
+      "n_courses": 29
     },
     {
       "marker": "(d)",
@@ -1793,7 +1843,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 3: Rich Media",
-      "n_courses": 22
+      "n_courses": 23
     },
     {
       "marker": "(e)",
@@ -1802,7 +1852,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 4: Distributed Systems,",
-      "n_courses": 22
+      "n_courses": 23
     },
     {
       "marker": "(f)",
@@ -1811,7 +1861,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 5: Algorithms and",
-      "n_courses": 16
+      "n_courses": 17
     },
     {
       "marker": "(g)",
@@ -1820,7 +1870,1218 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 6: Data Analytics",
-      "n_courses": 32
+      "n_courses": 33
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": "Any one course from the following",
+          "courses": [
+            {
+              "code": "CHEM1380",
+              "alts": []
+            },
+            {
+              "code": "LSCI1001",
+              "alts": []
+            },
+            {
+              "code": "LSCI1003",
+              "alts": []
+            },
+            {
+              "code": "ENGG1310",
+              "alts": [
+                "ESTR1003"
+              ]
+            },
+            {
+              "code": "PHYS1003",
+              "alts": []
+            },
+            {
+              "code": "PHYS1110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1130",
+              "alts": [
+                "ESTR1102"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 10,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGG2440",
+              "alts": [
+                "ESTR2004"
+              ]
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            },
+            {
+              "code": "ENGG2780",
+              "alts": [
+                "ESTR2020"
+              ]
+            },
+            {
+              "code": "MATH1510",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 27,
+          "note": null,
+          "courses": [
+            {
+              "code": "CENG3420",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": [
+                "ESTR2102"
+              ]
+            },
+            {
+              "code": "CSCI3100",
+              "alts": []
+            },
+            {
+              "code": "CSCI3150",
+              "alts": [
+                "ESTR3102"
+              ]
+            },
+            {
+              "code": "CSCI3160",
+              "alts": [
+                "ESTR3104"
+              ]
+            },
+            {
+              "code": "CSCI3180",
+              "alts": [
+                "ESTR3106"
+              ]
+            },
+            {
+              "code": "CSCI3250",
+              "alts": []
+            },
+            {
+              "code": "CSCI3251",
+              "alts": []
+            },
+            {
+              "code": "ENGG2020",
+              "alts": [
+                "ESTR2104"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI4998",
+              "alts": []
+            },
+            {
+              "code": "CSCI4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Choose any ONE from the following seven options",
+      "units": 17,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "General Computer Science",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 17,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "AIST4010",
+                  "alts": [
+                    "ESTR4140"
+                  ]
+                },
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI3230",
+                  "alts": [
+                    "ESTR3108"
+                  ]
+                },
+                {
+                  "code": "CSCI4160",
+                  "alts": [
+                    "ESTR4104"
+                  ]
+                },
+                {
+                  "code": "CSCI4180",
+                  "alts": [
+                    "ESTR4106"
+                  ]
+                },
+                {
+                  "code": "CSCI4250",
+                  "alts": [
+                    "ESTR4122"
+                  ]
+                },
+                {
+                  "code": "CSCI4430",
+                  "alts": [
+                    "ESTR4120"
+                  ]
+                },
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Stream 1: Intelligence Science",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "CSCI3230",
+                  "alts": [
+                    "ESTR3108"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "AIST3120",
+                  "alts": []
+                },
+                {
+                  "code": "AIST3510",
+                  "alts": [
+                    "SEEM3510"
+                  ]
+                },
+                {
+                  "code": "AIST4010",
+                  "alts": [
+                    "ESTR4140"
+                  ]
+                },
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI3320",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4190",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4230",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4250",
+                  "alts": [
+                    "ESTR4122"
+                  ]
+                },
+                {
+                  "code": "CSCI5030",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5150",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5160",
+                  "alts": [
+                    "ENGG5102"
+                  ]
+                },
+                {
+                  "code": "CSCI5180",
+                  "alts": [
+                    "ENGG5103"
+                  ]
+                },
+                {
+                  "code": "CSCI5280",
+                  "alts": [
+                    "ENGG5104"
+                  ]
+                },
+                {
+                  "code": "CSCI5350",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5390",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5640",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5660",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG5781",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Stream 2: Database and Information Systems",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "CSCI3170",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI3230",
+                  "alts": [
+                    "ESTR3108"
+                  ]
+                },
+                {
+                  "code": "CSCI3320",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4140",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4160",
+                  "alts": [
+                    "ESTR4104"
+                  ]
+                },
+                {
+                  "code": "CSCI4180",
+                  "alts": [
+                    "ESTR4106"
+                  ]
+                },
+                {
+                  "code": "CSCI4190",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4430",
+                  "alts": [
+                    "ESTR4120"
+                  ]
+                },
+                {
+                  "code": "CSCI5010",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5180",
+                  "alts": [
+                    "ENGG5103"
+                  ]
+                },
+                {
+                  "code": "CSCI5470",
+                  "alts": [
+                    "ENGG5105"
+                  ]
+                },
+                {
+                  "code": "CSCI5550",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5570",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5620",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5630",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5650",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5660",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG5781",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "Stream 3: Rich Media",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "CSCI3260",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "AIST2010",
+                  "alts": []
+                },
+                {
+                  "code": "AIST3110",
+                  "alts": []
+                },
+                {
+                  "code": "AIST3120",
+                  "alts": []
+                },
+                {
+                  "code": "AIST3510",
+                  "alts": [
+                    "SEEM3510"
+                  ]
+                },
+                {
+                  "code": "CSCI3230",
+                  "alts": [
+                    "ESTR3108"
+                  ]
+                },
+                {
+                  "code": "CSCI3280",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3290",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3330",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4160",
+                  "alts": [
+                    "ESTR4104"
+                  ]
+                },
+                {
+                  "code": "CSCI4430",
+                  "alts": [
+                    "ESTR4120"
+                  ]
+                },
+                {
+                  "code": "CSCI5210",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5280",
+                  "alts": [
+                    "ENGG5104"
+                  ]
+                },
+                {
+                  "code": "CSCI5390",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5460",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5640",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(e)",
+          "title": "Stream 4: Distributed Systems, Networks and Security",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "CSCI4180",
+                  "alts": [
+                    "ESTR4106"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 9,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "CSCI3120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3310",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4130",
+                  "alts": [
+                    "IERG4130",
+                    "ESTR4306"
+                  ]
+                },
+                {
+                  "code": "CSCI4140",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4160",
+                  "alts": [
+                    "ESTR4104"
+                  ]
+                },
+                {
+                  "code": "CSCI4190",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4430",
+                  "alts": [
+                    "ESTR4120"
+                  ]
+                },
+                {
+                  "code": "CSCI5390",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5470",
+                  "alts": [
+                    "ENGG5105"
+                  ]
+                },
+                {
+                  "code": "CSCI5550",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5570",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5600",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5630",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5650",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "IERG4350",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(f)",
+          "title": "Stream 5: Algorithms and Complexity",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 12,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "CSCI3120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI4230",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4250",
+                  "alts": [
+                    "ESTR4122"
+                  ]
+                },
+                {
+                  "code": "CSCI5010",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5160",
+                  "alts": [
+                    "ENGG5102"
+                  ]
+                },
+                {
+                  "code": "CSCI5320",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5350",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5620",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5660",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3300",
+                  "alts": [
+                    "ESTR3304"
+                  ]
+                },
+                {
+                  "code": "MATH4230",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(g)",
+          "title": "Stream 6: Data Analytics",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "CSCI3320",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Course 1",
+              "courses": [
+                {
+                  "code": "AIST3120",
+                  "alts": []
+                },
+                {
+                  "code": "AIST4010",
+                  "alts": [
+                    "ESTR4140"
+                  ]
+                },
+                {
+                  "code": "CSCI3170",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3220",
+                  "alts": [
+                    "ESTR3110"
+                  ]
+                },
+                {
+                  "code": "CSCI4180",
+                  "alts": [
+                    "ESTR4106"
+                  ]
+                },
+                {
+                  "code": "CSCI4190",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4230",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4250",
+                  "alts": [
+                    "ESTR4122"
+                  ]
+                },
+                {
+                  "code": "CSCI5030",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5150",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5180",
+                  "alts": [
+                    "ENGG5103"
+                  ]
+                },
+                {
+                  "code": "CSCI5550",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5570",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5620",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5630",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5640",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5650",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI5660",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": [
+                    "ESTR4316"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": 3,
+              "note": "Elective Course 2",
+              "courses": [
+                {
+                  "code": "RMSC4002",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3210",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4002",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4003",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "STAT2005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CSCI3130",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

@@ -784,5 +784,378 @@
       "stream": null,
       "n_courses": 22
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1102",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHES1000",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Stream Courses: Students are",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CLCP1113",
+              "alts": []
+            },
+            {
+              "code": "CLCP1123",
+              "alts": []
+            },
+            {
+              "code": "CLCP1133",
+              "alts": []
+            },
+            {
+              "code": "CLCP1153",
+              "alts": []
+            },
+            {
+              "code": "CLCP2213",
+              "alts": []
+            },
+            {
+              "code": "CLCP2223",
+              "alts": []
+            },
+            {
+              "code": "CLCP2233",
+              "alts": []
+            },
+            {
+              "code": "CLCP2243",
+              "alts": []
+            },
+            {
+              "code": "CLCP2253",
+              "alts": []
+            },
+            {
+              "code": "CLCP3313",
+              "alts": []
+            },
+            {
+              "code": "CLCP3323",
+              "alts": []
+            },
+            {
+              "code": "CLCP3333",
+              "alts": []
+            },
+            {
+              "code": "CLCP4413",
+              "alts": []
+            },
+            {
+              "code": "CLCP4423",
+              "alts": []
+            },
+            {
+              "code": "CLCP4433",
+              "alts": []
+            },
+            {
+              "code": "CLCP4443",
+              "alts": []
+            },
+            {
+              "code": "CLCP4453",
+              "alts": []
+            },
+            {
+              "code": "CLCP4463",
+              "alts": []
+            },
+            {
+              "code": "CLCP4513",
+              "alts": []
+            },
+            {
+              "code": "CLCP4533",
+              "alts": []
+            },
+            {
+              "code": "CHES2001",
+              "alts": []
+            },
+            {
+              "code": "CHES2002",
+              "alts": []
+            },
+            {
+              "code": "CHES2003",
+              "alts": []
+            },
+            {
+              "code": "CHES2004",
+              "alts": []
+            },
+            {
+              "code": "CHES2102",
+              "alts": []
+            },
+            {
+              "code": "CHES2103",
+              "alts": []
+            },
+            {
+              "code": "CHES2104",
+              "alts": []
+            },
+            {
+              "code": "CHES2105",
+              "alts": []
+            },
+            {
+              "code": "CHES2106",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 9,
+          "note": "Experiential Learning Courses",
+          "courses": [
+            {
+              "code": "CHES3300",
+              "alts": []
+            },
+            {
+              "code": "CHES3400",
+              "alts": []
+            },
+            {
+              "code": "CHES3403",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHES3500",
+              "alts": []
+            },
+            {
+              "code": "CHES4500",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 33,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHES2001",
+          "alts": []
+        },
+        {
+          "code": "CHES2002",
+          "alts": []
+        },
+        {
+          "code": "CHES2003",
+          "alts": []
+        },
+        {
+          "code": "CHES2004",
+          "alts": []
+        },
+        {
+          "code": "CHES2005",
+          "alts": []
+        },
+        {
+          "code": "CHES2007",
+          "alts": []
+        },
+        {
+          "code": "CLCP2213",
+          "alts": []
+        },
+        {
+          "code": "CLCP2223",
+          "alts": []
+        },
+        {
+          "code": "CLCP2233",
+          "alts": []
+        },
+        {
+          "code": "CLCP2243",
+          "alts": []
+        },
+        {
+          "code": "CLCP2253",
+          "alts": []
+        },
+        {
+          "code": "CLCP3313",
+          "alts": []
+        },
+        {
+          "code": "CLCP3323",
+          "alts": []
+        },
+        {
+          "code": "CLCP3333",
+          "alts": []
+        },
+        {
+          "code": "CLCP4413",
+          "alts": []
+        },
+        {
+          "code": "CLCP4423",
+          "alts": []
+        },
+        {
+          "code": "CLCP4433",
+          "alts": []
+        },
+        {
+          "code": "CLCP4443",
+          "alts": []
+        },
+        {
+          "code": "CLCP4453",
+          "alts": []
+        },
+        {
+          "code": "CLCP4463",
+          "alts": []
+        },
+        {
+          "code": "CLCP4513",
+          "alts": []
+        },
+        {
+          "code": "CLCP4533",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

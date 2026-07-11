@@ -548,5 +548,264 @@
       "stream": null,
       "n_courses": 22
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "BECE2110",
+          "alts": []
+        },
+        {
+          "code": "EDUC2240",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 10,
+      "note": null,
+      "courses": [
+        {
+          "code": "BECE2120",
+          "alts": []
+        },
+        {
+          "code": "BECE2130",
+          "alts": []
+        },
+        {
+          "code": "BECE2140",
+          "alts": []
+        },
+        {
+          "code": "BECE2320",
+          "alts": []
+        },
+        {
+          "code": "BECE2330",
+          "alts": []
+        },
+        {
+          "code": "BECE2510",
+          "alts": []
+        },
+        {
+          "code": "CHED4210",
+          "alts": []
+        },
+        {
+          "code": "CHED4220",
+          "alts": []
+        },
+        {
+          "code": "CHED4310",
+          "alts": []
+        },
+        {
+          "code": "CHED4340",
+          "alts": []
+        },
+        {
+          "code": "CHED4350",
+          "alts": []
+        },
+        {
+          "code": "CHED4410",
+          "alts": []
+        },
+        {
+          "code": "CHED4510",
+          "alts": []
+        },
+        {
+          "code": "EDUC3201",
+          "alts": []
+        },
+        {
+          "code": "BECE4540",
+          "alts": []
+        },
+        {
+          "code": "CHED4320",
+          "alts": []
+        },
+        {
+          "code": "BECE4010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 46,
+      "note": "46 units of courses chosen from (a) and (b)",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "At least 30 units of courses",
+          "courses": [
+            {
+              "code": "BECE2210",
+              "alts": []
+            },
+            {
+              "code": "BECE3110",
+              "alts": []
+            },
+            {
+              "code": "CHED4150",
+              "alts": []
+            },
+            {
+              "code": "CHED4330",
+              "alts": []
+            },
+            {
+              "code": "CHED4370",
+              "alts": []
+            },
+            {
+              "code": "CHED4520",
+              "alts": []
+            },
+            {
+              "code": "CHED4530",
+              "alts": []
+            },
+            {
+              "code": "CHED4550",
+              "alts": []
+            },
+            {
+              "code": "EDUC3150",
+              "alts": []
+            },
+            {
+              "code": "EDUC3200",
+              "alts": []
+            },
+            {
+              "code": "EDUC3280",
+              "alts": []
+            },
+            {
+              "code": "EDUC3290",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "BECE3140",
+              "alts": []
+            },
+            {
+              "code": "BECE3150",
+              "alts": []
+            },
+            {
+              "code": "BECE3160",
+              "alts": []
+            },
+            {
+              "code": "BMBL1001",
+              "alts": []
+            },
+            {
+              "code": "LING1000",
+              "alts": []
+            },
+            {
+              "code": "LING2003",
+              "alts": []
+            },
+            {
+              "code": "LING2004",
+              "alts": []
+            },
+            {
+              "code": "LING3201",
+              "alts": []
+            },
+            {
+              "code": "LING3204",
+              "alts": []
+            },
+            {
+              "code": "LING3208",
+              "alts": []
+            },
+            {
+              "code": "MUSC1000",
+              "alts": []
+            },
+            {
+              "code": "MUSC2545",
+              "alts": []
+            },
+            {
+              "code": "MUSC2872",
+              "alts": []
+            },
+            {
+              "code": "MUSC2882",
+              "alts": []
+            },
+            {
+              "code": "MUSC3502",
+              "alts": []
+            },
+            {
+              "code": "MUSC3533",
+              "alts": []
+            },
+            {
+              "code": "PSYC1000",
+              "alts": []
+            },
+            {
+              "code": "PSYC2010",
+              "alts": []
+            },
+            {
+              "code": "PSYC2300",
+              "alts": []
+            },
+            {
+              "code": "PSYC2620",
+              "alts": []
+            },
+            {
+              "code": "SPED2141",
+              "alts": []
+            },
+            {
+              "code": "SPED3410",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
   ]
 }

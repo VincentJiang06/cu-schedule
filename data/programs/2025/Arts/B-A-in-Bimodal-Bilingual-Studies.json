@@ -85,6 +85,14 @@
         "from": "2. Subject"
       },
       {
+        "raw": "HKSL1002",
+        "codes": [
+          "HKSL1002"
+        ],
+        "alt": false,
+        "from": "2. Subject"
+      },
+      {
         "raw": "HKSL1003",
         "codes": [
           "HKSL1003"
@@ -96,6 +104,14 @@
         "raw": "HKSL2001",
         "codes": [
           "HKSL2001"
+        ],
+        "alt": false,
+        "from": "2. Subject"
+      },
+      {
+        "raw": "HKSL2002",
+        "codes": [
+          "HKSL2002"
         ],
         "alt": false,
         "from": "2. Subject"
@@ -128,7 +144,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 6
     },
     {
       "marker": "3.",
@@ -165,6 +181,79 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "2.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "HKSL1000",
+          "alts": []
+        },
+        {
+          "code": "HKSL1002",
+          "alts": []
+        },
+        {
+          "code": "HKSL1003",
+          "alts": []
+        },
+        {
+          "code": "HKSL2001",
+          "alts": []
+        },
+        {
+          "code": "HKSL2002",
+          "alts": []
+        },
+        {
+          "code": "HKSL2003",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "For",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "BMBL4000",
+          "alts": []
+        }
+      ],
+      "children": [
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "6 units | (a), and/or",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "9 units and above | (a), or",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": []
+        }
+      ]
     }
   ]
 }

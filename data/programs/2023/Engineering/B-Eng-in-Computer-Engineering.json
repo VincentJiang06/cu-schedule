@@ -46,6 +46,39 @@
     "CSCI4180",
     "CSCI4430",
     "CSCI5390",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE2030",
+    "DOTE2040",
+    "DOTE2051",
+    "DOTE3000",
+    "DOTE3011",
+    "DOTE3030",
+    "DOTE3050",
+    "DOTE3080",
+    "DOTE3090",
+    "DOTE4020",
+    "DOTE4030",
+    "DOTE4040",
+    "DOTE4070",
+    "DOTE4080",
+    "DOTE4110",
+    "DOTE4140",
+    "DOTE4220",
+    "DOTE4240",
+    "DOTE4260",
+    "DOTE4280",
+    "DSME1030",
+    "DSME2011",
+    "DSME2021",
+    "DSME2030",
+    "DSME2051",
+    "DSME3000",
+    "DSME3030",
+    "DSME4070",
+    "DSME4140",
     "ELEG2202",
     "ELEG3202",
     "ELEG3205",
@@ -91,6 +124,7 @@
     "ESTR4300",
     "ESTR4414",
     "ESTR4998",
+    "ESTR4999",
     "FINA2010",
     "FINA2020",
     "IBBA3040",
@@ -584,6 +618,13 @@
               "ENGG3802"
             ],
             "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
           }
         ]
       },
@@ -714,6 +755,13 @@
               "ENGG3802"
             ],
             "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
+            ],
+            "alt": false
           }
         ]
       },
@@ -796,6 +844,13 @@
             "raw": "ENGG3802",
             "codes": [
               "ENGG3802"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "ENGG3803",
+            "codes": [
+              "ENGG3803"
             ],
             "alt": false
           },
@@ -900,7 +955,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "General Computer Engineering",
-      "n_courses": 23
+      "n_courses": 24
     },
     {
       "marker": "(b)",
@@ -909,7 +964,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 1: Embedded Systems",
-      "n_courses": 17
+      "n_courses": 18
     },
     {
       "marker": "(c)",
@@ -918,7 +973,557 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Stream 2: VLSI Design and EDA",
-      "n_courses": 12
+      "n_courses": 13
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "ENGG1120",
+          "alts": [
+            "ESTR1005"
+          ]
+        },
+        {
+          "code": "ENGG1130",
+          "alts": [
+            "ESTR1006"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 3,
+          "note": "Any one course from the following",
+          "courses": [
+            {
+              "code": "CHEM1380",
+              "alts": []
+            },
+            {
+              "code": "LSCI1001",
+              "alts": []
+            },
+            {
+              "code": "LSCI1003",
+              "alts": []
+            },
+            {
+              "code": "ENGG1310",
+              "alts": [
+                "ESTR1003"
+              ]
+            },
+            {
+              "code": "PHYS1003",
+              "alts": []
+            },
+            {
+              "code": "PHYS1110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1120",
+              "alts": [
+                "ESTR1100"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 11,
+          "note": null,
+          "courses": [
+            {
+              "code": "ENGG2720",
+              "alts": [
+                "ESTR2014"
+              ]
+            },
+            {
+              "code": "ENGG2740",
+              "alts": [
+                "ESTR2016"
+              ]
+            },
+            {
+              "code": "ENGG2760",
+              "alts": [
+                "ESTR2018"
+              ]
+            },
+            {
+              "code": "ENGG2780",
+              "alts": [
+                "ESTR2020"
+              ]
+            },
+            {
+              "code": "MATH1510",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 31,
+          "note": null,
+          "courses": [
+            {
+              "code": "CENG2010",
+              "alts": []
+            },
+            {
+              "code": "CENG2030",
+              "alts": []
+            },
+            {
+              "code": "CENG2400",
+              "alts": [
+                "ESTR2100"
+              ]
+            },
+            {
+              "code": "CENG3420",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": [
+                "ESTR2102"
+              ]
+            },
+            {
+              "code": "CSCI3100",
+              "alts": []
+            },
+            {
+              "code": "CSCI3150",
+              "alts": [
+                "ESTR3102"
+              ]
+            },
+            {
+              "code": "CSCI3190",
+              "alts": []
+            },
+            {
+              "code": "CSCI3250",
+              "alts": []
+            },
+            {
+              "code": "CSCI3251",
+              "alts": []
+            },
+            {
+              "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "ENGG2020",
+              "alts": [
+                "ESTR2104"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "CENG4998",
+              "alts": []
+            },
+            {
+              "code": "CENG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Choose any ONE from the following three options",
+      "units": 12,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "General Computer Engineering",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "AIST3510",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3510",
+                  "alts": []
+                },
+                {
+                  "code": "AIST4010",
+                  "alts": [
+                    "ESTR4140"
+                  ]
+                },
+                {
+                  "code": "BMEG3111",
+                  "alts": []
+                },
+                {
+                  "code": "BMEG3420",
+                  "alts": []
+                },
+                {
+                  "code": "BMEG4220",
+                  "alts": []
+                },
+                {
+                  "code": "CENG3410",
+                  "alts": []
+                },
+                {
+                  "code": "CENG3430",
+                  "alts": [
+                    "ESTR3100"
+                  ]
+                },
+                {
+                  "code": "CENG4120",
+                  "alts": []
+                },
+                {
+                  "code": "CENG4480",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5030",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5050",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5270",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5410",
+                  "alts": [
+                    "ENGG5101"
+                  ]
+                },
+                {
+                  "code": "CSCI4180",
+                  "alts": [
+                    "ESTR4106"
+                  ]
+                },
+                {
+                  "code": "CSCI5390",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3205",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG4211",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG4701",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Stream 1: Embedded Systems",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "BMEG3111",
+                  "alts": []
+                },
+                {
+                  "code": "BMEG3420",
+                  "alts": []
+                },
+                {
+                  "code": "BMEG4220",
+                  "alts": []
+                },
+                {
+                  "code": "CENG3410",
+                  "alts": []
+                },
+                {
+                  "code": "CENG3430",
+                  "alts": [
+                    "ESTR3100"
+                  ]
+                },
+                {
+                  "code": "CENG4480",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5030",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5050",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3260",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3280",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI3310",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI4430",
+                  "alts": [
+                    "ESTR4120"
+                  ]
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": [
+                    "ESTR3408"
+                  ]
+                },
+                {
+                  "code": "MAEG4040",
+                  "alts": [
+                    "ESTR4414"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Stream 2: VLSI Design and EDA",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": 6,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "CENG3430",
+                  "alts": [
+                    "ESTR3100"
+                  ]
+                },
+                {
+                  "code": "CENG4120",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5030",
+                  "alts": []
+                },
+                {
+                  "code": "CENG5270",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3202",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3205",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3301",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG4211",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG4311",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Remaining units can be chosen from the following",
+              "courses": [
+                {
+                  "code": "ENGG1820",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3802",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG3803",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": [
+                    "ESTR4300"
+                  ]
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

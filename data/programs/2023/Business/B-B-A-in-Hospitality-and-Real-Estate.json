@@ -10,6 +10,14 @@
   "has_streams": false,
   "all_course_codes": [
     "ACCT1111",
+    "DOTE1021",
+    "DOTE1031",
+    "DOTE2051",
+    "DOTE3010",
+    "DSME1021",
+    "DSME1031",
+    "DSME2051",
+    "DSME3010",
     "ECON3440",
     "FINA2010",
     "FINA3010",
@@ -125,12 +133,38 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "DOTE[DSME]1031",
+        "codes": [
+          "DOTE1031",
+          "DSME1031"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "HTMG1010",
         "codes": [
           "HTMG1010"
         ],
         "alt": false,
         "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE[DSME]1021",
+        "codes": [
+          "DOTE1021",
+          "DSME1021"
+        ],
+        "alt": true,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       },
       {
         "raw": "FINA2010",
@@ -509,6 +543,15 @@
         ],
         "alt": false,
         "from": "(i) Analytical Module"
+      },
+      {
+        "raw": "DOTE[DSME]3010",
+        "codes": [
+          "DOTE3010",
+          "DSME3010"
+        ],
+        "alt": true,
+        "from": "(ii) Innovative Module"
       },
       {
         "raw": "HTMG3050",
@@ -937,7 +980,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "2.",
@@ -946,7 +989,7 @@
       "units": "37",
       "bucket": "required",
       "stream": null,
-      "n_courses": 19
+      "n_courses": 21
     },
     {
       "marker": "3.",
@@ -995,7 +1038,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Analytical Module",
       "units": null,
       "bucket": "elective",
@@ -1009,7 +1052,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 9
     },
     {
       "marker": "(iii)",
@@ -1037,6 +1080,529 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 1
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT1111",
+          "alts": []
+        },
+        {
+          "code": "DOTE1031",
+          "alts": [
+            "DSME1031"
+          ]
+        },
+        {
+          "code": "HTMG1010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 37,
+      "note": null,
+      "courses": [
+        {
+          "code": "DOTE1021",
+          "alts": [
+            "DSME1021"
+          ]
+        },
+        {
+          "code": "DOTE2051",
+          "alts": []
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "HTMG1091",
+          "alts": []
+        },
+        {
+          "code": "HTMG1092",
+          "alts": []
+        },
+        {
+          "code": "HTMG2000",
+          "alts": []
+        },
+        {
+          "code": "HTMG2070",
+          "alts": []
+        },
+        {
+          "code": "HTMG2091",
+          "alts": []
+        },
+        {
+          "code": "HTMG2092",
+          "alts": []
+        },
+        {
+          "code": "HTMG2900",
+          "alts": []
+        },
+        {
+          "code": "HTMG3010",
+          "alts": []
+        },
+        {
+          "code": "HTMG3030",
+          "alts": []
+        },
+        {
+          "code": "HTMG3041",
+          "alts": []
+        },
+        {
+          "code": "HTMG3091",
+          "alts": []
+        },
+        {
+          "code": "HTMG3092",
+          "alts": []
+        },
+        {
+          "code": "HTMG3900",
+          "alts": []
+        },
+        {
+          "code": "HTMG4091",
+          "alts": []
+        },
+        {
+          "code": "HTMG4092",
+          "alts": []
+        },
+        {
+          "code": "HTMG4800",
+          "alts": []
+        },
+        {
+          "code": "HTMG4900",
+          "alts": []
+        },
+        {
+          "code": "MKTG2010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Stream Courses",
+      "units": 15,
+      "note": "Students are required to choose one of the following streams",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "HTMG3020",
+              "alts": []
+            },
+            {
+              "code": "HTMG3060",
+              "alts": []
+            },
+            {
+              "code": "HTMG3521",
+              "alts": []
+            },
+            {
+              "code": "HTMG3527",
+              "alts": []
+            },
+            {
+              "code": "HTMG4600",
+              "alts": []
+            },
+            {
+              "code": "MKTG3020",
+              "alts": []
+            },
+            {
+              "code": "MKTG3030",
+              "alts": []
+            },
+            {
+              "code": "MKTG4040",
+              "alts": []
+            },
+            {
+              "code": "MKTG4080",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "HTMG3502",
+              "alts": []
+            },
+            {
+              "code": "HTMG3523",
+              "alts": []
+            },
+            {
+              "code": "HTMG4100",
+              "alts": []
+            },
+            {
+              "code": "HTMG4190",
+              "alts": []
+            },
+            {
+              "code": "HTMG4600",
+              "alts": []
+            },
+            {
+              "code": "ECON3440",
+              "alts": []
+            },
+            {
+              "code": "FINA3010",
+              "alts": []
+            },
+            {
+              "code": "FINA3060",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "GRMD2105",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 12,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Students are required to complete 9 units from the three modules below",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "HTMG3504",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3522",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3525",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3526",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4060",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4230",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4250",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4270",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DOTE3010",
+                  "alts": [
+                    "DSME3010"
+                  ]
+                },
+                {
+                  "code": "HTMG3050",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3519",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3524",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4130",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4200",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4240",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4260",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT2611",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "HTMG3501",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3508",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3515",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3518",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG3520",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4120",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4170",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4280",
+                  "alts": []
+                },
+                {
+                  "code": "HTMG4700",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "HTMG3590",
+              "alts": []
+            },
+            {
+              "code": "HTMG4501",
+              "alts": []
+            },
+            {
+              "code": "HTMG4502",
+              "alts": []
+            },
+            {
+              "code": "HTMG4503",
+              "alts": []
+            },
+            {
+              "code": "HTMG4504",
+              "alts": []
+            },
+            {
+              "code": "HTMG4505",
+              "alts": []
+            },
+            {
+              "code": "HTMG4506",
+              "alts": []
+            },
+            {
+              "code": "HTMG4508",
+              "alts": []
+            },
+            {
+              "code": "HTMG4509",
+              "alts": []
+            },
+            {
+              "code": "HTMG4510",
+              "alts": []
+            },
+            {
+              "code": "HTMG4511",
+              "alts": []
+            },
+            {
+              "code": "HTMG4512",
+              "alts": []
+            },
+            {
+              "code": "HTMG4513",
+              "alts": []
+            },
+            {
+              "code": "HTMG4516",
+              "alts": []
+            },
+            {
+              "code": "HTMG4517",
+              "alts": []
+            },
+            {
+              "code": "HTMG4519",
+              "alts": []
+            },
+            {
+              "code": "HTMG4520",
+              "alts": []
+            },
+            {
+              "code": "HTMG4521",
+              "alts": []
+            },
+            {
+              "code": "HTMG4522",
+              "alts": []
+            },
+            {
+              "code": "HTMG4523",
+              "alts": []
+            },
+            {
+              "code": "HTMG4524",
+              "alts": []
+            },
+            {
+              "code": "HTMG4526",
+              "alts": []
+            },
+            {
+              "code": "HTMG4527",
+              "alts": []
+            },
+            {
+              "code": "HTMG4528",
+              "alts": []
+            },
+            {
+              "code": "HTMG4529",
+              "alts": []
+            },
+            {
+              "code": "HTMG4530",
+              "alts": []
+            },
+            {
+              "code": "HTMG4531",
+              "alts": []
+            },
+            {
+              "code": "HTMG4532",
+              "alts": []
+            },
+            {
+              "code": "HTMG4533",
+              "alts": []
+            },
+            {
+              "code": "HTMG4534",
+              "alts": []
+            },
+            {
+              "code": "HTMG4535",
+              "alts": []
+            },
+            {
+              "code": "HTMG4536",
+              "alts": []
+            },
+            {
+              "code": "HTMG4537",
+              "alts": []
+            },
+            {
+              "code": "HTMG4538",
+              "alts": []
+            },
+            {
+              "code": "HTMG4539",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

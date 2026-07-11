@@ -24,6 +24,10 @@
     "CSCI4190",
     "CSCI5030",
     "CSCI5510",
+    "DOTE2011",
+    "DOTE2021",
+    "DSME2011",
+    "DSME2021",
     "ECON2121",
     "ELTU1001",
     "ELTU2018",
@@ -405,6 +409,181 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 1
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 27,
+      "note": null,
+      "courses": [
+        {
+          "code": "MATH1030",
+          "alts": []
+        },
+        {
+          "code": "STAT1013",
+          "alts": []
+        },
+        {
+          "code": "STAT2001",
+          "alts": []
+        },
+        {
+          "code": "STAT2005",
+          "alts": []
+        },
+        {
+          "code": "STAT2006",
+          "alts": []
+        },
+        {
+          "code": "STAT2011",
+          "alts": []
+        },
+        {
+          "code": "STAT3001",
+          "alts": []
+        },
+        {
+          "code": "STAT3008",
+          "alts": []
+        },
+        {
+          "code": "STAT3011",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 27,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Eight courses from the following (with at least five",
+          "courses": [
+            {
+              "code": "RMSC4004",
+              "alts": []
+            },
+            {
+              "code": "STAT3003",
+              "alts": []
+            },
+            {
+              "code": "STAT3005",
+              "alts": []
+            },
+            {
+              "code": "STAT3006",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT3009",
+              "alts": []
+            },
+            {
+              "code": "STAT3010",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            },
+            {
+              "code": "STAT4001",
+              "alts": []
+            },
+            {
+              "code": "STAT4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4003",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4006",
+              "alts": []
+            },
+            {
+              "code": "STAT4008",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "One capstone/research",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "STAT4011",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

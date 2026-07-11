@@ -9196,7 +9196,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "EESC4810, 4820",
       "units": null,
       "bucket": "elective",
@@ -9295,7 +9295,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "One course from CHEM2300, 2310,",
       "units": null,
       "bucket": "required",
@@ -9349,7 +9349,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "EESC4810, 4820",
       "units": null,
       "bucket": "elective",
@@ -9466,7 +9466,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "One course from CHEM2300, 2310,",
       "units": null,
       "bucket": "required",
@@ -9520,7 +9520,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "EESC4810, 4820",
       "units": null,
       "bucket": "elective",
@@ -9673,7 +9673,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "EESC4810, 4820",
       "units": null,
       "bucket": "elective",
@@ -9751,6 +9751,1331 @@
       "bucket": "required",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": "Group C",
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": []
+            },
+            {
+              "code": "STAT1011",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Two courses from the following",
+          "courses": [
+            {
+              "code": "LSCI1012",
+              "alts": []
+            },
+            {
+              "code": "CHEM1070",
+              "alts": []
+            },
+            {
+              "code": "PHYS1001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 9,
+          "note": null,
+          "courses": [
+            {
+              "code": "EESC2010",
+              "alts": []
+            },
+            {
+              "code": "EESC2020",
+              "alts": []
+            },
+            {
+              "code": "EESC2270",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 1,
+          "note": null,
+          "courses": [
+            {
+              "code": "BIOL2213",
+              "alts": []
+            },
+            {
+              "code": "CHEM1870",
+              "alts": []
+            },
+            {
+              "code": "EESC2009",
+              "alts": []
+            },
+            {
+              "code": "EESC2019",
+              "alts": []
+            },
+            {
+              "code": "EESC2110",
+              "alts": []
+            },
+            {
+              "code": "EESC2119",
+              "alts": []
+            },
+            {
+              "code": "EESC2120",
+              "alts": []
+            },
+            {
+              "code": "EESC2129",
+              "alts": []
+            },
+            {
+              "code": "EESC2130",
+              "alts": []
+            },
+            {
+              "code": "EESC2517",
+              "alts": []
+            },
+            {
+              "code": "EESC2909",
+              "alts": []
+            },
+            {
+              "code": "LSCI2002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1712",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "EESC2030",
+              "alts": []
+            },
+            {
+              "code": "PHYS2061",
+              "alts": []
+            },
+            {
+              "code": "EESC4510",
+              "alts": []
+            },
+            {
+              "code": "EESC4520",
+              "alts": []
+            },
+            {
+              "code": "EESC4540",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Six courses for intermediate-level",
+          "courses": [
+            {
+              "code": "EESC2160",
+              "alts": []
+            },
+            {
+              "code": "EESC3100",
+              "alts": []
+            },
+            {
+              "code": "EESC3110",
+              "alts": []
+            },
+            {
+              "code": "EESC3120",
+              "alts": []
+            },
+            {
+              "code": "EESC3130",
+              "alts": []
+            },
+            {
+              "code": "EESC3140",
+              "alts": []
+            },
+            {
+              "code": "EESC3320",
+              "alts": []
+            },
+            {
+              "code": "EESC2800",
+              "alts": []
+            },
+            {
+              "code": "EESC3200",
+              "alts": []
+            },
+            {
+              "code": "EESC3220",
+              "alts": []
+            },
+            {
+              "code": "EESC3300",
+              "alts": []
+            },
+            {
+              "code": "EESC3600",
+              "alts": []
+            },
+            {
+              "code": "EESC3601",
+              "alts": []
+            },
+            {
+              "code": "EESC3800",
+              "alts": []
+            },
+            {
+              "code": "BIOL2210",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL3710",
+              "alts": []
+            },
+            {
+              "code": "EESC2515",
+              "alts": []
+            },
+            {
+              "code": "EESC3230",
+              "alts": []
+            },
+            {
+              "code": "EESC3330",
+              "alts": []
+            },
+            {
+              "code": "EESC3415",
+              "alts": []
+            },
+            {
+              "code": "EESC3417",
+              "alts": []
+            },
+            {
+              "code": "EESC3510",
+              "alts": []
+            },
+            {
+              "code": "EESC3520",
+              "alts": []
+            },
+            {
+              "code": "EESC3522",
+              "alts": []
+            },
+            {
+              "code": "EESC3530",
+              "alts": []
+            },
+            {
+              "code": "EESC3540",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "At least four courses for advanced",
+          "courses": [
+            {
+              "code": "BIOL4012",
+              "alts": []
+            },
+            {
+              "code": "BIOL4230",
+              "alts": []
+            },
+            {
+              "code": "BIOL4260",
+              "alts": []
+            },
+            {
+              "code": "BIOL4420",
+              "alts": []
+            },
+            {
+              "code": "BIOL4510",
+              "alts": []
+            },
+            {
+              "code": "EESC4010",
+              "alts": []
+            },
+            {
+              "code": "EESC4020",
+              "alts": []
+            },
+            {
+              "code": "EESC4030",
+              "alts": []
+            },
+            {
+              "code": "EESC4040",
+              "alts": []
+            },
+            {
+              "code": "EESC4110",
+              "alts": []
+            },
+            {
+              "code": "EESC4119",
+              "alts": []
+            },
+            {
+              "code": "EESC4120",
+              "alts": []
+            },
+            {
+              "code": "EESC4129",
+              "alts": []
+            },
+            {
+              "code": "EESC4130",
+              "alts": []
+            },
+            {
+              "code": "EESC4140",
+              "alts": []
+            },
+            {
+              "code": "EESC4150",
+              "alts": []
+            },
+            {
+              "code": "EESC4160",
+              "alts": []
+            },
+            {
+              "code": "EESC4170",
+              "alts": []
+            },
+            {
+              "code": "EESC4180",
+              "alts": []
+            },
+            {
+              "code": "EESC4210",
+              "alts": []
+            },
+            {
+              "code": "EESC4220",
+              "alts": []
+            },
+            {
+              "code": "EESC4230",
+              "alts": []
+            },
+            {
+              "code": "EESC4240",
+              "alts": []
+            },
+            {
+              "code": "EESC4250",
+              "alts": []
+            },
+            {
+              "code": "EESC4260",
+              "alts": []
+            },
+            {
+              "code": "EESC4270",
+              "alts": []
+            },
+            {
+              "code": "EESC4280",
+              "alts": []
+            },
+            {
+              "code": "EESC4325",
+              "alts": []
+            },
+            {
+              "code": "EESC4330",
+              "alts": []
+            },
+            {
+              "code": "EESC4335",
+              "alts": []
+            },
+            {
+              "code": "EESC4340",
+              "alts": []
+            },
+            {
+              "code": "EESC4342",
+              "alts": []
+            },
+            {
+              "code": "EESC4350",
+              "alts": []
+            },
+            {
+              "code": "EESC4510",
+              "alts": []
+            },
+            {
+              "code": "EESC4520",
+              "alts": []
+            },
+            {
+              "code": "EESC4540",
+              "alts": []
+            },
+            {
+              "code": "EESC4550",
+              "alts": []
+            },
+            {
+              "code": "EESC4909",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Capstone courses: one of the three options",
+          "units": 6,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EESC4810",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4820",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "and 3 units from 3(b) Advanced Earth and Environmental Sciences",
+              "courses": [
+                {
+                  "code": "EESC4810",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4820",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "6 units from 3(b) Advanced",
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 9,
+          "note": "Other electives",
+          "courses": [
+            {
+              "code": "BCHE2030",
+              "alts": []
+            },
+            {
+              "code": "BIOL2120",
+              "alts": []
+            },
+            {
+              "code": "BIOL2210",
+              "alts": []
+            },
+            {
+              "code": "BIOL2213",
+              "alts": []
+            },
+            {
+              "code": "BIOL3012",
+              "alts": []
+            },
+            {
+              "code": "BIOL3022",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL3560",
+              "alts": []
+            },
+            {
+              "code": "BIOL3570",
+              "alts": []
+            },
+            {
+              "code": "BIOL3610",
+              "alts": []
+            },
+            {
+              "code": "BIOL3620",
+              "alts": []
+            },
+            {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "BIOL3710",
+              "alts": []
+            },
+            {
+              "code": "BIOL4012",
+              "alts": []
+            },
+            {
+              "code": "BIOL4230",
+              "alts": []
+            },
+            {
+              "code": "BIOL4260",
+              "alts": []
+            },
+            {
+              "code": "BIOL4420",
+              "alts": []
+            },
+            {
+              "code": "BIOL4510",
+              "alts": []
+            },
+            {
+              "code": "CHEM1070",
+              "alts": []
+            },
+            {
+              "code": "CHEM1072",
+              "alts": []
+            },
+            {
+              "code": "CHEM1870",
+              "alts": []
+            },
+            {
+              "code": "CHEM2200",
+              "alts": []
+            },
+            {
+              "code": "CHEM2300",
+              "alts": []
+            },
+            {
+              "code": "CHEM2310",
+              "alts": []
+            },
+            {
+              "code": "CHEM2400",
+              "alts": []
+            },
+            {
+              "code": "CHEM2408",
+              "alts": []
+            },
+            {
+              "code": "CHEM3320",
+              "alts": []
+            },
+            {
+              "code": "CHEM3330",
+              "alts": []
+            },
+            {
+              "code": "CHEM3410",
+              "alts": []
+            },
+            {
+              "code": "CHEM4280",
+              "alts": []
+            },
+            {
+              "code": "CHEM4400",
+              "alts": []
+            },
+            {
+              "code": "CHEM4440",
+              "alts": []
+            },
+            {
+              "code": "CHEM4710",
+              "alts": []
+            },
+            {
+              "code": "CHEM4780",
+              "alts": []
+            },
+            {
+              "code": "CSCI3320",
+              "alts": []
+            },
+            {
+              "code": "EEEN2010",
+              "alts": []
+            },
+            {
+              "code": "EEEN2020",
+              "alts": []
+            },
+            {
+              "code": "EEEN2030",
+              "alts": []
+            },
+            {
+              "code": "EEEN3020",
+              "alts": []
+            },
+            {
+              "code": "EEEN4030",
+              "alts": []
+            },
+            {
+              "code": "EEEN4050",
+              "alts": []
+            },
+            {
+              "code": "EESC1001",
+              "alts": []
+            },
+            {
+              "code": "EESC1009",
+              "alts": []
+            },
+            {
+              "code": "EESC2009",
+              "alts": []
+            },
+            {
+              "code": "EESC2019",
+              "alts": []
+            },
+            {
+              "code": "EESC2110",
+              "alts": []
+            },
+            {
+              "code": "EESC2119",
+              "alts": []
+            },
+            {
+              "code": "EESC2120",
+              "alts": []
+            },
+            {
+              "code": "EESC2129",
+              "alts": []
+            },
+            {
+              "code": "EESC2130",
+              "alts": []
+            },
+            {
+              "code": "EESC2160",
+              "alts": []
+            },
+            {
+              "code": "EESC2515",
+              "alts": []
+            },
+            {
+              "code": "EESC2517",
+              "alts": []
+            },
+            {
+              "code": "EESC2520",
+              "alts": []
+            },
+            {
+              "code": "EESC2701",
+              "alts": []
+            },
+            {
+              "code": "EESC2800",
+              "alts": []
+            },
+            {
+              "code": "EESC2909",
+              "alts": []
+            },
+            {
+              "code": "EESC3020",
+              "alts": []
+            },
+            {
+              "code": "EESC3100",
+              "alts": []
+            },
+            {
+              "code": "EESC3110",
+              "alts": []
+            },
+            {
+              "code": "EESC3120",
+              "alts": []
+            },
+            {
+              "code": "EESC3130",
+              "alts": []
+            },
+            {
+              "code": "EESC3140",
+              "alts": []
+            },
+            {
+              "code": "EESC3200",
+              "alts": []
+            },
+            {
+              "code": "EESC3220",
+              "alts": []
+            },
+            {
+              "code": "EESC3230",
+              "alts": []
+            },
+            {
+              "code": "EESC3300",
+              "alts": []
+            },
+            {
+              "code": "EESC3320",
+              "alts": []
+            },
+            {
+              "code": "EESC3330",
+              "alts": []
+            },
+            {
+              "code": "EESC3510",
+              "alts": []
+            },
+            {
+              "code": "EESC3520",
+              "alts": []
+            },
+            {
+              "code": "EESC3530",
+              "alts": []
+            },
+            {
+              "code": "EESC3540",
+              "alts": []
+            },
+            {
+              "code": "EESC3600",
+              "alts": []
+            },
+            {
+              "code": "EESC3601",
+              "alts": []
+            },
+            {
+              "code": "EESC3701",
+              "alts": []
+            },
+            {
+              "code": "EESC3800",
+              "alts": []
+            },
+            {
+              "code": "EESC3810",
+              "alts": []
+            },
+            {
+              "code": "EESC3900",
+              "alts": []
+            },
+            {
+              "code": "EESC4010",
+              "alts": []
+            },
+            {
+              "code": "EESC4020",
+              "alts": []
+            },
+            {
+              "code": "EESC4030",
+              "alts": []
+            },
+            {
+              "code": "EESC4040",
+              "alts": []
+            },
+            {
+              "code": "EESC4110",
+              "alts": []
+            },
+            {
+              "code": "EESC4119",
+              "alts": []
+            },
+            {
+              "code": "EESC4120",
+              "alts": []
+            },
+            {
+              "code": "EESC4129",
+              "alts": []
+            },
+            {
+              "code": "EESC4130",
+              "alts": []
+            },
+            {
+              "code": "EESC4140",
+              "alts": []
+            },
+            {
+              "code": "EESC4150",
+              "alts": []
+            },
+            {
+              "code": "EESC4160",
+              "alts": []
+            },
+            {
+              "code": "EESC4170",
+              "alts": []
+            },
+            {
+              "code": "EESC4180",
+              "alts": []
+            },
+            {
+              "code": "EESC4210",
+              "alts": []
+            },
+            {
+              "code": "EESC4220",
+              "alts": []
+            },
+            {
+              "code": "EESC4230",
+              "alts": []
+            },
+            {
+              "code": "EESC4240",
+              "alts": []
+            },
+            {
+              "code": "EESC4250",
+              "alts": []
+            },
+            {
+              "code": "EESC4260",
+              "alts": []
+            },
+            {
+              "code": "EESC4270",
+              "alts": []
+            },
+            {
+              "code": "EESC4280",
+              "alts": []
+            },
+            {
+              "code": "EESC4325",
+              "alts": []
+            },
+            {
+              "code": "EESC4330",
+              "alts": []
+            },
+            {
+              "code": "EESC4335",
+              "alts": []
+            },
+            {
+              "code": "EESC4340",
+              "alts": []
+            },
+            {
+              "code": "EESC4342",
+              "alts": []
+            },
+            {
+              "code": "EESC4350",
+              "alts": []
+            },
+            {
+              "code": "EESC4510",
+              "alts": []
+            },
+            {
+              "code": "EESC4520",
+              "alts": []
+            },
+            {
+              "code": "EESC4540",
+              "alts": []
+            },
+            {
+              "code": "EESC4550",
+              "alts": []
+            },
+            {
+              "code": "EESC4601",
+              "alts": []
+            },
+            {
+              "code": "EESC4602",
+              "alts": []
+            },
+            {
+              "code": "EESC4603",
+              "alts": []
+            },
+            {
+              "code": "EESC4909",
+              "alts": []
+            },
+            {
+              "code": "ELEG3503",
+              "alts": []
+            },
+            {
+              "code": "ENGG1310",
+              "alts": []
+            },
+            {
+              "code": "ENGG2020",
+              "alts": []
+            },
+            {
+              "code": "ENGG2030",
+              "alts": []
+            },
+            {
+              "code": "GPAD3360",
+              "alts": []
+            },
+            {
+              "code": "GRMD2105",
+              "alts": []
+            },
+            {
+              "code": "GRMD2501",
+              "alts": []
+            },
+            {
+              "code": "GRMD3203",
+              "alts": []
+            },
+            {
+              "code": "GRMD3209",
+              "alts": []
+            },
+            {
+              "code": "GRMD3403",
+              "alts": []
+            },
+            {
+              "code": "GRMD4202",
+              "alts": []
+            },
+            {
+              "code": "GRMD4203",
+              "alts": []
+            },
+            {
+              "code": "GRMD4204",
+              "alts": []
+            },
+            {
+              "code": "GRMD4401",
+              "alts": []
+            },
+            {
+              "code": "IERG3300",
+              "alts": []
+            },
+            {
+              "code": "LAWS4310",
+              "alts": []
+            },
+            {
+              "code": "LSCI1002",
+              "alts": []
+            },
+            {
+              "code": "LSCI1012",
+              "alts": []
+            },
+            {
+              "code": "LSCI2002",
+              "alts": []
+            },
+            {
+              "code": "LSCI2003",
+              "alts": []
+            },
+            {
+              "code": "MAEG2030",
+              "alts": []
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
+            },
+            {
+              "code": "MATH2020",
+              "alts": []
+            },
+            {
+              "code": "MATH2040",
+              "alts": []
+            },
+            {
+              "code": "MATH2050",
+              "alts": []
+            },
+            {
+              "code": "MATH2060",
+              "alts": []
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
+            },
+            {
+              "code": "MATH2530",
+              "alts": []
+            },
+            {
+              "code": "MATH2550",
+              "alts": []
+            },
+            {
+              "code": "MATH3093",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3270",
+              "alts": []
+            },
+            {
+              "code": "MATH4020",
+              "alts": []
+            },
+            {
+              "code": "MATH4030",
+              "alts": []
+            },
+            {
+              "code": "MATH4220",
+              "alts": []
+            },
+            {
+              "code": "MATH4230",
+              "alts": []
+            },
+            {
+              "code": "MBTE2010",
+              "alts": []
+            },
+            {
+              "code": "MBTE3550",
+              "alts": []
+            },
+            {
+              "code": "MBTE3558",
+              "alts": []
+            },
+            {
+              "code": "PHPC3016",
+              "alts": []
+            },
+            {
+              "code": "PHYS1001",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1111",
+              "alts": []
+            },
+            {
+              "code": "PHYS1113",
+              "alts": []
+            },
+            {
+              "code": "PHYS1122",
+              "alts": []
+            },
+            {
+              "code": "PHYS1712",
+              "alts": []
+            },
+            {
+              "code": "PHYS2041",
+              "alts": []
+            },
+            {
+              "code": "PHYS2051",
+              "alts": []
+            },
+            {
+              "code": "PHYS2401",
+              "alts": []
+            },
+            {
+              "code": "PHYS3011",
+              "alts": []
+            },
+            {
+              "code": "PHYS3021",
+              "alts": []
+            },
+            {
+              "code": "PHYS3031",
+              "alts": []
+            },
+            {
+              "code": "PHYS3041",
+              "alts": []
+            },
+            {
+              "code": "PHYS3051",
+              "alts": []
+            },
+            {
+              "code": "PHYS3061",
+              "alts": []
+            },
+            {
+              "code": "PHYS4011",
+              "alts": []
+            },
+            {
+              "code": "PHYS4021",
+              "alts": []
+            },
+            {
+              "code": "PHYS4031",
+              "alts": []
+            },
+            {
+              "code": "PHYS4050",
+              "alts": []
+            },
+            {
+              "code": "PHYS4420",
+              "alts": []
+            },
+            {
+              "code": "PHYS4430",
+              "alts": []
+            },
+            {
+              "code": "RMSC2001",
+              "alts": []
+            },
+            {
+              "code": "RMSC4001",
+              "alts": []
+            },
+            {
+              "code": "RMSC4002",
+              "alts": []
+            },
+            {
+              "code": "RMSC4004",
+              "alts": []
+            },
+            {
+              "code": "RMSC4005",
+              "alts": []
+            },
+            {
+              "code": "RMSC4006",
+              "alts": []
+            },
+            {
+              "code": "STAT2001",
+              "alts": []
+            },
+            {
+              "code": "STAT2006",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT3008",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            },
+            {
+              "code": "STAT4001",
+              "alts": []
+            },
+            {
+              "code": "STAT4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4003",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
+              "alts": []
+            },
+            {
+              "code": "URSP3300",
+              "alts": []
+            },
+            {
+              "code": "URSP4100",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

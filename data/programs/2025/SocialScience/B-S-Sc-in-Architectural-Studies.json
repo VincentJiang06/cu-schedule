@@ -622,5 +622,292 @@
       "stream": null,
       "n_courses": 1
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 30,
+          "note": null,
+          "courses": [
+            {
+              "code": "ARCH2111",
+              "alts": []
+            },
+            {
+              "code": "ARCH2112",
+              "alts": []
+            },
+            {
+              "code": "ARCH3113",
+              "alts": []
+            },
+            {
+              "code": "ARCH3114",
+              "alts": []
+            },
+            {
+              "code": "ARCH4115",
+              "alts": []
+            },
+            {
+              "code": "ARCH4116",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 33,
+          "note": "Other Required Courses",
+          "courses": [
+            {
+              "code": "ARCH1003",
+              "alts": []
+            },
+            {
+              "code": "ARCH2222",
+              "alts": []
+            },
+            {
+              "code": "ARCH2322",
+              "alts": []
+            },
+            {
+              "code": "ARCH2323",
+              "alts": []
+            },
+            {
+              "code": "ARCH2413",
+              "alts": []
+            },
+            {
+              "code": "ARCH2422",
+              "alts": []
+            },
+            {
+              "code": "ARCH3321",
+              "alts": []
+            },
+            {
+              "code": "ARCH3424",
+              "alts": []
+            },
+            {
+              "code": "ARCH3721",
+              "alts": []
+            },
+            {
+              "code": "ARCH4425",
+              "alts": []
+            },
+            {
+              "code": "ARCH4426",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "ARCH4131",
+          "alts": []
+        },
+        {
+          "code": "ARCH4231",
+          "alts": []
+        },
+        {
+          "code": "ARCH4331",
+          "alts": []
+        },
+        {
+          "code": "ARCH4431",
+          "alts": []
+        },
+        {
+          "code": "ARCH4531",
+          "alts": []
+        },
+        {
+          "code": "ARCH4731",
+          "alts": []
+        },
+        {
+          "code": "ARCH5131",
+          "alts": []
+        },
+        {
+          "code": "ARCH5231",
+          "alts": []
+        },
+        {
+          "code": "ARCH5331",
+          "alts": []
+        },
+        {
+          "code": "ARCH5431",
+          "alts": []
+        },
+        {
+          "code": "ARCH5531",
+          "alts": []
+        },
+        {
+          "code": "ARCH5631",
+          "alts": []
+        },
+        {
+          "code": "ARCH5731",
+          "alts": []
+        },
+        {
+          "code": "ARCH5931",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

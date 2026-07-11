@@ -4400,7 +4400,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Electrical",
       "units": null,
       "bucket": "required",
@@ -4505,6 +4505,2435 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "1st Major: Interdisciplinary Data Analytics",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Required Courses",
+          "units": 21,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ENGG2440",
+                  "alts": []
+                },
+                {
+                  "code": "MATH1030",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT1020",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM2460",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2001",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "COOP1001",
+                  "alts": []
+                },
+                {
+                  "code": "COOP2001",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Elective Courses",
+          "units": 27,
+          "note": "Students are required to take a total of 27 units of elective courses from the area which corresponds to the 2nd Major chosen by them. 6-15 units to be taken from Group A, and 12-21 units from Group B, of which at least 12 units of courses should be from 3000 or above level (including at least 6 units of courses at 4000 level). Areas",
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5350",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI1120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5350",
+                  "alts": []
+                },
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5350",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                },
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5350",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "vi)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "vii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "viii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ix)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "x)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3430",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4001",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "xi)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "RMSC4003",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4006",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4250",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3490",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3580",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3620",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4540",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4570",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4630",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4730",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4750",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM4760",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "2nd Major Students",
+      "units": null,
+      "note": "are required to choose one of the Majors offered by CUHK or CUHK(SZ) as their second Major.",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Integrated BBA Programme (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 24,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ACCT2111",
+                  "alts": []
+                },
+                {
+                  "code": "ACCT2121",
+                  "alts": []
+                },
+                {
+                  "code": "ACCT2151",
+                  "alts": []
+                },
+                {
+                  "code": "FINA2010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT2511",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT2512",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT2611",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG2010",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MGNT4010",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "FINA3080",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4110",
+                  "alts": []
+                },
+                {
+                  "code": "FINA4120",
+                  "alts": []
+                },
+                {
+                  "code": "IBBA3010",
+                  "alts": []
+                },
+                {
+                  "code": "IBBA3020",
+                  "alts": []
+                },
+                {
+                  "code": "IBBA3031",
+                  "alts": []
+                },
+                {
+                  "code": "IBBA3032",
+                  "alts": []
+                },
+                {
+                  "code": "IBBA3040",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3010",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3070",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4090",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Information Engineering (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 12,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI2100",
+                  "alts": []
+                },
+                {
+                  "code": "IERG2051",
+                  "alts": []
+                },
+                {
+                  "code": "IERG2470",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3310",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "IERG4999",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 18,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI3160",
+                  "alts": []
+                },
+                {
+                  "code": "IERG2310",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3010",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3050",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3060",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3080",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3280",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3320",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3810",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3820",
+                  "alts": []
+                },
+                {
+                  "code": "IERG3830",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4004",
+                  "alts": [
+                    "FTEC4004"
+                  ]
+                },
+                {
+                  "code": "IERG4030",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4080",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4090",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4100",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4130",
+                  "alts": [
+                    "CSCI4130"
+                  ]
+                },
+                {
+                  "code": "IERG4150",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4160",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4180",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4190",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4210",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4220",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4230",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4300",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4330",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4340",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4350",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4360",
+                  "alts": []
+                },
+                {
+                  "code": "IERG4831",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Systems Engineering and Engineering Management (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 27,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI2040",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI2100",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1130",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM2420",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM2602",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3440",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3410",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3450",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3550",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3650",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SEEM4999",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI1120",
+                  "alts": []
+                },
+                {
+                  "code": "CSCI1130",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "Mathematics (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH2010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2040",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2050",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2230",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH4900",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH3030",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3040",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3060",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3080",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3093",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3240",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3260",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3290",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3310",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3360",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4010",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4030",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4050",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4060",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4080",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4210",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4220",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4240",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(e)",
+          "title": "Statistics (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "STAT2006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3008",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "STAT4011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 21,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI2520",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4002",
+                  "alts": []
+                },
+                {
+                  "code": "RMSC4007",
+                  "alts": []
+                },
+                {
+                  "code": "STAT2011",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3003",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3006",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3007",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4003",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4010",
+                  "alts": []
+                },
+                {
+                  "code": "STAT4012",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(f)",
+          "title": "Financial Engineering (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(g)",
+          "title": "Marketing and Communication (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(h)",
+          "title": "Computer Science and Engineering (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 18,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 12,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 18,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 12,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(j)",
+          "title": "Mathematics and Applied Mathematics (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 12,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 18,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(k)",
+          "title": "Statistics (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": 24,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

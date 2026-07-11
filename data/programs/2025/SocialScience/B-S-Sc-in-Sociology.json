@@ -242,6 +242,7 @@
     "LAWS6011",
     "LAWS6012",
     "LAWS6013",
+    "LAWS6014",
     "LAWS6015",
     "LAWS6017",
     "LAWS6018",
@@ -1081,1134 +1082,6 @@
         ],
         "alt": false,
         "from": "3. Elective"
-      },
-      {
-        "raw": "SOCI2004",
-        "codes": [
-          "SOCI2004"
-        ],
-        "alt": false,
-        "from": "(a) Quantitative Method Cluster"
-      },
-      {
-        "raw": "SOCI3229",
-        "codes": [
-          "SOCI3229"
-        ],
-        "alt": false,
-        "from": "(a) Quantitative Method Cluster"
-      },
-      {
-        "raw": "SOCI3243",
-        "codes": [
-          "SOCI3243"
-        ],
-        "alt": false,
-        "from": "(a) Quantitative Method Cluster"
-      },
-      {
-        "raw": "SOCI4201",
-        "codes": [
-          "SOCI4201"
-        ],
-        "alt": false,
-        "from": "(a) Quantitative Method Cluster"
-      },
-      {
-        "raw": "SOCI3102",
-        "codes": [
-          "SOCI3102"
-        ],
-        "alt": false,
-        "from": "(b) Computational Method Cluster"
-      },
-      {
-        "raw": "SOCI3238",
-        "codes": [
-          "SOCI3238"
-        ],
-        "alt": false,
-        "from": "(b) Computational Method Cluster"
-      },
-      {
-        "raw": "SOCI2003",
-        "codes": [
-          "SOCI2003"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3001",
-        "codes": [
-          "SOCI3001"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3221",
-        "codes": [
-          "SOCI3221"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3225",
-        "codes": [
-          "SOCI3225"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3227",
-        "codes": [
-          "SOCI3227"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3231",
-        "codes": [
-          "SOCI3231"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3235",
-        "codes": [
-          "SOCI3235"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI3245",
-        "codes": [
-          "SOCI3245"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "DSPS2201",
-        "codes": [
-          "DSPS2201"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "DSPS3202",
-        "codes": [
-          "DSPS3202"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "GRMD2104",
-        "codes": [
-          "GRMD2104"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "GRMD2105",
-        "codes": [
-          "GRMD2105"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "GRMD3104",
-        "codes": [
-          "GRMD3104"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "GRMD3106",
-        "codes": [
-          "GRMD3106"
-        ],
-        "alt": false,
-        "from": "(c) Community Social Analysis Cluster"
-      },
-      {
-        "raw": "SOCI2106",
-        "codes": [
-          "SOCI2106"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "SOCI3001",
-        "codes": [
-          "SOCI3001"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "SOCI3207",
-        "codes": [
-          "SOCI3207"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "SOCI3230",
-        "codes": [
-          "SOCI3230"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "SOCI3241",
-        "codes": [
-          "SOCI3241"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3250",
-        "codes": [
-          "ECON3250"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3310",
-        "codes": [
-          "ECON3310"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3320",
-        "codes": [
-          "ECON3320"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3350",
-        "codes": [
-          "ECON3350"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3370",
-        "codes": [
-          "ECON3370"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3380",
-        "codes": [
-          "ECON3380"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3610",
-        "codes": [
-          "ECON3610"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "ECON3630",
-        "codes": [
-          "ECON3630"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GLSD2501",
-        "codes": [
-          "GLSD2501"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GLSD3501",
-        "codes": [
-          "GLSD3501"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GLSD4102",
-        "codes": [
-          "GLSD4102"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GLSD4104",
-        "codes": [
-          "GLSD4104"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GRMD2321",
-        "codes": [
-          "GRMD2321"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "GRMD3402",
-        "codes": [
-          "GRMD3402"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "URSP2010",
-        "codes": [
-          "URSP2010"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "URSP2200",
-        "codes": [
-          "URSP2200"
-        ],
-        "alt": false,
-        "from": "(a) Economic"
-      },
-      {
-        "raw": "SOCI2116",
-        "codes": [
-          "SOCI2116"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOCI2220",
-        "codes": [
-          "SOCI2220"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOCI3204",
-        "codes": [
-          "SOCI3204"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOCI3234",
-        "codes": [
-          "SOCI3234"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOCI3242",
-        "codes": [
-          "SOCI3242"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "ANTH2530",
-        "codes": [
-          "ANTH2530"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "ANTH3540",
-        "codes": [
-          "ANTH3540"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "COMM3600",
-        "codes": [
-          "COMM3600"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "COMM3710",
-        "codes": [
-          "COMM3710"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GDRS5210",
-        "codes": [
-          "GDRS5210"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GLSD3301",
-        "codes": [
-          "GLSD3301"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GLSD4401",
-        "codes": [
-          "GLSD4401"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GLSD4402",
-        "codes": [
-          "GLSD4402"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GPAD1100",
-        "codes": [
-          "GPAD1100"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GPAD2070",
-        "codes": [
-          "GPAD2070"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GPAD2085",
-        "codes": [
-          "GPAD2085"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GPAD2300",
-        "codes": [
-          "GPAD2300"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "GPAD2345",
-        "codes": [
-          "GPAD2345"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "PSYC3370",
-        "codes": [
-          "PSYC3370"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOWK4350",
-        "codes": [
-          "SOWK4350"
-        ],
-        "alt": false,
-        "from": "(b) Sociology"
-      },
-      {
-        "raw": "SOCI2208",
-        "codes": [
-          "SOCI2208"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI2219",
-        "codes": [
-          "SOCI2219"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI3224",
-        "codes": [
-          "SOCI3224"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI3236",
-        "codes": [
-          "SOCI3236"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI3244",
-        "codes": [
-          "SOCI3244"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI4205",
-        "codes": [
-          "SOCI4205"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "ARCH3321",
-        "codes": [
-          "ARCH3321"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "ARCH3721",
-        "codes": [
-          "ARCH3721"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "DSPS2301",
-        "codes": [
-          "DSPS2301"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "DSPS3310",
-        "codes": [
-          "DSPS3310"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "DSPS3790",
-        "codes": [
-          "DSPS3790"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "DSPS3803",
-        "codes": [
-          "DSPS3803"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS3005",
-        "codes": [
-          "GDRS3005"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS3006",
-        "codes": [
-          "GDRS3006"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS3007",
-        "codes": [
-          "GDRS3007"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS3008",
-        "codes": [
-          "GDRS3008"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS3024",
-        "codes": [
-          "GDRS3024"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS4006",
-        "codes": [
-          "GDRS4006"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS4007",
-        "codes": [
-          "GDRS4007"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS4008",
-        "codes": [
-          "GDRS4008"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS4011",
-        "codes": [
-          "GDRS4011"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GDRS4012",
-        "codes": [
-          "GDRS4012"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GLSD3105",
-        "codes": [
-          "GLSD3105"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD2303",
-        "codes": [
-          "GRMD2303"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD2401",
-        "codes": [
-          "GRMD2401"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD2404",
-        "codes": [
-          "GRMD2404"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD2501",
-        "codes": [
-          "GRMD2501"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD3202",
-        "codes": [
-          "GRMD3202"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD3203",
-        "codes": [
-          "GRMD3203"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD3302",
-        "codes": [
-          "GRMD3302"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD3323",
-        "codes": [
-          "GRMD3323"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD3404",
-        "codes": [
-          "GRMD3404"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD4403",
-        "codes": [
-          "GRMD4403"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "GRMD4503",
-        "codes": [
-          "GRMD4503"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "PSYC3630",
-        "codes": [
-          "PSYC3630"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOWK3340",
-        "codes": [
-          "SOWK3340"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2010",
-        "codes": [
-          "URSP2010"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2020",
-        "codes": [
-          "URSP2020"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2030",
-        "codes": [
-          "URSP2030"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2040",
-        "codes": [
-          "URSP2040"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2050",
-        "codes": [
-          "URSP2050"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2060",
-        "codes": [
-          "URSP2060"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2070",
-        "codes": [
-          "URSP2070"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2100",
-        "codes": [
-          "URSP2100"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2300",
-        "codes": [
-          "URSP2300"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2400",
-        "codes": [
-          "URSP2400"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2800",
-        "codes": [
-          "URSP2800"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP2900",
-        "codes": [
-          "URSP2900"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3100",
-        "codes": [
-          "URSP3100"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3200",
-        "codes": [
-          "URSP3200"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3300",
-        "codes": [
-          "URSP3300"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3400",
-        "codes": [
-          "URSP3400"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3600",
-        "codes": [
-          "URSP3600"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP3700",
-        "codes": [
-          "URSP3700"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "URSP4100",
-        "codes": [
-          "URSP4100"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI3245",
-        "codes": [
-          "SOCI3245"
-        ],
-        "alt": false,
-        "from": "(c) Urban"
-      },
-      {
-        "raw": "SOCI2106",
-        "codes": [
-          "SOCI2106"
-        ],
-        "alt": false,
-        "from": "(a) Required"
-      },
-      {
-        "raw": "SOCI2203",
-        "codes": [
-          "SOCI2203"
-        ],
-        "alt": false,
-        "from": "(a) Required"
-      },
-      {
-        "raw": "SOCI3227",
-        "codes": [
-          "SOCI3227"
-        ],
-        "alt": false,
-        "from": "(a) Required"
-      },
-      {
-        "raw": "DSPS2201",
-        "codes": [
-          "DSPS2201"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "DSPS2301",
-        "codes": [
-          "DSPS2301"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "DSPS2501",
-        "codes": [
-          "DSPS2501"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "DSPS3202",
-        "codes": [
-          "DSPS3202"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI2116",
-        "codes": [
-          "SOCI2116"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI2208",
-        "codes": [
-          "SOCI2208"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI2216",
-        "codes": [
-          "SOCI2216"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI2218",
-        "codes": [
-          "SOCI2218"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI3204",
-        "codes": [
-          "SOCI3204"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI3208",
-        "codes": [
-          "SOCI3208"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI3227",
-        "codes": [
-          "SOCI3227"
-        ],
-        "alt": false,
-        "from": "(b) Elective"
-      },
-      {
-        "raw": "SOCI3239",
-        "codes": [
-          "SOCI3239"
-        ],
-        "alt": false,
-        "from": "(a) Environment"
-      },
-      {
-        "raw": "SOCI3102",
-        "codes": [
-          "SOCI3102"
-        ],
-        "alt": false,
-        "from": "(a) Environment"
-      },
-      {
-        "raw": "SOCI3238",
-        "codes": [
-          "SOCI3238"
-        ],
-        "alt": false,
-        "from": "(a) Environment"
-      },
-      {
-        "raw": "SOCI3240",
-        "codes": [
-          "SOCI3240"
-        ],
-        "alt": false,
-        "from": "(a) Environment"
-      },
-      {
-        "raw": "SOCI4210",
-        "codes": [
-          "SOCI4210"
-        ],
-        "alt": false,
-        "from": "(a) Environment"
-      },
-      {
-        "raw": "SOCI3002",
-        "codes": [
-          "SOCI3002"
-        ],
-        "alt": false,
-        "from": "(b) Society"
-      },
-      {
-        "raw": "SOCI2116",
-        "codes": [
-          "SOCI2116"
-        ],
-        "alt": false,
-        "from": "(b) Society"
-      },
-      {
-        "raw": "SOCI2208",
-        "codes": [
-          "SOCI2208"
-        ],
-        "alt": false,
-        "from": "(b) Society"
-      },
-      {
-        "raw": "SOCI2216",
-        "codes": [
-          "SOCI2216"
-        ],
-        "alt": false,
-        "from": "(b) Society"
-      },
-      {
-        "raw": "SOCI2218",
-        "codes": [
-          "SOCI2218"
-        ],
-        "alt": false,
-        "from": "(b) Society"
       }
     ],
     "stream_elective": []
@@ -2240,96 +1113,1059 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 52
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        }
+      ],
+      "children": []
     },
     {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Quantitative Method Cluster",
-      "units": "6",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 4
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Computational Method Cluster",
-      "units": "3",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 2
-    },
-    {
-      "marker": "(c)",
-      "level": 2,
-      "title": "Community Social Analysis Cluster",
-      "units": "9",
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 14
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Economic",
+      "marker": "2.",
+      "title": "",
       "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 21
+      "note": null,
+      "courses": [
+        {
+          "code": "SOCI1002",
+          "alts": []
+        },
+        {
+          "code": "SOCI2003",
+          "alts": []
+        },
+        {
+          "code": "SOCI2004",
+          "alts": []
+        },
+        {
+          "code": "SOCI2104",
+          "alts": []
+        },
+        {
+          "code": "SOCI3003",
+          "alts": []
+        },
+        {
+          "code": "SOCI3223",
+          "alts": []
+        },
+        {
+          "code": "SOCI3231",
+          "alts": []
+        },
+        {
+          "code": "SOCI4010",
+          "alts": []
+        }
+      ],
+      "children": []
     },
     {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Sociology",
+      "marker": "3.",
+      "title": "",
       "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 20
+      "note": null,
+      "courses": [
+        {
+          "code": "SOCI2101",
+          "alts": []
+        },
+        {
+          "code": "SOCI2103",
+          "alts": []
+        },
+        {
+          "code": "SOCI2106",
+          "alts": []
+        },
+        {
+          "code": "SOCI2116",
+          "alts": []
+        },
+        {
+          "code": "SOCI2203",
+          "alts": []
+        },
+        {
+          "code": "SOCI2208",
+          "alts": []
+        },
+        {
+          "code": "SOCI2216",
+          "alts": []
+        },
+        {
+          "code": "SOCI2218",
+          "alts": []
+        },
+        {
+          "code": "SOCI2219",
+          "alts": []
+        },
+        {
+          "code": "SOCI2220",
+          "alts": []
+        },
+        {
+          "code": "SOCI3001",
+          "alts": []
+        },
+        {
+          "code": "SOCI3002",
+          "alts": []
+        },
+        {
+          "code": "SOCI3102",
+          "alts": []
+        },
+        {
+          "code": "SOCI3204",
+          "alts": []
+        },
+        {
+          "code": "SOCI3207",
+          "alts": []
+        },
+        {
+          "code": "SOCI3208",
+          "alts": []
+        },
+        {
+          "code": "SOCI3221",
+          "alts": []
+        },
+        {
+          "code": "SOCI3224",
+          "alts": []
+        },
+        {
+          "code": "SOCI3225",
+          "alts": []
+        },
+        {
+          "code": "SOCI3226",
+          "alts": []
+        },
+        {
+          "code": "SOCI3227",
+          "alts": []
+        },
+        {
+          "code": "SOCI3229",
+          "alts": []
+        },
+        {
+          "code": "SOCI3230",
+          "alts": []
+        },
+        {
+          "code": "SOCI3233",
+          "alts": []
+        },
+        {
+          "code": "SOCI3234",
+          "alts": []
+        },
+        {
+          "code": "SOCI3235",
+          "alts": []
+        },
+        {
+          "code": "SOCI3236",
+          "alts": []
+        },
+        {
+          "code": "SOCI3237",
+          "alts": []
+        },
+        {
+          "code": "SOCI3238",
+          "alts": []
+        },
+        {
+          "code": "SOCI3239",
+          "alts": []
+        },
+        {
+          "code": "SOCI3240",
+          "alts": []
+        },
+        {
+          "code": "SOCI3241",
+          "alts": []
+        },
+        {
+          "code": "SOCI3242",
+          "alts": []
+        },
+        {
+          "code": "SOCI3243",
+          "alts": []
+        },
+        {
+          "code": "SOCI3244",
+          "alts": []
+        },
+        {
+          "code": "SOCI3245",
+          "alts": []
+        },
+        {
+          "code": "SOCI3451",
+          "alts": []
+        },
+        {
+          "code": "SOCI3452",
+          "alts": []
+        },
+        {
+          "code": "SOCI3453",
+          "alts": []
+        },
+        {
+          "code": "SOCI4201",
+          "alts": []
+        },
+        {
+          "code": "SOCI4202",
+          "alts": []
+        },
+        {
+          "code": "SOCI4204",
+          "alts": []
+        },
+        {
+          "code": "SOCI4205",
+          "alts": []
+        },
+        {
+          "code": "SOCI4208",
+          "alts": []
+        },
+        {
+          "code": "SOCI4209",
+          "alts": []
+        },
+        {
+          "code": "SOCI4210",
+          "alts": []
+        },
+        {
+          "code": "SOCI4211",
+          "alts": []
+        },
+        {
+          "code": "SOCI4351",
+          "alts": []
+        },
+        {
+          "code": "SOCI4352",
+          "alts": []
+        },
+        {
+          "code": "SOCI4353",
+          "alts": []
+        },
+        {
+          "code": "SOCI4410",
+          "alts": []
+        },
+        {
+          "code": "SOCI4420",
+          "alts": []
+        }
+      ],
+      "children": []
     },
     {
-      "marker": "(c)",
-      "level": 2,
-      "title": "Urban",
+      "marker": "",
+      "kind": "concentration",
+      "title": "专业方向 · Concentration Area",
       "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 56
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Required",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 3
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Elective",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 11
-    },
-    {
-      "marker": "(a)",
-      "level": 2,
-      "title": "Environment",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 5
-    },
-    {
-      "marker": "(b)",
-      "level": 2,
-      "title": "Society",
-      "units": null,
-      "bucket": "elective",
-      "stream": null,
-      "n_courses": 5
+      "note": "Students may choose to declare one, or up to two concentration areas by taking at least 15 to 24 units in the relevant area(s)",
+      "courses": [],
+      "children": [
+        {
+          "marker": "",
+          "title": "Research Methods and Data Analytics",
+          "units": null,
+          "note": "least 18 units of courses from the three modules listed below",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2004",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3229",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3243",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI4201",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI3102",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3238",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(c)",
+              "title": "",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2003",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3001",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3221",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3225",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3227",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3231",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3235",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3245",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2201",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3202",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2105",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Human Security and Social Governance",
+          "units": null,
+          "note": "least 24 units of courses from the three compulsory modules listed below",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": 6,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2106",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3001",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3207",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3230",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3241",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3250",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3310",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3320",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3350",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3370",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3380",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3610",
+                  "alts": []
+                },
+                {
+                  "code": "ECON3630",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3501",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4102",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2321",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3402",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2010",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2200",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2116",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2220",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3204",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3234",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3242",
+                  "alts": []
+                },
+                {
+                  "code": "ANTH2530",
+                  "alts": []
+                },
+                {
+                  "code": "ANTH3540",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3600",
+                  "alts": []
+                },
+                {
+                  "code": "COMM3710",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS5210",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3301",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4401",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4402",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1100",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2070",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2085",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2300",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2345",
+                  "alts": []
+                },
+                {
+                  "code": "PSYC3370",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK4350",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(c)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2208",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2219",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3224",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3236",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3244",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI4205",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH3321",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH3721",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2301",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3310",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3790",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3803",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS3005",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS3006",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS3007",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS3008",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS3024",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS4006",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS4007",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS4008",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS4011",
+                  "alts": []
+                },
+                {
+                  "code": "GDRS4012",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3105",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2303",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2401",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3202",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3203",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3302",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3323",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4403",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "PSYC3630",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK3340",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2010",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2020",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2030",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2040",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2050",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2060",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2070",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2100",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2300",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2400",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2800",
+                  "alts": []
+                },
+                {
+                  "code": "URSP2900",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3100",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3200",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3300",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3400",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3600",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3700",
+                  "alts": []
+                },
+                {
+                  "code": "URSP4100",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3245",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Sociology and Social Policy",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOCI2106",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2203",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3227",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(b)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DSPS2201",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2301",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3202",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2116",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2208",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2216",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2218",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3204",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3208",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3227",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "",
+          "title": "Society, Sustainability and Technology",
+          "units": null,
+          "note": "least 18 units of courses from the two modules listed below",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(a)",
+              "title": "",
+              "units": null,
+              "note": "and Technology (at least 6 units)",
+              "courses": [],
+              "children": [
+                {
+                  "marker": "",
+                  "title": "",
+                  "units": null,
+                  "note": "Required Course",
+                  "courses": [
+                    {
+                      "code": "SOCI3239",
+                      "alts": []
+                    }
+                  ],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

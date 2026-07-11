@@ -53,5 +53,15 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "2.",
+      "title": "",
+      "units": null,
+      "note": "Students who have completed 3 units of Core Skills Courses will",
+      "courses": [],
+      "children": []
+    }
   ]
 }

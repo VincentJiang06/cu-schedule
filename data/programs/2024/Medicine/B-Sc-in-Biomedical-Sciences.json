@@ -553,7 +553,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "SBMS3201, 4201[e], 4202[e]",
       "units": "8",
       "bucket": "elective",
@@ -571,7 +571,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,",
       "units": null,
       "bucket": "elective",
@@ -589,7 +589,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "SBMS3207, 3208, 3209, 3210, 3211",
       "units": "13",
       "bucket": "elective",
@@ -613,6 +613,331 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 21
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 10,
+      "note": null,
+      "courses": [
+        {
+          "code": "MEDF1011",
+          "alts": []
+        },
+        {
+          "code": "MEDF1021",
+          "alts": []
+        },
+        {
+          "code": "MEDF1031",
+          "alts": []
+        },
+        {
+          "code": "MEDF1041",
+          "alts": []
+        },
+        {
+          "code": "SBMS1102",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 28,
+      "note": null,
+      "courses": [
+        {
+          "code": "SBMS1101",
+          "alts": []
+        },
+        {
+          "code": "SBMS1103",
+          "alts": []
+        },
+        {
+          "code": "SBMS2101",
+          "alts": []
+        },
+        {
+          "code": "SBMS2102",
+          "alts": []
+        },
+        {
+          "code": "SBMS2104",
+          "alts": []
+        },
+        {
+          "code": "SBMS2105",
+          "alts": []
+        },
+        {
+          "code": "SBMS2106",
+          "alts": []
+        },
+        {
+          "code": "SBMS2107",
+          "alts": []
+        },
+        {
+          "code": "SBMS2108",
+          "alts": []
+        },
+        {
+          "code": "SBMS3101",
+          "alts": []
+        },
+        {
+          "code": "SBMS3105",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Students must choose only one Concentration Area from the following",
+          "units": null,
+          "note": "Concentration Area A: Biomedical Research",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": 8,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SBMS3201",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS4201",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "6 units of",
+              "courses": [
+                {
+                  "code": "SBMS3202",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3203",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3204",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3205",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3206",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": 14,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EPIN1020",
+                  "alts": []
+                },
+                {
+                  "code": "LAWS2331",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3215",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "1 course chosen",
+              "courses": [
+                {
+                  "code": "SBMS4203",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS4204",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": 13,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SBMS3207",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3208",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3209",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3210",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3211",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": 1,
+              "note": "1 course chosen from the following",
+              "courses": [
+                {
+                  "code": "SBMS4203",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS4204",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "17-18 units of courses chosen from",
+          "courses": [
+            {
+              "code": "EPIN1020",
+              "alts": []
+            },
+            {
+              "code": "LAWS2331",
+              "alts": []
+            },
+            {
+              "code": "PHAR3420",
+              "alts": []
+            },
+            {
+              "code": "SBMS2201",
+              "alts": []
+            },
+            {
+              "code": "SBMS3201",
+              "alts": []
+            },
+            {
+              "code": "SBMS3202",
+              "alts": []
+            },
+            {
+              "code": "SBMS3203",
+              "alts": []
+            },
+            {
+              "code": "SBMS3204",
+              "alts": []
+            },
+            {
+              "code": "SBMS3205",
+              "alts": []
+            },
+            {
+              "code": "SBMS3206",
+              "alts": []
+            },
+            {
+              "code": "SBMS3207",
+              "alts": []
+            },
+            {
+              "code": "SBMS3208",
+              "alts": []
+            },
+            {
+              "code": "SBMS3209",
+              "alts": []
+            },
+            {
+              "code": "SBMS3210",
+              "alts": []
+            },
+            {
+              "code": "SBMS3211",
+              "alts": []
+            },
+            {
+              "code": "SBMS3212",
+              "alts": []
+            },
+            {
+              "code": "SBMS3213",
+              "alts": []
+            },
+            {
+              "code": "SBMS3214",
+              "alts": []
+            },
+            {
+              "code": "SBMS3215",
+              "alts": []
+            },
+            {
+              "code": "SBMS3216",
+              "alts": []
+            },
+            {
+              "code": "SBMS4203",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

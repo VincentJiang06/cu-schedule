@@ -21,6 +21,7 @@
     "CURE1400",
     "ELTU1001",
     "ELTU2011",
+    "ELTU3011",
     "ENGE1000",
     "ENGE1310",
     "ENGE1320",
@@ -1052,6 +1053,546 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 86
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 18,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGE1310",
+          "alts": []
+        },
+        {
+          "code": "ENGE1320",
+          "alts": []
+        },
+        {
+          "code": "ENGE1500",
+          "alts": []
+        },
+        {
+          "code": "ENGE1610",
+          "alts": []
+        },
+        {
+          "code": "ENGE3100",
+          "alts": []
+        },
+        {
+          "code": "ENGE4700",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGE1520",
+          "alts": []
+        },
+        {
+          "code": "ENGE1800",
+          "alts": []
+        },
+        {
+          "code": "ENGE1900",
+          "alts": []
+        },
+        {
+          "code": "ENGE2110",
+          "alts": []
+        },
+        {
+          "code": "ENGE2120",
+          "alts": []
+        },
+        {
+          "code": "ENGE2130",
+          "alts": []
+        },
+        {
+          "code": "ENGE2140",
+          "alts": []
+        },
+        {
+          "code": "ENGE2150",
+          "alts": []
+        },
+        {
+          "code": "ENGE2160",
+          "alts": []
+        },
+        {
+          "code": "ENGE2170",
+          "alts": []
+        },
+        {
+          "code": "ENGE2180",
+          "alts": []
+        },
+        {
+          "code": "ENGE2190",
+          "alts": []
+        },
+        {
+          "code": "ENGE2210",
+          "alts": []
+        },
+        {
+          "code": "ENGE2220",
+          "alts": []
+        },
+        {
+          "code": "ENGE2310",
+          "alts": []
+        },
+        {
+          "code": "ENGE2360",
+          "alts": []
+        },
+        {
+          "code": "ENGE2370",
+          "alts": []
+        },
+        {
+          "code": "ENGE2380",
+          "alts": []
+        },
+        {
+          "code": "ENGE2390",
+          "alts": []
+        },
+        {
+          "code": "ENGE2510",
+          "alts": []
+        },
+        {
+          "code": "ENGE2520",
+          "alts": []
+        },
+        {
+          "code": "ENGE2530",
+          "alts": []
+        },
+        {
+          "code": "ENGE2540",
+          "alts": []
+        },
+        {
+          "code": "ENGE2600",
+          "alts": []
+        },
+        {
+          "code": "ENGE2620",
+          "alts": []
+        },
+        {
+          "code": "ENGE2630",
+          "alts": []
+        },
+        {
+          "code": "ENGE2640",
+          "alts": []
+        },
+        {
+          "code": "ENGE2650",
+          "alts": []
+        },
+        {
+          "code": "ENGE2700",
+          "alts": []
+        },
+        {
+          "code": "ENGE2710",
+          "alts": []
+        },
+        {
+          "code": "ENGE2720",
+          "alts": []
+        },
+        {
+          "code": "ENGE2820",
+          "alts": []
+        },
+        {
+          "code": "ENGE2840",
+          "alts": []
+        },
+        {
+          "code": "ENGE2960",
+          "alts": []
+        },
+        {
+          "code": "ENGE3110",
+          "alts": []
+        },
+        {
+          "code": "ENGE3120",
+          "alts": []
+        },
+        {
+          "code": "ENGE3200",
+          "alts": []
+        },
+        {
+          "code": "ENGE3220",
+          "alts": []
+        },
+        {
+          "code": "ENGE3230",
+          "alts": []
+        },
+        {
+          "code": "ENGE3250",
+          "alts": []
+        },
+        {
+          "code": "ENGE3260",
+          "alts": []
+        },
+        {
+          "code": "ENGE3270",
+          "alts": []
+        },
+        {
+          "code": "ENGE3280",
+          "alts": []
+        },
+        {
+          "code": "ENGE3290",
+          "alts": []
+        },
+        {
+          "code": "ENGE3300",
+          "alts": []
+        },
+        {
+          "code": "ENGE3310",
+          "alts": []
+        },
+        {
+          "code": "ENGE3320",
+          "alts": []
+        },
+        {
+          "code": "ENGE3350",
+          "alts": []
+        },
+        {
+          "code": "ENGE3360",
+          "alts": []
+        },
+        {
+          "code": "ENGE3370",
+          "alts": []
+        },
+        {
+          "code": "ENGE3380",
+          "alts": []
+        },
+        {
+          "code": "ENGE3390",
+          "alts": []
+        },
+        {
+          "code": "ENGE3400",
+          "alts": []
+        },
+        {
+          "code": "ENGE3410",
+          "alts": []
+        },
+        {
+          "code": "ENGE3420",
+          "alts": []
+        },
+        {
+          "code": "ENGE3500",
+          "alts": []
+        },
+        {
+          "code": "ENGE3600",
+          "alts": []
+        },
+        {
+          "code": "ENGE3610",
+          "alts": []
+        },
+        {
+          "code": "ENGE3640",
+          "alts": []
+        },
+        {
+          "code": "ENGE3670",
+          "alts": []
+        },
+        {
+          "code": "ENGE3680",
+          "alts": []
+        },
+        {
+          "code": "ENGE3690",
+          "alts": []
+        },
+        {
+          "code": "ENGE3760",
+          "alts": []
+        },
+        {
+          "code": "ENGE3770",
+          "alts": []
+        },
+        {
+          "code": "ENGE3780",
+          "alts": []
+        },
+        {
+          "code": "ENGE3800",
+          "alts": []
+        },
+        {
+          "code": "ENGE3850",
+          "alts": []
+        },
+        {
+          "code": "ENGE3900",
+          "alts": []
+        },
+        {
+          "code": "ENGE3940",
+          "alts": []
+        },
+        {
+          "code": "ENGE3950",
+          "alts": []
+        },
+        {
+          "code": "ENGE3970",
+          "alts": []
+        },
+        {
+          "code": "ENGE3980",
+          "alts": []
+        },
+        {
+          "code": "ENGE3990",
+          "alts": []
+        },
+        {
+          "code": "ENGE4100",
+          "alts": []
+        },
+        {
+          "code": "ENGE4110",
+          "alts": []
+        },
+        {
+          "code": "ENGE4120",
+          "alts": []
+        },
+        {
+          "code": "ENGE4130",
+          "alts": []
+        },
+        {
+          "code": "ENGE4140",
+          "alts": []
+        },
+        {
+          "code": "ENGE4150",
+          "alts": []
+        },
+        {
+          "code": "ENGE4200",
+          "alts": []
+        },
+        {
+          "code": "ENGE4240",
+          "alts": []
+        },
+        {
+          "code": "ENGE4510",
+          "alts": []
+        },
+        {
+          "code": "ENGE4600",
+          "alts": []
+        },
+        {
+          "code": "ENGE4610",
+          "alts": []
+        },
+        {
+          "code": "ENGE4620",
+          "alts": []
+        },
+        {
+          "code": "ENGE4650",
+          "alts": []
+        }
+      ],
+      "children": [
+        {
+          "marker": "",
+          "title": "",
+          "units": null,
+          "note": "Required Courses",
+          "courses": [
+            {
+              "code": "ENGE3260",
+              "alts": []
+            },
+            {
+              "code": "ENGE3290",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "",
+          "title": "",
+          "units": null,
+          "note": "Elective Courses",
+          "courses": [
+            {
+              "code": "ENGE2210",
+              "alts": []
+            },
+            {
+              "code": "ENGE2390",
+              "alts": []
+            },
+            {
+              "code": "ENGE3280",
+              "alts": []
+            },
+            {
+              "code": "ENGE3300",
+              "alts": []
+            },
+            {
+              "code": "ENGE3310",
+              "alts": []
+            },
+            {
+              "code": "ENGE3320",
+              "alts": []
+            },
+            {
+              "code": "ENGE3360",
+              "alts": []
+            },
+            {
+              "code": "ENGE3370",
+              "alts": []
+            },
+            {
+              "code": "ENGE3420",
+              "alts": []
+            },
+            {
+              "code": "ENGE4200",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

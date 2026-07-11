@@ -17,6 +17,14 @@
     "COMM1110",
     "COMM1120",
     "COMM1150",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DSME1030",
+    "DSME1040",
+    "DSME2011",
+    "DSME2021",
     "DSPS1001",
     "DSPS1003",
     "DSPS1004",
@@ -129,6 +137,15 @@
         ],
         "alt": false,
         "from": "(a) ACCT1111"
+      },
+      {
+        "raw": "DOTE[DSME]1030",
+        "codes": [
+          "DOTE1030",
+          "DSME1030"
+        ],
+        "alt": true,
+        "from": "(b) DOTE[DSME]1030"
       },
       {
         "raw": "ECON2011",
@@ -419,6 +436,15 @@
         "from": "(a) ECON1101,"
       },
       {
+        "raw": "DOTE[DSME]1040",
+        "codes": [
+          "DOTE1040",
+          "DSME1040"
+        ],
+        "alt": true,
+        "from": "(b) DOTE[DSME]1040 or ECON2021"
+      },
+      {
         "raw": "ECON2021",
         "codes": [
           "ECON2021"
@@ -427,12 +453,30 @@
         "from": "(b) DOTE[DSME]1040 or ECON2021"
       },
       {
+        "raw": "DOTE[DSME]2011",
+        "codes": [
+          "DOTE2011",
+          "DSME2011"
+        ],
+        "alt": true,
+        "from": "(c) DOTE[DSME]2011# or ECON2121#"
+      },
+      {
         "raw": "ECON2121",
         "codes": [
           "ECON2121"
         ],
         "alt": false,
         "from": "(c) DOTE[DSME]2011# or ECON2121#"
+      },
+      {
+        "raw": "DOTE[DSME]2021",
+        "codes": [
+          "DOTE2021",
+          "DSME2021"
+        ],
+        "alt": true,
+        "from": "(d) DOTE[DSME]2021# or ECON3121#"
       },
       {
         "raw": "ECON3121",
@@ -545,7 +589,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -590,7 +634,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -599,7 +643,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(d)",
@@ -608,7 +652,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "4.",
@@ -645,6 +689,363 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 1
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ACCT1111",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE1030",
+              "alts": [
+                "DSME1030"
+              ]
+            },
+            {
+              "code": "ECON2011",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Any one course",
+          "courses": [
+            {
+              "code": "ARCH1001",
+              "alts": []
+            },
+            {
+              "code": "ARCH1002",
+              "alts": []
+            },
+            {
+              "code": "COMM1110",
+              "alts": []
+            },
+            {
+              "code": "COMM1120",
+              "alts": []
+            },
+            {
+              "code": "COMM1150",
+              "alts": []
+            },
+            {
+              "code": "DSPS1001",
+              "alts": []
+            },
+            {
+              "code": "DSPS1003",
+              "alts": []
+            },
+            {
+              "code": "DSPS1004",
+              "alts": []
+            },
+            {
+              "code": "GLSD1001",
+              "alts": []
+            },
+            {
+              "code": "GPAD1020",
+              "alts": []
+            },
+            {
+              "code": "GPAD1076",
+              "alts": []
+            },
+            {
+              "code": "GPAD1077",
+              "alts": []
+            },
+            {
+              "code": "GRMD1302",
+              "alts": []
+            },
+            {
+              "code": "GRMD1401",
+              "alts": []
+            },
+            {
+              "code": "GRMD1402",
+              "alts": []
+            },
+            {
+              "code": "PSYC1000",
+              "alts": []
+            },
+            {
+              "code": "PSYC1630",
+              "alts": []
+            },
+            {
+              "code": "SOCI1001",
+              "alts": []
+            },
+            {
+              "code": "SOCI1201",
+              "alts": []
+            },
+            {
+              "code": "SOSC1001",
+              "alts": []
+            },
+            {
+              "code": "SOSC1002",
+              "alts": []
+            },
+            {
+              "code": "SOWK1001",
+              "alts": []
+            },
+            {
+              "code": "SOWK1113",
+              "alts": []
+            },
+            {
+              "code": "SOWK1114",
+              "alts": []
+            },
+            {
+              "code": "URSP1001",
+              "alts": []
+            },
+            {
+              "code": "URSP1002",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Faculty of Business Administration Co-curricular Courses",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "IBBA3040",
+          "alts": []
+        },
+        {
+          "code": "MGNT2511",
+          "alts": []
+        },
+        {
+          "code": "MGNT2512",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 28,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ECON1101",
+              "alts": []
+            },
+            {
+              "code": "FINA2010",
+              "alts": []
+            },
+            {
+              "code": "GLEF3010",
+              "alts": []
+            },
+            {
+              "code": "GLEF3020",
+              "alts": []
+            },
+            {
+              "code": "GLEF3030",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE1040",
+              "alts": [
+                "DSME1040"
+              ]
+            },
+            {
+              "code": "ECON2021",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE2011",
+              "alts": [
+                "DSME2011"
+              ]
+            },
+            {
+              "code": "ECON2121",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE2021",
+              "alts": [
+                "DSME2021"
+              ]
+            },
+            {
+              "code": "ECON3121",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 27,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Economics (12 units from the following)",
+          "courses": [
+            {
+              "code": "ECON3011",
+              "alts": []
+            },
+            {
+              "code": "GLEF4010",
+              "alts": []
+            },
+            {
+              "code": "GLEF4020",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Finance and Business (12 units from the following, including at least",
+          "courses": [
+            {
+              "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "FINA3030",
+              "alts": []
+            },
+            {
+              "code": "GLEF3040",
+              "alts": []
+            },
+            {
+              "code": "GLEF3050",
+              "alts": []
+            },
+            {
+              "code": "MGNT2611",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "GLEF4070",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "ECON1111",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

@@ -366,5 +366,171 @@
       "stream": null,
       "n_courses": 3
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 11,
+      "note": null,
+      "courses": [
+        {
+          "code": "MEDF1041",
+          "alts": []
+        },
+        {
+          "code": "MEDF1042",
+          "alts": []
+        },
+        {
+          "code": "PHPC1010",
+          "alts": []
+        },
+        {
+          "code": "PHPC1012",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 32,
+      "note": null,
+      "courses": [
+        {
+          "code": "PHPC1017",
+          "alts": []
+        },
+        {
+          "code": "PHPC1022",
+          "alts": []
+        },
+        {
+          "code": "PHPC2009",
+          "alts": []
+        },
+        {
+          "code": "PHPC2010",
+          "alts": []
+        },
+        {
+          "code": "PHPC2011",
+          "alts": []
+        },
+        {
+          "code": "PHPC2015",
+          "alts": []
+        },
+        {
+          "code": "PHPC2016",
+          "alts": []
+        },
+        {
+          "code": "PHPC2017",
+          "alts": []
+        },
+        {
+          "code": "PHPC2018",
+          "alts": []
+        },
+        {
+          "code": "PHPC2019",
+          "alts": []
+        },
+        {
+          "code": "PHPC3012",
+          "alts": []
+        },
+        {
+          "code": "PHPC3027",
+          "alts": []
+        },
+        {
+          "code": "PHPC3028",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": 22,
+      "note": null,
+      "courses": [
+        {
+          "code": "ANTH4330",
+          "alts": []
+        },
+        {
+          "code": "CHPR4011",
+          "alts": []
+        },
+        {
+          "code": "CHPR4012",
+          "alts": []
+        },
+        {
+          "code": "GPAD3255",
+          "alts": []
+        },
+        {
+          "code": "GRON3412",
+          "alts": []
+        },
+        {
+          "code": "PHPC2007",
+          "alts": []
+        },
+        {
+          "code": "PHPC2020",
+          "alts": []
+        },
+        {
+          "code": "PHPC3010",
+          "alts": []
+        },
+        {
+          "code": "PHPC3014",
+          "alts": []
+        },
+        {
+          "code": "SOCI3227",
+          "alts": []
+        },
+        {
+          "code": "SPED2540",
+          "alts": []
+        },
+        {
+          "code": "PHPC4911",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "4.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "PHPC1019",
+          "alts": []
+        },
+        {
+          "code": "PHPC1020",
+          "alts": []
+        },
+        {
+          "code": "PHPC4930",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

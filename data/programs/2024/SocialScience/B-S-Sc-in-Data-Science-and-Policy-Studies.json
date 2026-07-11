@@ -728,7 +728,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,",
       "units": null,
       "bucket": "elective",
@@ -764,12 +764,414 @@
     },
     {
       "marker": "(v)",
-      "level": 2,
+      "level": 3,
       "title": "Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,",
       "units": null,
       "bucket": "elective",
       "stream": null,
       "n_courses": 3
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        },
+        {
+          "code": "URSP1002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 15,
+          "note": null,
+          "courses": [
+            {
+              "code": "DSPS1003",
+              "alts": []
+            },
+            {
+              "code": "DSPS1004",
+              "alts": []
+            },
+            {
+              "code": "DSPS3801",
+              "alts": []
+            },
+            {
+              "code": "DSPS4801",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 9,
+          "note": "academic term in a partner institution and complete at least 9 units of courses related to Data Science and Policy Studies approved by the Programme Director. Students who are unable to obtain the required units from partner institutions must make up the shortfall by completing appropriate courses at CUHK, subject to the approval of the Programme Director.",
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 21,
+          "note": "Methods and Tools Any seven courses from the following",
+          "courses": [
+            {
+              "code": "COMM3650",
+              "alts": []
+            },
+            {
+              "code": "DSPS2102",
+              "alts": []
+            },
+            {
+              "code": "DSPS2104",
+              "alts": []
+            },
+            {
+              "code": "DSPS2201",
+              "alts": []
+            },
+            {
+              "code": "DSPS2202",
+              "alts": []
+            },
+            {
+              "code": "DSPS2520",
+              "alts": []
+            },
+            {
+              "code": "DSPS2730",
+              "alts": []
+            },
+            {
+              "code": "ECON2121",
+              "alts": []
+            },
+            {
+              "code": "GRMD2105",
+              "alts": []
+            },
+            {
+              "code": "SOCI4201",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Policy Applications Any six courses from any of the following areas",
+          "units": 18,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DSPS2301",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2320",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3320",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3803",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS4310",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2065",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DSPS3310",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD2401",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3241",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PSYC3360",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3102",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ECON3630",
+                  "alts": []
+                },
+                {
+                  "code": "PSYC3370",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI2216",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DSPS3340",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2401",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3100",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "DSPS2830",
+          "alts": []
+        },
+        {
+          "code": "DSPS3190",
+          "alts": []
+        },
+        {
+          "code": "DSPS3202",
+          "alts": []
+        },
+        {
+          "code": "DSPS3330",
+          "alts": []
+        },
+        {
+          "code": "DSPS3350",
+          "alts": []
+        },
+        {
+          "code": "DSPS3790",
+          "alts": []
+        },
+        {
+          "code": "DSPS3791",
+          "alts": []
+        },
+        {
+          "code": "DSPS3802",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

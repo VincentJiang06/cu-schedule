@@ -600,6 +600,14 @@
         ],
         "alt": false,
         "from": "(d) 3 CURE courses at 2000 or"
+      },
+      {
+        "raw": "CURE2181",
+        "codes": [
+          "CURE2181"
+        ],
+        "alt": false,
+        "from": "(d) 3 CURE courses at 2000 or"
       }
     ],
     "stream_elective": []
@@ -783,7 +791,444 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1004",
+          "alts": []
+        },
+        {
+          "code": "ARTS1005",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1100",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CUMT1000",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": 27,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE1111",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE2113",
+              "alts": []
+            },
+            {
+              "code": "CURE2114",
+              "alts": []
+            },
+            {
+              "code": "CURE2115",
+              "alts": []
+            },
+            {
+              "code": "CURE3375",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE1124",
+              "alts": []
+            },
+            {
+              "code": "CURE2161",
+              "alts": []
+            },
+            {
+              "code": "CURE2225",
+              "alts": []
+            },
+            {
+              "code": "CURE2226",
+              "alts": []
+            },
+            {
+              "code": "CURE2227",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE2154",
+              "alts": []
+            },
+            {
+              "code": "CURE2155",
+              "alts": []
+            },
+            {
+              "code": "CURE2180",
+              "alts": []
+            },
+            {
+              "code": "THEO3215",
+              "alts": []
+            },
+            {
+              "code": "THEO3217",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE4153",
+              "alts": []
+            },
+            {
+              "code": "CURE4159",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 33,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "courses at 2000 or above level from the Religious Studies Areas",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "courses from the Cultural Studies Areas Concentrations Students may choose to declare a concentration by taking the following elective courses in place of 3 “Elective Courses” above: Religion and Culture",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE1009",
+              "alts": []
+            },
+            {
+              "code": "CURE1010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "9 CURE courses at 2000 or",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "6 units of EDUC courses at",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE2131",
+              "alts": []
+            },
+            {
+              "code": "THEO1211",
+              "alts": []
+            },
+            {
+              "code": "THEO1212",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": "4 CURE courses at 2000 or",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE2226",
+              "alts": []
+            },
+            {
+              "code": "CURE2228",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "6 units of language courses",
+          "courses": [
+            {
+              "code": "CURE2180",
+              "alts": []
+            },
+            {
+              "code": "ARAB1000",
+              "alts": []
+            },
+            {
+              "code": "CURE2181",
+              "alts": []
+            },
+            {
+              "code": "ARAB2050",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CURE3114",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": "3 CURE courses at 2000 or",
+          "courses": [
+            {
+              "code": "CURE2180",
+              "alts": []
+            },
+            {
+              "code": "CURE2181",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CURE1122",
+          "alts": []
+        },
+        {
+          "code": "CURE1123",
+          "alts": []
+        },
+        {
+          "code": "CURE2157",
+          "alts": []
+        },
+        {
+          "code": "CURE2170",
+          "alts": []
+        },
+        {
+          "code": "CURE2001",
+          "alts": []
+        },
+        {
+          "code": "CURE3134",
+          "alts": []
+        },
+        {
+          "code": "CURE3129",
+          "alts": []
+        },
+        {
+          "code": "CURE3376",
+          "alts": []
+        },
+        {
+          "code": "CURE3378",
+          "alts": []
+        },
+        {
+          "code": "CURE4157",
+          "alts": []
+        },
+        {
+          "code": "CURE4158",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

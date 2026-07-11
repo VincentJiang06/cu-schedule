@@ -200,6 +200,7 @@
     "LAWS4494",
     "LAWS6001",
     "LAWS6021",
+    "LAWS6023",
     "PSYC3370",
     "PSYC3630",
     "SOCI1001",
@@ -694,6 +695,223 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 25
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "",
+      "units": 45,
+      "note": null,
+      "courses": [
+        {
+          "code": "LAWS1010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Elective Courses",
+      "units": 45,
+      "note": "Any LAWS elective courses at 1000 – 4000 level (of which 21 units are currently prescribed as prerequisites for admission into the Postgraduate Certificate in Laws (PCLL) Programme) Streams Students may choose to declare the Chinese Law Stream and/or the Global Law Stream within the LLB Programme by taking the following courses: Chinese Law",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LAWS1030",
+              "alts": []
+            },
+            {
+              "code": "LAWS3290",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LAWS2201",
+              "alts": []
+            },
+            {
+              "code": "LAWS2220",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LAWS4000",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LAWS2200",
+              "alts": []
+            },
+            {
+              "code": "LAWS2202",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "LAWS2310",
+          "alts": []
+        },
+        {
+          "code": "LAWS3440",
+          "alts": []
+        },
+        {
+          "code": "LAWS3461",
+          "alts": []
+        },
+        {
+          "code": "LAWS4311",
+          "alts": []
+        },
+        {
+          "code": "LAWS4371",
+          "alts": []
+        },
+        {
+          "code": "LAWS4488",
+          "alts": []
+        },
+        {
+          "code": "LAWS4260",
+          "alts": []
+        },
+        {
+          "code": "LAWS2204",
+          "alts": []
+        },
+        {
+          "code": "LAWS2205",
+          "alts": []
+        },
+        {
+          "code": "LAWS2260",
+          "alts": []
+        },
+        {
+          "code": "LAWS2330",
+          "alts": []
+        },
+        {
+          "code": "LAWS3210",
+          "alts": []
+        },
+        {
+          "code": "LAWS3230",
+          "alts": []
+        },
+        {
+          "code": "LAWS3400",
+          "alts": []
+        },
+        {
+          "code": "LAWS3450",
+          "alts": []
+        },
+        {
+          "code": "LAWS3453",
+          "alts": []
+        },
+        {
+          "code": "LAWS3462",
+          "alts": []
+        },
+        {
+          "code": "LAWS4270",
+          "alts": []
+        },
+        {
+          "code": "LAWS4280",
+          "alts": []
+        },
+        {
+          "code": "LAWS4290",
+          "alts": []
+        },
+        {
+          "code": "LAWS4340",
+          "alts": []
+        },
+        {
+          "code": "LAWS4350",
+          "alts": []
+        },
+        {
+          "code": "LAWS4420",
+          "alts": []
+        },
+        {
+          "code": "LAWS4480",
+          "alts": []
+        },
+        {
+          "code": "LAWS4481",
+          "alts": []
+        },
+        {
+          "code": "LAWS4486",
+          "alts": []
+        },
+        {
+          "code": "LAWS4487",
+          "alts": []
+        },
+        {
+          "code": "LAWS4489",
+          "alts": []
+        },
+        {
+          "code": "LAWS4490",
+          "alts": []
+        },
+        {
+          "code": "LAWS4491",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

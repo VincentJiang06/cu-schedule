@@ -26,6 +26,16 @@
     "CSCI2510",
     "CSCI2520",
     "CSCI2720",
+    "DOTE1030",
+    "DOTE1031",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DSME1030",
+    "DSME1031",
+    "DSME1040",
+    "DSME2011",
+    "DSME2021",
     "ECON1010",
     "ECON2121",
     "ECON3420",
@@ -131,6 +141,15 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "DOTE[DSME]1031",
+        "codes": [
+          "DOTE1031",
+          "DSME1031"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "HTMG1010",
         "codes": [
           "HTMG1010"
@@ -152,6 +171,15 @@
           "ACCT1111"
         ],
         "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "DOTE[DSME]1030",
+        "codes": [
+          "DOTE1030",
+          "DSME1030"
+        ],
+        "alt": true,
         "from": "2. Required Courses"
       },
       {
@@ -335,7 +363,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 8
     },
     {
       "marker": "2.",
@@ -344,7 +372,7 @@
       "units": "42",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 6
     },
     {
       "marker": "3.",
@@ -381,6 +409,199 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 1
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "DOTE1031",
+          "alts": [
+            "DSME1031"
+          ]
+        },
+        {
+          "code": "HTMG1010",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 42,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT1111",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": [
+            "DSME1030"
+          ]
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "MATH1030",
+          "alts": []
+        },
+        {
+          "code": "RMSC1101",
+          "alts": []
+        },
+        {
+          "code": "STAT2001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 21,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "STAT2005",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Choose five courses from the",
+          "courses": [
+            {
+              "code": "CSCI2520",
+              "alts": []
+            },
+            {
+              "code": "ECON3420",
+              "alts": []
+            },
+            {
+              "code": "FINA3010",
+              "alts": []
+            },
+            {
+              "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "RMSC4002",
+              "alts": []
+            },
+            {
+              "code": "RMSC4004",
+              "alts": []
+            },
+            {
+              "code": "RMSC4005",
+              "alts": []
+            },
+            {
+              "code": "RMSC4006",
+              "alts": []
+            },
+            {
+              "code": "RMSC4007",
+              "alts": []
+            },
+            {
+              "code": "STAT4002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "One capstone/research",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "RMSC4102",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CSCI1530",
+          "alts": []
+        },
+        {
+          "code": "CSCI1540",
+          "alts": []
+        },
+        {
+          "code": "CSCI1580",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

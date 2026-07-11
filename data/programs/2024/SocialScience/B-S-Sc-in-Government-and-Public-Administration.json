@@ -1228,6 +1228,14 @@
         "from": "(b) Free Major Electives (any five GPAD courses, other than"
       },
       {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "(b) Free Major Electives (any five GPAD courses, other than"
+      },
+      {
         "raw": "GPAD4601",
         "codes": [
           "GPAD4601"
@@ -1247,6 +1255,14 @@
         "raw": "GPAD4701",
         "codes": [
           "GPAD4701"
+        ],
+        "alt": false,
+        "from": "(iii) GPAD4701 and 4702"
+      },
+      {
+        "raw": "GPAD4702",
+        "codes": [
+          "GPAD4702"
         ],
         "alt": false,
         "from": "(iii) GPAD4701 and 4702"
@@ -1421,7 +1437,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "Politics - Comparative Politics",
       "units": null,
       "bucket": "elective",
@@ -1457,7 +1473,7 @@
     },
     {
       "marker": "(v)",
-      "level": 2,
+      "level": 3,
       "title": "Public Administration and Policy",
       "units": null,
       "bucket": "elective",
@@ -1480,7 +1496,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -1493,7 +1509,7 @@
     },
     {
       "marker": "(i)",
-      "level": 2,
+      "level": 3,
       "title": "GPAD4601",
       "units": null,
       "bucket": "elective",
@@ -1516,7 +1532,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(iv)",
@@ -1529,7 +1545,7 @@
     },
     {
       "marker": "(v)",
-      "level": 2,
+      "level": 3,
       "title": "GPAD4802",
       "units": null,
       "bucket": "elective",
@@ -1544,6 +1560,802 @@
       "bucket": "elective",
       "stream": null,
       "n_courses": 14
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        },
+        {
+          "code": "URSP1002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 24,
+      "note": null,
+      "courses": [
+        {
+          "code": "GPAD1000",
+          "alts": []
+        },
+        {
+          "code": "GPAD1030",
+          "alts": []
+        },
+        {
+          "code": "GPAD1050",
+          "alts": []
+        },
+        {
+          "code": "GPAD1070",
+          "alts": []
+        },
+        {
+          "code": "GPAD1095",
+          "alts": []
+        },
+        {
+          "code": "GPAD2111",
+          "alts": []
+        },
+        {
+          "code": "GPAD2130",
+          "alts": []
+        },
+        {
+          "code": "GPAD2345",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Field Electives (six courses chosen from two of",
+          "units": 18,
+          "note": "the following six fields, with three courses in each field; courses that appear in more than one field can only be counted towards one field)",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GLSD3302",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1016",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1046",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1055",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1056",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2120",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2140",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2145",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2196",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2215",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2300",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2395",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2450",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3040",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3050",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3160",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3161",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3190",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3360",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4080",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4142",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GLSD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1066",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1073",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1074",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1077",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2015",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2025",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2350",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2370",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2555",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3260",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4027",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4030",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4065",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4385",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD1076",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1100",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2020",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2065",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2075",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2300",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3070",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3071",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3146",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3220",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3365",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4077",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4200",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4211",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4335",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GLSD2401",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1066",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2185",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2300",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2350",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2355",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2375",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3160",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3161",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3360",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3365",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3451",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4225",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "DSPS2201",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1046",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2035",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2065",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2070",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2085",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2090",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2095",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2150",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2160",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2170",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2196",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2215",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3255",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3260",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4020",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(vi)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4801",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2102",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1010",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1015",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1055",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD1056",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2070",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2095",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2150",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2160",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2170",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2196",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2215",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2450",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3111",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD3255",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4111",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4802",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 15,
+          "note": "Free Major Electives (any five GPAD courses, other than",
+          "courses": [
+            {
+              "code": "GPAD1076",
+              "alts": []
+            },
+            {
+              "code": "GPAD1077",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Capstone Courses (minimum 6 units chosen from the",
+          "units": 6,
+          "note": "following; cannot be double counted as field electives if courses appear in both field electives and capstone courses)",
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4601",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4602",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4701",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4702",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4801",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GPAD4802",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(vi)",
+              "title": "",
+              "units": null,
+              "note": "Seminar courses at 4000 level",
+              "courses": [
+                {
+                  "code": "GPAD4010",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4020",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4027",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4030",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4065",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4077",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4080",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4111",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4142",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4200",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4211",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4225",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4335",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD4385",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -808,5 +808,341 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 49,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHEM1300",
+          "alts": []
+        },
+        {
+          "code": "CHEM2110",
+          "alts": []
+        },
+        {
+          "code": "CHEM2120",
+          "alts": []
+        },
+        {
+          "code": "CHEM2200",
+          "alts": []
+        },
+        {
+          "code": "CHEM2270",
+          "alts": []
+        },
+        {
+          "code": "CHEM2300",
+          "alts": []
+        },
+        {
+          "code": "CHEM2310",
+          "alts": []
+        },
+        {
+          "code": "CHEM2400",
+          "alts": []
+        },
+        {
+          "code": "CHEM2860",
+          "alts": []
+        },
+        {
+          "code": "CHEM2870",
+          "alts": []
+        },
+        {
+          "code": "CHEM3130",
+          "alts": []
+        },
+        {
+          "code": "CHEM3220",
+          "alts": []
+        },
+        {
+          "code": "CHEM3320",
+          "alts": []
+        },
+        {
+          "code": "CHEM3410",
+          "alts": []
+        },
+        {
+          "code": "CHEM3810",
+          "alts": []
+        },
+        {
+          "code": "CHEM3830",
+          "alts": []
+        },
+        {
+          "code": "CHEM3860",
+          "alts": []
+        },
+        {
+          "code": "CHEM3870",
+          "alts": []
+        },
+        {
+          "code": "CHEM4030",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 10,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "One course from",
+          "courses": [
+            {
+              "code": "CHEM3230",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "8 units from the",
+          "courses": [
+            {
+              "code": "CHEM3420",
+              "alts": []
+            },
+            {
+              "code": "CHEM3820",
+              "alts": []
+            },
+            {
+              "code": "CHEM3840",
+              "alts": []
+            },
+            {
+              "code": "CHEM4100",
+              "alts": []
+            },
+            {
+              "code": "CHEM4101",
+              "alts": []
+            },
+            {
+              "code": "CHEM4200",
+              "alts": []
+            },
+            {
+              "code": "CHEM4280",
+              "alts": []
+            },
+            {
+              "code": "CHEM4300",
+              "alts": []
+            },
+            {
+              "code": "CHEM4303",
+              "alts": []
+            },
+            {
+              "code": "CHEM4400",
+              "alts": []
+            },
+            {
+              "code": "CHEM4440",
+              "alts": []
+            },
+            {
+              "code": "CHEM4471",
+              "alts": []
+            },
+            {
+              "code": "CHEM4630",
+              "alts": []
+            },
+            {
+              "code": "CHEM4640",
+              "alts": []
+            },
+            {
+              "code": "CHEM4710",
+              "alts": []
+            },
+            {
+              "code": "CHEM4730",
+              "alts": []
+            },
+            {
+              "code": "CHEM4780",
+              "alts": []
+            },
+            {
+              "code": "CHEM4784",
+              "alts": []
+            },
+            {
+              "code": "CHEM4785",
+              "alts": []
+            },
+            {
+              "code": "CHEM4786",
+              "alts": []
+            },
+            {
+              "code": "CHEM4788",
+              "alts": []
+            },
+            {
+              "code": "CHEM5301",
+              "alts": []
+            },
+            {
+              "code": "CHEM5303",
+              "alts": []
+            },
+            {
+              "code": "CHEM5540",
+              "alts": []
+            },
+            {
+              "code": "CHEM5550",
+              "alts": []
+            },
+            {
+              "code": "CHEM5560",
+              "alts": []
+            },
+            {
+              "code": "CHEM5620",
+              "alts": []
+            },
+            {
+              "code": "CHEM5642",
+              "alts": []
+            },
+            {
+              "code": "CHEM5680",
+              "alts": []
+            },
+            {
+              "code": "CHEM5780",
+              "alts": []
+            },
+            {
+              "code": "CHEM5784",
+              "alts": []
+            },
+            {
+              "code": "CHEM5785",
+              "alts": []
+            },
+            {
+              "code": "CHEM5910",
+              "alts": []
+            },
+            {
+              "code": "CHEM5920",
+              "alts": []
+            },
+            {
+              "code": "BCHE3050",
+              "alts": []
+            },
+            {
+              "code": "CMBI4002",
+              "alts": []
+            },
+            {
+              "code": "ENSC4525",
+              "alts": []
+            },
+            {
+              "code": "EESC3220",
+              "alts": []
+            },
+            {
+              "code": "PHYS3021",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

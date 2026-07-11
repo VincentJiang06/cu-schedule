@@ -891,5 +891,211 @@
       "stream": null,
       "n_courses": 4
     }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
+          "alts": []
+        },
+        {
+          "code": "MGNT1020",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 51,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT2111",
+          "alts": []
+        },
+        {
+          "code": "DOTE2011",
+          "alts": []
+        },
+        {
+          "code": "FINA2010",
+          "alts": []
+        },
+        {
+          "code": "MGNT2511",
+          "alts": []
+        },
+        {
+          "code": "MGNT2512",
+          "alts": []
+        },
+        {
+          "code": "MGNT4010",
+          "alts": []
+        },
+        {
+          "code": "MKTG2010",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "ACCT3005",
+          "alts": []
+        },
+        {
+          "code": "ACCT3241",
+          "alts": []
+        },
+        {
+          "code": "ACCT4211",
+          "alts": []
+        },
+        {
+          "code": "ACCT4212",
+          "alts": []
+        },
+        {
+          "code": "ACCT4213",
+          "alts": []
+        },
+        {
+          "code": "ACCT4221",
+          "alts": []
+        },
+        {
+          "code": "ACCT4231",
+          "alts": []
+        },
+        {
+          "code": "ACCT4232",
+          "alts": []
+        },
+        {
+          "code": "ACCT4242",
+          "alts": []
+        },
+        {
+          "code": "ACCT4243",
+          "alts": []
+        },
+        {
+          "code": "ACCT4244",
+          "alts": []
+        },
+        {
+          "code": "ACCT4251",
+          "alts": []
+        },
+        {
+          "code": "ACCT4252",
+          "alts": []
+        },
+        {
+          "code": "ACCT4253",
+          "alts": []
+        },
+        {
+          "code": "ACCT4261",
+          "alts": []
+        },
+        {
+          "code": "ACCT4262",
+          "alts": []
+        },
+        {
+          "code": "ACCT4263",
+          "alts": []
+        },
+        {
+          "code": "ACCT4271",
+          "alts": []
+        },
+        {
+          "code": "ACCT4272",
+          "alts": []
+        },
+        {
+          "code": "ACCT4281",
+          "alts": []
+        },
+        {
+          "code": "ACCT4282",
+          "alts": []
+        },
+        {
+          "code": "ACCT4290",
+          "alts": []
+        },
+        {
+          "code": "DOTE3010",
+          "alts": []
+        },
+        {
+          "code": "MATH1610",
+          "alts": []
+        },
+        {
+          "code": "MATH1620",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "FINA3070",
+          "alts": []
+        },
+        {
+          "code": "FINA3010",
+          "alts": []
+        },
+        {
+          "code": "DOTE2021",
+          "alts": []
+        },
+        {
+          "code": "DOTE3050",
+          "alts": []
+        },
+        {
+          "code": "FINA3020",
+          "alts": []
+        },
+        {
+          "code": "MGNT3580",
+          "alts": []
+        },
+        {
+          "code": "MKTG4070",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
   ]
 }

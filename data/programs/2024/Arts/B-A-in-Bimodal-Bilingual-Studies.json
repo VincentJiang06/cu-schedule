@@ -79,5 +79,15 @@
       "stream": null,
       "n_courses": 0
     }
+  ],
+  "structure": [
+    {
+      "marker": "2.",
+      "title": "",
+      "units": null,
+      "note": "students whose native language is Hong Kong Sign Language (HKSL) or who possess equivalent competence in HKSL, subject to the approval of the Major Department, they should take course(s) of a language other than English, Chinese and HKSL, and LING courses in place of the HKSL courses, as specified below: Units of HKSL Courses Exempted | Course Substitution 3 units | 3 units of course(s) of a language other than English, Chinese and HKSL 6 units | 6 units of course(s) of a language other than English, Chinese and HKSL 9 units and above | at least 6 - 9 units of course(s) of a language other than English, Chinese and HKSL, and LING courses at 2000 or above level | Old course code used in 2024-25 and before.",
+      "courses": [],
+      "children": []
+    }
   ]
 }
