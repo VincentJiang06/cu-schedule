@@ -17,6 +17,12 @@ export type SharePayload = {
 
 const MARKER = '#s='
 
+// The 4 tabs, duplicated here (rather than imported from App.tsx) to avoid a
+// lib → App import cycle. Structurally identical to App.tsx's `Page` union, so
+// TypeScript treats values of either type as interchangeable at call sites.
+type PageSlug = 'info' | 'select' | 'timetable' | 'export'
+const PAGE_SLUGS: readonly PageSlug[] = ['info', 'select', 'timetable', 'export']
+
 function utf8ToBase64(text: string): string {
   return btoa(unescape(encodeURIComponent(text)))
 }
@@ -55,6 +61,88 @@ export function decodeShare(hash: string): SharePayload | null {
     const pins =
       typeof record.pins === 'object' && record.pins !== null ? (record.pins as Pins) : {}
     return { termSlug, committed: record.committed, taken: record.taken, pins }
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Live session state — a superset of SharePayload used to keep the address bar in sync
+ * with everything the user can edit (active tab, selection, and the filter/hours switches
+ * that shape what's shown). Lives after `#st=`, a marker distinct from `#s=` on purpose:
+ * `#s=` is a deliberate, immutable snapshot the user hands to someone else (imported once,
+ * then the hash is stripped — see App.tsx's shared-import effect), while `#st=` is the
+ * app's own continuously-rewritten bookmark of "where you are right now". Folding live
+ * state into `#s=` would break that one-shot-import-then-strip contract, since the live
+ * writer would keep re-populating `#s=` on every click. Same base64 helpers, separate
+ * marker, separate lifecycle.
+ */
+export type LiveState = SharePayload & {
+  page: PageSlug
+  hideConflicts: boolean
+  hideOutOfHours: boolean
+  meetsOfficeHours: boolean
+  meetsPrereq: boolean
+  lecFits: boolean
+  hideCompleted: boolean
+  currentTermOnly: boolean
+  excludeTba: boolean
+  programScope: 'all' | 'program'
+  workStart: number | null
+  workEnd: number | null
+}
+
+const LIVE_MARKER = '#st='
+
+/** Encode live state into just the `#st=...` hash fragment — callers splice it onto
+ * `location.pathname + location.search` for history.pushState/replaceState (unlike
+ * encodeShare, which returns a full absolute URL meant for the clipboard). */
+export function encodeLiveState(state: LiveState): string {
+  const encoded = encodeURIComponent(utf8ToBase64(JSON.stringify(state)))
+  return `${LIVE_MARKER}${encoded}`
+}
+
+function asBool(value: unknown, fallback: boolean): boolean {
+  return typeof value === 'boolean' ? value : fallback
+}
+
+function asMinutes(value: unknown): number | null {
+  return typeof value === 'number' && Number.isFinite(value) ? value : null
+}
+
+/** Fully defensive, like decodeShare: any malformed/foreign hash yields null rather
+ * than throwing or partially applying state. */
+export function decodeLiveState(hash: string): LiveState | null {
+  try {
+    if (!hash.startsWith(LIVE_MARKER)) return null
+    const raw = hash.slice(LIVE_MARKER.length)
+    if (!raw) return null
+    const json = base64ToUtf8(decodeURIComponent(raw))
+    const parsed: unknown = JSON.parse(json)
+    if (typeof parsed !== 'object' || parsed === null) return null
+    const r = parsed as Record<string, unknown>
+    if (!isStringArray(r.committed) || !isStringArray(r.taken)) return null
+    const page = typeof r.page === 'string' && (PAGE_SLUGS as string[]).includes(r.page) ? (r.page as PageSlug) : 'select'
+    const termSlug = typeof r.termSlug === 'string' ? r.termSlug : null
+    const pins = typeof r.pins === 'object' && r.pins !== null ? (r.pins as Pins) : {}
+    return {
+      page,
+      termSlug,
+      committed: r.committed,
+      taken: r.taken,
+      pins,
+      hideConflicts: asBool(r.hideConflicts, true),
+      hideOutOfHours: asBool(r.hideOutOfHours, false),
+      meetsOfficeHours: asBool(r.meetsOfficeHours, false),
+      meetsPrereq: asBool(r.meetsPrereq, false),
+      lecFits: asBool(r.lecFits, false),
+      hideCompleted: asBool(r.hideCompleted, true),
+      currentTermOnly: asBool(r.currentTermOnly, true),
+      excludeTba: asBool(r.excludeTba, false),
+      programScope: r.programScope === 'program' ? 'program' : 'all',
+      workStart: asMinutes(r.workStart),
+      workEnd: asMinutes(r.workEnd),
+    }
   } catch {
     return null
   }
