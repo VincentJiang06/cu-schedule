@@ -10,22 +10,23 @@
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   --mono: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
 
-  /* Tool-first palette: monochrome chrome so the per-subject course colors carry all
-     the meaning. The UI brand is a neutral near-black (no theme hue). --accent is the
-     indigo from the app icon, reserved for functional A/B plan accents only. */
+  /* Tool-first palette: monochrome slate chrome so the per-subject course colors carry
+     all the meaning. The UI brand is a neutral near-black (no theme hue). --accent stays
+     the indigo hue from the app icon, reserved for functional A/B plan accents only —
+     it is NOT part of the general UI chrome. */
   --accent: 239;
-  --bg: #e7e9f0;
+  --bg: #e9eaed;
   --surface: #ffffff;
-  --surface-2: #eef1f7;
-  --line: #ccd2df;
-  --line-soft: #dde1eb;
-  --ink: #141a2b;
-  --ink-2: #3b445a;
-  --ink-3: #6c7488;
+  --surface-2: #f1f2f4;
+  --line: #d2d4db;
+  --line-soft: #e0e2e6;
+  --ink: #1a1d23;
+  --ink-2: #434751;
+  --ink-3: #6b707b;
 
-  --brand: #1c2230;
-  --brand-ink: #202839;
-  --brand-wash: rgb(28 34 48 / 0.09);
+  --brand: #21242b;
+  --brand-ink: #252931;
+  --brand-wash: rgb(33 36 43 / 0.09);
   /* Foreground that sits on a solid --brand fill. Light brand=near-black → white text;
      dark brand=near-white → dark text. Keeps toggles/buttons legible in both themes. */
   --on-brand: #ffffff;
@@ -39,7 +40,7 @@
   --mute: #656d80;
   --mute-wash: #656d801c;
 
-  --shadow: 0 1px 2px rgb(20 26 43 / 0.06), 0 3px 10px -6px rgb(20 26 43 / 0.16);
+  --shadow: 0 1px 2px rgb(26 29 35 / 0.06), 0 3px 10px -6px rgb(26 29 35 / 0.16);
   --radius: 10px;
 
   /* course block tints; --shade is a per-subject offset set inline.
@@ -54,19 +55,19 @@
 }
 
 :root[data-theme='dark'] {
-  --bg: #0b0e16;
-  --surface: #141926;
-  --surface-2: #1a2030;
-  --line: #2e3648;
-  --line-soft: #242b3b;
-  --ink: #eceff6;
-  --ink-2: #b2bacc;
-  --ink-3: #7a8397;
+  --bg: #0d0e11;
+  --surface: #181b20;
+  --surface-2: #21242b;
+  --line: #353841;
+  --line-soft: #2b2e36;
+  --ink: #f0f1f4;
+  --ink-2: #babdc5;
+  --ink-3: #838791;
 
-  --brand: #eceff6;
-  --brand-ink: #d7dce8;
-  --brand-wash: rgb(236 239 246 / 0.13);
-  --on-brand: #0c0f18;
+  --brand: #f0f1f4;
+  --brand-ink: #dcdfe4;
+  --brand-wash: rgb(240 241 244 / 0.13);
+  --on-brand: #0d0e11;
 
   --ok: #3fc084;
   --ok-wash: #3fc08420;
