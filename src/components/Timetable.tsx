@@ -63,6 +63,8 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
   const span = (ceilHour - floorHour) * 60
 
   const hours = Array.from({ length: ceilHour - floorHour + 1 }, (_, index) => (floorHour + index) * 60)
+  // 每半小时一条横线（整点略深、半点略浅），把课表做成表格。
+  const halfHours = Array.from({ length: (ceilHour - floorHour) * 2 + 1 }, (_, index) => floorHour * 60 + index * 30)
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
   return (
@@ -85,8 +87,13 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
       </div>
 
       <div className="tt__body">
-        {hours.slice(1, -1).map((minutes) => (
-          <div aria-hidden className="tt__rule" key={minutes} style={{ top: `${pct(minutes)}%` }} />
+        {halfHours.slice(1, -1).map((minutes) => (
+          <div
+            aria-hidden
+            className={`tt__rule${minutes % 60 === 0 ? '' : ' tt__rule--half'}`}
+            key={minutes}
+            style={{ top: `${pct(minutes)}%` }}
+          />
         ))}
         {Array.from({ length: dayCount }, (_, index) => {
           const dayIndex = index + 1

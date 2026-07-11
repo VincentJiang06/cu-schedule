@@ -10,9 +10,10 @@
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   --mono: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
 
-  /* Tool-first palette: muted accent, stronger borders, crisp (not floaty) surfaces.
-     Accent is fixed to red (the 玫红 hue); the runtime color picker was removed. */
-  --accent: 348;
+  /* Tool-first palette: monochrome chrome so the per-subject course colors carry all
+     the meaning. The UI brand is a neutral near-black (no theme hue). --accent is the
+     indigo from the app icon, reserved for functional A/B plan accents only. */
+  --accent: 239;
   --bg: #e7e9f0;
   --surface: #ffffff;
   --surface-2: #eef1f7;
@@ -22,9 +23,12 @@
   --ink-2: #3b445a;
   --ink-3: #6c7488;
 
-  --brand: hsl(var(--accent) 46% 52%);
-  --brand-ink: hsl(var(--accent) 48% 42%);
-  --brand-wash: hsl(var(--accent) 46% 52% / 0.12);
+  --brand: #1c2230;
+  --brand-ink: #202839;
+  --brand-wash: rgb(28 34 48 / 0.09);
+  /* Foreground that sits on a solid --brand fill. Light brand=near-black → white text;
+     dark brand=near-white → dark text. Keeps toggles/buttons legible in both themes. */
+  --on-brand: #ffffff;
 
   --ok: #0f7d49;
   --ok-wash: #0f7d491c;
@@ -59,9 +63,10 @@
   --ink-2: #b2bacc;
   --ink-3: #7a8397;
 
-  --brand: hsl(var(--accent) 52% 70%);
-  --brand-ink: hsl(var(--accent) 58% 76%);
-  --brand-wash: hsl(var(--accent) 52% 70% / 0.16);
+  --brand: #eceff6;
+  --brand-ink: #d7dce8;
+  --brand-wash: rgb(236 239 246 / 0.13);
+  --on-brand: #0c0f18;
 
   --ok: #3fc084;
   --ok-wash: #3fc08420;
@@ -121,6 +126,8 @@ select {
 }
 
 .bar {
+  /* Shared control height so the brand, the nav pill, and the theme toggle all line up. */
+  --bar-h: 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,36 +142,32 @@ select {
 
 .bar__brand {
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  height: var(--bar-h);
+  padding: 0 4px;
   gap: 9px;
 }
 
+/* 学期切换段控件（现位于信息页「我的情况」卡）：整宽两段，选中态高亮。 */
 .term-switch {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   gap: 3px;
-  padding: 3px 3px 3px 10px;
-  border: 1px solid var(--line);
-  border-radius: 11px;
+  padding: 3px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
   background: var(--surface-2);
 }
 
-.term-switch__label {
-  font-size: 11.5px;
-  font-weight: 650;
-  color: var(--ink-3);
-  margin-right: 4px;
-}
-
 .term-switch__btn {
+  flex: 1;
   border: 0;
   background: transparent;
   color: var(--ink-2);
-  font-size: 12.5px;
+  font-size: 13px;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  padding: 5px 12px;
-  border-radius: 8px;
+  padding: 6px 12px;
+  border-radius: 7px;
   cursor: pointer;
   transition: color 0.12s, background 0.12s;
 }
@@ -179,10 +182,11 @@ select {
 }
 
 .bar__mark {
-  width: 10px;
-  height: 18px;
-  border-radius: 3px;
-  background: linear-gradient(var(--brand), hsl(var(--accent) 84% 46%));
+  width: 30px;
+  height: 30px;
+  flex: none;
+  /* The app icon itself (rounded-square diamond mark), not a colored bar. */
+  background: url('/icon/favicon.svg') center / contain no-repeat;
   align-self: center;
 }
 
@@ -216,7 +220,9 @@ select {
 
 .bar__nav {
   display: inline-flex;
+  align-items: stretch;
   flex-wrap: nowrap;
+  height: var(--bar-h);
   gap: 2px;
   padding: 3px;
   border: 1px solid var(--line);
@@ -251,23 +257,20 @@ select {
 
 .bar__nav-item--on {
   background: var(--brand);
-  color: #fff;
+  color: var(--on-brand);
 }
 
 .bar__nav-item--on .bar__nav-icon {
   opacity: 1;
 }
 
-:root[data-theme='dark'] .bar__nav-item--on {
-  color: #0c0f18;
-}
-
 .bar__theme {
   border: 1px solid var(--line);
-  background: var(--surface);
-  border-radius: 9px;
-  width: 32px;
-  height: 32px;
+  background: var(--surface-2);
+  border-radius: 11px;
+  width: var(--bar-h);
+  height: var(--bar-h);
+  font-size: 18px;
   cursor: pointer;
   line-height: 1;
 }
@@ -434,11 +437,19 @@ select {
   color: var(--ink-3);
 }
 
-/* 导出 page: the three export options sit in a wrapping grid. */
+/* 导出 page: the export options sit in wrapping grids, grouped by kind. */
 .export-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
+}
+
+.export-group-title {
+  margin: 6px 0 0;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
 }
 
 .export-card {
@@ -792,9 +803,11 @@ select {
 }
 
 .cl-row {
-  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
-  border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  border: 1px solid var(--line);
+  /* Only a whisper of the subject tint over the surface — the colored left bar carries
+     the identity, so the row stays easy to read (was a full fill = too heavy). */
+  background: color-mix(in srgb, hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade))) 34%, var(--surface));
+  border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-radius: 9px;
   padding: 7px 9px 8px;
 }
@@ -1111,6 +1124,10 @@ select {
   border-top: 1px solid var(--line-soft);
   pointer-events: none;
   z-index: 0;
+}
+
+.tt__rule--half {
+  border-top-color: color-mix(in srgb, var(--line-soft) 45%, transparent);
 }
 
 .tt__col {
@@ -1438,13 +1455,49 @@ select {
   overflow: hidden;
 }
 
-/* Hour lines span the whole grid — clearly visible, but below the blocks. */
+/* Grid lines span the whole width — hour lines clear, half-hour lines fainter. */
 .tt2__rule {
   position: absolute;
   inset-inline: 0;
   border-top: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   pointer-events: none;
   z-index: 0;
+}
+
+.tt2__rule--half {
+  border-top-color: color-mix(in srgb, var(--line) 30%, transparent);
+}
+
+/* 用户放置的辅助线（早/晚）：一条穿过整张日历的虚线，浮在课程块之上供目测，不拦点击。 */
+.tt2__guide {
+  position: absolute;
+  inset-inline: 0;
+  border-top: 2px dashed hsl(var(--accent) 62% 55%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.tt2__guide--pm {
+  border-top-color: hsl(28 78% 52%);
+}
+
+.tt2__guide-tag {
+  position: absolute;
+  top: -9px;
+  left: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.4;
+  padding: 0 5px;
+  border-radius: 5px;
+  color: #fff;
+  background: hsl(var(--accent) 62% 55%);
+  white-space: nowrap;
+}
+
+.tt2__guide--pm .tt2__guide-tag {
+  background: hsl(28 78% 52%);
 }
 
 .tt2__col {
@@ -1510,17 +1563,11 @@ select {
   border-left: 4px solid hsl(var(--hue) calc(var(--sat) + 22%) calc(var(--edge-l) + var(--shade) - 4%));
 }
 
-/* #8 TUT/LAB = 同 hue 的浅色斜纹 + 虚线描边变体，与实心 LEC 一眼可分。 */
+/* TUT/LAB = 同 hue 的更浅纯色底（比 LEC 淡、无斜纹），仅左侧一条竖直虚线区分；文字不变。 */
 .tt2__block--alt {
-  background:
-    repeating-linear-gradient(
-      45deg,
-      transparent 0 5px,
-      hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.2) 5px 10px
-    ),
-    hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade) + 3%));
-  border: 1.5px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  border-left: 4px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  background: color-mix(in srgb, hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade))) 55%, var(--surface));
+  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.6);
+  border-left: 3px dashed hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
 }
 
 /* 第一行：component 角标 + 课号 —— 45 分钟块内也必须完整可读，最优先保留、不换行不收缩。 */
@@ -1851,7 +1898,7 @@ select {
 
 .add:hover {
   background: var(--brand);
-  color: #fff;
+  color: var(--on-brand);
 }
 
 .ct__empty,
@@ -2033,7 +2080,7 @@ select {
 
 .switch input:checked + .switch__track .switch__thumb {
   transform: translateX(14px);
-  background: #fff;
+  background: var(--on-brand);
 }
 
 .switch input:focus-visible + .switch__track {
@@ -2081,6 +2128,28 @@ select {
   background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+/* 想要的学科（include 变体）：一行一个整宽卡片，学科名完整展示、可换行。 */
+.sp--include .sp__chips {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sp--include .sp__chip {
+  width: 100%;
+  justify-content: flex-start;
+  white-space: normal;
+  text-align: left;
+  padding: 6px 10px;
+}
+
+.sp--include .sp__chip em {
+  flex: 1;
+}
+
+.sp--include .sp__chip i {
+  margin-left: auto;
 }
 
 .sp__chip b {
@@ -2425,11 +2494,7 @@ select {
 
 .seg__btn--on {
   background: var(--brand);
-  color: #fff;
-}
-
-:root[data-theme='dark'] .seg__btn--on {
-  color: #0b0e16;
+  color: var(--on-brand);
 }
 
 .sp--exclude .sp__field:focus {
@@ -2488,7 +2553,8 @@ select {
 
 .cg__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  /* 每张卡片更宽：min 从 210px 提到 258px，避免一排挤到四张时过于拥挤。 */
+  grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
   gap: 8px;
   padding: 0 10px 4px;
 }
@@ -2840,7 +2906,7 @@ select {
   align-items: baseline;
   gap: 3px 8px;
   font-size: 12.5px;
-  padding: 3px 0;
+  padding: 4px 0;
   border-top: 1px solid var(--line-soft);
 }
 
@@ -2849,6 +2915,13 @@ select {
   font-weight: 700;
   color: var(--ink-2);
   min-width: 40px;
+}
+
+/* 一个时段一行（每个 meeting 独占一行），不再挤成一行自动换行。 */
+.cmodal__section-times {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .cmodal__section-time {
@@ -3304,6 +3377,14 @@ select {
   overflow: hidden;
 }
 
+/* Course whose title/units can't be resolved from this year's catalog — mark it
+   explicitly rather than leaving the tile blank. */
+.pg-course__title--unknown {
+  font-style: italic;
+  color: var(--ink-3);
+  opacity: 0.85;
+}
+
 /* On a flooded (done) tile, all text rides the tile's light/dark text color. */
 .pg-course--done .pg-course__code,
 .pg-course--done .pg-course__title {
@@ -3366,6 +3447,200 @@ select {
   margin-left: auto;
   font-style: normal;
   opacity: 0.55;
+}
+
+/* ---- read-only share view (#v=<id>, mobile-first) --------------------------- */
+
+.sv {
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 14px 14px 28px;
+}
+
+.sv--msg {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  color: var(--ink-2);
+}
+
+.sv__msg-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.sv__msg-sub {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-3);
+  max-width: 34ch;
+}
+
+.sv__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sv__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sv__title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+}
+
+.sv__term {
+  margin: 1px 0 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.sv__home {
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--brand-ink);
+  text-decoration: none;
+  white-space: nowrap;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 11px;
+}
+
+.sv__home:hover {
+  border-color: var(--brand);
+}
+
+.sv__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 13px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sv__card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.sv__card-head span {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Give the reused single Timetable a concrete height so its flex/grid fills it. */
+.sv__tt {
+  height: 62vh;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sv__courses {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px;
+}
+
+.sv__course {
+  border: 1px solid var(--line);
+  border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  background: color-mix(in srgb, hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade))) 34%, var(--surface));
+  border-radius: 9px;
+  padding: 8px 10px;
+}
+
+.sv__course-top {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.sv__course-code {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 750;
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+.sv__course-units {
+  margin-left: auto;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.sv__course-title {
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.sv__course-time {
+  margin-top: 3px;
+  font-size: 11.5px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.sv__empty {
+  color: var(--ink-3);
+  font-size: 13px;
+  padding: 8px;
+}
+
+.sv__exports {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sv__exports .export-btn {
+  flex: 1;
+  min-width: 96px;
+}
+
+.sv__foot {
+  text-align: center;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  margin-top: 4px;
+}
+
+.sv__foot a {
+  color: var(--brand-ink);
+  text-decoration: none;
+}
+
+.export-note--share {
+  color: var(--ink-2);
+  word-break: break-all;
 }
 
 /* ---- narrow screens --------------------------------------------------------- */

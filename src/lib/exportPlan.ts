@@ -1,9 +1,10 @@
 import { exportIcs } from './ics.ts'
-import { exportImage } from './exportImage.ts'
+import { exportImage, exportPdf } from './exportImage.ts'
+import { exportWallpaper } from './exportWallpaper.ts'
 import type { Plan, Pins } from './schedule.ts'
 import { copyShareLink, type SharePayload } from './shareLink.ts'
 
-export type ExportFormat = 'ics' | 'image' | 'link'
+export type ExportFormat = 'ics' | 'image' | 'pdf' | 'wallpaper' | 'link'
 
 export type ExportRequest = {
   format: ExportFormat
@@ -35,6 +36,14 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
       case 'image': {
         const filename = await exportImage(request.planA, request.planB, request.termName)
         return { ok: true, note: `已下载 ${filename}（A / B 对比）` }
+      }
+      case 'pdf': {
+        const filename = await exportPdf(request.planA, request.planB, request.termName)
+        return { ok: true, note: `已下载 ${filename}（A / B 对比表格）` }
+      }
+      case 'wallpaper': {
+        const note = await exportWallpaper(request.planA, request.termName)
+        return { ok: true, note }
       }
       case 'link': {
         const payload: SharePayload = { ...request.share }

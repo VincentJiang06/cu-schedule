@@ -118,7 +118,11 @@ function CourseGrid({
               {course.alts.length > 0 && <em className="pg-course__alt">/{course.alts.join('/')}</em>}
             </span>
             {resolved && <span className="pg-course__units">{resolved.units}学分</span>}
-            {resolved && <span className="pg-course__title">{resolved.title}</span>}
+            {resolved ? (
+              <span className="pg-course__title">{resolved.title}</span>
+            ) : (
+              <span className="pg-course__title pg-course__title--unknown">Unknown course</span>
+            )}
           </button>
         )
       })}

@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:api": "node server/index.mjs",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "data:scrape": "uv run python scripts/scrape_all_subjects.py",

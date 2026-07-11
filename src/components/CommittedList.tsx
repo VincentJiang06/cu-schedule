@@ -35,7 +35,8 @@ function courseLines(course: Course): Line[] {
     const sections = byComponent.get(component) ?? []
     if (component === 'LEC') {
       sections.forEach((section, index) => {
-        const tag = section.cohort || section.group || (sections.length > 1 ? String(index + 1) : '')
+        // 多个 LEC 用 1/2/3/4 编号；单个 LEC 不带编号。
+        const tag = sections.length > 1 ? String(index + 1) : ''
         lines.push({ key: `LEC-${section.id}`, label: tag ? `LEC ${tag}` : 'LEC', time: sectionTimes(section), muted: false })
       })
     } else if (sections.length === 1) {
@@ -85,6 +86,9 @@ function CoursePicker({
             <div className="cl-pick__chips">
               {sections.map((section, index) => {
                 const on = chosenId === section.id
+                // LEC 的多个可选段用 1/2/3/4 编号（而非 cohort 字母），更直观；
+                // 其余 component（TUT/LAB…）保留原本的 cohort+组号标签。
+                const label = component === 'LEC' ? String(index + 1) : sectionLabel(section, index)
                 return (
                   <button
                     className={on ? 'cl-chip cl-chip--on' : 'cl-chip'}
@@ -93,7 +97,7 @@ function CoursePicker({
                     type="button"
                     onClick={() => onPin(component, section.id)}
                   >
-                    {sectionLabel(section, index)}
+                    {label}
                   </button>
                 )
               })}

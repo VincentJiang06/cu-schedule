@@ -11,8 +11,6 @@ import type { Course, RequirementStatus } from '../lib/types.ts'
 export type UnitPick = '1' | '2' | '3' | '4plus'
 /** Course level bucket from course.level (1-9). '4plus' means level >= 4 (4000+). */
 export type LevelBucket = '1' | '2' | '3' | '4plus'
-/** Time-of-day band a meeting can fall in; see the DP_* bit masks below. */
-export type Daypart = 'morning' | 'afternoon' | 'evening'
 
 /** A fixed LEC time interval a committed course already occupies (see App's lecBusy). */
 export type LecBusy = { dayIndex: number; start: number; end: number }
@@ -29,8 +27,6 @@ export type SearchFilters = {
   units: UnitPick[]
   /** Selected level buckets; empty = no level filter. */
   levels: LevelBucket[]
-  /** Selected time-of-day bands; empty = no time filter. */
-  dayparts: Daypart[]
   /** Always true — non-undergraduate courses are hardcoded out (no UI toggle). */
   ugOnly: boolean
   hideCompleted: boolean
@@ -42,34 +38,6 @@ export type SearchFilters = {
   currentTermSlug: string | null
   /** When set, keep only courses whose key is in the chosen programme's course set. */
   majorKeys: Set<string> | null
-}
-
-// ---- time-of-day (上课时段) classification -----------------------------------
-// A meeting's start/end are minutes since midnight. Each meeting is tagged with the
-// bands it falls in (a bitmask). A *section* is feasible for a selected band set S
-// when every one of its timed meetings intersects S (i.e. lands inside the selected
-// union); untimed / TBA sections carry no meetings and are always feasible. A course
-// passes the filter when at least one of its sections is feasible.
-const MORNING_END = 780 // 13:00 — morning if the meeting ends by 13:00
-const AFTERNOON_START = 720 // 12:00
-const AFTERNOON_END = 1080 // 18:00 — afternoon if the meeting overlaps [12:00, 18:00)
-const EVENING_START = 1050 // 17:30 — evening if the meeting starts at/after 17:30
-const DP_MORNING = 1
-const DP_AFTERNOON = 2
-const DP_EVENING = 4
-
-const DP_BIT: Record<Daypart, number> = {
-  morning: DP_MORNING,
-  afternoon: DP_AFTERNOON,
-  evening: DP_EVENING,
-}
-
-function meetingMask(start: number, end: number): number {
-  let mask = 0
-  if (end <= MORNING_END) mask |= DP_MORNING
-  if (start < AFTERNOON_END && end > AFTERNOON_START) mask |= DP_AFTERNOON
-  if (start >= EVENING_START) mask |= DP_EVENING
-  return mask
 }
 
 // A course's standing outside any chosen programme — 自由选修. Reused so we never
@@ -139,21 +107,6 @@ export function SearchResults({
   /** Open the course-detail popup for a course. */
   onOpenDetail: (course: Course) => void
 }) {
-  // Precompute each course's per-section timed-meeting masks once per catalog load, so
-  // the time-of-day filter (which reruns on every keystroke) never re-walks meetings.
-  // Keyed by the Course object reference materialized in `offerings`.
-  const daypartSections = useMemo(() => {
-    const map = new Map<Course, number[][]>()
-    for (const { course } of offerings) {
-      if (map.has(course)) continue
-      map.set(
-        course,
-        course.sections.map((section) => section.meetings.map((m) => meetingMask(m.start, m.end))),
-      )
-    }
-    return map
-  }, [offerings])
-
   // Precompute the set of courses whose LEC can fit the committed timetable, so the
   // 符合时间表(仅LEC) toggle never re-walks sections on every keystroke — it only
   // recomputes when the committed selection (→ lecBusy) changes. A course fits when it
@@ -184,8 +137,6 @@ export function SearchResults({
   const filtered = useMemo(() => {
     const include = new Set(filters.includeSubjects)
     const exclude = new Set(filters.excludeSubjects)
-    // Union bitmask of the selected time-of-day bands (0 = no time filter).
-    const daypartMask = filters.dayparts.reduce((mask, dp) => mask | DP_BIT[dp], 0)
     const levels = new Set(filters.levels)
     const units = new Set(filters.units)
     return offerings.filter(({ course, termSlug }) => {
@@ -206,13 +157,6 @@ export function SearchResults({
         const bucket: LevelBucket = course.level >= 4 ? '4plus' : (String(course.level) as LevelBucket)
         if (!levels.has(bucket)) return false
       }
-      if (daypartMask !== 0) {
-        // Keep the course if any section is feasible: every timed meeting of that
-        // section intersects the selected union (untimed meetings impose nothing).
-        const sections = daypartSections.get(course) ?? []
-        const ok = sections.some((masks) => masks.every((m) => (m & daypartMask) !== 0))
-        if (!ok) return false
-      }
       // 符合先修:排除先修被证伪(missing)的课;met / none / unverifiable 均保留。
       if (filters.meetsPrereq && prereqByCode.get(course.key)?.status === 'missing') return false
       // 符合时间表(仅LEC):只保留 LEC 能塞进已选课表的课(见 lecFitSet)。
@@ -220,7 +164,7 @@ export function SearchResults({
       if (filters.query.trim() && scoreCourse(course, filters.query) <= 0) return false
       return true
     })
-  }, [daypartSections, filters, lecFitSet, offerings, prereqByCode, statusByCode, takenSet])
+  }, [filters, lecFitSet, offerings, prereqByCode, statusByCode, takenSet])
 
   const groups = useMemo<SubjectGroup[]>(() => {
     const bySubject = new Map<string, Map<number, Course[]>>()
