@@ -324,7 +324,7 @@ const bootCommitted = live?.committed ?? shared?.committed ?? saved?.committed ?
 const bootTaken = live?.taken ?? shared?.taken ?? saved?.taken ?? []
 const bootPins = live?.pins ?? shared?.pins ?? saved?.pins ?? {}
 const bootCart = saved?.cart ?? []
-const bootPage: Page = live?.page ?? 'select'
+const bootPage: Page = live?.page ?? 'info'
 
 export default function App() {
   const [theme, setTheme] = useState<Theme>(loadTheme)
