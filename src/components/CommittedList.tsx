@@ -128,6 +128,7 @@ export function CommittedList({
   colorFor,
   showTermBadge = true,
   onRowPointerDown,
+  disabledCandidateKeys,
 }: {
   codes: string[]
   byCode: Map<string, Course>
@@ -150,6 +151,9 @@ export function CommittedList({
   showTermBadge?: boolean
   /** 拖拽起点(可选,选课页):按住整行拖到「必定学 / 可能学」目标区或拖出移除。 */
   onRowPointerDown?: (code: string, isCart: boolean, event: ReactPointerEvent<HTMLElement>) => void
+  /** #里程碑5:被点角停用的候选课(按 courseKey)——课表页这份列表用来给对应候选行加
+   * 置灰样式，与大课表上试排块的禁用展示保持一致（"并在筛选里体现"）。 */
+  disabledCandidateKeys?: Set<string>
 }) {
   const interactive = Boolean(onPin)
   const rows: Array<{ code: string; isCart: boolean }> = [
@@ -167,12 +171,13 @@ export function CommittedList({
             const course = byCode.get(courseKey(code))
             const orders = termOrdersByKey.get(courseKey(code)) ?? []
             const badge = orders.includes(currentTermOrder) ? currentTermOrder : orders[0]
+            const isDisabledCandidate = isCart && (disabledCandidateKeys?.has(courseKey(code)) ?? false)
             return (
               <li
-                className={isCart ? 'cl-row cl-row--cart' : 'cl-row'}
+                className={`${isCart ? 'cl-row cl-row--cart' : 'cl-row'}${isDisabledCandidate ? ' cl-row--cart-off' : ''}`}
                 key={code}
                 style={(colorFor ?? courseColor)(code)}
-                title={isCart ? '可能学（候选课程）' : undefined}
+                title={isCart ? (isDisabledCandidate ? '可能学（候选课程 · 已在课表上停用展示）' : '可能学（候选课程）') : undefined}
                 onPointerDown={
                   onRowPointerDown ? (event) => onRowPointerDown(code, isCart, event) : undefined
                 }

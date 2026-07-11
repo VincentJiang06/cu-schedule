@@ -19,6 +19,8 @@ type Block = {
   end: number
   /** true = 候选(可能学)课程的试排块,右上角带小角块标记。 */
   cart?: boolean
+  /** #里程碑5:该候选课是否被点角停用——只对 cart 块有意义,置灰展示、角标切换成「点击启用」。 */
+  disabled?: boolean
   lane: number
   lanes: number
 }
@@ -65,6 +67,7 @@ function Column({
   span,
   empty,
   colorForCode,
+  onToggleCandidate,
 }: {
   blocks: Omit<Block, 'lane' | 'lanes'>[]
   variant: 'a' | 'b'
@@ -72,6 +75,8 @@ function Column({
   span: number
   empty: boolean
   colorForCode: (code: string) => CSSProperties
+  /** #里程碑5:点候选课试排块右上角的放大三角 → 切换该课在课表上的启用/禁用展示。 */
+  onToggleCandidate?: (code: string) => void
 }) {
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
   const laid = layOutDay(blocks)
@@ -93,9 +98,12 @@ function Column({
         const shownEnd = displayEndMinutes(block.end)
         // #8 LEC 实心主色块；TUT/LAB 等同 hue 的浅色斜纹+虚线变体，一眼可分。
         const isLec = block.component === 'LEC'
+        // #里程碑5:候选课试排块——即使被停用也照常渲染(只是置灰)，角上的放大三角必须留在
+        // DOM 里才点得到，用来切回启用。
+        const cartOff = Boolean(block.cart) && Boolean(block.disabled)
         return (
           <article
-            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}`}
+            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}${cartOff ? ' tt2__block--cart-off' : ''}`}
             key={block.key}
             style={
               {
@@ -106,7 +114,7 @@ function Column({
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}${block.cart ? (cartOff ? '（可能学 · 已停用展示，点右上角重新启用）' : '（可能学 · 试排）') : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
           >
             <span className="tt2__block-top">
               <b className="tt2__block-comp">{block.component}</b>
@@ -116,6 +124,18 @@ function Column({
               {hhmm(block.start)}–{hhmm(block.end)}
               {block.location ? ` · ${block.location}` : ''}
             </time>
+            {block.cart && onToggleCandidate && (
+              <button
+                aria-label={cartOff ? `启用候选课 ${block.code}` : `停用候选课 ${block.code}`}
+                className="tt2__cart-corner"
+                title={cartOff ? '点击重新启用该候选课' : '点击停用该候选课（灰显）'}
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  onToggleCandidate(block.code)
+                }}
+              />
+            )}
           </article>
         )
       })}
@@ -143,6 +163,7 @@ export function TimetableCompare({
   solo = false,
   locked = false,
   onGuideChange,
+  onToggleCandidate,
 }: {
   planA: Plan | null
   planB: Plan | null
@@ -164,6 +185,8 @@ export function TimetableCompare({
   locked?: boolean
   /** 上下班虚线的拖动回调(吸附 15 分钟由本组件完成);不传 = 线不可拖。 */
   onGuideChange?: (tone: 'am' | 'pm', minutes: number) => void
+  /** #里程碑5:点候选课试排块右上角的放大三角 → 切换该课启用/禁用展示;不传 = 角标不可点。 */
+  onToggleCandidate?: (code: string) => void
 }) {
   const bodyRef = useRef<HTMLDivElement | null>(null)
   const rawA = [...blocksOf(planA), ...cartA]
@@ -275,6 +298,7 @@ export function TimetableCompare({
                 floorHour={floorHour}
                 span={span}
                 variant="a"
+                onToggleCandidate={onToggleCandidate}
               />
               {!solo && (
                 <Column
@@ -284,6 +308,7 @@ export function TimetableCompare({
                   floorHour={floorHour}
                   span={span}
                   variant="b"
+                  onToggleCandidate={onToggleCandidate}
                 />
               )}
             </div>

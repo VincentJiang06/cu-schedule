@@ -462,6 +462,19 @@ export default function App() {
   const [taken, setTaken] = useState<string[]>(bootTaken)
   // 可能学 waitlist / cart — tentative picks, held apart from 必定学 (committed).
   const [cart, setCart] = useState<string[]>(bootCart)
+  // #里程碑5:候选课在大课表上的「启用/禁用展示」开关，按 courseKey 记；纯会话内 UI 状态
+  // (不进 localStorage/URL/配置导出——与 dropHover 等临时态同一档次)。禁用只影响候选试排块
+  // 在课表上的展示(置灰,见 ghostBlocksFor 的 disabled 标记),不影响 cart 本身的成员关系。
+  const [disabledCandidates, setDisabledCandidates] = useState<Set<string>>(() => new Set())
+  const toggleCandidateDisabled = useCallback((code: string): void => {
+    const key = courseKey(code)
+    setDisabledCandidates((current) => {
+      const next = new Set(current)
+      if (next.has(key)) next.delete(key)
+      else next.add(key)
+      return next
+    })
+  }, [])
   // Pinned sections (e.g. TUT T01) constrain which A / B timetables the scheduler builds.
   const [pins, setPins] = useState<Pins>(bootPins)
   const [planIndex, setPlanIndex] = useState(0)
@@ -973,6 +986,9 @@ export default function App() {
         if (timed.length === 0) continue
         const fit =
           timed.find((combo) => !meetingsClash(comboMeetings(combo), planMeetings)) ?? timed[0]
+        // #里程碑5:被点角停用的候选课仍然渲染(否则用户点角之后就再也点不到它来重新启用)，
+        // 只是带上 disabled 标记，交给 Column 置灰、角标切换成「点击启用」的样式。
+        const disabled = disabledCandidates.has(course.key)
         for (const section of fit) {
           for (const meeting of section.meetings) {
             out.push({
@@ -986,13 +1002,14 @@ export default function App() {
               start: meeting.start,
               end: meeting.end,
               cart: true,
+              disabled,
             })
           }
         }
       }
       return out
     },
-    [byCode, cart],
+    [byCode, cart, disabledCandidates],
   )
   const cartGhostsA = useMemo(() => ghostBlocksFor(shownPlanA), [ghostBlocksFor, shownPlanA])
   const cartGhostsB = useMemo(() => ghostBlocksFor(shownPlanB), [ghostBlocksFor, shownPlanB])
@@ -1606,6 +1623,7 @@ export default function App() {
         codes={committed}
         colorFor={colorForCode}
         currentTermOrder={currentTermOrder}
+        disabledCandidateKeys={disabledCandidates}
         pins={pins}
         showTermBadge={false}
         termOrdersByKey={termOrdersByKey}
@@ -2276,6 +2294,7 @@ export default function App() {
                 onGuideChange={(tone, minutes) =>
                   tone === 'am' ? setWorkStart(minutes) : setWorkEnd(minutes)
                 }
+                onToggleCandidate={toggleCandidateDisabled}
               />
             </section>
           </>

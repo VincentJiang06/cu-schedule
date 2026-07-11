@@ -1145,6 +1145,12 @@ select {
   pointer-events: none;
 }
 
+/* #里程碑5:候选课在大课表上被点角停用时，这里同步置灰——"并在筛选里体现"。 */
+.cl-row--cart-off {
+  opacity: 0.45;
+  filter: saturate(0.4);
+}
+
 .cl-row__head {
   display: flex;
   align-items: baseline;
@@ -2189,17 +2195,44 @@ select {
   border-left: 3px dashed hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
 }
 
-/* #3 候选(可能学)试排块:与必修块同一套色块样式,右上角加小角块标记(块自带 overflow:hidden,
-   角块贴角不会溢出圆角),与右栏列表候选行的角块视觉语言一致。 */
-.tt2__block--cart::after {
-  content: '';
+/* #3/#里程碑5 候选(可能学)试排块:与必修块同一套色块样式,右上角一个可点的 45 度三角
+   角标(块自带 overflow:hidden,角标贴角不会溢出圆角),与右栏列表候选行的角块视觉语言
+   一致。#里程碑5 把原来纯装饰的 ::after 换成真实的 <button>(.tt2__cart-corner)——
+   大幅加大尺寸(12px→26px)，点击可切换该候选课在课表上的启用/禁用展示。 */
+.tt2__cart-corner {
   position: absolute;
   top: 0;
   right: 0;
-  border-style: solid;
-  border-width: 0 12px 12px 0;
-  border-color: transparent hsl(var(--hue) calc(var(--sat) + 18%) calc(var(--edge-l) + var(--shade) - 4%)) transparent transparent;
-  pointer-events: none;
+  z-index: 2;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  background: hsl(var(--hue) calc(var(--sat) + 18%) calc(var(--edge-l) + var(--shade) - 4%));
+  transition: filter 0.12s;
+}
+
+.tt2__cart-corner:hover {
+  filter: brightness(1.1);
+}
+
+.tt2__cart-corner:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 1px;
+}
+
+/* 禁用态角标改中性色，与置灰的卡片呼应；再点一下即可恢复启用。 */
+.tt2__block--cart-off .tt2__cart-corner {
+  background: var(--ink-3);
+}
+
+/* 候选课被点角停用后的整块置灰——位置仍然保留在课表上(方便再点角恢复)，只是明显
+   半透明 + 去饱和，一眼能看出它当前不计入展示。 */
+.tt2__block--cart-off {
+  opacity: 0.4;
+  filter: saturate(0.35);
 }
 
 /* 第一行：component 角标 + 课号 —— 45 分钟块内也必须完整可读，最优先保留、不换行不收缩。 */
