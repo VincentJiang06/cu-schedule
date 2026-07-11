@@ -17,6 +17,39 @@ const CALENDAR_LINKS = [
 
 const CALENDAR_SOURCE_URL = 'https://www.res.cuhk.edu.hk/general-information/almanac/university-almanac-2026-27/'
 
+const NEWCOMER_LINKS = [
+  {
+    icon: '📘',
+    name: '本科生手册 Undergraduate Student Handbook',
+    desc: '大学核心课程（University Core）、通识教育（GE）、主修/副修（Majors & Minors）要求、学则（Regulations）与豁免规定，新生入学必读。',
+    url: 'https://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/Handbook/Default.aspx?id=2&lang=en',
+  },
+  {
+    icon: '📚',
+    name: '公开课程目录 Course Catalogue',
+    desc: '全校课程的官方目录，本站课程数据即来源于此。',
+    url: 'https://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_crse_catalog.aspx',
+  },
+  {
+    icon: '🎓',
+    name: 'CUSIS 学生资讯系统',
+    desc: '选课、查看个人 Enrolment Dates 登入时间、成绩、个人资料，需登录使用。',
+    url: 'https://cusis.cuhk.edu.hk/',
+  },
+  {
+    icon: '🏛️',
+    name: '教务处注册及考试组 RES',
+    desc: '注册、考试、校历、加退选、超修申请等官方信息发布处。',
+    url: 'https://www.res.cuhk.edu.hk/',
+  },
+  {
+    icon: '🏫',
+    name: '香港中文大学官网',
+    desc: '大学总站。',
+    url: 'https://www.cuhk.edu.hk/english/index.html',
+  },
+]
+
 const ENROL_TIMELINE = [
   {
     date: '8月14日（五）10:00–22:00',
@@ -116,6 +149,45 @@ export function AppendixPage({
           来源：CUHK 教务处注册及考试组（RES）2026-07-10 邮件通知，以 CUSIS / RES
           官方公布为准。
         </p>
+      </section>
+
+      <section className="card">
+        <h2 className="card__title">
+          新生资料
+          <span className="card__note">Freshers&apos; Resources</span>
+        </h2>
+        <p className="appendix-body">常用官方链接，选课、注册、查校历、查手册都在这几个站里。</p>
+        <div className="appendix-sib-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
+          {NEWCOMER_LINKS.map((item) => (
+            <a className="appendix-sib-card" href={item.url} key={item.url} rel="noopener noreferrer" target="_blank">
+              <span
+                aria-hidden
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: 42,
+                  height: 42,
+                  borderRadius: 10,
+                  background: 'var(--surface)',
+                  fontSize: 20,
+                  flex: 'none',
+                }}
+              >
+                {item.icon}
+              </span>
+              <span className="appendix-sib-card__text">
+                <span className="appendix-sib-card__name">{item.name}</span>
+                <span
+                  className="appendix-sib-card__desc"
+                  style={{ whiteSpace: 'normal', overflow: 'visible', textOverflow: 'clip', lineHeight: 1.5 }}
+                >
+                  {item.desc}
+                </span>
+              </span>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="card">
