@@ -101,7 +101,12 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
           const blocks = layOutDay(raw.filter((block) => block.dayIndex === dayIndex))
           return (
             <div className="tt__col" key={dayIndex}>
-              {blocks.length === 0 && plan && <span className="tt__free">空闲</span>}
+              {blocks.length === 0 && plan && (
+                <span className="tt__free">
+                  <span>DAY</span>
+                  <span>OFF</span>
+                </span>
+              )}
               {blocks.map((block) => {
                 const width = 100 / block.lanes
                 // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课）；真实 end 仍用于排课/分道。

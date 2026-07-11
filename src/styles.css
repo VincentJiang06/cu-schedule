@@ -1398,7 +1398,8 @@ select {
 .tt__head {
   display: grid;
   grid-template-columns: repeat(var(--tt-days), minmax(0, 1fr));
-  gap: 4px;
+  /* 与 .tt__body 的列间距保持一致，否则表头对不齐下方每天的列。 */
+  gap: 7px;
 }
 
 .tt__day-name {
@@ -1429,7 +1430,8 @@ select {
   position: relative;
   display: grid;
   grid-template-columns: repeat(var(--tt-days), minmax(0, 1fr));
-  gap: 4px;
+  /* 每天之间的间距从 4px 加宽到 7px，让每天的边界更清楚。 */
+  gap: 7px;
 }
 
 .tt__rule {
@@ -1448,18 +1450,27 @@ select {
   position: relative;
   border-radius: 10px;
   background: color-mix(in srgb, var(--surface-2) 60%, transparent);
-  outline: 1px solid var(--line-soft);
+  /* 轮廓加粗、换用对比更强的 --line，配合更宽的列间距让每天更好辨认。 */
+  outline: 1.5px solid var(--line);
   outline-offset: -1px;
 }
 
+/* 无课当天占位：两行「DAY / OFF」，大字号 + 粗体 + 斜体，比原来的「空闲」更醒目。 */
 .tt__free {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 11.5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  font-size: 19px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
   color: var(--ink-3);
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 .tt__block {
@@ -1873,7 +1884,8 @@ select {
   color: var(--ink-1);
   padding: 6px 0 5px;
   background: var(--surface-2);
-  border-right: 1px solid var(--line);
+  /* 加粗到 2.5px,与下方 .tt2__col 的日间分隔线同宽,头身连成一条清楚的竖线。 */
+  border-right: 2.5px solid var(--line);
 }
 
 .tt2__day-name:last-child {
@@ -1961,25 +1973,6 @@ select {
   inset: -8px 0;
 }
 
-/* #10/#11 上班线上方 / 下班线下方:很轻的渐变遮罩,从边缘向线渐隐,示意「非上班时段」。
-   z-index 2:盖在课程块(1)之上但被参考线(3)压着;7% 的 --ink 淡到只降一点点亮度,不抢戏。 */
-.tt2__offmask {
-  position: absolute;
-  inset-inline: 0;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.tt2__offmask--am {
-  top: 0;
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--ink) 7%, transparent), transparent);
-}
-
-.tt2__offmask--pm {
-  bottom: 0;
-  background: linear-gradient(to top, color-mix(in srgb, var(--ink) 7%, transparent), transparent);
-}
-
 .tt2__guide--pm {
   border-top-color: hsl(28 78% 52%);
 }
@@ -2009,7 +2002,8 @@ select {
   grid-template-columns: 1fr 1fr;
   gap: 0;
   background: transparent;
-  border-right: 1px solid var(--line);
+  /* 每天(周一~周五)之间的竖直分隔线加粗到 2.5px，比原来的 1px 更好辨认每天的边界。 */
+  border-right: 2.5px solid var(--line);
 }
 
 .tt2__col:last-child {
@@ -2044,14 +2038,23 @@ select {
   background: var(--surface-2);
 }
 
+/* 无课当天占位：两行「DAY / OFF」，大字号 + 粗体 + 斜体，比原来的「空闲」更醒目。
+   A/B 对比时子列较窄，字号比 .tt__free 略小，单方案(.tt2--solo)整列宽度足够也能撑住。 */
 .tt2__free {
   position: absolute;
   inset: 0;
-  display: grid;
-  place-items: center;
-  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  font-size: 15px;
+  font-weight: 800;
+  font-style: italic;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
   color: var(--ink-3);
-  opacity: 0.45;
+  opacity: 0.5;
 }
 
 .tt2__block {

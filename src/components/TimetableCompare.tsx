@@ -76,7 +76,12 @@ function Column({
   const laid = layOutDay(blocks)
   return (
     <div className={`tt2__sub tt2__sub--${variant}`}>
-      {laid.length === 0 && !empty && <span className="tt2__free">空闲</span>}
+      {laid.length === 0 && !empty && (
+        <span className="tt2__free">
+          <span>DAY</span>
+          <span>OFF</span>
+        </span>
+      )}
       {laid.map((block) => {
         const width = 100 / block.lanes
         // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课），卡片更高、留白更从容；
@@ -178,12 +183,10 @@ export function TimetableCompare({
   const halfHours = Array.from({ length: (ceilHour - floorHour) * 2 + 1 }, (_, index) => floorHour * 60 + index * 30)
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
-  // 只画落在当前网格范围内的参考线;上/下班线各自驱动一层很轻的渐变遮罩(见下)。
+  // 只画落在当前网格范围内的参考线。
   const shownGuides = guides.filter(
     (guide) => guide.minutes >= floorHour * 60 && guide.minutes <= ceilHour * 60,
   )
-  const amGuide = shownGuides.find((guide) => guide.tone === 'am') ?? null
-  const pmGuide = shownGuides.find((guide) => guide.tone === 'pm') ?? null
 
   // 上下班线拖动:pointerdown 在虚线上 → window 级 pointermove 实时换算成分钟(按网格身高
   // 线性映射),吸附 15 分钟并夹在网格范围内,每次变化直接回调 App(state → time input +
@@ -252,21 +255,6 @@ export function TimetableCompare({
             style={{ top: `${pct(minutes)}%` }}
           />
         ))}
-        {/* 上班线上方 / 下班线下方:很轻的半透明渐变遮罩,从边缘向线的方向渐隐(不抢戏)。 */}
-        {amGuide && (
-          <div
-            aria-hidden
-            className="tt2__offmask tt2__offmask--am"
-            style={{ height: `${pct(amGuide.minutes)}%` }}
-          />
-        )}
-        {pmGuide && (
-          <div
-            aria-hidden
-            className="tt2__offmask tt2__offmask--pm"
-            style={{ top: `${pct(pmGuide.minutes)}%` }}
-          />
-        )}
         {Array.from({ length: dayCount }, (_, index) => {
           const dayIndex = index + 1
           return (
