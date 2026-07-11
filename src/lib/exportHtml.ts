@@ -80,7 +80,7 @@ function escapeHtml(text: string): string {
 export function buildScheduleHtml(
   plan: Plan,
   termName: string,
-  paint: PaintFn = (_code, subject) => subjectPaint(subject),
+  paint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme),
 ): string {
   const raw = blocksOf(plan)
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
@@ -104,9 +104,16 @@ export function buildScheduleHtml(
         const height = pct(shownEnd) - pct(block.start)
         const width = 100 / block.lanes
         const left = block.lane * width
-        const tint: CanvasPaint = paint(block.code, block.subject)
+        // #里程碑5:明暗两套色阶都算好，塞进 CSS 自定义属性——切主题只是换哪组变量生效
+        // (见下方 .block / :root[data-theme='dark'] .block)，课块不用重新渲染整份 HTML。
+        const light: CanvasPaint = paint(block.code, block.subject, 'light')
+        const dark: CanvasPaint = paint(block.code, block.subject, 'dark')
         const meta = block.location ? `${block.component} · ${escapeHtml(block.location)}` : block.component
-        return `<article class="block" style="top:${top}%;height:${height}%;left:${left}%;width:${width}%;background:${tint.fill};border-color:${tint.edge};color:${tint.text}">` +
+        const style =
+          `top:${top}%;height:${height}%;left:${left}%;width:${width}%;` +
+          `--fill-l:${light.fill};--edge-l:${light.edge};--text-l:${light.text};` +
+          `--fill-d:${dark.fill};--edge-d:${dark.edge};--text-d:${dark.text}`
+        return `<article class="block" style="${style}">` +
           `<span class="block__code">${escapeHtml(block.code)}</span>` +
           `<span class="block__time">${hhmm(block.start)}–${hhmm(shownEnd)}</span>` +
           `<span class="block__meta">${meta}</span>` +
@@ -138,8 +145,20 @@ export function buildScheduleHtml(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CU Schedule · ${escapeHtml(termName)}</title>
+<script>
+  // #里程碑5:在首次绘制前就把 data-theme 定下来(存过的选择 > 系统偏好)，避免切页闪一下。
+  (function () {
+    var saved = null
+    try { saved = localStorage.getItem('cu-schedule-html-theme') } catch (e) {}
+    var theme = saved === 'light' || saved === 'dark'
+      ? saved
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    document.documentElement.setAttribute('data-theme', theme)
+    document.documentElement.style.colorScheme = theme
+  })()
+</script>
 <style>
-  :root { color-scheme: light; }
+  :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
   body {
     margin: 0;
@@ -203,18 +222,23 @@ export function buildScheduleHtml(
     position: absolute;
     inset: 0;
   }
+  /* #里程碑5:格线置底——之前 .grid-line 在标记里排在 .day/.block 后面，无 z-index 时按
+     文档顺序层叠，格线反而画在课程块上面。.block 显式给正 z-index，稳赢任何 z-index:auto
+     的同层元素(格线保持 auto)，不用依赖标记顺序也能保证格线永远在课块下面。 */
   .grid-line {
     position: absolute;
     left: 56px;
     right: 0;
     height: 1px;
     background: #e6e8ee;
+    z-index: 0;
   }
   .grid-line--half {
     background: #f0f1f5;
   }
   .block {
     position: absolute;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap: 1px;
@@ -225,6 +249,11 @@ export function buildScheduleHtml(
     border-left-width: 3px;
     overflow: hidden;
     font-size: 11.5px;
+    /* #里程碑5:明暗两套色阶都以自定义属性内联在每个课块上，切主题只是换用哪一组，
+       不需要重新生成/重新渲染整份 HTML(见下方 dayColumns 的 style 拼接)。 */
+    background: var(--fill-l);
+    border-color: var(--edge-l);
+    color: var(--text-l);
   }
   .block__code { font-weight: 750; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -233,21 +262,37 @@ export function buildScheduleHtml(
   .foot-byline { font-size: 12.5px; font-weight: 750; color: #141a2b; text-decoration: none; }
   .foot-byline:hover { text-decoration: underline; }
   .foot-note { margin: 0; font-size: 10.5px; color: #8b93a4; }
-  @media (prefers-color-scheme: dark) {
-    body { background: #0b0e16; color: #eceff6; }
-    .sub { color: #7a8397; }
-    .tt { background: #141926; border-color: #2e3648; }
-    .corner, .head__day, .axis { border-color: #242b3b; }
-    .day { border-color: #242b3b; }
-    .grid-line { background: #242b3b; }
-    .grid-line--half { background: #1c2230; }
-    .axis__tick { color: #7a8397; }
-    .foot-byline { color: #eceff6; }
-    .foot-note { color: #7a8397; }
+  .theme-toggle {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #ccd2df;
+    background: #ffffff;
+    font-size: 17px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgb(20 26 43 / 0.06), 0 3px 10px -6px rgb(20 26 43 / 0.16);
   }
+  .theme-toggle:hover { transform: translateY(-1px); }
+  :root[data-theme='dark'] body { background: #0b0e16; color: #eceff6; }
+  :root[data-theme='dark'] .sub { color: #7a8397; }
+  :root[data-theme='dark'] .tt { background: #141926; border-color: #2e3648; }
+  :root[data-theme='dark'] .corner, :root[data-theme='dark'] .head__day, :root[data-theme='dark'] .axis { border-color: #242b3b; }
+  :root[data-theme='dark'] .day { border-color: #242b3b; }
+  :root[data-theme='dark'] .grid-line { background: #242b3b; }
+  :root[data-theme='dark'] .grid-line--half { background: #1c2230; }
+  :root[data-theme='dark'] .axis__tick { color: #7a8397; }
+  :root[data-theme='dark'] .foot-byline { color: #eceff6; }
+  :root[data-theme='dark'] .foot-note { color: #7a8397; }
+  :root[data-theme='dark'] .block { background: var(--fill-d); border-color: var(--edge-d); color: var(--text-d); }
+  :root[data-theme='dark'] .theme-toggle { background: #141926; border-color: #2e3648; color: #eceff6; }
 </style>
 </head>
 <body>
+  <button aria-label="切换明暗主题" class="theme-toggle" id="theme-toggle" type="button">🌙</button>
   <div class="wrap">
     <h1>CU Schedule · ${escapeHtml(termName || '课表')}</h1>
     <p class="sub">导出于 ${generated} · 离线可直接打开 · 时间以 CUSIS 为准</p>
@@ -265,6 +310,22 @@ export function buildScheduleHtml(
       <p class="foot-note">数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)</p>
     </footer>
   </div>
+  <script>
+    // #里程碑5:明暗切换——点一下即时生效，选择存 localStorage，下次离线打开这份 HTML 还记得。
+    (function () {
+      var root = document.documentElement
+      var btn = document.getElementById('theme-toggle')
+      function icon(theme) { return theme === 'dark' ? '☀️' : '🌙' }
+      btn.textContent = icon(root.getAttribute('data-theme') || 'light')
+      btn.addEventListener('click', function () {
+        var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'
+        root.setAttribute('data-theme', next)
+        root.style.colorScheme = next
+        btn.textContent = icon(next)
+        try { localStorage.setItem('cu-schedule-html-theme', next) } catch (e) {}
+      })
+    })()
+  </script>
 </body>
 </html>
 `
@@ -274,7 +335,7 @@ export function buildScheduleHtml(
 export function exportHtmlFile(
   plan: Plan,
   termName: string,
-  paint: PaintFn = (_code, subject) => subjectPaint(subject),
+  paint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme),
 ): string {
   const html = buildScheduleHtml(plan, termName, paint)
   const blob = new Blob([html], { type: 'text/html;charset=utf-8' })
