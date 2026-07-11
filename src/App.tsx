@@ -24,7 +24,9 @@ import { TimetableCompare, type GhostBlock } from './components/TimetableCompare
 import { evaluateCandidates } from './lib/candidates.ts'
 import { copyText } from './lib/clipboard.ts'
 import { courseColor, huePaint } from './lib/color.ts'
+import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
+import { downloadBlob } from './lib/exportImage.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
 import {
   classifyPrograms,
@@ -845,12 +847,68 @@ export default function App() {
     })
     setExportNote(result.ok ? result.note : result.reason)
   }
-  // 底部「其他」栏:导出全部配置(committed/taken/cart/pins/term/开关)为一份 Markdown。
-  // 真正实现在 configMd.ts(里程碑 3)；此处占位，避免导出页在里程碑 1 单独提交时引用尚未
-  // 落地的模块。
+  // 底部「其他」栏:导出全部配置(committed/taken/cart/pins/term/开关)为一份 Markdown，
+  // 人肉可读 + 末尾机读块(见 configMd.ts),下载文件名用当天日期。
   const [configNote, setConfigNote] = useState('')
   function handleExportConfigMd(): void {
-    setConfigNote('即将支持：导出全部配置为 Markdown')
+    const state: ConfigMdState = {
+      termSlug,
+      committed,
+      taken,
+      cart,
+      pins,
+      hideConflicts,
+      hideOutOfHours,
+      meetsOfficeHours,
+      meetsPrereq,
+      lecFits,
+      hideCompleted,
+      currentTermOnly,
+      excludeTba,
+      programScope,
+      workStart,
+      workEnd,
+    }
+    const md = encodeConfigMd(state, {
+      termName: term?.name,
+      titleFor: (code) => catalogByKey.get(courseKey(code))?.title,
+    })
+    downloadBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), configMdFilename())
+    setConfigNote('已下载配置文件')
+  }
+
+  // 信息页「我的情况」区「导入之前的配置」:读取 .md 文件 → decodeConfigMd → 整体恢复状态。
+  const configFileInputRef = useRef<HTMLInputElement | null>(null)
+  function handleConfigFile(file: File): void {
+    const reader = new FileReader()
+    reader.onload = () => {
+      const text = typeof reader.result === 'string' ? reader.result : ''
+      const state = decodeConfigMd(text)
+      if (!state) {
+        setConfigNote('导入失败：文件内容无法识别')
+        return
+      }
+      setTermSlug(state.termSlug)
+      setCommitted(state.committed)
+      setTaken(state.taken)
+      setCart(state.cart)
+      setPins(state.pins)
+      setHideConflicts(state.hideConflicts)
+      setHideOutOfHours(state.hideOutOfHours)
+      setMeetsOfficeHours(state.meetsOfficeHours)
+      setMeetsPrereq(state.meetsPrereq)
+      setLecFits(state.lecFits)
+      setHideCompleted(state.hideCompleted)
+      setCurrentTermOnly(state.currentTermOnly)
+      setExcludeTba(state.excludeTba)
+      setProgramScope(state.programScope)
+      setWorkStart(state.workStart)
+      setWorkEnd(state.workEnd)
+      setPlanIndex(0)
+      setConfigNote('已导入配置')
+    }
+    reader.onerror = () => setConfigNote('导入失败：无法读取文件')
+    reader.readAsText(file)
   }
 
   const candidates = useMemo(() => {
@@ -1429,6 +1487,28 @@ export default function App() {
             year={enrollYear || undefined}
             onChange={(id) => setProgramId(id ?? '')}
           />
+        </div>
+        <div className="field">
+          <span className="field__label">配置备份</span>
+          <input
+            accept=".md,text/markdown"
+            hidden
+            ref={configFileInputRef}
+            type="file"
+            onChange={(event) => {
+              const file = event.target.files?.[0]
+              if (file) handleConfigFile(file)
+              event.target.value = ''
+            }}
+          />
+          <button
+            className="export-btn"
+            type="button"
+            onClick={() => configFileInputRef.current?.click()}
+          >
+            导入之前的配置
+          </button>
+          {configNote && <p className="card__sub">{configNote}</p>}
         </div>
       </div>
     </section>

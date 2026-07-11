@@ -23,11 +23,13 @@ const MARKER = '#s='
 type PageSlug = 'info' | 'select' | 'timetable' | 'export'
 const PAGE_SLUGS: readonly PageSlug[] = ['info', 'select', 'timetable', 'export']
 
-function utf8ToBase64(text: string): string {
+// Exported so other modules that need the same UTF-8-safe base64 envelope (e.g.
+// configMd.ts's machine-readable block) don't have to reinvent it.
+export function utf8ToBase64(text: string): string {
   return btoa(unescape(encodeURIComponent(text)))
 }
 
-function base64ToUtf8(base64: string): string {
+export function base64ToUtf8(base64: string): string {
   return decodeURIComponent(escape(atob(base64)))
 }
 
