@@ -1451,30 +1451,48 @@ select {
   grid-template-columns: repeat(var(--tt-days), minmax(0, 1fr));
   /* 每天之间的间距从 4px 加宽到 7px，让每天的边界更清楚。 */
   gap: 7px;
+  /* #里程碑2:把 .tt__body 变成唯一的层叠上下文("孤岛")。没有这行，.tt__rule(z-index:0)
+     与 .tt__col 的背景(同为 auto/0 那一档)按 DOM 顺序比大小——.tt__col 在 JSX 里排在
+     .tt__rule 之后渲染，会整块盖在横线上面，横线肉眼就是"画了但看不见"。isolation:isolate
+     把 .tt__col::before(z-index:-1)/.tt__rule(0)/.tt__block(1) 都收进同一个层叠上下文里
+     按 z-index 数值比较，横线才能稳定压在列背景之上、课程卡片之下。 */
+  isolation: isolate;
 }
 
 .tt__rule {
   position: absolute;
   inset-inline: 0;
-  border-top: 1px solid var(--line-soft);
+  border-top: 1px solid var(--line);
   pointer-events: none;
   z-index: 0;
 }
 
 .tt__rule--half {
-  border-top-color: color-mix(in srgb, var(--line-soft) 45%, transparent);
+  border-top-color: color-mix(in srgb, var(--line-soft) 70%, transparent);
 }
 
 .tt__col {
   position: relative;
   border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-2) 60%, transparent);
   /* 轮廓加粗、换用对比更强的 --line，配合更宽的列间距让每天更好辨认。 */
   outline: 1.5px solid var(--line);
   outline-offset: -1px;
 }
 
-/* 无课当天占位：两行「DAY / OFF」，大字号 + 粗体 + 斜体，比原来的「空闲」更醒目。 */
+/* #里程碑2:列底色挪到 ::before、z-index:-1——.tt__col 自身不设 z-index(不建立新层叠
+   上下文),所以它的子元素(.tt__block/.tt__free)仍会正常"上浮"到 .tt__body 那个孤岛
+   里按 1/auto 比较，压在横线之上；只有这块纯装饰的底色被摁到最底层，横线才露得出来。 */
+.tt__col::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--surface-2) 60%, transparent);
+}
+
+/* 无课当天占位：两行「DAY / OFF」，字号大幅加大、粗体+斜体，做成醒目的大字占位
+   （比旧版 19px 明显跳一档，一眼就能看出这天没课）。 */
 .tt__free {
   position: absolute;
   inset: 0;
@@ -1482,14 +1500,14 @@ select {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1px;
-  font-size: 19px;
+  gap: 2px;
+  font-size: 30px;
   font-weight: 800;
   font-style: italic;
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: 0.02em;
   color: var(--ink-3);
-  opacity: 0.55;
+  opacity: 0.6;
 }
 
 .tt__block {
@@ -1526,6 +1544,29 @@ select {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* #里程碑2:冲突圆形感叹号——同一天两个时段有重叠时，落在两者碰撞处（重叠区间的
+   垂直中点）的一枚醒目圆徽，压在课程卡片之上（z-index 高于 .tt__block 的 1）。
+   理论上必修课之间恒无冲突(见 App.tsx planHasConflict 注释)，这里是防御性兜底。 */
+.tt__conflict {
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--bad);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 0 0 2px var(--surface), var(--shadow);
+  pointer-events: none;
 }
 
 .tt__placeholder {
@@ -1955,19 +1996,25 @@ select {
   border-top: none;
   border-radius: 0 0 8px 8px;
   overflow: hidden;
+  /* #里程碑2:同 .tt__body——建一个独立层叠上下文，让 .tt2__rule(0)/.tt2__sub::before(-1)/
+     .tt2__block(1)/.tt2__guide(3)/.tt2__conflict(5) 都在这一个孤岛里按数值比大小，
+     不受 DOM 顺序影响。没有这行，A/B 子列(.tt2__sub--a/--b)的实底色会整块盖住横线，
+     这也是"横线画了但看不见"在对比课表里更明显的原因——子列背景是不透明纯色，比
+     .tt(单排法)那边的半透明列底色挡得更死。 */
+  isolation: isolate;
 }
 
 /* Grid lines span the whole width — hour lines clear, half-hour lines fainter. */
 .tt2__rule {
   position: absolute;
   inset-inline: 0;
-  border-top: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
+  border-top: 1px solid var(--line);
   pointer-events: none;
   z-index: 0;
 }
 
 .tt2__rule--half {
-  border-top-color: color-mix(in srgb, var(--line) 30%, transparent);
+  border-top-color: color-mix(in srgb, var(--line) 45%, transparent);
 }
 
 /* 上下班参考线：一条穿过整张日历的虚线，浮在课程块之上。默认不拦点击;可拖(--drag)时
@@ -1990,6 +2037,30 @@ select {
   content: '';
   position: absolute;
   inset: -8px 0;
+}
+
+/* #里程碑2:冲突圆形感叹号——一个子列(A 或 B，含候选课试排块)内两个时段重叠时，落在
+   碰撞处(重叠区间的垂直中点、该子列水平居中)的圆徽，压在课程卡片(1)与上下班参考线(3)
+   之上。候选课(cart)试排块找不到不冲突组合时会退回第一种排法(见 App.tsx
+   ghostBlocksFor 注释)，是这个徽标最常见的触发场景。 */
+.tt2__conflict {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--bad);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 0 0 2px var(--surface), var(--shadow);
+  pointer-events: none;
 }
 
 .tt2__guide--pm {
@@ -2033,11 +2104,24 @@ select {
   position: relative;
 }
 
-/* #9 A 子列 = 白（浅主题）/ --surface（深主题）；B 子列 = 略灰一档，便于区分两套排法。 */
+/* #9 A 子列 = 白（浅主题）/ --surface（深主题）；B 子列 = 略灰一档，便于区分两套排法。
+   #里程碑2:底色挪到 ::before(z-index:-1)——.tt2__sub 本身不设 z-index，子元素
+   (.tt2__block/.tt2__free)照常在 .tt2__body 的孤岛里按数值排到横线之上，只有这块纯装饰
+   底色被摁到最底层，否则这两个子列的实色背景会整块盖住 .tt2__rule。 */
 .tt2__sub--a {
-  background: var(--surface);
   /* the A|B divider inside each day column */
   border-right: 1px dashed color-mix(in srgb, var(--line) 75%, transparent);
+}
+
+.tt2__sub::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.tt2__sub--a::before {
+  background: var(--surface);
 }
 
 /* #12 单方案模式:每天只有一整列(仅 A 子列),去掉 A|B 内分隔虚线。 */
@@ -2049,16 +2133,16 @@ select {
   border-right: none;
 }
 
-.tt2__sub--b {
+.tt2__sub--b::before {
   background: #f4f5f8;
 }
 
-:root[data-theme='dark'] .tt2__sub--b {
+:root[data-theme='dark'] .tt2__sub--b::before {
   background: var(--surface-2);
 }
 
-/* 无课当天占位：两行「DAY / OFF」，大字号 + 粗体 + 斜体，比原来的「空闲」更醒目。
-   A/B 对比时子列较窄，字号比 .tt__free 略小，单方案(.tt2--solo)整列宽度足够也能撑住。 */
+/* 无课当天占位：两行「DAY / OFF」，字号大幅加大 + 粗体 + 斜体，比旧版 15px 明显跳一档。
+   A/B 对比时子列较窄，字号比单方案(.tt2--solo)略小，避免在窄列里贴边。 */
 .tt2__free {
   position: absolute;
   inset: 0;
@@ -2067,13 +2151,17 @@ select {
   align-items: center;
   justify-content: center;
   gap: 1px;
-  font-size: 15px;
+  font-size: 21px;
   font-weight: 800;
   font-style: italic;
-  line-height: 1.05;
+  line-height: 1;
   letter-spacing: 0.01em;
   color: var(--ink-3);
-  opacity: 0.5;
+  opacity: 0.55;
+}
+
+.tt2--solo .tt2__free {
+  font-size: 30px;
 }
 
 .tt2__block {

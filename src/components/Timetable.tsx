@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import { courseColor } from '../lib/color.ts'
+import { overlapMidpoints } from '../lib/overlap.ts'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
@@ -98,7 +99,10 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
         ))}
         {Array.from({ length: dayCount }, (_, index) => {
           const dayIndex = index + 1
-          const blocks = layOutDay(raw.filter((block) => block.dayIndex === dayIndex))
+          const dayRaw = raw.filter((block) => block.dayIndex === dayIndex)
+          const blocks = layOutDay(dayRaw)
+          // #里程碑2:用真实(未进位)的 start/end 判定,避免卡片为占位而拉高的高度被误判成冲突。
+          const conflictMarks = overlapMidpoints(dayRaw)
           return (
             <div className="tt__col" key={dayIndex}>
               {blocks.length === 0 && plan && (
@@ -138,6 +142,11 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
                   </article>
                 )
               })}
+              {conflictMarks.map((minutes, i) => (
+                <span aria-hidden className="tt__conflict" key={`conflict-${i}`} style={{ top: `${pct(minutes)}%` }}>
+                  !
+                </span>
+              ))}
             </div>
           )
         })}

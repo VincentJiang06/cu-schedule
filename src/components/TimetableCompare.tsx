@@ -1,4 +1,5 @@
 import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
+import { overlapMidpoints } from '../lib/overlap.ts'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
@@ -74,6 +75,9 @@ function Column({
 }) {
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
   const laid = layOutDay(blocks)
+  // #里程碑2:同一子列(A 或 B，含候选课试排块)内两两重叠的时间块，标出碰撞处的纵坐标。
+  // 用真实(未进位) start/end 判定，避免卡片为占位而拉高的高度被误判成冲突。
+  const conflictMarks = overlapMidpoints(blocks)
   return (
     <div className={`tt2__sub tt2__sub--${variant}`}>
       {laid.length === 0 && !empty && (
@@ -115,6 +119,11 @@ function Column({
           </article>
         )
       })}
+      {conflictMarks.map((minutes, i) => (
+        <span aria-hidden className="tt2__conflict" key={`conflict-${i}`} style={{ top: `${pct(minutes)}%` }}>
+          !
+        </span>
+      ))}
     </div>
   )
 }
