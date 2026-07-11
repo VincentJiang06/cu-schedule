@@ -1875,6 +1875,12 @@ select {
   font-size: 12px;
   color: var(--ink-3);
   line-height: 1.5;
+  /* A failed-copy fallback shows the full share URL inline (can run to 200+ chars of
+     unbroken base64) — without this it overflows the card instead of wrapping, which
+     made the "手动复制" fallback effectively invisible/unselectable. */
+  overflow-wrap: anywhere;
+  word-break: break-all;
+  user-select: text;
 }
 
 /* ---- course table --------------------------------------------------------- */

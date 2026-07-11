@@ -22,6 +22,7 @@ import {
 import { SubjectPicker } from './components/SubjectPicker.tsx'
 import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
+import { copyText } from './lib/clipboard.ts'
 import { courseColor, huePaint } from './lib/color.ts'
 import { courseKey } from './lib/courseKey.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
@@ -696,13 +697,7 @@ export default function App() {
       setShareBusy(false)
       return
     }
-    let copied = false
-    try {
-      await navigator.clipboard.writeText(result.url)
-      copied = true
-    } catch {
-      copied = false
-    }
+    const copied = await copyText(result.url)
     setShareNote(copied ? `只读链接已复制（一天有效）：${result.url}` : `只读链接（一天有效）：${result.url}`)
     setShareBusy(false)
   }

@@ -1,3 +1,4 @@
+import { copyText } from './clipboard.ts'
 import type { Pins } from './schedule.ts'
 
 /**
@@ -59,13 +60,12 @@ export function decodeShare(hash: string): SharePayload | null {
   }
 }
 
-/** Build the share URL for the current selection and copy it; report whether the copy succeeded. */
+/** Build the share URL for the current selection and copy it; report whether the copy succeeded.
+ * Tries the async Clipboard API first, then falls back to `execCommand('copy')` (see
+ * clipboard.ts) — the async API alone is unavailable outside a secure context (plain
+ * HTTP / bare IP deployments), which otherwise makes 复制链接 silently do nothing. */
 export async function copyShareLink(payload: SharePayload): Promise<{ copied: boolean; url: string }> {
   const url = encodeShare(payload)
-  try {
-    await navigator.clipboard.writeText(url)
-    return { copied: true, url }
-  } catch {
-    return { copied: false, url }
-  }
+  const copied = await copyText(url)
+  return { copied, url }
 }
