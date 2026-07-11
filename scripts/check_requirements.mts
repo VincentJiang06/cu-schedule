@@ -90,6 +90,109 @@ check(
   check('no phantom MATH2024', codes.includes('MATH2024'), false)
 }
 
+console.log('\n=== regression: exclusion/prereq no longer bleed into each other (bug ①) ===')
+
+// A period, not a semicolon, used to separate the exclusion sentence from the
+// prerequisite sentence — CLAUSE_SPLIT never split on it, so the whole thing was
+// one exclusion clause and BCHE2000 (the prerequisite!) ended up barring the
+// student who has it. Forward and reverse order must both come out right.
+check(
+  'exclusions = [BCHE3090] exactly, BCHE2000 does not bleed in',
+  parseRequirement('Not for students who have taken BCHE3090. Pre-requisite: BCHE2000.', known).exclusions,
+  ['BCHE3090'],
+)
+check(
+  'exclusion does not swallow trailing prerequisite: taking the barring course rules it out',
+  ruled('Not for students who have taken BCHE3090. Pre-requisite: BCHE2000.', ['BCHE2000', 'BCHE3090']),
+  ['BCHE3090'],
+)
+check(
+  'exclusion does not swallow trailing prerequisite (prereq met)',
+  status('Not for students who have taken BCHE3090. Pre-requisite: BCHE2000.', ['BCHE2000']),
+  'met',
+)
+check(
+  'exclusion does not swallow trailing prerequisite (prereq missing)',
+  status('Not for students who have taken BCHE3090. Pre-requisite: BCHE2000.', []),
+  'missing',
+)
+// Reverse order — the prerequisite anchor comes first this time.
+check(
+  'reverse order: exclusions = [BCHE3090] exactly',
+  parseRequirement('Pre-requisite: BCHE2000. Not for students who have taken BCHE3090.', known).exclusions,
+  ['BCHE3090'],
+)
+check(
+  'reverse order: prereq still correct',
+  status('Pre-requisite: BCHE2000. Not for students who have taken BCHE3090.', ['BCHE2000']),
+  'met',
+)
+
+console.log('\n=== regression: "Exclusion:" tag form (bug ②) ===')
+check('exclusion tag form', parseRequirement('Exclusion: ANTH2410', known).exclusions, ['ANTH2410'])
+check('exclusion tag form rules out a student who took it', ruled('Exclusion: ANTH2410', ['ANTH2410']), ['ANTH2410'])
+
+console.log('\n=== regression: comma-list AND vs OR (bug ③) ===')
+check(
+  'comma list ending in "and" is AND — all three met',
+  status('Pre-requisite: MATH1010, MATH1030 and PHYS1110', ['MATH1010', 'MATH1030', 'PHYS1110']),
+  'met',
+)
+check(
+  'comma list ending in "and" is AND — two of three missing one',
+  status('Pre-requisite: MATH1010, MATH1030 and PHYS1110', ['MATH1010', 'MATH1030']),
+  'missing',
+)
+check(
+  'comma list ending in "or" is OR — any one met',
+  status('Pre-requisite: MATH1010, MATH1030 or PHYS1110', ['PHYS1110']),
+  'met',
+)
+
+console.log('\n=== regression: numbered list body (bug ④) ===')
+{
+  const parsed = parseRequirement('Pre-requisite(s):\n1. ACCT3241\n2. DSME2011 or DOTE2011', known)
+  check(
+    'numbered list parses to AND(item1, OR(item2a, item2b))',
+    parsed.prerequisite,
+    {
+      t: 'and',
+      kids: [
+        { t: 'code', code: 'ACCT3241' },
+        { t: 'or', kids: [{ t: 'code', code: 'DSME2011' }, { t: 'code', code: 'DOTE2011' }] },
+      ],
+    },
+  )
+  check('numbered list: all items met', status('Pre-requisite(s):\n1. ACCT3241\n2. DSME2011 or DOTE2011', ['ACCT3241', 'DSME2011']), 'met')
+  check('numbered list: missing item 1', status('Pre-requisite(s):\n1. ACCT3241\n2. DSME2011 or DOTE2011', ['DSME2011']), 'missing')
+}
+
+console.log('\n=== regression: Pre-requisite/Co-requisite combo label (bug ④ note) ===')
+{
+  const parsed = parseRequirement('Pre-requisite/Co-requisite: AIST2010 or CSCI3280', known)
+  check('combo label produces no prerequisite', parsed.prerequisite, null)
+  check(
+    'combo label check: coreqStatus reflects the OR',
+    checkRequirement('Pre-requisite/Co-requisite: AIST2010 or CSCI3280', new Set(['CSCI3280']), { knownCodes: known }).coreqStatus,
+    'met',
+  )
+}
+
+console.log('\n=== regression: "not for" region survives an internal semicolon (bug ①) ===')
+{
+  const rq =
+    'Not for Journalism and Communication Majors and Global Communication Majors; and students who have taken COMM1110. Pre-requisite: GENA1112.'
+  check('exclusions = [COMM1110] only', parseRequirement(rq, known).exclusions, ['COMM1110'])
+  check('prereq = GENA1112', status(rq, ['GENA1112']), 'met')
+}
+
+console.log('\n=== regression: "taking" trigger verb (bug ⑤) ===')
+check(
+  'present-tense "taking" trigger',
+  parseRequirement('Not for students taking BUSI2320', known).exclusions,
+  ['BUSI2320'],
+)
+
 console.log('\n=== loose key matching (ENGG1000 / ENGG1000A / ENGG1000B) ===')
 const knownAB = new Set([...known, 'ENGG1000A', 'ENGG1000B'])
 // A prereq written as the bare key is satisfied by either variant.
