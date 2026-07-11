@@ -238,7 +238,7 @@ function paintSchedule(
       if (h > 66) {
         ty += 28
         ctx.font = '400 22px system-ui, -apple-system, monospace'
-        ctx.fillText(`${hhmm(block.start)}–${hhmm(shownEnd)}`, tx, ty)
+        ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       }
       ctx.restore()
     }

@@ -195,7 +195,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
       if (h > 30) {
         ty += 16
         ctx.font = '11px system-ui, -apple-system, sans-serif'
-        ctx.fillText(`${hhmm(block.start)}–${hhmm(shownEnd)}`, tx, ty)
+        ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       }
       if (h > 50) {
         ty += 15

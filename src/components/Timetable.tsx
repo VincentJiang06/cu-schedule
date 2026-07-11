@@ -109,7 +109,8 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
               )}
               {blocks.map((block) => {
                 const width = 100 / block.lanes
-                // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课）；真实 end 仍用于排课/分道。
+                // 进位到下一个半点，仅用于卡片占位高度（本校无 :15/:45 起课，进位后卡片更从容）；
+                // 时间标签仍显示真实结束时间（:15 等），真实 end 也用于排课/分道。
                 const shownEnd = displayEndMinutes(block.end)
                 return (
                   <article
@@ -124,11 +125,11 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
                         width: `calc(${width}% - 4px)`,
                       } as CSSProperties
                     }
-                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
+                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
                   >
                     <b>{block.code}</b>
                     <time>
-                      {hhmm(block.start)}–{hhmm(shownEnd)}
+                      {hhmm(block.start)}–{hhmm(block.end)}
                     </time>
                     <span className="tt__block-meta">
                       {block.component}

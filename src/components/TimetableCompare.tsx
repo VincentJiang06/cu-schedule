@@ -84,8 +84,8 @@ function Column({
       )}
       {laid.map((block) => {
         const width = 100 / block.lanes
-        // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课），卡片更高、留白更从容；
-        // 真实 end 仍用于排课/冲突/分道，这里只影响占位高度与时间标签。
+        // 进位到下一个半点，仅用于卡片占位高度（本校无 :15/:45 起课，卡片更高、留白更从容）；
+        // 时间标签仍显示真实结束时间（:15 等）；真实 end 也用于排课/冲突/分道。
         const shownEnd = displayEndMinutes(block.end)
         // #8 LEC 实心主色块；TUT/LAB 等同 hue 的浅色斜纹+虚线变体，一眼可分。
         const isLec = block.component === 'LEC'
@@ -102,14 +102,14 @@ function Column({
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
           >
             <span className="tt2__block-top">
               <b className="tt2__block-comp">{block.component}</b>
               <span className="tt2__block-code">{block.code}</span>
             </span>
             <time className="tt2__block-time">
-              {hhmm(block.start)}–{hhmm(shownEnd)}
+              {hhmm(block.start)}–{hhmm(block.end)}
               {block.location ? ` · ${block.location}` : ''}
             </time>
           </article>
