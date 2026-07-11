@@ -1762,12 +1762,6 @@ select {
   min-width: 0;
 }
 
-.time-field {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
 .time-input {
   flex: 1;
   min-width: 0;
@@ -1791,37 +1785,18 @@ select {
   cursor: not-allowed;
 }
 
-.time-field__clear {
-  flex: none;
-  width: 26px;
-  height: 26px;
+/* 卡片标题栏右侧的一组操作(说明文字 + 角标按钮)，取代原来挤在两个时间输入框旁边的
+   锁按钮位置（#里程碑3）。 */
+.card__title-actions {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--surface);
-  color: var(--ink-3);
-  font-size: 13px;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.time-field__clear:hover {
-  border-color: var(--brand);
-  color: var(--brand-ink);
-}
-
-.time-field__clear:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
+  gap: 8px;
 }
 
 /* 上下班时间锁按钮：默认「锁定」态与卡片其它控件同色(中性);「解锁」态借用既有 --warn
    语义色提醒「当前可被误改」——不是新引入的高饱和色,复用全站已有的警示色变量。 */
 .lock-toggle {
   flex: none;
-  align-self: flex-end;
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -1850,6 +1825,16 @@ select {
 
 .lock-toggle__label {
   white-space: nowrap;
+}
+
+/* #里程碑3:标题栏角标变体——图标独占，方形小按钮，不再占用横排空间。 */
+.lock-toggle--corner {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  justify-content: center;
+  font-size: 13px;
+  border-radius: 7px;
 }
 
 .tt2__tag {

@@ -1391,77 +1391,56 @@ export default function App() {
   )
   const scheduleFilterCard = (
     <section className="card">
+      {/* #里程碑3:锁按钮从两个时间框正旁边挪到卡片标题栏右上角，做成一个小角标——不再挤占
+          输入框的空间，功能不变（默认锁住,防止拖动虚线 / 改这两个输入框被误操作）。 */}
       <h2 className="card__title">
         上下班时间
-        <span className="card__note">日历参考线 · 排法过滤</span>
+        <span className="card__title-actions">
+          <span className="card__note">日历参考线 · 排法过滤</span>
+          <button
+            aria-label={workTimeLocked ? '解锁上下班时间设置' : '锁定上下班时间设置'}
+            className={`lock-toggle lock-toggle--corner${workTimeLocked ? '' : ' lock-toggle--unlocked'}`}
+            title={
+              workTimeLocked
+                ? '已锁定：日历上的拖动虚线与下方两个输入框都已禁用，点击解锁'
+                : '已解锁：可拖动虚线、修改时间，点击重新锁定防止误改'
+            }
+            type="button"
+            onClick={() => setWorkTimeLocked((locked) => !locked)}
+          >
+            <span aria-hidden>{workTimeLocked ? '🔒' : '🔓'}</span>
+          </button>
+        </span>
       </h2>
       {/* 上班 / 下班同一排,省纵向空间;语义(不早于/不晚于)收进 title,不再占一行说明。
-          锁按钮同排靠右——默认锁住,防止拖动虚线 / 改这两个输入框被误操作,解锁后才恢复可改。 */}
+          #里程碑3:去掉了旁边的清除(×)按钮——上下班时间是默认需要的功能，不需要专门的
+          清空入口；仍可通过原生 time input 自带的清除方式取消设置（值语义仍是
+          number|null，未破坏排课/渲染）。 */}
       <div className="time-row">
-        <div className="field" title="希望一天的课不早于此;清空＝不设线">
+        <div className="field" title="希望一天的课不早于此">
           <span className="field__label">上班时间</span>
-          <div className="time-field">
-            <input
-              aria-label="上班时间"
-              className="time-input"
-              disabled={workTimeLocked}
-              step={300}
-              type="time"
-              value={workStart != null ? hhmm(workStart) : ''}
-              onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
-            />
-            {workStart != null && (
-              <button
-                aria-label="清除上班时间"
-                className="time-field__clear"
-                disabled={workTimeLocked}
-                type="button"
-                onClick={() => setWorkStart(null)}
-              >
-                ×
-              </button>
-            )}
-          </div>
+          <input
+            aria-label="上班时间"
+            className="time-input"
+            disabled={workTimeLocked}
+            step={300}
+            type="time"
+            value={workStart != null ? hhmm(workStart) : ''}
+            onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
+          />
         </div>
-        <div className="field" title="希望一天的课不晚于此;清空＝不设线">
+        <div className="field" title="希望一天的课不晚于此">
           <span className="field__label">下班时间</span>
-          <div className="time-field">
-            <input
-              aria-label="下班时间"
-              className="time-input"
-              disabled={workTimeLocked}
-              step={300}
-              type="time"
-              value={workEnd != null ? hhmm(workEnd) : ''}
-              onChange={(event) => setWorkEnd(parseHHMM(event.target.value))}
-            />
-            {workEnd != null && (
-              <button
-                aria-label="清除下班时间"
-                className="time-field__clear"
-                disabled={workTimeLocked}
-                type="button"
-                onClick={() => setWorkEnd(null)}
-              >
-                ×
-              </button>
-            )}
-          </div>
+          <input
+            aria-label="下班时间"
+            className="time-input"
+            disabled={workTimeLocked}
+            step={300}
+            type="time"
+            value={workEnd != null ? hhmm(workEnd) : ''}
+            onChange={(event) => setWorkEnd(parseHHMM(event.target.value))}
+          />
         </div>
-        <button
-          aria-label={workTimeLocked ? '解锁上下班时间设置' : '锁定上下班时间设置'}
-          className={`lock-toggle${workTimeLocked ? '' : ' lock-toggle--unlocked'}`}
-          title={
-            workTimeLocked
-              ? '已锁定：日历上的拖动虚线与上方两个输入框都已禁用，点击解锁'
-              : '已解锁：可拖动虚线、修改时间，点击重新锁定防止误改'
-          }
-          type="button"
-          onClick={() => setWorkTimeLocked((locked) => !locked)}
-        >
-          <span aria-hidden>{workTimeLocked ? '🔒' : '🔓'}</span>
-          <span className="lock-toggle__label">{workTimeLocked ? '锁定' : '解锁'}</span>
-        </button>
       </div>
       <div className="check-row">
         <label className="check">
