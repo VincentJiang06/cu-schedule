@@ -52,3 +52,22 @@ export function courseColor(subjectOrCode: string): CSSProperties {
     '--shade': `${subjectShade(subjectOrCode) * SHADE_STEP}%`,
   } as CSSProperties
 }
+
+/**
+ * The same subject tint resolved to concrete `hsl()` strings for canvas rendering.
+ * A `<canvas>` cannot read the `--hue`/`--shade`/`--sat`/… custom properties that
+ * the DOM blocks rely on, so this mirrors the **light theme** values from styles.css
+ * (`--sat: 38%`, `--fill-l: 93%`, `--edge-l: 54%`, `--text-l: 29%`) plus the same
+ * per-subject shade offset, keeping the exported PNG consistent with the on-screen
+ * light-mode timetable.
+ */
+export function subjectPaint(subjectOrCode: string): { fill: string; edge: string; text: string } {
+  const hue = subjectHue(subjectOrCode)
+  const shade = subjectShade(subjectOrCode) * SHADE_STEP
+  const sat = 38
+  return {
+    fill: `hsl(${hue} ${sat}% ${93 + shade}%)`,
+    edge: `hsl(${hue} ${sat}% ${54 + shade}%)`,
+    text: `hsl(${hue} ${sat}% ${29 + shade}%)`,
+  }
+}

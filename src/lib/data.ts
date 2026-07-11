@@ -33,6 +33,16 @@ function fetchManifest(): Promise<DataManifest> {
   return manifestPromise
 }
 
+/**
+ * The current data version — `manifest.generatedAt`, memoized via fetchManifest. Any
+ * module that fetches a static data file (e.g. programs.ts) appends it as `?v=` so a
+ * fresh build's URLs change and old cached responses are never reused. Shared entry
+ * point so callers reuse the single manifest round-trip instead of re-implementing it.
+ */
+export async function dataVersion(): Promise<string> {
+  return (await fetchManifest()).generatedAt
+}
+
 function toSection(raw: RawCourse['x'][number]): Section {
   const meetings = raw.m.map((meeting) => ({
     dayIndex: meeting.d,

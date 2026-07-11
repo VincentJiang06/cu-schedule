@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react'
-import { courseColor } from '../lib/color.ts'
-import { hhmm } from '../lib/time.ts'
+import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
 const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -59,12 +58,14 @@ function Column({
   floorHour,
   span,
   empty,
+  colorForCode,
 }: {
   blocks: Omit<Block, 'lane' | 'lanes'>[]
   variant: 'a' | 'b'
   floorHour: number
   span: number
   empty: boolean
+  colorForCode: (code: string) => CSSProperties
 }) {
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
   const laid = layOutDay(blocks)
@@ -73,29 +74,34 @@ function Column({
       {laid.length === 0 && !empty && <span className="tt2__free">空闲</span>}
       {laid.map((block) => {
         const width = 100 / block.lanes
+        // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课），卡片更高、留白更从容；
+        // 真实 end 仍用于排课/冲突/分道，这里只影响占位高度与时间标签。
+        const shownEnd = displayEndMinutes(block.end)
+        // #8 LEC 实心主色块；TUT/LAB 等同 hue 的浅色斜纹+虚线变体，一眼可分。
+        const isLec = block.component === 'LEC'
         return (
           <article
-            className="tt2__block"
+            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}`}
             key={block.key}
             style={
               {
-                ...courseColor(block.subject),
+                ...colorForCode(block.code),
                 top: `${pct(block.start)}%`,
-                height: `calc(${((block.end - block.start) / span) * 100}% - 3px)`,
+                height: `calc(${((shownEnd - block.start) / span) * 100}% - 3px)`,
                 left: `calc(${block.lane * width}% + 1px)`,
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
           >
-            <b>{block.code}</b>
-            <time>
-              {hhmm(block.start)}–{hhmm(block.end)}
-            </time>
-            <span className="tt2__block-meta">
-              {block.component}
-              {block.location ? ` · ${block.location}` : ''}
+            <span className="tt2__block-top">
+              <b className="tt2__block-comp">{block.component}</b>
+              <span className="tt2__block-code">{block.code}</span>
             </span>
+            <time className="tt2__block-time">
+              {hhmm(block.start)}–{hhmm(shownEnd)}
+              {block.location ? ` · ${block.location}` : ''}
+            </time>
           </article>
         )
       })}
@@ -107,10 +113,12 @@ export function TimetableCompare({
   planA,
   planB,
   emptyMessage,
+  colorForCode,
 }: {
   planA: Plan | null
   planB: Plan | null
   emptyMessage: string
+  colorForCode: (code: string) => CSSProperties
 }) {
   const rawA = blocksOf(planA)
   const rawB = blocksOf(planB)
@@ -127,7 +135,8 @@ export function TimetableCompare({
   const usesWeekend = all.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
   const start = Math.min(FLOOR, ...all.map((block) => block.start))
-  const end = Math.max(CEIL, ...all.map((block) => block.end))
+  // 用进位后的显示结束时间算网格下界，确保拉高后的卡片不会溢出底部。
+  const end = Math.max(CEIL, ...all.map((block) => displayEndMinutes(block.end)))
   const floorHour = Math.floor(start / 60)
   const ceilHour = Math.ceil(end / 60)
   const span = (ceilHour - floorHour) * 60
@@ -168,6 +177,7 @@ export function TimetableCompare({
             <div className="tt2__col" key={dayIndex}>
               <Column
                 blocks={rawA.filter((block) => block.dayIndex === dayIndex)}
+                colorForCode={colorForCode}
                 empty={false}
                 floorHour={floorHour}
                 span={span}
@@ -175,6 +185,7 @@ export function TimetableCompare({
               />
               <Column
                 blocks={rawB.filter((block) => block.dayIndex === dayIndex)}
+                colorForCode={colorForCode}
                 empty={!planB}
                 floorHour={floorHour}
                 span={span}

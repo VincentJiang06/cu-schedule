@@ -1,9 +1,10 @@
-import { useState } from 'react'
 import { courseColor } from '../lib/color.ts'
-import { parseCourseCodes } from '../lib/search.ts'
+import { courseKey } from '../lib/courseKey.ts'
 import type { Pins } from '../lib/schedule.ts'
 import { DAY_SHORT, hhmm } from '../lib/time.ts'
 import type { Course, Section } from '../lib/types.ts'
+
+const TERM_LABEL: Record<number, string> = { 1: '上学期', 2: '下学期' }
 
 function sectionTimes(section: Section): string {
   const timed = section.meetings
@@ -112,53 +113,44 @@ function CoursePicker({
 export function CommittedList({
   codes,
   byCode,
-  onAdd,
   onRemove,
   pins,
   onPin,
+  termOrdersByKey,
+  currentTermOrder,
+  emptyHint,
 }: {
   codes: string[]
   byCode: Map<string, Course>
-  onAdd: (code: string) => void
   onRemove: (code: string) => void
   /** When provided, components render as pinnable T01/T02-style chips (课表 page). */
   pins?: Pins
   onPin?: (code: string, component: string, sectionId: string) => void
+  /** courseKey → the term orders (1=上学期, 2=下学期) the course is offered in. */
+  termOrdersByKey: Map<string, number[]>
+  /** The term order the header is currently on; picked when a course spans both. */
+  currentTermOrder: number
+  /** Placeholder line when the list is empty. */
+  emptyHint?: string
 }) {
-  const [draft, setDraft] = useState('')
   const interactive = Boolean(onPin)
-
-  function commit(): void {
-    for (const code of parseCourseCodes(draft)) onAdd(code)
-    setDraft('')
-  }
 
   return (
     <div className="cl">
-      <input
-        className="cl__add"
-        placeholder="加课：输入课号回车，如 CSCI2100"
-        value={draft}
-        onChange={(event) => setDraft(event.target.value)}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter') {
-            event.preventDefault()
-            commit()
-          }
-        }}
-      />
-
       {codes.length === 0 ? (
-        <p className="cl__empty">还没有课程。在中间的课程网格点「标记为马上学」，或在上方输入课号。</p>
+        <p className="cl__empty">{emptyHint ?? '还没有课程。在中间的课程列表点「必定学」来添加。'}</p>
       ) : (
         <ul className="cl__rows">
           {codes.map((code) => {
-            const course = byCode.get(code)
+            const course = byCode.get(courseKey(code))
+            const orders = termOrdersByKey.get(courseKey(code)) ?? []
+            const badge = orders.includes(currentTermOrder) ? currentTermOrder : orders[0]
             return (
               <li className="cl-row" key={code} style={courseColor(code)}>
                 <div className="cl-row__head">
                   <span className="cl-row__code">{code}</span>
                   {course && <span className="cl-row__units">{course.units}学分</span>}
+                  {badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
                   <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
                     ×
                   </button>

@@ -9,12 +9,15 @@ export function SubjectPicker({
   onChange,
   variant = 'include',
   placeholder,
+  single = false,
 }: {
   subjects: SubjectInfo[]
   selected: string[]
   onChange: (codes: string[]) => void
   variant?: 'include' | 'exclude'
   placeholder?: string
+  /** Single-select mode (主修): holds one code, collapses to a chip once chosen. */
+  single?: boolean
 }) {
   const [draft, setDraft] = useState('')
   const [open, setOpen] = useState(false)
@@ -45,10 +48,34 @@ export function SubjectPicker({
   }, [draft, selected, subjects])
 
   function add(code: string): void {
-    onChange([...new Set([...selected, code])])
+    onChange(single ? [code] : [...new Set([...selected, code])])
     setDraft('')
     setActive(0)
-    inputRef.current?.focus()
+    if (single) setOpen(false)
+    else inputRef.current?.focus()
+  }
+
+  // Single-select: once a subject is chosen, collapse to a single clearable chip that
+  // shows only the four-letter code (with the subject name as a small caption).
+  if (single && selected.length > 0) {
+    const code = selected[0]
+    return (
+      <div className="sp sp--single">
+        <div className="sp__chips">
+          <button
+            className="sp__chip"
+            style={courseColor(code)}
+            title="点击清除主修"
+            type="button"
+            onClick={() => onChange([])}
+          >
+            {code}
+            <em>{subjectBlurb(code, titleByCode.get(code))}</em>
+            <i aria-hidden>×</i>
+          </button>
+        </div>
+      </div>
+    )
   }
 
   return (

@@ -10,71 +10,74 @@
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   --mono: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
 
-  --accent: 232;
-  --bg: #eef0f6;
+  /* Tool-first palette: muted accent, stronger borders, crisp (not floaty) surfaces.
+     Accent is fixed to red (the 玫红 hue); the runtime color picker was removed. */
+  --accent: 348;
+  --bg: #e7e9f0;
   --surface: #ffffff;
-  --surface-2: #f5f6fa;
-  --line: #dfe2ec;
-  --line-soft: #eaecf3;
-  --ink: #1d2333;
-  --ink-2: #4a5268;
-  --ink-3: #7d8598;
+  --surface-2: #eef1f7;
+  --line: #ccd2df;
+  --line-soft: #dde1eb;
+  --ink: #141a2b;
+  --ink-2: #3b445a;
+  --ink-3: #6c7488;
 
-  --brand: hsl(var(--accent) 84% 62%);
-  --brand-ink: hsl(var(--accent) 62% 48%);
-  --brand-wash: hsl(var(--accent) 84% 62% / 0.1);
+  --brand: hsl(var(--accent) 46% 52%);
+  --brand-ink: hsl(var(--accent) 48% 42%);
+  --brand-wash: hsl(var(--accent) 46% 52% / 0.12);
 
-  --ok: #10884f;
-  --ok-wash: #10884f1c;
-  --warn: #a96a05;
-  --warn-wash: #a96a051c;
-  --bad: #c93b45;
-  --bad-wash: #c93b451c;
-  --mute: #6b7385;
-  --mute-wash: #6b73851c;
+  --ok: #0f7d49;
+  --ok-wash: #0f7d491c;
+  --warn: #9c6104;
+  --warn-wash: #9c61041c;
+  --bad: #bf3540;
+  --bad-wash: #bf35401c;
+  --mute: #656d80;
+  --mute-wash: #656d801c;
 
-  --shadow: 0 1px 2px rgb(29 35 51 / 0.05), 0 8px 24px -12px rgb(29 35 51 / 0.18);
-  --radius: 14px;
+  --shadow: 0 1px 2px rgb(20 26 43 / 0.06), 0 3px 10px -6px rgb(20 26 43 / 0.16);
+  --radius: 10px;
 
-  /* course block tints; --shade is a per-subject offset set inline */
+  /* course block tints; --shade is a per-subject offset set inline.
+     Lower --sat + darker --text-l = muted fills with high-contrast labels. */
   --shade: 0%;
-  --sat: 62%;
-  --fill-l: 92%;
-  --edge-l: 62%;
-  --text-l: 32%;
+  --sat: 38%;
+  --fill-l: 93%;
+  --edge-l: 54%;
+  --text-l: 29%;
 
   color-scheme: light;
 }
 
 :root[data-theme='dark'] {
-  --bg: #0c0f18;
-  --surface: #151a27;
-  --surface-2: #1b2130;
-  --line: #2a3143;
-  --line-soft: #222939;
-  --ink: #e9ecf5;
-  --ink-2: #b3bacb;
-  --ink-3: #7e8698;
+  --bg: #0b0e16;
+  --surface: #141926;
+  --surface-2: #1a2030;
+  --line: #2e3648;
+  --line-soft: #242b3b;
+  --ink: #eceff6;
+  --ink-2: #b2bacc;
+  --ink-3: #7a8397;
 
-  --brand: hsl(var(--accent) 90% 72%);
-  --brand-ink: hsl(var(--accent) 90% 78%);
-  --brand-wash: hsl(var(--accent) 90% 72% / 0.16);
+  --brand: hsl(var(--accent) 52% 70%);
+  --brand-ink: hsl(var(--accent) 58% 76%);
+  --brand-wash: hsl(var(--accent) 52% 70% / 0.16);
 
-  --ok: #46c98a;
-  --ok-wash: #46c98a20;
-  --warn: #e0a63f;
-  --warn-wash: #e0a63f20;
-  --bad: #f0757e;
-  --bad-wash: #f0757e20;
-  --mute: #94a0b8;
-  --mute-wash: #94a0b820;
+  --ok: #3fc084;
+  --ok-wash: #3fc08420;
+  --warn: #d69f3c;
+  --warn-wash: #d69f3c20;
+  --bad: #ef6f79;
+  --bad-wash: #ef6f7920;
+  --mute: #8f9bb2;
+  --mute-wash: #8f9bb220;
 
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 12px 32px -14px rgb(0 0 0 / 0.7);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.34), 0 6px 18px -10px rgb(0 0 0 / 0.6);
 
-  --sat: 46%;
-  --fill-l: 26%;
-  --edge-l: 50%;
-  --text-l: 84%;
+  --sat: 32%;
+  --fill-l: 24%;
+  --edge-l: 52%;
+  --text-l: 82%;
 
   color-scheme: dark;
 }
@@ -201,35 +204,6 @@ select {
   gap: 10px;
 }
 
-.palette {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 7px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface);
-}
-
-.palette__dot {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  padding: 0;
-  cursor: pointer;
-  transition: transform 0.12s;
-}
-
-.palette__dot:hover {
-  transform: scale(1.15);
-}
-
-.palette__dot--on {
-  border-color: var(--ink);
-  box-shadow: 0 0 0 2px var(--surface) inset;
-}
-
 .ct__bar select {
   border: 1px solid var(--line);
   background: var(--surface);
@@ -242,6 +216,7 @@ select {
 
 .bar__nav {
   display: inline-flex;
+  flex-wrap: nowrap;
   gap: 2px;
   padding: 3px;
   border: 1px solid var(--line);
@@ -250,15 +225,24 @@ select {
 }
 
 .bar__nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   border: 0;
   background: transparent;
   color: var(--ink-3);
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 700;
-  padding: 6px 18px;
-  border-radius: 8px;
+  padding: 9px 20px;
+  border-radius: 9px;
   cursor: pointer;
+  white-space: nowrap;
   transition: color 0.12s, background 0.12s;
+}
+
+.bar__nav-icon {
+  display: inline-flex;
+  opacity: 0.85;
 }
 
 .bar__nav-item:hover {
@@ -268,6 +252,10 @@ select {
 .bar__nav-item--on {
   background: var(--brand);
   color: #fff;
+}
+
+.bar__nav-item--on .bar__nav-icon {
+  opacity: 1;
 }
 
 :root[data-theme='dark'] .bar__nav-item--on {
@@ -306,12 +294,159 @@ select {
   gap: 12px;
 }
 
+/* 选课 page is a fixed three-column layout: 搜索 on the left, the course catalog in
+   the middle, the current selection docked on the right. */
 .grid--select {
-  grid-template-columns: 264px minmax(0, 1fr) 292px;
+  grid-template-columns: 264px minmax(0, 1fr) 300px;
 }
 
+/* #4 左右对调：左窄栏（排课筛选 + 当前选择）在前，右宽栏（排法横条 + 大课表）在后。 */
 .grid--timetable {
-  grid-template-columns: minmax(0, 1fr) 320px;
+  grid-template-columns: 320px minmax(0, 1fr);
+}
+
+/* 导出 page is a single centered column that scrolls on its own. */
+.grid--export {
+  display: block;
+  overflow-y: auto;
+  padding: 2px;
+}
+
+/* 信息 page: two columns — 培养方案大课表 on the left, 我的情况 + 已完成课程 on the right,
+   each scrolling independently. */
+.grid--info {
+  grid-template-columns: minmax(0, 1fr) 340px;
+}
+
+/* ---- page transitions -------------------------------------------------- */
+
+/* <main> 外壳：平时是个 flex 容器，让唯一的 solo 页（.grid flex:1）撑满；切页时裁掉滑出画面外的层。
+   position:relative 让绝对定位的层与浮层都以它为参照。 */
+.viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+/* 动画进行中才裁剪，避免平时裁掉下拉菜单 / 气泡等溢出内容。 */
+.viewport--anim {
+  overflow: hidden;
+}
+
+/* 切页时两层都脱离文档流、绝对铺满 viewport 各自滑动；平时 solo 层走正常 flex 流填满。 */
+.viewport--anim .layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* 新页盖在旧页之上滑入。 */
+.layer--enter {
+  z-index: 2;
+}
+.layer--exit {
+  z-index: 1;
+}
+
+.viewport--anim .layer--enter,
+.viewport--anim .layer--exit {
+  animation-duration: 0.26s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.layer--enter.from-right {
+  animation-name: pageEnterFromRight;
+}
+.layer--enter.from-left {
+  animation-name: pageEnterFromLeft;
+}
+.layer--exit.to-left {
+  animation-name: pageExitToLeft;
+}
+.layer--exit.to-right {
+  animation-name: pageExitToRight;
+}
+
+@keyframes pageEnterFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes pageEnterFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes pageExitToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes pageExitToRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* 尊重「减少动态效果」：直接瞬切，不滑动。 */
+@media (prefers-reduced-motion: reduce) {
+  .viewport--anim .layer {
+    animation-duration: 0.01ms !important;
+  }
+}
+
+.page-center {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.page-center--export {
+  max-width: 880px;
+}
+
+/* Muted one-liner explaining what the 信息 page fields are for. */
+.info-note {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* Small muted caption under a card title (小结 / 说明). */
+.card__sub {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* 导出 page: the three export options sit in a wrapping grid. */
+.export-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.export-card {
+  gap: 8px;
+}
+
+.export-card .export-btn {
+  margin-top: auto;
 }
 
 .side {
@@ -351,13 +486,6 @@ select {
   color: var(--ink-3);
 }
 
-/* Second heading inside a combined card (下学期课表 + 已完成课程). */
-.card__title--divider {
-  margin-top: 4px;
-  padding-top: 12px;
-  border-top: 1px solid var(--line);
-}
-
 .card__warn {
   margin: 0;
   font-size: 12px;
@@ -378,6 +506,24 @@ select {
 .card--problem b {
   color: var(--ink);
   font-family: var(--mono);
+}
+
+/* Non-blocking notice: a committed course was auto-removed because a mutually
+   exclusive course is now marked completed. Informational, never an error. */
+.auto-removed {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--warn);
+  background: var(--warn-wash);
+  border: 1px solid color-mix(in srgb, var(--warn) 35%, transparent);
+  border-radius: 9px;
+  padding: 8px 11px;
+}
+
+.auto-removed b {
+  font-family: var(--mono);
+  color: var(--ink);
 }
 
 .reset {
@@ -568,14 +714,6 @@ select {
   padding: 13px 14px;
 }
 
-.stage__head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.stage__head h2,
 .pane__title {
   margin: 0;
   font-size: 13px;
@@ -623,7 +761,7 @@ select {
   color: var(--ink-3);
 }
 
-/* ---- committed list (下学期课表, one course per row) ---------------------- */
+/* ---- committed list (当前选择课程, one course per row) --------------------- */
 
 .cl {
   flex: 1;
@@ -631,20 +769,6 @@ select {
   display: flex;
   flex-direction: column;
   gap: 9px;
-}
-
-.cl__add {
-  border: 1.5px solid var(--line);
-  border-radius: 9px;
-  background: var(--surface-2);
-  padding: 8px 11px;
-  font-size: 13px;
-  outline: 0;
-}
-
-.cl__add:focus {
-  border-color: var(--brand);
-  background: var(--surface);
 }
 
 .cl__empty {
@@ -692,6 +816,16 @@ select {
   font-size: 11.5px;
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
+}
+
+.cl-row__term {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 999px;
+  background: var(--mute-wash);
+  color: var(--mute);
+  white-space: nowrap;
 }
 
 .cl-row__x {
@@ -829,6 +963,59 @@ select {
 .profile-row select:focus {
   border-color: var(--brand);
   background: var(--surface);
+}
+
+/* 我的情况:入学年份、主修各占一整排。 */
+.profile-row--stack {
+  flex-direction: column;
+}
+
+/* 入学年份 select + 刷新按钮同一行。 */
+.profile-year__row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.profile-year__row select {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+
+.profile-refresh {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 17px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.profile-refresh:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.profile-refresh:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.profile-refresh--busy {
+  animation: profile-spin 0.8s linear infinite;
+}
+
+@keyframes profile-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .plans {
@@ -997,6 +1184,100 @@ select {
   font-size: 13px;
 }
 
+/* ---- #7 排法横条 (plan strip: 横向滚动的所有排法, 各自选为 A / B) ------------ */
+
+/* 扁平横排：每张小卡一行高——左侧 排法N · 天数 · 学分，右侧两个方形 A / B 按钮。 */
+.plan-strip__rail {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.plan-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-2);
+  padding: 4px 5px 4px 10px;
+}
+
+.plan-card--a {
+  border-color: hsl(var(--accent) 62% 52%);
+  background: color-mix(in srgb, hsl(var(--accent) 62% 52%) 8%, var(--surface));
+}
+
+.plan-card--b {
+  border-color: hsl(var(--accent) 20% 46%);
+}
+
+.plan-card--a.plan-card--b {
+  border-color: hsl(var(--accent) 62% 52%);
+}
+
+.plan-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  white-space: nowrap;
+}
+
+.plan-card__name {
+  font-size: 12.5px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.plan-card__meta {
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-card__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.plan-card__pick {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--ink-2);
+  border-radius: 7px;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.plan-card__pick--a.plan-card__pick--on {
+  color: #fff;
+  background: hsl(var(--accent) 62% 52%);
+  border-color: hsl(var(--accent) 62% 52%);
+}
+
+.plan-card__pick--b.plan-card__pick--on {
+  color: #fff;
+  background: hsl(var(--accent) 20% 46%);
+  border-color: hsl(var(--accent) 20% 46%);
+}
+
+.plan-card__pick:hover:not(.plan-card__pick--on) {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
 /* ---- A/B comparison timetable (课表对比, larger type) --------------------- */
 
 .ab-legend {
@@ -1011,6 +1292,23 @@ select {
   gap: 6px;
   font-size: 13px;
   color: var(--ink-2);
+}
+
+/* 紧凑下拉（复用 .profile-row select 外观），用于 A / B 排法选择器与同类工具位。 */
+.mini-select {
+  border: 1.5px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--ink);
+  outline: 0;
+  cursor: pointer;
+}
+
+.mini-select:focus {
+  border-color: var(--brand);
+  background: var(--surface);
 }
 
 .tt2__tag {
@@ -1040,18 +1338,26 @@ select {
   grid-template-columns: 50px minmax(0, 1fr);
   grid-template-rows: auto minmax(0, 1fr);
   column-gap: 6px;
-  row-gap: 8px;
+  /* header band and body grid connect into one table (shared borders, no seam) */
+  row-gap: 0;
 }
 
 .tt2--empty {
   display: grid;
+  /* Reset .tt2's 50px + 1fr timetable columns — without this the message lands in the
+     narrow 50px axis column and wraps to one vertical character per line. */
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   place-items: center;
+  padding: 24px;
   border: 1px dashed var(--line);
   border-radius: 12px;
 }
 
 .tt2--empty p {
   margin: 0;
+  max-width: 32ch;
+  text-align: center;
   color: var(--ink-3);
   font-size: 15px;
 }
@@ -1066,7 +1372,10 @@ select {
   grid-row: 1;
   display: grid;
   grid-template-columns: repeat(var(--tt-days), minmax(0, 1fr));
-  gap: 6px;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
 }
 
 .tt2__day-name {
@@ -1076,7 +1385,11 @@ select {
   color: var(--ink-1);
   padding: 6px 0 5px;
   background: var(--surface-2);
-  border-radius: 8px;
+  border-right: 1px solid var(--line);
+}
+
+.tt2__day-name:last-child {
+  border-right: none;
 }
 
 .tt2__ab-labels {
@@ -1110,19 +1423,26 @@ select {
   font-variant-numeric: tabular-nums;
 }
 
+/* A real gridded table: bordered box, day-column dividers, an A|B split per day, and
+   clear hour lines — so the timetable reads as cells, not floating blocks. */
 .tt2__body {
   grid-column: 2;
   grid-row: 2;
   position: relative;
   display: grid;
   grid-template-columns: repeat(var(--tt-days), minmax(0, 1fr));
-  gap: 6px;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
 }
 
+/* Hour lines span the whole grid — clearly visible, but below the blocks. */
 .tt2__rule {
   position: absolute;
   inset-inline: 0;
-  border-top: 1px solid var(--line-soft);
+  border-top: 1px solid color-mix(in srgb, var(--line) 62%, transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -1131,25 +1451,32 @@ select {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2px;
-  border-radius: 10px;
-  background: color-mix(in srgb, var(--surface-2) 55%, transparent);
-  outline: 1px solid var(--line-soft);
-  outline-offset: -1px;
+  gap: 0;
+  background: transparent;
+  border-right: 1px solid var(--line);
+}
+
+.tt2__col:last-child {
+  border-right: none;
 }
 
 .tt2__sub {
   position: relative;
 }
 
+/* #9 A 子列 = 白（浅主题）/ --surface（深主题）；B 子列 = 略灰一档，便于区分两套排法。 */
 .tt2__sub--a {
-  background: color-mix(in srgb, hsl(var(--accent) 55% 50%) 6%, transparent);
-  border-radius: 8px 0 0 8px;
+  background: var(--surface);
+  /* the A|B divider inside each day column */
+  border-right: 1px dashed color-mix(in srgb, var(--line) 75%, transparent);
 }
 
 .tt2__sub--b {
-  background: color-mix(in srgb, var(--ink-3) 6%, transparent);
-  border-radius: 0 8px 8px 0;
+  background: #f4f5f8;
+}
+
+:root[data-theme='dark'] .tt2__sub--b {
+  background: var(--surface-2);
 }
 
 .tt2__free {
@@ -1166,44 +1493,90 @@ select {
   position: absolute;
   z-index: 1;
   overflow: hidden;
-  border-radius: 7px;
-  padding: 5px 6px;
+  border-radius: 6px;
+  /* tight padding so a 45-min slot still fits 课号 + LEC/TUT + 时间 */
+  padding: 3px 5px;
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
-  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  gap: 1px;
+  line-height: 1.2;
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
 }
 
-.tt2__block b {
+/* #8 LEC = 实心、更饱和的主色块（该课 hue）。 */
+.tt2__block--lec {
+  background: hsl(var(--hue) calc(var(--sat) + 16%) calc(var(--fill-l) + var(--shade) - 3%));
+  border: 1px solid hsl(var(--hue) calc(var(--sat) + 16%) calc(var(--edge-l) + var(--shade)));
+  border-left: 4px solid hsl(var(--hue) calc(var(--sat) + 22%) calc(var(--edge-l) + var(--shade) - 4%));
+}
+
+/* #8 TUT/LAB = 同 hue 的浅色斜纹 + 虚线描边变体，与实心 LEC 一眼可分。 */
+.tt2__block--alt {
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent 0 5px,
+      hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.2) 5px 10px
+    ),
+    hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade) + 3%));
+  border: 1.5px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  border-left: 4px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+}
+
+/* 第一行：component 角标 + 课号 —— 45 分钟块内也必须完整可读，最优先保留、不换行不收缩。 */
+.tt2__block-top {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  flex: none;
+}
+
+.tt2__block-comp {
+  flex: none;
+  font-size: 9.5px;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  line-height: 1.35;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* LEC 角标：实心填充、白字，醒目。 */
+.tt2__block--lec .tt2__block-comp {
+  color: #fff;
+  background: hsl(var(--hue) calc(var(--sat) + 26%) calc(var(--edge-l) + var(--shade) - 6%));
+}
+
+/* TUT/LAB 角标：虚线描边、透明底，与实心 LEC 角标区分。 */
+.tt2__block--alt .tt2__block-comp {
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  background: transparent;
+  border: 1.5px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  padding: 0 4px;
+}
+
+.tt2__block-code {
   font-family: var(--mono);
-  font-size: 13px;
+  font-size: 12px;
+  font-weight: 750;
   letter-spacing: -0.02em;
   white-space: nowrap;
-}
-
-.tt2__block time {
-  font-size: 12px;
-  font-variant-numeric: tabular-nums;
-  opacity: 0.85;
-}
-
-.tt2__block-meta {
-  font-size: 11px;
-  opacity: 0.72;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* 第二行：时间（· 地点，可省略）—— 单行、超出省略，绝不挤出第三行。 */
+.tt2__block-time {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* ---- export card ---------------------------------------------------------- */
-
-.export-row {
-  display: flex;
-  gap: 7px;
-}
 
 .export-btn {
   flex: 1;
@@ -1427,27 +1800,6 @@ select {
   color: var(--mute);
 }
 
-.prereq-tag {
-  margin-left: 6px;
-  font-style: normal;
-  font-size: 10px;
-  font-weight: 700;
-  padding: 1px 5px;
-  border-radius: 999px;
-  cursor: help;
-  vertical-align: middle;
-}
-
-.prereq-tag--missing {
-  background: var(--bad-wash);
-  color: var(--bad);
-}
-
-.prereq-tag--maybe {
-  background: var(--mute-wash);
-  color: var(--mute);
-}
-
 .ct__slots {
   display: flex;
   flex-wrap: wrap;
@@ -1594,6 +1946,114 @@ select {
   cursor: pointer;
 }
 
+/* ---- search card (选课 page, left column, fields stacked) ------------------ */
+
+.search-card .seg {
+  flex-wrap: wrap;
+}
+
+.check-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+/* ---- filter block (课程范围 / 时间约束·可选性 并列分区) --------------------- */
+
+.filter-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--line-soft);
+  border-radius: 10px;
+  background: var(--surface-2);
+}
+
+.filter-block__title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+}
+
+/* ---- slide switch (iOS-style toggle, reused across filter blocks) ----------- */
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  user-select: none;
+}
+
+.switch input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.switch__track {
+  position: relative;
+  flex: none;
+  box-sizing: border-box;
+  width: 34px;
+  height: 20px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.switch__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--ink-3);
+  transition: transform 0.15s, background 0.15s;
+}
+
+.switch:hover .switch__track {
+  border-color: var(--brand);
+}
+
+.switch input:checked + .switch__track {
+  background: var(--brand);
+  border-color: var(--brand);
+}
+
+.switch input:checked + .switch__track .switch__thumb {
+  transform: translateX(14px);
+  background: #fff;
+}
+
+.switch input:focus-visible + .switch__track {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.switch__label {
+  flex: 1;
+}
+
+.switch--disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.switch--disabled:hover .switch__track {
+  border-color: var(--line);
+}
+
 /* ---- subject picker -------------------------------------------------------- */
 
 .sp {
@@ -1701,6 +2161,86 @@ select {
 .sp__option span {
   font-size: 12.5px;
   color: var(--ink-2);
+}
+
+/* ---- program (major) picker ------------------------------------------------ */
+
+.pp {
+  position: relative;
+}
+
+.pp__chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--brand-wash);
+  padding: 6px 26px 6px 10px;
+  position: relative;
+}
+
+.pp__chip b {
+  font-size: 13px;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.pp__chip em {
+  font-style: normal;
+  font-size: 11px;
+  color: var(--ink-2);
+}
+
+.pp__chip i {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  font-style: normal;
+  opacity: 0.6;
+}
+
+.pp__menu {
+  /* reuses .sp__menu positioning/box; only the option layout differs */
+}
+
+.pp__option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  border-radius: 8px;
+  padding: 7px 9px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.pp__option--active {
+  background: var(--brand-wash);
+}
+
+.pp__option b {
+  font-size: 12.5px;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+.pp__option span {
+  font-size: 11.5px;
+  color: var(--ink-2);
+}
+
+.seg__btn:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
 }
 
 /* ---- search results (subject ladder with status) --------------------------- */
@@ -1875,16 +2415,21 @@ select {
   border: 0;
   background: transparent;
   color: var(--ink-3);
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 650;
-  padding: 6px 13px;
+  padding: 6px 10px;
   border-radius: 7px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .seg__btn--on {
-  background: var(--brand-wash);
-  color: var(--brand-ink);
+  background: var(--brand);
+  color: #fff;
+}
+
+:root[data-theme='dark'] .seg__btn--on {
+  color: #0b0e16;
 }
 
 .sp--exclude .sp__field:focus {
@@ -1956,7 +2501,8 @@ select {
   border-radius: 10px;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  /* accent bar on the right edge (matches the 信息 page tiles) */
+  border-right: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
 }
 
 .cc--committed {
@@ -1966,6 +2512,14 @@ select {
 
 .cc--taken {
   opacity: 0.66;
+}
+
+/* Unselectable card: mutually-exclusive course taken / hard time conflict / TBA.
+   Desaturated and dimmed so it reads as "can't pick this" at a glance, but stays
+   visible (not hidden) and its 已完成 button stays usable. */
+.cc--blocked {
+  opacity: 0.62;
+  filter: saturate(0.55);
 }
 
 .cc__head {
@@ -1982,48 +2536,445 @@ select {
 }
 
 .cc__units {
+  font-family: var(--mono);
   font-size: 11px;
-  color: var(--ink-3);
+  font-weight: 600;
+  color: var(--ink-2);
   font-variant-numeric: tabular-nums;
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
+/* Top-right status tags (缺先修 / 看先修 / 时间冲突 / 待定 / 需换排法 / 已修替代课):
+   a plain rounded-rectangle chip with a wash background. */
+.cc__tags {
   margin-left: auto;
+  display: flex;
+  gap: 4px;
   flex-shrink: 0;
 }
 
-.dot--open { background: var(--ok); }
-.dot--rearrange { background: var(--warn); }
-.dot--conflict { background: var(--bad); }
-.dot--tba { background: var(--mute); }
+.cc__tag {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 1px 7px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.cc__tag--bad {
+  background: var(--bad-wash);
+  color: var(--bad);
+}
+
+.cc__tag--warn {
+  background: var(--warn-wash);
+  color: var(--warn);
+}
+
+.cc__tag--mute {
+  background: var(--mute-wash);
+  color: var(--mute);
+}
+
+/* Classification row under the 8-char code: 必修 / 选修 / 自由选修 + the requirement-tree
+   section the course sits under (mirrors the 信息 page grouping). Bilingual — Chinese with
+   the English original riding along in small text. Laid out as plain body text (no chip) on
+   a per-kind background wash for the whole row, kept to a single line — a long stream name
+   truncates with an ellipsis. */
+.cc__class {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  min-width: 0;
+  padding: 2px 7px;
+  border-radius: 5px;
+  font-size: 10.5px;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cc__class-kind {
+  flex-shrink: 0;
+  font-weight: 800;
+}
+
+.cc__class-kind em,
+.cc__class-sec em {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 9.5px;
+  opacity: 0.72;
+  margin-left: 3px;
+}
+
+.cc__class-sec {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--ink-2);
+}
+
+.cc__class--required {
+  background: var(--brand-wash);
+}
+
+.cc__class--required .cc__class-kind {
+  color: var(--brand-ink);
+}
+
+.cc__class--elective {
+  background: var(--ok-wash);
+}
+
+.cc__class--elective .cc__class-kind {
+  color: var(--ok);
+}
+
+.cc__class--free {
+  background: var(--mute-wash);
+}
+
+.cc__class--free .cc__class-kind {
+  color: var(--mute);
+}
 
 .cc__title {
   font-size: 12px;
   color: var(--ink-2);
   line-height: 1.3;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
+  white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* The clickable info region of a card (code/units/title) opens the detail popup;
+   the action buttons below sit outside it, so they don't trigger it. */
+.cc__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.cc__info:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---- course detail popup (in-page modal) --------------------------------- */
+
+.cmodal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  /* No blur — just a whisper of dimming; the modal's own shadow does the separating. */
+  background: rgb(0 0 0 / 0.05);
+}
+
+.cmodal {
+  position: relative;
+  width: min(460px, 100%);
+  max-height: min(80vh, 720px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 24px 60px -20px rgb(10 14 22 / 0.6);
+  overflow: hidden;
+}
+
+.cmodal__x {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  z-index: 1;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: rgb(255 255 255 / 0.2);
+  color: currentColor;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cmodal__x:hover {
+  background: rgb(255 255 255 / 0.35);
+}
+
+.cmodal__head {
+  padding: 16px 18px 14px;
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
+  border-bottom: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+}
+
+.cmodal__code {
+  font-family: var(--mono);
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+}
+
+.cmodal__title {
+  margin-top: 2px;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.cmodal__meta {
+  margin-top: 5px;
+  font-size: 12px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* The course's standing in the chosen programme, shown in the popup head. */
+.cmodal__standing {
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+}
+
+.cmodal__standing-kind {
+  flex-shrink: 0;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+.cmodal__standing-kind em {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  opacity: 0.72;
+  margin-left: 4px;
+}
+
+.cmodal__standing-sec {
+  color: var(--ink-2);
+}
+
+.cmodal__standing--required .cmodal__standing-kind {
+  background: var(--brand-wash);
+  color: var(--brand-ink);
+}
+
+.cmodal__standing--elective .cmodal__standing-kind {
+  background: var(--ok-wash);
+  color: var(--ok);
+}
+
+.cmodal__standing--free .cmodal__standing-kind {
+  background: var(--mute-wash);
+  color: var(--mute);
+}
+
+.cmodal__body {
+  padding: 14px 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cmodal__sec-title {
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+
+.cmodal__line {
+  margin: 0 0 5px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-1);
+}
+
+.cmodal__line b {
+  display: inline-block;
+  min-width: 34px;
+  margin-right: 8px;
+  color: var(--brand-ink);
+  font-weight: 700;
+}
+
+.cmodal__comp {
+  margin-bottom: 10px;
+}
+
+.cmodal__comp-name {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 750;
+  color: var(--ink-2);
+  margin-bottom: 3px;
+}
+
+.cmodal__sections {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cmodal__section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 8px;
+  font-size: 12.5px;
+  padding: 3px 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.cmodal__section-label {
+  font-family: var(--mono);
+  font-weight: 700;
+  color: var(--ink-2);
+  min-width: 40px;
+}
+
+.cmodal__section-time {
+  color: var(--ink-1);
+  font-variant-numeric: tabular-nums;
+}
+
+.cmodal__section-inst,
+.cmodal__section-status {
+  font-size: 11.5px;
+  color: var(--ink-3);
+}
+
+.cmodal__empty {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+.cmodal__foot {
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+/* Row of 已学完 / 可能学 / 必定学 actions inside the popup footer, above the Google button. */
+.cmodal__acts {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cmodal__act {
+  flex: 1;
+  padding: 9px 8px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface);
+  color: var(--ink-1);
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.12s, border-color 0.12s, background 0.12s;
+}
+
+.cmodal__act--done:hover {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.cmodal__act--maybe:hover {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.cmodal__act--soon:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.cmodal__act--done.is-on {
+  background: var(--warn-wash);
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+.cmodal__act--maybe.is-on {
+  background: var(--ok-wash);
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.cmodal__act--soon.is-on {
+  background: var(--brand-wash);
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.cmodal__act:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cmodal__act--soon:disabled:hover {
+  border-color: var(--line);
+  color: var(--ink-1);
+  background: var(--surface);
+}
+
+.cmodal__google {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink-1);
+  font-size: 13.5px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.cmodal__google:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
 }
 
 .cc__acts {
   display: flex;
-  gap: 5px;
+  gap: 4px;
   margin-top: auto;
 }
 
 .cc__btn {
   flex: 1;
+  min-width: 0;
   border: 1px solid var(--line);
   background: var(--surface-2);
   color: var(--ink-2);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 5px 4px;
+  padding: 5px 3px;
   border-radius: 7px;
   cursor: pointer;
   white-space: nowrap;
@@ -2033,6 +2984,11 @@ select {
 .cc__btn--done:hover {
   border-color: var(--warn);
   color: var(--warn);
+}
+
+.cc__btn--maybe:hover {
+  border-color: var(--ok);
+  color: var(--ok);
 }
 
 .cc__btn--soon:hover {
@@ -2046,10 +3002,370 @@ select {
   color: var(--warn);
 }
 
+.cc__btn--maybe.cc__btn--on {
+  background: var(--ok-wash);
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
 .cc__btn--soon.cc__btn--on {
   background: var(--brand-wash);
   border-color: var(--brand);
   color: var(--brand-ink);
+}
+
+/* Disabled 必定学 on an unselectable card — inert, no hover affordance. */
+.cc__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cc__btn--soon:disabled:hover {
+  border-color: var(--line);
+  color: var(--ink-2);
+  background: var(--surface-2);
+}
+
+/* ---- 信息页:培养方案大课表 (ProgramTable) ---------------------------------- */
+
+/* Left pane on the 信息 page: a big card whose inner list scrolls on its own. */
+.prog-pane {
+  min-height: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 13px 14px;
+}
+
+.pg {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pg--empty {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ink-3);
+  padding: 40px 16px;
+}
+
+.pg__head {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pg__head b {
+  font-size: 15px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.pg__head span {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+.pg__scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* 忠实结构树的一个「区块」。顶层项为大区(pg__scroll 的 gap 负责区间留白),
+   子区(pg-section--sub)以左边框 + 缩进表达层级。 */
+.pg-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pg-section--sub {
+  gap: 6px;
+  padding-left: 10px;
+  border-left: 2px solid var(--line);
+}
+
+/* 「专业方向 · Concentration Area」可选段:整块以品牌色底纹 + 左描边标示,
+   让用户一眼看出这是可选的专业方向分区,内部方向子区照常递归渲染。 */
+.pg-section--concentration {
+  background: var(--brand-wash);
+  border-left: 3px solid hsl(var(--accent) 46% 52% / 0.55);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+/* 「选修方向 · Streams」段:与 Concentration 共用可选段底纹,左描边换用中性色
+   以便与专业方向段作细微区分,内部方向子区照常递归渲染。 */
+.pg-section--stream {
+  border-left-color: hsl(var(--accent) 20% 55% / 0.5);
+}
+
+/* 小徽章:紧跟区块标题,标注该段为「可选方向」/「选修方向」。 */
+.pg-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--ink-2);
+  background: var(--mute-wash);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 8px;
+  letter-spacing: 0.02em;
+}
+
+/* Streams 段徽章:淡品牌色描边,与专业方向徽章区分。 */
+.pg-badge--stream {
+  color: hsl(var(--accent) 46% 42%);
+  border-color: hsl(var(--accent) 46% 52% / 0.4);
+}
+
+.pg-section__head {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 5px 8px;
+}
+
+.pg-section__marker {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.pg-section__title {
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.pg-section--sub .pg-section__title {
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.pg-section__en {
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--ink-3);
+}
+
+.pg-section__units {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.pg-section__children {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pg-note {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  line-height: 1.35;
+}
+
+.pg-note__en {
+  font-style: normal;
+  margin-left: 6px;
+  opacity: 0.72;
+}
+
+.pg-bulk {
+  margin-left: auto;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 9px;
+  border-radius: 7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.pg-bulk:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.pg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 7px;
+}
+
+.pg-course {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: left;
+  /* room on the right for the vertical accent bar */
+  padding: 7px 12px 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
+  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease, transform 0.1s ease;
+}
+
+/* Vertical accent bar down the right edge (replaces the old left bar / corner notch). */
+.pg-course::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px;
+  background: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  transition: background 0.14s ease;
+}
+
+.pg-course:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.98);
+}
+
+/* Done = the whole tile floods with the subject's strong color. */
+.pg-course--done {
+  background: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  border-color: transparent;
+  color: #fff;
+}
+
+:root[data-theme='dark'] .pg-course--done {
+  color: #0d1016;
+}
+
+/* Done tile is one uniform block — the accent notch blends into the flooded fill
+   rather than flipping to a contrasting bar. */
+.pg-course--done::after {
+  background: transparent;
+}
+
+.pg-course__code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+.pg-course__alt {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10.5px;
+  color: var(--ink-3);
+  margin-left: 3px;
+}
+
+.pg-course__units {
+  font-size: 10.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.pg-course__title {
+  font-size: 11px;
+  color: var(--ink-2);
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* On a flooded (done) tile, all text rides the tile's light/dark text color. */
+.pg-course--done .pg-course__code,
+.pg-course--done .pg-course__title {
+  color: inherit;
+}
+
+.pg-course--done .pg-course__alt,
+.pg-course--done .pg-course__units {
+  color: inherit;
+  opacity: 0.78;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-course,
+  .pg-course::after {
+    transition: none;
+  }
+  .pg-course:hover {
+    transform: none;
+  }
+}
+
+/* ---- 信息页:已完成课程网格 (takenCard) ------------------------------------ */
+
+.taken-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.taken-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
+  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+}
+
+.taken-cell:hover {
+  filter: brightness(0.96);
+}
+
+.taken-cell__code {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.taken-cell__units {
+  font-size: 10.5px;
+  opacity: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
+.taken-cell i {
+  margin-left: auto;
+  font-style: normal;
+  opacity: 0.55;
 }
 
 /* ---- narrow screens --------------------------------------------------------- */
@@ -2067,12 +3383,37 @@ select {
     grid-template-rows: auto auto;
   }
 
+  /* 窄屏（整页竖排、随页面滚动）不做滑动动画：viewport 退回透明壳，切页即瞬切，
+     只留目标页正常竖排，避免绝对定位的层在无固定高度下塌成 0。 */
+  .viewport {
+    display: block;
+    flex: none;
+  }
+
+  .viewport--anim {
+    overflow: visible;
+  }
+
+  .viewport--anim .layer {
+    position: static;
+    animation: none !important;
+    will-change: auto;
+  }
+
+  .layer--exit {
+    display: none;
+  }
+
   .side {
     overflow: visible;
   }
 
   .stage {
     height: 68vh;
+  }
+
+  .prog-pane {
+    height: 72vh;
   }
 
   .table-pane {
