@@ -24,7 +24,7 @@ import { SubjectPicker } from './components/SubjectPicker.tsx'
 import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
 import { copyText } from './lib/clipboard.ts'
-import { courseColor, huePaint } from './lib/color.ts'
+import { courseColor, huePaint, type PaintTheme } from './lib/color.ts'
 import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
 import { downloadBlob } from './lib/exportImage.ts'
@@ -963,10 +963,12 @@ export default function App() {
       }) as CSSProperties,
     [slotForCode],
   )
-  // 导出 PNG/PDF/壁纸 用的画布配色:同一槽位映射解析成具体 hsl() 串(浅色主题基准),
-  // 使导出图与屏幕上的大课表颜色一致(#1)。
+  // 导出 PNG/PDF/壁纸 用的画布配色:同一槽位映射解析成具体 hsl() 串,使导出图与屏幕上
+  // 的大课表颜色一致(#1)。theme 可选(默认浅色)——#里程碑2:PDF 一次导出明暗两页，
+  // 深色那页要解出深色主题的色阶，不能整页都用浅色课块糊在深底上。
   const paintForCode = useCallback(
-    (code: string) => huePaint(TIMETABLE_PALETTE[slotForCode(code) % TIMETABLE_PALETTE.length]),
+    (code: string, theme?: PaintTheme) =>
+      huePaint(TIMETABLE_PALETTE[slotForCode(code) % TIMETABLE_PALETTE.length], 0, theme),
     [slotForCode],
   )
 
@@ -1046,8 +1048,8 @@ export default function App() {
       format,
       plan: selectedExportPlan,
       termName: term?.name ?? '',
-      // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射,浅色主题解析)。
-      paint: (code) => paintForCode(code),
+      // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射);theme 透传给 PDF 的明暗两页。
+      paint: (code, _subject, theme) => paintForCode(code, theme),
     })
     setExportNote(result.ok ? result.note : result.reason)
   }

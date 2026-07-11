@@ -56,28 +56,34 @@ export function courseColor(subjectOrCode: string): CSSProperties {
 /** Concrete hsl() strings for canvas rendering (fill / edge / text of one block). */
 export type CanvasPaint = { fill: string; edge: string; text: string }
 
+/** Which on-screen theme a canvas paint should mirror — a `<canvas>` can't read
+ * `:root[data-theme]`, so every canvas/HTML exporter that wants theme-correct
+ * blocks has to pick light or dark explicitly and pass it through. */
+export type PaintTheme = 'light' | 'dark'
+
 /**
- * Resolve one hue (+ optional shade offset) into the light-theme block tint used by
- * the canvas exporters — mirrors styles.css light values (`--sat: 38%`,
- * `--fill-l: 93%`, `--edge-l: 54%`, `--text-l: 29%`). Shared by subjectPaint (subject
- * hash colors) and the timetable-palette painter App builds for exports, so the
- * exported PNG/PDF/壁纸 carries exactly the on-screen timetable colors.
+ * Resolve one hue (+ optional shade offset) into the block tint used by the canvas
+ * exporters — mirrors styles.css's light values (`--sat: 38%`, `--fill-l: 93%`,
+ * `--edge-l: 54%`, `--text-l: 29%`) and dark values (`--sat: 32%`, `--fill-l: 24%`,
+ * `--edge-l: 52%`, `--text-l: 82%`) exactly (#里程碑2:PDF 一次导出明暗两页，两页的
+ * 课块颜色都要跟屏幕上对应主题下的课表一致). Shared by subjectPaint (subject hash
+ * colors) and the timetable-palette painter App builds for exports.
  */
-export function huePaint(hue: number, shade = 0): CanvasPaint {
-  const sat = 38
+export function huePaint(hue: number, shade = 0, theme: PaintTheme = 'light'): CanvasPaint {
+  const [sat, fillL, edgeL, textL] = theme === 'dark' ? [32, 24, 52, 82] : [38, 93, 54, 29]
   return {
-    fill: `hsl(${hue} ${sat}% ${93 + shade}%)`,
-    edge: `hsl(${hue} ${sat}% ${54 + shade}%)`,
-    text: `hsl(${hue} ${sat}% ${29 + shade}%)`,
+    fill: `hsl(${hue} ${sat}% ${fillL + shade}%)`,
+    edge: `hsl(${hue} ${sat}% ${edgeL + shade}%)`,
+    text: `hsl(${hue} ${sat}% ${textL + shade}%)`,
   }
 }
 
 /**
  * The same subject tint resolved to concrete `hsl()` strings for canvas rendering.
  * A `<canvas>` cannot read the `--hue`/`--shade`/`--sat`/… custom properties that
- * the DOM blocks rely on, so this mirrors the **light theme** values from styles.css
- * plus the same per-subject shade offset (see huePaint).
+ * the DOM blocks rely on, so this mirrors styles.css's light/dark values (theme
+ * defaults to light) plus the same per-subject shade offset (see huePaint).
  */
-export function subjectPaint(subjectOrCode: string): CanvasPaint {
-  return huePaint(subjectHue(subjectOrCode), subjectShade(subjectOrCode) * SHADE_STEP)
+export function subjectPaint(subjectOrCode: string, theme: PaintTheme = 'light'): CanvasPaint {
+  return huePaint(subjectHue(subjectOrCode), subjectShade(subjectOrCode) * SHADE_STEP, theme)
 }

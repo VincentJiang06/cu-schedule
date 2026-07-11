@@ -1,11 +1,13 @@
-import { subjectPaint, type CanvasPaint } from './color.ts'
+import { subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
 
 /** Resolve a block's canvas tint. Defaults to the subject-hash colors; App passes the
- * timetable-palette painter so exports carry exactly the on-screen timetable colors. */
-export type PaintFn = (code: string, subject: string) => CanvasPaint
-const defaultPaint: PaintFn = (_code, subject) => subjectPaint(subject)
+ * timetable-palette painter so exports carry exactly the on-screen timetable colors.
+ * #里程碑2:theme 是可选的第三参——PDF 一次导出明暗两页，同一个 paint 函数要能按页
+ * 主题解出对应色阶(不传 = 'light'，向后兼容旧调用点)。 */
+export type PaintFn = (code: string, subject: string, theme?: PaintTheme) => CanvasPaint
+const defaultPaint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme)
 
 /**
  * Hand-drawn PNG export of a single timetable (排法). No html2canvas or any
@@ -83,7 +85,16 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath()
 }
 
-function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint: PaintFn): void {
+/** #里程碑2:PDF 一次导出明暗两页，页面底色/线条/文字都要按主题切换——这里镜像
+ * styles.css 的 --bg/--surface/--line/--line-soft/--ink/--ink-3 浅色与中间调深色取值
+ * (见里程碑6 的 mid-tone 面板)，让画布页和屏幕上的对应主题读起来一致。 */
+function themeInk(theme: PaintTheme): { page: string; ink: string; faint: string; faintHalf: string; muted: string } {
+  return theme === 'dark'
+    ? { page: '#35373e', ink: '#f0f1f4', faint: '#4b4e57', faintHalf: '#3f424a', muted: '#a1a7b2' }
+    : { page: '#ffffff', ink: '#1e2532', faint: '#e6e8ee', faintHalf: '#f0f1f5', muted: '#5c616c' }
+}
+
+function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint: PaintFn, theme: PaintTheme = 'light'): void {
   const raw = blocksOf(plan)
 
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
@@ -93,17 +104,14 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
   const ceilHour = Math.ceil(Math.max(CEIL, ...raw.map((block) => displayEndMinutes(block.end))) / 60)
   const span = (ceilHour - floorHour) * 60
 
-  const ink = '#1e2532'
-  const faint = '#e6e8ee'
-  const faintHalf = '#f0f1f5'
-  const muted = '#8b93a4'
+  const { page, ink, faint, faintHalf, muted } = themeInk(theme)
 
-  ctx.fillStyle = '#ffffff'
+  ctx.fillStyle = page
   ctx.fillRect(0, 0, W, H)
 
   // Title.
   ctx.fillStyle = ink
-  ctx.font = '700 24px system-ui, -apple-system, "PingFang SC", sans-serif'
+  ctx.font = '700 26px system-ui, -apple-system, "PingFang SC", sans-serif'
   ctx.textBaseline = 'alphabetic'
   ctx.textAlign = 'left'
   ctx.fillText(`CU Schedule · ${termName} 课表`, 28, 44)
@@ -119,7 +127,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
 
   // Hour + half-hour rules（半点线更浅），与网格线同一套 floor/ceil 换算——课块的
   // top/height 也用同一个 yOf，保证课块边缘总能落在某条线上。
-  ctx.font = '12px system-ui, -apple-system, sans-serif'
+  ctx.font = '13px system-ui, -apple-system, sans-serif'
   for (let tick = floorHour * 60; tick <= ceilHour * 60; tick += 30) {
     const isHour = tick % 60 === 0
     const y = yOf(tick)
@@ -148,7 +156,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
     ctx.stroke()
 
     ctx.fillStyle = ink
-    ctx.font = '600 15px system-ui, -apple-system, "PingFang SC", sans-serif'
+    ctx.font = '700 17px system-ui, -apple-system, "PingFang SC", sans-serif'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'alphabetic'
     ctx.fillText(DAYS[day], x + colW / 2, gridTop - 14)
@@ -160,6 +168,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
   ctx.stroke()
 
   // Course blocks — one column per weekday (single plan, no A/B split).
+  // #里程碑2:课号/时间/地点字号整体加大，让打印出来的 PDF 更清晰易读。
   const drawColumn = (blocks: Block[], baseX: number) => {
     for (const block of layOutDay(blocks)) {
       const laneW = colW / block.lanes
@@ -170,7 +179,7 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
       const shownEnd = displayEndMinutes(block.end)
       const h = yOf(shownEnd) - yOf(block.start) - 2
       if (h <= 0 || w <= 0) continue
-      const tint = paint(block.code, block.subject)
+      const tint = paint(block.code, block.subject, theme)
 
       roundRect(ctx, x, y, w, h, 5)
       ctx.fillStyle = tint.fill
@@ -189,17 +198,18 @@ function draw(ctx: CanvasRenderingContext2D, plan: Plan, termName: string, paint
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 9
-      let ty = y + 17
-      ctx.font = '700 13px system-ui, -apple-system, sans-serif'
+      let ty = y + 20
+      ctx.font = '700 16px system-ui, -apple-system, sans-serif'
       ctx.fillText(block.code, tx, ty)
-      if (h > 30) {
-        ty += 16
-        ctx.font = '11px system-ui, -apple-system, sans-serif'
+      if (h > 36) {
+        ty += 18
+        ctx.font = '13px system-ui, -apple-system, sans-serif'
         ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       }
-      if (h > 50) {
-        ty += 15
+      if (h > 58) {
+        ty += 16
         const meta = block.location ? `${block.component} · ${block.location}` : block.component
+        ctx.font = '12px system-ui, -apple-system, sans-serif'
         ctx.fillText(meta, tx, ty)
       }
       ctx.restore()
@@ -242,14 +252,14 @@ export function downloadBlob(blob: Blob, filename: string): void {
 }
 
 /** Draw one timetable onto a fresh 2× canvas (shared by PNG and PDF exports). */
-function renderTimetable(plan: Plan, termName: string, paint: PaintFn): HTMLCanvasElement {
+function renderTimetable(plan: Plan, termName: string, paint: PaintFn, theme: PaintTheme = 'light'): HTMLCanvasElement {
   const canvas = document.createElement('canvas')
   canvas.width = W * SCALE
   canvas.height = H * SCALE
   const ctx = canvas.getContext('2d')
   if (!ctx) throw new Error('无法创建画布')
   ctx.scale(SCALE, SCALE)
-  draw(ctx, plan, termName, paint)
+  draw(ctx, plan, termName, paint, theme)
   return canvas
 }
 
@@ -267,25 +277,32 @@ export async function exportImage(
   return filename
 }
 
+function canvasToJpegBytes(canvas: HTMLCanvasElement): Uint8Array {
+  const dataUrl = canvas.toDataURL('image/jpeg', 0.92)
+  return base64ToBytes(dataUrl.slice(dataUrl.indexOf(',') + 1))
+}
+
 /**
- * Export the same timetable as a single-page PDF. No PDF library: the canvas is
+ * Export the same timetable as a two-page PDF. No PDF library: each page's canvas is
  * encoded to a JPEG and embedded directly as a `/DCTDecode` image XObject in a minimal,
- * hand-assembled PDF — the standard dependency-free trick. The page is A4 landscape,
- * with the image scaled to fit its aspect ratio.
+ * hand-assembled PDF — the standard dependency-free trick. Both pages are A4 landscape,
+ * image scaled to fit. #里程碑2:一次导出即含两页——第一页浅色主题、第二页深色主题，
+ * 同一份课表两种配色各一页，不用分两次导出。
  */
 export async function exportPdf(
   plan: Plan,
   termName: string,
   paint: PaintFn = defaultPaint,
 ): Promise<string> {
-  const canvas = renderTimetable(plan, termName, paint)
-  const dataUrl = canvas.toDataURL('image/jpeg', 0.92)
-  const jpeg = base64ToBytes(dataUrl.slice(dataUrl.indexOf(',') + 1))
+  const pageW = 842 // A4 landscape width, points.
+  const pages = (['light', 'dark'] as const).map((theme) => {
+    const canvas = renderTimetable(plan, termName, paint, theme)
+    const jpeg = canvasToJpegBytes(canvas)
+    const pageH = Math.round((pageW * canvas.height) / canvas.width)
+    return { jpeg, imgW: canvas.width, imgH: canvas.height, pageW, pageH }
+  })
 
-  // Page: fit the image into A4 landscape width (842pt), height follows the aspect.
-  const pageW = 842
-  const pageH = Math.round((pageW * canvas.height) / canvas.width)
-  const blob = buildImagePdf(jpeg, canvas.width, canvas.height, pageW, pageH)
+  const blob = buildImagePdf(pages)
   const filename = `cu-schedule-${slugTerm(termName)}.pdf`
   downloadBlob(blob, filename)
   return filename
@@ -300,14 +317,16 @@ function base64ToBytes(base64: string): Uint8Array {
 
 const encoder = new TextEncoder()
 
-/** Assemble a one-page PDF whose only content is a full-page JPEG (DCTDecode) image. */
-function buildImagePdf(
-  jpeg: Uint8Array,
-  imgW: number,
-  imgH: number,
-  pageW: number,
-  pageH: number,
-): Blob {
+type PdfPage = { jpeg: Uint8Array; imgW: number; imgH: number; pageW: number; pageH: number }
+
+/**
+ * Assemble an N-page PDF whose every page's only content is a full-page JPEG
+ * (DCTDecode) image — #里程碑2 把原来的单页版本泛化成多页：objects 1/2 are the
+ * catalog and the shared Pages node; each page then contributes exactly 3 objects
+ * (page / image / content stream), so object numbers are assigned up front and every
+ * page object can reference its own image + content objects by number.
+ */
+function buildImagePdf(pages: PdfPage[]): Blob {
   const chunks: Uint8Array[] = []
   const offsets: number[] = []
   let length = 0
@@ -319,34 +338,44 @@ function buildImagePdf(
   // Record the byte offset of an object as it is written (for the xref table).
   const mark = () => offsets.push(length)
 
+  // obj 1 = catalog, obj 2 = pages node, then 3 objects per page (page/image/content).
+  const pageObjNum = (i: number) => 3 + i * 3
+  const imgObjNum = (i: number) => 4 + i * 3
+  const contentObjNum = (i: number) => 5 + i * 3
+  const totalObjects = 2 + pages.length * 3
+
   push('%PDF-1.3\n')
   mark() // obj 1
   push('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n')
   mark() // obj 2
-  push('2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n')
-  mark() // obj 3
-  push(
-    `3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] ` +
-      `/Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`,
-  )
-  mark() // obj 4 (image)
-  push(
-    `4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${imgW} /Height ${imgH} ` +
-      `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`,
-  )
-  push(jpeg)
-  push('\nendstream\nendobj\n')
-  // Content stream: place the image to fill the whole page.
-  const content = `q\n${pageW} 0 0 ${pageH} 0 0 cm\n/Im0 Do\nQ\n`
-  mark() // obj 5
-  push(`5 0 obj\n<< /Length ${content.length} >>\nstream\n${content}endstream\nendobj\n`)
+  const kids = pages.map((_, i) => `${pageObjNum(i)} 0 R`).join(' ')
+  push(`2 0 obj\n<< /Type /Pages /Kids [${kids}] /Count ${pages.length} >>\nendobj\n`)
+
+  pages.forEach((page, i) => {
+    mark() // page object
+    push(
+      `${pageObjNum(i)} 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${page.pageW} ${page.pageH}] ` +
+        `/Resources << /XObject << /Im0 ${imgObjNum(i)} 0 R >> >> /Contents ${contentObjNum(i)} 0 R >>\nendobj\n`,
+    )
+    mark() // image object
+    push(
+      `${imgObjNum(i)} 0 obj\n<< /Type /XObject /Subtype /Image /Width ${page.imgW} /Height ${page.imgH} ` +
+        `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${page.jpeg.length} >>\nstream\n`,
+    )
+    push(page.jpeg)
+    push('\nendstream\nendobj\n')
+    // Content stream: place the image to fill the whole page.
+    const content = `q\n${page.pageW} 0 0 ${page.pageH} 0 0 cm\n/Im0 Do\nQ\n`
+    mark() // content object
+    push(`${contentObjNum(i)} 0 obj\n<< /Length ${content.length} >>\nstream\n${content}endstream\nendobj\n`)
+  })
 
   const xrefStart = length
   const pad = (n: number) => n.toString().padStart(10, '0')
-  let xref = `xref\n0 6\n0000000000 65535 f \n`
+  let xref = `xref\n0 ${totalObjects + 1}\n0000000000 65535 f \n`
   for (const offset of offsets) xref += `${pad(offset)} 00000 n \n`
   push(xref)
-  push(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefStart}\n%%EOF`)
+  push(`trailer\n<< /Size ${totalObjects + 1} /Root 1 0 R >>\nstartxref\n${xrefStart}\n%%EOF`)
 
   return new Blob(chunks as BlobPart[], { type: 'application/pdf' })
 }
