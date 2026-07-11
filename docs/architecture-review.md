@@ -1,6 +1,26 @@
-# 架构审查与修改建议
+# 架构审查与修改建议(已结案)
 
 审查日期:2026-07-11 · 审查范围:整个工作树(含未提交变更) · 执行人:交由 Opus 逐项落实
+
+> **状态(2026-07-11 结案)**:本审查已全部处理完毕,以下为历史记录,不再是待办。
+> 各项裁决:
+>
+> | 条目 | 状态 |
+> | --- | --- |
+> | #1 提交纪律 | ✅ 已落库,工作树干净 |
+> | #2 README 过时 | ✅ 已修正(含后续 build_bundles 引用更正) |
+> | #3 tsx 依赖 | ✅ 进 devDependencies,`data:*` npm scripts 就位 |
+> | #4 加载期解析 | ✅ 构建期预解析 `req` 入 wire 格式,audit 逐门复核一致性 |
+> | #5 schema 双语言分治 | ✅ `build_bundles.mts` 统一,两个 Python build 脚本已删 |
+> | #6 仓库重量 | ✅ **裁决:维持现状**。raw 永久只维护两份学年快照,不用 LFS 不出库;`public/data` 镜像与真源逐字节相同 → git 按内容寻址**只存一份 blob**(已实测 SHA 一致),"每提交存两遍"不成立,镜像仅使克隆工作区多 ~6MB |
+> | #7 programs 双真源 | ✅ all_programs.json 已删,逐文件为唯一真源 |
+> | #8 API 设计 | ✅ docs/api-design.md 落库 |
+> | #9 CI | ✅ .github/workflows/ci.yml:类型检查 + 构建 + data:check + data:audit |
+> | #10 prefs 死路径 | ✅ 选"恢复偏好 UI":课表页「排课筛选」卡已上线,分支不再死 |
+> | #11 programs.ts 挂空 | ✅ 已接入信息页(ProgramPicker / ProgramTable / 本专业筛选) |
+> | #12 组合重算缓存 | ⏸ 按审查自己的要求"先测量再做",未出现可感知卡顿,不做 |
+> | #13 localStorage 版本 | ⏸ 静默丢弃可接受(审查原文),失效提示留待 API 动工时随 dataVersion 一起做 |
+> | #14 杂项 | ✅ audit_data.mts 已 import types.ts;schema.md 已补预解析一节 |
 
 ## 总评
 

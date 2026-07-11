@@ -62,21 +62,57 @@ npm run data:build                             # 生成前端数据包（含 pub
 
 ---
 
+## 项目结构
+
+```text
+├── src/                    前端（React + Vite，无路由无状态库，App.tsx 是唯一编排层）
+│   ├── lib/                纯逻辑：types.ts（schema 唯一真源）、courseKey.ts（课号身份
+│   │                       唯一裁决处）、requirements.ts（先修三值求值）、schedule.ts（排课）、
+│   │                       candidates.ts（可选课筛选）、programs.ts（培养方案）……不依赖 React 运行时
+│   └── components/         纯展示组件，被 App.tsx 编排
+├── scripts/                数据管线（用法见下节「数据从哪来」）
+│   ├── cuhk_scraper.py 等  抓取器，vendored 自 EagleZhen（保持原样，见 NOTICE.md）
+│   ├── parse_programs.py   培养方案文本 → 结构化 JSON
+│   ├── build_bundles.mts   唯一的打包脚本：产出全部成品 + public/data 镜像
+│   └── {check_requirements,audit_data}.mts   两个校验门（CI 强制执行）
+├── data/                   所有数据的唯一真源（raw → 成品，结构详见 data/README.md）
+├── public/data/            data/ 成品的生成镜像（勿手改，data:build 整体重写）
+├── docs/                   见下方阅读地图
+├── deploy/ + Dockerfile    静态站点的 nginx 容器化（docs/deployment.md 是 runbook）
+└── .github/workflows/      CI：类型检查 + 构建 + 两个数据校验门
+```
+
+### 文档阅读地图
+
+| 你要做的事 | 从哪读起 |
+| --- | --- |
+| 改前端（UI / 交互 / 筛选逻辑） | [docs/api-design.md](docs/api-design.md) —— **前端唯一入口**，数据契约与改动规则 |
+| 理解课程数据字段 / 课号 key / 先修解析 | [docs/schema.md](docs/schema.md) |
+| 理解培养方案数据与 `structure` 树 | [docs/programs-data.md](docs/programs-data.md) |
+| 更新 / 重建数据 | [data/README.md](data/README.md) + 本文「数据从哪来」 |
+| 部署 | [docs/deployment.md](docs/deployment.md) |
+| 了解架构决策的来龙去脉 | [docs/architecture-review.md](docs/architecture-review.md)（已结案的审查记录） |
+
 ## 开发
 
 ```bash
 npm install
-npm run dev
-npm run build
+npm run dev        # 本地开发（Vite，:5173）
+npm run build      # 类型检查 + 生产构建
 ```
 
 **前端开发从 [docs/api-design.md](docs/api-design.md) 入手**——数据契约、运行时接口面、
-改动规则与阅读地图都在那里。课程数据的字段定义、课号 key 规则、以及先修/互斥/并修的
-解析与三值求值，见 [docs/schema.md](docs/schema.md)。两个校验脚本：
+改动规则与阅读地图都在那里。改动前后必须过的两道校验门（CI 也会跑）：
 
 ```bash
-npx tsx scripts/check_requirements.mts   # 先修解析：全目录零误报
-npx tsx scripts/audit_data.mts           # 全量一致性审计：数据包 vs 原始对账
+npm run data:check   # 先修解析：全目录零误报
+npm run data:audit   # 全量一致性审计：数据包 vs 原始对账
+```
+
+Python 侧（抓取器与方案解析）的测试：
+
+```bash
+uv sync && uv run pytest
 ```
 
 ---
