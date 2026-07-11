@@ -1682,7 +1682,7 @@ export default function App() {
               <div className="plan-card__actions">
                 <button
                   aria-label={`排法 ${index + 1} 设为 A`}
-                  className={`plan-card__pick plan-card__pick--a${isA ? ' plan-card__pick--on' : ''}`}
+                  className={`plan-card__pick plan-card__pick--a${isA ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
                   title="设为 A（回到 A/B 对比）"
                   type="button"
                   onClick={(event) => {
@@ -1695,7 +1695,7 @@ export default function App() {
                 </button>
                 <button
                   aria-label={`排法 ${index + 1} 设为 B`}
-                  className={`plan-card__pick plan-card__pick--b${isB ? ' plan-card__pick--on' : ''}`}
+                  className={`plan-card__pick plan-card__pick--b${isB ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
                   title="设为 B（回到 A/B 对比）"
                   type="button"
                   onClick={(event) => {
@@ -1950,66 +1950,71 @@ export default function App() {
           </span>
         </div>
       )}
-      <header className="bar">
-        <div className="bar__left">
-          <div className="bar__brand">
-            <span className="bar__mark" aria-hidden />
-            <h1>CU Schedule</h1>
+      {/* #布局3:header+主内容包一层 .app-body(独立撑满 100dvh),footer 作为正常块跟在其后，
+          文档可整体超过一屏滚动，footer 需向下滚一点才可见，同时 .app-body 内部（.viewport /
+          .side 等）保留原有的“撑满剩余高度 + 内部滚动”机制，不受影响。 */}
+      <div className="app-body">
+        <header className="bar">
+          <div className="bar__left">
+            <div className="bar__brand">
+              <span className="bar__mark" aria-hidden />
+              <h1>CU Schedule</h1>
+            </div>
           </div>
-        </div>
-        <nav className="bar__nav">
-          {PAGES.map(({ value, label }) => (
+          <nav className="bar__nav">
+            {PAGES.map(({ value, label }) => (
+              <button
+                className={page === value ? 'bar__nav-item bar__nav-item--on' : 'bar__nav-item'}
+                key={value}
+                type="button"
+                onClick={() => go(value)}
+              >
+                <span className="bar__nav-icon">{PAGE_ICON[value]}</span>
+                {label}
+              </button>
+            ))}
+          </nav>
+          <div className="bar__tools">
             <button
-              className={page === value ? 'bar__nav-item bar__nav-item--on' : 'bar__nav-item'}
-              key={value}
+              aria-label="切换明暗主题"
+              className="bar__theme"
               type="button"
-              onClick={() => go(value)}
+              onClick={() => setTheme((value) => (value === 'light' ? 'dark' : 'light'))}
             >
-              <span className="bar__nav-icon">{PAGE_ICON[value]}</span>
-              {label}
+              {theme === 'light' ? '🌙' : '☀️'}
             </button>
-          ))}
-        </nav>
-        <div className="bar__tools">
-          <button
-            aria-label="切换明暗主题"
-            className="bar__theme"
-            type="button"
-            onClick={() => setTheme((value) => (value === 'light' ? 'dark' : 'light'))}
-          >
-            {theme === 'light' ? '🌙' : '☀️'}
-          </button>
-        </div>
-      </header>
-
-      {error && <div className="alert">{error}</div>}
-
-      <main className={`viewport${transition ? ' viewport--anim' : ''}`}>
-        {/* 来向页（仅切换时挂载）：向一侧滑出。 */}
-        {transition && (
-          <div
-            aria-hidden
-            className={`grid grid--${transition.from} layer layer--exit ${
-              transition.dir === 1 ? 'to-left' : 'to-right'
-            }`}
-            key={transition.from}
-          >
-            {pageInner(transition.from)}
           </div>
-        )}
+        </header>
 
-        {/* 目标页：无动画时为唯一的 solo 层；切换时从另一侧滑入。 */}
-        <div
-          className={
-            !transition
-              ? `grid grid--${page} layer layer--solo`
-              : `grid grid--${page} layer layer--enter ${transition.dir === 1 ? 'from-right' : 'from-left'}`
-          }
-          key={page}
-        >
-          {pageInner(page)}
-        </div>
-      </main>
+        {error && <div className="alert">{error}</div>}
+
+        <main className={`viewport${transition ? ' viewport--anim' : ''}`}>
+          {/* 来向页（仅切换时挂载）：向一侧滑出。 */}
+          {transition && (
+            <div
+              aria-hidden
+              className={`grid grid--${transition.from} layer layer--exit ${
+                transition.dir === 1 ? 'to-left' : 'to-right'
+              }`}
+              key={transition.from}
+            >
+              {pageInner(transition.from)}
+            </div>
+          )}
+
+          {/* 目标页：无动画时为唯一的 solo 层；切换时从另一侧滑入。 */}
+          <div
+            className={
+              !transition
+                ? `grid grid--${page} layer layer--solo`
+                : `grid grid--${page} layer layer--enter ${transition.dir === 1 ? 'from-right' : 'from-left'}`
+            }
+            key={page}
+          >
+            {pageInner(page)}
+          </div>
+        </main>
+      </div>
 
       <footer className="foot">
         <div className="foot__main">

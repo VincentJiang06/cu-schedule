@@ -117,20 +117,33 @@ select {
 
 /* ---- shell ------------------------------------------------------------- */
 
+/* #布局3:.app 不再固定 100dvh(那会把 footer 也强行挤进一屏)。.app 只负责整页的竖向
+   排布 + 外边距;真正需要「撑满一屏」的是 .app-body(header + 主内容区),footer 是 .app-body
+   之后的正常块级兄弟 —— 内容矮时 footer 贴在第一屏底部附近，内容够多时文档自然变高，
+   footer 落在折叠线以下，需要向下滚一点才能看到。 */
 .app {
-  height: 100dvh;
   display: flex;
   flex-direction: column;
   gap: 12px;
   padding: 12px 16px 10px;
 }
 
+/* header + <main class="viewport"> 的容器：min-height:100dvh 撑起「至少一屏」，
+   .viewport 仍是 flex:1 + min-height:0，内部各列 overflow-y:auto / 大课表的内滚
+   机制完全不受影响，只是 footer 被移出了这个撑满一屏的盒子。 */
+.app-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100dvh;
+}
+
 .bar {
   /* Shared control height so the brand, the nav pill, and the theme toggle all line up. */
   --bar-h: 48px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
 }
 
@@ -138,6 +151,7 @@ select {
   display: flex;
   align-items: center;
   gap: 16px;
+  justify-self: start;
 }
 
 .bar__brand {
@@ -208,6 +222,7 @@ select {
   display: flex;
   align-items: center;
   gap: 10px;
+  justify-self: end;
 }
 
 .ct__bar select {
@@ -221,6 +236,9 @@ select {
 }
 
 .bar__nav {
+  /* #布局4:.bar 是三列 grid(1fr auto 1fr),.bar__nav 占中间的 auto 列，
+     两侧 brand / tools 列宽相等，天然把导航挤在整条 header 的正中间。 */
+  justify-self: center;
   display: inline-flex;
   align-items: stretch;
   flex-wrap: nowrap;
@@ -1388,6 +1406,19 @@ select {
 .plan-card__pick:hover:not(.plan-card__pick--on) {
   border-color: var(--brand);
   color: var(--brand-ink);
+}
+
+/* #布局2:单方案模式下（soloActive）A/B 按钮仍可点（点了即回到 A/B 对比），
+   只是视觉上「熄灭」：调暗 + 去饱和，表示当前不在对比态。 */
+.plan-card__pick--dimmed {
+  opacity: 0.42;
+  filter: saturate(0.5);
+}
+
+.plan-card__pick--dimmed:hover:not(.plan-card__pick--on) {
+  border-color: var(--line);
+  color: var(--ink-2);
+  opacity: 0.7;
 }
 
 /* ---- A/B comparison timetable (课表对比, larger type) --------------------- */
@@ -4003,9 +4034,15 @@ select {
 
 @media (max-width: 820px) {
   .app {
-    height: auto;
     min-height: 100dvh;
     padding: 10px;
+  }
+
+  /* 窄屏本来就是整页竖排随页面滚动（.viewport 退回 block），不需要再让 .app-body
+     自己撑满一屏——交给外层 .app 的 min-height:100dvh 兜底即可，避免 header/主内容
+     与 footer 之间多出一段空白。 */
+  .app-body {
+    min-height: 0;
   }
 
   .grid {
@@ -4051,8 +4088,34 @@ select {
     height: 80vh;
   }
 
+  /* #布局1:移动端 header 两行——第一行 brand + 明暗切换（两端对齐），第二行导航整行铺满，
+     不再出现「brand / nav / tools」三行折行。 */
   .bar {
-    flex-wrap: wrap;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      'left tools'
+      'nav nav';
+    row-gap: 8px;
+    column-gap: 12px;
+  }
+
+  .bar__left {
+    grid-area: left;
+  }
+
+  .bar__tools {
+    grid-area: tools;
+  }
+
+  .bar__nav {
+    grid-area: nav;
+    justify-self: stretch;
+  }
+
+  .bar__nav-item {
+    flex: 1;
+    justify-content: center;
+    padding: 9px 8px;
   }
 
   /* 窄屏收回 header 放大：--bar-h 仍是 48px，避免 38px 的 icon/21px 的站名在极窄屏挤出换行。 */
