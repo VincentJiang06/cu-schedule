@@ -14,14 +14,15 @@ import type { Course, Section } from '../lib/types.ts'
 
 const DAY = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
 
-function sectionTimes(section: Section): string {
+// 每个 meeting 单独一行（不再用「；」挤成一行自动换行）。空数组 = 时间待定。
+function sectionTimeLines(section: Section): string[] {
   const timed = section.meetings
     .filter((m) => m.dayIndex >= 1 && m.dayIndex <= 7)
     .sort((a, b) => a.dayIndex - b.dayIndex || a.start - b.start)
-  if (timed.length === 0) return '时间待定'
-  return timed
-    .map((m) => `${DAY[m.dayIndex - 1]} ${hhmm(m.start)}–${hhmm(m.end)}${m.location ? ` · ${m.location}` : ''}`)
-    .join('；')
+  if (timed.length === 0) return ['时间待定']
+  return timed.map(
+    (m) => `${DAY[m.dayIndex - 1]} ${hhmm(m.start)}–${hhmm(m.end)}${m.location ? ` · ${m.location}` : ''}`,
+  )
 }
 
 export function CourseModal({
@@ -146,7 +147,13 @@ export function CourseModal({
                         <span className="cmodal__section-label">
                           {`${section.cohort}${section.group}` || section.id}
                         </span>
-                        <span className="cmodal__section-time">{sectionTimes(section)}</span>
+                        <div className="cmodal__section-times">
+                          {sectionTimeLines(section).map((line) => (
+                            <span className="cmodal__section-time" key={line}>
+                              {line}
+                            </span>
+                          ))}
+                        </div>
                         {section.instructors.length > 0 && (
                           <span className="cmodal__section-inst">{section.instructors.join('、')}</span>
                         )}

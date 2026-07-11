@@ -109,16 +109,22 @@ function Column({
   )
 }
 
+/** A user-placed dashed reference line drawn across the whole grid (purely visual). */
+export type Guide = { minutes: number; label: string; tone: 'am' | 'pm' }
+
 export function TimetableCompare({
   planA,
   planB,
   emptyMessage,
   colorForCode,
+  guides = [],
 }: {
   planA: Plan | null
   planB: Plan | null
   emptyMessage: string
   colorForCode: (code: string) => CSSProperties
+  /** Two optional reference lines (morning / evening) the student drags to eyeball. */
+  guides?: Guide[]
 }) {
   const rawA = blocksOf(planA)
   const rawB = blocksOf(planB)
@@ -142,6 +148,8 @@ export function TimetableCompare({
   const span = (ceilHour - floorHour) * 60
 
   const hours = Array.from({ length: ceilHour - floorHour + 1 }, (_, index) => (floorHour + index) * 60)
+  // 每半小时一条横线，把课表做成表格（整点线略深、半点线略浅）。
+  const halfHours = Array.from({ length: (ceilHour - floorHour) * 2 + 1 }, (_, index) => floorHour * 60 + index * 30)
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
   return (
@@ -168,9 +176,27 @@ export function TimetableCompare({
       </div>
 
       <div className="tt2__body">
-        {hours.slice(1, -1).map((minutes) => (
-          <div aria-hidden className="tt2__rule" key={minutes} style={{ top: `${pct(minutes)}%` }} />
+        {halfHours.slice(1, -1).map((minutes) => (
+          <div
+            aria-hidden
+            className={`tt2__rule${minutes % 60 === 0 ? '' : ' tt2__rule--half'}`}
+            key={minutes}
+            style={{ top: `${pct(minutes)}%` }}
+          />
         ))}
+        {guides
+          .filter((guide) => guide.minutes >= floorHour * 60 && guide.minutes <= ceilHour * 60)
+          .map((guide) => (
+            <div
+              className={`tt2__guide tt2__guide--${guide.tone}`}
+              key={guide.tone}
+              style={{ top: `${pct(guide.minutes)}%` }}
+            >
+              <span className="tt2__guide-tag">
+                {guide.label} {hhmm(guide.minutes)}
+              </span>
+            </div>
+          ))}
         {Array.from({ length: dayCount }, (_, index) => {
           const dayIndex = index + 1
           return (

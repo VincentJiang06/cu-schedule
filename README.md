@@ -98,8 +98,13 @@ npm run data:build                             # 生成前端数据包（含 pub
 ```bash
 npm install
 npm run dev        # 本地开发（Vite，:5173）
+npm run dev:api    # 只读分享后端（Node 内存存储，:8787，另开一个终端）
 npm run build      # 类型检查 + 生产构建
 ```
+
+「只读分享」（导出页生成 `/#v=<id>` 只读链接）需要 `npm run dev:api` 一起跑：Vite 把
+`/api` 代理到这个 Node 服务（内存存储、1 天 TTL）。不跑它时其余功能不受影响，只是分享
+按钮会提示连不上服务。生产环境由同容器的 nginx 反代 `/api` 到该服务（见 `deploy/`）。
 
 **前端开发从 [docs/api-design.md](docs/api-design.md) 入手**——数据契约、运行时接口面、
 改动规则与阅读地图都在那里。改动前后必须过的两道校验门（CI 也会跑）：

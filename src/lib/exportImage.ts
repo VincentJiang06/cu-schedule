@@ -217,24 +217,12 @@ function draw(ctx: CanvasRenderingContext2D, planA: Plan, planB: Plan | null, te
   )
 }
 
-function slugTerm(name: string): string {
+export function slugTerm(name: string): string {
   return name.replace(/[^\w一-龥-]+/g, '-').replace(/^-+|-+$/g, '') || 'term'
 }
 
-/** Render the A / B comparison to a 2× PNG, trigger a download, and return the file name. */
-export async function exportImage(planA: Plan, planB: Plan | null, termName: string): Promise<string> {
-  const canvas = document.createElement('canvas')
-  canvas.width = W * SCALE
-  canvas.height = H * SCALE
-  const ctx = canvas.getContext('2d')
-  if (!ctx) throw new Error('无法创建画布')
-  ctx.scale(SCALE, SCALE)
-  draw(ctx, planA, planB, termName)
-
-  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
-  if (!blob) throw new Error('生成图片失败')
-
-  const filename = `cu-schedule-${slugTerm(termName)}.png`
+/** Push a blob to the browser as a file download. Shared by every exporter. */
+export function downloadBlob(blob: Blob, filename: string): void {
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
@@ -243,5 +231,106 @@ export async function exportImage(planA: Plan, planB: Plan | null, termName: str
   anchor.click()
   anchor.remove()
   URL.revokeObjectURL(url)
+}
+
+/** Draw the A / B comparison onto a fresh 2× canvas (shared by PNG and PDF exports). */
+function renderComparison(planA: Plan, planB: Plan | null, termName: string): HTMLCanvasElement {
+  const canvas = document.createElement('canvas')
+  canvas.width = W * SCALE
+  canvas.height = H * SCALE
+  const ctx = canvas.getContext('2d')
+  if (!ctx) throw new Error('无法创建画布')
+  ctx.scale(SCALE, SCALE)
+  draw(ctx, planA, planB, termName)
+  return canvas
+}
+
+/** Render the A / B comparison to a 2× PNG, trigger a download, and return the file name. */
+export async function exportImage(planA: Plan, planB: Plan | null, termName: string): Promise<string> {
+  const canvas = renderComparison(planA, planB, termName)
+  const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
+  if (!blob) throw new Error('生成图片失败')
+  const filename = `cu-schedule-${slugTerm(termName)}.png`
+  downloadBlob(blob, filename)
   return filename
+}
+
+/**
+ * Export the same A / B comparison as a single-page PDF. No PDF library: the canvas is
+ * encoded to a JPEG and embedded directly as a `/DCTDecode` image XObject in a minimal,
+ * hand-assembled PDF — the standard dependency-free trick. The page is A4 landscape,
+ * with the image scaled to fit its aspect ratio.
+ */
+export async function exportPdf(planA: Plan, planB: Plan | null, termName: string): Promise<string> {
+  const canvas = renderComparison(planA, planB, termName)
+  const dataUrl = canvas.toDataURL('image/jpeg', 0.92)
+  const jpeg = base64ToBytes(dataUrl.slice(dataUrl.indexOf(',') + 1))
+
+  // Page: fit the image into A4 landscape width (842pt), height follows the aspect.
+  const pageW = 842
+  const pageH = Math.round((pageW * canvas.height) / canvas.width)
+  const blob = buildImagePdf(jpeg, canvas.width, canvas.height, pageW, pageH)
+  const filename = `cu-schedule-${slugTerm(termName)}.pdf`
+  downloadBlob(blob, filename)
+  return filename
+}
+
+function base64ToBytes(base64: string): Uint8Array {
+  const binary = atob(base64)
+  const bytes = new Uint8Array(binary.length)
+  for (let i = 0; i < binary.length; i += 1) bytes[i] = binary.charCodeAt(i)
+  return bytes
+}
+
+const encoder = new TextEncoder()
+
+/** Assemble a one-page PDF whose only content is a full-page JPEG (DCTDecode) image. */
+function buildImagePdf(
+  jpeg: Uint8Array,
+  imgW: number,
+  imgH: number,
+  pageW: number,
+  pageH: number,
+): Blob {
+  const chunks: Uint8Array[] = []
+  const offsets: number[] = []
+  let length = 0
+  const push = (part: string | Uint8Array) => {
+    const bytes = typeof part === 'string' ? encoder.encode(part) : part
+    chunks.push(bytes)
+    length += bytes.length
+  }
+  // Record the byte offset of an object as it is written (for the xref table).
+  const mark = () => offsets.push(length)
+
+  push('%PDF-1.3\n')
+  mark() // obj 1
+  push('1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n')
+  mark() // obj 2
+  push('2 0 obj\n<< /Type /Pages /Kids [3 0 R] /Count 1 >>\nendobj\n')
+  mark() // obj 3
+  push(
+    `3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] ` +
+      `/Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>\nendobj\n`,
+  )
+  mark() // obj 4 (image)
+  push(
+    `4 0 obj\n<< /Type /XObject /Subtype /Image /Width ${imgW} /Height ${imgH} ` +
+      `/ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`,
+  )
+  push(jpeg)
+  push('\nendstream\nendobj\n')
+  // Content stream: place the image to fill the whole page.
+  const content = `q\n${pageW} 0 0 ${pageH} 0 0 cm\n/Im0 Do\nQ\n`
+  mark() // obj 5
+  push(`5 0 obj\n<< /Length ${content.length} >>\nstream\n${content}endstream\nendobj\n`)
+
+  const xrefStart = length
+  const pad = (n: number) => n.toString().padStart(10, '0')
+  let xref = `xref\n0 6\n0000000000 65535 f \n`
+  for (const offset of offsets) xref += `${pad(offset)} 00000 n \n`
+  push(xref)
+  push(`trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${xrefStart}\n%%EOF`)
+
+  return new Blob(chunks as BlobPart[], { type: 'application/pdf' })
 }

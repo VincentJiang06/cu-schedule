@@ -5,7 +5,6 @@ import { ProgramPicker } from './components/ProgramPicker.tsx'
 import { ProgramTable } from './components/ProgramTable.tsx'
 import {
   SearchResults,
-  type Daypart,
   type LecBusy,
   type LevelBucket,
   type SearchFilters,
@@ -28,6 +27,7 @@ import {
 } from './lib/programs.ts'
 import { parseCourseCodes } from './lib/search.ts'
 import { decodeShare } from './lib/shareLink.ts'
+import { createShare } from './lib/shareStore.ts'
 import {
   loadSubjects,
   loadTermList,
@@ -36,7 +36,7 @@ import {
   type SubjectInfo,
   type TermRef,
 } from './lib/data.ts'
-import { findClashes, generatePlans, overlaps, type Pins, type Plan, type Prefs } from './lib/schedule.ts'
+import { findClashes, generatePlans, NO_PREFS, overlaps, type Pins, type Plan } from './lib/schedule.ts'
 import { hhmm } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
@@ -76,13 +76,6 @@ const LEVEL_BUCKETS: Array<{ value: LevelBucket; label: string }> = [
   { value: '2', label: '2000' },
   { value: '3', label: '3000' },
   { value: '4plus', label: '4000+' },
-]
-
-// 上课时段 chips — multi-select; semantics live in SearchResults (meetingMask).
-const DAYPARTS: Array<{ value: Daypart; label: string }> = [
-  { value: 'morning', label: '上午' },
-  { value: 'afternoon', label: '下午' },
-  { value: 'evening', label: '晚上' },
 ]
 
 // Add or remove one value from a multi-select chip group.
@@ -163,22 +156,25 @@ type Saved = {
 // （append-only，见 colorForCode），槽位一旦分配永不重排，故新增课不会打乱既有课的颜色。
 const TIMETABLE_PALETTE = [210, 145, 275, 25, 330, 190, 95, 300, 50, 240, 170, 10]
 
-// 排课筛选卡的时间段选项（分钟；null=不限）。
-const EARLIEST_OPTIONS: Array<{ value: number | null; label: string }> = [
-  { value: null, label: '不限' },
-  { value: 8 * 60, label: '08:00 起' },
-  { value: 9 * 60, label: '09:00 起' },
-  { value: 10 * 60, label: '10:00 起' },
-  { value: 11 * 60, label: '11:00 起' },
-  { value: 12 * 60, label: '12:00 起' },
+// 课表页「辅助线」的时间选项（分钟；null=不显示）。两条辅助线只在日历上画一条虚线，
+// 不参与任何自动筛选——用户据此自行目测取舍。
+const GUIDE_MORNING_OPTIONS: Array<{ value: number | null; label: string }> = [
+  { value: null, label: '不显示' },
+  { value: 8 * 60, label: '08:00' },
+  { value: 8 * 60 + 30, label: '08:30' },
+  { value: 9 * 60, label: '09:00' },
+  { value: 9 * 60 + 30, label: '09:30' },
+  { value: 10 * 60, label: '10:00' },
+  { value: 11 * 60, label: '11:00' },
 ]
-const LATEST_OPTIONS: Array<{ value: number | null; label: string }> = [
-  { value: null, label: '不限' },
-  { value: 15 * 60, label: '15:00 前' },
-  { value: 16 * 60, label: '16:00 前' },
-  { value: 17 * 60, label: '17:00 前' },
-  { value: 18 * 60, label: '18:00 前' },
-  { value: 19 * 60, label: '19:00 前' },
+const GUIDE_EVENING_OPTIONS: Array<{ value: number | null; label: string }> = [
+  { value: null, label: '不显示' },
+  { value: 16 * 60, label: '16:00' },
+  { value: 17 * 60, label: '17:00' },
+  { value: 17 * 60 + 30, label: '17:30' },
+  { value: 18 * 60, label: '18:00' },
+  { value: 18 * 60 + 30, label: '18:30' },
+  { value: 19 * 60, label: '19:00' },
 ]
 
 // 一个排法内部两两 meeting 是否重叠。generatePlans/courseCombos 已保证返回的排法无冲突
@@ -272,17 +268,13 @@ export default function App() {
     return () => window.clearTimeout(timer)
   }, [transition])
 
-  // 课表页「排课筛选」卡的输出（#6）。默认值与 DEFAULT_PREFS 完全一致，所以用户未动筛选时
-  // 行为与原来无异；一旦设值，会通过下方共享的 generatePlans 真正约束排出的课表。
-  const [ttEarliest, setTtEarliest] = useState<number | null>(null)
-  const [ttLatest, setTtLatest] = useState<number | null>(null)
-  const [ttAvoidLunch, setTtAvoidLunch] = useState(false)
-  // #6 的「不展示冲突的方案」开关（默认开），与 #7 的排法横条配合过滤显示的排法。
+  // 课表页两条「辅助线」（早上 / 晚上）。仅在日历上画一条虚线供目测，不参与排课筛选。
+  const [guideMorning, setGuideMorning] = useState<number | null>(9 * 60)
+  const [guideEvening, setGuideEvening] = useState<number | null>(18 * 60)
+  // 「不展示冲突的方案」开关（默认开），与排法横条配合过滤显示的排法。
   const [hideConflicts, setHideConflicts] = useState(true)
-  const prefs = useMemo<Prefs>(
-    () => ({ earliestStart: ttEarliest, latestEnd: ttLatest, avoidLunch: ttAvoidLunch, dayOff: [] }),
-    [ttAvoidLunch, ttEarliest, ttLatest],
-  )
+  // 排课不再做时间自动筛选（辅助线是纯视觉）；prefs 恒为空，scheduler 只负责排出无冲突课表。
+  const prefs = NO_PREFS
 
   // 选课 page filters — subjects support positive (include) and negative (exclude),
   // selectability toggles between all / only 可选 / only 不可选.
@@ -294,7 +286,6 @@ export default function App() {
   const [lecFits, setLecFits] = useState(false)
   const [units, setUnits] = useState<UnitPick[]>([])
   const [levels, setLevels] = useState<LevelBucket[]>([])
-  const [dayparts, setDayparts] = useState<Daypart[]>([])
   const [hideCompleted, setHideCompleted] = useState(true)
   const [currentTermOnly, setCurrentTermOnly] = useState(true)
   const [excludeTba, setExcludeTba] = useState(false)
@@ -457,6 +448,15 @@ export default function App() {
     })
   }, [barredKeys, committed])
 
+  // 效果 a':互斥关系解除后(用户撤销了那门已修课)同步清理提示——否则「已自动移除」会一直挂着。
+  // 只保留仍被 barred 的条目;全部解除则数组清空,提示自然消失。
+  useEffect(() => {
+    setAutoRemoved((prev) => {
+      const next = prev.filter((code) => barredKeys.has(courseKey(code)))
+      return next.length === prev.length ? prev : next
+    })
+  }, [barredKeys])
+
   // Keyed by course.key so a committed/taken code matches its offering regardless of
   // any variant suffix (course identity is always the 8-char key, never raw code).
   const byCode = useMemo(() => new Map(courses.map((course) => [course.key, course])), [courses])
@@ -544,6 +544,35 @@ export default function App() {
   const shownPlanViews = hideConflicts ? planViews.filter((view) => !view.conflict) : planViews
 
   const [exportNote, setExportNote] = useState('')
+  // 只读分享（方案 2）：把当前选择存到后端换一个 /#v=<id> 只读链接（手机可看，一天有效）。
+  const [shareNote, setShareNote] = useState('')
+  const [shareBusy, setShareBusy] = useState(false)
+  async function handleCreateShare(): Promise<void> {
+    if (shareBusy) return
+    setShareBusy(true)
+    setShareNote('正在生成只读分享链接…')
+    const result = await createShare({
+      termSlug,
+      termName: term?.name ?? '',
+      committed,
+      taken,
+      pins,
+    })
+    if (!result.ok) {
+      setShareNote(`生成失败：${result.reason}`)
+      setShareBusy(false)
+      return
+    }
+    let copied = false
+    try {
+      await navigator.clipboard.writeText(result.url)
+      copied = true
+    } catch {
+      copied = false
+    }
+    setShareNote(copied ? `只读链接已复制（一天有效）：${result.url}` : `只读链接（一天有效）：${result.url}`)
+    setShareBusy(false)
+  }
   async function handleExport(format: ExportFormat): Promise<void> {
     // The link shares the current selection even when no conflict-free plan exists;
     // ics / image need a rendered timetable (排法 A) to export.
@@ -626,7 +655,6 @@ export default function App() {
     lecFits,
     units,
     levels,
-    dayparts,
     // 「仅本科」硬编码:非本科课恒被排除,无对应开关。
     ugOnly: true,
     hideCompleted,
@@ -813,25 +841,32 @@ export default function App() {
     </section>
   )
 
-  // #6 排课筛选卡（课表页左栏，位于「当前选择课程」上方）：时间段 + 避开午休写进 prefs，
-  // 「不展示冲突的方案」与右侧排法横条配合。默认全为「不限/关/开」，等价于 DEFAULT_PREFS。
+  // 课表页左栏卡：两条「辅助线」（早上 / 晚上）+「不展示冲突的方案」。辅助线只在日历上画一条
+  // 虚线供目测，不做任何自动筛选——用户据此自己判断早课/晚课是否可接受。
+  const guideLines = useMemo(
+    () =>
+      [
+        guideMorning != null ? { minutes: guideMorning, label: '早', tone: 'am' as const } : null,
+        guideEvening != null ? { minutes: guideEvening, label: '晚', tone: 'pm' as const } : null,
+      ].filter((g): g is { minutes: number; label: string; tone: 'am' | 'pm' } => g != null),
+    [guideEvening, guideMorning],
+  )
   const scheduleFilterCard = (
     <section className="card">
       <h2 className="card__title">
-        排课筛选
-        <span className="card__note">
-          {plans.length > 0 ? `${shownPlanViews.length} 种排法` : '影响右侧排法'}
-        </span>
+        辅助线
+        <span className="card__note">日历上的目测参考线</span>
       </h2>
+      <p className="card__sub">在日历上画两条虚线标出早/晚时间，方便自己取舍——不参与自动筛选。</p>
       <div className="field">
-        <span className="field__label">最早开始</span>
+        <span className="field__label">早上辅助线</span>
         <select
           className="mini-select"
-          aria-label="最早开始上课时间"
-          value={ttEarliest ?? ''}
-          onChange={(event) => setTtEarliest(event.target.value === '' ? null : Number(event.target.value))}
+          aria-label="早上辅助线时间"
+          value={guideMorning ?? ''}
+          onChange={(event) => setGuideMorning(event.target.value === '' ? null : Number(event.target.value))}
         >
-          {EARLIEST_OPTIONS.map((option) => (
+          {GUIDE_MORNING_OPTIONS.map((option) => (
             <option key={option.label} value={option.value ?? ''}>
               {option.label}
             </option>
@@ -839,14 +874,14 @@ export default function App() {
         </select>
       </div>
       <div className="field">
-        <span className="field__label">最晚结束</span>
+        <span className="field__label">晚上辅助线</span>
         <select
           className="mini-select"
-          aria-label="最晚结束上课时间"
-          value={ttLatest ?? ''}
-          onChange={(event) => setTtLatest(event.target.value === '' ? null : Number(event.target.value))}
+          aria-label="晚上辅助线时间"
+          value={guideEvening ?? ''}
+          onChange={(event) => setGuideEvening(event.target.value === '' ? null : Number(event.target.value))}
         >
-          {LATEST_OPTIONS.map((option) => (
+          {GUIDE_EVENING_OPTIONS.map((option) => (
             <option key={option.label} value={option.value ?? ''}>
               {option.label}
             </option>
@@ -854,14 +889,6 @@ export default function App() {
         </select>
       </div>
       <div className="check-row">
-        <label className="check">
-          <input
-            checked={ttAvoidLunch}
-            type="checkbox"
-            onChange={(event) => setTtAvoidLunch(event.target.checked)}
-          />
-          <span>避开午休（12:30–13:30）</span>
-        </label>
         <label className="check">
           <input
             checked={hideConflicts}
@@ -900,6 +927,26 @@ export default function App() {
     <section className="card">
       <h2 className="card__title">我的情况</h2>
       <div className="profile-row profile-row--stack">
+        {mainTerms.length > 0 && (
+          <div className="field">
+            <span className="field__label">当前学期</span>
+            <div className="term-switch" aria-label="当前选课学期">
+              {mainTerms.map((item) => (
+                <button
+                  className={item.slug === termSlug ? 'term-switch__btn term-switch__btn--on' : 'term-switch__btn'}
+                  key={item.slug}
+                  type="button"
+                  onClick={() => {
+                    setTermSlug(item.slug)
+                    setPlanIndex(0)
+                  }}
+                >
+                  {item.name.match(/Term\s*[12]/)?.[0] ?? item.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
         <div className="field">
           <span className="field__label">入学年份</span>
           <div className="profile-year__row">
@@ -1038,19 +1085,19 @@ export default function App() {
           title={!selectedProgram ? '先在信息页选择主修' : undefined}
           onChange={(on) => setProgramScope(on ? 'program' : 'all')}
         >
-          只看在选课信息中的课
+          只看本专业的课
+        </Toggle>
+        <Toggle checked={meetsPrereq} onChange={setMeetsPrereq}>
+          符合先修
+        </Toggle>
+        <Toggle checked={hideCompleted} onChange={setHideCompleted}>
+          隐藏已完成
         </Toggle>
       </div>
       <div className="filter-block">
         <span className="filter-block__title">时间约束 · 可选性</span>
-        <Toggle checked={meetsPrereq} onChange={setMeetsPrereq}>
-          符合先修
-        </Toggle>
         <Toggle checked={lecFits} onChange={setLecFits}>
           符合时间表（仅LEC）
-        </Toggle>
-        <Toggle checked={hideCompleted} onChange={setHideCompleted}>
-          隐藏已完成
         </Toggle>
         <Toggle checked={currentTermOnly} onChange={setCurrentTermOnly}>
           只包括当前学期
@@ -1083,21 +1130,6 @@ export default function App() {
               key={value}
               type="button"
               onClick={() => setLevels((current) => toggleValue(current, value))}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-      </div>
-      <div className="field">
-        <span className="field__label">上课时段</span>
-        <div className="chips" role="group" aria-label="上课时段">
-          {DAYPARTS.map(({ value, label }) => (
-            <button
-              className={dayparts.includes(value) ? 'chip chip--on' : 'chip'}
-              key={value}
-              type="button"
-              onClick={() => setDayparts((current) => toggleValue(current, value))}
             >
               {label}
             </button>
@@ -1232,17 +1264,18 @@ export default function App() {
         )}
       </section>
 
+      <h3 className="export-group-title">表格格式</h3>
       <div className="export-grid">
         <section className="card export-card">
-          <h3 className="card__title">日历 .ics</h3>
-          <p className="card__sub">导出排法 A 的每周日程,时间为估计,以 CUSIS 为准。</p>
+          <h3 className="card__title">表格 PDF</h3>
+          <p className="card__sub">A / B 对比课表,一页 PDF,适合打印。</p>
           <button
             className="export-btn"
             disabled={!planA}
             type="button"
-            onClick={() => void handleExport('ics')}
+            onClick={() => void handleExport('pdf')}
           >
-            下载 .ics
+            下载 PDF
           </button>
         </section>
         <section className="card export-card">
@@ -1257,9 +1290,43 @@ export default function App() {
             下载图片
           </button>
         </section>
+      </div>
+
+      <h3 className="export-group-title">手机壁纸</h3>
+      <div className="export-grid">
+        <section className="card export-card">
+          <h3 className="card__title">iPhone 壁纸</h3>
+          <p className="card__sub">
+            iPhone 17 Pro 比例,顶部留白避开系统时间。导出两张:纯背景 + 带课表(排法 A)。
+          </p>
+          <button
+            className="export-btn"
+            disabled={!planA}
+            type="button"
+            onClick={() => void handleExport('wallpaper')}
+          >
+            下载壁纸
+          </button>
+        </section>
+      </div>
+
+      <h3 className="export-group-title">其他</h3>
+      <div className="export-grid">
+        <section className="card export-card">
+          <h3 className="card__title">日历 .ics</h3>
+          <p className="card__sub">导出排法 A 的每周日程,时间为估计,以 CUSIS 为准。</p>
+          <button
+            className="export-btn"
+            disabled={!planA}
+            type="button"
+            onClick={() => void handleExport('ics')}
+          >
+            下载 .ics
+          </button>
+        </section>
         <section className="card export-card">
           <h3 className="card__title">分享链接</h3>
-          <p className="card__sub">复制链接,打开即恢复选课。</p>
+          <p className="card__sub">复制链接,打开即恢复选课(可继续编辑)。</p>
           <button
             className="export-btn"
             disabled={committed.length === 0 && taken.length === 0}
@@ -1269,8 +1336,21 @@ export default function App() {
             复制链接
           </button>
         </section>
+        <section className="card export-card">
+          <h3 className="card__title">只读分享 · 手机查看</h3>
+          <p className="card__sub">生成一个只读页面链接,适合手机查看,一天有效。</p>
+          <button
+            className="export-btn"
+            disabled={committed.length === 0 || shareBusy}
+            type="button"
+            onClick={() => void handleCreateShare()}
+          >
+            {shareBusy ? '生成中…' : '生成只读链接'}
+          </button>
+        </section>
       </div>
 
+      {shareNote && <p className="export-note export-note--share">{shareNote}</p>}
       {exportNote && <p className="export-note">{exportNote}</p>}
     </div>
   )
@@ -1363,6 +1443,7 @@ export default function App() {
                     ? '在左侧选择当前选择课程，A / B 两种排法会自动排出来'
                     : '这些课排不出无冲突的课表，左侧列出了卡住的地方'
                 }
+                guides={guideLines}
                 planA={planA}
                 planB={planB}
               />
@@ -1382,24 +1463,6 @@ export default function App() {
             <span className="bar__mark" aria-hidden />
             <h1>CU Schedule</h1>
           </div>
-          {mainTerms.length > 0 && (
-            <div className="term-switch" aria-label="当前选课学期">
-              <span className="term-switch__label">当前选课</span>
-              {mainTerms.map((item) => (
-                <button
-                  className={item.slug === termSlug ? 'term-switch__btn term-switch__btn--on' : 'term-switch__btn'}
-                  key={item.slug}
-                  type="button"
-                  onClick={() => {
-                    setTermSlug(item.slug)
-                    setPlanIndex(0)
-                  }}
-                >
-                  {item.name.match(/Term\s*[12]/)?.[0] ?? item.name}
-                </button>
-              ))}
-            </div>
-          )}
         </div>
         <nav className="bar__nav">
           {PAGES.map(({ value, label }) => (
@@ -1456,15 +1519,11 @@ export default function App() {
       </main>
 
       <footer className="foot">
-        数据抓取自{' '}
-        <a href="https://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_crse_catalog.aspx" rel="noreferrer" target="_blank">
-          CUHK 公开课程目录
-        </a>
-        ，抓取管线来自{' '}
+        抓取管线来自{' '}
         <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
-          EagleZhen/another-cuhk-course-planner
+          EagleZhen
         </a>{' '}
-        (AGPL-3.0) · 名额与 Closed 状态请以 CUSIS 实时数据为准
+        (AGPL-3.0) · 课程和项目信息以 CUSIS 为准
       </footer>
 
       {detailCourse && (
