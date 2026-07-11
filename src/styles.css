@@ -55,6 +55,10 @@
      can reference the same value without duplicating the number. */
   --bar-h: 48px;
 
+  /* #里程碑6:header 毛玻璃底色——半透明版 --bg，配合 backdrop-filter:blur() 用，
+     内容从下方滚过时透出模糊的影子，而不是完全遮挡。 */
+  --glass-bg: rgb(233 234 237 / 0.72);
+
   color-scheme: light;
 }
 
@@ -88,6 +92,8 @@
   --fill-l: 24%;
   --edge-l: 52%;
   --text-l: 82%;
+
+  --glass-bg: rgb(13 14 17 / 0.68);
 
   color-scheme: dark;
 }
@@ -156,7 +162,21 @@ select {
   position: sticky;
   top: 0;
   z-index: 40;
+  /* #里程碑6:毛玻璃——半透明底色 + 背景模糊，内容从下方滚过时透出模糊的影子而不是被
+     硬边裁切。saturate() 顺带把透出来的颜色提亮一点，浅色/深色主题都不发灰。
+     @supports 兜底:不支持 backdrop-filter 的浏览器退回不透明的 --bg(即里程碑1的
+     纯色版本)，不会露出下面滚动的内容。 */
   background: var(--bg);
+  border-bottom: 1px solid transparent;
+}
+
+@supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
+  .bar {
+    background: var(--glass-bg);
+    backdrop-filter: saturate(160%) blur(14px);
+    -webkit-backdrop-filter: saturate(160%) blur(14px);
+    border-bottom-color: var(--line-soft);
+  }
 }
 
 .bar__left {
@@ -446,7 +466,10 @@ select {
   }
 }
 
-/* 尊重「减少动态效果」：直接瞬切，不滑动。 */
+/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的几处动效(卡片 hover 微动、
+   课程块淡入、按钮 hover 位移)在文件末尾还有一个同名媒体查询里统一关闭——CSS 层叠不看
+   媒体查询、只看源码顺序,这里若也覆盖会被后面无条件的 .card:hover 等规则重新盖掉,
+   必须放在它们之后,所以那部分留给末尾那个块，这里只保留最早就有的页面切换动效。 */
 @media (prefers-reduced-motion: reduce) {
   .viewport--anim .layer {
     animation-duration: 0.01ms !important;
@@ -745,6 +768,19 @@ select {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  /* #里程碑6:卡片 hover 微动——克制的一点点上浮 + 加深阴影，呼应页面其它交互反馈
+     (按钮/开关都有过渡)，让静态信息卡也有"活"的手感。prefers-reduced-motion 时整体
+     关闭(见文件末尾的减动效媒体查询)。 */
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgb(26 29 35 / 0.09), 0 8px 20px -10px rgb(26 29 35 / 0.22);
+}
+
+:root[data-theme='dark'] .card:hover {
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.4), 0 10px 24px -10px rgb(0 0 0 / 0.7);
 }
 
 /* ---- #4 拖拽(选课页):落点高亮 + 跟随 ghost + 拖拽期全局态 --------------------- */
@@ -1516,6 +1552,20 @@ select {
   opacity: 0.6;
 }
 
+/* #里程碑6:课程块淡入——每次挂载(切排法/切页/新增课)都轻轻淡入 + 微微上移，不生硬地
+   "啪"一下出现。纯 CSS mount 动画(React 换 key 就会重新触发)，.tt__block / .tt2__block
+   共用同一组关键帧。 */
+@keyframes blockFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .tt__block {
   position: absolute;
   z-index: 1;
@@ -1529,6 +1579,7 @@ select {
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  animation: blockFadeIn 0.22s ease both;
 }
 
 .tt__block b {
@@ -2179,6 +2230,8 @@ select {
   gap: 1px;
   line-height: 1.2;
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  /* #里程碑6:同 .tt__block 的淡入 mount 动画，见上方 @keyframes blockFadeIn。 */
+  animation: blockFadeIn 0.22s ease both;
 }
 
 /* #8 LEC = 实心、更饱和的主色块（该课 hue）。 */
@@ -2300,11 +2353,17 @@ select {
   font-size: 12.5px;
   font-weight: 650;
   cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
 }
 
 .export-btn:hover:not(:disabled) {
   border-color: var(--brand);
   color: var(--brand-ink);
+  transform: translateY(-1px);
+}
+
+.export-btn:active:not(:disabled) {
+  transform: translateY(0);
 }
 
 .export-btn:disabled {
@@ -4543,5 +4602,26 @@ select {
 
   .tt__block-meta {
     display: none;
+  }
+}
+
+/* ---- #里程碑6:减少动态效果 ---------------------------------------------------
+   放在文件最末尾——CSS 层叠只看源码顺序不看媒体查询，要稳赢前面所有无条件的 hover/
+   动画规则，这个块必须排在它们全部之后。颜色/边框类过渡保留(不算「动效」，WCAG 的
+   prefers-reduced-motion 关注的是位移/缩放/闪烁这类动作)，只关掉会挪动位置或播放的：
+   卡片 hover 微动、课程块淡入 mount 动画、按钮 hover 位移。 */
+@media (prefers-reduced-motion: reduce) {
+  .tt__block,
+  .tt2__block {
+    animation: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .export-btn:hover:not(:disabled),
+  .export-btn:active:not(:disabled) {
+    transform: none;
   }
 }
