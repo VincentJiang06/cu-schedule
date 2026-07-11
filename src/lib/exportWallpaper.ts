@@ -48,17 +48,28 @@ function blocksOf(plan: Plan | null): Omit<Block, 'lane' | 'lanes'>[] {
   )
 }
 
+/** Greedy interval-graph coloring — overlapping blocks get side-by-side lanes.
+ * #里程碑2 网格错位根因之一:必须用*显示*结束时间(displayEndMinutes)判断两块是否
+ * 挨在一起,不能用原始 end——渲染高度已经把 end 进位到下一个半点(见 paintSchedule
+ * 里的 shownEnd),如果这里仍按未进位的原始 end 判定"够不够挤进同一列",会出现:
+ * 两块本来因为进位而在画面上前一块的下边缘已经画到了后一块的起点，lane 逻辑却认为
+ * 它们不挨着、可以共用同一列，结果画出来的方块视觉上叠在一起——"格子对不上"。
+ * 一律用同一套 displayEndMinutes 换算，让 lane 分配与渲染高度严丝合缝。 */
 function layOutDay(blocks: Omit<Block, 'lane' | 'lanes'>[]): Block[] {
   const sorted = [...blocks].sort((a, b) => a.start - b.start || a.end - b.end)
   const laneEnds: number[] = []
   const placed = sorted.map((block) => {
+    const shownEnd = displayEndMinutes(block.end)
     let lane = laneEnds.findIndex((end) => end <= block.start)
     if (lane === -1) lane = laneEnds.length
-    laneEnds[lane] = block.end
+    laneEnds[lane] = shownEnd
     return { ...block, lane, lanes: 1 }
   })
   return placed.map((block) => {
-    const cluster = placed.filter((other) => other.start < block.end && block.start < other.end)
+    const blockShownEnd = displayEndMinutes(block.end)
+    const cluster = placed.filter(
+      (other) => other.start < blockShownEnd && block.start < displayEndMinutes(other.end),
+    )
     return { ...block, lanes: Math.max(...cluster.map((item) => item.lane)) + 1 }
   })
 }
@@ -146,20 +157,32 @@ function paintSchedule(
   const span = (ceilHour - floorHour) * 60
   const yOf = (minutes: number) => gridTop + ((minutes - floorHour * 60) / span) * gridH
 
-  // Hour rules + axis labels.
+  // #里程碑2 面板底衬:背景层(paintBackground)另画了一套装饰性 90px 方格,纯美观、
+  // 与课表的小时网格毫无关系。两套网格线一旦都露出来,就会在课表区域里叠出两种不同
+  // 间距的方格,视觉上"格子对不上"。这里先在网格范围内铺一层半透明底衬盖住装饰网格，
+  // 课表自己的小时/半小时线再画在这层干净底色上，保证用户看到的格子只有一套。
+  roundRect(ctx, gridLeft - 24, gridTop - 8, gridRight - gridLeft + 48, gridBottom - gridTop + 16, 22)
+  ctx.fillStyle = 'rgba(8, 8, 28, 0.30)'
+  ctx.fill()
+
+  // Hour + half-hour rules + axis labels（半点线更浅，与课块 top/height 用同一套
+  // floorHour/span/yOf 换算，确保课块边缘总能落在某条线上——不再只画整点线）。
   ctx.font = '400 24px system-ui, -apple-system, monospace'
-  for (let hour = floorHour; hour <= ceilHour; hour += 1) {
-    const y = yOf(hour * 60)
-    ctx.strokeStyle = 'rgba(165, 180, 252, 0.16)'
+  for (let tick = floorHour * 60; tick <= ceilHour * 60; tick += 30) {
+    const isHour = tick % 60 === 0
+    const y = yOf(tick)
+    ctx.strokeStyle = isHour ? 'rgba(165, 180, 252, 0.16)' : 'rgba(165, 180, 252, 0.07)'
     ctx.lineWidth = 1
     ctx.beginPath()
     ctx.moveTo(gridLeft, y)
     ctx.lineTo(gridRight, y)
     ctx.stroke()
-    ctx.fillStyle = 'rgba(199, 210, 254, 0.65)'
-    ctx.textAlign = 'right'
-    ctx.textBaseline = 'middle'
-    ctx.fillText(hhmm(hour * 60), gridLeft - 12, y)
+    if (isHour) {
+      ctx.fillStyle = 'rgba(199, 210, 254, 0.65)'
+      ctx.textAlign = 'right'
+      ctx.textBaseline = 'middle'
+      ctx.fillText(hhmm(tick), gridLeft - 12, y)
+    }
   }
 
   // Day headers + column separators.
