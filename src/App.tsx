@@ -36,7 +36,7 @@ import {
   type Program,
 } from './lib/programs.ts'
 import { parseCourseCodes } from './lib/search.ts'
-import { decodeShare } from './lib/shareLink.ts'
+import { decodeLiveState, decodeShare, encodeLiveState, type LiveState } from './lib/shareLink.ts'
 import { createShare } from './lib/shareStore.ts'
 import {
   loadSubjects,
@@ -238,8 +238,18 @@ function loadWorkEnd(): number | null {
   return Number.isFinite(minutes) ? minutes : 18 * 60
 }
 
-// A share link (`…#s=<payload>`) overrides localStorage on this first load, so
-// opening someone's link restores their selection instead of yours.
+// URL 承载会话状态,三层来源互斥,优先级从高到低:
+// 1) #st= —— 本会话的实时状态("URL 实时状态同步",见下方 App 组件内的 effect),写入
+//    时机由用户操作驱动(切 tab → pushState;编辑 → 防抖 replaceState)。含 page + 选课
+//    四要素 + 关键开关。几乎每次刷新都会命中这条——它就是"回到刷新前/返回键落点前"。
+// 2) #s= —— 别人发来的分享链接(一次性导入),只含选课四要素,不含 page/开关;
+//    导入后仍按旧逻辑落 localStorage 并抹掉 hash(见下方 shared-import effect)。
+// 3) 都没有 → 退回 localStorage 存档。
+// #v= 是只读分享,由 main.tsx 在渲染 App 之前就分流成 <ShareView>,这里永远遇不到。
+function readLive(): LiveState | null {
+  if (typeof window === 'undefined') return null
+  return decodeLiveState(window.location.hash)
+}
 function readShared(): Saved | null {
   if (typeof window === 'undefined' || !window.location.hash.startsWith('#s=')) return null
   const decoded = decodeShare(window.location.hash)
@@ -252,43 +262,65 @@ function readShared(): Saved | null {
   }
 }
 
-const shared = readShared()
+const live = readLive()
+const shared = live ? null : readShared()
 const saved = loadSaved()
-const boot = shared ?? saved
+// 逐字段取值而不是合并出一个 boot 对象:cart(可能学)从不进 URL(#s=/#st= 都不带它,
+// 与既有"分享链接不含可能学"的设计一致),必须总是来自 localStorage —— 否则 URL 驱动的
+// 首屏(几乎每次刷新都会命中 #st=)会把候选课程清空,是明显的回归。
+const bootTermSlug = live?.termSlug ?? shared?.termSlug ?? saved?.termSlug ?? null
+const bootCommitted = live?.committed ?? shared?.committed ?? saved?.committed ?? []
+const bootTaken = live?.taken ?? shared?.taken ?? saved?.taken ?? []
+const bootPins = live?.pins ?? shared?.pins ?? saved?.pins ?? {}
+const bootCart = saved?.cart ?? []
+const bootPage: Page = live?.page ?? 'select'
 
 export default function App() {
   const [theme, setTheme] = useState<Theme>(loadTheme)
   const [terms, setTerms] = useState<TermRef[]>([])
-  const [termSlug, setTermSlug] = useState<string | null>(boot?.termSlug ?? null)
+  const [termSlug, setTermSlug] = useState<string | null>(bootTermSlug)
   const [offerings, setOfferings] = useState<Offering[]>([])
   const [subjects, setSubjects] = useState<SubjectInfo[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  const [committed, setCommitted] = useState<string[]>(boot?.committed ?? [])
-  const [taken, setTaken] = useState<string[]>(boot?.taken ?? [])
+  const [committed, setCommitted] = useState<string[]>(bootCommitted)
+  const [taken, setTaken] = useState<string[]>(bootTaken)
   // 可能学 waitlist / cart — tentative picks, held apart from 必定学 (committed).
-  const [cart, setCart] = useState<string[]>(boot?.cart ?? [])
+  const [cart, setCart] = useState<string[]>(bootCart)
   // Pinned sections (e.g. TUT T01) constrain which A / B timetables the scheduler builds.
-  const [pins, setPins] = useState<Pins>(boot?.pins ?? {})
+  const [pins, setPins] = useState<Pins>(bootPins)
   const [planIndex, setPlanIndex] = useState(0)
   // 课表页 A / B 各自选中的排法下标（默认第 1、第 2 种）；plans 变化越界时重置回默认。
   const [planAIndex, setPlanAIndex] = useState(0)
   const [planBIndex, setPlanBIndex] = useState(1)
   // #12 单方案模式:点排法横条的方框 → 只看这一个排法(退出 A/B 对比);点 A / B 按钮回到对比。
   const [soloPlanIndex, setSoloPlanIndex] = useState<number | null>(null)
-  const [page, setPage] = useState<Page>('select')
+  const [page, setPage] = useState<Page>(bootPage)
   // 当前正在播放的切页动画（null = 无动画，直接渲染单页）。
   const [transition, setTransition] = useState<PageTransition | null>(null)
   // The course whose detail popup is open (null = closed).
   const [detailCourse, setDetailCourse] = useState<Course | null>(null)
 
-  // 切页统一入口：记录来向与方向，触发一次横向滑动，动画结束后清空 transition 回到单页渲染。
+  // go() 的 pushState 需要读全部会话字段(termSlug/committed/…/workEnd),但那些 state 声明
+  // 在 go 之后才出现;用一个稳定 ref 占位「构建 hash 的函数」,真正实现在下方渲染体里补上
+  // （与下面 dragMoveImplRef 同一手法:ref 先占位、useCallback 引用 .current、实现体后补,
+  // 因为闭包只在调用时才读取 .current,不受声明顺序影响)。
+  const liveHashBuilderRef = useRef<(p: Page) => string>(() => '')
+  // popstate 恢复触发的这一轮 state 变化不需要再 replaceState 写回 URL(URL 已经是这个状态
+  // 了)——见下方「URL 实时状态同步」两个 effect。
+  const restoringUrlRef = useRef(false)
+
+  // 切页统一入口：记录来向与方向，触发一次横向滑动，动画结束后清空 transition 回到单页渲染；
+  // 同时 pushState 一条新历史条(hash 里的 page 换成目标页,其它字段读最近一次渲染的状态,
+  // 因为它们没变),使浏览器返回键能回到切换前的 tab。
   const go = useCallback(
     (to: Page) => {
       if (to === page) return
       setTransition({ from: page, dir: PAGE_ORDER[to] > PAGE_ORDER[page] ? 1 : -1 })
       setPage(to)
+      const hash = liveHashBuilderRef.current(to)
+      window.history.pushState(null, '', `${window.location.pathname}${window.location.search}${hash}`)
     },
     [page],
   )
@@ -303,8 +335,10 @@ export default function App() {
   // 课表页「上下班时间」（原「辅助线」）。用户自由输入 <input type="time">，两条虚线画在日历上
   // 供目测；同时也是「不展示不符合上下班限制的方案」与搜索卡「符合上下班时间」两个过滤开关的窗口来源。
   // null=不设该条线。持久化到 localStorage（cu-schedule:work-start / -end），默认 09:00 / 18:00。
-  const [workStart, setWorkStart] = useState<number | null>(loadWorkStart)
-  const [workEnd, setWorkEnd] = useState<number | null>(loadWorkEnd)
+  // #st= 里若带了这两个字段(哪怕是 null,即"未设线")就以它为准；没有 #st= 才退回
+  // localStorage(与其它字段的 boot 优先级一致——live > 本地存档)。
+  const [workStart, setWorkStart] = useState<number | null>(() => (live ? live.workStart : loadWorkStart()))
+  const [workEnd, setWorkEnd] = useState<number | null>(() => (live ? live.workEnd : loadWorkEnd()))
   useEffect(() => {
     window.localStorage.setItem('cu-schedule:work-start', workStart === null ? '' : String(workStart))
   }, [workStart])
@@ -312,11 +346,11 @@ export default function App() {
     window.localStorage.setItem('cu-schedule:work-end', workEnd === null ? '' : String(workEnd))
   }, [workEnd])
   // 「不展示冲突的方案」开关（默认开），与排法横条配合过滤显示的排法。
-  const [hideConflicts, setHideConflicts] = useState(true)
+  const [hideConflicts, setHideConflicts] = useState(live?.hideConflicts ?? true)
   // 「不展示不符合上下班限制的方案」（默认关——比 hideConflicts 更容易把方案全滤空，交给用户主动开）。
-  const [hideOutOfHours, setHideOutOfHours] = useState(false)
+  const [hideOutOfHours, setHideOutOfHours] = useState(live?.hideOutOfHours ?? false)
   // 搜索卡「符合上下班时间」（默认关，同上）。
-  const [meetsOfficeHours, setMeetsOfficeHours] = useState(false)
+  const [meetsOfficeHours, setMeetsOfficeHours] = useState(live?.meetsOfficeHours ?? false)
   // 两头都没设时间 → 上面两个开关都禁用，且自动关闭（避免「勾着但禁用」的悬空态）。
   const officeWindow = useMemo<TimeWindow>(() => ({ start: workStart, end: workEnd }), [workEnd, workStart])
   const officeWindowUnset = workStart === null && workEnd === null
@@ -336,15 +370,15 @@ export default function App() {
   const [includeSubjects, setIncludeSubjects] = useState<string[]>([])
   const [excludeSubjects, setExcludeSubjects] = useState<string[]>([])
   // 符合先修:排除先修被证伪的课。符合时间表(仅LEC):只留 LEC 能塞进当前课表的课。默认皆关。
-  const [meetsPrereq, setMeetsPrereq] = useState(false)
-  const [lecFits, setLecFits] = useState(false)
+  const [meetsPrereq, setMeetsPrereq] = useState(live?.meetsPrereq ?? false)
+  const [lecFits, setLecFits] = useState(live?.lecFits ?? false)
   const [units, setUnits] = useState<UnitPick[]>([])
   const [levels, setLevels] = useState<LevelBucket[]>([])
-  const [hideCompleted, setHideCompleted] = useState(true)
-  const [currentTermOnly, setCurrentTermOnly] = useState(true)
-  const [excludeTba, setExcludeTba] = useState(false)
+  const [hideCompleted, setHideCompleted] = useState(live?.hideCompleted ?? true)
+  const [currentTermOnly, setCurrentTermOnly] = useState(live?.currentTermOnly ?? true)
+  const [excludeTba, setExcludeTba] = useState(live?.excludeTba ?? false)
   // Restrict the catalog to the selected programme's courses (needs a chosen major).
-  const [programScope, setProgramScope] = useState<ProgramScope>('all')
+  const [programScope, setProgramScope] = useState<ProgramScope>(live?.programScope ?? 'all')
 
   // Enrolment year + major. Major is now a specific 培养方案 (Program), stored by its
   // stable program.id under 'cu-schedule:program'. The programme bundle loads lazily and
@@ -390,6 +424,38 @@ export default function App() {
       }),
     )
     window.history.replaceState(null, '', window.location.pathname + window.location.search)
+  }, [])
+
+  // 浏览器返回/前进键:popstate 只在 history.back()/forward()/go() 时触发(replaceState 本身
+  // 不触发,不会自环)。解出 #st= 就整体恢复(含 page);解不出(比如退到最初、pushState 之前
+  // 那条没有 #st= 的历史)保持现状不动——好过把已经在内存里的选课清空。restoringUrlRef 置位
+  // → 下方「URL 实时状态同步」effect 会在这轮变化后跳过一次 replaceState,避免恢复瞬间的
+  // 中间态覆盖刚恢复好的 URL(React 18+ 对原生事件里的这一串 setState 自动批处理成一次渲染,
+  // 所以下方 effect 只会在这轮恢复后跑一次,标志位读一次即够)。
+  useEffect(() => {
+    const onPopState = (): void => {
+      const state = decodeLiveState(window.location.hash)
+      if (!state) return
+      restoringUrlRef.current = true
+      setPage(state.page)
+      setTermSlug(state.termSlug)
+      setCommitted(state.committed)
+      setTaken(state.taken)
+      setPins(state.pins)
+      setHideConflicts(state.hideConflicts)
+      setHideOutOfHours(state.hideOutOfHours)
+      setMeetsOfficeHours(state.meetsOfficeHours)
+      setMeetsPrereq(state.meetsPrereq)
+      setLecFits(state.lecFits)
+      setHideCompleted(state.hideCompleted)
+      setCurrentTermOnly(state.currentTermOnly)
+      setExcludeTba(state.excludeTba)
+      setProgramScope(state.programScope)
+      setWorkStart(state.workStart)
+      setWorkEnd(state.workEnd)
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
   useEffect(() => {
@@ -447,6 +513,63 @@ export default function App() {
     const payload: Saved = { termSlug, committed, taken, cart, pins }
     window.localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
   }, [cart, committed, pins, taken, termSlug, terms.length])
+
+  // ---- URL 实时状态同步(用网址记录当前状态 + 返回键恢复) ----------------------------
+  // 每次渲染把"构建 #st= hash"的最新实现刷新到 go() 早先占位的 ref 里(与 colorSlotRef 那种
+  // 渲染体内直接改 ref 是同一手法),这样 go() 的 pushState 总能读到最新的 committed/pins/
+  // 开关等,而不必把 go 挪到这些 state 声明之后。
+  liveHashBuilderRef.current = (p: Page): string =>
+    encodeLiveState({
+      page: p,
+      termSlug,
+      committed,
+      taken,
+      pins,
+      hideConflicts,
+      hideOutOfHours,
+      meetsOfficeHours,
+      meetsPrereq,
+      lecFits,
+      hideCompleted,
+      currentTermOnly,
+      excludeTba,
+      programScope,
+      workStart,
+      workEnd,
+    })
+
+  // 切 tab 之外的一切编辑(committed/taken/pins/开关/上下班时间)→ 防抖 replaceState,原地
+  // 更新地址栏,不新增历史条——否则每勾一次课都是一步返回键,体验灾难。200ms 防抖避免连续
+  // 操作(比如快速勾选好几门课)时高频改写 history。
+  useEffect(() => {
+    if (restoringUrlRef.current) {
+      // 这一轮变化是 popstate 恢复触发的,URL 已经是这个状态了,不用再写回去。
+      restoringUrlRef.current = false
+      return
+    }
+    const timer = window.setTimeout(() => {
+      const hash = liveHashBuilderRef.current(page)
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${hash}`)
+    }, 200)
+    return () => window.clearTimeout(timer)
+  }, [
+    committed,
+    currentTermOnly,
+    excludeTba,
+    hideCompleted,
+    hideConflicts,
+    hideOutOfHours,
+    lecFits,
+    meetsOfficeHours,
+    meetsPrereq,
+    page,
+    pins,
+    programScope,
+    taken,
+    termSlug,
+    workEnd,
+    workStart,
+  ])
 
   // courseKey → the term orders (1=上学期 / 2=下学期) that key is offered in, across
   // the whole academic year. Keyed by course.key so suffixed variants share an entry.
