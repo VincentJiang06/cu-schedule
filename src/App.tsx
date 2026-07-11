@@ -29,6 +29,7 @@ import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } 
 import { courseKey } from './lib/courseKey.ts'
 import { downloadBlob } from './lib/exportImage.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
+import type { Aspect } from './lib/exportImage.ts'
 import {
   classifyPrograms,
   getProgram,
@@ -1018,6 +1019,10 @@ export default function App() {
   const cartGhostsB = useMemo(() => ghostBlocksFor(shownPlanB), [ghostBlocksFor, shownPlanB])
 
   const [exportNote, setExportNote] = useState('')
+  // #里程碑4:图片 PNG 导出前先选画面比例——六个按钮之一是「自定义」，点开才展示 w:h 输入框。
+  const [customAspectOpen, setCustomAspectOpen] = useState(false)
+  const [customAspectW, setCustomAspectW] = useState('1')
+  const [customAspectH, setCustomAspectH] = useState('1')
   // 只读分享（方案 2）：把当前选择存到后端换一个 /#v=<id> 只读链接（手机可看，一天有效）。
   const [shareNote, setShareNote] = useState('')
   const [shareBusy, setShareBusy] = useState(false)
@@ -1042,7 +1047,8 @@ export default function App() {
     setShareBusy(false)
   }
   // 导出页六张卡全部只导出顶部选中的那一个方案（selectedExportPlan），不再 A / B。
-  async function handleExport(format: ExportFormat): Promise<void> {
+  // #里程碑4:aspect 只有 format:'image' 用得到——导出页的六个比例按钮点哪个传哪个。
+  async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
     if (!selectedExportPlan) return
     setExportNote('正在导出…')
     const result = await exportPlan({
@@ -1051,6 +1057,7 @@ export default function App() {
       termName: term?.name ?? '',
       // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射);theme 透传给 PDF 的明暗两页。
       paint: (code, _subject, theme) => paintForCode(code, theme),
+      aspect,
     })
     setExportNote(result.ok ? result.note : result.reason)
   }
@@ -2018,9 +2025,75 @@ export default function App() {
       </PlanStripRail>
     ) : null
 
+  // #里程碑4:图片 PNG 卡不再是一个按钮，而是六个比例按钮(1:1/9:16/16:9/4:3/3:4/自定义)，
+  // 点哪个就以哪个比例导出——不用先选按钮再点下载,少一步。
+  const PNG_ASPECTS: Array<{ label: string; aspect: Aspect }> = [
+    { label: '1:1', aspect: { w: 1, h: 1 } },
+    { label: '9:16', aspect: { w: 9, h: 16 } },
+    { label: '16:9', aspect: { w: 16, h: 9 } },
+    { label: '4:3', aspect: { w: 4, h: 3 } },
+    { label: '3:4', aspect: { w: 3, h: 4 } },
+  ]
+  const pngAspectPicker = (
+    <div className="aspect-picker">
+      {PNG_ASPECTS.map((item) => (
+        <button
+          className="aspect-btn"
+          disabled={!selectedExportPlan}
+          key={item.label}
+          type="button"
+          onClick={() => void handleExport('image', item.aspect)}
+        >
+          {item.label}
+        </button>
+      ))}
+      <button
+        aria-expanded={customAspectOpen}
+        className={`aspect-btn${customAspectOpen ? ' aspect-btn--on' : ''}`}
+        disabled={!selectedExportPlan}
+        type="button"
+        onClick={() => setCustomAspectOpen((value) => !value)}
+      >
+        自定义
+      </button>
+      {customAspectOpen && (
+        <div className="aspect-custom">
+          <input
+            aria-label="宽"
+            className="aspect-custom__input"
+            inputMode="decimal"
+            value={customAspectW}
+            onChange={(event) => setCustomAspectW(event.target.value)}
+          />
+          <span aria-hidden>:</span>
+          <input
+            aria-label="高"
+            className="aspect-custom__input"
+            inputMode="decimal"
+            value={customAspectH}
+            onChange={(event) => setCustomAspectH(event.target.value)}
+          />
+          <button
+            className="export-btn aspect-custom__go"
+            disabled={!selectedExportPlan}
+            type="button"
+            onClick={() => {
+              const w = Number(customAspectW)
+              const h = Number(customAspectH)
+              void handleExport('image', { w: w > 0 ? w : 1, h: h > 0 ? h : 1 })
+            }}
+          >
+            按此比例导出
+          </button>
+        </div>
+      )}
+    </div>
+  )
+
   // 导出方式六卡：图标 + 名称 + 较完整介绍，2 个一行、共 3 行（.export-methods-grid 强制两列）。
   // 每卡都只导出顶部选中的 selectedExportPlan（只读分享除外——它分享的是整份选课状态，
-  // 沿用既有 #v= 只读分享逻辑，见 handleCreateShare 注释）。
+  // 沿用既有 #v= 只读分享逻辑，见 handleCreateShare 注释）。图片 PNG 卡用 footer 换掉默认按钮，
+  // 换成六个比例按钮(见上方 pngAspectPicker)。
   const exportMethods: Array<{
     key: string
     icon: ReactNode
@@ -2030,6 +2103,7 @@ export default function App() {
     disabled: boolean
     busy?: boolean
     onClick: () => void
+    footer?: ReactNode
   }> = [
     {
       key: 'wallpaper',
@@ -2106,10 +2180,11 @@ export default function App() {
         </svg>
       ),
       title: '图片 PNG',
-      desc: '课表截图，一张清晰的图片，发到群里或发朋友、微信问课都方便。',
+      desc: '课表截图，先选画面比例(六选一，也可自定义 w:h)，再导出这张比例的图。',
       ctaLabel: '下载图片',
       disabled: !selectedExportPlan,
-      onClick: () => void handleExport('image'),
+      onClick: () => void handleExport('image', { w: 8, h: 5 }),
+      footer: pngAspectPicker,
     },
     {
       key: 'html',
@@ -2164,14 +2239,16 @@ export default function App() {
               <h3 className="card__title">{method.title}</h3>
             </div>
             <p className="card__sub export-method-card__desc">{method.desc}</p>
-            <button
-              className="export-btn"
-              disabled={method.disabled}
-              type="button"
-              onClick={method.onClick}
-            >
-              {method.ctaLabel}
-            </button>
+            {method.footer ?? (
+              <button
+                className="export-btn"
+                disabled={method.disabled}
+                type="button"
+                onClick={method.onClick}
+              >
+                {method.ctaLabel}
+              </button>
+            )}
           </section>
         ))}
       </div>

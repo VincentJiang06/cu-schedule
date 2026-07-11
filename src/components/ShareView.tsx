@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { courseColorPalette } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { loadSubjects, loadTermList, loadYearOfferings, type Offering } from '../lib/data.ts'
+import type { Aspect } from '../lib/exportImage.ts'
 import { exportPlan, type ExportFormat } from '../lib/exportPlan.ts'
 import { generatePlans, NO_PREFS } from '../lib/schedule.ts'
 import { DAY_SHORT, hhmm } from '../lib/time.ts'
@@ -40,9 +41,21 @@ type State =
   | { phase: 'error' }
   | { phase: 'ready'; instance: ShareInstance; offerings: Offering[] }
 
+const PNG_ASPECTS: Array<{ label: string; aspect: Aspect }> = [
+  { label: '1:1', aspect: { w: 1, h: 1 } },
+  { label: '9:16', aspect: { w: 9, h: 16 } },
+  { label: '16:9', aspect: { w: 16, h: 9 } },
+  { label: '4:3', aspect: { w: 4, h: 3 } },
+  { label: '3:4', aspect: { w: 3, h: 4 } },
+]
+
 export function ShareView({ id }: { id: string }) {
   const [state, setState] = useState<State>({ phase: 'loading' })
   const [exportNote, setExportNote] = useState('')
+  // #里程碑4:图片 PNG 导出前先选画面比例，与主 app 导出页的六按钮同一套。
+  const [customAspectOpen, setCustomAspectOpen] = useState(false)
+  const [customAspectW, setCustomAspectW] = useState('1')
+  const [customAspectH, setCustomAspectH] = useState('1')
 
   useEffect(() => {
     applyTheme()
@@ -97,13 +110,14 @@ export function ShareView({ id }: { id: string }) {
     return { committedCourses, planA, totalUnits, colorForCode }
   }, [state])
 
-  async function handleExport(format: ExportFormat): Promise<void> {
+  async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
     if (state.phase !== 'ready' || !derived?.planA) return
     setExportNote('正在导出…')
     const result = await exportPlan({
       format,
       plan: derived.planA,
       termName: state.instance.termName,
+      aspect,
     })
     setExportNote(result.ok ? result.note : result.reason)
   }
@@ -182,12 +196,64 @@ export function ShareView({ id }: { id: string }) {
               <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('pdf')}>
                 表格 PDF
               </button>
-              <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('image')}>
-                图片 PNG
-              </button>
               <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('wallpaper')}>
                 手机壁纸
               </button>
+            </div>
+            {/* #里程碑4:图片 PNG 先选画面比例，与主 app 导出页同一套六按钮。 */}
+            <p className="sv__exports-label">图片 PNG · 选画面比例</p>
+            <div className="aspect-picker">
+              {PNG_ASPECTS.map((item) => (
+                <button
+                  className="aspect-btn"
+                  disabled={!planA}
+                  key={item.label}
+                  type="button"
+                  onClick={() => void handleExport('image', item.aspect)}
+                >
+                  {item.label}
+                </button>
+              ))}
+              <button
+                aria-expanded={customAspectOpen}
+                className={`aspect-btn${customAspectOpen ? ' aspect-btn--on' : ''}`}
+                disabled={!planA}
+                type="button"
+                onClick={() => setCustomAspectOpen((value) => !value)}
+              >
+                自定义
+              </button>
+              {customAspectOpen && (
+                <div className="aspect-custom">
+                  <input
+                    aria-label="宽"
+                    className="aspect-custom__input"
+                    inputMode="decimal"
+                    value={customAspectW}
+                    onChange={(event) => setCustomAspectW(event.target.value)}
+                  />
+                  <span aria-hidden>:</span>
+                  <input
+                    aria-label="高"
+                    className="aspect-custom__input"
+                    inputMode="decimal"
+                    value={customAspectH}
+                    onChange={(event) => setCustomAspectH(event.target.value)}
+                  />
+                  <button
+                    className="export-btn aspect-custom__go"
+                    disabled={!planA}
+                    type="button"
+                    onClick={() => {
+                      const w = Number(customAspectW)
+                      const h = Number(customAspectH)
+                      void handleExport('image', { w: w > 0 ? w : 1, h: h > 0 ? h : 1 })
+                    }}
+                  >
+                    按此比例导出
+                  </button>
+                </div>
+              )}
             </div>
             {exportNote && <p className="export-note">{exportNote}</p>}
           </section>

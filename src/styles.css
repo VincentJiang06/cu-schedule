@@ -2371,6 +2371,77 @@ select {
   cursor: not-allowed;
 }
 
+/* ---- 图片 PNG 导出：比例选择六按钮(#里程碑4) --------------------------------- */
+
+.aspect-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.aspect-btn {
+  flex: 1 1 64px;
+  min-width: 56px;
+  border: 1.5px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border-radius: 8px;
+  padding: 7px 6px;
+  font-size: 12px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+}
+
+.aspect-btn:hover:not(:disabled) {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+  transform: translateY(-1px);
+}
+
+.aspect-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.aspect-btn--on {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+  background: var(--brand-wash);
+}
+
+.aspect-custom {
+  flex: 1 0 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.aspect-custom__input {
+  width: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  border: 1.5px solid var(--line);
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.aspect-custom__input:focus {
+  outline: none;
+  border-color: var(--brand);
+}
+
+.aspect-custom__go {
+  flex: 2 1 auto;
+}
+
 .export-note {
   margin: 0;
   font-size: 12px;
@@ -4546,6 +4617,13 @@ select {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+}
+
+.sv__exports-label {
+  margin: 2px 0 -4px;
+  font-size: 11.5px;
+  font-weight: 650;
+  color: var(--ink-3);
 }
 
 .sv__exports .export-btn {

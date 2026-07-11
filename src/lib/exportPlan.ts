@@ -1,5 +1,5 @@
 import { exportIcs } from './ics.ts'
-import { exportImage, exportPdf, type PaintFn } from './exportImage.ts'
+import { exportImage, exportPdf, type Aspect, type PaintFn } from './exportImage.ts'
 import { exportHtmlFile } from './exportHtml.ts'
 import { exportWallpaper } from './exportWallpaper.ts'
 import type { Plan } from './schedule.ts'
@@ -14,6 +14,9 @@ export type ExportRequest = {
   /** Per-course canvas tint. App passes the timetable-palette painter so PNG/PDF/壁纸/HTML
    * carry the same colors as the on-screen timetable; omitted (ShareView) = subject colors. */
   paint?: PaintFn
+  /** #里程碑4:画面比例，只有 format:'image' 用得到——导出页六个比例按钮(或自定义
+   * w:h)选中的那个,不传 = 原来的 8:5。 */
+  aspect?: Aspect
 }
 
 export type ExportResult = { ok: true; note: string } | { ok: false; reason: string }
@@ -35,7 +38,7 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
         return { ok: true, note: `已下载 ${filename}` }
       }
       case 'image': {
-        const filename = await exportImage(request.plan, request.termName, request.paint)
+        const filename = await exportImage(request.plan, request.termName, request.paint, request.aspect)
         return { ok: true, note: `已下载 ${filename}` }
       }
       case 'pdf': {
