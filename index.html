@@ -10,12 +10,120 @@
     <link rel="manifest" href="./manifest.webmanifest" />
     <meta name="theme-color" content="#1e1b4b" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="中大选课与课表规划工具，含可选课筛选与 A/B 课表对比。" />
-    <title>CU Schedule · 中大选课助手</title>
+
+    <title>CUHK Schedule</title>
+    <meta
+      name="description"
+      content="CUHK Schedule 是香港中文大学（CUHK）学生的选课与课表规划工具：自动排出可行课表、主动筛选本学期还能选的课、解析先修与反修条件，并支持 A/B 课表对比、ICS 日历导出与只读分享链接。"
+    />
+    <meta
+      name="keywords"
+      content="CUHK, CUHK Schedule, 中大选课, 中大课表, 选课助手, 课表规划, 可选课筛选, 先修条件解析, A/B 课表对比, 香港中文大学"
+    />
+    <link rel="canonical" href="https://cus.vincejiang.com/" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="VincentJiang" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="CUHK Schedule" />
+    <meta property="og:title" content="CUHK Schedule · 中大选课与课表规划" />
+    <meta
+      property="og:description"
+      content="自动排课、可选课主动筛选、先修反修三值逻辑解析、A/B 课表对比——一站式的中大选课与课表规划工具。"
+    />
+    <meta property="og:url" content="https://cus.vincejiang.com/" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:image" content="https://cus.vincejiang.com/icon/icon-512.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:alt" content="CUHK Schedule 图标" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="CUHK Schedule · 中大选课与课表规划" />
+    <meta
+      name="twitter:description"
+      content="自动排课、可选课主动筛选、先修反修三值逻辑解析、A/B 课表对比——一站式的中大选课与课表规划工具。"
+    />
+    <meta name="twitter:image" content="https://cus.vincejiang.com/icon/icon-512.png" />
+
+    <!-- 结构化数据：应用本体 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CUHK Schedule",
+        "alternateName": "中大选课助手",
+        "url": "https://cus.vincejiang.com/",
+        "description": "CUHK Schedule 是香港中文大学（CUHK）学生的选课与课表规划工具：自动排出可行课表、主动筛选本学期还能选的课、解析先修与反修条件，并支持 A/B 课表对比、ICS 日历导出与只读分享链接。",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "HKD"
+        },
+        "featureList": [
+          "自动排课",
+          "可选课主动筛选",
+          "先修与反修条件三值逻辑解析",
+          "A/B 课表对比",
+          "ICS 日历导出",
+          "只读分享链接"
+        ],
+        "inLanguage": "zh-CN",
+        "isAccessibleForFree": true,
+        "creator": {
+          "@type": "Person",
+          "name": "VincentJiang",
+          "url": "https://vincejiang.com"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "VincentJiang",
+          "url": "https://vincejiang.com"
+        }
+      }
+    </script>
+
+    <!-- 结构化数据：面包屑 -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "CUHK Schedule",
+            "item": "https://cus.vincejiang.com/"
+          }
+        ]
+      }
+    </script>
+
     <script src="/assets/beacon.js?v=1" defer></script>
   </head>
   <body>
     <div id="root"></div>
+    <noscript>
+      <h1>CUHK Schedule · 中大选课助手</h1>
+      <p>
+        CUHK Schedule 是香港中文大学（CUHK）学生的选课与课表规划工具：输入要上的课和已经修过的课，
+        系统自动枚举每门课的 section 组合排出可行课表，并对全学期课程逐一判断能否放进当前课表。
+      </p>
+      <ul>
+        <li>自动排课：遵守 CUHK 的 cohort 配对规则，排除时间冲突，按上课天数从少到多给出多种排法</li>
+        <li>可选课主动筛选：对全学期每门课标注「可选 / 换排法 / 冲突 / 待定」四种状态</li>
+        <li>先修与反修条件解析：把选课限制的自由文本解析成布尔表达式，用三值逻辑（满足 / 不满足 / 不确定）求值</li>
+        <li>对照培养方案：按入学年份与主修展开官方课程结构，标记已完成课程</li>
+        <li>导出与分享：导出 ICS 日历、PNG 课表对比图，或生成只读分享链接</li>
+      </ul>
+      <p>课程数据抓取自 CUHK 公开课程目录。请启用 JavaScript 以使用完整功能。</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
