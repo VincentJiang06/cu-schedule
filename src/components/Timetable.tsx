@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react'
 import { courseColor } from '../lib/color.ts'
-import { hhmm } from '../lib/time.ts'
+import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
 const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -57,7 +57,8 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
   const start = Math.min(FLOOR, ...raw.map((block) => block.start))
-  const end = Math.max(CEIL, ...raw.map((block) => block.end))
+  // 用进位后的显示结束时间算下界，拉高的卡片不会溢出底部（与 TimetableCompare 一致）。
+  const end = Math.max(CEIL, ...raw.map((block) => displayEndMinutes(block.end)))
   const floorHour = Math.floor(start / 60)
   const ceilHour = Math.ceil(end / 60)
   const span = (ceilHour - floorHour) * 60
@@ -103,6 +104,8 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
               {blocks.length === 0 && plan && <span className="tt__free">空闲</span>}
               {blocks.map((block) => {
                 const width = 100 / block.lanes
+                // 显示用结束时间进位到下一个半点（本校无 :15/:45 起课）；真实 end 仍用于排课/分道。
+                const shownEnd = displayEndMinutes(block.end)
                 return (
                   <article
                     className="tt__block"
@@ -111,16 +114,16 @@ export function Timetable({ plan, emptyMessage }: { plan: Plan | null; emptyMess
                       {
                         ...courseColor(block.subject),
                         top: `${pct(block.start)}%`,
-                        height: `calc(${((block.end - block.start) / span) * 100}% - 3px)`,
+                        height: `calc(${((shownEnd - block.start) / span) * 100}% - 3px)`,
                         left: `calc(${block.lane * width}% + 2px)`,
                         width: `calc(${width}% - 4px)`,
                       } as CSSProperties
                     }
-                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(shownEnd)}\n${block.location || '地点待定'}`}
                   >
                     <b>{block.code}</b>
                     <time>
-                      {hhmm(block.start)}–{hhmm(block.end)}
+                      {hhmm(block.start)}–{hhmm(shownEnd)}
                     </time>
                     <span className="tt__block-meta">
                       {block.component}

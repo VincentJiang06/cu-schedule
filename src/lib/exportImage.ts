@@ -1,6 +1,6 @@
 import { subjectPaint, type CanvasPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
-import { hhmm } from './time.ts'
+import { displayEndMinutes, hhmm } from './time.ts'
 
 /** Resolve a block's canvas tint. Defaults to the subject-hash colors; App passes the
  * timetable-palette painter so exports carry exactly the on-screen timetable colors. */
@@ -88,7 +88,8 @@ function draw(
   const usesWeekend = all.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
   const floorHour = Math.floor(Math.min(FLOOR, ...all.map((block) => block.start)) / 60)
-  const ceilHour = Math.ceil(Math.max(CEIL, ...all.map((block) => block.end)) / 60)
+  // 用进位后的显示结束时间算下界，拉高的卡片不会溢出网格底部（与 TimetableCompare 一致）。
+  const ceilHour = Math.ceil(Math.max(CEIL, ...all.map((block) => displayEndMinutes(block.end))) / 60)
   const span = (ceilHour - floorHour) * 60
 
   const ink = '#1e2532'
@@ -172,7 +173,9 @@ function draw(
       const x = baseX + block.lane * laneW + 1.5
       const y = yOf(block.start) + 1
       const w = laneW - 3
-      const h = yOf(block.end) - yOf(block.start) - 2
+      // 显示用结束时间进位到下一个半点，与屏幕上的大课表卡片高度一致。
+      const shownEnd = displayEndMinutes(block.end)
+      const h = yOf(shownEnd) - yOf(block.start) - 2
       if (h <= 0 || w <= 0) continue
       const tint = paint(block.code, block.subject)
 
@@ -199,7 +202,7 @@ function draw(
       if (h > 30) {
         ty += 13
         ctx.font = '10px system-ui, -apple-system, sans-serif'
-        ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+        ctx.fillText(`${hhmm(block.start)}–${hhmm(shownEnd)}`, tx, ty)
       }
       if (h > 44) {
         ty += 13

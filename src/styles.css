@@ -253,8 +253,10 @@ select {
   opacity: 0.85;
 }
 
+/* #15 hover 不改字色，改下划线（字色保持不变）。 */
 .bar__nav-item:hover {
-  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .bar__nav-item--on {
@@ -3102,7 +3104,12 @@ select {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 14px;
-  box-shadow: 0 24px 60px -20px rgb(10 14 22 / 0.6);
+  /* #16 四周小范围渐变阴影光晕：主投影(下方)+ 一圈很近的环绕柔光(0 偏移、小扩散),
+     不带方向感,只在卡片边缘外一小圈发虚,不抢戏。 */
+  box-shadow:
+    0 24px 60px -20px rgb(10 14 22 / 0.6),
+    0 0 0 1px rgb(255 255 255 / 0.03) inset,
+    0 0 32px -6px color-mix(in srgb, var(--brand) 35%, transparent);
   overflow: hidden;
 }
 
