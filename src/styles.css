@@ -51,6 +51,10 @@
   --edge-l: 54%;
   --text-l: 29%;
 
+  /* Header height — hoisted to :root (not just .bar) so .side's sticky offset (below)
+     can reference the same value without duplicating the number. */
+  --bar-h: 48px;
+
   color-scheme: light;
 }
 
@@ -139,13 +143,20 @@ select {
   min-height: 100dvh;
 }
 
+/* #里程碑1:header 吸顶。--bar-h 现由 :root 提供(.side 的 sticky 偏移量要用同一个值)。
+   position:sticky 相对的是"最近的可滚动祖先"——.app/.app-body/.viewport/.grid 链路上都不设
+   overflow(见下方改动),所以那个祖先其实就是 document 本身;当页面因内容变高需要滚动时，
+   header 会贴住视口顶部不动，只有 .stage/.results-pane/.prog-pane 这类主内容随页面走。
+   z-index 开得比较高，压过 .side/.card 等普通层，但仍低于弹窗(.cm 等)。 */
 .bar {
-  /* Shared control height so the brand, the nav pill, and the theme toggle all line up. */
-  --bar-h: 48px;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 16px;
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--bg);
 }
 
 .bar__left {
@@ -708,6 +719,10 @@ select {
   padding: 10px 20px;
 }
 
+/* #里程碑1:侧栏（信息/选课/课表三页的控制卡片列）吸顶 + 自身内滚。align-self:start 让
+   .side 的盒子只按自身内容取高（不再被 grid 行拉伸到跟主内容一样高），这样才有"多出的
+   空间"可以让 sticky 生效——否则盒子本来就跟主内容一样高，没有滚动余地可贴。
+   max-height 封顶到一屏以内，超出时仍靠自己的 overflow-y:auto 内滚（原有行为不变）。 */
 .side {
   min-height: 0;
   overflow-y: auto;
@@ -715,6 +730,10 @@ select {
   flex-direction: column;
   gap: 10px;
   padding-right: 2px;
+  position: sticky;
+  top: calc(var(--bar-h) + 12px);
+  align-self: start;
+  max-height: calc(100dvh - var(--bar-h) - 24px);
 }
 
 .card {
@@ -4344,8 +4363,12 @@ select {
     display: none;
   }
 
+  /* 窄屏整页竖排、阅读顺序堆叠——侧栏不再吸顶/内滚，回到普通文档流（sticky 在这种
+     纵向堆叠里没有意义，还会把卡片钉在页面中间造成奇怪的悬浮）。 */
   .side {
+    position: static;
     overflow: visible;
+    max-height: none;
   }
 
   .stage {
