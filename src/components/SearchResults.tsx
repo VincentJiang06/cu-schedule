@@ -41,6 +41,10 @@ export type SearchFilters = {
   currentTermSlug: string | null
   /** When set, keep only courses whose key is in the chosen programme's course set. */
   majorKeys: Set<string> | null
+  /** Drop courses barred by an already-taken mutually-exclusive/superseding course
+   * (course.key ∈ barredKeys — see App's barredKeys). Off just shows them again with
+   * the existing 已修替代课 tag (flagFor) instead of hiding them outright. */
+  hideSuperseded: boolean
 }
 
 // A course's standing outside any chosen programme — 自由选修. Reused so we never
@@ -172,6 +176,9 @@ export function SearchResults({
       if (filters.ugOnly && course.career !== 'Undergraduate') return false
       if (filters.hideCompleted && takenSet.has(course.key)) return false
       if (filters.excludeTba && statusByCode.get(course.key) === 'tba') return false
+      // 隐藏已替代修课:滤掉 barredKeys 里的课(已修互斥/替代课挡下的);关闭时照常显示，
+      // 仍带下面 flagFor 算出的「已修替代课」角标(不隐藏，只是不再默认硬挡在列表里)。
+      if (filters.hideSuperseded && barredKeys.has(course.key)) return false
       if (include.size > 0 && !include.has(course.subject)) return false
       if (exclude.has(course.subject)) return false
       if (units.size > 0) {
@@ -193,7 +200,7 @@ export function SearchResults({
       if (filters.query.trim() && scoreCourse(course, filters.query) <= 0) return false
       return true
     })
-  }, [filters, lecFitSet, offerings, officeFitSet, prereqByCode, statusByCode, takenSet])
+  }, [barredKeys, filters, lecFitSet, offerings, officeFitSet, prereqByCode, statusByCode, takenSet])
 
   const groups = useMemo<SubjectGroup[]>(() => {
     const bySubject = new Map<string, Map<number, Course[]>>()

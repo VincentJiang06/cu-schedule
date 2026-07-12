@@ -591,6 +591,9 @@ export default function App() {
   const [hideCompleted, setHideCompleted] = useState(live?.hideCompleted ?? true)
   const [currentTermOnly, setCurrentTermOnly] = useState(live?.currentTermOnly ?? true)
   const [excludeTba, setExcludeTba] = useState(live?.excludeTba ?? false)
+  // 隐藏已替代修课:默认开——把 barredKeys(已修互斥/替代课挡下的课)从课程列表里滤掉；
+  // 关掉则照常显示，仍带「已替代/不可选」角标(见 SearchResults 的 flagFor)。
+  const [hideSuperseded, setHideSuperseded] = useState(live?.hideSuperseded ?? true)
   // Restrict the catalog to the selected programme's courses (needs a chosen major).
   const [programScope, setProgramScope] = useState<ProgramScope>(live?.programScope ?? 'all')
 
@@ -662,6 +665,7 @@ export default function App() {
       setHideCompleted(state.hideCompleted)
       setCurrentTermOnly(state.currentTermOnly)
       setExcludeTba(state.excludeTba)
+      setHideSuperseded(state.hideSuperseded)
       setProgramScope(state.programScope)
       setWorkStart(state.workStart)
       setWorkEnd(state.workEnd)
@@ -745,6 +749,7 @@ export default function App() {
       hideCompleted,
       currentTermOnly,
       excludeTba,
+      hideSuperseded,
       programScope,
       workStart,
       workEnd,
@@ -771,6 +776,7 @@ export default function App() {
     hideCompleted,
     hideConflicts,
     hideOutOfHours,
+    hideSuperseded,
     lecFits,
     meetsOfficeHours,
     meetsPrereq,
@@ -1096,6 +1102,7 @@ export default function App() {
       hideCompleted,
       currentTermOnly,
       excludeTba,
+      hideSuperseded,
       programScope,
       workStart,
       workEnd,
@@ -1132,6 +1139,7 @@ export default function App() {
       setHideCompleted(state.hideCompleted)
       setCurrentTermOnly(state.currentTermOnly)
       setExcludeTba(state.excludeTba)
+      setHideSuperseded(state.hideSuperseded)
       setProgramScope(state.programScope)
       setWorkStart(state.workStart)
       setWorkEnd(state.workEnd)
@@ -1215,6 +1223,7 @@ export default function App() {
     hideCompleted,
     currentTermOnly,
     excludeTba,
+    hideSuperseded,
     currentTermSlug: termSlug,
     majorKeys,
   }
@@ -1808,6 +1817,9 @@ export default function App() {
         </Toggle>
         <Toggle checked={hideCompleted} onChange={setHideCompleted}>
           隐藏已完成
+        </Toggle>
+        <Toggle checked={hideSuperseded} onChange={setHideSuperseded}>
+          隐藏已替代修课
         </Toggle>
       </div>
       <div className="filter-block">

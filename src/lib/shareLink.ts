@@ -89,6 +89,7 @@ export type LiveState = SharePayload & {
   hideCompleted: boolean
   currentTermOnly: boolean
   excludeTba: boolean
+  hideSuperseded: boolean
   programScope: 'all' | 'program'
   workStart: number | null
   workEnd: number | null
@@ -141,6 +142,7 @@ export function decodeLiveState(hash: string): LiveState | null {
       hideCompleted: asBool(r.hideCompleted, true),
       currentTermOnly: asBool(r.currentTermOnly, true),
       excludeTba: asBool(r.excludeTba, false),
+      hideSuperseded: asBool(r.hideSuperseded, true),
       programScope: r.programScope === 'program' ? 'program' : 'all',
       workStart: asMinutes(r.workStart),
       workEnd: asMinutes(r.workEnd),
