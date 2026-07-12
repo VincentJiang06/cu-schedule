@@ -247,7 +247,8 @@ export function buildScheduleHtml(
     gap: 1px;
     margin: 1px 2px;
     padding: 5px 7px;
-    border-radius: 6px;
+    /* #里程碑1(圆角更明显):6px → 10px，与屏幕上加大后的 .tt2__block 一致。 */
+    border-radius: 10px;
     border: 1px solid;
     border-left-width: 3px;
     overflow: hidden;

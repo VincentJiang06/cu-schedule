@@ -1685,7 +1685,8 @@ select {
   position: absolute;
   z-index: 1;
   overflow: hidden;
-  border-radius: 8px;
+  /* #里程碑1(圆角更明显):8px → 12px，课程块的"卡片感"更清楚。 */
+  border-radius: 12px;
   padding: 5px 7px;
   display: flex;
   flex-direction: column;
@@ -2397,7 +2398,8 @@ select {
   position: absolute;
   z-index: 1;
   overflow: hidden;
-  border-radius: 6px;
+  /* #里程碑1(圆角更明显):6px → 10px，与 .tt__block 同一档更明显的圆角。 */
+  border-radius: 10px;
   /* 三行内容(component+课号 / 时间 / 地点)，45 分钟的窄块塞不下三行时靠 overflow:hidden
      从下往上截断，第一行(课号)最优先保留。 */
   padding: 4px 6px;
