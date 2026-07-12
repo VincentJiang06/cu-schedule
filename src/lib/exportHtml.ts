@@ -109,10 +109,12 @@ export function buildScheduleHtml(
         // (见下方 .block / :root[data-theme='dark'] .block)，课块不用重新渲染整份 HTML。
         const light: CanvasPaint = paint(block.code, block.subject, 'light')
         const dark: CanvasPaint = paint(block.code, block.subject, 'dark')
-        // #里程碑(课块两行排版):统一只画两行——第1行「课号 + 缩写地点」、第2行时间，不再有
-        // 「LEC · 全楼名」的第三行。地点先经 abbreviateLocation 缩写（Lady Shaw Building LT1
-        // → LSB LT1 这类），为空(TBA)时第1行就只剩课号。
-        const locAbbrev = block.location ? escapeHtml(abbreviateLocation(block.location)) : ''
+        // #容器查询方法论对齐导出:这份导出 HTML 本身就是活的 CSS,与屏幕课表能用同一套
+        // 手法——课号/全称地点/简写地点/时间四个片段全部渲染进 DOM,用 `<style>` 里的
+        // `@container` 规则(见下方)按块自己实际渲染出的宽高选档,不用 JS 算宽度、不用
+        // 额外过一遍 class。地点为空(TBA)时不渲染地点片段,天然不占位。
+        const locFull = block.location ? escapeHtml(block.location) : ''
+        const locAbbr = block.location ? escapeHtml(abbreviateLocation(block.location)) : ''
         // LEC 保持 .block 的实心样式；TUT/LAB 等非 LEC 加 .block--alt，与屏幕上
         // .tt2__block--lec vs .tt2__block--alt 的区分一致（见下方 CSS）。
         const isLec = block.component === 'LEC'
@@ -121,14 +123,16 @@ export function buildScheduleHtml(
           `--fill-l:${light.fill};--edge-l:${light.edge};--text-l:${light.text};` +
           `--fill-d:${dark.fill};--edge-d:${dark.edge};--text-d:${dark.text}`
         return `<article class="block${isLec ? '' : ' block--alt'}" style="${style}">` +
-          `<span class="block__line1"><span class="block__code">${escapeHtml(block.code)}</span>` +
-          (locAbbrev ? ` <span class="block__loc">${locAbbrev}</span>` : '') +
-          `</span>` +
+          `<span class="block__code">${escapeHtml(block.code)}</span>` +
+          (block.location
+            ? `<span class="block__loc-full">${locFull}</span><span class="block__loc-abbr">${locAbbr}</span>`
+            : '') +
           // #Bug C:时间文案用真实结束时间(与屏幕 Timetable/TimetableCompare、PNG 导出
           // exportImage.ts 一致的 hhmm(block.end)),shownEnd(进位后的 displayEndMinutes)只用
           // 于上面算块高度,不进这里的文案,否则会出现「PNG 显示 12:15、HTML 显示 12:30」的
           // 进位不一致。
-          `<span class="block__time">${hhmm(block.start)}–${hhmm(block.end)}</span>` +
+          `<span class="block__time"><span class="block__time-a">${hhmm(block.start)}</span>` +
+          `<span class="block__time-dash">–</span><span class="block__time-b">${hhmm(block.end)}</span></span>` +
           `</article>`
       })
       .join('')
@@ -248,20 +252,31 @@ export function buildScheduleHtml(
   .grid-line--half {
     background: #f0f1f5;
   }
+  /* #容器查询方法论对齐导出:这份导出 HTML 完全离线自包含，正好可以跟屏幕课表用*同一套*
+     真正的 CSS 容器查询方法论(而不是 JS 算宽度加 class)——.block 挂 container-type:size
+     + container-name:blk，课号/全称地点/简写地点/时间四个片段全部渲染进 DOM(dayColumns
+     那段拼接见上方)，具体哪档可见、要不要折行/降级，全交给下面的 @container blk 规则
+     按块自己实际渲染出的宽高决定。断点数值与屏幕版(styles.css 的「共享的容器查询规则」
+     一节)同一套——两边的 border+padding 开销量级相近，同一组数字够用，不必为这份离线
+     导出文件单独再核验一轮。 */
   .block {
     position: absolute;
     z-index: 1;
     display: flex;
-    flex-direction: column;
-    gap: 2px;
+    flex-flow: row wrap;
+    align-items: baseline;
+    column-gap: 6px;
+    row-gap: 1px;
     margin: 1px 2px;
-    padding: 6px 8px;
+    padding: 4px 8px;
     /* #里程碑1(圆角更明显):6px → 10px，与屏幕上加大后的 .tt2__block 一致。 */
     border-radius: 10px;
     border: 1px solid;
     border-left-width: 3px;
     overflow: hidden;
-    font-size: 13px;
+    line-height: 1.2;
+    container-type: size;
+    container-name: blk;
     /* #里程碑5:明暗两套色阶都以自定义属性内联在每个课块上，切主题只是换用哪一组，
        不需要重新生成/重新渲染整份 HTML(见下方 dayColumns 的 style 拼接)。 */
     background: var(--fill-l);
@@ -273,42 +288,91 @@ export function buildScheduleHtml(
   .block.block--alt {
     background: color-mix(in srgb, var(--fill-l) 38%, #ffffff);
   }
-  /* #里程碑(课块两行排版+加字号):统一只画两行——第1行(.block__line1)是课号+缩写地点，
-     第2行是时间，不再有「LEC · 全楼名」的第三行。字号从旧版 12/11.5 整体提到下面这几档。 */
-  .block__line1 {
-    display: flex;
-    align-items: baseline;
-    gap: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  /* #里程碑2:课号等宽字体，与屏幕上 .tt2__block-code 的 var(--mono) 一致——这份导出
-     HTML 是完全离线的独立文件，没有 app 的 CSS 变量可复用，字体栈直接写死在这里。 */
+  /* 课号——唯一在所有档位都保留的片段。默认(窄档)给紧凑字号，宽档由下面的 @container
+     放大。min-width:0 而不是 flex-shrink:0——容器极窄时得允许它缩到比自身内容还窄，
+     靠 overflow/ellipsis 截断，不能把兄弟片段(时间行)一起挤出容器。 */
   .block__code {
     font-weight: 750;
-    font-size: 16px;
     font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    flex-shrink: 0;
+    min-width: 0;
+    max-width: 100%;
+    font-size: 13px;
   }
-  /* 缩写后的地点——紧跟在课号后面，无衬线字体，字号略小于课号但仍比旧的第3行大不少。 */
-  .block__loc {
+  /* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
+     宽档由 @container 反过来。 */
+  .block__loc-full {
     font-weight: 650;
-    font-size: 14px;
     opacity: 0.92;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+    display: none;
+    font-size: 13.5px;
   }
-  .block__time {
-    font-size: 14px;
-    font-variant-numeric: tabular-nums;
-    opacity: 0.9;
+  .block__loc-abbr {
+    font-weight: 650;
+    opacity: 0.92;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+    flex-basis: 100%;
+    font-size: 11px;
+  }
+  /* 时间——独占一行(flex-basis:100%)。默认按窄档给尺寸；容器窄到极限时(见下方
+     @container)再从一行"09:30–12:15"折成两行。 */
+  .block__time {
+    display: flex;
+    align-items: baseline;
+    flex-basis: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.9;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+  /* 宽档:全称地点现身、简写地点收起，课号/地点/时间字号都放大一档。 */
+  @container blk (min-width: 130px) {
+    .block__code { font-size: 16px; }
+    .block__loc-full { display: inline; }
+    .block__loc-abbr { display: none; }
+    .block__time { font-size: 13.5px; }
+  }
+  /* 窄档专属子断点:时间从一行拆成两行"09:30" / "–12:15"。 */
+  @container blk (max-width: 70px) {
+    .block__time { flex-direction: column; align-items: flex-start; line-height: 1.15; gap: 0; }
+    .block__time-dash { display: none; }
+    .block__time-b::before { content: '–'; }
+  }
+  /* 矮块降级:不论宽窄，地点行整个收起，只留课号+时间，字号摁回窄档同一档紧凑值
+     (宽档大字号在矮块的高度预算里放不下——与屏幕版调容器查询断点时踩过的坑一致)。 */
+  @container blk (max-height: 38px) {
+    .block__loc-full, .block__loc-abbr { display: none; }
+    .block__code { font-size: 13px; }
+    .block__time { font-size: 11px; }
+  }
+  /* 窄(已两行拆分)+矮 的交集:两行时间 + 课号常已超出矮档预算，直接连时间也收起。 */
+  @container blk (max-height: 49px) and (max-width: 70px) {
+    .block__time { display: none; }
+  }
+  /* 宽+矮 的交集:宽档字号比矮档降级预算的 38px 更占地方，续一档更高的降级线。 */
+  @container blk (max-height: 49px) and (min-width: 130px) {
+    .block__loc-full { display: none; }
+    .block__code { font-size: 13px; }
+    .block__time { font-size: 11px; }
+  }
+  /* 极矮降级:再退一步，时间也收起，只剩课号一行。 */
+  @container blk (max-height: 26px) {
+    .block__time { display: none; }
+    .block__code { font-size: 11px; line-height: 1; }
   }
   footer { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   .foot-byline { font-size: 12.5px; font-weight: 750; color: #141a2b; text-decoration: none; }

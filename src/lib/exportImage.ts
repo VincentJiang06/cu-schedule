@@ -107,12 +107,25 @@ const BLOCK_RADIUS = 9
 // 让导出图和屏幕上的课号字体保持所见即所得。
 const MONO_STACK = 'ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace'
 
-// #里程碑(课块两行排版+加字号):课块统一只画两行——第1行「课号(等宽) + 缩写地点(无衬线)」，
-// 第2行时间——不再按块高度决定要不要画第3行。拆掉第三行后纵向空间富余，字号从旧版
-// 20/16/15 整体提到下面这三档，课号仍最大最醒目，地点次之，时间与地点相近。
+// #容器查询方法论对齐导出:导出画布的课块按*块自己的实际像素宽高*选档,与屏幕上课表
+// 同一套方法论(见 Timetable.tsx/TimetableCompare.tsx + styles.css 的 @container blk)——
+// 不再固定画两行。宽档:课号+地点同一行大字、第2行时间；窄档:课号/简写地点/时间三行
+// 堆叠、更窄时时间再拆两行；矮块降级(不论宽窄):只画课号+时间，收起地点。
+// 宽档字号(课号最大最醒目，地点次之，时间与地点相近)。
 const BLOCK_CODE_SIZE = 26
 const BLOCK_LOC_SIZE = 22
 const BLOCK_TIME_SIZE = 20
+// 窄档/矮块降级共用的紧凑字号——矮块不论宽窄都用这一档小字（教训与屏幕版一致：宽档的大
+// 字号在矮块的两行预算里放不下，矮块降级必须统一摁回小字号，而不是继承宽档大字号）。
+const BLOCK_CODE_SIZE_SM = 20
+const BLOCK_LOC_SIZE_SM = 17
+const BLOCK_TIME_SIZE_SM = 16
+
+// 两档判定阈值(画布坐标——与屏幕 CSS px 不是同一把尺子；导出字号本来就比屏幕大出
+// 一截，阈值按同样比例放大过)。
+const EXPORT_WIDE_MIN = 230 // 宽档:课号+地点横排大字
+const EXPORT_TIME_SPLIT_MAX = 140 // 窄档再窄一档:时间从一行拆成两行
+const EXPORT_SHORT_MAX_H = 80 // 矮块降级:收起地点，只留课号+时间
 
 /** Alpha-blend a solid `hsl(...)` paint color toward whatever is already painted behind
  * it — a `<canvas>` has no `color-mix()`, but painting a translucent fill over an
@@ -135,6 +148,87 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.arcTo(x, y + h, x, y, radius)
   ctx.arcTo(x, y, x + w, y, radius)
   ctx.closePath()
+}
+
+/** #容器查询方法论对齐导出:按课块*实际像素宽高*(w/h,调用方已经算好、已经是 lane 分道
+ * 后的真实宽高)选档画文字，与屏幕课表同一套两档+矮块降级方法论——canvas 没有 CSS 的
+ * 自动换行/省略号，这里手动用 ctx.measureText 量出文字宽度决定排法；调用方已经把这段
+ * 绘制包在 ctx.clip() 到圆角矩形范围内，量算稍有出入也只会被裁掉，不会真的溢出到相邻
+ * 课块上。
+ * - 宽档(w ≥ EXPORT_WIDE_MIN)：第1行「课号 + 地点」横排大字——地点优先用全称，量出来
+ *   放不下就退到简写，简写也放不下就只画课号；第2行时间整串。
+ * - 窄档(w < EXPORT_WIDE_MIN)：课号 / 简写地点 / 时间三行堆叠；块还窄到
+ *   < EXPORT_TIME_SPLIT_MAX 时时间从一行拆成两行。
+ * - 矮块降级(h < EXPORT_SHORT_MAX_H)：不论宽窄，只画课号+时间两行，收起地点行，字号
+ *   统一摁回窄档同一档的紧凑值(宽档大字号在矮块的高度预算里放不下)。
+ */
+function drawBlockText(
+  ctx: CanvasRenderingContext2D,
+  block: { code: string; location: string; start: number; end: number },
+  x: number,
+  y: number,
+  w: number,
+  h: number,
+): void {
+  const tx = x + 9
+  const avail = x + w - tx - 6 // 右边留 6px 缓冲，量算某段文字是否放得下时用
+  const isWide = w >= EXPORT_WIDE_MIN
+  const isShort = h < EXPORT_SHORT_MAX_H
+  const big = isWide && !isShort
+  const codeSize = big ? BLOCK_CODE_SIZE : BLOCK_CODE_SIZE_SM
+  const locSize = big ? BLOCK_LOC_SIZE : BLOCK_LOC_SIZE_SM
+  const timeSize = big ? BLOCK_TIME_SIZE : BLOCK_TIME_SIZE_SM
+  const lineGap = big ? 27 : 20
+  const firstBaseline = big ? y + 30 : y + 23
+  const monoFont = (size: number) => `700 ${size}px ${MONO_STACK}`
+  const locFont = (size: number) => `600 ${size}px system-ui, -apple-system, sans-serif`
+  const timeFont = (size: number) => `${size}px system-ui, -apple-system, sans-serif`
+
+  ctx.font = monoFont(codeSize)
+  ctx.fillText(block.code, tx, firstBaseline)
+
+  if (isShort) {
+    // 矮块降级:不论宽窄，只画课号+时间——短课(45 分钟，进位显示后 60 分钟高)在多道
+    // 并排时最容易撞到这一档，与屏幕版矮块降级同一个判定精神。
+    ctx.font = timeFont(timeSize)
+    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
+    return
+  }
+
+  if (isWide) {
+    // 宽档:课号 + 地点同一行大字。
+    if (block.location) {
+      const codeW = ctx.measureText(block.code).width
+      const full = ` ${block.location}`
+      const abbr = ` ${abbreviateLocation(block.location)}`
+      ctx.font = locFont(locSize)
+      let locText = full
+      if (codeW + ctx.measureText(full).width > avail) {
+        locText = abbr
+        if (codeW + ctx.measureText(abbr).width > avail) locText = ''
+      }
+      if (locText) ctx.fillText(locText, tx + codeW, firstBaseline)
+    }
+    ctx.font = timeFont(timeSize)
+    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
+    return
+  }
+
+  // 窄档:课号 / 简写地点 / 时间三行堆叠；块本身太窄时时间从一行拆成两行。
+  let ty = firstBaseline
+  if (block.location) {
+    ty += lineGap
+    ctx.font = locFont(locSize)
+    ctx.fillText(abbreviateLocation(block.location), tx, ty)
+  }
+  ty += lineGap
+  ctx.font = timeFont(timeSize)
+  if (w < EXPORT_TIME_SPLIT_MAX) {
+    ctx.fillText(hhmm(block.start), tx, ty)
+    ctx.fillText(`–${hhmm(block.end)}`, tx, ty + lineGap * 0.85)
+  } else {
+    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+  }
 }
 
 /** #里程碑2:PDF 一次导出明暗两页，页面底色/线条/文字都要按主题切换——这里镜像
@@ -267,23 +361,9 @@ function draw(
       ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
-      const tx = x + 9
-      // #里程碑(课块两行排版):第1行「课号 + 缩写地点」、第2行时间，两行统一画，不再有
-      // 按块高度决定画不画第3行的旧逻辑（矮块交给下面的 ctx.clip() 兜底裁切，不单独处理）。
-      // 课号仍是等宽字体（与屏幕一致），缩写地点紧跟其后但换成无衬线字体，先用等宽字体量出
-      // 课号宽度，再从那个 x 位置接着画地点文字，两段文字才能在同一行首尾相接。
-      let ty = y + 30
-      ctx.font = `700 ${BLOCK_CODE_SIZE}px ${MONO_STACK}`
-      ctx.fillText(block.code, tx, ty)
-      const locAbbrev = block.location ? abbreviateLocation(block.location) : ''
-      if (locAbbrev) {
-        const codeWidth = ctx.measureText(block.code).width
-        ctx.font = `600 ${BLOCK_LOC_SIZE}px system-ui, -apple-system, sans-serif`
-        ctx.fillText(` ${locAbbrev}`, tx + codeWidth, ty)
-      }
-      ty += 27
-      ctx.font = `${BLOCK_TIME_SIZE}px system-ui, -apple-system, sans-serif`
-      ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+      // #容器查询方法论对齐导出:按这个块的实际 w/h 选档画文字(宽档课号+地点横排大字/
+      // 窄档三行堆叠/矮块降级只留课号+时间)，见 drawBlockText 顶部注释。
+      drawBlockText(ctx, block, x, y, w, h)
       ctx.restore()
     }
   }
