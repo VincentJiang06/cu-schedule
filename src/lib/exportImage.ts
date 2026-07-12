@@ -1,3 +1,4 @@
+import { abbreviateLocation } from './buildingAbbrev.ts'
 import { activeTheme, subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
@@ -105,6 +106,13 @@ const BLOCK_RADIUS = 9
 // #里程碑2:课号是等宽字体，与屏幕 .tt__block-code/.tt2__block-code 的 var(--mono) 一致，
 // 让导出图和屏幕上的课号字体保持所见即所得。
 const MONO_STACK = 'ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace'
+
+// #里程碑(课块两行排版+加字号):课块统一只画两行——第1行「课号(等宽) + 缩写地点(无衬线)」，
+// 第2行时间——不再按块高度决定要不要画第3行。拆掉第三行后纵向空间富余，字号从旧版
+// 20/16/15 整体提到下面这三档，课号仍最大最醒目，地点次之，时间与地点相近。
+const BLOCK_CODE_SIZE = 26
+const BLOCK_LOC_SIZE = 22
+const BLOCK_TIME_SIZE = 20
 
 /** Alpha-blend a solid `hsl(...)` paint color toward whatever is already painted behind
  * it — a `<canvas>` has no `color-mix()`, but painting a translucent fill over an
@@ -226,6 +234,7 @@ function draw(
 
   // Course blocks — one column per weekday (single plan, no A/B split).
   // #里程碑2:课号/时间/地点字号整体加大，让打印出来的 PDF 更清晰易读。
+  // #里程碑(两行排版):现在统一只画两行，字号在此基础上再放大一档（见 BLOCK_*_SIZE）。
   const drawColumn = (blocks: Block[], baseX: number) => {
     for (const block of layOutDay(blocks)) {
       const laneW = colW / block.lanes
@@ -259,24 +268,22 @@ function draw(
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 9
-      let ty = y + 24
-      // #里程碑2(课表字体加大)+#里程碑(导出字体再加大一档):课号用等宽字体栈，与屏幕上
-      // .tt__block-code/.tt2__block-code 的 var(--mono) 保持所见即所得一致；时间/地点仍用
-      // 无衬线字体。三行字号从 16/13/12 再整体加大到 20/16/15，行距与「够高才画这一行」的
-      // 门槛(h>44/h>72)同步放宽，保证课块矮时仍优先保住看得清的那几行、不会挤成一团。
-      ctx.font = `700 20px ${MONO_STACK}`
+      // #里程碑(课块两行排版):第1行「课号 + 缩写地点」、第2行时间，两行统一画，不再有
+      // 按块高度决定画不画第3行的旧逻辑（矮块交给下面的 ctx.clip() 兜底裁切，不单独处理）。
+      // 课号仍是等宽字体（与屏幕一致），缩写地点紧跟其后但换成无衬线字体，先用等宽字体量出
+      // 课号宽度，再从那个 x 位置接着画地点文字，两段文字才能在同一行首尾相接。
+      let ty = y + 30
+      ctx.font = `700 ${BLOCK_CODE_SIZE}px ${MONO_STACK}`
       ctx.fillText(block.code, tx, ty)
-      if (h > 44) {
-        ty += 22
-        ctx.font = '16px system-ui, -apple-system, sans-serif'
-        ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+      const locAbbrev = block.location ? abbreviateLocation(block.location) : ''
+      if (locAbbrev) {
+        const codeWidth = ctx.measureText(block.code).width
+        ctx.font = `600 ${BLOCK_LOC_SIZE}px system-ui, -apple-system, sans-serif`
+        ctx.fillText(` ${locAbbrev}`, tx + codeWidth, ty)
       }
-      if (h > 72) {
-        ty += 19
-        const meta = block.location ? `${block.component} · ${block.location}` : block.component
-        ctx.font = '15px system-ui, -apple-system, sans-serif'
-        ctx.fillText(meta, tx, ty)
-      }
+      ty += 27
+      ctx.font = `${BLOCK_TIME_SIZE}px system-ui, -apple-system, sans-serif`
+      ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       ctx.restore()
     }
   }

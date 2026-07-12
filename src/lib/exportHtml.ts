@@ -1,3 +1,4 @@
+import { abbreviateLocation } from './buildingAbbrev.ts'
 import { subjectPaint, type CanvasPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
@@ -108,7 +109,10 @@ export function buildScheduleHtml(
         // (见下方 .block / :root[data-theme='dark'] .block)，课块不用重新渲染整份 HTML。
         const light: CanvasPaint = paint(block.code, block.subject, 'light')
         const dark: CanvasPaint = paint(block.code, block.subject, 'dark')
-        const meta = block.location ? `${block.component} · ${escapeHtml(block.location)}` : block.component
+        // #里程碑(课块两行排版):统一只画两行——第1行「课号 + 缩写地点」、第2行时间，不再有
+        // 「LEC · 全楼名」的第三行。地点先经 abbreviateLocation 缩写（Lady Shaw Building LT1
+        // → LSB LT1 这类），为空(TBA)时第1行就只剩课号。
+        const locAbbrev = block.location ? escapeHtml(abbreviateLocation(block.location)) : ''
         // LEC 保持 .block 的实心样式；TUT/LAB 等非 LEC 加 .block--alt，与屏幕上
         // .tt2__block--lec vs .tt2__block--alt 的区分一致（见下方 CSS）。
         const isLec = block.component === 'LEC'
@@ -117,9 +121,10 @@ export function buildScheduleHtml(
           `--fill-l:${light.fill};--edge-l:${light.edge};--text-l:${light.text};` +
           `--fill-d:${dark.fill};--edge-d:${dark.edge};--text-d:${dark.text}`
         return `<article class="block${isLec ? '' : ' block--alt'}" style="${style}">` +
-          `<span class="block__code">${escapeHtml(block.code)}</span>` +
+          `<span class="block__line1"><span class="block__code">${escapeHtml(block.code)}</span>` +
+          (locAbbrev ? ` <span class="block__loc">${locAbbrev}</span>` : '') +
+          `</span>` +
           `<span class="block__time">${hhmm(block.start)}–${hhmm(shownEnd)}</span>` +
-          `<span class="block__meta">${meta}</span>` +
           `</article>`
       })
       .join('')
@@ -244,15 +249,15 @@ export function buildScheduleHtml(
     z-index: 1;
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 2px;
     margin: 1px 2px;
-    padding: 5px 7px;
+    padding: 6px 8px;
     /* #里程碑1(圆角更明显):6px → 10px，与屏幕上加大后的 .tt2__block 一致。 */
     border-radius: 10px;
     border: 1px solid;
     border-left-width: 3px;
     overflow: hidden;
-    font-size: 11.5px;
+    font-size: 13px;
     /* #里程碑5:明暗两套色阶都以自定义属性内联在每个课块上，切主题只是换用哪一组，
        不需要重新生成/重新渲染整份 HTML(见下方 dayColumns 的 style 拼接)。 */
     background: var(--fill-l);
@@ -264,18 +269,43 @@ export function buildScheduleHtml(
   .block.block--alt {
     background: color-mix(in srgb, var(--fill-l) 38%, #ffffff);
   }
+  /* #里程碑(课块两行排版+加字号):统一只画两行——第1行(.block__line1)是课号+缩写地点，
+     第2行是时间，不再有「LEC · 全楼名」的第三行。字号从旧版 12/11.5 整体提到下面这几档。 */
+  .block__line1 {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   /* #里程碑2:课号等宽字体，与屏幕上 .tt2__block-code 的 var(--mono) 一致——这份导出
      HTML 是完全离线的独立文件，没有 app 的 CSS 变量可复用，字体栈直接写死在这里。 */
   .block__code {
     font-weight: 750;
-    font-size: 12px;
+    font-size: 16px;
     font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    flex-shrink: 0;
   }
-  .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .block__meta { opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* 缩写后的地点——紧跟在课号后面，无衬线字体，字号略小于课号但仍比旧的第3行大不少。 */
+  .block__loc {
+    font-weight: 650;
+    font-size: 14px;
+    opacity: 0.92;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .block__time {
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.9;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   footer { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   .foot-byline { font-size: 12.5px; font-weight: 750; color: #141a2b; text-decoration: none; }
   .foot-byline:hover { text-decoration: underline; }
