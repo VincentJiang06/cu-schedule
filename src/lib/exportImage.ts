@@ -311,19 +311,12 @@ function draw(
     drawColumn(raw.filter((block) => block.dayIndex === day), gridLeft + (day - 1) * colW)
   }
 
-  // #里程碑1:角标署名统一——主行「CUS by VinceJiang」显眼，AGPL/数据来源致谢降到极小字。
+  // 角标署名:只保留「CUS by VinceJiang」(数据来源归属留在仓库 NOTICE.md,不再印在导出物上)。
   ctx.textAlign = 'right'
   ctx.textBaseline = 'alphabetic'
   ctx.fillStyle = ink
   ctx.font = '700 13px system-ui, -apple-system, sans-serif'
-  ctx.fillText('CUS by VinceJiang', gridRight, H - 26)
-  ctx.fillStyle = muted
-  ctx.font = '9px system-ui, -apple-system, sans-serif'
-  ctx.fillText(
-    '数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)',
-    gridRight,
-    H - 12,
-  )
+  ctx.fillText('CUS by VinceJiang', gridRight, H - 16)
 }
 
 export function slugTerm(name: string): string {

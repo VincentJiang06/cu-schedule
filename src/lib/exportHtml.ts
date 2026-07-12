@@ -327,7 +327,6 @@ export function buildScheduleHtml(
     </div>
     <footer>
       <a class="foot-byline" href="https://github.com/VincentJiang06/cu-schedule" rel="noreferrer" target="_blank">CUS by VinceJiang</a>
-      <p class="foot-note">数据来自 CUHK 公开课程目录 · 管线 EagleZhen/another-cuhk-course-planner (AGPL-3.0)</p>
     </footer>
   </div>
   <script>
