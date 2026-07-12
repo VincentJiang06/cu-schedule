@@ -26,6 +26,20 @@
     "CSCI2520",
     "CSCI3160",
     "CSCI4130",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2030",
+    "DOTE2051",
+    "DOTE4040",
+    "DOTE4240",
+    "DOTE4280",
+    "DSME1030",
+    "DSME1040",
+    "DSME2030",
+    "DSME2051",
+    "DSME4040",
+    "DSME4240",
+    "DSME4280",
     "ELTU1001",
     "ELTU2005",
     "ELTU2012",
@@ -176,6 +190,15 @@
   "buckets": {
     "required": [
       {
+        "raw": "DOTE[DSME]1030",
+        "codes": [
+          "DOTE1030",
+          "DSME1030"
+        ],
+        "alt": true,
+        "from": "1. Faculty"
+      },
+      {
         "raw": "ENGG1110",
         "codes": [
           "ENGG1110"
@@ -190,6 +213,15 @@
         ],
         "alt": false,
         "from": "1. Faculty"
+      },
+      {
+        "raw": "DOTE[DSME]1040",
+        "codes": [
+          "DOTE1040",
+          "DSME1040"
+        ],
+        "alt": true,
+        "from": "i) DOTE[^DSME]1040#,"
       },
       {
         "raw": "ENGG2440",
@@ -267,6 +299,23 @@
         "raw": "ACCT2151",
         "codes": [
           "ACCT2151"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "DOTE[DSME]2030",
+        "codes": [
+          "DOTE2030",
+          "DSME2030"
+        ],
+        "alt": true,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
         ],
         "alt": false,
         "from": "i) Required Courses"
@@ -529,6 +578,15 @@
       }
     ],
     "elective": [
+      {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "i) Integrated BBA Programme"
+      },
       {
         "raw": "FINA3080",
         "codes": [
@@ -858,6 +916,15 @@
         "from": "ii) Information"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "ii) Information"
+      },
+      {
         "raw": "IERG3050",
         "codes": [
           "IERG3050"
@@ -1242,6 +1309,15 @@
         "from": "iii) Systems"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "iii) Systems"
+      },
+      {
         "raw": "FINA3080",
         "codes": [
           "FINA3080"
@@ -1503,6 +1579,15 @@
           "MATH4280"
         ],
         "alt": false,
+        "from": "iv) Mathematics"
+      },
+      {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
         "from": "iv) Mathematics"
       },
       {
@@ -1826,6 +1911,15 @@
         "from": "v) Statistics"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "v) Statistics"
+      },
+      {
         "raw": "FINA3080",
         "codes": [
           "FINA3080"
@@ -2474,6 +2568,15 @@
         "from": "vii) Marketing"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "viii) Computer"
+      },
+      {
         "raw": "FINA4120",
         "codes": [
           "FINA4120"
@@ -2714,6 +2817,15 @@
         "from": "ix) Electrical"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "ix) Electrical"
+      },
+      {
         "raw": "FINA4120",
         "codes": [
           "FINA4120"
@@ -2896,6 +3008,15 @@
         ],
         "alt": false,
         "from": "ix) Electrical"
+      },
+      {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "x) Mathematics"
       },
       {
         "raw": "FINA4120",
@@ -3146,6 +3267,15 @@
         "from": "xi) Statistics"
       },
       {
+        "raw": "DOTE[DSME]4280",
+        "codes": [
+          "DOTE4280",
+          "DSME4280"
+        ],
+        "alt": true,
+        "from": "xi) Statistics"
+      },
+      {
         "raw": "FINA4120",
         "codes": [
           "FINA4120"
@@ -3320,6 +3450,31 @@
         ],
         "alt": false,
         "from": "xi) Statistics"
+      },
+      {
+        "raw": "DOTE[DSME]4040",
+        "codes": [
+          "DOTE4040",
+          "DSME4040"
+        ],
+        "alt": true,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "DOTE4240",
+        "codes": [
+          "DOTE4240"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "DOTE4280",
+        "codes": [
+          "DOTE4280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
       },
       {
         "raw": "FINA3080",
@@ -3958,7 +4113,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "2.",
@@ -3985,7 +4140,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 6
     },
     {
       "marker": "ii)",
@@ -4012,7 +4167,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 40
+      "n_courses": 41
     },
     {
       "marker": "ii)",
@@ -4021,7 +4176,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 39
+      "n_courses": 40
     },
     {
       "marker": "iii)",
@@ -4030,7 +4185,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 36
+      "n_courses": 37
     },
     {
       "marker": "iv)",
@@ -4039,7 +4194,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 40
+      "n_courses": 41
     },
     {
       "marker": "v)",
@@ -4048,7 +4203,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 39
+      "n_courses": 40
     },
     {
       "marker": "vi)",
@@ -4075,7 +4230,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 26
+      "n_courses": 27
     },
     {
       "marker": "ix)",
@@ -4084,7 +4239,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 27
+      "n_courses": 28
     },
     {
       "marker": "x)",
@@ -4093,7 +4248,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 27
+      "n_courses": 28
     },
     {
       "marker": "xi)",
@@ -4102,7 +4257,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 26
+      "n_courses": 27
     },
     {
       "marker": "3.",
@@ -4129,7 +4284,7 @@
       "units": "24",
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 10
     },
     {
       "marker": "ii)",
@@ -4147,7 +4302,7 @@
       "units": "6",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 14
+      "n_courses": 17
     },
     {
       "marker": "(b)",
@@ -4518,6 +4673,12 @@
       "note": null,
       "courses": [
         {
+          "code": "DOTE1030",
+          "alts": [
+            "DSME1030"
+          ]
+        },
+        {
           "code": "ENGG1110",
           "alts": []
         },
@@ -4549,6 +4710,12 @@
               "note": null,
               "courses": [
                 {
+                  "code": "DOTE1040",
+                  "alts": [
+                    "DSME1040"
+                  ]
+                },
+                {
                   "code": "ENGG2440",
                   "alts": []
                 },
@@ -4573,7 +4740,7 @@
             },
             {
               "marker": "ii)",
-              "title": "",
+              "title": "Field Trips",
               "units": null,
               "note": null,
               "courses": [
@@ -4603,6 +4770,12 @@
               "units": null,
               "note": null,
               "courses": [
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
+                },
                 {
                   "code": "FINA3080",
                   "alts": []
@@ -4768,13 +4941,19 @@
             },
             {
               "marker": "ii)",
-              "title": "",
+              "title": "Information Engineering (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
                 {
                   "code": "CSCI1120",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
                 },
                 {
                   "code": "IERG3050",
@@ -4978,6 +5157,12 @@
                   "alts": []
                 },
                 {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
+                },
+                {
                   "code": "FINA3080",
                   "alts": []
                 },
@@ -5086,7 +5271,7 @@
             },
             {
               "marker": "iv)",
-              "title": "",
+              "title": "Mathematics (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -5117,6 +5302,12 @@
                 {
                   "code": "MATH4280",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
                 },
                 {
                   "code": "FINA3080",
@@ -5255,7 +5446,7 @@
             },
             {
               "marker": "v)",
-              "title": "",
+              "title": "Statistics (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -5286,6 +5477,12 @@
                 {
                   "code": "STAT4006",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
                 },
                 {
                   "code": "FINA3080",
@@ -5420,9 +5617,9 @@
             },
             {
               "marker": "vi)",
-              "title": "",
+              "title": "Financial Engineering (CUHK(SZ)) Group A",
               "units": null,
-              "note": "Engineering (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC3100, DDA3020, 4210, ECE4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, MKT4220, STA4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: SEEM3580, 4630, 4730, STAT2006 Group B: Courses offered by CUHK(SZ): CSC3050, 4001, 4120, DDA4230, ECE2050, 3001, 3050, 4010, 4011, MAT4001, 4240, MKT3020, 3030, 4030, 4040, 4120, STA3001,3005, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Courses offered by CUHK(SZ): CSC3100, DDA3020, 4210, ECE4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, MKT4220, STA4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: SEEM3580, 4630, 4730, STAT2006 Group B: Courses offered by CUHK(SZ): CSC3050, 4001, 4120, DDA4230, ECE2050, 3001, 3050, 4010, 4011, MAT4001, 4240, MKT3020, 3030, 4030, 4040, 4120, STA3001,3005, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "SEEM3580",
@@ -5531,7 +5728,7 @@
               "marker": "vii)",
               "title": "",
               "units": null,
-              "note": "and Communication (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): MKT3020, 3030, 4030, 4040, 4120, 4220 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, 4001, 4240, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Group A: Courses offered by CUHK(SZ): MKT3020, 3030, 4030, 4040, 4120, 4220 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, 4001, 4240, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "IERG3050",
@@ -5638,6 +5835,12 @@
               "units": null,
               "note": null,
               "courses": [
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
+                },
                 {
                   "code": "FINA4120",
                   "alts": []
@@ -5768,6 +5971,12 @@
                   "alts": []
                 },
                 {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
+                },
+                {
                   "code": "FINA4120",
                   "alts": []
                 },
@@ -5868,6 +6077,12 @@
               "units": null,
               "note": null,
               "courses": [
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
+                },
                 {
                   "code": "FINA4120",
                   "alts": []
@@ -5981,7 +6196,7 @@
             },
             {
               "marker": "xi)",
-              "title": "",
+              "title": "Statistics (CUHK(SZ)) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -6000,6 +6215,12 @@
                 {
                   "code": "STAT4006",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4280",
+                  "alts": [
+                    "DSME4280"
+                  ]
                 },
                 {
                   "code": "FINA4120",
@@ -6129,6 +6350,16 @@
                   "alts": []
                 },
                 {
+                  "code": "DOTE2030",
+                  "alts": [
+                    "DSME2030"
+                  ]
+                },
+                {
+                  "code": "DOTE2051",
+                  "alts": []
+                },
+                {
                   "code": "FINA2010",
                   "alts": []
                 },
@@ -6170,6 +6401,20 @@
               "units": 6,
               "note": null,
               "courses": [
+                {
+                  "code": "DOTE4040",
+                  "alts": [
+                    "DSME4040"
+                  ]
+                },
+                {
+                  "code": "DOTE4240",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4280",
+                  "alts": []
+                },
                 {
                   "code": "FINA3080",
                   "alts": []

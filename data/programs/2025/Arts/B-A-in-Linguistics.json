@@ -815,8 +815,8 @@
         {
           "marker": "(b)",
           "title": "",
-          "units": null,
-          "note": null,
+          "units": 6,
+          "note": "Language courses to enhance students’ exposure to other language(s)",
           "courses": [
             {
               "code": "FREN1001",

@@ -1649,9 +1649,9 @@
     },
     {
       "marker": "4.",
-      "title": "Elective Courses (Choose any ONE from the following five options)",
+      "title": "Elective Courses",
       "units": 22,
-      "note": null,
+      "note": "(Choose any ONE from the following five options)",
       "courses": [],
       "children": [
         {
@@ -1891,9 +1891,9 @@
         },
         {
           "marker": "(b)",
-          "title": "Stream 1: Biomedical Intelligence Required",
+          "title": "Stream 1",
           "units": null,
-          "note": "Courses (7 units): BMEG2001/ESTR2201, BMEG3102, 3105 Elective Courses (Choose at least 12 units from the following): BMEG2300/ESTR2601, BMEG3101/ESTR3601, BMEG3103, 3130, 3320, 3420, 3910, BMEG4010/ESTR4601, BMEG4320/ESTR4200, BMEG4510/ESTR4204, CSCI5660, MAEG3060/ESTR3408 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
+          "note": "Biomedical Intelligence Required Courses (7 units): BMEG2001/ESTR2201, BMEG3102, 3105 Elective Courses (Choose at least 12 units from the following): BMEG2300/ESTR2601, BMEG3101/ESTR3601, BMEG3103, 3130, 3320, 3420, 3910, BMEG4010/ESTR4601, BMEG4320/ESTR4200, BMEG4510/ESTR4204, CSCI5660, MAEG3060/ESTR3408 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
           "courses": [
             {
               "code": "BMEG2001",
@@ -1974,9 +1974,9 @@
         },
         {
           "marker": "(c)",
-          "title": "Stream 2: Intelligent Multimedia Processing Required",
+          "title": "Stream 2",
           "units": null,
-          "note": "Courses (6 units): CSCI3280, ENGG2030/ESTR2206 or IERG2051/ESTR2302 Elective Courses (Choose at least 12 units from the following): AIST2010, 3110, 3120, AIST3510/SEEM3510, CSCI3260, 3290, 3330, 5640, ELEG3503, ELEG4511/ESTR4218, ELEG4512/IERG4160/ESTR4104, ELEG5491, ENGG5202, IERG3320/ESTR3306, IERG4190, IERG4300/ESTR4300, IERG5130, LING2003 or 2004, 2005, 2006, 4201, SEEM5680 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
+          "note": "Intelligent Multimedia Processing Required Courses (6 units): CSCI3280, ENGG2030/ESTR2206 or IERG2051/ESTR2302 Elective Courses (Choose at least 12 units from the following): AIST2010, 3110, 3120, AIST3510/SEEM3510, CSCI3260, 3290, 3330, 5640, ELEG3503, ELEG4511/ESTR4218, ELEG4512/IERG4160/ESTR4104, ELEG5491, ENGG5202, IERG3320/ESTR3306, IERG4190, IERG4300/ESTR4300, IERG5130, LING2003 or 2004, 2005, 2006, 4201, SEEM5680 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
           "courses": [
             {
               "code": "CSCI3280",
@@ -2102,9 +2102,9 @@
         },
         {
           "marker": "(d)",
-          "title": "Stream 3: Large-scale Artificial Intelligence - Theory and Systems",
+          "title": "Stream 3",
           "units": null,
-          "note": "Required Courses (3 units): AIST3020 Elective Courses (Choose at least 15 units from the following): AIST3120, CSCI2750, CSCI3150/ESTR3102, CSCI3170, CSCI4160/ESTR4104, CSCI4180/ESTR4106, CSCI4230, CSCI4250/ESTR4122, CSCI5030, 5120, 5150, 5350, 5540, 5550, 5570, 5640, 5690, ENGG5103, 5108, IERG3050, IERG4080/ESTR4312, IERG4230, IERG4300/ESTR4300, IERG4330/ESTR4316, IERG5130, STAT4001, 4005 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
+          "note": "Large-scale Artificial Intelligence - Theory and Systems Required Courses (3 units): AIST3020 Elective Courses (Choose at least 15 units from the following): AIST3120, CSCI2750, CSCI3150/ESTR3102, CSCI3170, CSCI4160/ESTR4104, CSCI4180/ESTR4106, CSCI4230, CSCI4250/ESTR4122, CSCI5030, 5120, 5150, 5350, 5540, 5550, 5570, 5640, 5690, ENGG5103, 5108, IERG3050, IERG4080/ESTR4312, IERG4230, IERG4300/ESTR4300, IERG4330/ESTR4316, IERG5130, STAT4001, 4005 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
           "courses": [
             {
               "code": "AIST3020",
@@ -2237,9 +2237,9 @@
         },
         {
           "marker": "(e)",
-          "title": "Stream 4: Intelligent Manufacturing and Robotics",
+          "title": "Stream 4",
           "units": null,
-          "note": "Required Courses (8 units): ENGG2720/ESTR2014, MAEG2020/ESTR2400, MAEG3040 Elective Courses (Choose at least 9 units from the following): EEEN2040, EEEN3010/ESTR3410, MAEG3020/ESTR3404, MAEG3050/ESTR3406, MAEG3060/ESTR3408, MAEG3080, MAEG4010/ESTR4408, MAEG4020/ESTR4410, MAEG4050, 5090, SEEM3500 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
+          "note": "Intelligent Manufacturing and Robotics Required Courses (8 units): ENGG2720/ESTR2014, MAEG2020/ESTR2400, MAEG3040 Elective Courses (Choose at least 9 units from the following): EEEN2040, EEEN3010/ESTR3410, MAEG3020/ESTR3404, MAEG3050/ESTR3406, MAEG3060/ESTR3408, MAEG3080, MAEG4010/ESTR4408, MAEG4020/ESTR4410, MAEG4050, 5090, SEEM3500 Remaining units can be chosen from any courses under item 4(a) General Artificial Intelligence: Systems and Technologies",
           "courses": [
             {
               "code": "ENGG2720",

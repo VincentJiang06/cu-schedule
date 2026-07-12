@@ -1094,7 +1094,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "course from the following selected courses from Area 1",
+          "note": "1 course from the following selected courses from Area 1",
           "courses": [
             {
               "code": "CURE2113",
@@ -1119,7 +1119,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "course from the following selected courses from Area 2",
+          "note": "1 course from the following selected courses from Area 2",
           "courses": [
             {
               "code": "CURE1124",
@@ -1148,7 +1148,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "course from the following selected courses from Area 4",
+          "note": "1 course from the following selected courses from Area 4",
           "courses": [
             {
               "code": "CURE2154",
@@ -1177,7 +1177,7 @@
           "marker": "(e)",
           "title": "",
           "units": null,
-          "note": "Capstone course from the following selected courses from Area 5",
+          "note": "1 Capstone course from the following selected courses from Area 5",
           "courses": [
             {
               "code": "CURE4153",

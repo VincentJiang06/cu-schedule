@@ -256,8 +256,8 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "",
-      "units": null,
+      "title": "Required Courses",
+      "units": 46,
       "note": null,
       "courses": [
         {
@@ -325,9 +325,9 @@
     },
     {
       "marker": "2.",
-      "title": "",
-      "units": null,
-      "note": "Courses: | 6 Two courses",
+      "title": "Elective Courses",
+      "units": 6,
+      "note": null,
       "courses": [
         {
           "code": "CHPR4012",

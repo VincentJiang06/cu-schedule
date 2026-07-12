@@ -382,7 +382,7 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "",
+      "title": "Required Courses",
       "units": 46,
       "note": null,
       "courses": [
@@ -459,9 +459,9 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 6,
-      "note": "Courses: 6 units of courses chosen from the following, with a maximum of 1 course from Group B: Group A: CHPR4011, 4012, PHPC2007#, 2009#, 2020#, 3010#, 3018#, 3034#, 4025#, 4032#, 4033#, 4040#, 4041#, 4042#, 4043# Group B",
+      "note": "6 units of courses chosen from the following, with a maximum of 1 course from Group B: Group A: CHPR4011, 4012, PHPC2007#, 2009#, 2020#, 3010#, 3018#, 3034#, 4025#, 4032#, 4033#, 4040#, 4041#, 4042#, 4043# Group B",
       "courses": [
         {
           "code": "CHPR4011",

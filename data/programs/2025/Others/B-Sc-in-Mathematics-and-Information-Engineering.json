@@ -2606,7 +2606,7 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "",
+      "title": "Faculty Package",
       "units": 9,
       "note": null,
       "courses": [
@@ -2686,7 +2686,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "of the following courses",
+          "note": "One of the following courses",
           "courses": [
             {
               "code": "ENGG1310",
@@ -2843,7 +2843,7 @@
         },
         {
           "marker": "(b)",
-          "title": "Research Component Courses[b]",
+          "title": "Research Component Courses",
           "units": 6,
           "note": null,
           "courses": [

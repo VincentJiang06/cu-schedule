@@ -1275,8 +1275,8 @@
     },
     {
       "marker": "2.",
-      "title": "",
-      "units": null,
+      "title": "Required Courses",
+      "units": 27,
       "note": null,
       "courses": [
         {
@@ -1320,9 +1320,9 @@
     },
     {
       "marker": "3.",
-      "title": "",
-      "units": null,
-      "note": "Courses: | 33 33 units of courses chosen from the following, including a minimum of 6 units of elective courses at 3000 or above level",
+      "title": "Elective Courses",
+      "units": 33,
+      "note": "33 units of courses chosen from the following, including a minimum of 6 units of elective courses at 3000 or above level",
       "courses": [
         {
           "code": "SOCI2101",
@@ -2114,8 +2114,8 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
-              "units": null,
+              "title": "Required Courses",
+              "units": 9,
               "note": null,
               "courses": [
                 {
@@ -2139,9 +2139,9 @@
             },
             {
               "marker": "(b)",
-              "title": "",
-              "units": null,
-              "note": "Courses: | 6 At least 6 units of courses chosen from the following, with a maximum of 3 units of DSPS courses",
+              "title": "Elective Courses",
+              "units": 6,
+              "note": "At least 6 units of courses chosen from the following, with a maximum of 3 units of DSPS courses",
               "courses": [
                 {
                   "code": "DSPS2201",

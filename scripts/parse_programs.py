@@ -65,7 +65,16 @@ FOOTNOTE_RE = re.compile(r"\[[a-z]+\]")
 # Uppercase cross-listing brackets ("DOTE[DSME]2021") stay untouched — those ARE a real
 # second code and are expanded by BRACKET_CODE_RE. Numeric-only brackets and '#' carry no
 # course we would otherwise lose, so erasing them up front is pure gap repair.
-ANNOT_STRIP_RE = re.compile(r"\[[a-z]+\]|\[\d+\]|#")
+#   * '@' / '^'     two more glued annotation flags of the same family: '@' marks a course
+#                   with a special note, '^' a laboratory course. Both non-alphanumeric, so
+#                   erasing them globally can never eat a code — they only ever sit in the
+#                   continuation gap ("LAWS1020@, 1030", "BCHE4030^, 4040") and orphan the
+#                   following shorthand number. (Law §1 lost 14 of 15 required courses to '@'.)
+#   * glued 'r'     a lowercase retake/label flag the Law calendar glues onto a code number
+#                   ("LAWS1010r, 1020r@, 1030"). Stripped ONLY when it is a single 'r' wedged
+#                   right after a digit and not followed by another letter — so the standalone
+#                   word "r" in the legend ("courses labelled as r") and any real text is safe.
+ANNOT_STRIP_RE = re.compile(r"\[[a-z]+\]|\[\d+\]|[#@^]|(?<=\d)r(?![a-z])")
 # A parenthetical insertion the calendar drops between a code and the next shorthand
 # number, e.g. "SOWK4030 (capstone course), 4510" or "…4903 (capstone course)". It too
 # lands in the continuation gap; we erase whole parentheticals from the *gap only* (not
@@ -188,8 +197,14 @@ def extract_courses(text: str) -> list[dict]:
                 codes, current_subj = _slash_codes(s, lead)
                 raw = lead + s
             else:
-                last_was_course = False
-                last_end = tok.end()
+                # Bare number that does NOT bind: skip it WITHOUT resetting the running
+                # subject / last_was_course and WITHOUT advancing last_end. Leaving the
+                # anchor on the last *accepted* course lets a parenthetical aside that sits
+                # between two listed courses ("3031 (or 4031), 3041", "4610 (capstone
+                # course), 4801") be erased from the (now wider) gap so the real next course
+                # re-binds — the old reset orphaned every course after such an aside
+                # (Physics §2(a), Law §1 cascades). A genuine non-course number keeps the
+                # widened gap full of prose words and still fails to bind, so this is safe.
                 continue
         if codes and raw not in seen:
             seen.add(raw)
@@ -347,7 +362,14 @@ def parse_requirements(block: str) -> tuple[list[dict], list[dict]]:
 # tree.  See SectionNode schema in the module docstring / build_bundles.mts.
 
 # Trailing "| 9" or "| 15-18" -> the leading integer (lower bound of any range).
-UNITS_TAIL_RE = re.compile(r"\|\s*(\d+)(?:\s*-\s*\d+)?\s*$")
+# Trailing "| 9" / "| 15-18" / "| 24 or 21[g2]" / "| 3 or 6 units" -> the requirement's
+# lower bound (I3: 区间/择一取下限). Tolerates a "-"/"–"/"or"/"to" join, an optional trailing
+# "units" word, and a footnote bracket ("[g2]"); strip_units takes the MIN of the captured
+# numbers. Was `\|\s*(\d+)(?:\s*-\s*\d+)?\s*$` — it silently dropped the "N or M[foot]" form,
+# leaving elective-pool nodes unit-less (Physics/Natural Sciences §3, the P4 undercount).
+UNITS_TAIL_RE = re.compile(
+    r"\|\s*(\d+(?:\s*(?:-|–|or|to)\s*\d+)?)\s*(?:units?)?\s*(?:\[[a-z0-9]+\])?\s*$", re.I
+)
 # "Choose (at least) 9 units", "Choose 17 units", "12-18 units from ..." -> first int.
 CHOOSE_UNITS_RE = re.compile(
     r"(?:at\s+least\s+|at\s+most\s+)?(\d+)(?:\s*-\s*\d+)?\s+units", re.I
@@ -474,7 +496,8 @@ def strip_units(text: str) -> tuple[int | None, str]:
     """Split a trailing '| N' unit tail off a line -> (units, text_without_tail)."""
     m = UNITS_TAIL_RE.search(text)
     if m:
-        return int(m.group(1)), text[: m.start()].rstrip()
+        nums = [int(x) for x in re.findall(r"\d+", m.group(1))]
+        return (min(nums) if nums else None), text[: m.start()].rstrip()
     return None, text
 
 
@@ -621,15 +644,62 @@ def _gather_rows(block: str) -> list[_Row]:
     return roots
 
 
+def _absorb_wrapped_heading(rest: str, cont: list[str]) -> tuple[str, list[str]]:
+    """Pull a wrapped heading's spill-over line(s) up into the marker's own text.
+
+    Two calendar wrap shapes strand a section title on continuation lines and leave the
+    marker row with no usable heading:
+      * marker alone on its line       "1.\\nFaculty Package: ENGG1110/…, | 9"
+      * title split across the wrap     "3. | Elective\\nCourses: | 9"
+    Merging the first continuation line(s) back onto `rest` lets the normal heading /
+    course-list logic below see the whole "Label: … | units" on one row, so the title
+    survives (I4) and the wrapped course tail still re-attaches (I1). Only a title-tail
+    (ends ':' after its units), a course-bearing line, or a short (≤5-word) fragment is
+    absorbed — a genuine multi-word rule that merely wraps is left alone.
+    """
+    def incomplete(r: str) -> bool:
+        rw = strip_units(r)[1].strip()
+        if rw == "":
+            return True
+        if r.count("(") > r.count(")"):
+            return True  # a parenthetical rule wraps ("Elective Courses (at least 6 units\nat 4000 level):")
+        return (
+            "|" not in r
+            and ":" not in rw
+            and not CODE_RE.search(rw)
+            and not rw.rstrip().endswith(":")
+            and len(rw.split()) <= 3
+        )
+
+    hops = 0
+    while cont and incomplete(rest) and hops < 4:
+        nxt = cont[0].strip()
+        if not nxt or PROSE_HEADER_RE.match(nxt):
+            break
+        # A wrapped parenthetical rule ("Elective Courses (Courses that\nappear …\nrequirement):")
+        # must be pulled in whole to close the paren — even though its continuation is long prose;
+        # otherwise the title stays truncated with an unbalanced '('. Other incompletions only
+        # absorb a title-tail / course line / short fragment.
+        if rest.count("(") <= rest.count(")"):
+            nw = strip_units(nxt)[1].strip()
+            tail_like = nw.rstrip().endswith(":") or bool(CODE_RE.search(nxt)) or len(nw.split()) <= 5
+            if not tail_like:
+                break
+        rest = (rest + " " + nxt).strip()
+        cont = cont[1:]
+        hops += 1
+    return rest, cont
+
+
 def _convert_row(row: _Row) -> dict:
-    node_units, rest_wo = strip_units(row.rest)
+    rest, body_lines = _absorb_wrapped_heading(row.rest, list(row.cont))
+    node_units, rest_wo = strip_units(rest)
     rest_codes = extract_courses(rest_wo)
     rest_complete = rest_wo.rstrip().endswith(":")
 
     title = ""
     note: str | None = None
     lead_rule: str | None = None
-    body_lines = list(row.cont)
     direct_courses: list[dict] = []
 
     if rest_codes:
@@ -669,6 +739,25 @@ def _convert_row(row: _Row) -> dict:
                 and (_SECTION_LABEL_NOUN.search(cand) or HEADER_TITLE_KW.search(cand))
             ):
                 lead_label, lead_after = cand, after
+        # Same peel for a "<Section Label> (<inline rule>):" heading whose rule is
+        # parenthesised rather than colon-led — "4. | Elective Courses (at least 6 units at
+        # 4000 level): CODE, …", "2. | Foundation Courses (all courses in group (a) …)". The
+        # pre-'(' text names the node (I4); the parenthetical is the rule (I5). Gated on the
+        # '(' preceding any colon-label and the parenthetical itself reading like a rule, so a
+        # bare designation like "Required Courses (Group A)" is left whole.
+        ppos = rest_wo.find("(")
+        if ppos > 0 and (lead_label is None or ppos < cpos):
+            cand = normalize_label(rest_wo[:ppos])
+            after = rest_wo[ppos:].strip().rstrip(":").strip()
+            if (
+                cand
+                and after
+                and not _looks_like_rule(cand)
+                and len(cand.split()) <= 6
+                and (_SECTION_LABEL_NOUN.search(cand) or HEADER_TITLE_KW.search(cand))
+                and _looks_like_rule(after)
+            ):
+                lead_label, lead_after = cand, after
         # A heading is: a structural parent (has children), a keyword-named leaf
         # (stream/package/…), OR a marker line that carries an explicit unit budget or
         # a colon-terminated label and does NOT read like a free-text rule. The last
@@ -681,7 +770,15 @@ def _convert_row(row: _Row) -> dict:
             or HEADER_TITLE_KW.search(title_candidate)
             or ((node_units is not None or rest_complete) and title_candidate and not is_rule)
         )
-        if is_heading:
+        if is_heading and lead_label is not None:
+            # Case B″: a structural/keyword heading whose marker line is "Label: inline-
+            # rule" ("4. | Elective Courses: 12 units of elective courses, with …", carrying
+            # (a)/(b) children). The colon-label names the node (I4); the sentence after the
+            # colon is the rule (I5) — it must NOT be swallowed into the title just because
+            # the node also has children or a heading keyword. Prefer the clean label split.
+            title = lead_label
+            lead_rule = lead_after
+        elif is_heading:
             # Case B: a heading (structural parent, or a named leaf like a stream).
             title, join_units, consumed = _join_title_continuation(
                 title_candidate, rest_complete, body_lines

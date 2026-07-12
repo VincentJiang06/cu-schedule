@@ -808,7 +808,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "16 units of courses",
+          "note": "A maximum of 16 units of courses chosen from the following",
           "courses": [
             {
               "code": "BECE3140",

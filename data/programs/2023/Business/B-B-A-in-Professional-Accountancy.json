@@ -1368,9 +1368,9 @@
     },
     {
       "marker": "3.",
-      "title": "",
-      "units": null,
-      "note": "Courses: | 9 9 units",
+      "title": "Elective Courses",
+      "units": 9,
+      "note": null,
       "courses": [
         {
           "code": "ACCT3005",

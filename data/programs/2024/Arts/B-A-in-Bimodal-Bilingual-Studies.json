@@ -668,7 +668,7 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Introductory Courses",
           "units": 6,
           "note": null,
           "courses": [
@@ -687,7 +687,7 @@
           "marker": "(b)",
           "title": "",
           "units": 9,
-          "note": null,
+          "note": "Sign Linguistics Courses",
           "courses": [
             {
               "code": "BMBL2001",
@@ -708,7 +708,7 @@
           "marker": "(c)",
           "title": "",
           "units": 6,
-          "note": "and Education for Deaf Children Courses",
+          "note": "Language and Education for Deaf Children Courses",
           "courses": [
             {
               "code": "BMBL1002",
@@ -725,7 +725,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "Kong Sign Language Courses: (i) HKSL1000 and 1002, or 1003 (ii) HKSL2001 and 2002, or 2003 (iii) HKSL3001 and 3002 | 6 6 6",
+          "note": "Hong Kong Sign Language Courses",
           "courses": [
             {
               "code": "HKSL1000",
@@ -775,7 +775,7 @@
           "marker": "(a)",
           "title": "",
           "units": 9,
-          "note": null,
+          "note": "Any three courses from",
           "courses": [
             {
               "code": "LING2003",
@@ -979,7 +979,7 @@
             },
             {
               "marker": "(iv)",
-              "title": "",
+              "title": "Area IV",
               "units": null,
               "note": null,
               "courses": [

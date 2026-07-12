@@ -1089,9 +1089,9 @@
     },
     {
       "marker": "2.",
-      "title": "Foundation Courses (all courses in group (a), one course from group (b), and one course from group (c) are required)",
+      "title": "Foundation Courses",
       "units": 18,
-      "note": null,
+      "note": "(all courses in group (a), one course from group (b), and one course from group (c) are required)",
       "courses": [],
       "children": [
         {
@@ -1426,7 +1426,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Required Courses (6 units): SEEM3430, 4540 Elective Courses (12 units)",
+          "note": "Business Information Systems Required Courses (6 units): SEEM3430, 4540 Elective Courses (12 units)",
           "courses": [
             {
               "code": "SEEM3430",
@@ -1497,7 +1497,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Required Courses (6 units): SEEM3620/ESTR3514, SEEM4760/ESTR4512 Elective Courses (12 units)",
+          "note": "Decision Analytics Required Courses (6 units): SEEM3620/ESTR3514, SEEM4760/ESTR4512 Elective Courses (12 units)",
           "courses": [
             {
               "code": "SEEM3620",

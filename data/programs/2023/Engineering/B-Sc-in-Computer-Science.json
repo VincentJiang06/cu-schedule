@@ -2281,7 +2281,7 @@
         },
         {
           "marker": "(b)",
-          "title": "Stream 1: Intelligence Science",
+          "title": "Stream 1",
           "units": null,
           "note": null,
           "courses": [],
@@ -2459,7 +2459,7 @@
         },
         {
           "marker": "(c)",
-          "title": "Stream 2: Database and Information Systems",
+          "title": "Stream 2",
           "units": null,
           "note": null,
           "courses": [],
@@ -2647,7 +2647,7 @@
         },
         {
           "marker": "(d)",
-          "title": "Stream 3: Rich Media",
+          "title": "Stream 3",
           "units": null,
           "note": null,
           "courses": [],
@@ -2789,7 +2789,7 @@
         },
         {
           "marker": "(e)",
-          "title": "Stream 4: Distributed Systems, Networks and Security",
+          "title": "Stream 4",
           "units": null,
           "note": null,
           "courses": [],
@@ -2940,7 +2940,7 @@
         },
         {
           "marker": "(f)",
-          "title": "Stream 5: Algorithms and Complexity",
+          "title": "Stream 5",
           "units": null,
           "note": null,
           "courses": [],
@@ -3053,7 +3053,7 @@
         },
         {
           "marker": "(g)",
-          "title": "Stream 6: Data Analytics",
+          "title": "Stream 6",
           "units": null,
           "note": null,
           "courses": [],

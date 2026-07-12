@@ -553,7 +553,7 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "Faculty",
+      "title": "Faculty Package",
       "units": 9,
       "note": null,
       "courses": [
@@ -574,7 +574,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 36,
       "note": null,
       "courses": [
@@ -649,37 +649,29 @@
           "title": "",
           "units": null,
           "note": null,
-          "courses": [],
-          "children": [
+          "courses": [
             {
-              "marker": "",
-              "title": "",
-              "units": 8,
-              "note": "Required Courses",
-              "courses": [
-                {
-                  "code": "ACCT2151",
-                  "alts": []
-                },
-                {
-                  "code": "ACCT3151",
-                  "alts": []
-                },
-                {
-                  "code": "LAWS2331",
-                  "alts": []
-                },
-                {
-                  "code": "FINA3080",
-                  "alts": []
-                },
-                {
-                  "code": "MGNT4090",
-                  "alts": []
-                }
-              ],
-              "children": []
+              "code": "ACCT2151",
+              "alts": []
             },
+            {
+              "code": "ACCT3151",
+              "alts": []
+            },
+            {
+              "code": "LAWS2331",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "MGNT4090",
+              "alts": []
+            }
+          ],
+          "children": [
             {
               "marker": "",
               "title": "",
@@ -838,7 +830,7 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Capstone Courses",
       "units": 6,
       "note": null,
       "courses": [

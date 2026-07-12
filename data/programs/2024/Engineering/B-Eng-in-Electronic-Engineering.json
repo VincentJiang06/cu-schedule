@@ -919,9 +919,9 @@
     },
     {
       "marker": "4.",
-      "title": "",
-      "units": null,
-      "note": "Elective Courses (at least 6 units",
+      "title": "Elective Courses",
+      "units": 18,
+      "note": "(at least 6 units at 4000 level)",
       "courses": [
         {
           "code": "CENG4120",

@@ -683,6 +683,30 @@
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
+        "raw": "GRMD4202",
+        "codes": [
+          "GRMD4202"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD4204",
+        "codes": [
+          "GRMD4204"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD4401",
+        "codes": [
+          "GRMD4401"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
         "raw": "MAEG3920",
         "codes": [
           "MAEG3920"
@@ -784,22 +808,6 @@
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
-        "raw": "GRMD4202",
-        "codes": [
-          "GRMD4202"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
-        "raw": "GRMD4204",
-        "codes": [
-          "GRMD4204"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
         "raw": "MAEG4080/ESTR4420",
         "codes": [
           "MAEG4080",
@@ -882,7 +890,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 42
+      "n_courses": 43
     }
   ],
   "structure": [
@@ -1224,6 +1232,18 @@
               "alts": []
             },
             {
+              "code": "GRMD4202",
+              "alts": []
+            },
+            {
+              "code": "GRMD4204",
+              "alts": []
+            },
+            {
+              "code": "GRMD4401",
+              "alts": []
+            },
+            {
               "code": "MAEG3920",
               "alts": []
             },
@@ -1283,14 +1303,6 @@
             },
             {
               "code": "EESC4240",
-              "alts": []
-            },
-            {
-              "code": "GRMD4202",
-              "alts": []
-            },
-            {
-              "code": "GRMD4204",
               "alts": []
             },
             {

@@ -10171,8 +10171,8 @@
         },
         {
           "marker": "(c)",
-          "title": "",
-          "units": null,
+          "title": "Programming, Computational and Statistical Skills",
+          "units": 6,
           "note": null,
           "courses": [
             {
@@ -10487,7 +10487,7 @@
         },
         {
           "marker": "(c)",
-          "title": "Capstone courses: one of the three options",
+          "title": "Capstone courses",
           "units": 6,
           "note": null,
           "courses": [],

@@ -1534,7 +1534,7 @@
         {
           "marker": "(b)",
           "title": "",
-          "units": null,
+          "units": 12,
           "note": "one or two overseas institution(s) for one or two academic term(s) via student exchange or study abroad programmes administered by the School of Journalism and Communication, Office of Academic Links or the Colleges, and complete at least 12 units of courses related to global communication approved by the School Director. Grades obtained in these courses are not included in the calculation of GPA. Students who are unable to obtain the required units from the overseas institution(s) must make up the shortfall by completing appropriate courses at CUHK, subject to the approval of the School Director.",
           "courses": [],
           "children": []
@@ -1544,7 +1544,7 @@
     {
       "marker": "3.",
       "title": "Elective Courses",
-      "units": null,
+      "units": 24,
       "note": "At least 24 units from the following courses, with a maximum of 6 units of non-COMM courses (Course that appear in more than one requirement can only be counted towards fulfillment of one requirement)",
       "courses": [],
       "children": [

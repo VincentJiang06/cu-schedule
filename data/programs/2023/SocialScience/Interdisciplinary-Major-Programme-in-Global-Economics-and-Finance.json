@@ -1749,9 +1749,9 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Capstone / Research",
           "units": null,
-          "note": "Research (3 units from the following)",
+          "note": "(3 units from the following)",
           "courses": [
             {
               "code": "GLEF4070",

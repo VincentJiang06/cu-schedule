@@ -725,9 +725,9 @@
           "children": [
             {
               "marker": "(i)",
-              "title": "",
+              "title": "Chinese Language Foundation Students are",
               "units": null,
-              "note": "Foundation Students are required to take any 2 courses",
+              "note": "required to take any 2 courses",
               "courses": [
                 {
                   "code": "CHES1005",

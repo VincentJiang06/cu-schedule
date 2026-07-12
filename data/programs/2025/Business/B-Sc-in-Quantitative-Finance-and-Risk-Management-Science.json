@@ -1670,7 +1670,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "(choose at least 9 units of courses from the following list)",
+          "note": "Risk Management Science (choose at least 9 units of courses from the following list)",
           "courses": [
             {
               "code": "CSCI3150",
@@ -1777,9 +1777,9 @@
         },
         {
           "marker": "(d)",
-          "title": "Capstone/Research (choose at least 3 units of courses from the following list)",
+          "title": "Capstone/Research",
           "units": null,
-          "note": null,
+          "note": "(choose at least 3 units of courses from the following list)",
           "courses": [
             {
               "code": "FINA4130",

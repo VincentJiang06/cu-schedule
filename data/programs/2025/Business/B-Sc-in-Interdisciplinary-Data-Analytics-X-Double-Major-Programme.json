@@ -4716,7 +4716,7 @@
             },
             {
               "marker": "ii)",
-              "title": "",
+              "title": "Field Trips",
               "units": null,
               "note": null,
               "courses": [
@@ -4915,7 +4915,7 @@
             },
             {
               "marker": "ii)",
-              "title": "",
+              "title": "Information Engineering (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -5241,7 +5241,7 @@
             },
             {
               "marker": "iv)",
-              "title": "",
+              "title": "Mathematics (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -5414,7 +5414,7 @@
             },
             {
               "marker": "v)",
-              "title": "",
+              "title": "Statistics (CUHK) Group A",
               "units": null,
               "note": null,
               "courses": [
@@ -5583,9 +5583,9 @@
             },
             {
               "marker": "vi)",
-              "title": "",
+              "title": "Financial Engineering (CUHK(SZ)) Group A",
               "units": null,
-              "note": "Engineering (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC3100, DDA3020, 4210, ECE4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, MKT4220, STA4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: SEEM3580, 4630, 4730, STAT2006 Group B: Courses offered by CUHK(SZ): CSC3050, 4001, 4120, DDA4230, ECE2050, 3001, 3050, 4010, 4011, MAT4001, 4240, MKT3020, 3030, 4030, 4040, 4120, STA3001,3005, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Courses offered by CUHK(SZ): CSC3100, DDA3020, 4210, ECE4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, MKT4220, STA4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: SEEM3580, 4630, 4730, STAT2006 Group B: Courses offered by CUHK(SZ): CSC3050, 4001, 4120, DDA4230, ECE2050, 3001, 3050, 4010, 4011, MAT4001, 4240, MKT3020, 3030, 4030, 4040, 4120, STA3001,3005, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "SEEM3580",
@@ -5694,7 +5694,7 @@
               "marker": "vii)",
               "title": "",
               "units": null,
-              "note": "and Communication (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): MKT3020, 3030, 4030, 4040, 4120, 4220 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, 4001, 4240, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Group A: Courses offered by CUHK(SZ): MKT3020, 3030, 4030, 4040, 4120, 4220 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3007, 3280, 3300, 4001, 4240, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "IERG3050",
@@ -5799,7 +5799,7 @@
               "marker": "viii)",
               "title": "",
               "units": null,
-              "note": "Science and Engineering (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, MAT3007 Group B: Course offered by CUHK(SZ): ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220, STA2002, 3001, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Group A: Courses offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA3020, 4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, MAT3007 Group B: Course offered by CUHK(SZ): ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220, STA2002, 3001, 3020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "DOTE4280",
@@ -5916,7 +5916,7 @@
               "marker": "ix)",
               "title": "",
               "units": null,
-              "note": "and Computer Engineering (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC3050, 3100, 4120, DDA3020, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, MAT3007 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: IERG3050, 3280, 3320, MATH3270 Group B: Course offered by CUHK(SZ): CSC4001, DDA4210, FIN3080, 4110, MAT3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Group A: Courses offered by CUHK(SZ): CSC3050, 3100, 4120, DDA3020, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, MAT3007 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: IERG3050, 3280, 3320, MATH3270 Group B: Course offered by CUHK(SZ): CSC4001, DDA4210, FIN3080, 4110, MAT3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "IERG3050",
@@ -6037,7 +6037,7 @@
               "marker": "x)",
               "title": "",
               "units": null,
-              "note": "and Applied Mathematics (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): MAT1002, 2001, 3007, 3280, 3300, 4001, 4240 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4120, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MKT3020, 3030, 4030, 4040, 4120, 4220 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Group A: Courses offered by CUHK(SZ): MAT1002, 2001, 3007, 3280, 3300, 4001, 4240 Group B: Course offered by CUHK(SZ): CSC3050, 3100, 4120, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MKT3020, 3030, 4030, 4040, 4120, 4220 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "DOTE4280",
@@ -6156,9 +6156,9 @@
             },
             {
               "marker": "xi)",
-              "title": "",
+              "title": "Statistics (CUHK(SZ)) Group A",
               "units": null,
-              "note": "(CUHK(SZ)) Group A: Courses offered by CUHK(SZ): DDA3020, MAT3007, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: RMSC4003, STAT3005, 4005, 4006 Group B: Courses offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "note": "Courses offered by CUHK(SZ): DDA3020, MAT3007, STA2002H, 3001, 3005, 3020, 4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group A: RMSC4003, STAT3005, 4005, 4006 Group B: Courses offered by CUHK(SZ): CSC3050, 3100, 4001, 4120, DDA4210, 4230, ECE2050, 3001, 3050, 4010, 4011, 4016, ECO3121, FIN3080, 3210, 4110, MAT1002, 2001, 3280, 3300, 4001, 4240, MKT3020, 3030, 4030, 4040, 4120, 4220 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "RMSC4003",

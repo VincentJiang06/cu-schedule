@@ -1500,9 +1500,9 @@
     },
     {
       "marker": "4.",
-      "title": "Elective Courses: The minimum number of units is 24.",
+      "title": "Elective Courses",
       "units": 24,
-      "note": null,
+      "note": "The minimum number of units is 24.",
       "courses": [],
       "children": [
         {

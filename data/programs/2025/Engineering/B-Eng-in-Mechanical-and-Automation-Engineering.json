@@ -1445,9 +1445,9 @@
     },
     {
       "marker": "4.",
-      "title": "Elective Courses (at least 6 units",
+      "title": "Elective Courses",
       "units": 14,
-      "note": "of MAEG courses at 4000 and above level or their reciprocal ESTR courses or ENGG courses at 5000 level)",
+      "note": "(at least 6 units of MAEG courses at 4000 and above level or their reciprocal ESTR courses or ENGG courses at 5000 level)",
       "courses": [],
       "children": [
         {

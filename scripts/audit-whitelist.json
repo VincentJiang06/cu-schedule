@@ -1,4 +1,916 @@
 {
-  "_doc": "P1 参考提取器自身误报的白名单(fable_docs/06 §3 P1.4)。每条 {program, code, reason}。只许收『参考提取器把非课号当课号』的误报,绝不许收『解析器真丢课』。逐条裁决后手工添加。",
-  "p1": []
+  "_doc": "审计参考提取器/学分门自身误报的白名单(fable_docs/06 §3 P1.4 与 §5.2)。只许收『参考提取器把非课号当课号』或『节内课已全录、门因目录学分漂移误报 FAIL』这两类审计侧误报,绝不许收『解析器真丢课』。逐条裁决后手工添加,每条带 reason。",
+  "p1": [],
+  "p2": [
+    {
+      "program": "2023:B.Sc. in Biochemistry",
+      "marker": "(a)",
+      "title": "",
+      "reason": "§2(a) 原文 10 门课(BCHE2000,2030,3030/3730,3040,3050,3070,3080,3092,3650)全部录入,P1 零丢课;印刷节学分=23,但按 2026-27 目录、孪生 3030/3730 择一(取 max=BCHE3030 3 学分)求和=22,缺口仅 1 学分。属方案(2023 入学)与最新课程目录(2026-27)之间的跨届单课学分漂移,非解析器丢课(ECON 式漏课已由 P1 拦截)。即便按『3030 与 3730 均必修』读法求和=24 也≥23、同样非丢课。"
+    },
+    {
+      "program": "2024:B.Sc. in Biochemistry",
+      "marker": "(a)",
+      "title": "",
+      "reason": "同 2023:B.Sc. in Biochemistry §2(a):10 门课全录、P1 零丢课,印刷 23 vs 2026-27 目录求和 22,1 学分跨届漂移,非解析器丢课。"
+    },
+    {
+      "program": "2025:B.Sc. in Biochemistry",
+      "marker": "(a)",
+      "title": "",
+      "reason": "同 2023:B.Sc. in Biochemistry §2(a):10 门课全录、P1 零丢课,印刷 23 vs 2026-27 目录求和 22,1 学分跨届漂移,非解析器丢课。"
+    }
+  ],
+  "warn": [
+    {
+      "program": "2023:B.A. in Anthropology",
+      "contains": "[(a)] \"\" units=27 Σresolved=18 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Bimodal Bilingual Studies",
+      "contains": "Σtop=39 vs total_units=57 (Δ-18)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. in Chinese Studies",
+      "contains": "[(a)] \"Introductory Courses\" units=9 Σresolved=3 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Chinese Studies",
+      "contains": "[(c)] \"\" units=9 Σresolved=0 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Cultural Management",
+      "contains": "[2.] \"Required Courses\" units=18 Σresolved=15 unresolved=4 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Cultural Studies",
+      "contains": "[2.] \"Required Courses\" units=18 Σresolved=12 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Japanese Studies",
+      "contains": "Σtop=63 vs total_units=69 (Δ-6)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. in Linguistics",
+      "contains": "Σtop=42 vs total_units=63 (Δ-21)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. in Linguistics",
+      "contains": "[(a)] \"\" units=18 Σresolved=0 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Linguistics",
+      "contains": "[(b)] \"\" units=6 Σresolved=3 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Theology",
+      "contains": "Σtop=58 vs total_units=70 (Δ-12)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. in Theology",
+      "contains": "[2.] \"Required Courses\" units=28 Σresolved=25 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.B.A. (Integrated BBA Programme) and Juris Doctor",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2023:B.B.A. - Integrated BBA Programme",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2023:B.Sc. in Interdisciplinary Data Analytics & X Double Major Programme",
+      "contains": "Σtop=420 vs total_units=90 (Δ330)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. (Chinese Language Studies) and B.Ed. (Chinese Language Education)",
+      "contains": "Σtop=35 vs total_units=117 (Δ-82)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.A. (English Studies) and B.Ed. (English Language Education)",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. (English Studies) and B.Ed. (English Language Education)",
+      "contains": "[(b)] \"\" units=9 Σresolved=0 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.A. in Early Childhood Education",
+      "contains": "[(a)] \"\" units=8 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Ed. in Early Childhood Education",
+      "contains": "Σtop=65 vs total_units=111 (Δ-46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Ed. in Mathematics and Mathematics Education",
+      "contains": "Σtop=93 vs total_units=102 (Δ-9)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "Σtop=51 vs total_units=104 (Δ-53)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Exercise Science and Health Education",
+      "contains": "Σtop=14 vs total_units=55 (Δ-41)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Learning Design and Technology",
+      "contains": "[2.] \"Foundation Courses\" units=21 Σresolved=18 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Artificial Intelligence: Systems and Technologies",
+      "contains": "[2.] \"Foundation Courses\" units=16 Σresolved=13 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Biomedical Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Biomedical Engineering",
+      "contains": "[4.] note: unbalanced-parens :: BIOL2120, BMEG2218, 3102, 3103, BMEG3105/ESTR3605, BMEG3130,",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2023:B.Eng. in Computer Engineering",
+      "contains": "[(c)] \"\" units=11 Σresolved=8 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Electronic Engineering",
+      "contains": "[(a)] \"\" units=24 Σresolved=23 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Energy and Environmental Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Energy and Environmental Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Financial Technology",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Information Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=11 Σresolved=8 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Mechanical and Automation Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Eng. in Mechanical and Automation Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Computer Science",
+      "contains": "[(c)] \"\" units=10 Σresolved=7 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Mathematics and Information Engineering",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Biomedical Sciences",
+      "contains": "Σtop=81 vs total_units=70 (Δ11)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Biomedical Sciences",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Public Health",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Public Health",
+      "contains": "[3.] note: unbalanced-parens :: 22 units of courses chosen from the following, with 15 units",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2023:Bachelor of Chinese Medicine",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:Bachelor of Chinese Medicine",
+      "contains": "[2.] \"Required Courses\" units=145 Σresolved=142 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:Bachelor of Nursing",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:Bachelor of Nursing",
+      "contains": "[2.] \"Required Courses\" units=99 Σresolved=88 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:Bachelor of Pharmacy",
+      "contains": "Σtop=67 vs total_units=75 (Δ-8)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:Bachelor of Pharmacy",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.Sc. in Biochemistry",
+      "contains": "Σtop=60 vs total_units=12 (Δ48)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Biology",
+      "contains": "Σtop=64 vs total_units=12 (Δ52)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Cell and Molecular Biology",
+      "contains": "Σtop=60 vs total_units=12 (Δ48)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Earth and Environmental Sciences",
+      "contains": "Σtop=37 vs total_units=72 (Δ-35)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Food and Nutritional Sciences",
+      "contains": "Σtop=59 vs total_units=66 (Δ-7)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Mathematics",
+      "contains": "[(a)] note: dangling-end :: 9 units of MATH courses at 3000 or above level, and",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2023:B.Sc. in Molecular Biotechnology",
+      "contains": "Σtop=66 vs total_units=12 (Δ54)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Natural Sciences",
+      "contains": "Σtop=5 vs total_units=51 (Δ-46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.Sc. in Physics",
+      "contains": "Σtop=47 vs total_units=71 (Δ-24)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Economics",
+      "contains": "[(a)] \"Required Courses\" units=6 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Gender Studies",
+      "contains": "[(a)] \"\" units=24 Σresolved=18 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Geography and Resource Management",
+      "contains": "Σtop=39 vs total_units=69 (Δ-30)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Global Communication",
+      "contains": "[(a)] \"\" units=33 Σresolved=30 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Government and Public Administration",
+      "contains": "[(b)] \"\" units=15 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2023:B.S.Sc. in Sociology",
+      "contains": "[(a)] \"Required Courses\" units=9 Σresolved=6 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Anthropology",
+      "contains": "[(a)] \"\" units=27 Σresolved=18 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Bimodal Bilingual Studies",
+      "contains": "Σtop=39 vs total_units=57 (Δ-18)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. in Chinese Studies",
+      "contains": "Σtop=60 vs total_units=72 (Δ-12)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. in Chinese Studies",
+      "contains": "[(c)] \"\" units=9 Σresolved=0 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Cultural Management",
+      "contains": "[2.] \"Required Courses\" units=18 Σresolved=15 unresolved=4 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Japanese Studies",
+      "contains": "Σtop=63 vs total_units=69 (Δ-6)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. in Linguistics",
+      "contains": "Σtop=42 vs total_units=63 (Δ-21)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. in Linguistics",
+      "contains": "[(a)] \"\" units=18 Σresolved=0 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Linguistics",
+      "contains": "[(b)] \"\" units=6 Σresolved=3 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Theology",
+      "contains": "Σtop=58 vs total_units=70 (Δ-12)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. in Theology",
+      "contains": "[2.] \"Required Courses\" units=28 Σresolved=25 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.B.A. (Integrated BBA Programme) and Juris Doctor",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2024:B.B.A. - Integrated BBA Programme",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2024:B.Sc. in Interdisciplinary Data Analytics & X Double Major Programme",
+      "contains": "Σtop=420 vs total_units=90 (Δ330)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. (Chinese Language Studies) and B.Ed. (Chinese Language Education)",
+      "contains": "Σtop=35 vs total_units=117 (Δ-82)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.A. (English Studies) and B.Ed. (English Language Education)",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. (English Studies) and B.Ed. (English Language Education)",
+      "contains": "[(b)] \"\" units=9 Σresolved=0 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.A. in Early Childhood Education",
+      "contains": "[(a)] \"\" units=8 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Ed. in Early Childhood Education",
+      "contains": "Σtop=65 vs total_units=111 (Δ-46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Ed. in Mathematics and Mathematics Education",
+      "contains": "Σtop=93 vs total_units=102 (Δ-9)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "Σtop=51 vs total_units=104 (Δ-53)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Exercise Science and Health Education",
+      "contains": "Σtop=14 vs total_units=55 (Δ-41)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Eng. in Artificial Intelligence: Systems and Technologies",
+      "contains": "[2.] \"Foundation Courses\" units=16 Σresolved=13 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Biomedical Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Biomedical Engineering",
+      "contains": "[4.] note: unbalanced-parens :: BMEG2218, 3102, 3103, BMEG3105/ESTR3605, BMEG3130, BMEG3140/",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2024:B.Eng. in Computer Engineering",
+      "contains": "[(c)] \"\" units=11 Σresolved=8 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Electronic Engineering",
+      "contains": "[(a)] \"\" units=24 Σresolved=23 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Energy and Environmental Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Energy and Environmental Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Financial Technology",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Information Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=11 Σresolved=8 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Mechanical and Automation Engineering",
+      "contains": "[2.] \"Foundation Courses\" units=13 Σresolved=10 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Eng. in Mechanical and Automation Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Aerospace Science and Earth Informatics & X Double Major Programme",
+      "contains": "Σtop=387 vs total_units=90 (Δ297)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Computer Science",
+      "contains": "[(c)] \"\" units=10 Σresolved=7 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Biomedical Sciences",
+      "contains": "Σtop=81 vs total_units=70 (Δ11)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Biomedical Sciences",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Public Health",
+      "contains": "[1.] \"Faculty Package\" units=11 Σresolved=9 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Public Health",
+      "contains": "[3.] note: unbalanced-parens :: 22 units of courses chosen from the following, with 15 units",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2024:Bachelor of Chinese Medicine",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:Bachelor of Chinese Medicine",
+      "contains": "[2.] \"Required Courses\" units=145 Σresolved=142 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:Bachelor of Nursing",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:Bachelor of Nursing",
+      "contains": "[2.] \"Required Courses\" units=99 Σresolved=88 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:Bachelor of Pharmacy",
+      "contains": "Σtop=67 vs total_units=75 (Δ-8)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:Bachelor of Pharmacy",
+      "contains": "[1.] \"Faculty Package\" units=10 Σresolved=8 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.Sc. in Biochemistry",
+      "contains": "Σtop=60 vs total_units=12 (Δ48)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Biology",
+      "contains": "Σtop=64 vs total_units=12 (Δ52)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Cell and Molecular Biology",
+      "contains": "Σtop=60 vs total_units=12 (Δ48)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Earth and Environmental Sciences",
+      "contains": "Σtop=43 vs total_units=72 (Δ-29)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Food and Nutritional Sciences",
+      "contains": "Σtop=59 vs total_units=66 (Δ-7)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Mathematics",
+      "contains": "[(a)] note: dangling-end :: 9 units of MATH courses at 3000 or above level, and",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2024:B.Sc. in Molecular Biotechnology",
+      "contains": "Σtop=66 vs total_units=12 (Δ54)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Natural Sciences",
+      "contains": "Σtop=5 vs total_units=51 (Δ-46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.Sc. in Physics",
+      "contains": "Σtop=47 vs total_units=71 (Δ-24)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.S.Sc. in Economics",
+      "contains": "[(a)] \"Required Courses\" units=6 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.S.Sc. in Gender Studies",
+      "contains": "[(a)] \"\" units=18 Σresolved=15 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.S.Sc. in Geography and Resource Management",
+      "contains": "Σtop=42 vs total_units=72 (Δ-30)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2024:B.S.Sc. in Government and Public Administration",
+      "contains": "[(b)] \"\" units=15 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2024:B.S.Sc. in Sociology",
+      "contains": "[(a)] \"Required Courses\" units=9 Σresolved=6 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Anthropology",
+      "contains": "[(a)] \"\" units=27 Σresolved=18 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Bimodal Bilingual Studies",
+      "contains": "Σtop=33 vs total_units=51 (Δ-18)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. in Chinese Studies",
+      "contains": "Σtop=54 vs total_units=66 (Δ-12)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. in Chinese Studies",
+      "contains": "[(c)] \"\" units=9 Σresolved=0 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Japanese Studies",
+      "contains": "Σtop=60 vs total_units=66 (Δ-6)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. in Linguistics",
+      "contains": "Σtop=42 vs total_units=63 (Δ-21)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. in Linguistics",
+      "contains": "[(a)] \"\" units=18 Σresolved=0 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Linguistics",
+      "contains": "[(b)] \"\" units=6 Σresolved=3 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Theology",
+      "contains": "Σtop=58 vs total_units=70 (Δ-12)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. in Theology",
+      "contains": "[2.] \"Required Courses\" units=28 Σresolved=25 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.B.A. (Integrated BBA Programme) and Juris Doctor",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2025:B.B.A. - Integrated BBA Programme",
+      "contains": "[(i)] note: dangling-end :: 3 units of DOTE/FINA/MGNT/MKTG courses at 2000 or above leve",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2025:B.Sc. in Interdisciplinary Data Analytics & X Double Major Programme",
+      "contains": "Σtop=420 vs total_units=90 (Δ330)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. (Chinese Language Studies) and B.Ed. (Chinese Language Education)",
+      "contains": "Σtop=35 vs total_units=117 (Δ-82)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.A. (English Studies) and B.Ed. (English Language Education)",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.A. in Early Childhood Education",
+      "contains": "[(a)] \"\" units=8 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Ed. in Early Childhood Education",
+      "contains": "Σtop=65 vs total_units=111 (Δ-46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Ed. in Mathematics and Mathematics Education",
+      "contains": "Σtop=93 vs total_units=102 (Δ-9)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "Σtop=51 vs total_units=104 (Δ-53)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Ed. in Physical Education, Exercise Science and Health",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Sc. in Exercise Science and Health Education",
+      "contains": "Σtop=14 vs total_units=55 (Δ-41)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Human Movement Science and Health Studies",
+      "contains": "[(a)] \"\" units=30 Σresolved=27 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Biomedical Engineering",
+      "contains": "[(a)] \"\" units=36 Σresolved=34 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Biomedical Engineering",
+      "contains": "[4.] note: unbalanced-parens :: BMEG3102, 3103, BMEG3105/ESTR3605, BMEG3130, BMEG3140/ESTR36",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2025:B.Eng. in Electronic Engineering",
+      "contains": "[(a)] \"\" units=24 Σresolved=23 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Energy and Environmental Engineering",
+      "contains": "[(a)] \"\" units=36 Σresolved=35 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Materials Science and Engineering",
+      "contains": "[(a)] \"\" units=31 Σresolved=28 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Materials Science and Engineering",
+      "contains": "[(b)] \"\" units=6 Σresolved=0 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Materials Science and Engineering & X Double Major Programme",
+      "contains": "Σtop=354 vs total_units=90 (Δ264)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Eng. in Materials Science and Engineering & X Double Major Programme",
+      "contains": "[i)] \"Required Courses\" units=15 Σresolved=14 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Eng. in Mechanical and Automation Engineering",
+      "contains": "[(a)] \"\" units=33 Σresolved=32 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.Sc. in Aerospace Science and Earth Informatics & X Double Major Programme",
+      "contains": "Σtop=387 vs total_units=90 (Δ297)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Biomedical Sciences",
+      "contains": "Σtop=81 vs total_units=70 (Δ11)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Public Health",
+      "contains": "[3.] note: unbalanced-parens :: 22 units of courses chosen from the following, with 15 units",
+      "reason": "原文如此/结构性(P3 lint):选修节 note 收编了其后可选的 Streams/Group 菜单文本(含内嵌括号规则),课程已全部归位(P1 零丢课);括号跨可选段不配平属结构折叠、非内容丢失,结构细化留待后续。"
+    },
+    {
+      "program": "2025:Bachelor of Chinese Medicine",
+      "contains": "[2.] \"Required Courses\" units=145 Σresolved=142 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:Bachelor of Nursing",
+      "contains": "[2.] \"Required Courses\" units=99 Σresolved=88 unresolved=3 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:Bachelor of Pharmacy",
+      "contains": "Σtop=67 vs total_units=75 (Δ-8)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Biochemistry",
+      "contains": "Σtop=58 vs total_units=12 (Δ46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Biology",
+      "contains": "Σtop=64 vs total_units=12 (Δ52)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Cell and Molecular Biology",
+      "contains": "Σtop=58 vs total_units=12 (Δ46)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Earth and Environmental Sciences",
+      "contains": "Σtop=37 vs total_units=72 (Δ-35)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Food and Nutritional Sciences",
+      "contains": "Σtop=59 vs total_units=66 (Δ-7)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Mathematics",
+      "contains": "[(i)] note: dangling-end :: 18-24 units of MATH courses at 3000 or above level; and",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2025:B.Sc. in Mathematics",
+      "contains": "[(i)] note: dangling-end :: 9-18 units of BMED courses at 3000 or above level; and",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2025:B.Sc. in Mathematics",
+      "contains": "[(i)] note: dangling-end :: 9-18 units of courses at 2000 or above level of at most two",
+      "reason": "原文如此(P3 lint):note/title 是日历印刷的复合子规则一节(以「; and」/「, and」衔接兄弟子项),课单/兄弟节点已另行呈现,非半句截断。"
+    },
+    {
+      "program": "2025:B.Sc. in Molecular Biotechnology",
+      "contains": "Σtop=64 vs total_units=12 (Δ52)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Natural Sciences",
+      "contains": "Σtop=8 vs total_units=51 (Δ-43)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.Sc. in Physics",
+      "contains": "Σtop=44 vs total_units=71 (Δ-27)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.S.Sc. in Economics",
+      "contains": "[(a)] \"Required Courses\" units=6 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.S.Sc. in Geography and Resource Management",
+      "contains": "Σtop=42 vs total_units=72 (Δ-30)",
+      "reason": "结构性总账差(P4):total_units 与顶层强制节学分和不吻合——双主修/双学位(2nd Major 列全部候选主修菜单)、总学分含 GE/书院/语文等非 Major 结构学分、catch-all「其他相关课程」无学分预算(计 0)、Faculty Package 学分按院系分摊在子行、或纯散文式选修池(「Any … courses」无数字预算)所致;P1 零丢课,非丢课/非归位错。"
+    },
+    {
+      "program": "2025:B.S.Sc. in Government and Public Administration",
+      "contains": "[(b)] \"\" units=15 Σresolved=3 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:B.S.Sc. in Sociology",
+      "contains": "[(a)] \"Required Courses\" units=9 Σresolved=6 unresolved=2 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences",
+      "contains": "[1.] \"Faculty Package\" units=9 Σresolved=6 unresolved=1 (WARN)",
+      "reason": "停开课(P2 部分停开通道):本节印刷学分含若干在 2026-27 课程目录中已停开/未开的课(经核这些课号全部不在目录、非解析器丢课,P1 零丢课);按可解析部分求和 < 印刷学分属预期,非缺陷。"
+    },
+    {
+      "program": "2025:Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences",
+      "contains": ": 108",
+      "reason": "已人工裁决:原文如此,非解析器缺陷。"
+    },
+    {
+      "program": "2025:Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences",
+      "contains": ": 68",
+      "reason": "已人工裁决:原文如此,非解析器缺陷。"
+    }
+  ]
 }

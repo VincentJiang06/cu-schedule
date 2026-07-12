@@ -1503,8 +1503,8 @@
         },
         {
           "marker": "(e)",
-          "title": "",
-          "units": null,
+          "title": "Educational Studies",
+          "units": 10,
           "note": null,
           "courses": [
             {
@@ -1545,8 +1545,8 @@
         },
         {
           "marker": "(g)",
-          "title": "",
-          "units": null,
+          "title": "Immersion Experience",
+          "units": 3,
           "note": null,
           "courses": [
             {
@@ -1886,7 +1886,7 @@
           "marker": "(b)",
           "title": "",
           "units": 3,
-          "note": "Enhancement 3 units of courses",
+          "note": "Language Enhancement 3 units of courses chosen from the following",
           "courses": [
             {
               "code": "ELTU2003",
@@ -1923,7 +1923,7 @@
           "marker": "(c)",
           "title": "",
           "units": 6,
-          "note": "Teaching Methodology 6 units of courses",
+          "note": "units of courses",
           "courses": [
             {
               "code": "ELED4870",

@@ -401,6 +401,57 @@
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
       },
       {
+        "raw": "BCHE4040/4640",
+        "codes": [
+          "BCHE4040",
+          "BCHE4640"
+        ],
+        "alt": true,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE4060/4760",
+        "codes": [
+          "BCHE4060",
+          "BCHE4760"
+        ],
+        "alt": true,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE4070",
+        "codes": [
+          "BCHE4070"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE4080",
+        "codes": [
+          "BCHE4080"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE4090",
+        "codes": [
+          "BCHE4090"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BCHE4130/4830",
+        "codes": [
+          "BCHE4130",
+          "BCHE4830"
+        ],
+        "alt": true,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
         "raw": "BIOL2420",
         "codes": [
           "BIOL2420"
@@ -773,7 +824,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 35
+      "n_courses": 41
     },
     {
       "marker": "1.",
@@ -957,9 +1008,9 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "Capstone Courses: One",
+          "title": "Capstone Courses",
           "units": 3,
-          "note": "of the five options (at least 3 units, with a maximum of 6 units)",
+          "note": "One of the five options (at least 3 units, with a maximum of 6 units)",
           "courses": [],
           "children": [
             {
@@ -1044,6 +1095,36 @@
           "courses": [
             {
               "code": "BCHE4030",
+              "alts": [
+                "BCHE4830"
+              ]
+            },
+            {
+              "code": "BCHE4040",
+              "alts": [
+                "BCHE4640"
+              ]
+            },
+            {
+              "code": "BCHE4060",
+              "alts": [
+                "BCHE4760"
+              ]
+            },
+            {
+              "code": "BCHE4070",
+              "alts": []
+            },
+            {
+              "code": "BCHE4080",
+              "alts": []
+            },
+            {
+              "code": "BCHE4090",
+              "alts": []
+            },
+            {
+              "code": "BCHE4130",
               "alts": [
                 "BCHE4830"
               ]

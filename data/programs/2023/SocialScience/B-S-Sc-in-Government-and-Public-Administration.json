@@ -1658,9 +1658,9 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "Field Electives (six courses chosen from two of",
+          "title": "Field Electives",
           "units": 18,
-          "note": "the following six fields, with three courses in each field; courses that appear in more than one field can only be counted towards one field)",
+          "note": "(six courses chosen from two of the following six fields, with three courses in each field; courses that appear in more than one field can only be counted towards one field)",
           "courses": [],
           "children": [
             {
@@ -2095,7 +2095,7 @@
           "marker": "(b)",
           "title": "",
           "units": 15,
-          "note": "Free Major Electives (any five GPAD courses, other than",
+          "note": null,
           "courses": [
             {
               "code": "GPAD1076",
@@ -2110,9 +2110,9 @@
         },
         {
           "marker": "(c)",
-          "title": "Capstone Courses (minimum 6 units chosen from the following; cannot be double counted as field electives if courses appear in both field electives and capstone courses)",
+          "title": "Capstone Courses",
           "units": 6,
-          "note": null,
+          "note": "(minimum 6 units chosen from the following; cannot be double counted as field electives if courses appear in both field electives and capstone courses)",
           "courses": [],
           "children": [
             {

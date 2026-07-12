@@ -1910,9 +1910,9 @@
     },
     {
       "marker": "3.",
-      "title": "Elective Courses (Courses that",
+      "title": "Elective Courses",
       "units": null,
-      "note": null,
+      "note": "(Courses that appear in more than one requirement can only be counted towards fulfillment of one requirement)",
       "courses": [],
       "children": [
         {

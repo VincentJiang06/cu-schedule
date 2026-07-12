@@ -2677,7 +2677,7 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "",
+      "title": "Faculty Package",
       "units": 9,
       "note": null,
       "courses": [
@@ -2918,7 +2918,7 @@
         },
         {
           "marker": "(b)",
-          "title": "Research Component Courses[b]",
+          "title": "Research Component Courses",
           "units": 6,
           "note": null,
           "courses": [
@@ -2937,9 +2937,9 @@
     },
     {
       "marker": "4.",
-      "title": "Elective Courses: 12 units of elective courses, with at least 6",
+      "title": "Elective Courses",
       "units": 12,
-      "note": "units from 4(a) and at least 3 units to be counted from 4(b) and at most 3 units from 4(c)",
+      "note": "12 units of elective courses, with at least 6 units from 4(a) and at least 3 units to be counted from 4(b) and at most 3 units from 4(c)",
       "courses": [],
       "children": [
         {

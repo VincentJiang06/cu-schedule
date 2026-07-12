@@ -339,6 +339,118 @@
         ],
         "alt": false,
         "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS1020",
+        "codes": [
+          "LAWS1020"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS1030",
+        "codes": [
+          "LAWS1030"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS1041",
+        "codes": [
+          "LAWS1041"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS1042",
+        "codes": [
+          "LAWS1042"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS1100",
+        "codes": [
+          "LAWS1100"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS2110",
+        "codes": [
+          "LAWS2110"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS2121",
+        "codes": [
+          "LAWS2121"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS2122",
+        "codes": [
+          "LAWS2122"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS2131",
+        "codes": [
+          "LAWS2131"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS2132",
+        "codes": [
+          "LAWS2132"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS3050",
+        "codes": [
+          "LAWS3050"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS4010",
+        "codes": [
+          "LAWS4010"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS4151",
+        "codes": [
+          "LAWS4151"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "LAWS4152",
+        "codes": [
+          "LAWS4152"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
       }
     ],
     "elective": [
@@ -649,7 +761,7 @@
       "units": "45",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 15
     },
     {
       "marker": "2.",
@@ -706,6 +818,62 @@
       "courses": [
         {
           "code": "LAWS1010",
+          "alts": []
+        },
+        {
+          "code": "LAWS1020",
+          "alts": []
+        },
+        {
+          "code": "LAWS1030",
+          "alts": []
+        },
+        {
+          "code": "LAWS1041",
+          "alts": []
+        },
+        {
+          "code": "LAWS1042",
+          "alts": []
+        },
+        {
+          "code": "LAWS1100",
+          "alts": []
+        },
+        {
+          "code": "LAWS2110",
+          "alts": []
+        },
+        {
+          "code": "LAWS2121",
+          "alts": []
+        },
+        {
+          "code": "LAWS2122",
+          "alts": []
+        },
+        {
+          "code": "LAWS2131",
+          "alts": []
+        },
+        {
+          "code": "LAWS2132",
+          "alts": []
+        },
+        {
+          "code": "LAWS3050",
+          "alts": []
+        },
+        {
+          "code": "LAWS4010",
+          "alts": []
+        },
+        {
+          "code": "LAWS4151",
+          "alts": []
+        },
+        {
+          "code": "LAWS4152",
           "alts": []
         }
       ],

@@ -850,8 +850,8 @@
     },
     {
       "marker": "3.",
-      "title": "",
-      "units": null,
+      "title": "Elective Courses",
+      "units": 6,
       "note": null,
       "courses": [
         {

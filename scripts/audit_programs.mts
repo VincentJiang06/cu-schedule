@@ -54,6 +54,38 @@ function titleSlug(t: string | null | undefined): string {
     .trim()
 }
 
+/** 原文顶层「N. | 标题[: / ( 内联课单·规则] | 学分」行 → marker("N.") 映射到该行整格印刷文本
+ *  的 slug 列表(折行标题向后拼一两行补全、去尾部 "| 学分")。多表方案同号节各表整格都收进。
+ *  P5 判定:解析器节标题(slug)须是其中某张表整格 slug 的非空「整词前缀」——标题就是印刷表头的
+ *  前导部分(其后可能跟课单/括号规则),前缀命中即保真;对多表/折行/内联规则/含冒号的专名标题
+ *  ("1st Major: X"、"Elective Courses (…)")都稳健,同时仍能抓到 title 丢空、张冠李戴(前缀不命中)。 */
+function rawHeaderCells(block: string): Map<string, string[]> {
+  const map = new Map<string, string[]>()
+  const lines = block.split('\n')
+  const isMarkerLine = (s: string) => /^\s*(?:\d+\.|\([a-z]\)|\([ivx]+\)|[ivx]+\))/.test(s)
+  for (let i = 0; i < lines.length; i++) {
+    const m = /^\s*(\d+)\.\s*\|?\s*(.*)$/.exec(lines[i])
+    if (!m) continue
+    // 表头 blob:本行 + 后续续行,直到遇到下一个 marker/空行,或某行以学分列 "| N" 收尾。
+    // 多拼无妨——只做「起点整词前缀」判定,右侧多拼不会在起点造出假前缀;下一 marker(含 (a)
+    // 子项)即止,故 blob 恰是该节印刷表头区。折行标题("Elective Courses (Choose any ONE\n
+    // from the following)")、跨行专名("1st Major: Interdisciplinary Data\nAnalytics")都能补全。
+    let blob = m[2]
+    for (let j = i + 1; j < lines.length; j++) {
+      const nxt = lines[j]
+      if (!nxt.trim() || isMarkerLine(nxt)) break
+      blob = `${blob} ${nxt.trim()}`
+      if (/\|\s*[\d-]+\s*$/.test(nxt)) break // 行尾学分列 → 表头行结束
+    }
+    const slug = titleSlug(blob.replace(/\|\s*[\d\s-]+/g, ' '))
+    if (!slug) continue
+    const mk = `${m[1]}.`
+    if (!map.has(mk)) map.set(mk, [])
+    map.get(mk)!.push(slug)
+  }
+  return map
+}
+
 // --------------------------------------------------------------------------- load raw
 /** 递归读所有 raw 方案 json,按 id=`${admission_year}:${program_en}` 建索引;
  *  同 id 多份(跨 faculty)时取 study_scheme 最长的一份(内容最全,与打包去重口径一致)。 */
@@ -110,9 +142,10 @@ function gapBinds(gap: string): boolean {
 
 /** 参考课号集合(over-inclusive)。返回 code -> 首次出现处上下文,供报错。 */
 function referenceCodes(block: string): Map<string, string> {
-  // 剥同一「丢课族」的三类标记:小写脚注 [a][b]…、数字别号 [3001](跨届重编号,非独立课)、
-  // Major-GPA 标记 #(PHPC1001#, 1012#)。三者都紧贴课号、卡断后续裸续号。大写跨挂 [DSME] 不动。
-  const text = block.replace(/\[[a-z]+\]|\[\d+\]|#/g, '')
+  // 剥同一「丢课族」的标记:小写脚注 [a][b]…、数字别号 [3001](跨届重编号,非独立课)、
+  // Major-GPA 标记 #、特殊标记 @、实验课标记 ^,以及紧贴数字的单个 retake 标记 r(Law
+  // 的 "LAWS1010r, 1020r@")。全都紧贴课号、卡断后续裸续号。大写跨挂 [DSME] 不动。镜像 parser。
+  const text = block.replace(/\[[a-z]+\]|\[\d+\]|[#@^]|(?<=\d)r(?![a-z])/g, '')
   const found = new Map<string, string>()
   let currentSubj: string | null = null
   let lastEnd = -1
@@ -150,7 +183,10 @@ function referenceCodes(block: string): Map<string, string> {
       add(currentSubj + s, m.index)
       lastEnd = TOKEN.lastIndex; lastWasCourse = true
     } else {
-      lastWasCourse = false; lastEnd = TOKEN.lastIndex
+      // 不绑定的裸号:跳过但不重置 running subject/lastWasCourse、不推进 lastEnd(镜像
+      // parser)。锚点留在最后一门被接受的课上,让夹在两门课之间的括号插入语能从加宽的
+      // gap 里被抹掉,真实的下一门课重新绑定;真正的非课号数字仍因 gap 里塞满散文词而失败。
+      continue
     }
   }
   return found
@@ -208,18 +244,27 @@ function loadCourseUnits(): Map<string, number> {
 }
 
 // --------------------------------------------------------------------------- P3 lint
-const DANGLING_END =
-  /\b(from|the|of|to|and|or|with|at|below|following)\s*$|[,]\s*$|\b\d+\s*$/i
+// 半句截断(签名 3):title/note 以介词/冠词/连词或逗号结尾,说明续行/后半句丢了。
+// 收窄口径(去两类可证非缺陷的误报,避免污染 WARN 表):
+//   * 去掉「裸数字结尾」触发:标题合法地以编号收尾("Stream 2"/"Area 1"/"Group 3"),整句规则
+//     也常以编号收尾("Any 9 units from Area 1"),裸数字≠截断——真截断都落在介词/冠词/连词/逗号上。
+//   * 「引出附着课单的引子」豁免:一条规则以 from/of/following/the/at 收尾、且本节自带课单时
+//     ("two courses selected from:"→课单在 courses[])是引子而非断句,不算截断。仍拦真正无课单
+//     兜底的悬垂("Any 12 units of CUMT courses, with"+续行丢失)与以 and/or/with/逗号 收尾者。
+const DANGLING_END = /\b(from|the|of|to|and|or|with|at|below|following)\s*$|,\s*$/i
+// 引出附着内容的收尾词(本节自带课单/子节点时豁免):from/of/following/the/at 引出课单;
+// below 是"见下方"指针("modules listed below"/"any one stream below"),都是完整指向而非截断。
+const LEAD_IN_END = /\b(from|of|following|the|at|below)\s*$/i
 function parensBalanced(s: string): boolean {
   let d = 0
   for (const ch of s) { if (ch === '(') d++; else if (ch === ')') { d--; if (d < 0) return false } }
   return d === 0
 }
-function lintText(s: string | null): string | null {
+function lintText(s: string | null, hasCourses = false): string | null {
   if (!s) return null
   const t = s.trim()
   if (!t) return null
-  if (DANGLING_END.test(t)) return 'dangling-end'
+  if (DANGLING_END.test(t) && !(hasCourses && LEAD_IN_END.test(t))) return 'dangling-end'
   if (!parensBalanced(t)) return 'unbalanced-parens'
   return null
 }
@@ -234,6 +279,16 @@ function main() {
   const courseUnits = loadCourseUnits()
   const whitelist = existsSync(WHITELIST) ? JSON.parse(readFileSync(WHITELIST, 'utf8')) : { p1: [] }
   const wlP1 = new Set<string>((whitelist.p1 || []).map((e: any) => `${e.program}|${e.code}`))
+  // P2 白名单:逐条裁决过的「节内课已全录、但 2026-27 目录学分和 < 印刷节学分」的跨届学分漂移
+  // (非解析器丢课;P1 已保证零丢课)。key = program|marker|title。每条带 reason(见 whitelist)。
+  const wlP2 = new Set<string>((whitelist.p2 || []).map((e: any) => `${e.program}|${e.marker}|${e.title ?? ''}`))
+  // WARN 白名单(P3 lint / P2 部分停开 / P4 总账):逐条裁决过、确属「原文如此 / 停开课 / 结构性
+  // 双主修·双学位总账」的 WARN。每条 {program, contains, reason}:contains 是该 WARN 明细行的判别
+  // 子串。命中即计入「已裁决」,不再计入活跃 WARN。绝不许收真缺陷(真 bug 一律修,见 §5.2)。
+  const wlWarn: { program: string; contains: string; reason: string }[] = whitelist.warn || []
+  const warnHit = (pid: string, line: string) =>
+    wlWarn.some((e) => e.program === pid && line.includes(e.contains))
+  let warnAdj = 0
 
   let p1Missing = 0, p2Fail = 0, p3Warn = 0, p4Warn = 0, p5Fail = 0
   const offenders = new Map<string, number>()
@@ -261,10 +316,15 @@ function main() {
 
     // ---- P2 学分-课程合理性(I3,FAIL)+ P3 lint + P4 总账
     const visit = (n: SectionNode) => {
-      // P3
+      // P3 —— hasContent:本节自带课单/子节点时,规则以 from/of/following 收尾是引子非截断
+      const hasContent = n.courses.length > 0 || n.children.length > 0
       for (const [field, val] of [['title', n.title], ['note', n.note]] as const) {
-        const flag = lintText(val)
-        if (flag) { p3Warn++; bump(`P3:${flag}`); d.p3.push(`[${n.marker}] ${field}: ${flag} :: ${norm(String(val)).slice(0, 60)}`) }
+        const flag = lintText(val, hasContent)
+        if (flag) {
+          const line = `[${n.marker}] ${field}: ${flag} :: ${norm(String(val)).slice(0, 60)}`
+          if (warnHit(prog.id, line)) warnAdj++
+          else { p3Warn++; bump(`P3:${flag}`); d.p3.push(line) }
+        }
       }
       // P2 —— 仅对「挂课、有 units、非 choose、无子节点」的节点
       if (typeof n.units === 'number' && n.units > 0 && n.courses.length > 0 && n.children.length === 0 && !isChooseNode(n)) {
@@ -273,18 +333,22 @@ function main() {
         let sum = 0, unresolved = 0
         for (const c of n.courses) {
           const cand = [c.code, ...c.alts]
-          const u = cand.map((k) => courseUnits.get(k)).find((v) => typeof v === 'number')
-          if (typeof u === 'number') sum += u; else unresolved++
+          // 一门 '/'-孪生(如 CHEM4030/4040)取各半里能解出学分的 *最大* 值,不是第一个:
+          // 目录里常留一个 0 学分的旧半(CHEM4030 "PBL I"=0,真正带学分的是 CHEM4040 "II"=4),
+          // .find 会抓到 0 而漏报 4 学分,凭空制造 sum<units 假 FAIL。孪生=择一,取真正带学分的那半。
+          const resolved = cand.map((k) => courseUnits.get(k)).filter((v): v is number => typeof v === 'number')
+          if (resolved.length) sum += Math.max(...resolved); else unresolved++
         }
         if (unresolved === 0) {
-          if (sum < n.units) {
+          if (sum < n.units && !wlP2.has(`${prog.id}|${n.marker}|${n.title}`)) {
             p2Fail++; bump('P2:units-gt-courses')
             d.p2.push(`[${n.marker}] "${n.title}" units=${n.units} but Σcourse=${sum} (${codes.length} courses: ${codes.slice(0, 8).join(',')}${codes.length > 8 ? '…' : ''})`)
           }
         } else if (sum < n.units) {
           // 部分停开 → WARN(计入 P3 通道,标注未解析数)
-          p3Warn++; bump('P2:partial-unresolved')
-          d.p3.push(`[${n.marker}] "${n.title}" units=${n.units} Σresolved=${sum} unresolved=${unresolved} (WARN)`)
+          const line = `[${n.marker}] "${n.title}" units=${n.units} Σresolved=${sum} unresolved=${unresolved} (WARN)`
+          if (warnHit(prog.id, line)) warnAdj++
+          else { p3Warn++; bump('P2:partial-unresolved'); d.p3.push(line) }
         }
       }
       n.children.forEach(visit)
@@ -296,26 +360,28 @@ function main() {
       const forced = prog.structure.filter((n) => !n.kind)
       const sum = forced.reduce((s, n) => s + effUnits(n), 0)
       if (Math.abs(sum - prog.total_units) > 3) {
-        p4Warn++; bump('P4:total-mismatch')
-        d.p4.push(`Σtop=${sum} vs total_units=${prog.total_units} (Δ${sum - prog.total_units})`)
+        const line = `Σtop=${sum} vs total_units=${prog.total_units} (Δ${sum - prog.total_units})`
+        if (warnHit(prog.id, line)) warnAdj++
+        else { p4Warn++; bump('P4:total-mismatch'); d.p4.push(line) }
       }
     }
 
     // ---- P5 标题保真(I4,FAIL)—— raw 每个「N. | Title | units」行
     if (ss) {
-      const lineRe = /^\s*(\d+)\.\s*\|\s*([^|]+?):?\s*\|\s*\d+\s*$/
-      for (const rawLine of block.split('\n')) {
-        const lm = lineRe.exec(rawLine)
-        if (!lm) continue
-        const n = topByMarker(prog, `${lm[1]}.`)
-        const want = titleSlug(lm[2])
-        if (!want) continue
-        const got = titleSlug(n?.title)
-        if (!n) continue // 缺节点属结构问题,不在 P5 口径
-        if (got === '' || got !== want) {
-          p5Fail++; bump(got === '' ? 'P5:empty-title' : 'P5:title-mismatch')
-          d.p5.push(`[${lm[1]}.] want="${lm[2].trim()}" got="${n.title}"`)
-        }
+      // 原文每个顶层「N.」编号节的印刷标题(可能跨表重复、可能折行、可能内联课单/规则)。
+      // 提取 = 取标题格首个冒号前(剥内联课单/规则),折行标题向后拼一两行补全。多表方案的
+      // 同号节各表标题都收进集合:解析器只忠实重建其中一张表,断言其标题命中任一张表的印刷标题
+      // 即算保真(对多表/内联/折行稳健,同时仍能抓到 title 丢空、张冠李戴的真 bug)。
+      const rawCells = rawHeaderCells(block)
+      for (const n of prog.structure) {
+        if (!/^\d+\.$/.test(n.marker)) continue // 仅顶层编号节;concentration/stream/catch-all 不在口径
+        const cells = rawCells.get(n.marker)
+        if (!cells || cells.length === 0) continue // 原文无对应编号标题行 → 结构问题,不在 P5 口径
+        const got = titleSlug(n.title)
+        // 非空、且是某张表整格的整词前缀(或整格全等)→ 保真
+        if (got !== '' && cells.some((c) => c === got || c.startsWith(got + ' '))) continue
+        p5Fail++; bump(got === '' ? 'P5:empty-title' : 'P5:title-mismatch')
+        d.p5.push(`[${n.marker}] cells∈{${cells.map((c) => c.slice(0, 40)).join(' | ')}} got="${n.title}"`)
       }
     }
 
@@ -536,10 +602,11 @@ function main() {
   console.log(`  P4 WARN       : ${p4Warn}`)
   console.log(`  P5 FAIL       : ${p5Fail}`)
   console.log(`  P6 FAIL       : ${p6Fail}`)
+  console.log(`  WARN 已裁决    : ${warnAdj}(whitelist.warn 收录,原文如此/停开/结构性总账)`)
   console.log(`  最大失败签名  : ${topOffender ? `${topOffender[0]} ×${topOffender[1]}` : 'none'}`)
 
   const summary = {
-    p1Missing, p2Fail, p3Warn, p4Warn, p5Fail, p6Fail,
+    p1Missing, p2Fail, p3Warn, p4Warn, p5Fail, p6Fail, warnAdj,
     topOffender: topOffender ? `${topOffender[0]} ×${topOffender[1]}` : 'none',
     pass: p1Missing === 0 && p2Fail === 0 && p5Fail === 0 && p6Fail === 0,
   }

@@ -106,7 +106,9 @@
     "PHYS5410",
     "PHYS5420",
     "PHYS5430",
+    "PHYS5510",
     "PHYS5520",
+    "PHYS5550",
     "PHYS5610",
     "STAR2000",
     "STAR2050",
@@ -307,6 +309,38 @@
         "raw": "PHYS3031",
         "codes": [
           "PHYS3031"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS3710",
+        "codes": [
+          "PHYS3710"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS4610",
+        "codes": [
+          "PHYS4610"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS4801",
+        "codes": [
+          "PHYS4801"
         ],
         "alt": false,
         "from": "(a) Physics"
@@ -742,7 +776,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 16
     },
     {
       "marker": "(b)",
@@ -899,14 +933,30 @@
             {
               "code": "PHYS3031",
               "alts": []
+            },
+            {
+              "code": "PHYS3041",
+              "alts": []
+            },
+            {
+              "code": "PHYS3710",
+              "alts": []
+            },
+            {
+              "code": "PHYS4610",
+              "alts": []
+            },
+            {
+              "code": "PHYS4801",
+              "alts": []
             }
           ],
           "children": []
         },
         {
           "marker": "(b)",
-          "title": "Mathematics and Chemistry courses | 3 or 6[g1]",
-          "units": null,
+          "title": "Mathematics and Chemistry courses",
+          "units": 3,
           "note": null,
           "courses": [],
           "children": [
@@ -1184,8 +1234,8 @@
             {
               "marker": "(b)",
               "title": "",
-              "units": null,
-              "note": "Elective courses (of which at least two courses from MATH4030, PHYS4011, 4021, 4041, 4460): MATH3290, 4030, PHYS3031, 4011, 4021, 4031, 4041, 4050, 4051, 4061, 4420, 4430, 4460, 4470 | 15 or 12",
+              "units": 12,
+              "note": null,
               "courses": [
                 {
                   "code": "MATH4030",
@@ -1386,6 +1436,10 @@
                 {
                   "code": "PHYS4450",
                   "alts": []
+                },
+                {
+                  "code": "PHYS5510",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1400,6 +1454,10 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
+        {
+          "code": "PHYS5550",
+          "alts": []
+        },
         {
           "code": "STAR2000",
           "alts": []

@@ -1229,9 +1229,9 @@
         },
         {
           "marker": "(b)",
-          "title": "Stream Courses: Students are",
+          "title": "Stream Courses",
           "units": null,
-          "note": "required to take 12 units according to their respective stream. | 12 International Stream (IS) Students are required to take 4 Chinese language courses from the following: CLCP1113, 1123, 1133, 1153, 2213, 2223, 2233, 2243, 2253, 3313, 3323, 3333, 4413, 4423, 4433, 4443, 4453, 4463, 4513, 4533 Chinese Native Stream (CNSS) Students are required to take any 4 courses",
+          "note": "Students are required to take 12 units according to their respective stream. | 12 International Stream (IS) Students are required to take 4 Chinese language courses from the following: CLCP1113, 1123, 1133, 1153, 2213, 2223, 2233, 2243, 2253, 3313, 3323, 3333, 4413, 4423, 4433, 4443, 4453, 4463, 4513, 4533 Chinese Native Stream (CNSS) Students are required to take any 4 courses",
           "courses": [
             {
               "code": "CLCP1113",

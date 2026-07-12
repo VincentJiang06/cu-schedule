@@ -818,7 +818,7 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "Foundation",
+          "title": "Foundation Courses",
           "units": 6,
           "note": null,
           "courses": [
@@ -837,7 +837,7 @@
           "marker": "(b)",
           "title": "",
           "units": 12,
-          "note": null,
+          "note": "Sign Linguistics Courses",
           "courses": [
             {
               "code": "BMBL2001",
@@ -862,7 +862,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "Kong Sign Language Courses: (i) HKSL1003 (ii) HKSL2003 (iii) HKSL3001 and 3002, or HKSL3003 | 6 6 6",
+          "note": "Hong Kong Sign Language Courses",
           "courses": [
             {
               "code": "HKSL1003",
@@ -900,7 +900,7 @@
           "marker": "(a)",
           "title": "",
           "units": 6,
-          "note": null,
+          "note": "Any two courses from",
           "courses": [
             {
               "code": "BMBL2005",

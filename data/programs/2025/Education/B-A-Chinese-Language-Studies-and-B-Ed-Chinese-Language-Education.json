@@ -1552,50 +1552,6 @@
                 {
                   "code": "CHLL3402",
                   "alts": []
-                },
-                {
-                  "code": "CHLL3404",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL3405",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL3406",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL3407",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL3408",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4401",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4402",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4403",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4404",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4405",
-                  "alts": []
-                },
-                {
-                  "code": "CHLL4411",
-                  "alts": []
                 }
               ],
               "children": []
@@ -1705,6 +1661,59 @@
           "children": []
         }
       ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CHLL3404",
+          "alts": []
+        },
+        {
+          "code": "CHLL3405",
+          "alts": []
+        },
+        {
+          "code": "CHLL3406",
+          "alts": []
+        },
+        {
+          "code": "CHLL3407",
+          "alts": []
+        },
+        {
+          "code": "CHLL3408",
+          "alts": []
+        },
+        {
+          "code": "CHLL4401",
+          "alts": []
+        },
+        {
+          "code": "CHLL4402",
+          "alts": []
+        },
+        {
+          "code": "CHLL4403",
+          "alts": []
+        },
+        {
+          "code": "CHLL4404",
+          "alts": []
+        },
+        {
+          "code": "CHLL4405",
+          "alts": []
+        },
+        {
+          "code": "CHLL4411",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

@@ -651,9 +651,9 @@
         },
         {
           "marker": "(b)",
-          "title": "Research Component",
+          "title": "",
           "units": 6,
-          "note": null,
+          "note": "Research Component Courses",
           "courses": [
             {
               "code": "MASE4998",
@@ -683,9 +683,9 @@
     },
     {
       "marker": "4.",
-      "title": "",
-      "units": null,
-      "note": "Courses: | 15 Any 15 units of courses",
+      "title": "Elective Courses",
+      "units": 15,
+      "note": "Any 15 units of courses",
       "courses": [
         {
           "code": "BMEG3430",

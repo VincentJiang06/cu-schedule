@@ -2890,9 +2890,9 @@
     },
     {
       "marker": "4.",
-      "title": "Elective Courses: 12 units of elective courses, with",
+      "title": "Elective Courses",
       "units": 12,
-      "note": "at least 6 units from 4(a) and at least 3 units to be counted from 4(b) and at most 3 units from 4(c)",
+      "note": "12 units of elective courses, with at least 6 units from 4(a) and at least 3 units to be counted from 4(b) and at most 3 units from 4(c)",
       "courses": [],
       "children": [
         {
@@ -3354,9 +3354,9 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "AIST course",
           "units": null,
-          "note": "AIST course(s) at 3000 and 4000 level, CSCI course(s) at 3000 and above level, ENGG course(s) at 5000 level, FTEC course(s) at 3000 and above level, SEEM course(s) at 3000 and above level, STAT course(s) at 3000 and above level",
+          "note": "(s) at 3000 and 4000 level, CSCI course(s) at 3000 and above level, ENGG course(s) at 5000 level, FTEC course(s) at 3000 and above level, SEEM course(s) at 3000 and above level, STAT course(s) at 3000 and above level",
           "courses": [],
           "children": []
         }

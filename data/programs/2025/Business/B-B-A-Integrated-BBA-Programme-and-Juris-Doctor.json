@@ -1742,7 +1742,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "two courses selected from",
               "courses": [
                 {
                   "code": "DOTE3000",
@@ -1821,7 +1821,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "one course selected from",
               "courses": [
                 {
                   "code": "DOTE3010",
@@ -1846,7 +1846,7 @@
               "marker": "(iii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "one course selected from",
               "courses": [
                 {
                   "code": "DOTE3030",
@@ -1944,7 +1944,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "four courses selected from",
               "courses": [
                 {
                   "code": "DOTE3010",
@@ -2118,7 +2118,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "four courses selected from",
               "courses": [
                 {
                   "code": "DOTE3010",
@@ -2205,7 +2205,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "two courses selected from",
               "courses": [
                 {
                   "code": "DOTE3010",
@@ -2300,7 +2300,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "two courses selected from",
               "courses": [
                 {
                   "code": "DOTE3010",
