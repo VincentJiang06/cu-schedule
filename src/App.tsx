@@ -66,7 +66,8 @@ import {
 import { hhmm, parseHHMM } from './lib/time.ts'
 import type { Course } from './lib/types.ts'
 
-type Theme = 'light' | 'dark'
+// #里程碑1(三档主题):light(浅色,干净明亮) / mid(中性,中等灰) / dark(深色)。
+type Theme = 'light' | 'mid' | 'dark'
 type Page = 'info' | 'select' | 'timetable' | 'export' | 'appendix'
 // 全部课程 / 本专业 — narrows search to the chosen programme's course set (by course key).
 type ProgramScope = 'all' | 'program'
@@ -269,8 +270,17 @@ function loadSaved(): Saved | null {
 
 function loadTheme(): Theme {
   const saved = window.localStorage.getItem('cu-schedule:theme')
-  if (saved === 'light' || saved === 'dark') return saved
+  if (saved === 'light' || saved === 'mid' || saved === 'dark') return saved
   return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+}
+
+// 三态循环:浅色 → 中性 → 深色 → 浅色。图标/文案与 THEME_ICON/THEME_LABEL 一一对应，
+// 供切换按钮的 aria-label/title 说明"当前是哪一档、点了会去哪一档"。
+const THEME_ORDER: Theme[] = ['light', 'mid', 'dark']
+const THEME_ICON: Record<Theme, string> = { light: '☀️', mid: '◐', dark: '🌙' }
+const THEME_LABEL: Record<Theme, string> = { light: '浅色', mid: '中性', dark: '深色' }
+function nextTheme(current: Theme): Theme {
+  return THEME_ORDER[(THEME_ORDER.indexOf(current) + 1) % THEME_ORDER.length]
 }
 
 // 上下班时间的持久化：空字符串=未设置(null)，否则存分钟数字符串。默认 09:00 / 18:00，
@@ -321,6 +331,12 @@ function readShared(): Saved | null {
     pins: decoded.pins,
   }
 }
+
+// #里程碑1(首屏防闪):在 React 挂载渲染之前就把 data-theme 打到 <html> 上。模块顶层
+// 代码在 createRoot().render() 之前同步执行——比等 useEffect(要等到 commit 之后才跑)
+// 早一整轮，避免开屏先闪一下默认主题、等 JS 跑完 effect 才跳到用户实际选的主题。
+const bootTheme = loadTheme()
+if (typeof document !== 'undefined') document.documentElement.dataset.theme = bootTheme
 
 const live = readLive()
 const shared = live ? null : readShared()
@@ -452,7 +468,7 @@ function PlanStripRail({ selectedIndex, children }: { selectedIndex: number | nu
 }
 
 export default function App() {
-  const [theme, setTheme] = useState<Theme>(loadTheme)
+  const [theme, setTheme] = useState<Theme>(bootTheme)
   const [terms, setTerms] = useState<TermRef[]>([])
   const [termSlug, setTermSlug] = useState<string | null>(bootTermSlug)
   const [offerings, setOfferings] = useState<Offering[]>([])
@@ -2429,12 +2445,13 @@ export default function App() {
           </nav>
           <div className="bar__tools">
             <button
-              aria-label="切换明暗主题"
+              aria-label={`当前主题：${THEME_LABEL[theme]}，点击切换到${THEME_LABEL[nextTheme(theme)]}`}
               className="bar__theme"
+              title={`当前：${THEME_LABEL[theme]}主题 · 点击切换到${THEME_LABEL[nextTheme(theme)]}`}
               type="button"
-              onClick={() => setTheme((value) => (value === 'light' ? 'dark' : 'light'))}
+              onClick={() => setTheme((value) => nextTheme(value))}
             >
-              {theme === 'light' ? '🌙' : '☀️'}
+              <span aria-hidden>{THEME_ICON[theme]}</span>
             </button>
           </div>
         </header>
