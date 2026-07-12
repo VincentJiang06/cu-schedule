@@ -1179,7 +1179,11 @@ export default function App() {
       setSoloPlanId(sigs.solo)
       const idx = plans.findIndex((plan) => plan.id === sigs.solo)
       if (idx >= 0) setPlanIndex(idx)
-    } else if (exists(sigs.a)) {
+    } else if (exists(sigs.a) || exists(sigs.b)) {
+      // #Bug B:保存的是 A/B 对比(没存 solo),显式退出单方案模式——不这样写的话上面「方案集
+      // 改变→默认回落 solo」那个 effect 会把 soloPlanId 设成排法 1,盖掉刚回配好的 A/B。这里
+      // 源码顺序排在那个 effect 之后,同一渲染批次里后跑、后写赢,能正确覆盖。
+      setSoloPlanId(null)
       const idx = plans.findIndex((plan) => plan.id === sigs.a)
       if (idx >= 0) setPlanIndex(idx)
     }
