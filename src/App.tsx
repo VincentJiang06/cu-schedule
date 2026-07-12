@@ -907,17 +907,15 @@ export default function App() {
   const allCourses = useMemo(() => [...catalogByKey.values()], [catalogByKey])
 
   // 已修互斥课导致不可再选的课程 key 集合(course.requirement.exclusions 为 8 字符 key 列表)。
-  // 正向:目录里任一课的 exclusions 命中已修课 → 该课被挡;反向:每门已修课自身的
-  // exclusions 也一并挡掉。最后排除「已修课自身」,已完成的课不该出现在不可选里。
+  // 只走正向:目录里任一课的 exclusions 命中已修课 → 该课被挡。单向排斥不反向传导——
+  // 修过 A 不代表 A.exclusions 里列的 B 也该被挡(A 不为修过 B 者开 ≠ 修过 A 者不能选 B)。
+  // 真正互斥的等价课(如 CSCI2100↔ESTR2102)各自 exclusions 互列对方,正向本就能双向抓到。
+  // 最后排除「已修课自身」,已完成的课不该出现在不可选里。
   const barredKeys = useMemo(() => {
     const takenKeySet = new Set(taken.map(courseKey))
     const barred = new Set<string>()
     for (const course of catalogByKey.values()) {
       if (course.requirement.exclusions.some((code) => takenKeySet.has(code))) barred.add(course.key)
-    }
-    for (const key of takenKeySet) {
-      const course = catalogByKey.get(key)
-      if (course) for (const code of course.requirement.exclusions) barred.add(code)
     }
     for (const key of takenKeySet) barred.delete(key)
     return barred
