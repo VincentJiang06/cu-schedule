@@ -157,6 +157,23 @@ function Toggle({
   )
 }
 
+// #里程碑2(左栏卡片折叠):卡片标题栏右上角的小 +/− 角标——复用 .lock-toggle--corner 那种
+// 方形小按钮的视觉语言(见「上下班时间」卡的锁按钮)，−=已展开(点了会折叠)、+=已折叠
+// (点了会展开)。折叠只影响列表内容(见 CommittedList 的 collapsed prop)，标题栏本身恒可见。
+function CardCollapseBtn({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
+  return (
+    <button
+      aria-label={collapsed ? '展开列表' : '折叠列表'}
+      className="card-collapse-btn"
+      title={collapsed ? '展开：显示每门课的时间/地点详情' : '折叠：每门课只留一行'}
+      type="button"
+      onClick={onToggle}
+    >
+      <span aria-hidden>{collapsed ? '+' : '−'}</span>
+    </button>
+  )
+}
+
 // One small inline icon per page, so the nav reads at a glance.
 const PAGE_ICON: Record<Page, ReactNode> = {
   info: (
@@ -507,6 +524,12 @@ export default function App() {
       return next
     })
   }, [])
+  // #里程碑2(左栏卡片折叠):三张"当前课程"类卡片各自一个折叠开关——选课页的必修/可能学
+  // 两张卡各自独立;课表页「当前课程」一张卡把必修+可能学画在同一个 CommittedList 里，
+  // 只给整卡一个开关(#里程碑2 现有结构里最自然的切法)。纯会话内 UI 状态，不持久化。
+  const [committedCollapsed, setCommittedCollapsed] = useState(false)
+  const [cartCollapsed, setCartCollapsed] = useState(false)
+  const [committedTTCollapsed, setCommittedTTCollapsed] = useState(false)
   // Pinned sections (e.g. TUT T01) constrain which A / B timetables the scheduler builds.
   const [pins, setPins] = useState<Pins>(bootPins)
   const [planIndex, setPlanIndex] = useState(0)
@@ -1765,11 +1788,15 @@ export default function App() {
     >
       <h2 className="card__title">
         当前必修课程
-        <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分` : '一课一行'}</span>
+        <span className="card__title-actions">
+          <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分` : '一课一行'}</span>
+          <CardCollapseBtn collapsed={committedCollapsed} onToggle={() => setCommittedCollapsed((v) => !v)} />
+        </span>
       </h2>
       <CommittedList
         byCode={byCode}
         codes={committed}
+        collapsed={committedCollapsed}
         currentTermOrder={currentTermOrder}
         termOrdersByKey={termOrdersByKey}
         onRemove={removeCommitted}
@@ -1791,12 +1818,16 @@ export default function App() {
     >
       <h2 className="card__title">
         当前可能课程
-        <span className="card__note">{cart.length > 0 ? `${cart.length} 门候选` : '可能会学'}</span>
+        <span className="card__title-actions">
+          <span className="card__note">{cart.length > 0 ? `${cart.length} 门候选` : '可能会学'}</span>
+          <CardCollapseBtn collapsed={cartCollapsed} onToggle={() => setCartCollapsed((v) => !v)} />
+        </span>
       </h2>
       <CommittedList
         byCode={byCode}
         cartCodes={cart}
         codes={[]}
+        collapsed={cartCollapsed}
         currentTermOrder={currentTermOrder}
         disabledCandidateKeys={disabledCandidates}
         emptyHint="还没有候选课程。在中间的课程列表点「可能学」来添加。"
@@ -1903,12 +1934,16 @@ export default function App() {
     <section className="card committed-card">
       <h2 className="card__title">
         当前课程
-        <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分 · 选时段` : '选时段'}</span>
+        <span className="card__title-actions">
+          <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分 · 选时段` : '选时段'}</span>
+          <CardCollapseBtn collapsed={committedTTCollapsed} onToggle={() => setCommittedTTCollapsed((v) => !v)} />
+        </span>
       </h2>
       <CommittedList
         byCode={byCode}
         cartCodes={cart}
         codes={committed}
+        collapsed={committedTTCollapsed}
         colorFor={colorForCode}
         currentTermOrder={currentTermOrder}
         disabledCandidateKeys={disabledCandidates}

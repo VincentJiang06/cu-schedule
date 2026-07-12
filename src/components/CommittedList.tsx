@@ -62,10 +62,16 @@ function CoursePicker({
   course,
   pinned,
   onPin,
+  currentA,
+  currentB,
 }: {
   course: Course
   pinned: Record<string, string>
   onPin: (component: string, sectionId: string) => void
+  /** #里程碑6:当前排法(A / solo)在这门课各 component 用的 section id。 */
+  currentA?: Record<string, string>
+  /** 对比模式下 B 排法的对应映射；不传 = 没有第二个排法要对比(solo 或还没排出来)。 */
+  currentB?: Record<string, string>
 }) {
   const byComponent = groupByComponent(course)
   return (
@@ -90,11 +96,19 @@ function CoursePicker({
                 // LEC 的多个可选段用 1/2/3/4 编号（而非 cohort 字母），更直观；
                 // 其余 component（TUT/LAB…）保留原本的 cohort+组号标签。
                 const label = component === 'LEC' ? String(index + 1) : sectionLabel(section, index)
+                // #里程碑6:当前选中排法用到这个 section 时高亮——A / B 各自独特样式
+                // (环形描边颜色不同)，两者都用同一 section 时叠两圈描边，一眼分得出
+                // 「A 专属 / B 专属 / A、B 都用它」。与 on(锁定/已约束)是两套独立视觉，
+                // 互不覆盖，可以同时出现在同一个 chip 上。
+                const isCurA = currentA?.[component] === section.id
+                const isCurB = currentB?.[component] === section.id
+                const curClass = isCurA && isCurB ? ' cl-chip--cur-ab' : isCurA ? ' cl-chip--cur-a' : isCurB ? ' cl-chip--cur-b' : ''
+                const curHint = isCurA && isCurB ? ' · A、B 都用这个' : isCurA ? ' · 当前 A 用这个' : isCurB ? ' · 当前 B 用这个' : ''
                 return (
                   <button
-                    className={on ? 'cl-chip cl-chip--on' : 'cl-chip'}
+                    className={`cl-chip${on ? ' cl-chip--on' : ''}${curClass}`}
                     key={section.id}
-                    title={sectionTimes(section)}
+                    title={`${sectionTimes(section)}${on ? ' · 已约束' : ''}${curHint}`}
                     type="button"
                     onClick={() => onPin(component, section.id)}
                   >
@@ -130,6 +144,9 @@ export function CommittedList({
   onRowPointerDown,
   disabledCandidateKeys,
   onToggleCandidateDisabled,
+  collapsed = false,
+  currentA,
+  currentB,
 }: {
   codes: string[]
   byCode: Map<string, Course>
@@ -159,6 +176,15 @@ export function CommittedList({
    * 上的展示，与大课表试排块右上角的三角 toggle 走同一个 App.toggleCandidateDisabled，
    * 两处状态互相同步。只对 isCart 行渲染；不传则不显示这个按钮。 */
   onToggleCandidateDisabled?: (code: string) => void
+  /** #里程碑2(整卡折叠):true 时每行只剩 head 一行(课号+基本信息)，时间/地点/pin 选择器
+   * 收起——列表内部滚动区域(见 .cl__rows)本身与折叠无关，两者独立生效。 */
+  collapsed?: boolean
+  /** #里程碑6:当前选中排法(A,或单方案模式下唯一的那个)在各课各 component 用的
+   * section，按 course.code 索引(与 pins 同一把 key)——供左栏 section 选择器高亮。 */
+  currentA?: Pins
+  /** 对比模式下 B 排法的对应映射；solo 模式下 B 不存在，传空对象/不传即可，各 chip 的
+   * 「当前 B」判定自然都不命中。 */
+  currentB?: Pins
 }) {
   const interactive = Boolean(onPin)
   const rows: Array<{ code: string; isCart: boolean }> = [
@@ -212,10 +238,14 @@ export function CommittedList({
                     </span>
                   )}
                 </div>
-                {course ? (
+                {/* #里程碑2:折叠态下每门课只剩上面的 head 一行，时间/地点/pin 选择器/
+                    「本学期无此课」提示统统收起，不渲染。 */}
+                {course && !collapsed ? (
                   interactive && onPin && !isCart ? (
                     <CoursePicker
                       course={course}
+                      currentA={currentA?.[code]}
+                      currentB={currentB?.[code]}
                       pinned={pins?.[code] ?? {}}
                       onPin={(component, sectionId) => onPin(code, component, sectionId)}
                     />
@@ -229,9 +259,9 @@ export function CommittedList({
                       ))}
                     </div>
                   )
-                ) : (
+                ) : !course && !collapsed ? (
                   <div className="cl-row__missing">本学期无此课</div>
-                )}
+                ) : null}
               </li>
             )
           })}

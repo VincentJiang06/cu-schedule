@@ -1225,16 +1225,25 @@ select {
   padding: 26px 12px;
 }
 
+/* #里程碑2(内部滚动):固定一个上限高度，课多时列表自己滚，不再无限撑高卡片——给后面
+   陆续搬进来的更多课留出空间。滚动条隐藏(scrollbar-width:none + ::-webkit-scrollbar)，
+   滚动能力本身不受影响，与 .plan-strip__rail 同一手法。 */
 .cl__rows {
   flex: 1;
   min-height: 0;
+  max-height: 320px;
   overflow-y: auto;
+  scrollbar-width: none;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+
+.cl__rows::-webkit-scrollbar {
+  display: none;
 }
 
 .cl-row {
@@ -2352,6 +2361,31 @@ select {
   justify-content: center;
   font-size: 13px;
   border-radius: 7px;
+}
+
+/* #里程碑2(左栏卡片折叠):三张"当前课程"卡标题栏右上角的 +/− 角标，与 .lock-toggle--corner
+   同一视觉语言(方形小按钮)，稍微更小一档、不占用横排说明文字的空间。悬停只变色，不做位移。 */
+.card-collapse-btn {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.card-collapse-btn:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
 }
 
 .tt2__tag {
