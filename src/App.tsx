@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from 'react'
 import { AppendixPage } from './components/AppendixPage.tsx'
+import { CodeInput } from './components/CodeInput.tsx'
 import { CommittedList } from './components/CommittedList.tsx'
 import { CourseModal } from './components/CourseModal.tsx'
 import { ProgramPicker } from './components/ProgramPicker.tsx'
@@ -24,7 +25,7 @@ import { SubjectPicker } from './components/SubjectPicker.tsx'
 import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
 import { copyText } from './lib/clipboard.ts'
-import { courseColor, huePaint, TIMETABLE_PALETTE, type PaintTheme } from './lib/color.ts'
+import { huePaint, TIMETABLE_PALETTE, type PaintTheme } from './lib/color.ts'
 import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
 import { downloadBlob } from './lib/exportImage.ts'
@@ -39,7 +40,6 @@ import {
   type CourseStanding,
   type Program,
 } from './lib/programs.ts'
-import { parseCourseCodes } from './lib/search.ts'
 import { decodeLiveState, decodeShare, encodeLiveState, type LiveState } from './lib/shareLink.ts'
 import { createShare } from './lib/shareStore.ts'
 import {
@@ -602,8 +602,6 @@ export default function App() {
   const [programId, setProgramId] = useState(() => window.localStorage.getItem('cu-schedule:program') ?? '')
   // 大课表数据刷新中（信息页入学年份旁的 ↻ 按钮）。
   const [refreshingPrograms, setRefreshingPrograms] = useState(false)
-  // 已完成课程卡的手动录入草稿（回车 / 粘贴 → parseCourseCodes → 按 key 并入 taken）。
-  const [takenDraft, setTakenDraft] = useState('')
   // 因已修互斥课而被自动移出「当前选择」的课号(非阻断提示用,按 key 去重累积)。
   const [autoRemoved, setAutoRemoved] = useState<string[]>([])
 
@@ -809,6 +807,9 @@ export default function App() {
     for (const { course } of offerings) if (!map.has(course.key)) map.set(course.key, course)
     return map
   }, [offerings])
+  // 全年去重课程列表(不按当前学期 tab 过滤)——已修课手动录入的搜索提示池:已修过的课
+  // 很可能是另一学期开的,不该被当前 Term 1/2 tab 限制住。
+  const allCourses = useMemo(() => [...catalogByKey.values()], [catalogByKey])
 
   // 已修互斥课导致不可再选的课程 key 集合(course.requirement.exclusions 为 8 字符 key 列表)。
   // 正向:目录里任一课的 exclusions 命中已修课 → 该课被挡;反向:每门已修课自身的
@@ -1309,22 +1310,6 @@ export default function App() {
     }
   }
 
-  // 已完成课程卡的手动录入:回车 / 粘贴的文本经 parseCourseCodes 拆出课号,按 key 去重并入 taken。
-  function addTaken(text: string): void {
-    const parsed = parseCourseCodes(text)
-    if (parsed.length === 0) return
-    setTaken((prev) => {
-      const have = new Set(prev.map(courseKey))
-      const additions = parsed.filter((code) => !have.has(courseKey(code)))
-      return additions.length > 0 ? [...prev, ...additions] : prev
-    })
-    setTakenDraft('')
-  }
-
-  function removeTaken(code: string): void {
-    setTaken((codes) => codes.filter((item) => !sameCourse(item, code)))
-  }
-
   function removeCommitted(code: string): void {
     setCommitted((codes) => codes.filter((item) => !sameCourse(item, code)))
     dropPins(code)
@@ -1746,8 +1731,8 @@ export default function App() {
     </section>
   )
 
-  // 信息页:「已完成课程」独立成卡。手动录入框(回车/粘贴)在上,已录入课程以两列网格展示,
-  // 每格只显示 课号 + 学分(catalogByKey 查不到则留空),点击整格移除。
+  // 信息页:「已完成课程」独立成卡。CodeInput 一体化承担手动录入(边打边搜提示 + IME 拼字
+  // 安全)与已录入课程的 chip 展示/点击移除,搜索池用全年课程(已修课可能开在另一学期)。
   const takenCard = (
     <section className="card">
       <h2 className="card__title">
@@ -1755,46 +1740,13 @@ export default function App() {
         <span className="card__note">排除已修 · 判断先修</span>
       </h2>
       <p className="card__sub">已录入 {taken.length} 门</p>
-      <input
-        className="search-box"
+      <CodeInput
+        codes={taken}
+        courses={allCourses}
         placeholder="粘贴成绩单上的课号，回车录入…"
-        value={takenDraft}
-        onChange={(event) => setTakenDraft(event.target.value)}
-        onKeyDown={(event) => {
-          if (event.key === 'Enter') {
-            event.preventDefault()
-            addTaken(takenDraft)
-          }
-        }}
-        onPaste={(event) => {
-          const parsed = parseCourseCodes(event.clipboardData.getData('text'))
-          if (parsed.length > 0) {
-            event.preventDefault()
-            addTaken(event.clipboardData.getData('text'))
-          }
-        }}
+        variant="taken"
+        onChange={setTaken}
       />
-      {taken.length > 0 && (
-        <div className="taken-grid">
-          {taken.map((code) => {
-            const course = catalogByKey.get(courseKey(code))
-            return (
-              <button
-                className="taken-cell"
-                key={code}
-                style={courseColor(code)}
-                title="点击移除"
-                type="button"
-                onClick={() => removeTaken(code)}
-              >
-                <span className="taken-cell__code">{code}</span>
-                {course && <span className="taken-cell__units">{course.units}学分</span>}
-                <i aria-hidden>×</i>
-              </button>
-            )
-          })}
-        </div>
-      )}
     </section>
   )
 

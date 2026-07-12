@@ -4574,48 +4574,6 @@ select {
   opacity: 0.78;
 }
 
-/* ---- 信息页:已完成课程网格 (takenCard) ------------------------------------ */
-
-.taken-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
-}
-
-.taken-cell {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
-  border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
-}
-
-.taken-cell:hover {
-  filter: brightness(0.96);
-}
-
-.taken-cell__code {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 650;
-}
-
-.taken-cell__units {
-  font-size: 10.5px;
-  opacity: 0.8;
-  font-variant-numeric: tabular-nums;
-}
-
-.taken-cell i {
-  margin-left: auto;
-  font-style: normal;
-  opacity: 0.55;
-}
-
 /* ---- read-only share view (#v=<id>, mobile-first) --------------------------- */
 
 .sv {
