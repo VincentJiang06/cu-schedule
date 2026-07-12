@@ -1565,6 +1565,9 @@ select {
   /* 轮廓加粗、换用对比更强的 --line，配合更宽的列间距让每天更好辨认。 */
   outline: 1.5px solid var(--line);
   outline-offset: -1px;
+  /* #里程碑4(DAY OFF 缩小):建一个内联尺寸容器，.tt__free 的字号用 cqw 相对这一列的
+     实际宽度取值——列窄(小尺寸 UI/挤了很多天)字号自动收，列宽(大屏/单列)也不会炸开。 */
+  container-type: inline-size;
 }
 
 /* #里程碑2:列底色挪到 ::before、z-index:-1——.tt__col 自身不设 z-index(不建立新层叠
@@ -1579,8 +1582,9 @@ select {
   background: color-mix(in srgb, var(--surface-2) 60%, transparent);
 }
 
-/* 无课当天占位：两行「DAY / OFF」，字号大幅加大、粗体+斜体，做成醒目的大字占位
-   （比旧版 19px 明显跳一档，一眼就能看出这天没课）。 */
+/* 无课当天占位：两行「DAY / OFF」，克制的小字占位——一眼能看出这天没课就够，不必是
+   全课表里最抢眼的东西。#里程碑4:字号改 clamp() 吃 .tt__col 的容器宽度(cqw)，随列宽
+   自适应缩放，小尺寸 UI 不会炸出巨大的 DAY OFF，大屏单列也不会显得过小。 */
 .tt__free {
   position: absolute;
   inset: 0;
@@ -1589,7 +1593,7 @@ select {
   align-items: center;
   justify-content: center;
   gap: 2px;
-  font-size: 30px;
+  font-size: clamp(11px, 15cqw, 20px);
   font-weight: 800;
   font-style: italic;
   line-height: 1;
@@ -2202,6 +2206,9 @@ select {
 
 .tt2__sub {
   position: relative;
+  /* #里程碑4(DAY OFF 缩小):与 .tt__col 同一手法——按这个子列的实际宽度(cqw)算
+     .tt2__free 的字号，A/B 对比时子列更窄，字号会自动比单方案时收得更小。 */
+  container-type: inline-size;
 }
 
 /* #9 A 子列 = 白（浅主题）/ --surface（深主题）；B 子列 = 略灰一档，便于区分两套排法。
@@ -2241,8 +2248,9 @@ select {
   background: var(--surface-2);
 }
 
-/* 无课当天占位：两行「DAY / OFF」，字号大幅加大 + 粗体 + 斜体，比旧版 15px 明显跳一档。
-   A/B 对比时子列较窄，字号比单方案(.tt2--solo)略小，避免在窄列里贴边。 */
+/* 无课当天占位：两行「DAY / OFF」，克制的小字占位。#里程碑4:字号改 clamp() 吃
+   .tt2__sub 的容器宽度(cqw)——A/B 对比时子列窄，字号自动比单方案(.tt2--solo)小，
+   不需要再单独维护两档固定像素。 */
 .tt2__free {
   position: absolute;
   inset: 0;
@@ -2251,7 +2259,7 @@ select {
   align-items: center;
   justify-content: center;
   gap: 1px;
-  font-size: 21px;
+  font-size: clamp(9px, 13cqw, 15px);
   font-weight: 800;
   font-style: italic;
   line-height: 1;
@@ -2261,7 +2269,7 @@ select {
 }
 
 .tt2--solo .tt2__free {
-  font-size: 30px;
+  font-size: clamp(11px, 15cqw, 20px);
 }
 
 .tt2__block {
