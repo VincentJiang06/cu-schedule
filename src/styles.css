@@ -226,7 +226,6 @@ select {
      @supports 兜底:不支持 backdrop-filter 的浏览器退回不透明的 --bg(即里程碑1的
      纯色版本)，不会露出下面滚动的内容。 */
   background: var(--bg);
-  border-bottom: 1px solid transparent;
 }
 
 @supports (backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px)) {
@@ -234,7 +233,6 @@ select {
     background: var(--glass-bg);
     backdrop-filter: saturate(160%) blur(14px);
     -webkit-backdrop-filter: saturate(160%) blur(14px);
-    border-bottom-color: var(--line-soft);
   }
 }
 
