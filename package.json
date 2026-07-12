@@ -11,6 +11,7 @@
     "data:scrape": "uv run python scripts/scrape_all_subjects.py",
     "data:build": "tsx scripts/build_bundles.mts",
     "data:audit": "tsx scripts/audit_data.mts",
+    "data:audit-programs": "tsx scripts/audit_programs.mts",
     "data:check": "tsx scripts/check_requirements.mts"
   },
   "dependencies": {
