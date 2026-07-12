@@ -2982,16 +2982,6 @@ select {
   color: var(--brand-ink);
 }
 
-.foot__sep {
-  color: var(--line);
-}
-
-.foot__note {
-  margin: 0;
-  font-size: 11px;
-  color: var(--ink-3);
-}
-
 /* ---- 友链带（页脚友站 chip 行，与 UniWild 系站点视觉骨架一致） ------------------ */
 
 .foot__sibs {
@@ -4838,12 +4828,7 @@ select {
   gap: 4px;
 }
 
-.sv__foot-note a {
-  color: var(--brand-ink);
-  text-decoration: none;
-}
-
-/* AGPL §13 源码入口：主署名，独立一行、比来源致谢更重更大（与站内 .foot__byline 同一规格）。 */
+/* AGPL §13 源码入口：主署名，独立一行（与站内 .foot__byline 同一规格）。 */
 .sv__foot-byline {
   font-size: 13px;
   font-weight: 750;
@@ -4853,12 +4838,6 @@ select {
 
 .sv__foot-byline:hover {
   color: var(--brand-ink);
-}
-
-.sv__foot-note {
-  margin: 0;
-  font-size: 11px;
-  color: var(--ink-3);
 }
 
 .export-note--share {

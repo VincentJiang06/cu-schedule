@@ -2466,16 +2466,7 @@ export default function App() {
             </svg>
             CUS by VinceJiang
           </a>
-          <span className="foot__sep" aria-hidden>·</span>
-          <span>课程和项目信息以 CUSIS 为准</span>
         </div>
-        <p className="foot__note">
-          抓取管线来自{' '}
-          <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
-            EagleZhen
-          </a>{' '}
-          (AGPL-3.0)
-        </p>
         <div className="foot__sibs">
           <span className="sib-label">友链</span>
           <div className="sib-row">
