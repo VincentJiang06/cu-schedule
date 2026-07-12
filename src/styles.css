@@ -3589,15 +3589,16 @@ select {
   /* accent bar on the right edge (matches the 信息 page tiles) */
   border-right: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   /* #5 选中态整卡变色的流畅过渡。 */
-  transition: background 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+  transition: background 0.22s ease, border-color 0.22s ease, opacity 0.22s ease;
 }
 
-/* #5 必定学选中 → 整卡吃满该课色调(强度对齐导航 tab 选中的「整块变色」),配 brand 描边。 */
+/* #5 必定学选中 → 整卡吃满该课色调(强度对齐导航 tab 选中的「整块变色」)。
+   #修复5:边框改用同一色调的简单细边,不再用 brand(近黑)描边 + inset 阴影叠一圈——
+   那个组合视觉上是一圈突兀的黑色粗框，与"可能学"(.cc--cart 下方)那种简单彩色细边框
+   的观感不统一。现在只留一条颜色边,粗细/画法与 .cc--cart 一致。 */
 .cc--committed {
   background: hsl(var(--hue) calc(var(--sat) + 14%) calc(var(--fill-l) + var(--shade) - 5%));
-  box-shadow: inset 0 0 0 1.5px var(--brand);
-  border-color: var(--brand);
-  border-right-color: hsl(var(--hue) calc(var(--sat) + 14%) calc(var(--edge-l) + var(--shade)));
+  border-color: hsl(var(--hue) calc(var(--sat) + 14%) calc(var(--edge-l) + var(--shade)));
 }
 
 /* #5 可能学选中 → 同色调但更淡(半透明版):色块与 surface 调和,一眼看出「还没定」。 */
