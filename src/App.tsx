@@ -96,13 +96,6 @@ const PAGES: Array<{ value: Page; label: string }> = [
   { value: 'appendix', label: '附录' },
 ]
 
-// 页面在导航栏里的先后顺序。切换方向据此决定：切到更靠后的页 → 旧页向左滑出、新页从右滑入。
-const PAGE_ORDER: Record<Page, number> = { info: 0, select: 1, timetable: 2, export: 3, appendix: 4 }
-
-// 一次切页动画的描述：从哪一页来、方向（1=前进向左滑 / -1=后退向右滑）。
-type PageTransition = { from: Page; dir: 1 | -1 }
-const TRANSITION_MS = 260
-
 const DAY_NAMES = ['周一', '周二', '周三', '周四', '周五']
 const STORAGE_KEY = 'cu-schedule:v1'
 
@@ -551,8 +544,6 @@ export default function App() {
   // 被删的排法从排法横条里彻底移除、不参与 A/B/solo 选择;纯会话内状态,不持久化。
   const [deletedPlanIds, setDeletedPlanIds] = useState<Set<string>>(() => new Set())
   const [page, setPage] = useState<Page>(bootPage)
-  // 当前正在播放的切页动画（null = 无动画，直接渲染单页）。
-  const [transition, setTransition] = useState<PageTransition | null>(null)
   // The course whose detail popup is open (null = closed).
   const [detailCourse, setDetailCourse] = useState<Course | null>(null)
 
@@ -565,26 +556,18 @@ export default function App() {
   // 了)——见下方「URL 实时状态同步」两个 effect。
   const restoringUrlRef = useRef(false)
 
-  // 切页统一入口：记录来向与方向，触发一次横向滑动，动画结束后清空 transition 回到单页渲染；
-  // 同时 pushState 一条新历史条(hash 里的 page 换成目标页,其它字段读最近一次渲染的状态,
-  // 因为它们没变),使浏览器返回键能回到切换前的 tab。
+  // 切页统一入口：直接切到目标页（无动画，瞬切）；同时 pushState 一条新历史条(hash 里的
+  // page 换成目标页,其它字段读最近一次渲染的状态,因为它们没变),使浏览器返回键能回到
+  // 切换前的 tab。
   const go = useCallback(
     (to: Page) => {
       if (to === page) return
-      setTransition({ from: page, dir: PAGE_ORDER[to] > PAGE_ORDER[page] ? 1 : -1 })
       setPage(to)
       const hash = liveHashBuilderRef.current(to)
       window.history.pushState(null, '', `${window.location.pathname}${window.location.search}${hash}`)
     },
     [page],
   )
-
-  // 动画计时结束后落幕：清掉 transition，让 viewport 回到单页（solo）渲染。
-  useEffect(() => {
-    if (!transition) return
-    const timer = window.setTimeout(() => setTransition(null), TRANSITION_MS)
-    return () => window.clearTimeout(timer)
-  }, [transition])
 
   // 课表页「上下班时间」（原「辅助线」）。用户自由输入 <input type="time">，两条虚线画在日历上
   // 供目测；同时也是「不展示不符合上下班限制的方案」与搜索卡「符合上下班时间」两个过滤开关的窗口来源。
@@ -2923,29 +2906,9 @@ export default function App() {
 
         {error && <div className="alert">{error}</div>}
 
-        <main className={`viewport${transition ? ' viewport--anim' : ''}`}>
-          {/* 来向页（仅切换时挂载）：向一侧滑出。 */}
-          {transition && (
-            <div
-              aria-hidden
-              className={`grid grid--${transition.from} layer layer--exit ${
-                transition.dir === 1 ? 'to-left' : 'to-right'
-              }`}
-              key={transition.from}
-            >
-              {pageInner(transition.from)}
-            </div>
-          )}
-
-          {/* 目标页：无动画时为唯一的 solo 层；切换时从另一侧滑入。 */}
-          <div
-            className={
-              !transition
-                ? `grid grid--${page} layer layer--solo`
-                : `grid grid--${page} layer layer--enter ${transition.dir === 1 ? 'from-right' : 'from-left'}`
-            }
-            key={page}
-          >
+        <main className="viewport">
+          {/* 只渲染当前 active 页一层：切页即瞬间替换，不叠层、不做过渡动画。 */}
+          <div className={`grid grid--${page}`} key={page}>
             {pageInner(page)}
           </div>
         </main>

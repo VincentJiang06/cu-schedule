@@ -439,101 +439,14 @@ select {
   grid-template-columns: minmax(0, 1fr) 340px;
 }
 
-/* ---- page transitions -------------------------------------------------- */
+/* ---- viewport ------------------------------------------------------------ */
 
-/* <main> 外壳：平时是个 flex 容器，让唯一的 solo 页（.grid flex:1）撑满；切页时裁掉滑出画面外的层。
-   position:relative 让绝对定位的层与浮层都以它为参照。 */
+/* <main> 外壳：唯一的当前页（.grid flex:1）撑满整个容器，切页即瞬间替换（无动画、无叠层）。 */
 .viewport {
   position: relative;
   flex: 1;
   min-height: 0;
   display: flex;
-}
-
-/* 动画进行中才裁剪，避免平时裁掉下拉菜单 / 气泡等溢出内容。 */
-.viewport--anim {
-  overflow: hidden;
-}
-
-/* 切页时两层都脱离文档流、绝对铺满 viewport 各自滑动；平时 solo 层走正常 flex 流填满。 */
-.viewport--anim .layer {
-  position: absolute;
-  inset: 0;
-  will-change: transform;
-}
-
-/* 新页盖在旧页之上滑入。 */
-.layer--enter {
-  z-index: 2;
-}
-.layer--exit {
-  z-index: 1;
-}
-
-/* #修复4(切页动效简化):去掉先加速后减速的 cubic-bezier(眩晕感的来源)，改线性
-   匀速；时长从 0.26s 压到 0.15s；位移也从整屏 100% 收窄到 28px 的一个"轻推"，
-   单纯 translateX,不叠加透明度/缩放——就是最基础、克制、不抢眼的左右一滑。 */
-.viewport--anim .layer--enter,
-.viewport--anim .layer--exit {
-  animation-duration: 0.15s;
-  animation-timing-function: linear;
-  animation-fill-mode: both;
-}
-
-.layer--enter.from-right {
-  animation-name: pageEnterFromRight;
-}
-.layer--enter.from-left {
-  animation-name: pageEnterFromLeft;
-}
-.layer--exit.to-left {
-  animation-name: pageExitToLeft;
-}
-.layer--exit.to-right {
-  animation-name: pageExitToRight;
-}
-
-@keyframes pageEnterFromRight {
-  from {
-    transform: translateX(28px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes pageEnterFromLeft {
-  from {
-    transform: translateX(-28px);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes pageExitToLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-28px);
-  }
-}
-@keyframes pageExitToRight {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(28px);
-  }
-}
-
-/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的课程块淡入动画在文件末尾还有
-   一个同名媒体查询里统一关闭——CSS 层叠不看媒体查询、只看源码顺序,这里若也覆盖会被
-   后面无条件的规则重新盖掉,必须放在它们之后,所以那部分留给末尾那个块，这里只保留
-   最早就有的页面切换动效。 */
-@media (prefers-reduced-motion: reduce) {
-  .viewport--anim .layer {
-    animation-duration: 0.01ms !important;
-  }
 }
 
 .page-center {
@@ -5229,25 +5142,10 @@ select {
     grid-template-rows: auto auto;
   }
 
-  /* 窄屏（整页竖排、随页面滚动）不做滑动动画：viewport 退回透明壳，切页即瞬切，
-     只留目标页正常竖排，避免绝对定位的层在无固定高度下塌成 0。 */
+  /* 窄屏整页竖排、随页面滚动：viewport 退回 block 铺满，只留目标页正常竖排。 */
   .viewport {
     display: block;
     flex: none;
-  }
-
-  .viewport--anim {
-    overflow: visible;
-  }
-
-  .viewport--anim .layer {
-    position: static;
-    animation: none !important;
-    will-change: auto;
-  }
-
-  .layer--exit {
-    display: none;
   }
 
   /* 窄屏整页竖排、阅读顺序堆叠——侧栏不再吸顶/内滚，回到普通文档流（sticky 在这种
