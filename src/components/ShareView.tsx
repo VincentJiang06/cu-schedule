@@ -17,9 +17,12 @@ import { Timetable } from './Timetable.tsx'
  * list, and the same PDF / PNG / wallpaper exports. Nothing here mutates local state.
  */
 
+// #Bug D:镜像 App.tsx 的 loadTheme() / color.ts 的 activeTheme()——三档主题
+// (light/mid/dark)都认,不只认 light/dark,否则 mid 档会 fall through 到系统偏好,只读分享
+// 页显示的主题就会跟用户实际存的 mid 档不一致。
 function applyTheme(): void {
   const saved = window.localStorage.getItem('cu-schedule:theme')
-  const theme = saved === 'light' || saved === 'dark'
+  const theme = saved === 'light' || saved === 'mid' || saved === 'dark'
     ? saved
     : window.matchMedia?.('(prefers-color-scheme: dark)').matches
       ? 'dark'
