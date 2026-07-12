@@ -96,6 +96,36 @@ const PAGES: Array<{ value: Page; label: string }> = [
   { value: 'appendix', label: '附录' },
 ]
 
+// 五页各自的真实路径(History API 路由,不引路由库)。
+const PAGE_PATH: Record<Page, string> = {
+  info: '/info',
+  select: '/select',
+  timetable: '/timetable',
+  export: '/export',
+  appendix: '/appendix',
+}
+
+// 从 location.pathname 解析出 page:去掉尾斜杠后精确匹配五条路径之一(/timetable 与
+// /timetable/ 都能命中);根 `/` 或任何其它未知路径解析不出、返回 null,由调用方兜底
+// (通常落回 'info')。
+function pageFromPathname(pathname: string): Page | null {
+  const trimmed = pathname.length > 1 ? pathname.replace(/\/+$/, '') : pathname
+  switch (trimmed) {
+    case '/info':
+      return 'info'
+    case '/select':
+      return 'select'
+    case '/timetable':
+      return 'timetable'
+    case '/export':
+      return 'export'
+    case '/appendix':
+      return 'appendix'
+    default:
+      return null
+  }
+}
+
 const DAY_NAMES = ['周一', '周二', '周三', '周四', '周五']
 const STORAGE_KEY = 'cu-schedule:v1'
 
@@ -375,7 +405,10 @@ const bootCommitted = live?.committed ?? shared?.committed ?? saved?.committed ?
 const bootTaken = live?.taken ?? shared?.taken ?? saved?.taken ?? []
 const bootPins = live?.pins ?? shared?.pins ?? saved?.pins ?? {}
 const bootCart = saved?.cart ?? []
-const bootPage: Page = live?.page ?? 'info'
+// #里程碑2(真路由):page 现在由 location.pathname 决定(History API,不引路由库)——命中
+// /info|/select|/timetable|/export|/appendix 之一就用它;根 `/` 或未知路径落回 'info'
+// (下方 App 组件内的 mount effect 会把地址栏一次性纠正到这个落地页)。
+const bootPage: Page = pageFromPathname(typeof window !== 'undefined' ? window.location.pathname : '/') ?? 'info'
 
 // ---- #里程碑4 排法横条:隐藏原生滚动条 + 按住拖动(pan) + 边缘自动滚动 ----------------------
 // 6px 阈值区分 tap(触发选中)与 drag(平移,不触发选中)——与选课页课程卡的拖拽判定同一手法
@@ -556,15 +589,15 @@ export default function App() {
   // 了)——见下方「URL 实时状态同步」两个 effect。
   const restoringUrlRef = useRef(false)
 
-  // 切页统一入口：直接切到目标页（无动画，瞬切）；同时 pushState 一条新历史条(hash 里的
-  // page 换成目标页,其它字段读最近一次渲染的状态,因为它们没变),使浏览器返回键能回到
-  // 切换前的 tab。
+  // 切页统一入口：直接切到目标页（无动画，瞬切）；同时 pushState 一条新历史条,地址栏
+  // 换成目标页的真实路径(PAGE_PATH[to]),hash 部分照旧带最近一次渲染的选课状态(因为它们
+  // 没变),使浏览器返回键能回到切换前的 tab。
   const go = useCallback(
     (to: Page) => {
       if (to === page) return
       setPage(to)
       const hash = liveHashBuilderRef.current(to)
-      window.history.pushState(null, '', `${window.location.pathname}${window.location.search}${hash}`)
+      window.history.pushState(null, '', `${PAGE_PATH[to]}${window.location.search}${hash}`)
     },
     [page],
   )
@@ -698,17 +731,19 @@ export default function App() {
   }, [])
 
   // 浏览器返回/前进键:popstate 只在 history.back()/forward()/go() 时触发(replaceState 本身
-  // 不触发,不会自环)。解出 #st= 就整体恢复(含 page);解不出(比如退到最初、pushState 之前
-  // 那条没有 #st= 的历史)保持现状不动——好过把已经在内存里的选课清空。restoringUrlRef 置位
-  // → 下方「URL 实时状态同步」effect 会在这轮变化后跳过一次 replaceState,避免恢复瞬间的
-  // 中间态覆盖刚恢复好的 URL(React 18+ 对原生事件里的这一串 setState 自动批处理成一次渲染,
-  // 所以下方 effect 只会在这轮恢复后跑一次,标志位读一次即够)。
+  // 不触发,不会自环)。page 现在独立于 #st=,直接从 location.pathname 解出(命中五页之一才
+  // setPage,未知路径保持现状不动)。#st= 部分:解出就整体恢复其余选课字段;解不出(比如退到
+  // 最初、pushState 之前那条没有 #st= 的历史)保持现状不动——好过把已经在内存里的选课清空。
+  // restoringUrlRef 置位 → 下方「URL 实时状态同步」effect 会在这轮变化后跳过一次
+  // replaceState,避免恢复瞬间的中间态覆盖刚恢复好的 URL(React 18+ 对原生事件里的这一串
+  // setState 自动批处理成一次渲染,所以下方 effect 只会在这轮恢复后跑一次,标志位读一次即够)。
   useEffect(() => {
     const onPopState = (): void => {
+      const pathPage = pageFromPathname(window.location.pathname)
+      if (pathPage) setPage(pathPage)
       const state = decodeLiveState(window.location.hash)
       if (!state) return
       restoringUrlRef.current = true
-      setPage(state.page)
       setTermSlug(state.termSlug)
       setCommitted(state.committed)
       setTaken(state.taken)
@@ -728,6 +763,17 @@ export default function App() {
     }
     window.addEventListener('popstate', onPopState)
     return () => window.removeEventListener('popstate', onPopState)
+  }, [])
+
+  // 首屏路径纠正(仅挂载时跑一次):地址栏路径不是五页之一(根 `/`、或任何未知路径)时,把它
+  // 一次性 replaceState 成 bootPage 落地的真实路径,不新增历史条,也不动 search/hash。
+  useEffect(() => {
+    if (pageFromPathname(window.location.pathname)) return
+    window.history.replaceState(
+      null,
+      '',
+      `${PAGE_PATH[bootPage]}${window.location.search}${window.location.hash}`,
+    )
   }, [])
 
   useEffect(() => {
