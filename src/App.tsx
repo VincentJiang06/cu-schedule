@@ -1013,17 +1013,32 @@ export default function App() {
     () => allPlans.filter((plan) => planMatchesPins(plan, pins) && !deletedPlanIds.has(plan.id)),
     [allPlans, deletedPlanIds, pins],
   )
-  // #里程碑1(默认单方案预览):约束(pins)/删除方案(deletedPlanIds)/加课(committedCourses,
-  // 继而带动 allPlans→plans 变化)这三类"方案集改变"事件后,默认回落到单方案模式(solo)
-  // 展示第一个可见排法,不再像之前那样隐式落进 A/B 对比(A/B 只应在用户显式点排法横条上的
-  // A / B 按钮时才进入——那两个按钮会自己 setSoloPlanId(null) 退出单方案模式)。初始态同理:
-  // mount 时这个 effect 也会跑一次,默认就是 solo 展示排法 1,不是 A/B。
+  // #Bug A(优雅回落):约束(pins)/删除方案(deletedPlanIds)/加课(committedCourses,继而带动
+  // allPlans→plans 变化)这三类"方案集改变"事件后,不再无条件把用户拉回 solo 排法 1——那样会
+  // 摧毁用户刚搭好的 A/B 对比或已选中的排法。改成只在"当前选中的方案已经被新过滤滤掉、不再
+  // 存在于可见 plans 里"时才回落:
+  //   · 当前 solo 模式(soloPlanId !== null):选中的排法还在 plans 里就不动,不在才落到
+  //     plans[0]。
+  //   · 当前 A/B 模式(soloPlanId === null):planAId 或 planBId 有一个还在 plans 里就维持
+  //     A/B、什么都不动;两个都没了(含初始态两者本来就是 null)才落到 solo 第一个可见排法
+  //     ——这也是首屏/初始态默认 solo 而非 A/B 的来源。
   // 源码顺序特意排在下面「排法签名回配」那个 effect 之前——云端/分享链接带回的显式 A/B 选择
-  // 在同一渲染批次里后跑、后写赢,能正确覆盖这里的默认值,不会被打断。
+  // 在同一渲染批次里后跑、后写赢,能正确覆盖这里的默认值,不会被打断(#Bug B)。
   useEffect(() => {
-    setSoloPlanId(plans[0]?.id ?? null)
+    setSoloPlanId((current) => {
+      if (current !== null) {
+        // solo 模式:选中的排法还在新的可见集合里就不动;没了才回落第一个可见排法。
+        return plans.some((plan) => plan.id === current) ? current : (plans[0]?.id ?? null)
+      }
+      // A/B 模式(或初始态,两者都是 soloPlanId === null):A 或 B 有一个还在就维持 A/B,
+      // 不打断用户搭好的对比;两个都没了(含初始态两者本来就是 null)才回落 solo 第一个。
+      const aAlive = planAId !== null && plans.some((plan) => plan.id === planAId)
+      const bAlive = planBId !== null && plans.some((plan) => plan.id === planBId)
+      return aAlive || bAlive ? null : (plans[0]?.id ?? null)
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps -- 故意只在这三类"方案集改变"
-    // 触发时重置,plans 本身是它们的纯派生值,不需要单独再列一次
+    // 触发时重新判定;planAId/planBId 用闭包读最新值(不必单独列出来触发这个 effect),plans
+    // 本身是三者的纯派生值,同样不需要再列一次
   }, [committedCourses, deletedPlanIds, pins])
   useEffect(() => {
     if (planIndex >= plans.length) setPlanIndex(0)
