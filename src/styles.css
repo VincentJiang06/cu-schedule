@@ -477,10 +477,13 @@ select {
   z-index: 1;
 }
 
+/* #修复4(切页动效简化):去掉先加速后减速的 cubic-bezier(眩晕感的来源)，改线性
+   匀速；时长从 0.26s 压到 0.15s；位移也从整屏 100% 收窄到 28px 的一个"轻推"，
+   单纯 translateX,不叠加透明度/缩放——就是最基础、克制、不抢眼的左右一滑。 */
 .viewport--anim .layer--enter,
 .viewport--anim .layer--exit {
-  animation-duration: 0.26s;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-duration: 0.15s;
+  animation-timing-function: linear;
   animation-fill-mode: both;
 }
 
@@ -499,7 +502,7 @@ select {
 
 @keyframes pageEnterFromRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(28px);
   }
   to {
     transform: translateX(0);
@@ -507,7 +510,7 @@ select {
 }
 @keyframes pageEnterFromLeft {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-28px);
   }
   to {
     transform: translateX(0);
@@ -518,7 +521,7 @@ select {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100%);
+    transform: translateX(-28px);
   }
 }
 @keyframes pageExitToRight {
@@ -526,14 +529,14 @@ select {
     transform: translateX(0);
   }
   to {
-    transform: translateX(100%);
+    transform: translateX(28px);
   }
 }
 
-/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的课程块淡入/按钮 hover 位移
-   在文件末尾还有一个同名媒体查询里统一关闭——CSS 层叠不看媒体查询、只看源码顺序,
-   这里若也覆盖会被后面无条件的规则重新盖掉,必须放在它们之后,所以那部分留给末尾那个
-   块，这里只保留最早就有的页面切换动效。 */
+/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的课程块淡入动画在文件末尾还有
+   一个同名媒体查询里统一关闭——CSS 层叠不看媒体查询、只看源码顺序,这里若也覆盖会被
+   后面无条件的规则重新盖掉,必须放在它们之后,所以那部分留给末尾那个块，这里只保留
+   最早就有的页面切换动效。 */
 @media (prefers-reduced-motion: reduce) {
   .viewport--anim .layer {
     animation-duration: 0.01ms !important;
