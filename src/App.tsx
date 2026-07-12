@@ -1538,10 +1538,12 @@ export default function App() {
         cartCodes={cart}
         codes={[]}
         currentTermOrder={currentTermOrder}
+        disabledCandidateKeys={disabledCandidates}
         emptyHint="还没有候选课程。在中间的课程列表点「可能学」来添加。"
         termOrdersByKey={termOrdersByKey}
         onRemove={removeCart}
         onRowPointerDown={(code, _isCart, event) => beginCourseDrag(code, 'cart', event)}
+        onToggleCandidateDisabled={toggleCandidateDisabled}
       />
     </section>
   )
@@ -1654,6 +1656,7 @@ export default function App() {
         showTermBadge={false}
         termOrdersByKey={termOrdersByKey}
         onPin={togglePin}
+        onToggleCandidateDisabled={toggleCandidateDisabled}
       />
       {unknownCommitted.length > 0 && (
         <p className="card__warn">本学期没有开设：{unknownCommitted.join('、')}</p>

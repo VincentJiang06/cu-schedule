@@ -129,6 +129,7 @@ export function CommittedList({
   showTermBadge = true,
   onRowPointerDown,
   disabledCandidateKeys,
+  onToggleCandidateDisabled,
 }: {
   codes: string[]
   byCode: Map<string, Course>
@@ -154,6 +155,10 @@ export function CommittedList({
   /** #里程碑5:被点角停用的候选课(按 courseKey)——课表页这份列表用来给对应候选行加
    * 置灰样式，与大课表上试排块的禁用展示保持一致（"并在筛选里体现"）。 */
   disabledCandidateKeys?: Set<string>
+  /** #里程碑5(隐藏/显示快速开关):候选行右侧的眼睛按钮——快速禁用/启用该候选课在课表
+   * 上的展示，与大课表试排块右上角的三角 toggle 走同一个 App.toggleCandidateDisabled，
+   * 两处状态互相同步。只对 isCart 行渲染；不传则不显示这个按钮。 */
+  onToggleCandidateDisabled?: (code: string) => void
 }) {
   const interactive = Boolean(onPin)
   const rows: Array<{ code: string; isCart: boolean }> = [
@@ -186,10 +191,25 @@ export function CommittedList({
                   <span className="cl-row__code">{code}</span>
                   {course && <span className="cl-row__units">{course.units}学分</span>}
                   {showTermBadge && badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
-                  {onRemove && (
-                    <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
-                      ×
-                    </button>
+                  {(onRemove || (isCart && onToggleCandidateDisabled)) && (
+                    <span className="cl-row__actions">
+                      {isCart && onToggleCandidateDisabled && (
+                        <button
+                          aria-label={isDisabledCandidate ? `启用候选课 ${code}` : `隐藏候选课 ${code}`}
+                          className={`cl-row__eye${isDisabledCandidate ? ' cl-row__eye--off' : ''}`}
+                          title={isDisabledCandidate ? '已停用课表展示，点击重新启用' : '点击隐藏（停用课表展示，不移除候选）'}
+                          type="button"
+                          onClick={() => onToggleCandidateDisabled(code)}
+                        >
+                          {isDisabledCandidate ? '👁‍🗨' : '👁'}
+                        </button>
+                      )}
+                      {onRemove && (
+                        <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
+                          ×
+                        </button>
+                      )}
+                    </span>
                   )}
                 </div>
                 {course ? (

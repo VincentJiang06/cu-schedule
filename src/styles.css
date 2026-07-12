@@ -1262,8 +1262,16 @@ select {
   white-space: nowrap;
 }
 
-.cl-row__x {
+/* #里程碑5(隐藏/显示快速开关):眼睛按钮 + × 一起靠右分组，整组用 margin-left:auto
+   推到行尾，组内用 gap 分开——单独给 × 加 auto-margin 撑不住"眼睛也要靠右"这一半。 */
+.cl-row__actions {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cl-row__x {
   border: 0;
   background: transparent;
   color: var(--ink-3);
@@ -1275,6 +1283,27 @@ select {
 
 .cl-row__x:hover {
   color: var(--bad);
+}
+
+.cl-row__eye {
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 13px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+  opacity: 0.8;
+}
+
+.cl-row__eye:hover {
+  opacity: 1;
+  color: var(--brand-ink);
+}
+
+/* 已禁用的候选课：眼睛按钮本身也弱化，呼应整行的置灰(.cl-row--cart-off)。 */
+.cl-row__eye--off {
+  opacity: 0.55;
 }
 
 .cl-row__lines {
