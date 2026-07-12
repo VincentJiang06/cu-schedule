@@ -1936,9 +1936,23 @@ select {
   /* #里程碑1(圆角更明显):8px → 12px，课程块的"卡片感"更清楚。 */
   border-radius: 12px;
   padding: 5px 7px;
+  /* #容器查询方法论:块本身是内容布局的容器——按它*实际渲染出的*宽高选档,不再靠 lane
+     数或 JS 猜。size 容器既能查宽(inline-size)也能查高(block-size);块已有显式的
+     top/height/left/width(见下方内联 style 的 calc()),尺寸不依赖内容,满足 size 容器
+     的前提。.tt__block 与 .tt2__block 共用同一个容器名 blk，下面「共享的容器查询规则」
+     一节对两者写同一套 @container 规则，不必逐个组件各写一遍。 */
+  container-type: size;
+  container-name: blk;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  /* #容器查询方法论:内容片段(课号/全称地点/简写地点/时间)全部作为并列的 flex 子项一次性
+     渲染进 DOM，用 display 控制哪些片段可见——可见的课号+全称地点靠 flex-wrap 自然挤在
+     同一行(宽档)，简写地点/时间靠自身的 flex-basis:100% 强制换行(不论宽窄档都独占一行)。
+     具体哪些片段可见、哪个换行，由下方「共享的容器查询规则」按 @container blk 的宽高
+     断点决定，这里只搭骨架。 */
+  flex-flow: row wrap;
+  align-items: baseline;
+  column-gap: 6px;
+  row-gap: 1px;
   background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
@@ -1946,86 +1960,52 @@ select {
   animation: blockFadeIn 0.22s ease both;
 }
 
-/* 第1行：component 徽标 + 课号——三行里最优先保留的一行，卡片太矮时靠 .tt__block 的
-   overflow:hidden 把下面的行截掉，这一行永远排最前面、最先保住。 */
-.tt__block-top {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  min-width: 0;
-  flex: none;
-}
-
-.tt__block-comp {
-  flex: none;
-  /* #里程碑2(字体再加大一档):12px → 13px。 */
-  font-size: 13px;
-  font-weight: 850;
-  letter-spacing: 0.03em;
-  line-height: 1.3;
-  padding: 0 5px;
-  border-radius: 4px;
-  background: hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.18);
-}
-
+/* 课号——唯一在所有档位(宽/窄/矮/极矮)都保留的片段，永远最先保住。等宽字体与全站
+   其它课号(cl-row__code/ci__chip 等)统一。字号默认给窄档的值，宽档由容器查询覆盖放大
+   (见共享规则一节)。 */
 .tt__block-code {
-  /* #里程碑2:课号等宽字体——var(--mono) 与全站其它课号(cl-row__code/ci__chip 等)统一。 */
   font-family: var(--mono);
-  /* #里程碑2(字体再加大一档):14px → 15px。 */
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 750;
   letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: none;
 }
 
-/* 第2行：时间。#里程碑2:窄列(.tt__block--sq2/--sq3)时加 --fold 修饰类，从一行
-   "09:30–12:15" 折成两行"09:30" / "–12:15"，给第1/3行腾出横向宽度。 */
-.tt__block-time {
-  display: flex;
-  align-items: baseline;
-  /* #里程碑2(字体再加大一档):12.5px → 13.5px。 */
-  font-size: 13.5px;
-  font-variant-numeric: tabular-nums;
-  opacity: 0.85;
+/* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
+   宽档由共享的容器查询规则反过来。地点为空(TBA)时 JSX 根本不渲染这两个 span，天然
+   不占位，不需要额外的"空地点"修饰类。 */
+.tt__block-loc-full {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.82;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.tt__block-time--fold {
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.15;
-  gap: 0;
-}
-
-.tt__block-time--fold .tt__block-time-dash {
   display: none;
 }
 
-.tt__block-time--fold .tt__block-time-end::before {
-  content: '–';
-}
-
-/* 第3行：地点，单独一行；窄列时内容已在 JS 侧换成官方楼宇缩写。 */
-.tt__block-loc {
-  /* #里程碑2(字体再加大一档):11.5px → 12.5px。 */
-  font-size: 12.5px;
+.tt__block-loc-abbr {
+  font-size: 10px;
   opacity: 0.72;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  flex-basis: 100%;
 }
 
-/* #里程碑2:最窄两级(lanes=3/≥4)时地点/课号再收一档字号，配合 JS 侧的缩写/单字母，
-   多重保险防止在最挤的并排列里溢出。 */
-.tt__block--sq2 .tt__block-loc,
-.tt__block--sq3 .tt__block-loc {
-  font-size: 11.5px;
-}
-
-.tt__block--sq3 .tt__block-code {
-  font-size: 13.5px;
+/* 时间——独占一行(flex-basis:100%，不论宽窄档都从课号/地点那一行换下来)。默认按窄档
+   给尺寸；容器窄到极限时(见共享规则)再从一行"09:30–12:15"折成两行。 */
+.tt__block-time {
+  display: flex;
+  align-items: baseline;
+  flex-basis: 100%;
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+  white-space: nowrap;
 }
 
 /* #里程碑2:冲突圆形感叹号——同一天两个时段有重叠时，落在两者碰撞处（重叠区间的
@@ -2692,12 +2672,18 @@ select {
   overflow: hidden;
   /* #里程碑1(圆角更明显):6px → 10px，与 .tt__block 同一档更明显的圆角。 */
   border-radius: 10px;
-  /* 三行内容(component+课号 / 时间 / 地点)，45 分钟的窄块塞不下三行时靠 overflow:hidden
-     从下往上截断，第一行(课号)最优先保留。 */
+  /* 内容片段(课号/全称地点/简写地点/时间)全部渲染进 DOM,45 分钟的窄块塞不下全部时靠
+     overflow:hidden 从下往上截断,课号排最前面最优先保留。 */
   padding: 4px 6px;
+  /* #容器查询方法论:与 .tt__block 同一个容器名 blk——A/B 对比时子列更窄，块按自己实际
+     渲染出的宽高自适应选档，不再靠 lanes 猜。 */
+  container-type: size;
+  container-name: blk;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex-flow: row wrap;
+  align-items: baseline;
+  column-gap: 5px;
+  row-gap: 1px;
   line-height: 1.2;
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
   /* #里程碑6:同 .tt__block 的淡入 mount 动画，见上方 @keyframes blockFadeIn。 */
@@ -2748,98 +2734,156 @@ select {
   outline-offset: 1px;
 }
 
-/* 第一行：component 角标 + 课号 —— 45 分钟块内也必须完整可读，最优先保留、不换行不收缩。 */
-.tt2__block-top {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  min-width: 0;
-  flex: none;
-}
-
-.tt2__block-comp {
-  flex: none;
-  /* #里程碑2(字体再加大一档):10.5px → 11.5px。 */
-  font-size: 11.5px;
-  font-weight: 850;
-  letter-spacing: 0.03em;
-  line-height: 1.35;
-  padding: 0 4px;
-  border-radius: 4px;
-}
-
-/* LEC 角标：实心填充、白字，醒目。 */
-.tt2__block--lec .tt2__block-comp {
-  color: #fff;
-  background: hsl(var(--hue) calc(var(--sat) + 26%) calc(var(--edge-l) + var(--shade) - 6%));
-}
-
-/* TUT/LAB 角标：虚线描边、透明底，与实心 LEC 角标区分。 */
-.tt2__block--alt .tt2__block-comp {
-  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
-  background: transparent;
-  border: 1.5px dashed hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  padding: 0 4px;
-}
-
+/* 课号 —— 45 分钟块内也必须完整可读,最优先保留、不换行不收缩。字号默认给窄档(A/B
+   对比时子列更挤)的值，宽档由共享的容器查询规则放大(见共享规则一节)。#8/#里程碑2 原来
+   LEC/TUT 用一个角标文字区分——现在改用 .tt2__block--lec/--alt 的块底色/边框区分(已保留，
+   见上方 background 规则)，角标文字并入课号一起省下的空间给课号+全称地点用。 */
 .tt2__block-code {
-  /* #里程碑2:课号等宽字体，与全站其它课号统一。 */
   font-family: var(--mono);
-  /* #里程碑2(字体再加大一档):13.5px → 14.5px。 */
-  font-size: 14.5px;
+  font-size: 11.5px;
   font-weight: 750;
   letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: none;
 }
 
-/* 第二行：时间。#里程碑2:窄列(.tt2__block--sq2/--sq3)时加 --fold 修饰类，从一行
-   "09:30–12:15" 折成两行"09:30" / "–12:15"，给第1/3行腾出横向宽度。 */
+/* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
+   宽档由共享的容器查询规则反过来。地点为空(TBA)时 JSX 不渲染这两个 span，天然不占位。 */
+.tt2__block-loc-full {
+  font-size: 11.5px;
+  font-weight: 600;
+  opacity: 0.85;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: none;
+}
+
+.tt2__block-loc-abbr {
+  font-size: 9.5px;
+  opacity: 0.75;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex-basis: 100%;
+}
+
+/* 时间——独占一行(flex-basis:100%)。默认按窄档给尺寸；容器窄到极限时(见共享规则)
+   再从一行"09:30–12:15"折成两行。 */
 .tt2__block-time {
   display: flex;
   align-items: baseline;
-  /* #里程碑2(字体再加大一档):12px → 13px。 */
-  font-size: 13px;
+  flex-basis: 100%;
+  font-size: 10px;
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
 }
 
-.tt2__block-time--fold {
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.15;
-  gap: 0;
+/* ---- 课程块自适应方法论:共享的容器查询规则 (.tt__block / .tt2__block 共用) --------
+   两组组件(单排法课表 .tt__block、A/B 对比课表 .tt2__block)各自的课程块都已在上面声明
+   `container-type: size; container-name: blk`——按块自己*实际渲染出的*宽高来选布局,不再
+   靠 lanes 数猜、不再 JS 量、不再一处一处打补丁。这里的断点/规则两个组件共用一套，只在
+   字号数值上按各自已有的字号基准分别写(两组件字号基准本来就不同，宽档在上面各自的基础
+   规则上再放大一档)。
+
+   两档(按容器宽度)+ 两级高度降级:
+   - 宽档 container-width ≥ 165px:第1行"课号(mono 大字)+ 全称地点"横排、第2行时间整串；
+     隐藏简写地点。
+   - 窄档 container-width < 165px(默认档):第1行课号、第2行简写地点、第3行时间；
+     容器再窄到 < 85px 时时间从一行拆成"起" / "–止"两行。隐藏全称地点。
+   - 矮块降级 container-height < 46px:不论宽窄，隐藏地点行，只留课号+时间，短课(45分钟)
+     不会被挤到溢出。
+   - 极矮降级 container-height < 30px:再退一步，只留课号一行。
+   四条 @container 规则按顺序写在下面，源码顺序=层叠优先级，高度降级两条必须排在宽度两条
+   之后，才能在"宽而矮"/"窄而矮"的块上正确覆盖掉宽/窄档各自的地点显隐。 */
+
+/* 宽档:全称地点现身、简写地点收起，课号/地点/时间字号都放大一档，课号允许用 cqw 随块
+   实际宽度再长一点点。 */
+@container blk (min-width: 165px) {
+  .tt__block-code {
+    font-size: clamp(15px, 7.5cqw, 17px);
+  }
+
+  .tt__block-loc-full {
+    display: inline;
+  }
+
+  .tt__block-loc-abbr {
+    display: none;
+  }
+
+  .tt__block-time {
+    font-size: 13px;
+  }
+
+  .tt2__block-code {
+    font-size: clamp(14px, 7cqw, 16px);
+  }
+
+  .tt2__block-loc-full {
+    display: inline;
+  }
+
+  .tt2__block-loc-abbr {
+    display: none;
+  }
+
+  .tt2__block-time {
+    font-size: 12.5px;
+  }
 }
 
-.tt2__block-time--fold .tt2__block-time-dash {
-  display: none;
+/* 窄档专属子断点(容器宽度仍 < 165px 才会触发,因为宽档下 min-width:165px 恒真时这条
+   max-width:85px 不可能同时成立):时间从一行"09:30–12:15"折成两行"09:30" / "–12:15"，
+   给课号/简写地点腾出仅剩的横向宽度。 */
+@container blk (max-width: 85px) {
+  .tt__block-time,
+  .tt2__block-time {
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+    gap: 0;
+  }
+
+  .tt__block-time-dash,
+  .tt2__block-time-dash {
+    display: none;
+  }
+
+  .tt__block-time-end::before,
+  .tt2__block-time-end::before {
+    content: '–';
+  }
 }
 
-.tt2__block-time--fold .tt2__block-time-end::before {
-  content: '–';
+/* 矮块降级:不论当前落在宽档还是窄档，地点行整个收起，只留课号+时间——短课(45 分钟，
+   进位显示后也就 60 分钟高)最容易撞到这一档。排在宽/窄两条规则之后，display:none 才能
+   稳赢宽档的 display:inline / 窄档的 flex-basis:100%。 */
+@container blk (max-height: 46px) {
+  .tt__block-loc-full,
+  .tt__block-loc-abbr,
+  .tt2__block-loc-full,
+  .tt2__block-loc-abbr {
+    display: none;
+  }
 }
 
-/* 第三行：地点，单独一行；窄列时内容已在 JS 侧换成官方楼宇缩写。 */
-.tt2__block-loc {
-  /* #里程碑2(字体再加大一档):11px → 12px。 */
-  font-size: 12px;
-  opacity: 0.75;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
+/* 极矮降级:再退一步，时间也收起，只剩课号一行——极端窄+矮(比如 4 道并排的 30 分钟块)
+   兜底，保证课号这条最后一行信息永远不溢出。 */
+@container blk (max-height: 30px) {
+  .tt__block-time,
+  .tt2__block-time {
+    display: none;
+  }
 
-/* #里程碑2:最窄两级(lanes=3/≥4)时地点/课号再收一档字号，配合 JS 侧的缩写/单字母，
-   多重保险防止在最挤的并排列里溢出。 */
-.tt2__block--sq2 .tt2__block-loc,
-.tt2__block--sq3 .tt2__block-loc {
-  font-size: 11px;
-}
-
-.tt2__block--sq3 .tt2__block-code {
-  font-size: 13px;
+  .tt__block,
+  .tt2__block {
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
 }
 
 /* ---- export card ---------------------------------------------------------- */
@@ -5221,9 +5265,9 @@ select {
     font-size: 17px;
   }
 
-  .tt__block-loc {
-    display: none;
-  }
+  /* #容器查询方法论:原来这里按视口宽度(<820px)硬隐藏地点行,现在每个课程块按自己实际
+     渲染出的宽高(container query,见 .tt__block/.tt2__block 的 container-type:size 与
+     "共享的容器查询规则"一节)自动选档,不再需要这条视口级别的兜底规则。 */
 }
 
 /* ---- #里程碑6:减少动态效果 ---------------------------------------------------

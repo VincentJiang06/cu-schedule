@@ -1,6 +1,5 @@
 import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
 import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
-import { shortComponent, squeezeLevel } from '../lib/blockDisplay.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
@@ -101,14 +100,13 @@ function Column({
         // #修复4(隐藏=彻底移除,不是置灰):停用的候选课在 App.ghostBlocksFor 里已经被整门
         // 过滤掉，根本不会作为 block 传进来——这里不再需要「已停用」的置灰变体，角上的三角
         // 只表达一个动作:点它 = 停用展示(整块从课表消失，要重新启用去左栏列表点眼睛)。
-        // #里程碑2:lanes 越多这一列越窄,按压缩等级决定地点缩写/时间折行/component 单字母。
-        const squeeze = squeezeLevel(block.lanes)
-        const componentText = squeeze >= 3 ? shortComponent(block.component) : block.component
-        const locationText = squeeze >= 1 && block.location ? abbreviateLocation(block.location) : block.location
-        const foldTime = squeeze >= 2
+        // #容器查询方法论:课号/全称地点/简写地点/时间四个内容片段一次性全部渲染进 DOM，
+        // 具体哪档可见、要不要折行/降级，全部交给 .tt2__block 的 CSS 容器查询
+        // (container-type:size，见 styles.css)按这个块*实际渲染出的*宽高决定——lane 数
+        // 只决定这里的位置/宽度几何，不再用来猜文字该显示成什么样。
         return (
           <article
-            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}${squeeze ? ` tt2__block--sq${squeeze}` : ''}`}
+            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}`}
             key={block.key}
             style={
               {
@@ -121,20 +119,18 @@ function Column({
             }
             title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排，点右上角隐藏）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
           >
-            {/* 第1行:component + 课号——卡片太矮时靠 .tt2__block 的 overflow:hidden 截断掉下面
-               的行,这一行排最前面永远最先保住。 */}
-            <span className="tt2__block-top">
-              <b className="tt2__block-comp">{componentText}</b>
-              <span className="tt2__block-code">{block.code}</span>
-            </span>
-            {/* 第2行:时间,窄列时折成两行(09:30 / –12:15)。 */}
-            <time className={`tt2__block-time${foldTime ? ' tt2__block-time--fold' : ''}`}>
+            <span className="tt2__block-code">{block.code}</span>
+            {block.location && (
+              <>
+                <span className="tt2__block-loc-full">{block.location}</span>
+                <span className="tt2__block-loc-abbr">{abbreviateLocation(block.location)}</span>
+              </>
+            )}
+            <time className="tt2__block-time">
               <span className="tt2__block-time-start">{hhmm(block.start)}</span>
               <span className="tt2__block-time-dash">–</span>
               <span className="tt2__block-time-end">{hhmm(block.end)}</span>
             </time>
-            {/* 第3行:地点,单独一行;窄列时换成官方楼宇缩写。 */}
-            {block.location && <span className="tt2__block-loc">{locationText}</span>}
             {block.cart && onToggleCandidate && (
               <button
                 aria-label={`停用候选课 ${block.code}`}

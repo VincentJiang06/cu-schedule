@@ -1,6 +1,5 @@
 import type { CSSProperties } from 'react'
 import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
-import { shortComponent, squeezeLevel } from '../lib/blockDisplay.ts'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
@@ -129,14 +128,13 @@ export function Timetable({
                 // 进位到下一个半点，仅用于卡片占位高度（本校无 :15/:45 起课，进位后卡片更从容）；
                 // 时间标签仍显示真实结束时间（:15 等），真实 end 也用于排课/分道。
                 const shownEnd = displayEndMinutes(block.end)
-                // #里程碑2:lanes 越多这一列越窄,按压缩等级决定地点缩写/时间折行/component 单字母。
-                const squeeze = squeezeLevel(block.lanes)
-                const componentText = squeeze >= 3 ? shortComponent(block.component) : block.component
-                const locationText = squeeze >= 1 && block.location ? abbreviateLocation(block.location) : block.location
-                const foldTime = squeeze >= 2
+                // #容器查询方法论:课号/全称地点/简写地点/时间四个内容片段一次性全部渲染进 DOM，
+                // 具体哪档可见、多挤要不要折行/降级，全部交给 .tt__block 的 CSS 容器查询
+                // (container-type:size，见 styles.css)按这个块*实际渲染出的*宽高决定——
+                // lane 数只决定这里的位置/宽度几何，不再用来猜文字该显示成什么样。
                 return (
                   <article
-                    className={`tt__block${squeeze ? ` tt__block--sq${squeeze}` : ''}`}
+                    className="tt__block"
                     key={block.key}
                     style={
                       {
@@ -149,20 +147,18 @@ export function Timetable({
                     }
                     title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
                   >
-                    {/* 第1行:component + 课号——卡片太矮时,靠 .tt__block 的 overflow:hidden 优雅截断
-                       掉下面的行,这一行排最前面永远最先保住。 */}
-                    <span className="tt__block-top">
-                      <b className="tt__block-comp">{componentText}</b>
-                      <span className="tt__block-code">{block.code}</span>
-                    </span>
-                    {/* 第2行:时间,窄列时折成两行(09:30 / –12:15)。 */}
-                    <time className={`tt__block-time${foldTime ? ' tt__block-time--fold' : ''}`}>
+                    <span className="tt__block-code">{block.code}</span>
+                    {block.location && (
+                      <>
+                        <span className="tt__block-loc-full">{block.location}</span>
+                        <span className="tt__block-loc-abbr">{abbreviateLocation(block.location)}</span>
+                      </>
+                    )}
+                    <time className="tt__block-time">
                       <span className="tt__block-time-start">{hhmm(block.start)}</span>
                       <span className="tt__block-time-dash">–</span>
                       <span className="tt__block-time-end">{hhmm(block.end)}</span>
                     </time>
-                    {/* 第3行:地点,单独一行;窄列时换成官方楼宇缩写。 */}
-                    {block.location && <span className="tt__block-loc">{locationText}</span>}
                   </article>
                 )
               })}
