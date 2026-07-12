@@ -1,4 +1,6 @@
 import type { CSSProperties } from 'react'
+import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
+import { shortComponent, squeezeLevel } from '../lib/blockDisplay.ts'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
@@ -127,9 +129,14 @@ export function Timetable({
                 // 进位到下一个半点，仅用于卡片占位高度（本校无 :15/:45 起课，进位后卡片更从容）；
                 // 时间标签仍显示真实结束时间（:15 等），真实 end 也用于排课/分道。
                 const shownEnd = displayEndMinutes(block.end)
+                // #里程碑2:lanes 越多这一列越窄,按压缩等级决定地点缩写/时间折行/component 单字母。
+                const squeeze = squeezeLevel(block.lanes)
+                const componentText = squeeze >= 3 ? shortComponent(block.component) : block.component
+                const locationText = squeeze >= 1 && block.location ? abbreviateLocation(block.location) : block.location
+                const foldTime = squeeze >= 2
                 return (
                   <article
-                    className="tt__block"
+                    className={`tt__block${squeeze ? ` tt__block--sq${squeeze}` : ''}`}
                     key={block.key}
                     style={
                       {
@@ -145,15 +152,17 @@ export function Timetable({
                     {/* 第1行:component + 课号——卡片太矮时,靠 .tt__block 的 overflow:hidden 优雅截断
                        掉下面的行,这一行排最前面永远最先保住。 */}
                     <span className="tt__block-top">
-                      <b className="tt__block-comp">{block.component}</b>
+                      <b className="tt__block-comp">{componentText}</b>
                       <span className="tt__block-code">{block.code}</span>
                     </span>
-                    {/* 第2行:时间。 */}
-                    <time className="tt__block-time">
-                      {hhmm(block.start)}–{hhmm(block.end)}
+                    {/* 第2行:时间,窄列时折成两行(09:30 / –12:15)。 */}
+                    <time className={`tt__block-time${foldTime ? ' tt__block-time--fold' : ''}`}>
+                      <span className="tt__block-time-start">{hhmm(block.start)}</span>
+                      <span className="tt__block-time-dash">–</span>
+                      <span className="tt__block-time-end">{hhmm(block.end)}</span>
                     </time>
-                    {/* 第3行:地点,单独一行。 */}
-                    {block.location && <span className="tt__block-loc">{block.location}</span>}
+                    {/* 第3行:地点,单独一行;窄列时换成官方楼宇缩写。 */}
+                    {block.location && <span className="tt__block-loc">{locationText}</span>}
                   </article>
                 )
               })}

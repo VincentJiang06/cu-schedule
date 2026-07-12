@@ -1728,21 +1728,50 @@ select {
   text-overflow: ellipsis;
 }
 
-/* 第2行：时间。 */
+/* 第2行：时间。#里程碑2:窄列(.tt__block--sq2/--sq3)时加 --fold 修饰类，从一行
+   "09:30–12:15" 折成两行"09:30" / "–12:15"，给第1/3行腾出横向宽度。 */
 .tt__block-time {
+  display: flex;
+  align-items: baseline;
   font-size: 12.5px;
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
 }
 
-/* 第3行：地点，单独一行。 */
+.tt__block-time--fold {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  gap: 0;
+}
+
+.tt__block-time--fold .tt__block-time-dash {
+  display: none;
+}
+
+.tt__block-time--fold .tt__block-time-end::before {
+  content: '–';
+}
+
+/* 第3行：地点，单独一行；窄列时内容已在 JS 侧换成官方楼宇缩写。 */
 .tt__block-loc {
   font-size: 11.5px;
   opacity: 0.72;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* #里程碑2:最窄两级(lanes=3/≥4)时地点/课号再收一档字号，配合 JS 侧的缩写/单字母，
+   多重保险防止在最挤的并排列里溢出。 */
+.tt__block--sq2 .tt__block-loc,
+.tt__block--sq3 .tt__block-loc {
+  font-size: 10.5px;
+}
+
+.tt__block--sq3 .tt__block-code {
+  font-size: 12.5px;
 }
 
 /* #里程碑2:冲突圆形感叹号——同一天两个时段有重叠时，落在两者碰撞处（重叠区间的
@@ -2478,21 +2507,50 @@ select {
   text-overflow: ellipsis;
 }
 
-/* 第二行：时间。 */
+/* 第二行：时间。#里程碑2:窄列(.tt2__block--sq2/--sq3)时加 --fold 修饰类，从一行
+   "09:30–12:15" 折成两行"09:30" / "–12:15"，给第1/3行腾出横向宽度。 */
 .tt2__block-time {
+  display: flex;
+  align-items: baseline;
   font-size: 12px;
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
 }
 
-/* 第三行：地点，单独一行。 */
+.tt2__block-time--fold {
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+  gap: 0;
+}
+
+.tt2__block-time--fold .tt2__block-time-dash {
+  display: none;
+}
+
+.tt2__block-time--fold .tt2__block-time-end::before {
+  content: '–';
+}
+
+/* 第三行：地点，单独一行；窄列时内容已在 JS 侧换成官方楼宇缩写。 */
 .tt2__block-loc {
   font-size: 11px;
   opacity: 0.75;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* #里程碑2:最窄两级(lanes=3/≥4)时地点/课号再收一档字号，配合 JS 侧的缩写/单字母，
+   多重保险防止在最挤的并排列里溢出。 */
+.tt2__block--sq2 .tt2__block-loc,
+.tt2__block--sq3 .tt2__block-loc {
+  font-size: 10px;
+}
+
+.tt2__block--sq3 .tt2__block-code {
+  font-size: 12px;
 }
 
 /* ---- export card ---------------------------------------------------------- */
