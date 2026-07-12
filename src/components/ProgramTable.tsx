@@ -44,6 +44,32 @@ function collectCourses(node: SectionNode): ProgramCourse[] {
   return out
 }
 
+// Partitions a children list into runs of consecutive leaf requirements (→ one
+// .pg-leaf-grid card row each) and everything else (→ a normal recursive SectionBlock),
+// preserving original order. Only adjacent leaves group together, so a leaf run
+// interrupted by a titled/course-bearing section starts a fresh card row after it.
+type ChildGroup = { kind: 'leaves'; nodes: SectionNode[] } | { kind: 'block'; node: SectionNode }
+function groupLeafRuns(children: SectionNode[]): ChildGroup[] {
+  const groups: ChildGroup[] = []
+  let run: SectionNode[] = []
+  const flush = (): void => {
+    if (run.length > 0) {
+      groups.push({ kind: 'leaves', nodes: run })
+      run = []
+    }
+  }
+  for (const child of children) {
+    if (isLeafRequirement(child)) {
+      run.push(child)
+    } else {
+      flush()
+      groups.push({ kind: 'block', node: child })
+    }
+  }
+  flush()
+  return groups
+}
+
 // Title label: gloss通用词 (中文 + 原文小字), 前缀「任选其一」for the "Choose any ONE…"
 // 顶层项, otherwise专名 (General …/Stream N: …) 原样.
 function TitleLabel({ title }: { title: string }) {
@@ -68,20 +94,48 @@ function TitleLabel({ title }: { title: string }) {
   return <span className="pg-section__title pg-section__title--plain">{title}</span>
 }
 
+// Prose rule text (glossed when it matches a known要求词), shared by the muted
+// note paragraph (NoteLine) and the leaf requirement card's right-hand cell (LeafCard).
+function NoteContent({ note }: { note: string }) {
+  const zh = GLOSS[note]
+  if (!zh) return <>{note}</>
+  return (
+    <>
+      {zh}
+      <em className="pg-note__en">{note}</em>
+    </>
+  )
+}
+
 // Prose rule row (muted). Glossed when it matches a known要求词.
 function NoteLine({ note }: { note: string }) {
-  const zh = GLOSS[note]
   return (
     <p className="pg-note">
-      {zh ? (
-        <>
-          {zh}
-          <em className="pg-note__en">{note}</em>
-        </>
-      ) : (
-        note
-      )}
+      <NoteContent note={note} />
     </p>
+  )
+}
+
+// A pure-text requirement leaf: has its own marker ("(ii)" / "(a)" / …) but no title,
+// no attached courses and no children — just a prose rule, e.g. "(ii) to 6 units MATH
+// courses at 3000 or above level". These are the dense, hard-to-read lines the 1×2 card
+// treatment targets; anything with a title, courses or children keeps rendering as a
+// normal SectionBlock (its hierarchy is untouched).
+function isLeafRequirement(node: SectionNode): boolean {
+  return Boolean(node.marker) && !node.title && node.children.length === 0 && node.courses.length === 0 && Boolean(node.note)
+}
+
+// Compact 1×2 card for one leaf requirement: marker badge on the left, requirement
+// prose on the right. Several of these render side by side in a .pg-leaf-grid (see
+// SectionBlock's children renderer below) — two per row on wide screens, one on narrow.
+function LeafCard({ node }: { node: SectionNode }) {
+  return (
+    <div className="pg-leaf">
+      <span className="pg-leaf__marker">{node.marker}</span>
+      <span className="pg-leaf__text">
+        <NoteContent note={node.note ?? ''} />
+      </span>
+    </div>
   )
 }
 
@@ -195,17 +249,25 @@ function SectionBlock({
       )}
       {node.children.length > 0 && (
         <div className="pg-section__children">
-          {node.children.map((child, index) => (
-            <SectionBlock
-              catalogByKey={catalogByKey}
-              depth={depth + 1}
-              key={`${child.marker}-${child.title}-${index}`}
-              node={child}
-              onBulkTaken={onBulkTaken}
-              onToggleTaken={onToggleTaken}
-              takenSet={takenSet}
-            />
-          ))}
+          {groupLeafRuns(node.children).map((group, groupIndex) =>
+            group.kind === 'leaves' ? (
+              <div className="pg-leaf-grid" key={`leaf-grid-${groupIndex}`}>
+                {group.nodes.map((leaf, leafIndex) => (
+                  <LeafCard key={`${leaf.marker}-${leafIndex}`} node={leaf} />
+                ))}
+              </div>
+            ) : (
+              <SectionBlock
+                catalogByKey={catalogByKey}
+                depth={depth + 1}
+                key={`${group.node.marker}-${group.node.title}-${groupIndex}`}
+                node={group.node}
+                onBulkTaken={onBulkTaken}
+                onToggleTaken={onToggleTaken}
+                takenSet={takenSet}
+              />
+            ),
+          )}
         </div>
       )}
     </div>

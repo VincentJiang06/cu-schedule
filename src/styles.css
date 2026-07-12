@@ -4253,6 +4253,9 @@ select {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* .pg-leaf-grid below keys off this pane's own width, not the viewport — the
+     pane sits in a flexible column whose width has little to do with the window. */
+  container-type: inline-size;
 }
 
 .pg--empty {
@@ -4403,6 +4406,48 @@ select {
   font-style: normal;
   margin-left: 6px;
   opacity: 0.72;
+}
+
+/* 叶子要求条目卡片化:一排 1×2 卡片(marker 徽章 | 正文),宽屏两列,窄屏(容器变窄)回退单列。
+   容器查询挂在 .pg 上——这个面板的实际宽度取决于左右分栏比例，跟浏览器视口宽度关系不大。 */
+.pg-leaf-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px;
+}
+
+@container (max-width: 460px) {
+  .pg-leaf-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pg-leaf {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 3px 9px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.pg-leaf__marker {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-2);
+  background: var(--mute-wash);
+  border-radius: 999px;
+  padding: 1px 7px;
+  white-space: nowrap;
+}
+
+.pg-leaf__text {
+  font-size: 11.5px;
+  color: var(--ink-2);
+  line-height: 1.4;
 }
 
 .pg-bulk {
