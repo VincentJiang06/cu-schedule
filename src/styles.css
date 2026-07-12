@@ -2358,6 +2358,18 @@ select {
   border-radius: 7px;
 }
 
+/* #里程碑3(重置所有方案):与锁按钮同款角标尺寸，纯色/边框态切换，不引入 hover 上浮——全站
+   已去掉那类浮动效果。没有被删的排法时禁用并压低透明度，避免空点误导。 */
+.reset-plans-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.reset-plans-btn:disabled:hover {
+  border-color: var(--line);
+  color: var(--ink-2);
+}
+
 .tt2__tag {
   font-style: normal;
   font-weight: 800;

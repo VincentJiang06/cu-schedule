@@ -1921,6 +1921,18 @@ export default function App() {
         上下班时间
         <span className="card__title-actions">
           <span className="card__note">日历参考线 · 排法过滤</span>
+          {/* #里程碑3(重置所有方案):删了几个特定排法后一键恢复全部,继续删/挑——纯清空
+              deletedPlanIds,不碰 pins/committedCourses。没删过任何排法时禁用,避免空点。 */}
+          <button
+            aria-label="重置所有方案"
+            className="lock-toggle lock-toggle--corner reset-plans-btn"
+            disabled={deletedPlanIds.size === 0}
+            title={deletedPlanIds.size === 0 ? '当前没有被删除的排法' : '恢复全部排法,重新开始删/挑'}
+            type="button"
+            onClick={() => setDeletedPlanIds(new Set())}
+          >
+            <span aria-hidden>↺</span>
+          </button>
           <button
             aria-label={workTimeLocked ? '解锁上下班时间设置' : '锁定上下班时间设置'}
             className={`lock-toggle lock-toggle--corner${workTimeLocked ? '' : ' lock-toggle--unlocked'}`}
