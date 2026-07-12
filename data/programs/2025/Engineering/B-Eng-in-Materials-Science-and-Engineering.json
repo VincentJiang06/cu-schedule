@@ -192,6 +192,54 @@
         "from": "(a) ELEG2202,"
       },
       {
+        "raw": "MASE1002",
+        "codes": [
+          "MASE1002"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE1801",
+        "codes": [
+          "MASE1801"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE2002",
+        "codes": [
+          "MASE2002"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE2202",
+        "codes": [
+          "MASE2202"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE2601",
+        "codes": [
+          "MASE2601"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
+        "raw": "MASE3002",
+        "codes": [
+          "MASE3002"
+        ],
+        "alt": false,
+        "from": "(a) ELEG2202,"
+      },
+      {
         "raw": "MASE4998",
         "codes": [
           "MASE4998"
@@ -442,7 +490,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 11
     },
     {
       "marker": "(b)",
@@ -572,6 +620,30 @@
             },
             {
               "code": "MASE1001",
+              "alts": []
+            },
+            {
+              "code": "MASE1002",
+              "alts": []
+            },
+            {
+              "code": "MASE1801",
+              "alts": []
+            },
+            {
+              "code": "MASE2002",
+              "alts": []
+            },
+            {
+              "code": "MASE2202",
+              "alts": []
+            },
+            {
+              "code": "MASE2601",
+              "alts": []
+            },
+            {
+              "code": "MASE3002",
               "alts": []
             }
           ],

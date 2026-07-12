@@ -314,6 +314,14 @@
         "from": "i) ENGG1120#,"
       },
       {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "i) ENGG1120#,"
+      },
+      {
         "raw": "COOP1001",
         "codes": [
           "COOP1001"
@@ -5089,7 +5097,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "ii)",
@@ -5641,6 +5649,10 @@
                 },
                 {
                   "code": "PHYS1110",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1111",
                   "alts": []
                 }
               ],

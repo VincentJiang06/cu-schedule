@@ -95,7 +95,11 @@
     "SOWK1114",
     "URSP1001",
     "URSP1002",
-    "URSP2060"
+    "URSP2060",
+    "URSP2800",
+    "URSP2900",
+    "URSP3600",
+    "URSP3800"
   ],
   "buckets": {
     "required": [
@@ -718,9 +722,145 @@
         "from": "(d) At least nine courses chosen from the GRMD Major course"
       },
       {
+        "raw": "GRMD3402",
+        "codes": [
+          "GRMD3402"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4003",
+        "codes": [
+          "GRMD4003"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4004",
+        "codes": [
+          "GRMD4004"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4202",
+        "codes": [
+          "GRMD4202"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4203",
+        "codes": [
+          "GRMD4203"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4204",
+        "codes": [
+          "GRMD4204"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4302",
+        "codes": [
+          "GRMD4302"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4403",
+        "codes": [
+          "GRMD4403"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "GRMD5110",
+        "codes": [
+          "GRMD5110"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
         "raw": "URSP2060",
         "codes": [
           "URSP2060"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP2900",
+        "codes": [
+          "URSP2900"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP3800",
+        "codes": [
+          "URSP3800"
         ],
         "alt": false,
         "from": "(d) At least nine courses chosen from the GRMD Major course"
@@ -777,6 +917,22 @@
         "raw": "GRMD4403",
         "codes": [
           "GRMD4403"
+        ],
+        "alt": false,
+        "from": "(a) Geo-spatial Data Science"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "(a) Geo-spatial Data Science"
+      },
+      {
+        "raw": "GRMD5110",
+        "codes": [
+          "GRMD5110"
         ],
         "alt": false,
         "from": "(a) Geo-spatial Data Science"
@@ -878,6 +1034,46 @@
         "from": "(b) Physical Environment and Resource Management"
       },
       {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
+        "raw": "GRMD4202",
+        "codes": [
+          "GRMD4202"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
+        "raw": "GRMD4203",
+        "codes": [
+          "GRMD4203"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
+        "raw": "GRMD4204",
+        "codes": [
+          "GRMD4204"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
+        "raw": "GRMD4403",
+        "codes": [
+          "GRMD4403"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
         "raw": "GRMD2321",
         "codes": [
           "GRMD2321"
@@ -942,6 +1138,22 @@
         "from": "(c) Urban and Regional Development"
       },
       {
+        "raw": "GRMD4302",
+        "codes": [
+          "GRMD4302"
+        ],
+        "alt": false,
+        "from": "(c) Urban and Regional Development"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "(c) Urban and Regional Development"
+      },
+      {
         "raw": "GRMD2501",
         "codes": [
           "GRMD2501"
@@ -985,6 +1197,38 @@
         "raw": "URSP2060",
         "codes": [
           "URSP2060"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP2900",
+        "codes": [
+          "URSP2900"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP3800",
+        "codes": [
+          "URSP3800"
         ],
         "alt": false,
         "from": "(d) Smart Sustainable Cities"
@@ -1054,7 +1298,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 34
+      "n_courses": 51
     },
     {
       "marker": "(a)",
@@ -1063,7 +1307,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 9
     },
     {
       "marker": "(b)",
@@ -1072,7 +1316,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 17
     },
     {
       "marker": "(c)",
@@ -1081,7 +1325,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 10
     },
     {
       "marker": "(d)",
@@ -1090,7 +1334,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 10
     }
   ],
   "structure": [
@@ -1461,38 +1705,81 @@
               "alts": []
             },
             {
+              "code": "GRMD3402",
+              "alts": []
+            },
+            {
+              "code": "GRMD3404",
+              "alts": []
+            },
+            {
+              "code": "GRMD4003",
+              "alts": []
+            },
+            {
+              "code": "GRMD4004",
+              "alts": []
+            },
+            {
+              "code": "GRMD4101",
+              "alts": []
+            },
+            {
+              "code": "GRMD4202",
+              "alts": []
+            },
+            {
+              "code": "GRMD4203",
+              "alts": []
+            },
+            {
+              "code": "GRMD4204",
+              "alts": []
+            },
+            {
+              "code": "GRMD4302",
+              "alts": []
+            },
+            {
+              "code": "GRMD4403",
+              "alts": []
+            },
+            {
+              "code": "GRMD4502",
+              "alts": []
+            },
+            {
+              "code": "GRMD4503",
+              "alts": []
+            },
+            {
+              "code": "GRMD5110",
+              "alts": []
+            },
+            {
               "code": "URSP2060",
+              "alts": []
+            },
+            {
+              "code": "URSP2800",
+              "alts": []
+            },
+            {
+              "code": "URSP2900",
+              "alts": []
+            },
+            {
+              "code": "URSP3600",
+              "alts": []
+            },
+            {
+              "code": "URSP3800",
               "alts": []
             }
           ],
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "GRMD4101",
-          "alts": []
-        },
-        {
-          "code": "GRMD3402",
-          "alts": []
-        },
-        {
-          "code": "GRMD4502",
-          "alts": []
-        },
-        {
-          "code": "GRMD4503",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

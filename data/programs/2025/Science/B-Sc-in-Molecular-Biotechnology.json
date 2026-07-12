@@ -13,20 +13,50 @@
     "BCHE3030",
     "BCHE3040",
     "BCHE3050",
+    "BCHE3080",
+    "BCHE4030",
+    "BCHE4060",
+    "BCHE4080",
+    "BCHE4090",
     "BIOL2120",
     "BIOL2313",
     "BIOL2410",
     "BIOL2420",
+    "BIOL3310",
     "BIOL3410",
+    "BIOL3420",
+    "BIOL3530",
+    "BIOL3630",
+    "BIOL4120",
+    "BIOL4310",
+    "BIOL4520",
+    "BIOL4610",
     "BMEG2001",
+    "BMEG2011",
     "CHEM1070",
     "CHEM1280",
     "CMBI3101",
+    "CMBI4001",
+    "CMBI4002",
+    "CMBI4003",
+    "CMBI4101",
+    "CMBI4102",
+    "CMBI4103",
+    "CMBI4201",
+    "CMBI4202",
+    "CMBI4203",
+    "CMBI4301",
+    "CMBI4302",
+    "CMBI4303",
     "LSCI1002",
     "LSCI1003",
     "LSCI1012",
     "LSCI2002",
     "LSCI2003",
+    "LSCI3012",
+    "LSCI3030",
+    "LSCI3333",
+    "LSCI3520",
     "LSCI4000",
     "LSCI4911",
     "LSCI4912",
@@ -161,9 +191,49 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "BCHE3030",
+        "codes": [
+          "BCHE3030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCHE3050",
+        "codes": [
+          "BCHE3050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "BIOL2120",
         "codes": [
           "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2313",
+        "codes": [
+          "BIOL2313"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL3410",
+        "codes": [
+          "BIOL3410"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -315,6 +385,30 @@
         "from": "(a) Capstone Courses"
       },
       {
+        "raw": "LSCI4911",
+        "codes": [
+          "LSCI4911"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "LSCI4912",
+        "codes": [
+          "LSCI4912"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
+        "raw": "LSCI4913",
+        "codes": [
+          "LSCI4913"
+        ],
+        "alt": false,
+        "from": "(a) Capstone Courses"
+      },
+      {
         "raw": "MBTE4901",
         "codes": [
           "MBTE4901"
@@ -355,9 +449,113 @@
         "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
       },
       {
+        "raw": "BCHE3080",
+        "codes": [
+          "BCHE3080"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BCHE4030",
+        "codes": [
+          "BCHE4030"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BCHE4060",
+        "codes": [
+          "BCHE4060"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BCHE4080",
+        "codes": [
+          "BCHE4080"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BCHE4090",
+        "codes": [
+          "BCHE4090"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
         "raw": "BIOL2420",
         "codes": [
           "BIOL2420"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL3310",
+        "codes": [
+          "BIOL3310"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL3420",
+        "codes": [
+          "BIOL3420"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL3530",
+        "codes": [
+          "BIOL3530"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL3630",
+        "codes": [
+          "BIOL3630"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL4120",
+        "codes": [
+          "BIOL4120"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL4310",
+        "codes": [
+          "BIOL4310"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL4520",
+        "codes": [
+          "BIOL4520"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "BIOL4610",
+        "codes": [
+          "BIOL4610"
         ],
         "alt": false,
         "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
@@ -371,9 +569,113 @@
         "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
       },
       {
+        "raw": "BMEG2011",
+        "codes": [
+          "BMEG2011"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
         "raw": "CMBI3101",
         "codes": [
           "CMBI3101"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4001",
+        "codes": [
+          "CMBI4001"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4002",
+        "codes": [
+          "CMBI4002"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4003",
+        "codes": [
+          "CMBI4003"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4101",
+        "codes": [
+          "CMBI4101"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4102",
+        "codes": [
+          "CMBI4102"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4103",
+        "codes": [
+          "CMBI4103"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4201",
+        "codes": [
+          "CMBI4201"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4202",
+        "codes": [
+          "CMBI4202"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4203",
+        "codes": [
+          "CMBI4203"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4301",
+        "codes": [
+          "CMBI4301"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4302",
+        "codes": [
+          "CMBI4302"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "CMBI4303",
+        "codes": [
+          "CMBI4303"
         ],
         "alt": false,
         "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
@@ -390,6 +692,46 @@
         "raw": "LSCI2002",
         "codes": [
           "LSCI2002"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI2003",
+        "codes": [
+          "LSCI2003"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI3012",
+        "codes": [
+          "LSCI3012"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI3030",
+        "codes": [
+          "LSCI3030"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI3333",
+        "codes": [
+          "LSCI3333"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
+      },
+      {
+        "raw": "LSCI3520",
+        "codes": [
+          "LSCI3520"
         ],
         "alt": false,
         "from": "(b) Elective Courses: Remaining units can be chosen from the following courses"
@@ -446,7 +788,7 @@
       "units": "42",
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 18
     },
     {
       "marker": "3.",
@@ -464,7 +806,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 8
     },
     {
       "marker": "(b)",
@@ -473,7 +815,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 10
+      "n_courses": 41
     },
     {
       "marker": "1.",
@@ -582,7 +924,27 @@
           "alts": []
         },
         {
+          "code": "BCHE3030",
+          "alts": []
+        },
+        {
+          "code": "BCHE3050",
+          "alts": []
+        },
+        {
           "code": "BIOL2120",
+          "alts": []
+        },
+        {
+          "code": "BIOL2313",
+          "alts": []
+        },
+        {
+          "code": "BIOL2410",
+          "alts": []
+        },
+        {
+          "code": "BIOL3410",
           "alts": []
         },
         {
@@ -650,6 +1012,18 @@
               "alts": []
             },
             {
+              "code": "LSCI4911",
+              "alts": []
+            },
+            {
+              "code": "LSCI4912",
+              "alts": []
+            },
+            {
+              "code": "LSCI4913",
+              "alts": []
+            },
+            {
               "code": "MBTE4901",
               "alts": []
             },
@@ -670,61 +1044,176 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses: Remaining units can be chosen from the following courses",
-          "courses": [],
-          "children": [
+          "note": "Remaining units can be chosen from the following courses",
+          "courses": [
             {
-              "marker": "",
-              "title": "",
-              "units": null,
-              "note": "Elective Courses",
-              "courses": [
-                {
-                  "code": "BCHE3040",
-                  "alts": []
-                },
-                {
-                  "code": "BIOL2420",
-                  "alts": []
-                },
-                {
-                  "code": "BMEG2001",
-                  "alts": []
-                },
-                {
-                  "code": "CMBI3101",
-                  "alts": []
-                },
-                {
-                  "code": "LSCI1012",
-                  "alts": []
-                },
-                {
-                  "code": "LSCI2002",
-                  "alts": []
-                },
-                {
-                  "code": "STAT3210",
-                  "alts": []
-                },
-                {
-                  "code": "MBTE3518",
-                  "alts": []
-                },
-                {
-                  "code": "MBTE3558",
-                  "alts": []
-                },
-                {
-                  "code": "MBTE3568",
-                  "alts": []
-                }
-              ],
-              "children": []
+              "code": "BCHE3040",
+              "alts": []
+            },
+            {
+              "code": "BCHE3080",
+              "alts": []
+            },
+            {
+              "code": "BCHE4030",
+              "alts": []
+            },
+            {
+              "code": "BCHE4060",
+              "alts": []
+            },
+            {
+              "code": "BCHE4080",
+              "alts": []
+            },
+            {
+              "code": "BCHE4090",
+              "alts": []
+            },
+            {
+              "code": "BIOL2420",
+              "alts": []
+            },
+            {
+              "code": "BIOL3310",
+              "alts": []
+            },
+            {
+              "code": "BIOL3420",
+              "alts": []
+            },
+            {
+              "code": "BIOL3530",
+              "alts": []
+            },
+            {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "BIOL4120",
+              "alts": []
+            },
+            {
+              "code": "BIOL4310",
+              "alts": []
+            },
+            {
+              "code": "BIOL4520",
+              "alts": []
+            },
+            {
+              "code": "BIOL4610",
+              "alts": []
+            },
+            {
+              "code": "BMEG2001",
+              "alts": []
+            },
+            {
+              "code": "BMEG2011",
+              "alts": []
+            },
+            {
+              "code": "CMBI3101",
+              "alts": []
+            },
+            {
+              "code": "CMBI4001",
+              "alts": []
+            },
+            {
+              "code": "CMBI4002",
+              "alts": []
+            },
+            {
+              "code": "CMBI4003",
+              "alts": []
+            },
+            {
+              "code": "CMBI4101",
+              "alts": []
+            },
+            {
+              "code": "CMBI4102",
+              "alts": []
+            },
+            {
+              "code": "CMBI4103",
+              "alts": []
+            },
+            {
+              "code": "CMBI4201",
+              "alts": []
+            },
+            {
+              "code": "CMBI4202",
+              "alts": []
+            },
+            {
+              "code": "CMBI4203",
+              "alts": []
+            },
+            {
+              "code": "CMBI4301",
+              "alts": []
+            },
+            {
+              "code": "CMBI4302",
+              "alts": []
+            },
+            {
+              "code": "CMBI4303",
+              "alts": []
+            },
+            {
+              "code": "LSCI1012",
+              "alts": []
+            },
+            {
+              "code": "LSCI2002",
+              "alts": []
+            },
+            {
+              "code": "LSCI2003",
+              "alts": []
+            },
+            {
+              "code": "LSCI3012",
+              "alts": []
+            },
+            {
+              "code": "LSCI3030",
+              "alts": []
+            },
+            {
+              "code": "LSCI3333",
+              "alts": []
+            },
+            {
+              "code": "LSCI3520",
+              "alts": []
+            },
+            {
+              "code": "STAT3210",
+              "alts": []
+            },
+            {
+              "code": "MBTE3518",
+              "alts": []
+            },
+            {
+              "code": "MBTE3558",
+              "alts": []
+            },
+            {
+              "code": "MBTE3568",
+              "alts": []
             }
-          ]
+          ],
+          "children": []
         }
       ]
     },

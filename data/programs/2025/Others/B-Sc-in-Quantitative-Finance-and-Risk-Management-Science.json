@@ -251,6 +251,30 @@
         "from": "(a) FINA2010, 3010, 3080, 3210, RMSC2001, 4001, 4003,"
       },
       {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "(a) FINA2010, 3010, 3080, 3210, RMSC2001, 4001, 4003,"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "(a) FINA2010, 3010, 3080, 3210, RMSC2001, 4001, 4003,"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "(a) FINA2010, 3010, 3080, 3210, RMSC2001, 4001, 4003,"
+      },
+      {
         "raw": "MATH1030",
         "codes": [
           "MATH1030"
@@ -270,6 +294,14 @@
         "raw": "MATH2010",
         "codes": [
           "MATH2010"
+        ],
+        "alt": false,
+        "from": "(b) MATH1030 or 1038, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH2018",
+        "codes": [
+          "MATH2018"
         ],
         "alt": false,
         "from": "(b) MATH1030 or 1038, 2010# or 2018#"
@@ -347,6 +379,14 @@
         "from": "(e) CSCI2100# or 2520# or DOTE2051#"
       },
       {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "(e) CSCI2100# or 2520# or DOTE2051#"
+      },
+      {
         "raw": "DOTE2051",
         "codes": [
           "DOTE2051"
@@ -384,6 +424,38 @@
         "raw": "ACCT3151",
         "codes": [
           "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "ACCT4212",
+        "codes": [
+          "ACCT4212"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "ACCT4213",
+        "codes": [
+          "ACCT4213"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "ACCT4214",
+        "codes": [
+          "ACCT4214"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
         ],
         "alt": false,
         "from": "(a) Business (choose at least 6 units of courses from the"
@@ -773,6 +845,78 @@
         "from": "(c) Risk Management Science"
       },
       {
+        "raw": "CSCI3160",
+        "codes": [
+          "CSCI3160"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI3170",
+        "codes": [
+          "CSCI3170"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI3230",
+        "codes": [
+          "CSCI3230"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI4130",
+        "codes": [
+          "CSCI4130"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI4160",
+        "codes": [
+          "CSCI4160"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI4180",
+        "codes": [
+          "CSCI4180"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI4190",
+        "codes": [
+          "CSCI4190"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "CSCI4230",
+        "codes": [
+          "CSCI4230"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
         "raw": "ECON3420",
         "codes": [
           "ECON3420"
@@ -784,6 +928,30 @@
         "raw": "MATH3215",
         "codes": [
           "MATH3215"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
         ],
         "alt": false,
         "from": "(c) Risk Management Science"
@@ -840,6 +1008,30 @@
         "raw": "STAT4001",
         "codes": [
           "STAT4001"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "STAT4004",
+        "codes": [
+          "STAT4004"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management Science"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
         ],
         "alt": false,
         "from": "(c) Risk Management Science"
@@ -961,7 +1153,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 11
     },
     {
       "marker": "(b)",
@@ -970,7 +1162,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "(c)",
@@ -997,7 +1189,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "3.",
@@ -1015,7 +1207,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 44
+      "n_courses": 48
     },
     {
       "marker": "(b)",
@@ -1033,7 +1225,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 10
+      "n_courses": 25
     },
     {
       "marker": "(d)",
@@ -1115,6 +1307,18 @@
             {
               "code": "STAT2001",
               "alts": []
+            },
+            {
+              "code": "STAT2006",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT3008",
+              "alts": []
             }
           ],
           "children": []
@@ -1135,6 +1339,10 @@
             },
             {
               "code": "MATH2010",
+              "alts": []
+            },
+            {
+              "code": "MATH2018",
               "alts": []
             }
           ],
@@ -1193,6 +1401,10 @@
               "alts": []
             },
             {
+              "code": "CSCI2520",
+              "alts": []
+            },
+            {
               "code": "DOTE2051",
               "alts": []
             },
@@ -1228,6 +1440,22 @@
             },
             {
               "code": "ACCT3151",
+              "alts": []
+            },
+            {
+              "code": "ACCT4212",
+              "alts": []
+            },
+            {
+              "code": "ACCT4213",
+              "alts": []
+            },
+            {
+              "code": "ACCT4214",
+              "alts": []
+            },
+            {
+              "code": "ACCT4251",
               "alts": []
             },
             {
@@ -1441,11 +1669,59 @@
               "alts": []
             },
             {
+              "code": "CSCI3160",
+              "alts": []
+            },
+            {
+              "code": "CSCI3170",
+              "alts": []
+            },
+            {
+              "code": "CSCI3230",
+              "alts": []
+            },
+            {
+              "code": "CSCI3320",
+              "alts": []
+            },
+            {
+              "code": "CSCI4130",
+              "alts": []
+            },
+            {
+              "code": "CSCI4160",
+              "alts": []
+            },
+            {
+              "code": "CSCI4180",
+              "alts": []
+            },
+            {
+              "code": "CSCI4190",
+              "alts": []
+            },
+            {
+              "code": "CSCI4230",
+              "alts": []
+            },
+            {
               "code": "ECON3420",
               "alts": []
             },
             {
               "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3240",
+              "alts": []
+            },
+            {
+              "code": "MATH4210",
               "alts": []
             },
             {
@@ -1474,6 +1750,18 @@
             },
             {
               "code": "STAT4001",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
               "alts": []
             }
           ],

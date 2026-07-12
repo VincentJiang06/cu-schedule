@@ -868,9 +868,33 @@
         "from": "(a) Non-language Courses"
       },
       {
+        "raw": "ANTH2327",
+        "codes": [
+          "ANTH2327"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
         "raw": "HIST3380",
         "codes": [
           "HIST3380"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "HIST3381",
+        "codes": [
+          "HIST3381"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "HIST4420",
+        "codes": [
+          "HIST4420"
         ],
         "alt": false,
         "from": "(a) Non-language Courses"
@@ -887,6 +911,54 @@
         "raw": "LING2003",
         "codes": [
           "LING2003"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3101",
+        "codes": [
+          "LING3101"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
         ],
         "alt": false,
         "from": "(a) Non-language Courses"
@@ -1156,6 +1228,14 @@
         "from": "(ii) Japan in Global Perspective"
       },
       {
+        "raw": "ANTH2327",
+        "codes": [
+          "ANTH2327"
+        ],
+        "alt": false,
+        "from": "(ii) Japan in Global Perspective"
+      },
+      {
         "raw": "JASP2520",
         "codes": [
           "JASP2520"
@@ -1319,6 +1399,54 @@
         "raw": "LING2003",
         "codes": [
           "LING2003"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3101",
+        "codes": [
+          "LING3101"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
         ],
         "alt": false,
         "from": "(iii) Japanese Language and Linguistics"
@@ -1588,9 +1716,33 @@
         "from": "(a) Non-language Courses"
       },
       {
+        "raw": "ANTH2327",
+        "codes": [
+          "ANTH2327"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
         "raw": "HIST3380",
         "codes": [
           "HIST3380"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "HIST3381",
+        "codes": [
+          "HIST3381"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "HIST4420",
+        "codes": [
+          "HIST4420"
         ],
         "alt": false,
         "from": "(a) Non-language Courses"
@@ -1607,6 +1759,54 @@
         "raw": "LING2003",
         "codes": [
           "LING2003"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3101",
+        "codes": [
+          "LING3101"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
         ],
         "alt": false,
         "from": "(a) Non-language Courses"
@@ -1876,6 +2076,14 @@
         "from": "(ii) Japan in Global Perspective"
       },
       {
+        "raw": "ANTH2327",
+        "codes": [
+          "ANTH2327"
+        ],
+        "alt": false,
+        "from": "(ii) Japan in Global Perspective"
+      },
+      {
         "raw": "JASP2520",
         "codes": [
           "JASP2520"
@@ -2044,6 +2252,54 @@
         "from": "(iii) Japanese Language and Linguistics"
       },
       {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3101",
+        "codes": [
+          "LING3101"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
         "raw": "JASP4100",
         "codes": [
           "JASP4100"
@@ -2140,7 +2396,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 36
+      "n_courses": 45
     },
     {
       "marker": "(b)",
@@ -2167,7 +2423,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 18
+      "n_courses": 19
     },
     {
       "marker": "(iii)",
@@ -2176,7 +2432,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 14
     },
     {
       "marker": "1.",
@@ -2212,7 +2468,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 36
+      "n_courses": 45
     },
     {
       "marker": "(b)",
@@ -2239,7 +2495,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 18
+      "n_courses": 19
     },
     {
       "marker": "(iii)",
@@ -2248,7 +2504,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 14
     }
   ],
   "structure": [
@@ -2541,7 +2797,19 @@
               "alts": []
             },
             {
+              "code": "ANTH2327",
+              "alts": []
+            },
+            {
               "code": "HIST3380",
+              "alts": []
+            },
+            {
+              "code": "HIST3381",
+              "alts": []
+            },
+            {
+              "code": "HIST4420",
               "alts": []
             },
             {
@@ -2550,6 +2818,30 @@
             },
             {
               "code": "LING2003",
+              "alts": []
+            },
+            {
+              "code": "LING2004",
+              "alts": []
+            },
+            {
+              "code": "LING2005",
+              "alts": []
+            },
+            {
+              "code": "LING2006",
+              "alts": []
+            },
+            {
+              "code": "LING3101",
+              "alts": []
+            },
+            {
+              "code": "LING3201",
+              "alts": []
+            },
+            {
+              "code": "LING3204",
               "alts": []
             },
             {
@@ -2711,6 +3003,10 @@
                   "alts": []
                 },
                 {
+                  "code": "ANTH2327",
+                  "alts": []
+                },
+                {
                   "code": "JASP2520",
                   "alts": []
                 },
@@ -2801,6 +3097,30 @@
                 },
                 {
                   "code": "LING2003",
+                  "alts": []
+                },
+                {
+                  "code": "LING2004",
+                  "alts": []
+                },
+                {
+                  "code": "LING2005",
+                  "alts": []
+                },
+                {
+                  "code": "LING2006",
+                  "alts": []
+                },
+                {
+                  "code": "LING3101",
+                  "alts": []
+                },
+                {
+                  "code": "LING3201",
+                  "alts": []
+                },
+                {
+                  "code": "LING3204",
                   "alts": []
                 },
                 {

@@ -54,6 +54,18 @@ CONT_GAP_TOKENS = re.compile(r"[\s,*&]+")
 # plain "…, …". Lowercase-only so cross-listed brackets "DOTE[DSME]2021" (uppercase) and
 # the numeric part of any code are untouched. Mirrors the audit reference extractor.
 FOOTNOTE_RE = re.compile(r"\[[a-z]+\]")
+# Two more annotation markers of the exact same "lost course" family as the lowercase
+# footnote above, both glued straight onto a code so they wedge into the continuation gap
+# and orphan every following shorthand number:
+#   * '#'          the Major-GPA flag ("PHPC1001#, 1012#, 1017#") — severs 1012/1017;
+#   * '[####]'     an alternate course *number* the calendar prints for a cross-cohort
+#                  offering ("BMBL1002[3001], 2004[4001]") — the bracketed digits are NOT
+#                  a separately listed course (the primary code stays), but left in place
+#                  the bare-number tokenizer grabs them and breaks the "…, 2004" chain.
+# Uppercase cross-listing brackets ("DOTE[DSME]2021") stay untouched — those ARE a real
+# second code and are expanded by BRACKET_CODE_RE. Numeric-only brackets and '#' carry no
+# course we would otherwise lose, so erasing them up front is pure gap repair.
+ANNOT_STRIP_RE = re.compile(r"\[[a-z]+\]|\[\d+\]|#")
 # A parenthetical insertion the calendar drops between a code and the next shorthand
 # number, e.g. "SOWK4030 (capstone course), 4510" or "…4903 (capstone course)". It too
 # lands in the continuation gap; we erase whole parentheticals from the *gap only* (not
@@ -125,7 +137,7 @@ def extract_courses(text: str) -> list[dict]:
     # Strip footnote markers ([a], [bc], …) up front: left in place they wedge into the
     # continuation gap ("ECON1101[a], 1111") and orphan every following shorthand number.
     # Offsets below are all relative to this cleaned text, so gap computation stays exact.
-    text = FOOTNOTE_RE.sub("", text)
+    text = ANNOT_STRIP_RE.sub("", text)
     out: list[dict] = []
     seen: set[str] = set()
     current_subj: str | None = None
@@ -344,6 +356,14 @@ CHOOSE_UNITS_RE = re.compile(
 # free-text rule). Used to decide whether a marker's text is a heading.
 HEADER_TITLE_KW = re.compile(
     r"\b(Stream|General|Foundation|Faculty|Package|Research|Component|Option)\b", re.I
+)
+# A short section label ends on one of these nouns ("… Courses", "… Requirement",
+# "… Studies"). Used to peel a "<Section Label>: <inline rule>" marker line whose label
+# the keyword list above misses — e.g. "2. | Elective Courses[a]: No more than 3 units …"
+# — so the label survives as the node title (I4) while the sentence stays the note (I5).
+_SECTION_LABEL_NOUN = re.compile(
+    r"(Courses?|Requirements?|Electives?|Studies|Package|Component|Options?|Stream)\s*$",
+    re.I,
 )
 # Prose sub-labels that subdivide a leaf node's own text into pseudo-children.
 PROSE_HEADER_RE = re.compile(
@@ -628,6 +648,27 @@ def _convert_row(row: _Row) -> dict:
     else:
         title_candidate = normalize_label(rest_wo)
         is_rule = _looks_like_rule(title_candidate)
+        # Signature 2 (title fidelity): a numbered/lettered section whose marker line is
+        # "<Section Label>: <inline rule>" carrying NO explicit unit budget — e.g.
+        # "2. | Elective Courses[a]: No more than 3 units of courses at 1000 level …". The
+        # colon-label names the node (I4); the sentence after the colon is the rule (I5).
+        # The pre-colon text must itself read like a label (a short, non-rule phrase ending
+        # on a section noun), so a genuine rule that merely contains a colon before its
+        # course list ("At least 6 units from the following courses: PSYC…") is NOT peeled.
+        lead_label: str | None = None
+        lead_after: str | None = None
+        cpos = rest_wo.find(":")
+        if cpos > 0:
+            cand = normalize_label(rest_wo[:cpos])
+            after = rest_wo[cpos + 1 :].strip()
+            if (
+                cand
+                and after
+                and not _looks_like_rule(cand)
+                and len(cand.split()) <= 6
+                and (_SECTION_LABEL_NOUN.search(cand) or HEADER_TITLE_KW.search(cand))
+            ):
+                lead_label, lead_after = cand, after
         # A heading is: a structural parent (has children), a keyword-named leaf
         # (stream/package/…), OR a marker line that carries an explicit unit budget or
         # a colon-terminated label and does NOT read like a free-text rule. The last
@@ -649,6 +690,13 @@ def _convert_row(row: _Row) -> dict:
             if node_units is None:
                 node_units = join_units
             body_lines = body_lines[consumed:]
+        elif lead_label is not None:
+            # Case B′: a named section carrying its rule inline ("Elective Courses: No
+            # more than …"). Keep the label as the title and hand only the post-colon
+            # sentence to the note path so the rule survives without dragging the heading
+            # (or a dangling "Elective Courses:" prefix) into the note.
+            title = lead_label
+            lead_rule = lead_after
         else:
             # Case C: a bare free-text rule -> note. The rule frequently continues onto
             # the wrapped body lines up to the course list ("(a) | At least five courses
@@ -1047,8 +1095,30 @@ def parse_program(rec: dict) -> dict:
     if tm:
         out["total_units"] = int(tm.group(1))
 
-    if "major_requirement" in keyed:
-        start = keyed["major_requirement"]
+    # The Major block begins at the *first real* Major-Programme-Requirement header.
+    # Regular programmes print the plain header ("Major Programme Requirement", matched by
+    # `major_requirement`); programmes offered only to senior-year / AD entrants print
+    # solely the "(for …)" variant (matched by `senior_year`). In the senior-year-only
+    # case the plain-header regex — which deliberately excludes "(for" — no longer matches
+    # the real header and instead lands on a LATER incidental prose mention buried in the
+    # Explanatory Notes ("…as included in the Major Programme Requirement will be…"). That
+    # mis-anchor made the whole course listing fall outside the block (Bimodal Bilingual
+    # Studies, Exercise Science, …). Anchor on whichever real header comes first; when we
+    # start on the senior-year header the trailing plain-header hit is prose, not a section
+    # boundary, so it must not be allowed to cut the block short. When both are genuine
+    # blocks (a regular curriculum followed by a separate senior-year variant) the plain
+    # header comes first, we start there, and the senior-year header stays a hard boundary.
+    mr = keyed.get("major_requirement")
+    sy = keyed.get("senior_year")
+    start: int | None = None
+    incidental_mr: int | None = None
+    if sy is not None and (mr is None or sy < mr):
+        start = sy
+        incidental_mr = mr  # a plain-header hit *after* a senior-year start is prose
+    elif mr is not None:
+        start = mr
+
+    if start is not None:
         # Optional post-total segments the calendar prints *after* the Major-block grand
         # total: "Concentration Area:" (kind='concentration') and "Streams:"
         # (kind='stream'). Each is only treated as a real, separate section when it sits
@@ -1061,7 +1131,7 @@ def parse_program(rec: dict) -> dict:
         # affects which optional-segment courses the tree carries vs. the catch-all — no
         # Major course can ever be lost either way.
         OPTIONAL = ("concentration", "streams")
-        hard = [p for p, k in hits if p > start and k not in OPTIONAL]
+        hard = [p for p, k in hits if p > start and k not in OPTIONAL and p != incidental_mr]
         first_hard = min(hard) if hard else len(t)
         optionals: list[tuple[int, str]] = []
         for p, k in hits:

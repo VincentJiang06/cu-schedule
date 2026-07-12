@@ -53,10 +53,20 @@
     "DOTE2021",
     "DOTE3010",
     "DOTE3050",
+    "DOTE4020",
+    "DOTE4070",
+    "DOTE4110",
+    "DOTE4220",
+    "DOTE4260",
     "FINA2010",
     "FINA3010",
     "FINA3020",
+    "FINA3030",
     "FINA3070",
+    "FINA3080",
+    "FINA4040",
+    "FINA4050",
+    "FINA4110",
     "MATH1610",
     "MATH1620",
     "MGNT1020",
@@ -64,8 +74,13 @@
     "MGNT2512",
     "MGNT3580",
     "MGNT4010",
+    "MGNT4150",
+    "MGNT4510",
+    "MGNT4540",
+    "MGNT4570",
     "MKTG2010",
-    "MKTG4070"
+    "MKTG4070",
+    "MKTG4140"
   ],
   "buckets": {
     "required": [
@@ -672,6 +687,14 @@
         "from": "(a) FINA3070#,"
       },
       {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(a) FINA3070#,"
+      },
+      {
         "raw": "ACCT4251",
         "codes": [
           "ACCT4251"
@@ -691,6 +714,46 @@
         "raw": "FINA3010",
         "codes": [
           "FINA3010"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA3030",
+        "codes": [
+          "FINA3030"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA4040",
+        "codes": [
+          "FINA4040"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA4050",
+        "codes": [
+          "FINA4050"
+        ],
+        "alt": false,
+        "from": "(b) 2"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
         ],
         "alt": false,
         "from": "(b) 2"
@@ -747,6 +810,46 @@
         "raw": "DOTE2021",
         "codes": [
           "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE4020",
+        "codes": [
+          "DOTE4020"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE4070",
+        "codes": [
+          "DOTE4070"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE4110",
+        "codes": [
+          "DOTE4110"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE4220",
+        "codes": [
+          "DOTE4220"
+        ],
+        "alt": false,
+        "from": "(b) 3"
+      },
+      {
+        "raw": "DOTE4260",
+        "codes": [
+          "DOTE4260"
         ],
         "alt": false,
         "from": "(b) 3"
@@ -944,9 +1047,49 @@
         "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
       },
       {
+        "raw": "MGNT4150",
+        "codes": [
+          "MGNT4150"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MGNT4510",
+        "codes": [
+          "MGNT4510"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MGNT4540",
+        "codes": [
+          "MGNT4540"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MGNT4570",
+        "codes": [
+          "MGNT4570"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
         "raw": "MKTG4070",
         "codes": [
           "MKTG4070"
+        ],
+        "alt": false,
+        "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
+      },
+      {
+        "raw": "MKTG4140",
+        "codes": [
+          "MKTG4140"
         ],
         "alt": false,
         "from": "(b) DOTE3050#, FINA3020#, MGNT3580#, 4150#, 4510#, 4540#,"
@@ -1025,7 +1168,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -1034,7 +1177,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 8
     },
     {
       "marker": "3.",
@@ -1061,7 +1204,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 11
     },
     {
       "marker": "2.",
@@ -1097,7 +1240,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 9
     }
   ],
   "structure": [
@@ -1327,11 +1470,55 @@
           "alts": []
         },
         {
+          "code": "FINA3080",
+          "alts": []
+        },
+        {
           "code": "FINA3010",
           "alts": []
         },
         {
+          "code": "FINA3020",
+          "alts": []
+        },
+        {
+          "code": "FINA3030",
+          "alts": []
+        },
+        {
+          "code": "FINA4040",
+          "alts": []
+        },
+        {
+          "code": "FINA4050",
+          "alts": []
+        },
+        {
+          "code": "FINA4110",
+          "alts": []
+        },
+        {
           "code": "DOTE2021",
+          "alts": []
+        },
+        {
+          "code": "DOTE4020",
+          "alts": []
+        },
+        {
+          "code": "DOTE4070",
+          "alts": []
+        },
+        {
+          "code": "DOTE4110",
+          "alts": []
+        },
+        {
+          "code": "DOTE4220",
+          "alts": []
+        },
+        {
+          "code": "DOTE4260",
           "alts": []
         },
         {
@@ -1347,15 +1534,31 @@
           "alts": []
         },
         {
-          "code": "FINA3020",
-          "alts": []
-        },
-        {
           "code": "MGNT3580",
           "alts": []
         },
         {
+          "code": "MGNT4150",
+          "alts": []
+        },
+        {
+          "code": "MGNT4510",
+          "alts": []
+        },
+        {
+          "code": "MGNT4540",
+          "alts": []
+        },
+        {
+          "code": "MGNT4570",
+          "alts": []
+        },
+        {
           "code": "MKTG4070",
+          "alts": []
+        },
+        {
+          "code": "MKTG4140",
           "alts": []
         }
       ],

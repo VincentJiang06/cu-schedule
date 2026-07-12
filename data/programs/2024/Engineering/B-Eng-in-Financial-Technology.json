@@ -20,6 +20,7 @@
     "CSCI1130",
     "CSCI2040",
     "CSCI2100",
+    "CSCI2120",
     "CSCI3150",
     "CSCI3160",
     "CSCI3320",
@@ -269,43 +270,22 @@
         "from": "2. Foundation Courses"
       },
       {
-        "raw": "CSCI2100",
+        "raw": "CSCI2100/ESTR2102",
         "codes": [
-          "CSCI2100"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
-      },
-      {
-        "raw": "ESTR2102",
-        "codes": [
+          "CSCI2100",
           "ESTR2102"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
       },
       {
-        "raw": "CSCI4130",
+        "raw": "CSCI4130/IERG4130/ESTR4306",
         "codes": [
-          "CSCI4130"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
-      },
-      {
-        "raw": "IERG4130",
-        "codes": [
-          "IERG4130"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
-      },
-      {
-        "raw": "ESTR4306",
-        "codes": [
+          "CSCI4130",
+          "IERG4130",
           "ESTR4306"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
       },
       {
@@ -358,35 +338,21 @@
         "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
       },
       {
-        "raw": "SEEM3550",
+        "raw": "SEEM3550/ESTR3506",
         "codes": [
-          "SEEM3550"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
-      },
-      {
-        "raw": "ESTR3506",
-        "codes": [
+          "SEEM3550",
           "ESTR3506"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
       },
       {
-        "raw": "SEEM3590",
+        "raw": "SEEM3590/ESTR3509",
         "codes": [
-          "SEEM3590"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
-      },
-      {
-        "raw": "ESTR3509",
-        "codes": [
+          "SEEM3590",
           "ESTR3509"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) CSCI2100#/ESTR2102, CSCI4130#/IERG4130#/ESTR4306, ECON2011#,"
       },
       {
@@ -496,19 +462,12 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "AIST4010",
+        "raw": "AIST4010/ESTR4140",
         "codes": [
-          "AIST4010"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR4140",
-        "codes": [
+          "AIST4010",
           "ESTR4140"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
@@ -520,35 +479,29 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "CSCI3150",
+        "raw": "CSCI2120",
         "codes": [
-          "CSCI3150"
+          "CSCI2120"
         ],
         "alt": false,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "ESTR3102",
+        "raw": "CSCI3150/ESTR3102",
         "codes": [
+          "CSCI3150",
           "ESTR3102"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "CSCI3160",
+        "raw": "CSCI3160/ESTR3104",
         "codes": [
-          "CSCI3160"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR3104",
-        "codes": [
+          "CSCI3160",
           "ESTR3104"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
@@ -560,56 +513,28 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "CSCI4160",
+        "raw": "CSCI4160/ESTR4104",
         "codes": [
-          "CSCI4160"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR4104",
-        "codes": [
+          "CSCI4160",
           "ESTR4104"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "CSCI4180",
+        "raw": "CSCI4180/ESTR4106",
         "codes": [
-          "CSCI4180"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR4106",
-        "codes": [
+          "CSCI4180",
           "ESTR4106"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "CSCI4430",
+        "raw": "CSCI4430/IERG3310/ESTR3310/ESTR4120",
         "codes": [
-          "CSCI4430"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "IERG3310",
-        "codes": [
-          "IERG3310"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR3310/ESTR4120",
-        "codes": [
+          "CSCI4430",
+          "IERG3310",
           "ESTR3310",
           "ESTR4120"
         ],
@@ -641,19 +566,44 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "IERG4080",
+        "raw": "FINA3030",
         "codes": [
-          "IERG4080"
+          "FINA3030"
         ],
         "alt": false,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "ESTR4312",
+        "raw": "FINA3070",
         "codes": [
-          "ESTR4312"
+          "FINA3070"
         ],
         "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "FINA3210",
+        "codes": [
+          "FINA3210"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "FINA4010",
+        "codes": [
+          "FINA4010"
+        ],
+        "alt": false,
+        "from": "(b) Courses from at least 3 subject"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
@@ -681,35 +631,21 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "SEEM3450",
+        "raw": "SEEM3450/ESTR3502",
         "codes": [
-          "SEEM3450"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR3502",
-        "codes": [
+          "SEEM3450",
           "ESTR3502"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "SEEM3570",
+        "raw": "SEEM3570/ESTR3508",
         "codes": [
-          "SEEM3570"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR3508",
-        "codes": [
+          "SEEM3570",
           "ESTR3508"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       },
       {
@@ -721,19 +657,12 @@
         "from": "(b) Courses from at least 3 subject"
       },
       {
-        "raw": "SEEM4730",
+        "raw": "SEEM4730/ESTR4508",
         "codes": [
-          "SEEM4730"
-        ],
-        "alt": false,
-        "from": "(b) Courses from at least 3 subject"
-      },
-      {
-        "raw": "ESTR4508",
-        "codes": [
+          "SEEM4730",
           "ESTR4508"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Courses from at least 3 subject"
       }
     ],
@@ -774,7 +703,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 15
+      "n_courses": 10
     },
     {
       "marker": "(b)",
@@ -828,7 +757,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 31
+      "n_courses": 25
     }
   ],
   "structure": [
@@ -913,23 +842,16 @@
           "courses": [
             {
               "code": "CSCI2100",
-              "alts": []
-            },
-            {
-              "code": "ESTR2102",
-              "alts": []
+              "alts": [
+                "ESTR2102"
+              ]
             },
             {
               "code": "CSCI4130",
-              "alts": []
-            },
-            {
-              "code": "IERG4130",
-              "alts": []
-            },
-            {
-              "code": "ESTR4306",
-              "alts": []
+              "alts": [
+                "IERG4130",
+                "ESTR4306"
+              ]
             },
             {
               "code": "ECON2011",
@@ -959,19 +881,15 @@
             },
             {
               "code": "SEEM3550",
-              "alts": []
-            },
-            {
-              "code": "ESTR3506",
-              "alts": []
+              "alts": [
+                "ESTR3506"
+              ]
             },
             {
               "code": "SEEM3590",
-              "alts": []
-            },
-            {
-              "code": "ESTR3509",
-              "alts": []
+              "alts": [
+                "ESTR3509"
+              ]
             }
           ],
           "children": []
@@ -1057,31 +975,29 @@
             },
             {
               "code": "AIST4010",
-              "alts": []
-            },
-            {
-              "code": "ESTR4140",
-              "alts": []
+              "alts": [
+                "ESTR4140"
+              ]
             },
             {
               "code": "CSCI2040",
               "alts": []
             },
             {
-              "code": "CSCI3150",
+              "code": "CSCI2120",
               "alts": []
             },
             {
-              "code": "ESTR3102",
-              "alts": []
+              "code": "CSCI3150",
+              "alts": [
+                "ESTR3102"
+              ]
             },
             {
               "code": "CSCI3160",
-              "alts": []
-            },
-            {
-              "code": "ESTR3104",
-              "alts": []
+              "alts": [
+                "ESTR3104"
+              ]
             },
             {
               "code": "CSCI3320",
@@ -1089,31 +1005,21 @@
             },
             {
               "code": "CSCI4160",
-              "alts": []
-            },
-            {
-              "code": "ESTR4104",
-              "alts": []
+              "alts": [
+                "ESTR4104"
+              ]
             },
             {
               "code": "CSCI4180",
-              "alts": []
-            },
-            {
-              "code": "ESTR4106",
-              "alts": []
+              "alts": [
+                "ESTR4106"
+              ]
             },
             {
               "code": "CSCI4430",
-              "alts": []
-            },
-            {
-              "code": "IERG3310",
-              "alts": []
-            },
-            {
-              "code": "ESTR3310",
               "alts": [
+                "IERG3310",
+                "ESTR3310",
                 "ESTR4120"
               ]
             },
@@ -1130,12 +1036,26 @@
               "alts": []
             },
             {
-              "code": "IERG4080",
+              "code": "FINA3030",
               "alts": []
             },
             {
-              "code": "ESTR4312",
+              "code": "FINA3070",
               "alts": []
+            },
+            {
+              "code": "FINA3210",
+              "alts": []
+            },
+            {
+              "code": "FINA4010",
+              "alts": []
+            },
+            {
+              "code": "IERG4080",
+              "alts": [
+                "ESTR4312"
+              ]
             },
             {
               "code": "IERG4210",
@@ -1151,19 +1071,15 @@
             },
             {
               "code": "SEEM3450",
-              "alts": []
-            },
-            {
-              "code": "ESTR3502",
-              "alts": []
+              "alts": [
+                "ESTR3502"
+              ]
             },
             {
               "code": "SEEM3570",
-              "alts": []
-            },
-            {
-              "code": "ESTR3508",
-              "alts": []
+              "alts": [
+                "ESTR3508"
+              ]
             },
             {
               "code": "SEEM3580",
@@ -1171,11 +1087,9 @@
             },
             {
               "code": "SEEM4730",
-              "alts": []
-            },
-            {
-              "code": "ESTR4508",
-              "alts": []
+              "alts": [
+                "ESTR4508"
+              ]
             }
           ],
           "children": []

@@ -255,9 +255,25 @@
         "from": "(a) 18 units of courses from the following"
       },
       {
+        "raw": "ACCT3161",
+        "codes": [
+          "ACCT3161"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
         "raw": "CSCI2100",
         "codes": [
           "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
         ],
         "alt": false,
         "from": "(a) 18 units of courses from the following"
@@ -559,7 +575,7 @@
       "units": "18",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 27
+      "n_courses": 29
     },
     {
       "marker": "(b)",
@@ -695,7 +711,15 @@
               "alts": []
             },
             {
+              "code": "ACCT3161",
+              "alts": []
+            },
+            {
               "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "CSCI2520",
               "alts": []
             },
             {

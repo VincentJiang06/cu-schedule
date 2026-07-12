@@ -5,7 +5,7 @@
   "faculty": "Faculty of Education",
   "degree": "B.A",
   "total_units": 55,
-  "parse_status": "prose_only",
+  "parse_status": "full",
   "has_senior_year_variant": true,
   "has_streams": false,
   "all_course_codes": [
@@ -42,10 +42,494 @@
     "SPED3920"
   ],
   "buckets": {
-    "required": [],
-    "elective": [],
+    "required": [
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "EDUC2220",
+        "codes": [
+          "EDUC2220"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "CHED3160",
+        "codes": [
+          "CHED3160"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4120",
+        "codes": [
+          "CHED4120"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4140",
+        "codes": [
+          "CHED4140"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4220",
+        "codes": [
+          "CHED4220"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4340",
+        "codes": [
+          "CHED4340"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4350",
+        "codes": [
+          "CHED4350"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4360",
+        "codes": [
+          "CHED4360"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4410",
+        "codes": [
+          "CHED4410"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4510",
+        "codes": [
+          "CHED4510"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4530",
+        "codes": [
+          "CHED4530"
+        ],
+        "alt": false,
+        "from": "(b) Subject Knowledge"
+      },
+      {
+        "raw": "CHED4320",
+        "codes": [
+          "CHED4320"
+        ],
+        "alt": false,
+        "from": "(c) Research Experience"
+      },
+      {
+        "raw": "CHED4540",
+        "codes": [
+          "CHED4540"
+        ],
+        "alt": false,
+        "from": "(c) Research Experience"
+      },
+      {
+        "raw": "CHED4550",
+        "codes": [
+          "CHED4550"
+        ],
+        "alt": false,
+        "from": "(d) Internship"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "BECE3130",
+        "codes": [
+          "BECE3130"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4150",
+        "codes": [
+          "CHED4150"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4210",
+        "codes": [
+          "CHED4210"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4310",
+        "codes": [
+          "CHED4310"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4330",
+        "codes": [
+          "CHED4330"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4370",
+        "codes": [
+          "CHED4370"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CHED4520",
+        "codes": [
+          "CHED4520"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC2210",
+        "codes": [
+          "EDUC2210"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC3150",
+        "codes": [
+          "EDUC3150"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC3200",
+        "codes": [
+          "EDUC3200"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC3270",
+        "codes": [
+          "EDUC3270"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC3280",
+        "codes": [
+          "EDUC3280"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "EDUC3290",
+        "codes": [
+          "EDUC3290"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "MUSC2545",
+        "codes": [
+          "MUSC2545"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "SPED3920",
+        "codes": [
+          "SPED3920"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      }
+    ],
     "stream_elective": []
   },
-  "groups_outline": [],
-  "structure": []
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Educational",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Subject Knowledge",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Internship",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 15
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 8,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC2120",
+              "alts": []
+            },
+            {
+              "code": "EDUC2220",
+              "alts": []
+            },
+            {
+              "code": "EDUC2240",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 29,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHED3160",
+              "alts": []
+            },
+            {
+              "code": "CHED4120",
+              "alts": []
+            },
+            {
+              "code": "CHED4140",
+              "alts": []
+            },
+            {
+              "code": "CHED4220",
+              "alts": []
+            },
+            {
+              "code": "CHED4340",
+              "alts": []
+            },
+            {
+              "code": "CHED4350",
+              "alts": []
+            },
+            {
+              "code": "CHED4360",
+              "alts": []
+            },
+            {
+              "code": "CHED4410",
+              "alts": []
+            },
+            {
+              "code": "CHED4510",
+              "alts": []
+            },
+            {
+              "code": "CHED4530",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Research Experience",
+          "units": 7,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHED4320",
+              "alts": []
+            },
+            {
+              "code": "CHED4540",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "CHED4550",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Elective Courses",
+      "units": 8,
+      "note": "8 units of courses",
+      "courses": [
+        {
+          "code": "BECE3130",
+          "alts": []
+        },
+        {
+          "code": "CHED4150",
+          "alts": []
+        },
+        {
+          "code": "CHED4210",
+          "alts": []
+        },
+        {
+          "code": "CHED4310",
+          "alts": []
+        },
+        {
+          "code": "CHED4330",
+          "alts": []
+        },
+        {
+          "code": "CHED4370",
+          "alts": []
+        },
+        {
+          "code": "CHED4520",
+          "alts": []
+        },
+        {
+          "code": "EDUC2210",
+          "alts": []
+        },
+        {
+          "code": "EDUC3150",
+          "alts": []
+        },
+        {
+          "code": "EDUC3200",
+          "alts": []
+        },
+        {
+          "code": "EDUC3270",
+          "alts": []
+        },
+        {
+          "code": "EDUC3280",
+          "alts": []
+        },
+        {
+          "code": "EDUC3290",
+          "alts": []
+        },
+        {
+          "code": "MUSC2545",
+          "alts": []
+        },
+        {
+          "code": "SPED3920",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
 }

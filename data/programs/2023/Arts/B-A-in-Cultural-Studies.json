@@ -314,6 +314,30 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE2006",
+        "codes": [
+          "CURE2006"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE3007",
+        "codes": [
+          "CURE3007"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CURE4008",
+        "codes": [
+          "CURE4008"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -353,7 +377,7 @@
       "units": "18",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 6
     },
     {
       "marker": "3.",
@@ -523,6 +547,18 @@
         },
         {
           "code": "CURE2001",
+          "alts": []
+        },
+        {
+          "code": "CURE2006",
+          "alts": []
+        },
+        {
+          "code": "CURE3007",
+          "alts": []
+        },
+        {
+          "code": "CURE4008",
           "alts": []
         }
       ],

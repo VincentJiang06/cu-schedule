@@ -21,6 +21,9 @@
     "COMM1150",
     "COMM1500",
     "COMM2100",
+    "COMM2590",
+    "COMM2922",
+    "COMM2930",
     "COMM3941",
     "COMM4191",
     "DSPS1001",
@@ -36,14 +39,19 @@
     "ECON3320",
     "ECON3350",
     "ECON3370",
+    "ECON3570",
     "ELTU1001",
     "ELTU2020",
     "ELTU3020",
     "GDRS2002",
     "GDRS3005",
     "GDRS3012",
+    "GDRS3021",
     "GDRS4011",
     "GLEF3020",
+    "GLEF3030",
+    "GLEF3040",
+    "GLEF4020",
     "GLSD1001",
     "GLSD1003",
     "GLSD2001",
@@ -87,23 +95,34 @@
     "GPAD1077",
     "GPAD2185",
     "GPAD2196",
+    "GPAD2300",
+    "GPAD2370",
+    "GPAD2375",
     "GPAD3360",
     "GPAD3365",
+    "GPAD3451",
     "GPAD4225",
     "GRMD1302",
     "GRMD1401",
     "GRMD1402",
     "GRMD2321",
     "GRMD2402",
+    "GRMD2404",
+    "GRMD2501",
     "GRMD3202",
     "GRMD3203",
     "GRMD3224",
+    "GRMD3304",
     "GRMD3404",
+    "GRMD4203",
     "GRMD4402",
+    "GRMD4503",
     "PSYC1000",
     "PSYC1630",
     "PSYC3450",
     "PSYC3610",
+    "PSYC3660",
+    "PSYC3720",
     "SOCI1001",
     "SOCI1201",
     "SOSC1001",
@@ -117,9 +136,11 @@
     "URSP1001",
     "URSP1002",
     "URSP2030",
+    "URSP2050",
     "URSP2100",
     "URSP2200",
     "URSP2400",
+    "URSP2800",
     "URSP3300"
   ],
   "buckets": {
@@ -447,9 +468,49 @@
         "from": "(a) Global Media and Popular"
       },
       {
+        "raw": "COMM2590",
+        "codes": [
+          "COMM2590"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "COMM2922",
+        "codes": [
+          "COMM2922"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "COMM2930",
+        "codes": [
+          "COMM2930"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "COMM4191",
+        "codes": [
+          "COMM4191"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
         "raw": "GDRS2002",
         "codes": [
           "GDRS2002"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
+        "raw": "GDRS3021",
+        "codes": [
+          "GDRS3021"
         ],
         "alt": false,
         "from": "(a) Global Media and Popular"
@@ -511,6 +572,14 @@
         "from": "(a) Global Media and Popular"
       },
       {
+        "raw": "URSP2050",
+        "codes": [
+          "URSP2050"
+        ],
+        "alt": false,
+        "from": "(a) Global Media and Popular"
+      },
+      {
         "raw": "ECON3320",
         "codes": [
           "ECON3320"
@@ -519,9 +588,49 @@
         "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
       },
       {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "ECON3570",
+        "codes": [
+          "ECON3570"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
         "raw": "GLEF3020",
         "codes": [
           "GLEF3020"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLEF3030",
+        "codes": [
+          "GLEF3030"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLEF3040",
+        "codes": [
+          "GLEF3040"
+        ],
+        "alt": false,
+        "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
+      },
+      {
+        "raw": "GLEF4020",
+        "codes": [
+          "GLEF4020"
         ],
         "alt": false,
         "from": "(b) Global Economy ECON3320#, 3350#, 3570#, GLEF3020#,"
@@ -671,6 +780,46 @@
         "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
       },
       {
+        "raw": "GPAD2300",
+        "codes": [
+          "GPAD2300"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GPAD2370",
+        "codes": [
+          "GPAD2370"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GPAD2375",
+        "codes": [
+          "GPAD2375"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GPAD3360",
+        "codes": [
+          "GPAD3360"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
+        "raw": "GPAD3451",
+        "codes": [
+          "GPAD3451"
+        ],
+        "alt": false,
+        "from": "(c) World Politics DSPS3310#, GLSD2301, 3106, 3301, 3302,"
+      },
+      {
         "raw": "DSPS3803",
         "codes": [
           "DSPS3803"
@@ -711,6 +860,54 @@
         "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
       },
       {
+        "raw": "GRMD2404",
+        "codes": [
+          "GRMD2404"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD3202",
+        "codes": [
+          "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD3304",
+        "codes": [
+          "GRMD3304"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD4203",
+        "codes": [
+          "GRMD4203"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
         "raw": "PSYC3450",
         "codes": [
           "PSYC3450"
@@ -719,9 +916,33 @@
         "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
       },
       {
+        "raw": "PSYC3660",
+        "codes": [
+          "PSYC3660"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "PSYC3720",
+        "codes": [
+          "PSYC3720"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
         "raw": "URSP2200",
         "codes": [
           "URSP2200"
+        ],
+        "alt": false,
+        "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
+      },
+      {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
         ],
         "alt": false,
         "from": "(d) Planetary Health DSPS3803#, GLSD2401, 3401, GPAD3360#, GRMD2402#,"
@@ -824,7 +1045,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 15
     },
     {
       "marker": "(b)",
@@ -833,7 +1054,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 11
     },
     {
       "marker": "(c)",
@@ -842,7 +1063,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 14
+      "n_courses": 19
     },
     {
       "marker": "(d)",
@@ -851,7 +1072,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 16
     },
     {
       "marker": "(e)",
@@ -1095,7 +1316,27 @@
               "alts": []
             },
             {
+              "code": "COMM2590",
+              "alts": []
+            },
+            {
+              "code": "COMM2922",
+              "alts": []
+            },
+            {
+              "code": "COMM2930",
+              "alts": []
+            },
+            {
+              "code": "COMM4191",
+              "alts": []
+            },
+            {
               "code": "GDRS2002",
+              "alts": []
+            },
+            {
+              "code": "GDRS3021",
               "alts": []
             },
             {
@@ -1125,6 +1366,10 @@
             {
               "code": "URSP2030",
               "alts": []
+            },
+            {
+              "code": "URSP2050",
+              "alts": []
             }
           ],
           "children": []
@@ -1137,6 +1382,14 @@
           "courses": [
             {
               "code": "ECON3320",
+              "alts": []
+            },
+            {
+              "code": "ECON3350",
+              "alts": []
+            },
+            {
+              "code": "ECON3570",
               "alts": []
             },
             {
@@ -1191,6 +1444,26 @@
             {
               "code": "GPAD2185",
               "alts": []
+            },
+            {
+              "code": "GPAD2300",
+              "alts": []
+            },
+            {
+              "code": "GPAD2370",
+              "alts": []
+            },
+            {
+              "code": "GPAD2375",
+              "alts": []
+            },
+            {
+              "code": "GPAD3360",
+              "alts": []
+            },
+            {
+              "code": "GPAD3451",
+              "alts": []
             }
           ],
           "children": []
@@ -1226,7 +1499,19 @@
               "alts": []
             },
             {
+              "code": "PSYC3660",
+              "alts": []
+            },
+            {
+              "code": "PSYC3720",
+              "alts": []
+            },
+            {
               "code": "URSP2200",
+              "alts": []
+            },
+            {
+              "code": "URSP2800",
               "alts": []
             }
           ],
@@ -1275,6 +1560,18 @@
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
         {
+          "code": "GLEF3030",
+          "alts": []
+        },
+        {
+          "code": "GLEF3040",
+          "alts": []
+        },
+        {
+          "code": "GLEF4020",
+          "alts": []
+        },
+        {
           "code": "GLSD3311",
           "alts": []
         },
@@ -1304,6 +1601,30 @@
         },
         {
           "code": "GLSD4402",
+          "alts": []
+        },
+        {
+          "code": "GRMD2404",
+          "alts": []
+        },
+        {
+          "code": "GRMD2501",
+          "alts": []
+        },
+        {
+          "code": "GRMD3202",
+          "alts": []
+        },
+        {
+          "code": "GRMD3304",
+          "alts": []
+        },
+        {
+          "code": "GRMD4203",
+          "alts": []
+        },
+        {
+          "code": "GRMD4503",
           "alts": []
         }
       ],

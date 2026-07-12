@@ -426,6 +426,14 @@
         "from": "(a) ECON1101,"
       },
       {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
         "raw": "GLEF3010",
         "codes": [
           "GLEF3010"
@@ -508,6 +516,174 @@
         "from": "(a) Economics (at least 9 units from the following)"
       },
       {
+        "raw": "ECON3021",
+        "codes": [
+          "ECON3021"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3140",
+        "codes": [
+          "ECON3140"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3150",
+        "codes": [
+          "ECON3150"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3160",
+        "codes": [
+          "ECON3160"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3230",
+        "codes": [
+          "ECON3230"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3240",
+        "codes": [
+          "ECON3240"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3320",
+        "codes": [
+          "ECON3320"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3420",
+        "codes": [
+          "ECON3420"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3430",
+        "codes": [
+          "ECON3430"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3460",
+        "codes": [
+          "ECON3460"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3530",
+        "codes": [
+          "ECON3530"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3570",
+        "codes": [
+          "ECON3570"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3580",
+        "codes": [
+          "ECON3580"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3590",
+        "codes": [
+          "ECON3590"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3620",
+        "codes": [
+          "ECON3620"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4110",
+        "codes": [
+          "ECON4110"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4130",
+        "codes": [
+          "ECON4130"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4430",
+        "codes": [
+          "ECON4430"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4470",
+        "codes": [
+          "ECON4470"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
         "raw": "GLEF4010",
         "codes": [
           "GLEF4010"
@@ -559,6 +735,294 @@
         "raw": "FINA3030",
         "codes": [
           "FINA3030"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3040",
+        "codes": [
+          "FINA3040"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3060",
+        "codes": [
+          "FINA3060"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3070",
+        "codes": [
+          "FINA3070"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3090",
+        "codes": [
+          "FINA3090"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3310",
+        "codes": [
+          "FINA3310"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3320",
+        "codes": [
+          "FINA3320"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3330",
+        "codes": [
+          "FINA3330"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3340",
+        "codes": [
+          "FINA3340"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3350",
+        "codes": [
+          "FINA3350"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3360",
+        "codes": [
+          "FINA3360"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3370",
+        "codes": [
+          "FINA3370"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3398",
+        "codes": [
+          "FINA3398"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3399",
+        "codes": [
+          "FINA3399"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3420",
+        "codes": [
+          "FINA3420"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4010",
+        "codes": [
+          "FINA4010"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4020",
+        "codes": [
+          "FINA4020"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4030",
+        "codes": [
+          "FINA4030"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4040",
+        "codes": [
+          "FINA4040"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4050",
+        "codes": [
+          "FINA4050"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4060",
+        "codes": [
+          "FINA4060"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4130",
+        "codes": [
+          "FINA4130"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4160",
+        "codes": [
+          "FINA4160"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4310",
+        "codes": [
+          "FINA4310"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4320",
+        "codes": [
+          "FINA4320"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4330",
+        "codes": [
+          "FINA4330"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4340",
+        "codes": [
+          "FINA4340"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4350",
+        "codes": [
+          "FINA4350"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4370",
+        "codes": [
+          "FINA4370"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4380",
+        "codes": [
+          "FINA4380"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4400",
+        "codes": [
+          "FINA4400"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4410",
+        "codes": [
+          "FINA4410"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4420",
+        "codes": [
+          "FINA4420"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4430",
+        "codes": [
+          "FINA4430"
         ],
         "alt": false,
         "from": "(b) Finance and Business (at least 9 units from the following, including"
@@ -668,7 +1132,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "(b)",
@@ -722,7 +1186,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 25
     },
     {
       "marker": "(b)",
@@ -731,7 +1195,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 43
     },
     {
       "marker": "(c)",
@@ -947,6 +1411,10 @@
               "alts": []
             },
             {
+              "code": "FINA3020",
+              "alts": []
+            },
+            {
               "code": "GLEF3010",
               "alts": []
             },
@@ -1040,6 +1508,90 @@
               "alts": []
             },
             {
+              "code": "ECON3021",
+              "alts": []
+            },
+            {
+              "code": "ECON3140",
+              "alts": []
+            },
+            {
+              "code": "ECON3150",
+              "alts": []
+            },
+            {
+              "code": "ECON3160",
+              "alts": []
+            },
+            {
+              "code": "ECON3230",
+              "alts": []
+            },
+            {
+              "code": "ECON3240",
+              "alts": []
+            },
+            {
+              "code": "ECON3320",
+              "alts": []
+            },
+            {
+              "code": "ECON3350",
+              "alts": []
+            },
+            {
+              "code": "ECON3420",
+              "alts": []
+            },
+            {
+              "code": "ECON3430",
+              "alts": []
+            },
+            {
+              "code": "ECON3460",
+              "alts": []
+            },
+            {
+              "code": "ECON3530",
+              "alts": []
+            },
+            {
+              "code": "ECON3570",
+              "alts": []
+            },
+            {
+              "code": "ECON3580",
+              "alts": []
+            },
+            {
+              "code": "ECON3590",
+              "alts": []
+            },
+            {
+              "code": "ECON3620",
+              "alts": []
+            },
+            {
+              "code": "ECON4110",
+              "alts": []
+            },
+            {
+              "code": "ECON4120",
+              "alts": []
+            },
+            {
+              "code": "ECON4130",
+              "alts": []
+            },
+            {
+              "code": "ECON4430",
+              "alts": []
+            },
+            {
+              "code": "ECON4470",
+              "alts": []
+            },
+            {
               "code": "GLEF4010",
               "alts": []
             },
@@ -1074,6 +1626,150 @@
             },
             {
               "code": "FINA3030",
+              "alts": []
+            },
+            {
+              "code": "FINA3040",
+              "alts": []
+            },
+            {
+              "code": "FINA3060",
+              "alts": []
+            },
+            {
+              "code": "FINA3070",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "FINA3090",
+              "alts": []
+            },
+            {
+              "code": "FINA3310",
+              "alts": []
+            },
+            {
+              "code": "FINA3320",
+              "alts": []
+            },
+            {
+              "code": "FINA3330",
+              "alts": []
+            },
+            {
+              "code": "FINA3340",
+              "alts": []
+            },
+            {
+              "code": "FINA3350",
+              "alts": []
+            },
+            {
+              "code": "FINA3360",
+              "alts": []
+            },
+            {
+              "code": "FINA3370",
+              "alts": []
+            },
+            {
+              "code": "FINA3398",
+              "alts": []
+            },
+            {
+              "code": "FINA3399",
+              "alts": []
+            },
+            {
+              "code": "FINA3420",
+              "alts": []
+            },
+            {
+              "code": "FINA4010",
+              "alts": []
+            },
+            {
+              "code": "FINA4020",
+              "alts": []
+            },
+            {
+              "code": "FINA4030",
+              "alts": []
+            },
+            {
+              "code": "FINA4040",
+              "alts": []
+            },
+            {
+              "code": "FINA4050",
+              "alts": []
+            },
+            {
+              "code": "FINA4060",
+              "alts": []
+            },
+            {
+              "code": "FINA4110",
+              "alts": []
+            },
+            {
+              "code": "FINA4120",
+              "alts": []
+            },
+            {
+              "code": "FINA4130",
+              "alts": []
+            },
+            {
+              "code": "FINA4160",
+              "alts": []
+            },
+            {
+              "code": "FINA4310",
+              "alts": []
+            },
+            {
+              "code": "FINA4320",
+              "alts": []
+            },
+            {
+              "code": "FINA4330",
+              "alts": []
+            },
+            {
+              "code": "FINA4340",
+              "alts": []
+            },
+            {
+              "code": "FINA4350",
+              "alts": []
+            },
+            {
+              "code": "FINA4370",
+              "alts": []
+            },
+            {
+              "code": "FINA4380",
+              "alts": []
+            },
+            {
+              "code": "FINA4400",
+              "alts": []
+            },
+            {
+              "code": "FINA4410",
+              "alts": []
+            },
+            {
+              "code": "FINA4420",
+              "alts": []
+            },
+            {
+              "code": "FINA4430",
               "alts": []
             },
             {

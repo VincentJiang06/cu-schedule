@@ -490,6 +490,14 @@
         "from": "(b) Elective Courses"
       },
       {
+        "raw": "COMM4191",
+        "codes": [
+          "COMM4191"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
         "raw": "GLSD2701",
         "codes": [
           "GLSD2701"
@@ -533,6 +541,30 @@
         "raw": "GDRS2002",
         "codes": [
           "GDRS2002"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GDRS3005",
+        "codes": [
+          "GDRS3005"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GDRS3012",
+        "codes": [
+          "GDRS3012"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GDRS4011",
+        "codes": [
+          "GDRS4011"
         ],
         "alt": false,
         "from": "(b) Elective Courses"
@@ -690,6 +722,22 @@
         "from": "(b) Elective Courses"
       },
       {
+        "raw": "GPAD3365",
+        "codes": [
+          "GPAD3365"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GPAD4225",
+        "codes": [
+          "GPAD4225"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
         "raw": "SOWK3340",
         "codes": [
           "SOWK3340"
@@ -701,6 +749,14 @@
         "raw": "ARCH3424",
         "codes": [
           "ARCH3424"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ARCH4721",
+        "codes": [
+          "ARCH4721"
         ],
         "alt": false,
         "from": "(b) Elective Courses"
@@ -738,6 +794,38 @@
         "from": "(b) Elective Courses"
       },
       {
+        "raw": "GRMD3202",
+        "codes": [
+          "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GRMD3224",
+        "codes": [
+          "GRMD3224"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
         "raw": "URSP2100",
         "codes": [
           "URSP2100"
@@ -746,9 +834,33 @@
         "from": "(b) Elective Courses"
       },
       {
+        "raw": "URSP3300",
+        "codes": [
+          "URSP3300"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
         "raw": "ECON3320",
         "codes": [
           "ECON3320"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
+        "raw": "ECON3370",
+        "codes": [
+          "ECON3370"
         ],
         "alt": false,
         "from": "(b) Elective Courses"
@@ -802,6 +914,14 @@
         "from": "(b) Elective Courses"
       },
       {
+        "raw": "GRMD4402",
+        "codes": [
+          "GRMD4402"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses"
+      },
+      {
         "raw": "SOWK4550",
         "codes": [
           "SOWK4550"
@@ -826,9 +946,25 @@
         "from": "4. Elective Course"
       },
       {
+        "raw": "ARCH4721",
+        "codes": [
+          "ARCH4721"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
         "raw": "COMM3941",
         "codes": [
           "COMM3941"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "COMM4191",
+        "codes": [
+          "COMM4191"
         ],
         "alt": false,
         "from": "4. Elective Course"
@@ -842,9 +978,41 @@
         "from": "4. Elective Course"
       },
       {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "ECON3370",
+        "codes": [
+          "ECON3370"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
         "raw": "GDRS3005",
         "codes": [
           "GDRS3005"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GDRS3012",
+        "codes": [
+          "GDRS3012"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GDRS4011",
+        "codes": [
+          "GDRS4011"
         ],
         "alt": false,
         "from": "4. Elective Course"
@@ -1058,9 +1226,49 @@
         "from": "4. Elective Course"
       },
       {
+        "raw": "GPAD4225",
+        "codes": [
+          "GPAD4225"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
         "raw": "GRMD3202",
         "codes": [
           "GRMD3202"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GRMD3224",
+        "codes": [
+          "GRMD3224"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "GRMD4402",
+        "codes": [
+          "GRMD4402"
         ],
         "alt": false,
         "from": "4. Elective Course"
@@ -1077,6 +1285,14 @@
         "raw": "SOWK3340",
         "codes": [
           "SOWK3340"
+        ],
+        "alt": false,
+        "from": "4. Elective Course"
+      },
+      {
+        "raw": "SOWK4550",
+        "codes": [
+          "SOWK4550"
         ],
         "alt": false,
         "from": "4. Elective Course"
@@ -1172,7 +1388,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "(a)",
@@ -1190,7 +1406,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 11
     },
     {
       "marker": "(a)",
@@ -1208,7 +1424,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 15
     },
     {
       "marker": "(a)",
@@ -1226,7 +1442,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 12
     },
     {
       "marker": "(a)",
@@ -1244,7 +1460,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 12
     },
     {
       "marker": "4.",
@@ -1253,7 +1469,7 @@
       "units": "3",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 34
+      "n_courses": 46
     },
     {
       "marker": "5.",
@@ -1493,6 +1709,10 @@
               "alts": []
             },
             {
+              "code": "COMM4191",
+              "alts": []
+            },
+            {
               "code": "GLSD2701",
               "alts": []
             },
@@ -1540,6 +1760,18 @@
           "courses": [
             {
               "code": "GDRS2002",
+              "alts": []
+            },
+            {
+              "code": "GDRS3005",
+              "alts": []
+            },
+            {
+              "code": "GDRS3012",
+              "alts": []
+            },
+            {
+              "code": "GDRS4011",
               "alts": []
             },
             {
@@ -1645,6 +1877,14 @@
               "alts": []
             },
             {
+              "code": "GPAD3365",
+              "alts": []
+            },
+            {
+              "code": "GPAD4225",
+              "alts": []
+            },
+            {
               "code": "SOWK3340",
               "alts": []
             }
@@ -1679,6 +1919,10 @@
               "alts": []
             },
             {
+              "code": "ARCH4721",
+              "alts": []
+            },
+            {
               "code": "GLSD2701",
               "alts": []
             },
@@ -1695,7 +1939,27 @@
               "alts": []
             },
             {
+              "code": "GRMD3202",
+              "alts": []
+            },
+            {
+              "code": "GRMD3203",
+              "alts": []
+            },
+            {
+              "code": "GRMD3224",
+              "alts": []
+            },
+            {
+              "code": "GRMD3404",
+              "alts": []
+            },
+            {
               "code": "URSP2100",
+              "alts": []
+            },
+            {
+              "code": "URSP3300",
               "alts": []
             }
           ],
@@ -1729,6 +1993,14 @@
               "alts": []
             },
             {
+              "code": "ECON3350",
+              "alts": []
+            },
+            {
+              "code": "ECON3370",
+              "alts": []
+            },
+            {
               "code": "GLSD2701",
               "alts": []
             },
@@ -1750,6 +2022,10 @@
             },
             {
               "code": "GRMD2321",
+              "alts": []
+            },
+            {
+              "code": "GRMD4402",
               "alts": []
             },
             {
@@ -1776,7 +2052,15 @@
           "alts": []
         },
         {
+          "code": "ARCH4721",
+          "alts": []
+        },
+        {
           "code": "COMM3941",
+          "alts": []
+        },
+        {
+          "code": "COMM4191",
           "alts": []
         },
         {
@@ -1784,7 +2068,23 @@
           "alts": []
         },
         {
+          "code": "ECON3350",
+          "alts": []
+        },
+        {
+          "code": "ECON3370",
+          "alts": []
+        },
+        {
           "code": "GDRS3005",
+          "alts": []
+        },
+        {
+          "code": "GDRS3012",
+          "alts": []
+        },
+        {
+          "code": "GDRS4011",
           "alts": []
         },
         {
@@ -1892,7 +2192,27 @@
           "alts": []
         },
         {
+          "code": "GPAD4225",
+          "alts": []
+        },
+        {
           "code": "GRMD3202",
+          "alts": []
+        },
+        {
+          "code": "GRMD3203",
+          "alts": []
+        },
+        {
+          "code": "GRMD3224",
+          "alts": []
+        },
+        {
+          "code": "GRMD3404",
+          "alts": []
+        },
+        {
+          "code": "GRMD4402",
           "alts": []
         },
         {
@@ -1901,6 +2221,10 @@
         },
         {
           "code": "SOWK3340",
+          "alts": []
+        },
+        {
+          "code": "SOWK4550",
           "alts": []
         },
         {

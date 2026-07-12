@@ -31,6 +31,19 @@
     "CSCI2520",
     "CSCI2720",
     "CSCI3100",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3170",
+    "CSCI3230",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI4160",
+    "CSCI4180",
+    "CSCI4190",
+    "CSCI4230",
+    "CSCI5030",
+    "CSCI5150",
+    "CSCI5510",
     "DOTE1030",
     "DOTE1031",
     "DOTE1040",
@@ -72,6 +85,10 @@
     "MATH2010",
     "MATH2018",
     "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH4210",
+    "MATH4230",
     "MGNT1020",
     "PHYS1001",
     "PHYS1002",
@@ -106,6 +123,10 @@
     "STAT4003",
     "STAT4004",
     "STAT4005",
+    "STAT4006",
+    "STAT4008",
+    "STAT4010",
+    "STAT4012",
     "UGCP1001",
     "UGCP1002"
   ],
@@ -280,6 +301,14 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "MATH1030",
         "codes": [
           "MATH1030"
@@ -320,9 +349,73 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "RMSC2001",
+        "codes": [
+          "RMSC2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "RMSC2101",
+        "codes": [
+          "RMSC2101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "RMSC3101",
+        "codes": [
+          "RMSC3101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "RMSC4001",
+        "codes": [
+          "RMSC4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "RMSC4003",
+        "codes": [
+          "RMSC4003"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "STAT2001",
         "codes": [
           "STAT2001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -410,9 +503,49 @@
         "from": "(b) Choose five courses from the"
       },
       {
+        "raw": "FINA3210",
+        "codes": [
+          "FINA3210"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
         "raw": "MATH3215",
         "codes": [
           "MATH3215"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
         ],
         "alt": false,
         "from": "(b) Choose five courses from the"
@@ -466,6 +599,62 @@
         "from": "(b) Choose five courses from the"
       },
       {
+        "raw": "STAT4003",
+        "codes": [
+          "STAT4003"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4004",
+        "codes": [
+          "STAT4004"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4008",
+        "codes": [
+          "STAT4008"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
+        ],
+        "alt": false,
+        "from": "(b) Choose five courses from the"
+      },
+      {
         "raw": "RMSC4102",
         "codes": [
           "RMSC4102"
@@ -501,7 +690,7 @@
       "units": "42",
       "bucket": "required",
       "stream": null,
-      "n_courses": 10
+      "n_courses": 19
     },
     {
       "marker": "3.",
@@ -528,7 +717,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 10
+      "n_courses": 22
     },
     {
       "marker": "(c)",
@@ -641,6 +830,10 @@
           "alts": []
         },
         {
+          "code": "FINA3080",
+          "alts": []
+        },
+        {
           "code": "MATH1030",
           "alts": []
         },
@@ -661,7 +854,39 @@
           "alts": []
         },
         {
+          "code": "RMSC2001",
+          "alts": []
+        },
+        {
+          "code": "RMSC2101",
+          "alts": []
+        },
+        {
+          "code": "RMSC3101",
+          "alts": []
+        },
+        {
+          "code": "RMSC4001",
+          "alts": []
+        },
+        {
+          "code": "RMSC4003",
+          "alts": []
+        },
+        {
           "code": "STAT2001",
+          "alts": []
+        },
+        {
+          "code": "STAT2006",
+          "alts": []
+        },
+        {
+          "code": "STAT3007",
+          "alts": []
+        },
+        {
+          "code": "STAT3008",
           "alts": []
         }
       ],
@@ -718,7 +943,27 @@
               "alts": []
             },
             {
+              "code": "FINA3210",
+              "alts": []
+            },
+            {
               "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3240",
+              "alts": []
+            },
+            {
+              "code": "MATH4210",
+              "alts": []
+            },
+            {
+              "code": "MATH4230",
               "alts": []
             },
             {
@@ -743,6 +988,34 @@
             },
             {
               "code": "STAT4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4003",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4006",
+              "alts": []
+            },
+            {
+              "code": "STAT4008",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
               "alts": []
             }
           ],

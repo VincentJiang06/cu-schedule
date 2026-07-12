@@ -11,6 +11,11 @@
   "all_course_codes": [
     "BCHE2030",
     "BCHE3050",
+    "BCHE3080",
+    "BCHE4040",
+    "BCHE4060",
+    "BCHE4090",
+    "BCHE4130",
     "BIOL2120",
     "BIOL2210",
     "BIOL2213",
@@ -83,11 +88,21 @@
     "CHEM4785",
     "CHEM4788",
     "CMBI4101",
+    "CMBI4102",
+    "CMBI4201",
+    "CMBI4202",
+    "CMBI4203",
     "FNSC3010",
+    "FNSC3180",
     "FNSC4101",
+    "FNSC4102",
     "LSCI1002",
     "LSCI1012",
     "LSCI2002",
+    "LSCI2003",
+    "LSCI3012",
+    "LSCI3030",
+    "LSCI3333",
     "LSCI3520",
     "LSCI4000",
     "LSCI4911",
@@ -97,7 +112,19 @@
     "MATH1018",
     "MATH1520",
     "MBTE3510",
+    "MBTE3511",
+    "MBTE3518",
+    "MBTE3521",
+    "MBTE3528",
+    "MBTE3531",
+    "MBTE3550",
+    "MBTE3558",
+    "MBTE3560",
+    "MBTE3568",
     "MBTE4033",
+    "MBTE4320",
+    "MBTE4510",
+    "MBTE4530",
     "PHYS1001",
     "PHYS1002",
     "PHYS1111",
@@ -388,6 +415,46 @@
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
       },
       {
+        "raw": "BCHE3080",
+        "codes": [
+          "BCHE3080"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BCHE4040",
+        "codes": [
+          "BCHE4040"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BCHE4060",
+        "codes": [
+          "BCHE4060"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BCHE4090",
+        "codes": [
+          "BCHE4090"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "BCHE4130",
+        "codes": [
+          "BCHE4130"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
         "raw": "BIOL3310",
         "codes": [
           "BIOL3310"
@@ -436,9 +503,49 @@
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
       },
       {
+        "raw": "FNSC4102",
+        "codes": [
+          "FNSC4102"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
         "raw": "CMBI4101",
         "codes": [
           "CMBI4101"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "CMBI4102",
+        "codes": [
+          "CMBI4102"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "CMBI4201",
+        "codes": [
+          "CMBI4201"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "CMBI4202",
+        "codes": [
+          "CMBI4202"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "CMBI4203",
+        "codes": [
+          "CMBI4203"
         ],
         "alt": false,
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
@@ -452,6 +559,14 @@
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
       },
       {
+        "raw": "FNSC3180",
+        "codes": [
+          "FNSC3180"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
         "raw": "LSCI2002",
         "codes": [
           "LSCI2002"
@@ -460,9 +575,145 @@
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
       },
       {
+        "raw": "LSCI2003",
+        "codes": [
+          "LSCI2003"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "LSCI3012",
+        "codes": [
+          "LSCI3012"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "LSCI3030",
+        "codes": [
+          "LSCI3030"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "LSCI3333",
+        "codes": [
+          "LSCI3333"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "LSCI3520",
+        "codes": [
+          "LSCI3520"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
         "raw": "MBTE3510",
         "codes": [
           "MBTE3510"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3511",
+        "codes": [
+          "MBTE3511"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3518",
+        "codes": [
+          "MBTE3518"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3521",
+        "codes": [
+          "MBTE3521"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3528",
+        "codes": [
+          "MBTE3528"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3531",
+        "codes": [
+          "MBTE3531"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3550",
+        "codes": [
+          "MBTE3550"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3558",
+        "codes": [
+          "MBTE3558"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3560",
+        "codes": [
+          "MBTE3560"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE3568",
+        "codes": [
+          "MBTE3568"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE4320",
+        "codes": [
+          "MBTE4320"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE4510",
+        "codes": [
+          "MBTE4510"
+        ],
+        "alt": false,
+        "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
+      },
+      {
+        "raw": "MBTE4530",
+        "codes": [
+          "MBTE4530"
         ],
         "alt": false,
         "from": "(b) BCHE3050#, 3080#, 4040#, 4060#, 4090#, 4130#,"
@@ -522,6 +773,30 @@
         ],
         "alt": false,
         "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "LSCI4911",
+        "codes": [
+          "LSCI4911"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "LSCI4912",
+        "codes": [
+          "LSCI4912"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
+      },
+      {
+        "raw": "LSCI4913",
+        "codes": [
+          "LSCI4913"
+        ],
+        "alt": false,
+        "from": "(c) Capstone course (at least 3"
       }
     ],
     "stream_elective": []
@@ -570,7 +845,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 40
     },
     {
       "marker": "(c)",
@@ -579,7 +854,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 9
     },
     {
       "marker": "1.",
@@ -781,6 +1056,26 @@
               "alts": []
             },
             {
+              "code": "BCHE3080",
+              "alts": []
+            },
+            {
+              "code": "BCHE4040",
+              "alts": []
+            },
+            {
+              "code": "BCHE4060",
+              "alts": []
+            },
+            {
+              "code": "BCHE4090",
+              "alts": []
+            },
+            {
+              "code": "BCHE4130",
+              "alts": []
+            },
+            {
               "code": "BIOL3310",
               "alts": []
             },
@@ -805,7 +1100,27 @@
               "alts": []
             },
             {
+              "code": "FNSC4102",
+              "alts": []
+            },
+            {
               "code": "CMBI4101",
+              "alts": []
+            },
+            {
+              "code": "CMBI4102",
+              "alts": []
+            },
+            {
+              "code": "CMBI4201",
+              "alts": []
+            },
+            {
+              "code": "CMBI4202",
+              "alts": []
+            },
+            {
+              "code": "CMBI4203",
               "alts": []
             },
             {
@@ -813,11 +1128,83 @@
               "alts": []
             },
             {
+              "code": "FNSC3180",
+              "alts": []
+            },
+            {
               "code": "LSCI2002",
               "alts": []
             },
             {
+              "code": "LSCI2003",
+              "alts": []
+            },
+            {
+              "code": "LSCI3012",
+              "alts": []
+            },
+            {
+              "code": "LSCI3030",
+              "alts": []
+            },
+            {
+              "code": "LSCI3333",
+              "alts": []
+            },
+            {
+              "code": "LSCI3520",
+              "alts": []
+            },
+            {
               "code": "MBTE3510",
+              "alts": []
+            },
+            {
+              "code": "MBTE3511",
+              "alts": []
+            },
+            {
+              "code": "MBTE3518",
+              "alts": []
+            },
+            {
+              "code": "MBTE3521",
+              "alts": []
+            },
+            {
+              "code": "MBTE3528",
+              "alts": []
+            },
+            {
+              "code": "MBTE3531",
+              "alts": []
+            },
+            {
+              "code": "MBTE3550",
+              "alts": []
+            },
+            {
+              "code": "MBTE3558",
+              "alts": []
+            },
+            {
+              "code": "MBTE3560",
+              "alts": []
+            },
+            {
+              "code": "MBTE3568",
+              "alts": []
+            },
+            {
+              "code": "MBTE4320",
+              "alts": []
+            },
+            {
+              "code": "MBTE4510",
+              "alts": []
+            },
+            {
+              "code": "MBTE4530",
               "alts": []
             },
             {
@@ -855,6 +1242,18 @@
             },
             {
               "code": "LSCI4000",
+              "alts": []
+            },
+            {
+              "code": "LSCI4911",
+              "alts": []
+            },
+            {
+              "code": "LSCI4912",
+              "alts": []
+            },
+            {
+              "code": "LSCI4913",
               "alts": []
             }
           ],

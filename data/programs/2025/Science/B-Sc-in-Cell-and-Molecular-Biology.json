@@ -11,13 +11,24 @@
   "all_course_codes": [
     "BCHE2030",
     "BCHE3030",
+    "BCHE3040",
     "BCHE3050",
     "BCHE3070",
+    "BCHE4030",
+    "BCHE4040",
+    "BCHE4060",
+    "BCHE4130",
     "BIOL2120",
     "BIOL2313",
     "BIOL2410",
     "BIOL3410",
+    "BIOL3530",
+    "BIOL3630",
+    "BIOL4010",
+    "BIOL4120",
     "BMEG2001",
+    "BMEG2012",
+    "BMEG3102",
     "CHEM1070",
     "CHEM1280",
     "CMBI2200",
@@ -47,10 +58,21 @@
     "LSCI1002",
     "LSCI1012",
     "LSCI2003",
+    "LSCI3012",
+    "LSCI3030",
+    "LSCI3333",
+    "LSCI4911",
+    "LSCI4912",
+    "LSCI4913",
     "MATH1010",
     "MATH1018",
     "MATH1520",
     "MBTE3510",
+    "MBTE3550",
+    "MBTE4320",
+    "MBTE4510",
+    "MBTE4520",
+    "MBTE4530",
     "PHYS1001",
     "PHYS1002",
     "STAR2000",
@@ -154,9 +176,41 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "BCHE3050",
+        "codes": [
+          "BCHE3050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCHE3070",
+        "codes": [
+          "BCHE3070"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "BIOL2120",
         "codes": [
           "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2313",
+        "codes": [
+          "BIOL2313"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -380,6 +434,46 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "BCHE3040",
+        "codes": [
+          "BCHE3040"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCHE4030",
+        "codes": [
+          "BCHE4030"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCHE4040",
+        "codes": [
+          "BCHE4040"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCHE4060",
+        "codes": [
+          "BCHE4060"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BCHE4130",
+        "codes": [
+          "BCHE4130"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "BIOL3410",
         "codes": [
           "BIOL3410"
@@ -388,9 +482,57 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "BIOL3530",
+        "codes": [
+          "BIOL3530"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BIOL3630",
+        "codes": [
+          "BIOL3630"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BIOL4010",
+        "codes": [
+          "BIOL4010"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BIOL4120",
+        "codes": [
+          "BIOL4120"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "BMEG2001",
         "codes": [
           "BMEG2001"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BMEG2012",
+        "codes": [
+          "BMEG2012"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "BMEG3102",
+        "codes": [
+          "BMEG3102"
         ],
         "alt": false,
         "from": "3. Elective Courses"
@@ -444,9 +586,97 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "LSCI3012",
+        "codes": [
+          "LSCI3012"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "LSCI3030",
+        "codes": [
+          "LSCI3030"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "LSCI3333",
+        "codes": [
+          "LSCI3333"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "LSCI4911",
+        "codes": [
+          "LSCI4911"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "LSCI4912",
+        "codes": [
+          "LSCI4912"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "LSCI4913",
+        "codes": [
+          "LSCI4913"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "MBTE3510",
         "codes": [
           "MBTE3510"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MBTE3550",
+        "codes": [
+          "MBTE3550"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MBTE4320",
+        "codes": [
+          "MBTE4320"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MBTE4510",
+        "codes": [
+          "MBTE4510"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MBTE4520",
+        "codes": [
+          "MBTE4520"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MBTE4530",
+        "codes": [
+          "MBTE4530"
         ],
         "alt": false,
         "from": "3. Elective Courses"
@@ -479,7 +709,7 @@
       "units": "41",
       "bucket": "required",
       "stream": null,
-      "n_courses": 22
+      "n_courses": 26
     },
     {
       "marker": "3.",
@@ -488,7 +718,7 @@
       "units": "8",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 33
     },
     {
       "marker": "1.",
@@ -597,7 +827,23 @@
           "alts": []
         },
         {
+          "code": "BCHE3050",
+          "alts": []
+        },
+        {
+          "code": "BCHE3070",
+          "alts": []
+        },
+        {
           "code": "BIOL2120",
+          "alts": []
+        },
+        {
+          "code": "BIOL2313",
+          "alts": []
+        },
+        {
+          "code": "BIOL2410",
           "alts": []
         },
         {
@@ -694,11 +940,55 @@
           "alts": []
         },
         {
+          "code": "BCHE3040",
+          "alts": []
+        },
+        {
+          "code": "BCHE4030",
+          "alts": []
+        },
+        {
+          "code": "BCHE4040",
+          "alts": []
+        },
+        {
+          "code": "BCHE4060",
+          "alts": []
+        },
+        {
+          "code": "BCHE4130",
+          "alts": []
+        },
+        {
           "code": "BIOL3410",
           "alts": []
         },
         {
+          "code": "BIOL3530",
+          "alts": []
+        },
+        {
+          "code": "BIOL3630",
+          "alts": []
+        },
+        {
+          "code": "BIOL4010",
+          "alts": []
+        },
+        {
+          "code": "BIOL4120",
+          "alts": []
+        },
+        {
           "code": "BMEG2001",
+          "alts": []
+        },
+        {
+          "code": "BMEG2012",
+          "alts": []
+        },
+        {
+          "code": "BMEG3102",
           "alts": []
         },
         {
@@ -726,7 +1016,51 @@
           "alts": []
         },
         {
+          "code": "LSCI3012",
+          "alts": []
+        },
+        {
+          "code": "LSCI3030",
+          "alts": []
+        },
+        {
+          "code": "LSCI3333",
+          "alts": []
+        },
+        {
+          "code": "LSCI4911",
+          "alts": []
+        },
+        {
+          "code": "LSCI4912",
+          "alts": []
+        },
+        {
+          "code": "LSCI4913",
+          "alts": []
+        },
+        {
           "code": "MBTE3510",
+          "alts": []
+        },
+        {
+          "code": "MBTE3550",
+          "alts": []
+        },
+        {
+          "code": "MBTE4320",
+          "alts": []
+        },
+        {
+          "code": "MBTE4510",
+          "alts": []
+        },
+        {
+          "code": "MBTE4520",
+          "alts": []
+        },
+        {
+          "code": "MBTE4530",
           "alts": []
         },
         {

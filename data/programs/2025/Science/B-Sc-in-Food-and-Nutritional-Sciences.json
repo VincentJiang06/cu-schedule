@@ -11,9 +11,12 @@
   "all_course_codes": [
     "BCHE2030",
     "BCHE4060",
+    "BCHE4130",
+    "BCHE4760",
     "BIOL2120",
     "BIOL2410",
     "BIOL3410",
+    "BIOL4610",
     "CHEM1070",
     "CHEM1280",
     "FNSC2001",
@@ -45,13 +48,17 @@
     "LSCI2002",
     "LSCI2003",
     "LSCI3012",
+    "LSCI3333",
+    "LSCI3520",
     "LSCI4000",
     "LSCI4911",
     "LSCI4912",
+    "LSCI4913",
     "MATH1010",
     "MATH1018",
     "MATH1520",
     "MBTE4320",
+    "MBTE4530",
     "PHYS1001",
     "PHYS1002",
     "STAR2000",
@@ -158,6 +165,14 @@
         "raw": "BIOL2120",
         "codes": [
           "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -318,6 +333,14 @@
         "raw": "BIOL2120",
         "codes": [
           "BIOL2120"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -541,9 +564,33 @@
         "from": "(b) BCHE4060#,"
       },
       {
+        "raw": "BCHE4130",
+        "codes": [
+          "BCHE4130"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "BCHE4760",
+        "codes": [
+          "BCHE4760"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
         "raw": "BIOL3410",
         "codes": [
           "BIOL3410"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "BIOL4610",
+        "codes": [
+          "BIOL4610"
         ],
         "alt": false,
         "from": "(b) BCHE4060#,"
@@ -661,9 +708,33 @@
         "from": "(b) BCHE4060#,"
       },
       {
+        "raw": "LSCI3333",
+        "codes": [
+          "LSCI3333"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "LSCI3520",
+        "codes": [
+          "LSCI3520"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
         "raw": "MBTE4320",
         "codes": [
           "MBTE4320"
+        ],
+        "alt": false,
+        "from": "(b) BCHE4060#,"
+      },
+      {
+        "raw": "MBTE4530",
+        "codes": [
+          "MBTE4530"
         ],
         "alt": false,
         "from": "(b) BCHE4060#,"
@@ -756,6 +827,13 @@
               "LSCI4912"
             ],
             "alt": false
+          },
+          {
+            "raw": "LSCI4913",
+            "codes": [
+              "LSCI4913"
+            ],
+            "alt": false
           }
         ]
       }
@@ -778,7 +856,7 @@
       "units": "30",
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 12
     },
     {
       "marker": "3.",
@@ -823,7 +901,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": "Capstone courses: one of the five options",
-      "n_courses": 4
+      "n_courses": 5
     },
     {
       "marker": "(b)",
@@ -832,7 +910,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 18
+      "n_courses": 24
     },
     {
       "marker": "1.",
@@ -850,7 +928,7 @@
       "units": "53",
       "bucket": "required",
       "stream": null,
-      "n_courses": 20
+      "n_courses": 21
     },
     {
       "marker": "3.",
@@ -972,6 +1050,10 @@
           "alts": []
         },
         {
+          "code": "BIOL2410",
+          "alts": []
+        },
+        {
           "code": "FNSC2001",
           "alts": []
         },
@@ -1083,6 +1165,10 @@
                 {
                   "code": "LSCI4912",
                   "alts": []
+                },
+                {
+                  "code": "LSCI4913",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1101,6 +1187,10 @@
             },
             {
               "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL4610",
               "alts": []
             },
             {
@@ -1160,7 +1250,19 @@
               "alts": []
             },
             {
+              "code": "LSCI3333",
+              "alts": []
+            },
+            {
+              "code": "LSCI3520",
+              "alts": []
+            },
+            {
               "code": "MBTE4320",
+              "alts": []
+            },
+            {
+              "code": "MBTE4530",
               "alts": []
             },
             {
@@ -1178,6 +1280,14 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
+        {
+          "code": "BCHE4130",
+          "alts": []
+        },
+        {
+          "code": "BCHE4760",
+          "alts": []
+        },
         {
           "code": "FNSC4907",
           "alts": []

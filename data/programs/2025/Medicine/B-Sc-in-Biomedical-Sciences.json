@@ -10,6 +10,10 @@
   "has_streams": false,
   "all_course_codes": [
     "EPIN1020",
+    "EPIN2010",
+    "EPIN3020",
+    "EPIN3021",
+    "EPIN3022",
     "LAWS2331",
     "MEDF1011",
     "MEDF1041",
@@ -247,6 +251,38 @@
         "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
       },
       {
+        "raw": "EPIN2010",
+        "codes": [
+          "EPIN2010"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "EPIN3020",
+        "codes": [
+          "EPIN3020"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "EPIN3021",
+        "codes": [
+          "EPIN3021"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
+        "raw": "EPIN3022",
+        "codes": [
+          "EPIN3022"
+        ],
+        "alt": false,
+        "from": "(i) EPIN1020#, 2010#, 3020# or 3021# or 3022#, LAWS2331#, SBMS3215,"
+      },
+      {
         "raw": "LAWS2331",
         "codes": [
           "LAWS2331"
@@ -346,6 +382,38 @@
         "raw": "EPIN1020",
         "codes": [
           "EPIN1020"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "EPIN2010",
+        "codes": [
+          "EPIN2010"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "EPIN3020",
+        "codes": [
+          "EPIN3020"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "EPIN3021",
+        "codes": [
+          "EPIN3021"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "EPIN3022",
+        "codes": [
+          "EPIN3022"
         ],
         "alt": false,
         "from": "(b) 17-18[a] units of courses chosen from"
@@ -591,7 +659,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 8
     },
     {
       "marker": "(ii)",
@@ -627,7 +695,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 23
+      "n_courses": 27
     }
   ],
   "structure": [
@@ -784,6 +852,22 @@
                   "alts": []
                 },
                 {
+                  "code": "EPIN2010",
+                  "alts": []
+                },
+                {
+                  "code": "EPIN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EPIN3021",
+                  "alts": []
+                },
+                {
+                  "code": "EPIN3022",
+                  "alts": []
+                },
+                {
                   "code": "LAWS2331",
                   "alts": []
                 },
@@ -867,6 +951,22 @@
           "courses": [
             {
               "code": "EPIN1020",
+              "alts": []
+            },
+            {
+              "code": "EPIN2010",
+              "alts": []
+            },
+            {
+              "code": "EPIN3020",
+              "alts": []
+            },
+            {
+              "code": "EPIN3021",
+              "alts": []
+            },
+            {
+              "code": "EPIN3022",
               "alts": []
             },
             {

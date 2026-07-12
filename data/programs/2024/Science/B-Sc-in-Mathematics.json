@@ -744,35 +744,21 @@
         "from": "(b) 18 units of courses chosen according to any one"
       },
       {
-        "raw": "SEEM3550",
+        "raw": "SEEM3550/ESTR3506",
         "codes": [
-          "SEEM3550"
-        ],
-        "alt": false,
-        "from": "(b) 18 units of courses chosen according to any one"
-      },
-      {
-        "raw": "ESTR3506",
-        "codes": [
+          "SEEM3550",
           "ESTR3506"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) 18 units of courses chosen according to any one"
       },
       {
-        "raw": "SEEM3570",
+        "raw": "SEEM3570/ESTR3508",
         "codes": [
-          "SEEM3570"
-        ],
-        "alt": false,
-        "from": "(b) 18 units of courses chosen according to any one"
-      },
-      {
-        "raw": "ESTR3508",
-        "codes": [
+          "SEEM3570",
           "ESTR3508"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) 18 units of courses chosen according to any one"
       },
       {
@@ -913,7 +899,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 43
+      "n_courses": 41
     },
     {
       "marker": "1.",
@@ -1282,19 +1268,15 @@
                 },
                 {
                   "code": "SEEM3550",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3506",
-                  "alts": []
+                  "alts": [
+                    "ESTR3506"
+                  ]
                 },
                 {
                   "code": "SEEM3570",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3508",
-                  "alts": []
+                  "alts": [
+                    "ESTR3508"
+                  ]
                 }
               ],
               "children": []
@@ -1359,11 +1341,9 @@
                 },
                 {
                   "code": "SEEM3550",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3506",
-                  "alts": []
+                  "alts": [
+                    "ESTR3506"
+                  ]
                 },
                 {
                   "code": "STAT4005",

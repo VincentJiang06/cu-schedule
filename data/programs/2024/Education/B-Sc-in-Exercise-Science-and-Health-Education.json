@@ -39,29 +39,494 @@
     "SPED4900"
   ],
   "buckets": {
-    "required": [],
-    "elective": [],
+    "required": [
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2520",
+        "codes": [
+          "SPED2520"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2540",
+        "codes": [
+          "SPED2540"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2600",
+        "codes": [
+          "SPED2600"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2610",
+        "codes": [
+          "SPED2610"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2710",
+        "codes": [
+          "SPED2710"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2720",
+        "codes": [
+          "SPED2720"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2810",
+        "codes": [
+          "SPED2810"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED3430",
+        "codes": [
+          "SPED3430"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED3820",
+        "codes": [
+          "SPED3820"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED3910",
+        "codes": [
+          "SPED3910"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED3920",
+        "codes": [
+          "SPED3920"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED4570",
+        "codes": [
+          "SPED4570"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses in Exercise Science and"
+      },
+      {
+        "raw": "SPED2010",
+        "codes": [
+          "SPED2010"
+        ],
+        "alt": false,
+        "from": "(b) Core Skills Courses"
+      },
+      {
+        "raw": "SPED2110",
+        "codes": [
+          "SPED2110"
+        ],
+        "alt": false,
+        "from": "(b) Core Skills Courses"
+      },
+      {
+        "raw": "SPED2141",
+        "codes": [
+          "SPED2141"
+        ],
+        "alt": false,
+        "from": "(b) Core Skills Courses"
+      },
+      {
+        "raw": "SPED3630",
+        "codes": [
+          "SPED3630"
+        ],
+        "alt": false,
+        "from": "(c) Research Experience"
+      },
+      {
+        "raw": "SPED4900",
+        "codes": [
+          "SPED4900"
+        ],
+        "alt": false,
+        "from": "(c) Research Experience"
+      },
+      {
+        "raw": "SPED4201",
+        "codes": [
+          "SPED4201"
+        ],
+        "alt": false,
+        "from": "(d) Internship"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "SPED3550",
+        "codes": [
+          "SPED3550"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical"
+      },
+      {
+        "raw": "SPED3731",
+        "codes": [
+          "SPED3731"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical"
+      },
+      {
+        "raw": "SPED4560",
+        "codes": [
+          "SPED4560"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical"
+      },
+      {
+        "raw": "SPED4640",
+        "codes": [
+          "SPED4640"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical"
+      },
+      {
+        "raw": "SPED4830",
+        "codes": [
+          "SPED4830"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical"
+      },
+      {
+        "raw": "CHPR3002",
+        "codes": [
+          "CHPR3002"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health"
+      },
+      {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health"
+      },
+      {
+        "raw": "PHPC2007",
+        "codes": [
+          "PHPC2007"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health"
+      },
+      {
+        "raw": "PHPC2009",
+        "codes": [
+          "PHPC2009"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health"
+      }
+    ],
     "stream_elective": []
   },
   "groups_outline": [
     {
-      "marker": "2.",
+      "marker": "1.",
       "level": 1,
-      "title": "Students who have completed 3 units of Core Skills Courses will",
+      "title": "Required Courses",
       "units": null,
       "bucket": "required",
       "stream": null,
       "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Core Courses in Exercise Science and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Core Skills Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Internship",
+      "units": "2",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Theoretical",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Theoretical Courses in Health",
+      "units": "3",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
     }
   ],
   "structure": [
     {
-      "marker": "2.",
-      "title": "",
+      "marker": "1.",
+      "title": "Required Courses",
       "units": null,
-      "note": "Students who have completed 3 units of Core Skills Courses will be eligible to apply for exemption of 1 unit of University Core Physical Education Requirement. Students are required to apply for the exemption. When exemption from a particular course is recognized, students can only be exempted from the course but not the units. | Capstone courses",
+      "note": null,
       "courses": [],
-      "children": []
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Core Courses in Exercise Science",
+          "courses": [
+            {
+              "code": "PHPC1001",
+              "alts": []
+            },
+            {
+              "code": "SPED2520",
+              "alts": []
+            },
+            {
+              "code": "SPED2540",
+              "alts": []
+            },
+            {
+              "code": "SPED2600",
+              "alts": []
+            },
+            {
+              "code": "SPED2610",
+              "alts": []
+            },
+            {
+              "code": "SPED2710",
+              "alts": []
+            },
+            {
+              "code": "SPED2720",
+              "alts": []
+            },
+            {
+              "code": "SPED2810",
+              "alts": []
+            },
+            {
+              "code": "SPED3430",
+              "alts": []
+            },
+            {
+              "code": "SPED3820",
+              "alts": []
+            },
+            {
+              "code": "SPED3910",
+              "alts": []
+            },
+            {
+              "code": "SPED3920",
+              "alts": []
+            },
+            {
+              "code": "SPED4570",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": "Core Skills Courses",
+          "courses": [
+            {
+              "code": "SPED2010",
+              "alts": []
+            },
+            {
+              "code": "SPED2110",
+              "alts": []
+            },
+            {
+              "code": "SPED2141",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Research Experience",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED3630",
+              "alts": []
+            },
+            {
+              "code": "SPED4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Internship",
+          "units": 2,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED4201",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "SPED3550",
+              "alts": []
+            },
+            {
+              "code": "SPED3731",
+              "alts": []
+            },
+            {
+              "code": "SPED4560",
+              "alts": []
+            },
+            {
+              "code": "SPED4640",
+              "alts": []
+            },
+            {
+              "code": "SPED4830",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": "Theoretical Courses in Health One course",
+          "courses": [
+            {
+              "code": "CHPR3002",
+              "alts": []
+            },
+            {
+              "code": "CHPR4012",
+              "alts": []
+            },
+            {
+              "code": "PHPC2007",
+              "alts": []
+            },
+            {
+              "code": "PHPC2009",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
     }
   ]
 }

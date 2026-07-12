@@ -556,35 +556,21 @@
         "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
       },
       {
-        "raw": "SEEM3550",
+        "raw": "SEEM3550/ESTR3506",
         "codes": [
-          "SEEM3550"
-        ],
-        "alt": false,
-        "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
-      },
-      {
-        "raw": "ESTR3506",
-        "codes": [
+          "SEEM3550",
           "ESTR3506"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
       },
       {
-        "raw": "SEEM3570",
+        "raw": "SEEM3570/ESTR3508",
         "codes": [
-          "SEEM3570"
-        ],
-        "alt": false,
-        "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
-      },
-      {
-        "raw": "ESTR3508",
-        "codes": [
+          "SEEM3570",
           "ESTR3508"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
       },
       {
@@ -692,19 +678,12 @@
         "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
       },
       {
-        "raw": "SEEM3550",
+        "raw": "SEEM3550/ESTR3506",
         "codes": [
-          "SEEM3550"
-        ],
-        "alt": false,
-        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
-      },
-      {
-        "raw": "ESTR3506",
-        "codes": [
+          "SEEM3550",
           "ESTR3506"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
       },
       {
@@ -1038,7 +1017,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 3
     },
     {
       "marker": "(iii)",
@@ -1065,7 +1044,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 11
     },
     {
       "marker": "(iii)",
@@ -1466,19 +1445,15 @@
                 },
                 {
                   "code": "SEEM3550",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3506",
-                  "alts": []
+                  "alts": [
+                    "ESTR3506"
+                  ]
                 },
                 {
                   "code": "SEEM3570",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3508",
-                  "alts": []
+                  "alts": [
+                    "ESTR3508"
+                  ]
                 }
               ],
               "children": []
@@ -1557,11 +1532,9 @@
                 },
                 {
                   "code": "SEEM3550",
-                  "alts": []
-                },
-                {
-                  "code": "ESTR3506",
-                  "alts": []
+                  "alts": [
+                    "ESTR3506"
+                  ]
                 },
                 {
                   "code": "STAT4005",

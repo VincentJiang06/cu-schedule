@@ -68,9 +68,15 @@
     "EESC2515",
     "EESC2800",
     "EESC3200",
+    "EESC3220",
     "EESC3230",
+    "EESC3320",
+    "EESC3600",
+    "EESC3800",
     "EESC4240",
+    "EESC4335",
     "EESC4340",
+    "EESC4540",
     "ELEG2202",
     "ELEG3207",
     "ELEG3601",
@@ -114,8 +120,10 @@
     "GRMD2404",
     "GRMD3202",
     "GRMD3203",
+    "GRMD3403",
     "GRMD4202",
     "GRMD4204",
+    "GRMD4401",
     "IBBA3040",
     "MAEG1020",
     "MAEG2030",
@@ -323,6 +331,14 @@
         "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
       },
       {
+        "raw": "ELEG3207",
+        "codes": [
+          "ELEG3207"
+        ],
+        "alt": false,
+        "from": "(a) EEEN2020, 2030, EEEN2040/ESTR2404, EEEN2602, EEEN3030/ESTR3402,"
+      },
+      {
         "raw": "MAEG2030/ESTR2402",
         "codes": [
           "MAEG2030",
@@ -477,19 +493,12 @@
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
-        "raw": "CSCI2100",
+        "raw": "CSCI2100/ESTR2102",
         "codes": [
-          "CSCI2100"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
-        "raw": "ESTR2102",
-        "codes": [
+          "CSCI2100",
           "ESTR2102"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
@@ -544,6 +553,70 @@
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3230",
+        "codes": [
+          "EESC3230"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3320",
+        "codes": [
+          "EESC3320"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3600",
+        "codes": [
+          "EESC3600"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC4335",
+        "codes": [
+          "EESC4335"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC4340",
+        "codes": [
+          "EESC4340"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
         "raw": "ELEG3601",
         "codes": [
           "ELEG3601"
@@ -589,6 +662,22 @@
         "raw": "GRMD3202",
         "codes": [
           "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
+      },
+      {
+        "raw": "GRMD3403",
+        "codes": [
+          "GRMD3403"
         ],
         "alt": false,
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
@@ -687,33 +776,9 @@
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
       },
       {
-        "raw": "EESC3230",
-        "codes": [
-          "EESC3230"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
         "raw": "EESC4240",
         "codes": [
           "EESC4240"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
-        "raw": "EESC4340",
-        "codes": [
-          "EESC4340"
-        ],
-        "alt": false,
-        "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
-      },
-      {
-        "raw": "GRMD3203",
-        "codes": [
-          "GRMD3203"
         ],
         "alt": false,
         "from": "(b) Non-core Electives[d]: CHEM1380, 4280#, CSCI1020, 2040#, CSCI2100#/ESTR2102,"
@@ -781,7 +846,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 12
     },
     {
       "marker": "(b)",
@@ -817,7 +882,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 36
+      "n_courses": 42
     }
   ],
   "structure": [
@@ -924,6 +989,10 @@
             },
             {
               "code": "ELEG2202",
+              "alts": []
+            },
+            {
+              "code": "ELEG3207",
               "alts": []
             },
             {
@@ -1052,11 +1121,9 @@
             },
             {
               "code": "CSCI2100",
-              "alts": []
-            },
-            {
-              "code": "ESTR2102",
-              "alts": []
+              "alts": [
+                "ESTR2102"
+              ]
             },
             {
               "code": "EEEN3020",
@@ -1089,6 +1156,38 @@
               "alts": []
             },
             {
+              "code": "EESC3220",
+              "alts": []
+            },
+            {
+              "code": "EESC3230",
+              "alts": []
+            },
+            {
+              "code": "EESC3320",
+              "alts": []
+            },
+            {
+              "code": "EESC3600",
+              "alts": []
+            },
+            {
+              "code": "EESC3800",
+              "alts": []
+            },
+            {
+              "code": "EESC4335",
+              "alts": []
+            },
+            {
+              "code": "EESC4340",
+              "alts": []
+            },
+            {
+              "code": "EESC4540",
+              "alts": []
+            },
+            {
               "code": "ELEG3601",
               "alts": []
             },
@@ -1114,6 +1213,14 @@
             },
             {
               "code": "GRMD3202",
+              "alts": []
+            },
+            {
+              "code": "GRMD3203",
+              "alts": []
+            },
+            {
+              "code": "GRMD3403",
               "alts": []
             },
             {
@@ -1175,19 +1282,7 @@
               ]
             },
             {
-              "code": "EESC3230",
-              "alts": []
-            },
-            {
               "code": "EESC4240",
-              "alts": []
-            },
-            {
-              "code": "EESC4340",
-              "alts": []
-            },
-            {
-              "code": "GRMD3203",
               "alts": []
             },
             {

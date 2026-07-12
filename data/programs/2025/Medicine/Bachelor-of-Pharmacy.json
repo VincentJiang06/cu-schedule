@@ -109,6 +109,198 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1004",
+        "codes": [
+          "PHAR1004"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1110",
+        "codes": [
+          "PHAR1110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1423",
+        "codes": [
+          "PHAR1423"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1433",
+        "codes": [
+          "PHAR1433"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1434",
+        "codes": [
+          "PHAR1434"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR1440",
+        "codes": [
+          "PHAR1440"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2110",
+        "codes": [
+          "PHAR2110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2131",
+        "codes": [
+          "PHAR2131"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2211",
+        "codes": [
+          "PHAR2211"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2212",
+        "codes": [
+          "PHAR2212"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2213",
+        "codes": [
+          "PHAR2213"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2220",
+        "codes": [
+          "PHAR2220"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2313",
+        "codes": [
+          "PHAR2313"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2320",
+        "codes": [
+          "PHAR2320"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2330",
+        "codes": [
+          "PHAR2330"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2410",
+        "codes": [
+          "PHAR2410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR2520",
+        "codes": [
+          "PHAR2520"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3330",
+        "codes": [
+          "PHAR3330"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3413",
+        "codes": [
+          "PHAR3413"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3414",
+        "codes": [
+          "PHAR3414"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3415",
+        "codes": [
+          "PHAR3415"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3420",
+        "codes": [
+          "PHAR3420"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3510",
+        "codes": [
+          "PHAR3510"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHAR3812",
+        "codes": [
+          "PHAR3812"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -332,7 +524,7 @@
       "units": "57",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 25
     },
     {
       "marker": "3.",
@@ -423,6 +615,102 @@
       "courses": [
         {
           "code": "PHAR1000",
+          "alts": []
+        },
+        {
+          "code": "PHAR1004",
+          "alts": []
+        },
+        {
+          "code": "PHAR1110",
+          "alts": []
+        },
+        {
+          "code": "PHAR1423",
+          "alts": []
+        },
+        {
+          "code": "PHAR1433",
+          "alts": []
+        },
+        {
+          "code": "PHAR1434",
+          "alts": []
+        },
+        {
+          "code": "PHAR1440",
+          "alts": []
+        },
+        {
+          "code": "PHAR2110",
+          "alts": []
+        },
+        {
+          "code": "PHAR2131",
+          "alts": []
+        },
+        {
+          "code": "PHAR2211",
+          "alts": []
+        },
+        {
+          "code": "PHAR2212",
+          "alts": []
+        },
+        {
+          "code": "PHAR2213",
+          "alts": []
+        },
+        {
+          "code": "PHAR2220",
+          "alts": []
+        },
+        {
+          "code": "PHAR2313",
+          "alts": []
+        },
+        {
+          "code": "PHAR2320",
+          "alts": []
+        },
+        {
+          "code": "PHAR2330",
+          "alts": []
+        },
+        {
+          "code": "PHAR2410",
+          "alts": []
+        },
+        {
+          "code": "PHAR2520",
+          "alts": []
+        },
+        {
+          "code": "PHAR3330",
+          "alts": []
+        },
+        {
+          "code": "PHAR3413",
+          "alts": []
+        },
+        {
+          "code": "PHAR3414",
+          "alts": []
+        },
+        {
+          "code": "PHAR3415",
+          "alts": []
+        },
+        {
+          "code": "PHAR3420",
+          "alts": []
+        },
+        {
+          "code": "PHAR3510",
+          "alts": []
+        },
+        {
+          "code": "PHAR3812",
           "alts": []
         }
       ],

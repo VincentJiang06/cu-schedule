@@ -370,19 +370,12 @@
         "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
       },
       {
-        "raw": "CSCI2100",
+        "raw": "CSCI2100/ESTR2102",
         "codes": [
-          "CSCI2100"
-        ],
-        "alt": false,
-        "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
-      },
-      {
-        "raw": "ESTR2102",
-        "codes": [
+          "CSCI2100",
           "ESTR2102"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) CSCI2040#, CSCI2100#/ESTR2102,"
       },
       {
@@ -471,19 +464,12 @@
     ],
     "elective": [
       {
-        "raw": "AIST3510",
+        "raw": "AIST3510/SEEM3510",
         "codes": [
-          "AIST3510"
-        ],
-        "alt": false,
-        "from": "4. Elective Courses"
-      },
-      {
-        "raw": "SEEM3510",
-        "codes": [
+          "AIST3510",
           "SEEM3510"
         ],
-        "alt": false,
+        "alt": true,
         "from": "4. Elective Courses"
       },
       {
@@ -506,6 +492,30 @@
         "raw": "FTEC4001",
         "codes": [
           "FTEC4001"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "FTEC4002",
+        "codes": [
+          "FTEC4002"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "FTEC4005",
+        "codes": [
+          "FTEC4005"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "FTEC4007",
+        "codes": [
+          "FTEC4007"
         ],
         "alt": false,
         "from": "4. Elective Courses"
@@ -1001,7 +1011,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 10
     },
     {
       "marker": "(b)",
@@ -1019,7 +1029,7 @@
       "units": "18",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 25
+      "n_courses": 27
     },
     {
       "marker": "(a)",
@@ -1203,11 +1213,9 @@
             },
             {
               "code": "CSCI2100",
-              "alts": []
-            },
-            {
-              "code": "ESTR2102",
-              "alts": []
+              "alts": [
+                "ESTR2102"
+              ]
             },
             {
               "code": "SEEM2420",
@@ -1277,11 +1285,9 @@
       "courses": [
         {
           "code": "AIST3510",
-          "alts": []
-        },
-        {
-          "code": "SEEM3510",
-          "alts": []
+          "alts": [
+            "SEEM3510"
+          ]
         },
         {
           "code": "CSCI4140",
@@ -1293,6 +1299,18 @@
         },
         {
           "code": "FTEC4001",
+          "alts": []
+        },
+        {
+          "code": "FTEC4002",
+          "alts": []
+        },
+        {
+          "code": "FTEC4005",
+          "alts": []
+        },
+        {
+          "code": "FTEC4007",
           "alts": []
         },
         {

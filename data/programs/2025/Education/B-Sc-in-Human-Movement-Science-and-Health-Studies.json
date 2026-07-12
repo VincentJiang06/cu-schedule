@@ -238,6 +238,14 @@
         "from": "(b) Theoretical Courses in Health Studies"
       },
       {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "(b) Theoretical Courses in Health Studies"
+      },
+      {
         "raw": "SPED3700",
         "codes": [
           "SPED3700"
@@ -327,7 +335,7 @@
       "units": "6",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     }
   ],
   "structure": [
@@ -480,6 +488,10 @@
           "courses": [
             {
               "code": "CHPR3002",
+              "alts": []
+            },
+            {
+              "code": "CHPR4012",
               "alts": []
             },
             {

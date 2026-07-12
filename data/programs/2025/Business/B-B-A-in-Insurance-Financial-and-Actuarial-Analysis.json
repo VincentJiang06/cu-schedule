@@ -256,6 +256,14 @@
         "from": "(a) 18 units of courses from the following"
       },
       {
+        "raw": "ACCT3161",
+        "codes": [
+          "ACCT3161"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
         "raw": "CSCI2100",
         "codes": [
           "CSCI2100"
@@ -264,9 +272,25 @@
         "from": "(a) 18 units of courses from the following"
       },
       {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
         "raw": "DOTE2051",
         "codes": [
           "DOTE2051"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
         ],
         "alt": false,
         "from": "(a) 18 units of courses from the following"
@@ -560,7 +584,7 @@
       "units": "18",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 27
+      "n_courses": 30
     },
     {
       "marker": "(b)",
@@ -696,11 +720,23 @@
               "alts": []
             },
             {
+              "code": "ACCT3161",
+              "alts": []
+            },
+            {
               "code": "CSCI2100",
               "alts": []
             },
             {
+              "code": "CSCI2520",
+              "alts": []
+            },
+            {
               "code": "DOTE2051",
+              "alts": []
+            },
+            {
+              "code": "DOTE3010",
               "alts": []
             },
             {

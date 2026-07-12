@@ -224,6 +224,30 @@
         "from": "(a) Required Courses"
       },
       {
+        "raw": "MASE1002",
+        "codes": [
+          "MASE1002"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "MASE1801",
+        "codes": [
+          "MASE1801"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
+        "raw": "MASE2601",
+        "codes": [
+          "MASE2601"
+        ],
+        "alt": false,
+        "from": "(a) Required Courses"
+      },
+      {
         "raw": "ELEG2202",
         "codes": [
           "ELEG2202"
@@ -232,9 +256,41 @@
         "from": "i) Required Courses"
       },
       {
+        "raw": "ELEG2310",
+        "codes": [
+          "ELEG2310"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ELEG2602",
+        "codes": [
+          "ELEG2602"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
         "raw": "ENGG1120",
         "codes": [
           "ENGG1120"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG2030",
+        "codes": [
+          "ENGG2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG2740",
+        "codes": [
+          "ENGG2740"
         ],
         "alt": false,
         "from": "i) Required Courses"
@@ -251,6 +307,22 @@
         "raw": "EEEN2020",
         "codes": [
           "EEEN2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN2030",
+        "codes": [
+          "EEEN2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN2040",
+        "codes": [
+          "EEEN2040"
         ],
         "alt": false,
         "from": "i) Required Courses"
@@ -280,6 +352,14 @@
         "from": "i) Required Courses"
       },
       {
+        "raw": "MAEG3030",
+        "codes": [
+          "MAEG3030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
         "raw": "EEEN4999",
         "codes": [
           "EEEN4999"
@@ -304,9 +384,41 @@
         "from": "i) Required Courses"
       },
       {
+        "raw": "ENGG2740",
+        "codes": [
+          "ENGG2740"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
         "raw": "MAEG1020",
         "codes": [
           "MAEG1020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2020",
+        "codes": [
+          "MAEG2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2030",
+        "codes": [
+          "MAEG2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG3030",
+        "codes": [
+          "MAEG3030"
         ],
         "alt": false,
         "from": "i) Required Courses"
@@ -328,6 +440,70 @@
         "from": "i) Required Courses"
       },
       {
+        "raw": "CHEM2120",
+        "codes": [
+          "CHEM2120"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM2200",
+        "codes": [
+          "CHEM2200"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM2300",
+        "codes": [
+          "CHEM2300"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM2400",
+        "codes": [
+          "CHEM2400"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM2868",
+        "codes": [
+          "CHEM2868"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM2878",
+        "codes": [
+          "CHEM2878"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM3130",
+        "codes": [
+          "CHEM3130"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "CHEM3320",
+        "codes": [
+          "CHEM3320"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
         "raw": "CHEM4040",
         "codes": [
           "CHEM4040"
@@ -339,6 +515,54 @@
         "raw": "PHYS1122",
         "codes": [
           "PHYS1122"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
         ],
         "alt": false,
         "from": "i) Required Courses"
@@ -2590,7 +2814,7 @@
       "units": "21",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 8
     },
     {
       "marker": "(b)",
@@ -2707,7 +2931,7 @@
       "units": "15",
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 6
     },
     {
       "marker": "ii)",
@@ -2743,7 +2967,7 @@
       "units": "21",
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 7
     },
     {
       "marker": "ii)",
@@ -2779,7 +3003,7 @@
       "units": "20",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 7
     },
     {
       "marker": "ii)",
@@ -2815,7 +3039,7 @@
       "units": "22",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 9
     },
     {
       "marker": "ii)",
@@ -2851,7 +3075,7 @@
       "units": "21",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 7
     },
     {
       "marker": "ii)",
@@ -3073,6 +3297,18 @@
             },
             {
               "code": "MASE1001",
+              "alts": []
+            },
+            {
+              "code": "MASE1002",
+              "alts": []
+            },
+            {
+              "code": "MASE1801",
+              "alts": []
+            },
+            {
+              "code": "MASE2601",
               "alts": []
             }
           ],
@@ -4023,7 +4259,23 @@
                   "alts": []
                 },
                 {
+                  "code": "ELEG2310",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG2602",
+                  "alts": []
+                },
+                {
                   "code": "ENGG1120",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2030",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2740",
                   "alts": []
                 }
               ],
@@ -4183,6 +4435,14 @@
                   "alts": []
                 },
                 {
+                  "code": "EEEN2030",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2040",
+                  "alts": []
+                },
+                {
                   "code": "ELEG2202",
                   "alts": []
                 },
@@ -4192,6 +4452,10 @@
                 },
                 {
                   "code": "MAEG2030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3030",
                   "alts": []
                 }
               ],
@@ -4259,7 +4523,23 @@
                   "alts": []
                 },
                 {
+                  "code": "ENGG2740",
+                  "alts": []
+                },
+                {
                   "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3030",
                   "alts": []
                 }
               ],
@@ -4328,6 +4608,38 @@
               "courses": [
                 {
                   "code": "CHEM2110",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2120",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2200",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2300",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2400",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2868",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM2878",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM3130",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM3320",
                   "alts": []
                 }
               ],
@@ -4428,6 +4740,30 @@
               "courses": [
                 {
                   "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
                   "alts": []
                 }
               ],

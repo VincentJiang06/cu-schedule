@@ -5,7 +5,7 @@
   "faculty": "Faculty of Medicine",
   "degree": "B.Sc",
   "total_units": 51,
-  "parse_status": "prose_only",
+  "parse_status": "full",
   "has_senior_year_variant": true,
   "has_streams": false,
   "all_course_codes": [
@@ -30,17 +30,525 @@
     "PHPC1017",
     "PHPC2005",
     "PHPC2007",
+    "PHPC2009",
     "PHPC2017",
+    "PHPC2020",
     "PHPC3010",
     "PHPC3018",
+    "PHPC3034",
+    "PHPC4025",
+    "PHPC4032",
+    "PHPC4033",
+    "PHPC4040",
+    "PHPC4041",
+    "PHPC4042",
+    "PHPC4043",
     "SOCI3227",
-    "SPED2540"
+    "SPED2540",
+    "SPED4560",
+    "SPED4570"
   ],
   "buckets": {
-    "required": [],
-    "elective": [],
+    "required": [
+      {
+        "raw": "CHPR3001",
+        "codes": [
+          "CHPR3001"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR3002",
+        "codes": [
+          "CHPR3002"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR3008",
+        "codes": [
+          "CHPR3008"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4001",
+        "codes": [
+          "CHPR4001"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4002",
+        "codes": [
+          "CHPR4002"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4003",
+        "codes": [
+          "CHPR4003"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4004",
+        "codes": [
+          "CHPR4004"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4005",
+        "codes": [
+          "CHPR4005"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4008",
+        "codes": [
+          "CHPR4008"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4901",
+        "codes": [
+          "CHPR4901"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "CHPR4902",
+        "codes": [
+          "CHPR4902"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3211",
+        "codes": [
+          "GRON3211"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC1012",
+        "codes": [
+          "PHPC1012"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC1017",
+        "codes": [
+          "PHPC1017"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC2005",
+        "codes": [
+          "PHPC2005"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC2017",
+        "codes": [
+          "PHPC2017"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHPR4011",
+        "codes": [
+          "CHPR4011"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC2007",
+        "codes": [
+          "PHPC2007"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC2009",
+        "codes": [
+          "PHPC2009"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC2020",
+        "codes": [
+          "PHPC2020"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC3010",
+        "codes": [
+          "PHPC3010"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC3018",
+        "codes": [
+          "PHPC3018"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC3034",
+        "codes": [
+          "PHPC3034"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4025",
+        "codes": [
+          "PHPC4025"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4032",
+        "codes": [
+          "PHPC4032"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4033",
+        "codes": [
+          "PHPC4033"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4040",
+        "codes": [
+          "PHPC4040"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4041",
+        "codes": [
+          "PHPC4041"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4042",
+        "codes": [
+          "PHPC4042"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4043",
+        "codes": [
+          "PHPC4043"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "ANTH4330",
+        "codes": [
+          "ANTH4330"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "GPAD3255",
+        "codes": [
+          "GPAD3255"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "SPED2540",
+        "codes": [
+          "SPED2540"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "SPED4560",
+        "codes": [
+          "SPED4560"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "SPED4570",
+        "codes": [
+          "SPED4570"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      }
+    ],
     "stream_elective": []
   },
-  "groups_outline": [],
-  "structure": []
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 17
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 21
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "",
+      "units": 45,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHPR3001",
+          "alts": []
+        },
+        {
+          "code": "CHPR3002",
+          "alts": []
+        },
+        {
+          "code": "CHPR3008",
+          "alts": []
+        },
+        {
+          "code": "CHPR4001",
+          "alts": []
+        },
+        {
+          "code": "CHPR4002",
+          "alts": []
+        },
+        {
+          "code": "CHPR4003",
+          "alts": []
+        },
+        {
+          "code": "CHPR4004",
+          "alts": []
+        },
+        {
+          "code": "CHPR4005",
+          "alts": []
+        },
+        {
+          "code": "CHPR4008",
+          "alts": []
+        },
+        {
+          "code": "CHPR4901",
+          "alts": []
+        },
+        {
+          "code": "CHPR4902",
+          "alts": []
+        },
+        {
+          "code": "GRON3211",
+          "alts": []
+        },
+        {
+          "code": "PHPC1001",
+          "alts": []
+        },
+        {
+          "code": "PHPC1012",
+          "alts": []
+        },
+        {
+          "code": "PHPC1017",
+          "alts": []
+        },
+        {
+          "code": "PHPC2005",
+          "alts": []
+        },
+        {
+          "code": "PHPC2017",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": 6,
+      "note": "Courses: 6 units of courses chosen from the following, with a maximum of 1 course from Group B: Group A: CHPR4011, 4012, PHPC2007#, 2009#, 2020#, 3010#, 3018#, 3034#, 4025#, 4032#, 4033#, 4040#, 4041#, 4042#, 4043# Group B",
+      "courses": [
+        {
+          "code": "CHPR4011",
+          "alts": []
+        },
+        {
+          "code": "CHPR4012",
+          "alts": []
+        },
+        {
+          "code": "PHPC2007",
+          "alts": []
+        },
+        {
+          "code": "PHPC2009",
+          "alts": []
+        },
+        {
+          "code": "PHPC2020",
+          "alts": []
+        },
+        {
+          "code": "PHPC3010",
+          "alts": []
+        },
+        {
+          "code": "PHPC3018",
+          "alts": []
+        },
+        {
+          "code": "PHPC3034",
+          "alts": []
+        },
+        {
+          "code": "PHPC4025",
+          "alts": []
+        },
+        {
+          "code": "PHPC4032",
+          "alts": []
+        },
+        {
+          "code": "PHPC4033",
+          "alts": []
+        },
+        {
+          "code": "PHPC4040",
+          "alts": []
+        },
+        {
+          "code": "PHPC4041",
+          "alts": []
+        },
+        {
+          "code": "PHPC4042",
+          "alts": []
+        },
+        {
+          "code": "PHPC4043",
+          "alts": []
+        },
+        {
+          "code": "ANTH4330",
+          "alts": []
+        },
+        {
+          "code": "GPAD3255",
+          "alts": []
+        },
+        {
+          "code": "SOCI3227",
+          "alts": []
+        },
+        {
+          "code": "SPED2540",
+          "alts": []
+        },
+        {
+          "code": "SPED4560",
+          "alts": []
+        },
+        {
+          "code": "SPED4570",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
 }

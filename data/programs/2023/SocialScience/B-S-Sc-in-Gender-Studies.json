@@ -5,7 +5,7 @@
   "faculty": "Faculty of Social Science",
   "degree": "B.S.Sc",
   "total_units": 54,
-  "parse_status": "prose_only",
+  "parse_status": "full",
   "has_senior_year_variant": true,
   "has_streams": false,
   "all_course_codes": [
@@ -78,10 +78,1534 @@
     "SOCI3208"
   ],
   "buckets": {
-    "required": [],
-    "elective": [],
+    "required": [
+      {
+        "raw": "GDRS1001",
+        "codes": [
+          "GDRS1001"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS1002",
+        "codes": [
+          "GDRS1002"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS2010",
+        "codes": [
+          "GDRS2010"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS2011",
+        "codes": [
+          "GDRS2011"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS3005",
+        "codes": [
+          "GDRS3005"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS3007",
+        "codes": [
+          "GDRS3007"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS3009",
+        "codes": [
+          "GDRS3009"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS4012",
+        "codes": [
+          "GDRS4012"
+        ],
+        "alt": false,
+        "from": "(a) GDRS1001, 1002,"
+      },
+      {
+        "raw": "GDRS4009",
+        "codes": [
+          "GDRS4009"
+        ],
+        "alt": false,
+        "from": "(b) (i) (ii) | Choose one of the following"
+      },
+      {
+        "raw": "GDRS4005",
+        "codes": [
+          "GDRS4005"
+        ],
+        "alt": false,
+        "from": "(b) (i) (ii) | Choose one of the following"
+      },
+      {
+        "raw": "GDRS4010",
+        "codes": [
+          "GDRS4010"
+        ],
+        "alt": false,
+        "from": "(b) (i) (ii) | Choose one of the following"
+      },
+      {
+        "raw": "GDRS1001",
+        "codes": [
+          "GDRS1001"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS2011",
+        "codes": [
+          "GDRS2011"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS3005",
+        "codes": [
+          "GDRS3005"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS1002",
+        "codes": [
+          "GDRS1002"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS2010",
+        "codes": [
+          "GDRS2010"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS3009",
+        "codes": [
+          "GDRS3009"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS3007",
+        "codes": [
+          "GDRS3007"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS4005",
+        "codes": [
+          "GDRS4005"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS4009",
+        "codes": [
+          "GDRS4009"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS4010",
+        "codes": [
+          "GDRS4010"
+        ],
+        "alt": false,
+        "from": "1. GDRS courses at 2000 and above"
+      },
+      {
+        "raw": "GDRS1001",
+        "codes": [
+          "GDRS1001"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      },
+      {
+        "raw": "GDRS1002",
+        "codes": [
+          "GDRS1002"
+        ],
+        "alt": false,
+        "from": "1. Required Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ANTH1310",
+        "codes": [
+          "ANTH1310"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH2310",
+        "codes": [
+          "ANTH2310"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH2330",
+        "codes": [
+          "ANTH2330"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH3360",
+        "codes": [
+          "ANTH3360"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH3540",
+        "codes": [
+          "ANTH3540"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "COMM2920",
+        "codes": [
+          "COMM2920"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "COMM3193",
+        "codes": [
+          "COMM3193"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2014",
+        "codes": [
+          "CURE2014"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2022",
+        "codes": [
+          "CURE2022"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2036",
+        "codes": [
+          "CURE2036"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2041",
+        "codes": [
+          "CURE2041"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3021",
+        "codes": [
+          "CURE3021"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3131",
+        "codes": [
+          "CURE3131"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3374",
+        "codes": [
+          "CURE3374"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ENGE3230",
+        "codes": [
+          "ENGE3230"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ENGE3690",
+        "codes": [
+          "ENGE3690"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2012",
+        "codes": [
+          "GDRS2012"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3017",
+        "codes": [
+          "GDRS3017"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3001",
+        "codes": [
+          "GDRS3001"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3002",
+        "codes": [
+          "GDRS3002"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3003",
+        "codes": [
+          "GDRS3003"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3004",
+        "codes": [
+          "GDRS3004"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3006",
+        "codes": [
+          "GDRS3006"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3008",
+        "codes": [
+          "GDRS3008"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3010",
+        "codes": [
+          "GDRS3010"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3011",
+        "codes": [
+          "GDRS3011"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3012",
+        "codes": [
+          "GDRS3012"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3014",
+        "codes": [
+          "GDRS3014"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3015",
+        "codes": [
+          "GDRS3015"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3016",
+        "codes": [
+          "GDRS3016"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3018",
+        "codes": [
+          "GDRS3018"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3021",
+        "codes": [
+          "GDRS3021"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3024",
+        "codes": [
+          "GDRS3024"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3025",
+        "codes": [
+          "GDRS3025"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3026",
+        "codes": [
+          "GDRS3026"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3214",
+        "codes": [
+          "GDRS3214"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3103",
+        "codes": [
+          "GDRS3103"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3999",
+        "codes": [
+          "GDRS3999"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4001",
+        "codes": [
+          "GDRS4001"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4006",
+        "codes": [
+          "GDRS4006"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4007",
+        "codes": [
+          "GDRS4007"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4008",
+        "codes": [
+          "GDRS4008"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4011",
+        "codes": [
+          "GDRS4011"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS5085",
+        "codes": [
+          "GDRS5085"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS5210",
+        "codes": [
+          "GDRS5210"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GPAD3071",
+        "codes": [
+          "GPAD3071"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "HIST3420",
+        "codes": [
+          "HIST3420"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "HIST3421",
+        "codes": [
+          "HIST3421"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "JASP2520",
+        "codes": [
+          "JASP2520"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "PHIL3373",
+        "codes": [
+          "PHIL3373"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "PSYC3640",
+        "codes": [
+          "PSYC3640"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "SOCI2218",
+        "codes": [
+          "SOCI2218"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "SOCI3208",
+        "codes": [
+          "SOCI3208"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH1310",
+        "codes": [
+          "ANTH1310"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH2310",
+        "codes": [
+          "ANTH2310"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH2330",
+        "codes": [
+          "ANTH2330"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH3360",
+        "codes": [
+          "ANTH3360"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ANTH3540",
+        "codes": [
+          "ANTH3540"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "COMM2920",
+        "codes": [
+          "COMM2920"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "COMM3193",
+        "codes": [
+          "COMM3193"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2014",
+        "codes": [
+          "CURE2014"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2022",
+        "codes": [
+          "CURE2022"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2036",
+        "codes": [
+          "CURE2036"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE2041",
+        "codes": [
+          "CURE2041"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3021",
+        "codes": [
+          "CURE3021"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3131",
+        "codes": [
+          "CURE3131"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "CURE3374",
+        "codes": [
+          "CURE3374"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ENGE3230",
+        "codes": [
+          "ENGE3230"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "ENGE3690",
+        "codes": [
+          "ENGE3690"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2002",
+        "codes": [
+          "GDRS2002"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2003",
+        "codes": [
+          "GDRS2003"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2010",
+        "codes": [
+          "GDRS2010"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2011",
+        "codes": [
+          "GDRS2011"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3001",
+        "codes": [
+          "GDRS3001"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3002",
+        "codes": [
+          "GDRS3002"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3003",
+        "codes": [
+          "GDRS3003"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3004",
+        "codes": [
+          "GDRS3004"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3005",
+        "codes": [
+          "GDRS3005"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3006",
+        "codes": [
+          "GDRS3006"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3007",
+        "codes": [
+          "GDRS3007"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3008",
+        "codes": [
+          "GDRS3008"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3009",
+        "codes": [
+          "GDRS3009"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3010",
+        "codes": [
+          "GDRS3010"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3011",
+        "codes": [
+          "GDRS3011"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3012",
+        "codes": [
+          "GDRS3012"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3014",
+        "codes": [
+          "GDRS3014"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3021",
+        "codes": [
+          "GDRS3021"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3024",
+        "codes": [
+          "GDRS3024"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3025",
+        "codes": [
+          "GDRS3025"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3026",
+        "codes": [
+          "GDRS3026"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3214",
+        "codes": [
+          "GDRS3214"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3999",
+        "codes": [
+          "GDRS3999"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4001",
+        "codes": [
+          "GDRS4001"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4006",
+        "codes": [
+          "GDRS4006"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4007",
+        "codes": [
+          "GDRS4007"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4008",
+        "codes": [
+          "GDRS4008"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4011",
+        "codes": [
+          "GDRS4011"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4012",
+        "codes": [
+          "GDRS4012"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GPAD3071",
+        "codes": [
+          "GPAD3071"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "HIST3420",
+        "codes": [
+          "HIST3420"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "HIST3421",
+        "codes": [
+          "HIST3421"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "JASP2520",
+        "codes": [
+          "JASP2520"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "LAWS2250",
+        "codes": [
+          "LAWS2250"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "PHIL3373",
+        "codes": [
+          "PHIL3373"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "PSYC3640",
+        "codes": [
+          "PSYC3640"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "SOCI2218",
+        "codes": [
+          "SOCI2218"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "SOCI3208",
+        "codes": [
+          "SOCI3208"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS1001",
+        "codes": [
+          "GDRS1001"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS1002",
+        "codes": [
+          "GDRS1002"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS2012",
+        "codes": [
+          "GDRS2012"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3015",
+        "codes": [
+          "GDRS3015"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3016",
+        "codes": [
+          "GDRS3016"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3017",
+        "codes": [
+          "GDRS3017"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3018",
+        "codes": [
+          "GDRS3018"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS3103",
+        "codes": [
+          "GDRS3103"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4005",
+        "codes": [
+          "GDRS4005"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4009",
+        "codes": [
+          "GDRS4009"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS4010",
+        "codes": [
+          "GDRS4010"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS5085",
+        "codes": [
+          "GDRS5085"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      },
+      {
+        "raw": "GDRS5210",
+        "codes": [
+          "GDRS5210"
+        ],
+        "alt": false,
+        "from": "2. Elective Courses"
+      }
+    ],
     "stream_elective": []
   },
-  "groups_outline": [],
-  "structure": []
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "GDRS1001, 1002,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "(i) (ii) | Choose one of the following",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "27",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 53
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "GDRS courses at 2000 and above",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 67
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 24,
+          "note": null,
+          "courses": [
+            {
+              "code": "GDRS1001",
+              "alts": []
+            },
+            {
+              "code": "GDRS1002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 3,
+          "note": "(i) (ii) | Choose one of the following capstone courses",
+          "courses": [
+            {
+              "code": "GDRS4009",
+              "alts": []
+            },
+            {
+              "code": "GDRS4005",
+              "alts": []
+            },
+            {
+              "code": "GDRS4010",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Elective Courses",
+      "units": 27,
+      "note": "At least 27 units from the following, with a maximum of 6 units of non-GDRS courses",
+      "courses": [
+        {
+          "code": "ANTH1310",
+          "alts": []
+        },
+        {
+          "code": "ANTH2310",
+          "alts": []
+        },
+        {
+          "code": "ANTH2330",
+          "alts": []
+        },
+        {
+          "code": "ANTH3360",
+          "alts": []
+        },
+        {
+          "code": "ANTH3540",
+          "alts": []
+        },
+        {
+          "code": "COMM2920",
+          "alts": []
+        },
+        {
+          "code": "COMM3193",
+          "alts": []
+        },
+        {
+          "code": "CURE2014",
+          "alts": []
+        },
+        {
+          "code": "CURE2022",
+          "alts": []
+        },
+        {
+          "code": "CURE2036",
+          "alts": []
+        },
+        {
+          "code": "CURE2041",
+          "alts": []
+        },
+        {
+          "code": "CURE3021",
+          "alts": []
+        },
+        {
+          "code": "CURE3131",
+          "alts": []
+        },
+        {
+          "code": "CURE3374",
+          "alts": []
+        },
+        {
+          "code": "ENGE3230",
+          "alts": []
+        },
+        {
+          "code": "ENGE3690",
+          "alts": []
+        },
+        {
+          "code": "GDRS2012",
+          "alts": []
+        },
+        {
+          "code": "GDRS3017",
+          "alts": []
+        },
+        {
+          "code": "GDRS3001",
+          "alts": []
+        },
+        {
+          "code": "GDRS3002",
+          "alts": []
+        },
+        {
+          "code": "GDRS3003",
+          "alts": []
+        },
+        {
+          "code": "GDRS3004",
+          "alts": []
+        },
+        {
+          "code": "GDRS3006",
+          "alts": []
+        },
+        {
+          "code": "GDRS3008",
+          "alts": []
+        },
+        {
+          "code": "GDRS3010",
+          "alts": []
+        },
+        {
+          "code": "GDRS3011",
+          "alts": []
+        },
+        {
+          "code": "GDRS3012",
+          "alts": []
+        },
+        {
+          "code": "GDRS3014",
+          "alts": []
+        },
+        {
+          "code": "GDRS3015",
+          "alts": []
+        },
+        {
+          "code": "GDRS3016",
+          "alts": []
+        },
+        {
+          "code": "GDRS3018",
+          "alts": []
+        },
+        {
+          "code": "GDRS3021",
+          "alts": []
+        },
+        {
+          "code": "GDRS3024",
+          "alts": []
+        },
+        {
+          "code": "GDRS3025",
+          "alts": []
+        },
+        {
+          "code": "GDRS3026",
+          "alts": []
+        },
+        {
+          "code": "GDRS3214",
+          "alts": []
+        },
+        {
+          "code": "GDRS3103",
+          "alts": []
+        },
+        {
+          "code": "GDRS3999",
+          "alts": []
+        },
+        {
+          "code": "GDRS4001",
+          "alts": []
+        },
+        {
+          "code": "GDRS4006",
+          "alts": []
+        },
+        {
+          "code": "GDRS4007",
+          "alts": []
+        },
+        {
+          "code": "GDRS4008",
+          "alts": []
+        },
+        {
+          "code": "GDRS4011",
+          "alts": []
+        },
+        {
+          "code": "GDRS5085",
+          "alts": []
+        },
+        {
+          "code": "GDRS5210",
+          "alts": []
+        },
+        {
+          "code": "GPAD3071",
+          "alts": []
+        },
+        {
+          "code": "HIST3420",
+          "alts": []
+        },
+        {
+          "code": "HIST3421",
+          "alts": []
+        },
+        {
+          "code": "JASP2520",
+          "alts": []
+        },
+        {
+          "code": "PHIL3373",
+          "alts": []
+        },
+        {
+          "code": "PSYC3640",
+          "alts": []
+        },
+        {
+          "code": "SOCI2218",
+          "alts": []
+        },
+        {
+          "code": "SOCI3208",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "GDRS2010",
+          "alts": []
+        },
+        {
+          "code": "GDRS2011",
+          "alts": []
+        },
+        {
+          "code": "GDRS3005",
+          "alts": []
+        },
+        {
+          "code": "GDRS3007",
+          "alts": []
+        },
+        {
+          "code": "GDRS3009",
+          "alts": []
+        },
+        {
+          "code": "GDRS4012",
+          "alts": []
+        },
+        {
+          "code": "GDRS2002",
+          "alts": []
+        },
+        {
+          "code": "GDRS2003",
+          "alts": []
+        },
+        {
+          "code": "LAWS2250",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
 }

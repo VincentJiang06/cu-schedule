@@ -415,9 +415,65 @@
         "from": "(a) LING1001#[a] or 1002#[a]"
       },
       {
+        "raw": "LING1002",
+        "codes": [
+          "LING1002"
+        ],
+        "alt": false,
+        "from": "(a) LING1001#[a] or 1002#[a]"
+      },
+      {
         "raw": "LING1003",
         "codes": [
           "LING1003"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2007",
+        "codes": [
+          "LING2007"
+        ],
+        "alt": false,
+        "from": "(b) LING1003#, 2003,"
+      },
+      {
+        "raw": "LING2008",
+        "codes": [
+          "LING2008"
         ],
         "alt": false,
         "from": "(b) LING1003#, 2003,"
@@ -525,7 +581,7 @@
       "units": "3",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -534,7 +590,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 7
     },
     {
       "marker": "(c)",
@@ -695,6 +751,10 @@
             {
               "code": "LING1001",
               "alts": []
+            },
+            {
+              "code": "LING1002",
+              "alts": []
             }
           ],
           "children": []
@@ -707,6 +767,10 @@
           "courses": [
             {
               "code": "LING1003",
+              "alts": []
+            },
+            {
+              "code": "LING2003",
               "alts": []
             }
           ],
@@ -785,6 +849,35 @@
           "children": []
         }
       ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "LING2004",
+          "alts": []
+        },
+        {
+          "code": "LING2005",
+          "alts": []
+        },
+        {
+          "code": "LING2006",
+          "alts": []
+        },
+        {
+          "code": "LING2007",
+          "alts": []
+        },
+        {
+          "code": "LING2008",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

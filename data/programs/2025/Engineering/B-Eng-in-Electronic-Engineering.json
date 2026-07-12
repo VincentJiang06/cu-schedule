@@ -424,19 +424,12 @@
         "from": "4. Elective Courses (at least 6 units"
       },
       {
-        "raw": "EEEN4020",
+        "raw": "EEEN4020/ESTR4402",
         "codes": [
-          "EEEN4020"
-        ],
-        "alt": false,
-        "from": "4. Elective Courses (at least 6 units"
-      },
-      {
-        "raw": "ESTR4402",
-        "codes": [
+          "EEEN4020",
           "ESTR4402"
         ],
-        "alt": false,
+        "alt": true,
         "from": "4. Elective Courses (at least 6 units"
       },
       {
@@ -646,19 +639,12 @@
         "from": "4. Elective Courses (at least 6 units"
       },
       {
-        "raw": "IERG3310",
+        "raw": "IERG3310/ESTR3310",
         "codes": [
-          "IERG3310"
-        ],
-        "alt": false,
-        "from": "4. Elective Courses (at least 6 units"
-      },
-      {
-        "raw": "ESTR3310",
-        "codes": [
+          "IERG3310",
           "ESTR3310"
         ],
-        "alt": false,
+        "alt": true,
         "from": "4. Elective Courses (at least 6 units"
       },
       {
@@ -761,7 +747,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 36
+      "n_courses": 34
     }
   ],
   "structure": [
@@ -979,11 +965,9 @@
         },
         {
           "code": "EEEN4020",
-          "alts": []
-        },
-        {
-          "code": "ESTR4402",
-          "alts": []
+          "alts": [
+            "ESTR4402"
+          ]
         },
         {
           "code": "ELEG3103",
@@ -1099,11 +1083,9 @@
         },
         {
           "code": "IERG3310",
-          "alts": []
-        },
-        {
-          "code": "ESTR3310",
-          "alts": []
+          "alts": [
+            "ESTR3310"
+          ]
         },
         {
           "code": "SEEM2440",

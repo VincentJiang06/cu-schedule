@@ -32,6 +32,7 @@
     "CURE1124",
     "CURE1400",
     "CURE2001",
+    "CURE2006",
     "CURE2019",
     "CURE2112",
     "CURE2113",
@@ -496,6 +497,14 @@
         "from": "(a) 2 courses from CURE1009, 1010,"
       },
       {
+        "raw": "CURE2006",
+        "codes": [
+          "CURE2006"
+        ],
+        "alt": false,
+        "from": "(a) 2 courses from CURE1009, 1010,"
+      },
+      {
         "raw": "CURE2131",
         "codes": [
           "CURE2131"
@@ -828,7 +837,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "(b)",
@@ -1424,6 +1433,10 @@
         },
         {
           "code": "CURE2001",
+          "alts": []
+        },
+        {
+          "code": "CURE2006",
           "alts": []
         },
         {

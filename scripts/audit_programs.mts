@@ -110,7 +110,9 @@ function gapBinds(gap: string): boolean {
 
 /** 参考课号集合(over-inclusive)。返回 code -> 首次出现处上下文,供报错。 */
 function referenceCodes(block: string): Map<string, string> {
-  const text = block.replace(/\[[a-z]+\]/g, '') // 剥小写脚注 [a][b]…
+  // 剥同一「丢课族」的三类标记:小写脚注 [a][b]…、数字别号 [3001](跨届重编号,非独立课)、
+  // Major-GPA 标记 #(PHPC1001#, 1012#)。三者都紧贴课号、卡断后续裸续号。大写跨挂 [DSME] 不动。
+  const text = block.replace(/\[[a-z]+\]|\[\d+\]|#/g, '')
   const found = new Map<string, string>()
   let currentSubj: string | null = null
   let lastEnd = -1
@@ -450,6 +452,54 @@ function main() {
     const n3 = p && topByMarker(p, '3.')
     const ok = !!n3 && /All\s+Philosophy courses other than PHIL1110/i.test(norm(n3.note || ''))
     assert('PHIL2023 §3 叙述式 note 整段保留', ok, n3 ? `note="${norm(n3.note || '').slice(0, 70)}…"` : 'node missing')
+  }
+
+  // case 11: 签名「误锚」(R5 修复,全库丢课主因)—— 只面向 senior-year/AD 收生的方案,真实
+  // Major 标题是 "(for …)" 变体(命中 senior_year 锚);旧 parse_program 却以 major_requirement
+  // 锚定位块首,而该正则排斥 "(for",只会命中 Explanatory Notes 里的散句
+  // "…as included in the Major Programme Requirement will be…",导致整段课单落在块外全丢。
+  // Bimodal Bilingual Studies 曾 57/51/51 门 P1 缺课;断言首节课单回到 structure。
+  {
+    const p = byId.get('2025:B.A. in Bimodal Bilingual Studies')
+    const codes = new Set<string>()
+    if (p) collectStructCodes(p.structure, codes)
+    const want = ['BMBL1001', 'BMBL1002', 'BMBL2001', 'BMBL2004', 'HKSL1003', 'HKSL3002']
+    const ok = !!p && want.every((c) => codes.has(c))
+    assert('BMBL2025 senior-year 误锚修复:首节课单回收', ok,
+      p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
+  }
+  // case 12: 同族第二方案(证明通用)—— Exercise Science 的 "(a) | Core Courses … | 38" 后课单
+  // 另起一续行(无 marker、无 |)。误锚修复后块首正确,断言核心课(含 (a) 续行、(d) 单课)全回收。
+  {
+    const p = byId.get('2025:B.Sc. in Exercise Science and Health Education')
+    const codes = new Set<string>()
+    if (p) collectStructCodes(p.structure, codes)
+    const want = ['PHPC1001', 'SPED2520', 'SPED4570', 'SPED2010', 'SPED4201']
+    const ok = !!p && want.every((c) => codes.has(c))
+    assert('EXS2025 senior-year 误锚修复:核心课全回收', ok,
+      p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
+  }
+  // case 13: 签名1 续号卡断的两个新变体(R5)—— '#'(Major-GPA 标记,"PHPC1001#, 1012#, 1017#"
+  // 卡断 1012/1017)与数字别号 '[####]'("BMBL1002[3001], 2004[4001]" 卡断 2004)。二者同族,
+  // 上游 strip 已加入 '#' 与 \[\d+\]。断言 '#' 后续号(Community Health)与数字别号后续号(BMBL)全回收。
+  {
+    const chp = byId.get('2025:B.Sc. in Community Health Practice')
+    const cc = new Set<string>(); if (chp) collectStructCodes(chp.structure, cc)
+    const bmbl = byId.get('2025:B.A. in Bimodal Bilingual Studies')
+    const bc = new Set<string>(); if (bmbl) collectStructCodes(bmbl.structure, bc)
+    const ok = cc.has('PHPC1012') && cc.has('PHPC1017') && bc.has('BMBL2004')
+    assert('R5 #/数字别号续号卡断修复:PHPC1012/1017 + BMBL2004 回收', ok,
+      `CHP:1012=${cc.has('PHPC1012')} 1017=${cc.has('PHPC1017')} | BMBL:2004=${bc.has('BMBL2004')}`)
+  }
+  // case 14: 签名2 第二族(R5)—— "<Section Label>: <inline rule>" 且无 | units 的编号节:
+  // "2. | Elective Courses[a]: No more than 3 units …" 曾把标题吞进 note、title="" (P5 FAIL)。
+  // 冠标签剥离后 title="Elective Courses"(Natural Sciences 三届皆然)。
+  {
+    const p = byId.get('2025:B.Sc. in Natural Sciences')
+    const n = p && topByMarker(p, '2.')
+    const ok = titleSlug(n?.title) === 'elective courses'
+    assert('NS2025 §2 冠标签内联规则:title="Elective Courses" 保真', !!ok,
+      `title="${n?.title ?? ''}"`)
   }
 
   const p6Fail = p6.filter((c) => !c.ok).length

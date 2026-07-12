@@ -77,6 +77,94 @@
   "buckets": {
     "required": [
       {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "(a) Foundation"
+      },
+      {
+        "raw": "BMBL1002",
+        "codes": [
+          "BMBL1002"
+        ],
+        "alt": false,
+        "from": "(a) Foundation"
+      },
+      {
+        "raw": "BMBL2001",
+        "codes": [
+          "BMBL2001"
+        ],
+        "alt": false,
+        "from": "(b) Sign"
+      },
+      {
+        "raw": "BMBL2002",
+        "codes": [
+          "BMBL2002"
+        ],
+        "alt": false,
+        "from": "(b) Sign"
+      },
+      {
+        "raw": "BMBL2003",
+        "codes": [
+          "BMBL2003"
+        ],
+        "alt": false,
+        "from": "(b) Sign"
+      },
+      {
+        "raw": "BMBL2004",
+        "codes": [
+          "BMBL2004"
+        ],
+        "alt": false,
+        "from": "(b) Sign"
+      },
+      {
+        "raw": "HKSL1003",
+        "codes": [
+          "HKSL1003"
+        ],
+        "alt": false,
+        "from": "(c) Hong"
+      },
+      {
+        "raw": "HKSL2003",
+        "codes": [
+          "HKSL2003"
+        ],
+        "alt": false,
+        "from": "(c) Hong"
+      },
+      {
+        "raw": "HKSL3001",
+        "codes": [
+          "HKSL3001"
+        ],
+        "alt": false,
+        "from": "(c) Hong"
+      },
+      {
+        "raw": "HKSL3002",
+        "codes": [
+          "HKSL3002"
+        ],
+        "alt": false,
+        "from": "(c) Hong"
+      },
+      {
+        "raw": "HKSL3003",
+        "codes": [
+          "HKSL3003"
+        ],
+        "alt": false,
+        "from": "(c) Hong"
+      },
+      {
         "raw": "HKSL1000",
         "codes": [
           "HKSL1000"
@@ -133,10 +221,547 @@
         "from": "3. For"
       }
     ],
-    "elective": [],
+    "elective": [
+      {
+        "raw": "BMBL2005",
+        "codes": [
+          "BMBL2005"
+        ],
+        "alt": false,
+        "from": "(a) Any two"
+      },
+      {
+        "raw": "BMBL3002",
+        "codes": [
+          "BMBL3002"
+        ],
+        "alt": false,
+        "from": "(a) Any two"
+      },
+      {
+        "raw": "BMBL3003",
+        "codes": [
+          "BMBL3003"
+        ],
+        "alt": false,
+        "from": "(a) Any two"
+      },
+      {
+        "raw": "BMBL4101",
+        "codes": [
+          "BMBL4101"
+        ],
+        "alt": false,
+        "from": "(i) BMBL4101"
+      },
+      {
+        "raw": "BMBL4102",
+        "codes": [
+          "BMBL4102"
+        ],
+        "alt": false,
+        "from": "(i) BMBL4101"
+      },
+      {
+        "raw": "BMBL4201",
+        "codes": [
+          "BMBL4201"
+        ],
+        "alt": false,
+        "from": "(ii) BMBL4201"
+      },
+      {
+        "raw": "BMBL4202",
+        "codes": [
+          "BMBL4202"
+        ],
+        "alt": false,
+        "from": "(ii) BMBL4201"
+      },
+      {
+        "raw": "BMBL4000",
+        "codes": [
+          "BMBL4000"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING1001",
+        "codes": [
+          "LING1001"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING1002",
+        "codes": [
+          "LING1002"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING1003",
+        "codes": [
+          "LING1003"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING2004",
+        "codes": [
+          "LING2004"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING2005",
+        "codes": [
+          "LING2005"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING2006",
+        "codes": [
+          "LING2006"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING2301",
+        "codes": [
+          "LING2301"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING3101",
+        "codes": [
+          "LING3101"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING3403",
+        "codes": [
+          "LING3403"
+        ],
+        "alt": false,
+        "from": "(i) Area"
+      },
+      {
+        "raw": "LING3201",
+        "codes": [
+          "LING3201"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "LING3204",
+        "codes": [
+          "LING3204"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "LING3206",
+        "codes": [
+          "LING3206"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "LING3208",
+        "codes": [
+          "LING3208"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "LING4202",
+        "codes": [
+          "LING4202"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "SLPA5106",
+        "codes": [
+          "SLPA5106"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "SLPA5602",
+        "codes": [
+          "SLPA5602"
+        ],
+        "alt": false,
+        "from": "(ii) Area"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK1150",
+        "codes": [
+          "SOWK1150"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK2020",
+        "codes": [
+          "SOWK2020"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK2110",
+        "codes": [
+          "SOWK2110"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK2202",
+        "codes": [
+          "SOWK2202"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK2203",
+        "codes": [
+          "SOWK2203"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "SOWK2204",
+        "codes": [
+          "SOWK2204"
+        ],
+        "alt": false,
+        "from": "(iii) Area"
+      },
+      {
+        "raw": "CHED4220",
+        "codes": [
+          "CHED4220"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "CHED4340",
+        "codes": [
+          "CHED4340"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "CHED4370",
+        "codes": [
+          "CHED4370"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "CHED4510",
+        "codes": [
+          "CHED4510"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "EDUC2210",
+        "codes": [
+          "EDUC2210"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "EDUC2220",
+        "codes": [
+          "EDUC2220"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "EDUC3140",
+        "codes": [
+          "EDUC3140"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "EDUC4330",
+        "codes": [
+          "EDUC4330"
+        ],
+        "alt": false,
+        "from": "(iv) Area"
+      },
+      {
+        "raw": "TRAN1010",
+        "codes": [
+          "TRAN1010"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      },
+      {
+        "raw": "TRAN1030",
+        "codes": [
+          "TRAN1030"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      },
+      {
+        "raw": "TRAN1130",
+        "codes": [
+          "TRAN1130"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      },
+      {
+        "raw": "TRAN2070",
+        "codes": [
+          "TRAN2070"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      },
+      {
+        "raw": "TRAN2110",
+        "codes": [
+          "TRAN2110"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      },
+      {
+        "raw": "TRAN2840",
+        "codes": [
+          "TRAN2840"
+        ],
+        "alt": false,
+        "from": "(v) Area"
+      }
+    ],
     "stream_elective": []
   },
   "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Foundation",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Sign",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Hong",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Any two",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Two",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "BMBL4101",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "BMBL4201",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Any 6 units of courses from the following five areas of study",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "Area",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "Area",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "Area",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(iv)",
+      "level": 3,
+      "title": "Area",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(v)",
+      "level": 3,
+      "title": "Area",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "BMBL,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
     {
       "marker": "2.",
       "level": 1,
@@ -185,11 +810,386 @@
   ],
   "structure": [
     {
-      "marker": "2.",
-      "title": "",
+      "marker": "1.",
+      "title": "Required Courses",
       "units": null,
-      "note": "to the Department’s approval, students can take the following HKSL courses to substitute the courses specified in 1(c): (i) HKSL1000 and 1002 to substitute HKSL1003; (ii) HKSL2001 and 2002 to substitute HKSL2003.",
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Foundation",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMBL1001",
+              "alts": []
+            },
+            {
+              "code": "BMBL1002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 12,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMBL2001",
+              "alts": []
+            },
+            {
+              "code": "BMBL2002",
+              "alts": []
+            },
+            {
+              "code": "BMBL2003",
+              "alts": []
+            },
+            {
+              "code": "BMBL2004",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Kong Sign Language Courses: (i) HKSL1003 (ii) HKSL2003 (iii) HKSL3001 and 3002, or HKSL3003 | 6 6 6",
+          "courses": [
+            {
+              "code": "HKSL1003",
+              "alts": []
+            },
+            {
+              "code": "HKSL2003",
+              "alts": []
+            },
+            {
+              "code": "HKSL3001",
+              "alts": []
+            },
+            {
+              "code": "HKSL3002",
+              "alts": []
+            },
+            {
+              "code": "HKSL3003",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Elective and Capstone Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMBL2005",
+              "alts": []
+            },
+            {
+              "code": "BMBL3002",
+              "alts": []
+            },
+            {
+              "code": "BMBL3003",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Two courses from either (i) or (ii)",
+          "units": 3,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "and 4102 (capstone courses – research)",
+              "courses": [
+                {
+                  "code": "BMBL4101",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "and 4202 (capstone courses – service learning)",
+              "courses": [
+                {
+                  "code": "BMBL4201",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Any 6 units of courses from the following five areas of study",
+          "units": 6,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "BMBL4000",
+                  "alts": []
+                },
+                {
+                  "code": "LING1000",
+                  "alts": []
+                },
+                {
+                  "code": "LING1001",
+                  "alts": []
+                },
+                {
+                  "code": "LING1002",
+                  "alts": []
+                },
+                {
+                  "code": "LING1003",
+                  "alts": []
+                },
+                {
+                  "code": "LING2003",
+                  "alts": []
+                },
+                {
+                  "code": "LING2004",
+                  "alts": []
+                },
+                {
+                  "code": "LING2005",
+                  "alts": []
+                },
+                {
+                  "code": "LING2006",
+                  "alts": []
+                },
+                {
+                  "code": "LING2301",
+                  "alts": []
+                },
+                {
+                  "code": "LING3101",
+                  "alts": []
+                },
+                {
+                  "code": "LING3403",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "LING3201",
+                  "alts": []
+                },
+                {
+                  "code": "LING3204",
+                  "alts": []
+                },
+                {
+                  "code": "LING3206",
+                  "alts": []
+                },
+                {
+                  "code": "LING3208",
+                  "alts": []
+                },
+                {
+                  "code": "LING4202",
+                  "alts": []
+                },
+                {
+                  "code": "SLPA5106",
+                  "alts": []
+                },
+                {
+                  "code": "SLPA5602",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "SOWK1001",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK1114",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK1150",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK2020",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK2110",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK2202",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK2203",
+                  "alts": []
+                },
+                {
+                  "code": "SOWK2204",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iv)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHED4220",
+                  "alts": []
+                },
+                {
+                  "code": "CHED4340",
+                  "alts": []
+                },
+                {
+                  "code": "CHED4370",
+                  "alts": []
+                },
+                {
+                  "code": "CHED4510",
+                  "alts": []
+                },
+                {
+                  "code": "EDUC2120",
+                  "alts": []
+                },
+                {
+                  "code": "EDUC2210",
+                  "alts": []
+                },
+                {
+                  "code": "EDUC2220",
+                  "alts": []
+                },
+                {
+                  "code": "EDUC3140",
+                  "alts": []
+                },
+                {
+                  "code": "EDUC4330",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "TRAN1010",
+                  "alts": []
+                },
+                {
+                  "code": "TRAN1030",
+                  "alts": []
+                },
+                {
+                  "code": "TRAN1130",
+                  "alts": []
+                },
+                {
+                  "code": "TRAN2070",
+                  "alts": []
+                },
+                {
+                  "code": "TRAN2110",
+                  "alts": []
+                },
+                {
+                  "code": "TRAN2840",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
+        {
+          "code": "BMBL4102",
+          "alts": []
+        },
+        {
+          "code": "BMBL4202",
+          "alts": []
+        },
         {
           "code": "HKSL1000",
           "alts": []
@@ -199,61 +1199,15 @@
           "alts": []
         },
         {
-          "code": "HKSL1003",
-          "alts": []
-        },
-        {
           "code": "HKSL2001",
           "alts": []
         },
         {
           "code": "HKSL2002",
           "alts": []
-        },
-        {
-          "code": "HKSL2003",
-          "alts": []
         }
       ],
       "children": []
-    },
-    {
-      "marker": "3.",
-      "title": "For",
-      "units": null,
-      "note": "students whose native language is Hong Kong Sign Language (HKSL) or who possess equivalent competence in HKSL, subject to the approval of the Major Department, they should take either an option of (a) and/or (b), or a combination of (a) to (c) to fufill the Major Programme Requirements: (a) courses for a modern language other than English, Chinese and HKSL; (b) courses listed under the above study scheme, and/or courses prefixed LING, with not more than six units of courses at the level of 1000; (c) up to three units of BMBL4000 taken in the first three terms of study. The exemption arrangements are specified below: Units of HKSL Courses Exempted | Course Substitution 3 units | (a), or",
-      "courses": [
-        {
-          "code": "BMBL4000",
-          "alts": []
-        }
-      ],
-      "children": [
-        {
-          "marker": "(b)",
-          "title": "",
-          "units": null,
-          "note": "6 units | (a), and/or",
-          "courses": [],
-          "children": []
-        },
-        {
-          "marker": "(b)",
-          "title": "",
-          "units": null,
-          "note": "9 units and above | (a), or",
-          "courses": [],
-          "children": []
-        },
-        {
-          "marker": "(b)",
-          "title": "",
-          "units": null,
-          "note": null,
-          "courses": [],
-          "children": []
-        }
-      ]
     }
   ]
 }

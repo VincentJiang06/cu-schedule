@@ -423,19 +423,12 @@
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
-        "raw": "CSCI2100",
+        "raw": "CSCI2100/ESTR2102",
         "codes": [
-          "CSCI2100"
-        ],
-        "alt": false,
-        "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
-      },
-      {
-        "raw": "ESTR2102",
-        "codes": [
+          "CSCI2100",
           "ESTR2102"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
@@ -611,19 +604,12 @@
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
-        "raw": "SEEM2440",
+        "raw": "SEEM2440/ESTR2500",
         "codes": [
-          "SEEM2440"
-        ],
-        "alt": false,
-        "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
-      },
-      {
-        "raw": "ESTR2500",
-        "codes": [
+          "SEEM2440",
           "ESTR2500"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
@@ -635,25 +621,26 @@
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
-        "raw": "SEEM3450",
+        "raw": "SEEM3450/ESTR3502",
         "codes": [
-          "SEEM3450"
-        ],
-        "alt": false,
-        "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
-      },
-      {
-        "raw": "ESTR3502",
-        "codes": [
+          "SEEM3450",
           "ESTR3502"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
       },
       {
         "raw": "SEEM3490",
         "codes": [
           "SEEM3490"
+        ],
+        "alt": false,
+        "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
+      },
+      {
+        "raw": "SEEM3500",
+        "codes": [
+          "SEEM3500"
         ],
         "alt": false,
         "from": "(a) Breadth Electives (at least 6 units chosen from the following courses): BMEG3420#, CSCI1020, 2040#,"
@@ -1216,7 +1203,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 32
+      "n_courses": 30
     },
     {
       "marker": "(b)",
@@ -1465,11 +1452,9 @@
             },
             {
               "code": "CSCI2100",
-              "alts": []
-            },
-            {
-              "code": "ESTR2102",
-              "alts": []
+              "alts": [
+                "ESTR2102"
+              ]
             },
             {
               "code": "CSCI3170",
@@ -1565,11 +1550,9 @@
             },
             {
               "code": "SEEM2440",
-              "alts": []
-            },
-            {
-              "code": "ESTR2500",
-              "alts": []
+              "alts": [
+                "ESTR2500"
+              ]
             },
             {
               "code": "DOTE1030",
@@ -1577,14 +1560,16 @@
             },
             {
               "code": "SEEM3450",
-              "alts": []
-            },
-            {
-              "code": "ESTR3502",
-              "alts": []
+              "alts": [
+                "ESTR3502"
+              ]
             },
             {
               "code": "SEEM3490",
+              "alts": []
+            },
+            {
+              "code": "SEEM3500",
               "alts": []
             }
           ],

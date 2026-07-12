@@ -64,7 +64,9 @@
     "PHPC4922",
     "PHPC4930",
     "SOCI3227",
-    "SPED2540"
+    "SPED2540",
+    "SPED4560",
+    "SPED4570"
   ],
   "buckets": {
     "required": [
@@ -471,6 +473,22 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "SPED4560",
+        "codes": [
+          "SPED4560"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "SPED4570",
+        "codes": [
+          "SPED4570"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "PHPC4911",
         "codes": [
           "PHPC4911"
@@ -539,7 +557,7 @@
       "units": "22",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 34
+      "n_courses": 36
     },
     {
       "marker": "4.",
@@ -762,6 +780,14 @@
         },
         {
           "code": "SPED2540",
+          "alts": []
+        },
+        {
+          "code": "SPED4560",
+          "alts": []
+        },
+        {
+          "code": "SPED4570",
           "alts": []
         },
         {

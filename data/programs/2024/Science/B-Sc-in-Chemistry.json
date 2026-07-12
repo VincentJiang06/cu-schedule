@@ -144,6 +144,9 @@
     "PHYS1002",
     "PHYS1111",
     "PHYS3021",
+    "PHYS3022",
+    "PHYS4031",
+    "PHYS4440",
     "STAR2000",
     "STAR2050",
     "STAR3000",
@@ -778,6 +781,14 @@
         "from": "(b) 8 units from the"
       },
       {
+        "raw": "ENSC4535",
+        "codes": [
+          "ENSC4535"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
         "raw": "EESC3220",
         "codes": [
           "EESC3220"
@@ -789,6 +800,30 @@
         "raw": "PHYS3021",
         "codes": [
           "PHYS3021"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
         ],
         "alt": false,
         "from": "(b) 8 units from the"
@@ -840,7 +875,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 39
+      "n_courses": 43
     },
     {
       "marker": "1.",
@@ -1216,11 +1251,27 @@
               "alts": []
             },
             {
+              "code": "ENSC4535",
+              "alts": []
+            },
+            {
               "code": "EESC3220",
               "alts": []
             },
             {
               "code": "PHYS3021",
+              "alts": []
+            },
+            {
+              "code": "PHYS3022",
+              "alts": []
+            },
+            {
+              "code": "PHYS4031",
+              "alts": []
+            },
+            {
+              "code": "PHYS4440",
               "alts": []
             }
           ],

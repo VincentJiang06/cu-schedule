@@ -56,18 +56,32 @@
     "ECON1220",
     "ECON2011",
     "ECON2121",
+    "ECON3121",
     "ECON3630",
     "GLSD1001",
     "GLSD2401",
+    "GLSD2501",
     "GPAD1020",
     "GPAD1076",
     "GPAD1077",
     "GPAD2065",
+    "GPAD2085",
+    "GPAD2090",
+    "GPAD2095",
+    "GPAD2160",
+    "GPAD2170",
     "GRMD1302",
     "GRMD1401",
     "GRMD1402",
     "GRMD2105",
     "GRMD2401",
+    "GRMD2403",
+    "GRMD2501",
+    "GRMD3203",
+    "GRMD3404",
+    "GRMD4401",
+    "GRMD4502",
+    "GRMD4503",
     "PSYC1000",
     "PSYC1630",
     "PSYC3360",
@@ -75,7 +89,10 @@
     "SOCI1001",
     "SOCI1201",
     "SOCI2216",
+    "SOCI3002",
     "SOCI3102",
+    "SOCI3204",
+    "SOCI3227",
     "SOCI3241",
     "SOCI4201",
     "SOSC1001",
@@ -85,7 +102,10 @@
     "SOWK1113",
     "SOWK1114",
     "URSP1001",
-    "URSP3100"
+    "URSP3100",
+    "URSP3300",
+    "URSP3400",
+    "URSP3600"
   ],
   "buckets": {
     "required": [
@@ -500,6 +520,14 @@
         "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2103, 2104, 2201, 2202, 2520, 2730,"
       },
       {
+        "raw": "ECON3121",
+        "codes": [
+          "ECON3121"
+        ],
+        "alt": false,
+        "from": "(a) Methods and Tools Any seven courses from the following: COMM3650#, DSPS2102, 2103, 2104, 2201, 2202, 2520, 2730,"
+      },
+      {
         "raw": "GRMD2105",
         "codes": [
           "GRMD2105"
@@ -580,6 +608,46 @@
         "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
       },
       {
+        "raw": "GPAD2085",
+        "codes": [
+          "GPAD2085"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "GPAD2090",
+        "codes": [
+          "GPAD2090"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "GPAD2095",
+        "codes": [
+          "GPAD2095"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "GPAD2160",
+        "codes": [
+          "GPAD2160"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
+        "raw": "GPAD2170",
+        "codes": [
+          "GPAD2170"
+        ],
+        "alt": false,
+        "from": "(i) Policy Science and Public Governance DSPS2301, 2320, 2501, 3320, 3501, 3803, 4310,"
+      },
+      {
         "raw": "DSPS3310",
         "codes": [
           "DSPS3310"
@@ -591,6 +659,14 @@
         "raw": "GLSD2401",
         "codes": [
           "GLSD2401"
+        ],
+        "alt": false,
+        "from": "(ii) Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#"
+      },
+      {
+        "raw": "GLSD2501",
+        "codes": [
+          "GLSD2501"
         ],
         "alt": false,
         "from": "(ii) Global Relationship DSPS3310, GLSD2401#, 2501#, SOCI3241#"
@@ -620,6 +696,14 @@
         "from": "(iii) Human Resources PSYC3360#, SOCI3102#, 3227#"
       },
       {
+        "raw": "SOCI3227",
+        "codes": [
+          "SOCI3227"
+        ],
+        "alt": false,
+        "from": "(iii) Human Resources PSYC3360#, SOCI3102#, 3227#"
+      },
+      {
         "raw": "ECON3630",
         "codes": [
           "ECON3630"
@@ -644,6 +728,22 @@
         "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
       },
       {
+        "raw": "SOCI3002",
+        "codes": [
+          "SOCI3002"
+        ],
+        "alt": false,
+        "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
+      },
+      {
+        "raw": "SOCI3204",
+        "codes": [
+          "SOCI3204"
+        ],
+        "alt": false,
+        "from": "(iv) Social Problems, Deviance, Law and Order ECON3630#, PSYC3370#, SOCI2216#, 3002#, 3204#"
+      },
+      {
         "raw": "DSPS3340",
         "codes": [
           "DSPS3340"
@@ -660,9 +760,89 @@
         "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
       },
       {
+        "raw": "GRMD2403",
+        "codes": [
+          "GRMD2403"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD4401",
+        "codes": [
+          "GRMD4401"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
         "raw": "URSP3100",
         "codes": [
           "URSP3100"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "URSP3300",
+        "codes": [
+          "URSP3300"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "URSP3400",
+        "codes": [
+          "URSP3400"
+        ],
+        "alt": false,
+        "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
         ],
         "alt": false,
         "from": "(v) Sustainable Smart Cities DSPS3340, GRMD2401#, 2403#, 2501#, 3203#, 3404#, 4401#,"
@@ -723,7 +903,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 19
+      "n_courses": 20
     },
     {
       "marker": "(b)",
@@ -741,7 +921,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 13
     },
     {
       "marker": "(ii)",
@@ -750,7 +930,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "(iii)",
@@ -759,7 +939,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "(iv)",
@@ -768,7 +948,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 5
     },
     {
       "marker": "(v)",
@@ -777,7 +957,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 13
     }
   ],
   "structure": [
@@ -1002,6 +1182,10 @@
               "alts": []
             },
             {
+              "code": "ECON3121",
+              "alts": []
+            },
+            {
               "code": "GRMD2105",
               "alts": []
             },
@@ -1056,6 +1240,26 @@
                 {
                   "code": "GPAD2065",
                   "alts": []
+                },
+                {
+                  "code": "GPAD2085",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2090",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2095",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2160",
+                  "alts": []
+                },
+                {
+                  "code": "GPAD2170",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1072,6 +1276,10 @@
                 },
                 {
                   "code": "GLSD2401",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD2501",
                   "alts": []
                 },
                 {
@@ -1094,6 +1302,10 @@
                 {
                   "code": "SOCI3102",
                   "alts": []
+                },
+                {
+                  "code": "SOCI3227",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1115,6 +1327,14 @@
                 {
                   "code": "SOCI2216",
                   "alts": []
+                },
+                {
+                  "code": "SOCI3002",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3204",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1134,7 +1354,39 @@
                   "alts": []
                 },
                 {
+                  "code": "GRMD2403",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3203",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4401",
+                  "alts": []
+                },
+                {
                   "code": "URSP3100",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3300",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3400",
+                  "alts": []
+                },
+                {
+                  "code": "URSP3600",
                   "alts": []
                 }
               ],
@@ -1180,6 +1432,14 @@
         },
         {
           "code": "DSPS3802",
+          "alts": []
+        },
+        {
+          "code": "GRMD4502",
+          "alts": []
+        },
+        {
+          "code": "GRMD4503",
           "alts": []
         }
       ],

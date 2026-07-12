@@ -252,6 +252,14 @@
         "from": "(b) MATH1010"
       },
       {
+        "raw": "MATH2018",
+        "codes": [
+          "MATH2018"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
         "raw": "ACCT3142",
         "codes": [
           "ACCT3142"
@@ -263,6 +271,14 @@
         "raw": "CSCI2100",
         "codes": [
           "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
         ],
         "alt": false,
         "from": "(c) ACCT3142# or CSCI2100# or 2520# or DOTE2051# or SEEM3550#"
@@ -362,6 +378,14 @@
         ],
         "alt": false,
         "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "(e) {DOTE2011# and (DOTE2021# or FINA2020)} or {STAT2001# and"
       }
     ],
     "elective": [
@@ -369,6 +393,78 @@
         "raw": "CSCI3150",
         "codes": [
           "CSCI3150"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI3160",
+        "codes": [
+          "CSCI3160"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI3170",
+        "codes": [
+          "CSCI3170"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI3230",
+        "codes": [
+          "CSCI3230"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI4130",
+        "codes": [
+          "CSCI4130"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI4160",
+        "codes": [
+          "CSCI4160"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI4180",
+        "codes": [
+          "CSCI4180"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI4190",
+        "codes": [
+          "CSCI4190"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "CSCI4230",
+        "codes": [
+          "CSCI4230"
         ],
         "alt": false,
         "from": "(a) At least 9 units of Quantitative Methods courses from"
@@ -382,9 +478,25 @@
         "from": "(a) At least 9 units of Quantitative Methods courses from"
       },
       {
+        "raw": "DOTE4220",
+        "codes": [
+          "DOTE4220"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
         "raw": "ECON3121",
         "codes": [
           "ECON3121"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
         ],
         "alt": false,
         "from": "(a) At least 9 units of Quantitative Methods courses from"
@@ -446,6 +558,102 @@
         "from": "(a) At least 9 units of Quantitative Methods courses from"
       },
       {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH4220",
+        "codes": [
+          "MATH4220"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
         "raw": "SEEM3440",
         "codes": [
           "SEEM3440"
@@ -457,6 +665,94 @@
         "raw": "STAT3006",
         "codes": [
           "STAT3006"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4002",
+        "codes": [
+          "STAT4002"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4003",
+        "codes": [
+          "STAT4003"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4004",
+        "codes": [
+          "STAT4004"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4008",
+        "codes": [
+          "STAT4008"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "(a) At least 9 units of Quantitative Methods courses from"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
         ],
         "alt": false,
         "from": "(a) At least 9 units of Quantitative Methods courses from"
@@ -481,6 +777,38 @@
         "raw": "ACCT3151",
         "codes": [
           "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT4212",
+        "codes": [
+          "ACCT4212"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT4213",
+        "codes": [
+          "ACCT4213"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT4214",
+        "codes": [
+          "ACCT4214"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT4251",
+        "codes": [
+          "ACCT4251"
         ],
         "alt": false,
         "from": "(b) At least 12 units of Business courses"
@@ -940,7 +1268,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 6
     },
     {
       "marker": "(c)",
@@ -949,7 +1277,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 5
     },
     {
       "marker": "(d)",
@@ -967,7 +1295,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 5
     },
     {
       "marker": "4.",
@@ -985,7 +1313,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 46
     },
     {
       "marker": "(b)",
@@ -994,7 +1322,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 40
+      "n_courses": 44
     },
     {
       "marker": "(c)",
@@ -1094,6 +1422,10 @@
             {
               "code": "MATH2010",
               "alts": []
+            },
+            {
+              "code": "MATH2018",
+              "alts": []
             }
           ],
           "children": []
@@ -1110,6 +1442,10 @@
             },
             {
               "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "CSCI2520",
               "alts": []
             },
             {
@@ -1201,11 +1537,55 @@
               "alts": []
             },
             {
+              "code": "CSCI3160",
+              "alts": []
+            },
+            {
+              "code": "CSCI3170",
+              "alts": []
+            },
+            {
+              "code": "CSCI3230",
+              "alts": []
+            },
+            {
+              "code": "CSCI3320",
+              "alts": []
+            },
+            {
+              "code": "CSCI4130",
+              "alts": []
+            },
+            {
+              "code": "CSCI4160",
+              "alts": []
+            },
+            {
+              "code": "CSCI4180",
+              "alts": []
+            },
+            {
+              "code": "CSCI4190",
+              "alts": []
+            },
+            {
+              "code": "CSCI4230",
+              "alts": []
+            },
+            {
               "code": "DOTE4070",
               "alts": []
             },
             {
+              "code": "DOTE4220",
+              "alts": []
+            },
+            {
               "code": "ECON3121",
+              "alts": []
+            },
+            {
+              "code": "ECON4120",
               "alts": []
             },
             {
@@ -1237,11 +1617,103 @@
               "alts": []
             },
             {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3240",
+              "alts": []
+            },
+            {
+              "code": "MATH3270",
+              "alts": []
+            },
+            {
+              "code": "MATH3280",
+              "alts": []
+            },
+            {
+              "code": "MATH3290",
+              "alts": []
+            },
+            {
+              "code": "MATH3310",
+              "alts": []
+            },
+            {
+              "code": "MATH3320",
+              "alts": []
+            },
+            {
+              "code": "MATH3330",
+              "alts": []
+            },
+            {
+              "code": "MATH4220",
+              "alts": []
+            },
+            {
+              "code": "MATH4230",
+              "alts": []
+            },
+            {
+              "code": "MATH4240",
+              "alts": []
+            },
+            {
+              "code": "MATH4280",
+              "alts": []
+            },
+            {
               "code": "SEEM3440",
               "alts": []
             },
             {
               "code": "STAT3006",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT3008",
+              "alts": []
+            },
+            {
+              "code": "STAT4001",
+              "alts": []
+            },
+            {
+              "code": "STAT4002",
+              "alts": []
+            },
+            {
+              "code": "STAT4003",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4006",
+              "alts": []
+            },
+            {
+              "code": "STAT4008",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
               "alts": []
             }
           ],
@@ -1263,6 +1735,22 @@
             },
             {
               "code": "ACCT3151",
+              "alts": []
+            },
+            {
+              "code": "ACCT4212",
+              "alts": []
+            },
+            {
+              "code": "ACCT4213",
+              "alts": []
+            },
+            {
+              "code": "ACCT4214",
+              "alts": []
+            },
+            {
+              "code": "ACCT4251",
               "alts": []
             },
             {
@@ -1491,6 +1979,10 @@
       "courses": [
         {
           "code": "MATH1018",
+          "alts": []
+        },
+        {
+          "code": "STAT2006",
           "alts": []
         }
       ],

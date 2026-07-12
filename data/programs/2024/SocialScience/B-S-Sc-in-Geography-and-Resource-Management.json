@@ -98,7 +98,11 @@
     "SOWK1114",
     "URSP1001",
     "URSP1002",
-    "URSP2060"
+    "URSP2060",
+    "URSP2800",
+    "URSP2900",
+    "URSP3600",
+    "URSP3800"
   ],
   "buckets": {
     "required": [
@@ -865,6 +869,38 @@
         "from": "(d) At least nine courses chosen from the GRMD Major course"
       },
       {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP2900",
+        "codes": [
+          "URSP2900"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
+        "raw": "URSP3800",
+        "codes": [
+          "URSP3800"
+        ],
+        "alt": false,
+        "from": "(d) At least nine courses chosen from the GRMD Major course"
+      },
+      {
         "raw": "GRMD2104",
         "codes": [
           "GRMD2104"
@@ -1199,6 +1235,38 @@
         ],
         "alt": false,
         "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP2800",
+        "codes": [
+          "URSP2800"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP2900",
+        "codes": [
+          "URSP2900"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP3600",
+        "codes": [
+          "URSP3600"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
+      },
+      {
+        "raw": "URSP3800",
+        "codes": [
+          "URSP3800"
+        ],
+        "alt": false,
+        "from": "(d) Smart Sustainable Cities"
       }
     ],
     "stream_elective": []
@@ -1265,7 +1333,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 47
+      "n_courses": 51
     },
     {
       "marker": "(a)",
@@ -1301,7 +1369,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 10
     }
   ],
   "structure": [
@@ -1741,6 +1809,22 @@
             },
             {
               "code": "URSP2060",
+              "alts": []
+            },
+            {
+              "code": "URSP2800",
+              "alts": []
+            },
+            {
+              "code": "URSP2900",
+              "alts": []
+            },
+            {
+              "code": "URSP3600",
+              "alts": []
+            },
+            {
+              "code": "URSP3800",
               "alts": []
             }
           ],

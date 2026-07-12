@@ -128,6 +128,14 @@
         "from": "2. Required Courses: ACCT2111, BEHM4000,"
       },
       {
+        "raw": "DOTE2030",
+        "codes": [
+          "DOTE2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
         "raw": "FINA2010",
         "codes": [
           "FINA2010"
@@ -147,6 +155,14 @@
         "raw": "MBTE2000",
         "codes": [
           "MBTE2000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses: ACCT2111, BEHM4000,"
+      },
+      {
+        "raw": "MBTE3000",
+        "codes": [
+          "MBTE3000"
         ],
         "alt": false,
         "from": "2. Required Courses: ACCT2111, BEHM4000,"
@@ -210,6 +226,14 @@
         "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
       },
       {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
         "raw": "LAWS2331",
         "codes": [
           "LAWS2331"
@@ -242,12 +266,92 @@
         "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
       },
       {
+        "raw": "MBTE3511",
+        "codes": [
+          "MBTE3511"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3518",
+        "codes": [
+          "MBTE3518"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3521",
+        "codes": [
+          "MBTE3521"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3528",
+        "codes": [
+          "MBTE3528"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3531",
+        "codes": [
+          "MBTE3531"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3550",
+        "codes": [
+          "MBTE3550"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3558",
+        "codes": [
+          "MBTE3558"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3560",
+        "codes": [
+          "MBTE3560"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
+        "raw": "MBTE3568",
+        "codes": [
+          "MBTE3568"
+        ],
+        "alt": false,
+        "from": "(a) Biotechnology Entrepreneurship and Innovation Required Courses: (8-9 units) ACCT2151# or"
+      },
+      {
         "raw": "DOTE[DSME]2040",
         "codes": [
           "DOTE2040",
           "DSME2040"
         ],
         "alt": true,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "DOTE4260",
+        "codes": [
+          "DOTE4260"
+        ],
+        "alt": false,
         "from": "(b) Healthcare and Biomedicine Analytics"
       },
       {
@@ -276,6 +380,22 @@
         "from": "(b) Healthcare and Biomedicine Analytics"
       },
       {
+        "raw": "DOTE4110",
+        "codes": [
+          "DOTE4110"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "DOTE4220",
+        "codes": [
+          "DOTE4220"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
         "raw": "GRON3412",
         "codes": [
           "GRON3412"
@@ -300,9 +420,57 @@
         "from": "(b) Healthcare and Biomedicine Analytics"
       },
       {
+        "raw": "PHPC3034",
+        "codes": [
+          "PHPC3034"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "PHPC4032",
+        "codes": [
+          "PHPC4032"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
         "raw": "SBMS3101",
         "codes": [
           "SBMS3101"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3202",
+        "codes": [
+          "SBMS3202"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3205",
+        "codes": [
+          "SBMS3205"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3212",
+        "codes": [
+          "SBMS3212"
+        ],
+        "alt": false,
+        "from": "(b) Healthcare and Biomedicine Analytics"
+      },
+      {
+        "raw": "SBMS3215",
+        "codes": [
+          "SBMS3215"
         ],
         "alt": false,
         "from": "(b) Healthcare and Biomedicine Analytics"
@@ -327,7 +495,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 13
     },
     {
       "marker": "3.",
@@ -345,7 +513,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 15
     },
     {
       "marker": "(b)",
@@ -354,7 +522,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 17
     },
     {
       "marker": "4.",
@@ -413,6 +581,10 @@
           "alts": []
         },
         {
+          "code": "DOTE2030",
+          "alts": []
+        },
+        {
           "code": "FINA2010",
           "alts": []
         },
@@ -422,6 +594,10 @@
         },
         {
           "code": "MBTE2000",
+          "alts": []
+        },
+        {
+          "code": "MBTE3000",
           "alts": []
         },
         {
@@ -483,6 +659,42 @@
                 {
                   "code": "MBTE3510",
                   "alts": []
+                },
+                {
+                  "code": "MBTE3511",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3518",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3521",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3528",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3531",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3550",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3558",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3560",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3568",
+                  "alts": []
                 }
               ],
               "children": []
@@ -509,6 +721,10 @@
                   ]
                 },
                 {
+                  "code": "DOTE4260",
+                  "alts": []
+                },
+                {
                   "code": "PHPC3024",
                   "alts": []
                 },
@@ -532,6 +748,14 @@
                   ]
                 },
                 {
+                  "code": "DOTE4110",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4220",
+                  "alts": []
+                },
+                {
                   "code": "GRON3412",
                   "alts": []
                 },
@@ -544,7 +768,31 @@
                   "alts": []
                 },
                 {
+                  "code": "PHPC3034",
+                  "alts": []
+                },
+                {
+                  "code": "PHPC4032",
+                  "alts": []
+                },
+                {
                   "code": "SBMS3101",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3202",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3205",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3212",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS3215",
                   "alts": []
                 }
               ],
@@ -566,6 +814,19 @@
         },
         {
           "code": "BEHM4002",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "ACCT3151",
           "alts": []
         }
       ],

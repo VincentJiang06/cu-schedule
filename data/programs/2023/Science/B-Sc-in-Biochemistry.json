@@ -39,26 +39,45 @@
     "BIOL2410",
     "BIOL2420",
     "BIOL3410",
+    "BIOL3630",
+    "BIOL4310",
+    "BIOL4610",
     "BMEG3101",
     "BMEG4010",
     "CHEM1070",
     "CHEM1280",
     "CMBI4001",
+    "CMBI4002",
+    "CMBI4003",
+    "CMBI4101",
+    "CMBI4102",
+    "CMBI4103",
+    "CMBI4201",
+    "CMBI4202",
+    "CMBI4203",
     "ENSC3520",
     "FNSC3010",
+    "FNSC4150",
     "LSCI1002",
     "LSCI1012",
     "LSCI2002",
     "LSCI2003",
     "LSCI3012",
+    "LSCI3030",
+    "LSCI3333",
     "LSCI3520",
     "LSCI4000",
     "LSCI4911",
     "LSCI4912",
+    "LSCI4913",
     "MATH1010",
     "MATH1018",
     "MATH1520",
     "MBTE3510",
+    "MBTE3518",
+    "MBTE3560",
+    "MBTE3568",
+    "MBTE4520",
     "PHYS1001",
     "PHYS1002",
     "STAR2000",
@@ -235,6 +254,22 @@
         "from": "(b) BIOL2120#, 2313#, 2410#,"
       },
       {
+        "raw": "BIOL2313",
+        "codes": [
+          "BIOL2313"
+        ],
+        "alt": false,
+        "from": "(b) BIOL2120#, 2313#, 2410#,"
+      },
+      {
+        "raw": "BIOL2410",
+        "codes": [
+          "BIOL2410"
+        ],
+        "alt": false,
+        "from": "(b) BIOL2120#, 2313#, 2410#,"
+      },
+      {
         "raw": "LSCI2002",
         "codes": [
           "LSCI2002"
@@ -349,6 +384,14 @@
         "from": "(iii) (iv) | LSCI4911#"
       },
       {
+        "raw": "LSCI4913",
+        "codes": [
+          "LSCI4913"
+        ],
+        "alt": false,
+        "from": "(iii) (iv) | LSCI4911#"
+      },
+      {
         "raw": "LSCI4000",
         "codes": [
           "LSCI4000"
@@ -398,6 +441,14 @@
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
       },
       {
+        "raw": "FNSC4150",
+        "codes": [
+          "FNSC4150"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
         "raw": "LSCI3012",
         "codes": [
           "LSCI3012"
@@ -406,9 +457,57 @@
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
       },
       {
+        "raw": "LSCI3030",
+        "codes": [
+          "LSCI3030"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "LSCI3333",
+        "codes": [
+          "LSCI3333"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
         "raw": "MBTE3510",
         "codes": [
           "MBTE3510"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "MBTE3518",
+        "codes": [
+          "MBTE3518"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "MBTE3560",
+        "codes": [
+          "MBTE3560"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "MBTE3568",
+        "codes": [
+          "MBTE3568"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "MBTE4520",
+        "codes": [
+          "MBTE4520"
         ],
         "alt": false,
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
@@ -438,6 +537,30 @@
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
       },
       {
+        "raw": "BIOL3630",
+        "codes": [
+          "BIOL3630"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BIOL4310",
+        "codes": [
+          "BIOL4310"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "BIOL4610",
+        "codes": [
+          "BIOL4610"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
         "raw": "BMEG3101",
         "codes": [
           "BMEG3101"
@@ -457,6 +580,70 @@
         "raw": "CMBI4001",
         "codes": [
           "CMBI4001"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4002",
+        "codes": [
+          "CMBI4002"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4003",
+        "codes": [
+          "CMBI4003"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4101",
+        "codes": [
+          "CMBI4101"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4102",
+        "codes": [
+          "CMBI4102"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4103",
+        "codes": [
+          "CMBI4103"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4201",
+        "codes": [
+          "CMBI4201"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4202",
+        "codes": [
+          "CMBI4202"
+        ],
+        "alt": false,
+        "from": "(b) Of the 17 units of elective courses, at least 9 units,"
+      },
+      {
+        "raw": "CMBI4203",
+        "codes": [
+          "CMBI4203"
         ],
         "alt": false,
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
@@ -523,7 +710,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 4
     },
     {
       "marker": "3.",
@@ -568,7 +755,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "(v)",
@@ -586,7 +773,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 16
+      "n_courses": 34
     },
     {
       "marker": "1.",
@@ -725,6 +912,14 @@
               "alts": []
             },
             {
+              "code": "BIOL2313",
+              "alts": []
+            },
+            {
+              "code": "BIOL2410",
+              "alts": []
+            },
+            {
               "code": "LSCI2002",
               "alts": []
             }
@@ -786,6 +981,10 @@
                 {
                   "code": "LSCI4912",
                   "alts": []
+                },
+                {
+                  "code": "LSCI4913",
+                  "alts": []
                 }
               ],
               "children": []
@@ -834,11 +1033,39 @@
               "alts": []
             },
             {
+              "code": "FNSC4150",
+              "alts": []
+            },
+            {
               "code": "LSCI3012",
               "alts": []
             },
             {
+              "code": "LSCI3030",
+              "alts": []
+            },
+            {
+              "code": "LSCI3333",
+              "alts": []
+            },
+            {
               "code": "MBTE3510",
+              "alts": []
+            },
+            {
+              "code": "MBTE3518",
+              "alts": []
+            },
+            {
+              "code": "MBTE3560",
+              "alts": []
+            },
+            {
+              "code": "MBTE3568",
+              "alts": []
+            },
+            {
+              "code": "MBTE4520",
               "alts": []
             },
             {
@@ -854,6 +1081,18 @@
               "alts": []
             },
             {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "BIOL4310",
+              "alts": []
+            },
+            {
+              "code": "BIOL4610",
+              "alts": []
+            },
+            {
               "code": "BMEG3101",
               "alts": []
             },
@@ -863,6 +1102,38 @@
             },
             {
               "code": "CMBI4001",
+              "alts": []
+            },
+            {
+              "code": "CMBI4002",
+              "alts": []
+            },
+            {
+              "code": "CMBI4003",
+              "alts": []
+            },
+            {
+              "code": "CMBI4101",
+              "alts": []
+            },
+            {
+              "code": "CMBI4102",
+              "alts": []
+            },
+            {
+              "code": "CMBI4103",
+              "alts": []
+            },
+            {
+              "code": "CMBI4201",
+              "alts": []
+            },
+            {
+              "code": "CMBI4202",
+              "alts": []
+            },
+            {
+              "code": "CMBI4203",
               "alts": []
             },
             {

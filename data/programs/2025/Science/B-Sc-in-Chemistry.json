@@ -145,6 +145,9 @@
     "PHYS1002",
     "PHYS1111",
     "PHYS3021",
+    "PHYS3022",
+    "PHYS4031",
+    "PHYS4440",
     "STAR2000",
     "STAR2050",
     "STAR3000",
@@ -793,6 +796,30 @@
         ],
         "alt": false,
         "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "(b) 8 units from the"
       }
     ],
     "stream_elective": []
@@ -841,7 +868,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 39
+      "n_courses": 42
     },
     {
       "marker": "1.",
@@ -1222,6 +1249,18 @@
             },
             {
               "code": "PHYS3021",
+              "alts": []
+            },
+            {
+              "code": "PHYS3022",
+              "alts": []
+            },
+            {
+              "code": "PHYS4031",
+              "alts": []
+            },
+            {
+              "code": "PHYS4440",
               "alts": []
             }
           ],

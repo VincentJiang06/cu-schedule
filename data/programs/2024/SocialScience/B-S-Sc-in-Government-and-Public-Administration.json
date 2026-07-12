@@ -21,13 +21,33 @@
     "DSPS1004",
     "DSPS2102",
     "DSPS2201",
+    "DSPS2202",
+    "DSPS2301",
+    "DSPS2501",
+    "DSPS3190",
+    "DSPS3202",
+    "DSPS3310",
+    "DSPS3330",
+    "DSPS3350",
+    "DSPS3501",
+    "DSPS3790",
+    "DSPS3791",
     "ECON1210",
     "ECON1220",
     "ECON2011",
     "GLSD1001",
     "GLSD2401",
+    "GLSD2501",
     "GLSD3106",
+    "GLSD3301",
     "GLSD3302",
+    "GLSD3401",
+    "GLSD3402",
+    "GLSD3403",
+    "GLSD3404",
+    "GLSD3405",
+    "GLSD4401",
+    "GLSD4402",
     "GPAD1000",
     "GPAD1010",
     "GPAD1015",
@@ -444,6 +464,30 @@
         "from": "(i) Politics - Comparative Politics"
       },
       {
+        "raw": "GLSD3402",
+        "codes": [
+          "GLSD3402"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GLSD3403",
+        "codes": [
+          "GLSD3403"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
+        "raw": "GLSD3404",
+        "codes": [
+          "GLSD3404"
+        ],
+        "alt": false,
+        "from": "(i) Politics - Comparative Politics"
+      },
+      {
         "raw": "GPAD1016",
         "codes": [
           "GPAD1016"
@@ -852,6 +896,94 @@
         "from": "(iv) International Relations"
       },
       {
+        "raw": "GLSD2501",
+        "codes": [
+          "GLSD2501"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3106",
+        "codes": [
+          "GLSD3106"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3301",
+        "codes": [
+          "GLSD3301"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3302",
+        "codes": [
+          "GLSD3302"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3401",
+        "codes": [
+          "GLSD3401"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3402",
+        "codes": [
+          "GLSD3402"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3403",
+        "codes": [
+          "GLSD3403"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3404",
+        "codes": [
+          "GLSD3404"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD3405",
+        "codes": [
+          "GLSD3405"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD4401",
+        "codes": [
+          "GLSD4401"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
+        "raw": "GLSD4402",
+        "codes": [
+          "GLSD4402"
+        ],
+        "alt": false,
+        "from": "(iv) International Relations"
+      },
+      {
         "raw": "GPAD1066",
         "codes": [
           "GPAD1066"
@@ -951,6 +1083,94 @@
         "raw": "DSPS2201",
         "codes": [
           "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS2202",
+        "codes": [
+          "DSPS2202"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS2301",
+        "codes": [
+          "DSPS2301"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS2501",
+        "codes": [
+          "DSPS2501"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3190",
+        "codes": [
+          "DSPS3190"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3202",
+        "codes": [
+          "DSPS3202"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3310",
+        "codes": [
+          "DSPS3310"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3330",
+        "codes": [
+          "DSPS3330"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3350",
+        "codes": [
+          "DSPS3350"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3501",
+        "codes": [
+          "DSPS3501"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3790",
+        "codes": [
+          "DSPS3790"
+        ],
+        "alt": false,
+        "from": "(v) Public Administration and Policy"
+      },
+      {
+        "raw": "DSPS3791",
+        "codes": [
+          "DSPS3791"
         ],
         "alt": false,
         "from": "(v) Public Administration and Policy"
@@ -1095,6 +1315,78 @@
         "raw": "DSPS2102",
         "codes": [
           "DSPS2102"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS2201",
+        "codes": [
+          "DSPS2201"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS2202",
+        "codes": [
+          "DSPS2202"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS2301",
+        "codes": [
+          "DSPS2301"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS2501",
+        "codes": [
+          "DSPS2501"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS3190",
+        "codes": [
+          "DSPS3190"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS3202",
+        "codes": [
+          "DSPS3202"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS3330",
+        "codes": [
+          "DSPS3330"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS3350",
+        "codes": [
+          "DSPS3350"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
+        "raw": "DSPS3791",
+        "codes": [
+          "DSPS3791"
         ],
         "alt": false,
         "from": "(vi) Professional Practicum (Students are required to take"
@@ -1442,7 +1734,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 21
+      "n_courses": 24
     },
     {
       "marker": "(ii)",
@@ -1469,7 +1761,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 24
     },
     {
       "marker": "(v)",
@@ -1478,7 +1770,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 16
+      "n_courses": 27
     },
     {
       "marker": "(vi)",
@@ -1487,7 +1779,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 18
+      "n_courses": 27
     },
     {
       "marker": "(b)",
@@ -1758,6 +2050,18 @@
                   "alts": []
                 },
                 {
+                  "code": "GLSD3402",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3403",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3404",
+                  "alts": []
+                },
+                {
                   "code": "GPAD1016",
                   "alts": []
                 },
@@ -1989,6 +2293,50 @@
                   "alts": []
                 },
                 {
+                  "code": "GLSD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3301",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3302",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3401",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3402",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3403",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD3405",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4401",
+                  "alts": []
+                },
+                {
+                  "code": "GLSD4402",
+                  "alts": []
+                },
+                {
                   "code": "GPAD1066",
                   "alts": []
                 },
@@ -2047,6 +2395,50 @@
               "courses": [
                 {
                   "code": "DSPS2201",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2202",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2301",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3190",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3202",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3310",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3330",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3350",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3790",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3791",
                   "alts": []
                 },
                 {
@@ -2128,6 +2520,42 @@
                 },
                 {
                   "code": "DSPS2102",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2201",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2202",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2301",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS2501",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3190",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3202",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3330",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3350",
+                  "alts": []
+                },
+                {
+                  "code": "DSPS3791",
                   "alts": []
                 },
                 {

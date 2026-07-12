@@ -118,6 +118,12 @@
     "ECON2011",
     "GLSD1001",
     "GLSD3106",
+    "GLSD3111",
+    "GLSD3303",
+    "GLSD3402",
+    "GLSD3403",
+    "GLSD3404",
+    "GLSD3405",
     "GPAD1020",
     "GPAD1076",
     "GPAD1077",
@@ -560,6 +566,54 @@
         "raw": "GLSD3106",
         "codes": [
           "GLSD3106"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3111",
+        "codes": [
+          "GLSD3111"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3303",
+        "codes": [
+          "GLSD3303"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3402",
+        "codes": [
+          "GLSD3402"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3403",
+        "codes": [
+          "GLSD3403"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3404",
+        "codes": [
+          "GLSD3404"
+        ],
+        "alt": false,
+        "from": "(i) Global Communication"
+      },
+      {
+        "raw": "GLSD3405",
+        "codes": [
+          "GLSD3405"
         ],
         "alt": false,
         "from": "(i) Global Communication"
@@ -1260,7 +1314,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 15
+      "n_courses": 21
     },
     {
       "marker": "(ii)",
@@ -1538,6 +1592,30 @@
             },
             {
               "code": "GLSD3106",
+              "alts": []
+            },
+            {
+              "code": "GLSD3111",
+              "alts": []
+            },
+            {
+              "code": "GLSD3303",
+              "alts": []
+            },
+            {
+              "code": "GLSD3402",
+              "alts": []
+            },
+            {
+              "code": "GLSD3403",
+              "alts": []
+            },
+            {
+              "code": "GLSD3404",
+              "alts": []
+            },
+            {
+              "code": "GLSD3405",
               "alts": []
             }
           ],

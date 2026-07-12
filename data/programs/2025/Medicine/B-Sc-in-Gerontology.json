@@ -5,7 +5,7 @@
   "faculty": "Faculty of Medicine",
   "degree": "B.Sc",
   "total_units": 51,
-  "parse_status": "prose_only",
+  "parse_status": "full",
   "has_senior_year_variant": true,
   "has_streams": false,
   "all_course_codes": [
@@ -35,10 +35,338 @@
     "PHPC4033"
   ],
   "buckets": {
-    "required": [],
-    "elective": [],
+    "required": [
+      {
+        "raw": "GRON3111",
+        "codes": [
+          "GRON3111"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3112",
+        "codes": [
+          "GRON3112"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3113",
+        "codes": [
+          "GRON3113"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3114",
+        "codes": [
+          "GRON3114"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3211",
+        "codes": [
+          "GRON3211"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3213",
+        "codes": [
+          "GRON3213"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3214",
+        "codes": [
+          "GRON3214"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON3311",
+        "codes": [
+          "GRON3311"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON4212",
+        "codes": [
+          "GRON4212"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "GRON4312",
+        "codes": [
+          "GRON4312"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC1001",
+        "codes": [
+          "PHPC1001"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC1017",
+        "codes": [
+          "PHPC1017"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC2005",
+        "codes": [
+          "PHPC2005"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC2017",
+        "codes": [
+          "PHPC2017"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      },
+      {
+        "raw": "PHPC3015",
+        "codes": [
+          "PHPC3015"
+        ],
+        "alt": false,
+        "from": "1. Required"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CHPR4012",
+        "codes": [
+          "CHPR4012"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "GRON3412",
+        "codes": [
+          "GRON3412"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "GRON4101",
+        "codes": [
+          "GRON4101"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "GRON4102",
+        "codes": [
+          "GRON4102"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "GRON4411",
+        "codes": [
+          "GRON4411"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC2007",
+        "codes": [
+          "PHPC2007"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC2020",
+        "codes": [
+          "PHPC2020"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4025",
+        "codes": [
+          "PHPC4025"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      },
+      {
+        "raw": "PHPC4033",
+        "codes": [
+          "PHPC4033"
+        ],
+        "alt": false,
+        "from": "2. Elective"
+      }
+    ],
     "stream_elective": []
   },
-  "groups_outline": [],
-  "structure": []
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 15
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "GRON3111",
+          "alts": []
+        },
+        {
+          "code": "GRON3112",
+          "alts": []
+        },
+        {
+          "code": "GRON3113",
+          "alts": []
+        },
+        {
+          "code": "GRON3114",
+          "alts": []
+        },
+        {
+          "code": "GRON3211",
+          "alts": []
+        },
+        {
+          "code": "GRON3213",
+          "alts": []
+        },
+        {
+          "code": "GRON3214",
+          "alts": []
+        },
+        {
+          "code": "GRON3311",
+          "alts": []
+        },
+        {
+          "code": "GRON4212",
+          "alts": []
+        },
+        {
+          "code": "GRON4312",
+          "alts": []
+        },
+        {
+          "code": "PHPC1001",
+          "alts": []
+        },
+        {
+          "code": "PHPC1017",
+          "alts": []
+        },
+        {
+          "code": "PHPC2005",
+          "alts": []
+        },
+        {
+          "code": "PHPC2017",
+          "alts": []
+        },
+        {
+          "code": "PHPC3015",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "",
+      "units": null,
+      "note": "Courses: | 6 Two courses",
+      "courses": [
+        {
+          "code": "CHPR4012",
+          "alts": []
+        },
+        {
+          "code": "GRON3412",
+          "alts": []
+        },
+        {
+          "code": "GRON4101",
+          "alts": []
+        },
+        {
+          "code": "GRON4102",
+          "alts": []
+        },
+        {
+          "code": "GRON4411",
+          "alts": []
+        },
+        {
+          "code": "PHPC2007",
+          "alts": []
+        },
+        {
+          "code": "PHPC2020",
+          "alts": []
+        },
+        {
+          "code": "PHPC4025",
+          "alts": []
+        },
+        {
+          "code": "PHPC4033",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
 }

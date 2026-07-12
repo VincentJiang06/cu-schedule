@@ -415,6 +415,14 @@
         "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
       },
       {
+        "raw": "PHPC2009",
+        "codes": [
+          "PHPC2009"
+        ],
+        "alt": false,
+        "from": "(a) Theoretical Courses in Physical Education, Exercise Science"
+      },
+      {
         "raw": "SPED3550",
         "codes": [
           "SPED3550"
@@ -674,7 +682,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 9
     },
     {
       "marker": "(b)",
@@ -947,6 +955,10 @@
             },
             {
               "code": "PHPC2007",
+              "alts": []
+            },
+            {
+              "code": "PHPC2009",
               "alts": []
             },
             {

@@ -284,6 +284,14 @@
         "from": "i) Mathematics and Physics: ENGG1120#, PHYS1110# or 1111#[b]"
       },
       {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "i) Mathematics and Physics: ENGG1120#, PHYS1110# or 1111#[b]"
+      },
+      {
         "raw": "ASEI2010",
         "codes": [
           "ASEI2010"
@@ -4971,7 +4979,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "ii)",
@@ -5516,6 +5524,10 @@
                 },
                 {
                   "code": "PHYS1110",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1111",
                   "alts": []
                 }
               ],
