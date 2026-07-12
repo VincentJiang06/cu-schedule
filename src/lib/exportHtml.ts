@@ -109,11 +109,14 @@ export function buildScheduleHtml(
         const light: CanvasPaint = paint(block.code, block.subject, 'light')
         const dark: CanvasPaint = paint(block.code, block.subject, 'dark')
         const meta = block.location ? `${block.component} · ${escapeHtml(block.location)}` : block.component
+        // LEC 保持 .block 的实心样式；TUT/LAB 等非 LEC 加 .block--alt，与屏幕上
+        // .tt2__block--lec vs .tt2__block--alt 的区分一致（见下方 CSS）。
+        const isLec = block.component === 'LEC'
         const style =
           `top:${top}%;height:${height}%;left:${left}%;width:${width}%;` +
           `--fill-l:${light.fill};--edge-l:${light.edge};--text-l:${light.text};` +
           `--fill-d:${dark.fill};--edge-d:${dark.edge};--text-d:${dark.text}`
-        return `<article class="block" style="${style}">` +
+        return `<article class="block${isLec ? '' : ' block--alt'}" style="${style}">` +
           `<span class="block__code">${escapeHtml(block.code)}</span>` +
           `<span class="block__time">${hhmm(block.start)}–${hhmm(shownEnd)}</span>` +
           `<span class="block__meta">${meta}</span>` +
@@ -255,6 +258,18 @@ export function buildScheduleHtml(
     border-color: var(--edge-l);
     color: var(--text-l);
   }
+  /* TUT/LAB 等非 LEC 课块：比 LEC 更淡的填充(向面板底色混)、更浅边框、虚线左条，
+     再加粗体+下划线文字(text-decoration 会顺带覆盖到子级 span，font-weight 靠继承)——
+     和屏幕上 .tt2__block--lec(实心) vs .tt2__block--alt 的区分一致。 */
+  .block.block--alt {
+    background: color-mix(in srgb, var(--fill-l) 38%, #ffffff);
+    border-color: color-mix(in srgb, var(--edge-l) 50%, #ffffff);
+    border-left-style: dashed;
+    border-left-color: var(--text-l);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
   .block__code { font-weight: 750; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__meta { opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -288,6 +303,11 @@ export function buildScheduleHtml(
   :root[data-theme='dark'] .foot-byline { color: #eceff6; }
   :root[data-theme='dark'] .foot-note { color: #7a8397; }
   :root[data-theme='dark'] .block { background: var(--fill-d); border-color: var(--edge-d); color: var(--text-d); }
+  :root[data-theme='dark'] .block.block--alt {
+    background: color-mix(in srgb, var(--fill-d) 38%, #141926);
+    border-color: color-mix(in srgb, var(--edge-d) 50%, #141926);
+    border-left-color: var(--text-d);
+  }
   :root[data-theme='dark'] .theme-toggle { background: #141926; border-color: #2e3648; color: #eceff6; }
 </style>
 </head>
