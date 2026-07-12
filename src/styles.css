@@ -1441,6 +1441,25 @@ select {
   font-weight: 750;
 }
 
+/* #里程碑6(左栏 section 高亮):当前选中排法用到这个 section 时描一圈——用 box-shadow
+   而不是改 border/background，跟 .cl-chip--on(约束/锁定态,用的是课程自身的 --hue)互不
+   冲突，两者可以同时出现在同一个 chip 上。A / B 用 .plan-card--a/--b 同一套 --accent
+   色语言,一眼能看出哪个属于 A、哪个属于 B。两者都用同一个 section 时叠两圈描边(A 色在内、
+   B 色在外)，明确标出"这不是只属于一边，是 A、B 都选了它"。 */
+.cl-chip--cur-a {
+  box-shadow: 0 0 0 2px hsl(var(--accent) 62% 52%);
+}
+
+.cl-chip--cur-b {
+  box-shadow: 0 0 0 2px hsl(var(--accent) 20% 46%);
+}
+
+.cl-chip--cur-ab {
+  box-shadow:
+    0 0 0 2px hsl(var(--accent) 62% 52%),
+    0 0 0 4px hsl(var(--accent) 20% 46%);
+}
+
 .cl-pick__time {
   font-size: 11px;
   color: var(--ink-3);

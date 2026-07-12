@@ -74,6 +74,7 @@ import {
   overlaps,
   planFitsWindow,
   planMatchesPins,
+  planSectionMap,
   type Pins,
   type Plan,
   type TimeWindow,
@@ -1033,6 +1034,12 @@ export default function App() {
   // 大课表实际展示的排法:单方案模式 → 只有被点的那个;否则 A / B 对比。
   const shownPlanA = soloActive ? (shownById.get(soloPlanId!) ?? null) : planA
   const shownPlanB = soloActive ? null : planB
+  // #里程碑6(左栏 section 高亮):当前实际展示的排法(单方案模式的那个，或对比模式的 A / B)
+  // 各自拆成 code → component → sectionId,喂给左栏「当前课程」列表的 section 选择器
+  // (CoursePicker)去标出"这个 section 属于 A/B/两者都是"。solo 模式下 shownPlanB 恒为
+  // null，映射自然是空对象，不会误标出 B。
+  const planASectionMap = useMemo(() => (shownPlanA ? planSectionMap(shownPlanA) : {}), [shownPlanA])
+  const planBSectionMap = useMemo(() => (shownPlanB ? planSectionMap(shownPlanB) : {}), [shownPlanB])
 
   // #里程碑4(#11):课表页当前选中的排法(单方案模式的 soloPlanId，或对比模式下的 A)
   // 同步到导出页的 selectedExportPlanId——课表选了排法 5,进导出页时默认就是排法 5。
@@ -1970,6 +1977,8 @@ export default function App() {
         codes={committed}
         collapsed={committedTTCollapsed}
         colorFor={colorForCode}
+        currentA={planASectionMap}
+        currentB={planBSectionMap}
         currentTermOrder={currentTermOrder}
         disabledCandidateKeys={disabledCandidates}
         pins={pins}
