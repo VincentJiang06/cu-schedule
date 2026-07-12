@@ -57,6 +57,27 @@ function groupByComponent(course: Course): Map<string, Section[]> {
   return byComponent
 }
 
+/** #修复5(section 高亮改纯函数推导):一个 chip 该带哪些高亮 class，只由三件事决定——
+ * 这个 component 有没有被锁定在这个 section 上(pinnedId)、当前 A(或单方案)排法用不用
+ * 这个 section、当前 B 排法用不用它。三者都是每次渲染直接从 props 读到的值，这个函数本身
+ * 不持有任何状态，调用方每次渲染都重新调用一遍——pin 被取消、排法切换、AB ↔ 单方案切换，
+ * 下一帧算出来的结果自然跟着变，不会有「旧高亮清不掉」这回事(没有 imperative 加类，没有
+ * ref，没有跨渲染保留的本地状态)。 */
+function sectionChipState(
+  pinnedId: string | undefined,
+  currentA: Record<string, string> | undefined,
+  currentB: Record<string, string> | undefined,
+  component: string,
+  sectionId: string,
+): { on: boolean; curClass: string; curHint: string } {
+  const on = pinnedId === sectionId
+  const isCurA = currentA?.[component] === sectionId
+  const isCurB = currentB?.[component] === sectionId
+  const curClass = isCurA && isCurB ? ' cl-chip--cur-ab' : isCurA ? ' cl-chip--cur-a' : isCurB ? ' cl-chip--cur-b' : ''
+  const curHint = isCurA && isCurB ? ' · A、B 都用这个' : isCurA ? ' · 当前 A 用这个' : isCurB ? ' · 当前 B 用这个' : ''
+  return { on, curClass, curHint }
+}
+
 /** Interactive rows: every component with more than one section becomes pinnable chips. */
 function CoursePicker({
   course,
@@ -92,18 +113,15 @@ function CoursePicker({
             <span className="cl-pick__label">{component}</span>
             <div className="cl-pick__chips">
               {sections.map((section, index) => {
-                const on = chosenId === section.id
                 // LEC 的多个可选段用 1/2/3/4 编号（而非 cohort 字母），更直观；
                 // 其余 component（TUT/LAB…）保留原本的 cohort+组号标签。
                 const label = component === 'LEC' ? String(index + 1) : sectionLabel(section, index)
-                // #里程碑6:当前选中排法用到这个 section 时高亮——A / B 各自独特样式
+                // #修复5:高亮/锁定 class 全部由 sectionChipState 纯推导——A / B 各自独特样式
                 // (环形描边颜色不同)，两者都用同一 section 时叠两圈描边，一眼分得出
                 // 「A 专属 / B 专属 / A、B 都用它」。与 on(锁定/已约束)是两套独立视觉，
-                // 互不覆盖，可以同时出现在同一个 chip 上。
-                const isCurA = currentA?.[component] === section.id
-                const isCurB = currentB?.[component] === section.id
-                const curClass = isCurA && isCurB ? ' cl-chip--cur-ab' : isCurA ? ' cl-chip--cur-a' : isCurB ? ' cl-chip--cur-b' : ''
-                const curHint = isCurA && isCurB ? ' · A、B 都用这个' : isCurA ? ' · 当前 A 用这个' : isCurB ? ' · 当前 B 用这个' : ''
+                // 互不覆盖，可以同时出现在同一个 chip 上；两者都是每次渲染重新算，state
+                // 一变(取消 pin、切 A/B/单方案)下一帧就跟着变，不会残留。
+                const { on, curClass, curHint } = sectionChipState(chosenId, currentA, currentB, component, section.id)
                 return (
                   <button
                     className={`cl-chip${on ? ' cl-chip--on' : ''}${curClass}`}
