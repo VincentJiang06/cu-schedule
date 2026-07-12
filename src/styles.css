@@ -1138,13 +1138,15 @@ select {
   padding: 26px 12px;
 }
 
-/* #里程碑2(内部滚动):固定一个上限高度，课多时列表自己滚，不再无限撑高卡片——给后面
-   陆续搬进来的更多课留出空间。滚动条隐藏(scrollbar-width:none + ::-webkit-scrollbar)，
-   滚动能力本身不受影响，与 .plan-strip__rail 同一手法。 */
+/* #修复1(默认更高):「当前课程」这类卡本身就该相对高、能舒展显示当前几门课——上限从
+   320px(挤得只剩一两行)提到一个宽松得多的值，只有课程门数真的很多时才会碰到上限自己
+   滚，而不是常态性地被压矮。滚动能力保留(超限仍会滚)，滚动条隐藏(scrollbar-width:none
+   + ::-webkit-scrollbar)，与 .plan-strip__rail 同一手法；外层 .side 本身也会在整栏
+   内容超高时兜底内滚(见 .side 的 max-height + overflow-y)，两层滚动不冲突。 */
 .cl__rows {
   flex: 1;
   min-height: 0;
-  max-height: 320px;
+  max-height: min(78vh, 900px);
   overflow-y: auto;
   scrollbar-width: none;
   list-style: none;
