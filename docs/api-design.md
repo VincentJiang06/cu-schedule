@@ -159,18 +159,28 @@ requiredCourseKeys(p) / programCourseKeys(p, scope) / allCourseKeys(p): Set<stri
 - `programs.json` 字段为 snake_case,课程包为短键——已被类型覆盖,统一留待下次
   wire 变更。
 
-## 6. 将来若要"用户账号/多设备同步"(当前不做)
+## 6. 用户账号 / 多设备同步(前端调用面)
 
-原则不变:目录仍走静态,只为用户状态建微型 API。
-状态模型(把 localStorage 的混存拆开):
-```json
-{ "taken": ["CSCI1130"],
-  "selections": { "2026-27-term-1": { "committed": ["MATH2050"] } },
-  "updatedAt": "…" }
-```
-接口只需 `GET /api/v1/me` + `PUT /api/v1/me`(`If-Match` ETag,409 冲突客户端合并
-重试)。每用户 <2KB、互相独立,服务端仍零计算。未登录/离线继续用 localStorage,
-登录时一次性合并。
+原则不变:目录仍走静态,只为用户状态建微型 API;服务端零计算。
+
+账号的**服务端由部署方的私有扩展承担**(`/api/v1/*`,独立进程,不随本仓库分发——
+见 `deploy/nginx.conf` 的 `/api/v1/` 反代与 `deploy/entrypoint.sh` 的条件启动)。
+本仓库只包含**前端调用面**(`src/lib/cloud.ts`):克隆本仓库自部署时若无该服务,
+账号按钮会提示连不上服务器,其余功能不受影响。
+
+**前端侧契约**(以 `cloud.ts` 为权威):
+
+- 云端配置形状 = `ConfigMdState`(与 `.md` 备份**同一套**可携带状态,共用
+  `configMd.ts` 的 `sanitizeConfigState` 校验,两条携带通道一个 schema 裁决处)+
+  `enrollYear` + `programId` + `planSigs {solo,a,b}`。排法用 `plan.id`(排序 section id
+  连接)做签名持久化——数据更新后序号会漂,签名按内容回配,失配静默放弃。
+- **同步策略**(App.tsx):登录期间一切可携带状态编辑 → 1.5s 防抖自动 PUT(与 `#st=`
+  replaceState 同手感);带凭据启动 → 以云端为准(boot pull;URL 带 `#st=` 时例外,
+  链接状态优先);登录时云端已有存档且本地非空 → 界面内联二选一(载入云端 / 本地覆盖)。
+  未登录/离线一切照旧走 localStorage。冲突模型 = last-write-wins,不做合并。
+- **改动规则**:云端配置加字段 = 同时改 `ConfigMdState`(configMd.ts)+
+  `sanitizeCloudConfig`(cloud.ts)+ `buildCloudConfig`/`applyCloudConfig`(App.tsx)
+  四处,漏一处就是静默丢字段;服务端对 config 内容零感知(整包存取)。
 
 ## 7. 合规
 

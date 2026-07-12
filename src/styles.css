@@ -1155,6 +1155,14 @@ select {
   padding: 13px 14px;
 }
 
+/* 课表页右栏(.stage 是课表页专用)：大课表在自己的 pane 内竖向滚动 → 整个文档不再因
+   课表变高而滚动，左侧 .side(上下班时间等)于是稳稳吸顶、不随页面滚走，和信息/选课页
+   的侧栏行为一致。min-height:0 让它在 flex 链里能收缩、触发内部滚动而不是撑高父级。 */
+.stage {
+  min-height: 0;
+  overflow-y: auto;
+}
+
 .pane__title {
   margin: 0;
   font-size: 13px;
@@ -1508,6 +1516,276 @@ select {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* ---- 账号(右上角人头入口 + 锚定弹层) ------------------------------------------------
+   按钮与 .bar__theme 同规格;登录前=描边人头(ink-2),登录后=首字母实心头像(--brand 底
+   --on-brand 字)+ 右下角同步状态小点——两种状态一眼可辨。弹层沿用 .cmodal 的
+   surface/border/shadow 语言,fixed 锚在 header 右下方(z 高于 header 的 40)。 */
+
+.bar__acct {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  border-radius: 11px;
+  width: var(--bar-h);
+  height: var(--bar-h);
+  color: var(--ink-2);
+  cursor: pointer;
+}
+
+.bar__acct:hover {
+  border-color: var(--brand);
+  color: var(--ink);
+}
+
+/* 登录后:按钮本体即头像容器——边框加粗到 2px 作同步状态指示(见下方 .acct-sync--*),
+   内嵌首字母圆角矩形头像,内外圆角同心(11px 外 / 7px 内,间距 2px padding)。 */
+.bar__acct--in {
+  border-width: 2px;
+  background: transparent;
+  padding: 2px;
+}
+
+.bar__acct--in:hover .acct-avatar {
+  opacity: 0.88;
+}
+
+/* 头像:圆角矩形(与 header 按钮/卡片同一语言,不用圆形)。 */
+.acct-avatar {
+  display: inline-grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--brand);
+  color: var(--on-brand);
+  font-weight: 800;
+  line-height: 1;
+  user-select: none;
+}
+
+.bar__acct--in .acct-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+.acct-avatar--lg {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+/* 同步状态 = 登录后按钮的边框色:idle 灰 / syncing 黄(呼吸) / synced 绿 / error 红。
+   放在 .bar__acct:hover 之后,同特异性靠源序压过 hover 的 --brand 描边。 */
+.bar__acct--in.acct-sync--syncing {
+  border-color: var(--warn);
+  animation: acct-border-breathe 1.2s ease-in-out infinite;
+}
+
+.bar__acct--in.acct-sync--synced {
+  border-color: var(--ok);
+}
+
+.bar__acct--in.acct-sync--error {
+  border-color: var(--bad);
+}
+
+@keyframes acct-border-breathe {
+  50% {
+    border-color: color-mix(in srgb, var(--warn) 30%, transparent);
+  }
+}
+
+/* 弹层状态行的小圆点(文字行内的状态装饰,与头像无关)。 */
+.acct-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ink-3);
+}
+
+.acct-dot--syncing {
+  background: var(--warn);
+  animation: acct-breathe 1.2s ease-in-out infinite;
+}
+
+.acct-dot--synced {
+  background: var(--ok);
+}
+
+.acct-dot--error {
+  background: var(--bad);
+}
+
+@keyframes acct-breathe {
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.acct-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 48;
+}
+
+.acct-pop {
+  position: fixed;
+  top: calc(var(--bar-h) + 10px);
+  right: 16px;
+  z-index: 49;
+  width: min(300px, calc(100vw - 32px));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow:
+    0 24px 60px -20px rgb(10 14 22 / 0.5),
+    0 0 32px -6px color-mix(in srgb, var(--brand) 30%, transparent);
+}
+
+.acct-pop__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 750;
+}
+
+.acct-pop__sub {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+
+.acct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.acct-form input {
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: var(--surface-2);
+  color: var(--ink);
+  padding: 8px 10px;
+  font-size: 13px;
+  outline: 0;
+  width: 100%;
+}
+
+.acct-form input:focus {
+  border-color: var(--brand);
+  background: var(--surface);
+}
+
+/* 主按钮:实心 --brand(与登录后头像同语言);ghost 变体给次选项。 */
+.acct-primary {
+  border: 1.5px solid var(--brand);
+  border-radius: 9px;
+  background: var(--brand);
+  color: var(--on-brand);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.acct-primary:hover:not(:disabled) {
+  opacity: 0.88;
+}
+
+.acct-primary:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.acct-primary--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.acct-primary--ghost:hover:not(:disabled) {
+  opacity: 1;
+  border-color: var(--brand);
+}
+
+.acct-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.acct-me__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.acct-user {
+  font-weight: 750;
+  font-size: 13.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.acct-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.acct-signout {
+  border: 1.5px solid var(--line);
+  border-radius: 9px;
+  background: transparent;
+  color: var(--ink-2);
+  font-size: 12.5px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+
+.acct-signout:hover {
+  border-color: var(--bad);
+  color: var(--bad);
+}
+
+.acct-conflict {
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  padding: 10px;
+}
+
+.acct-conflict__btns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.acct-note {
+  margin: 0;
+  font-size: 12.5px;
+  color: var(--ink-2);
 }
 
 .plans {
@@ -4964,7 +5242,9 @@ select {
    mount 动画。（全站 hover 上浮/位移已在源头彻底去掉，不再需要在这里单独关。） */
 @media (prefers-reduced-motion: reduce) {
   .tt__block,
-  .tt2__block {
+  .tt2__block,
+  .acct-dot--syncing,
+  .bar__acct--in.acct-sync--syncing {
     animation: none;
   }
 }

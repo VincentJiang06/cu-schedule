@@ -125,9 +125,10 @@ function asMinutes(value: unknown): number | null {
   return typeof value === 'number' && Number.isFinite(value) ? value : null
 }
 
-/** Validate + normalize a decoded machine-readable payload; malformed → null. */
-function readMachineState(json: string): ConfigMdState | null {
-  const parsed: unknown = JSON.parse(json)
+/** Validate + normalize a plain object into ConfigMdState; malformed → null.
+ * 导出复用:云端账号配置(cloud.ts)与 .md 机读块是同一套可携带状态,共用这一个
+ * schema 裁决处——两条携带通道不允许各养一份校验。 */
+export function sanitizeConfigState(parsed: unknown): ConfigMdState | null {
   if (typeof parsed !== 'object' || parsed === null) return null
   const r = parsed as Record<string, unknown>
   if (!isStringArray(r.committed) || !isStringArray(r.taken)) return null
@@ -150,6 +151,11 @@ function readMachineState(json: string): ConfigMdState | null {
     workStart: asMinutes(r.workStart),
     workEnd: asMinutes(r.workEnd),
   }
+}
+
+/** Decode the machine-readable JSON payload of a config .md; malformed → null. */
+function readMachineState(json: string): ConfigMdState | null {
+  return sanitizeConfigState(JSON.parse(json))
 }
 
 const CODE_RE = /[A-Z]{4}\d{4}/g

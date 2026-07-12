@@ -13,3 +13,7 @@ req-audit.jsonl
 
 # 项目设计规范库(本地保留,不公开)
 fable_docs/
+.accounts-dev.db*
+
+# 站点私有扩展(部署方自备,不随仓库分发)
+server/private-api.mjs

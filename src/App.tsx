@@ -25,6 +25,20 @@ import { SubjectPicker } from './components/SubjectPicker.tsx'
 import { TimetableCompare, type GhostBlock } from './components/TimetableCompare.tsx'
 import { evaluateCandidates } from './lib/candidates.ts'
 import { copyText } from './lib/clipboard.ts'
+import {
+  cloudAuth,
+  cloudErrorText,
+  cloudLoad,
+  cloudSave,
+  clearCreds,
+  isAuthError,
+  loadCreds,
+  saveCreds,
+  USERNAME_RE,
+  type CloudConfig,
+  type CloudCreds,
+  type PlanSigs,
+} from './lib/cloud.ts'
 import { huePaint, TIMETABLE_PALETTE, type PaintTheme } from './lib/color.ts'
 import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
@@ -608,6 +622,33 @@ export default function App() {
   // 因已修互斥课而被自动移出「当前选择」的课号(非阻断提示用,按 key 去重累积)。
   const [autoRemoved, setAutoRemoved] = useState<string[]>([])
 
+  // ---- 账号(云存档槽,见 lib/cloud.ts 顶部约定) --------------------------------------
+  // 入口在 header 右上角:人头按钮 → 锚定弹层(登录表单 / 账号菜单)。
+  const [acctOpen, setAcctOpen] = useState(false)
+  const [account, setAccount] = useState<CloudCreds | null>(loadCreds)
+  const [syncStatus, setSyncStatus] = useState<'idle' | 'syncing' | 'synced' | 'error'>('idle')
+  const [syncNote, setSyncNote] = useState('')
+  // 登录时云端已有存档且本地非空 → 挂起,等用户二选一(载入云端 / 用本地覆盖)。
+  const [pendingCloud, setPendingCloud] = useState<{ config: CloudConfig; updatedAt: string | null } | null>(null)
+  const [acctUser, setAcctUser] = useState('')
+  const [acctPass, setAcctPass] = useState('')
+  const [acctBusy, setAcctBusy] = useState(false)
+  const [acctNote, setAcctNote] = useState('')
+  // 云端配置里的排法签名,等 plans 就绪后按 plan.id 回配(数据更新后序号会漂,签名不会)。
+  const pendingPlanSigsRef = useRef<PlanSigs | null>(null)
+  // 开机拉取(boot pull)结束前不许自动上传——否则本地 boot 态会抢先覆盖云端最新存档。
+  const cloudReadyRef = useRef(false)
+
+  // 账号弹层 Esc 关闭(点击遮罩关闭在 JSX 里)。
+  useEffect(() => {
+    if (!acctOpen) return
+    const onKeyDown = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') setAcctOpen(false)
+    }
+    window.addEventListener('keydown', onKeyDown)
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [acctOpen])
+
   useEffect(() => {
     loadPrograms().then(setPrograms).catch(() => {})
   }, [])
@@ -962,6 +1003,137 @@ export default function App() {
     if (source !== null && source < plans.length) setSelectedExportPlanIndex(source)
   }, [planAIndex, plans.length, soloActive, soloPlanIndex])
 
+  // ---- 账号:三个 effect(开机拉取 / 排法签名回配 / 防抖自动上传) ------------------------
+
+  // 当前完整可携带状态 → 云端配置(与 .md 导出同一形状 + 个人信息 + 排法签名)。
+  function buildCloudConfig(): CloudConfig {
+    return {
+      termSlug,
+      committed,
+      taken,
+      cart,
+      pins,
+      hideConflicts,
+      hideOutOfHours,
+      meetsOfficeHours,
+      meetsPrereq,
+      lecFits,
+      hideCompleted,
+      currentTermOnly,
+      excludeTba,
+      hideSuperseded,
+      programScope,
+      workStart,
+      workEnd,
+      enrollYear,
+      programId,
+      planSigs: {
+        solo: soloActive ? (plans[soloPlanIndex!]?.id ?? null) : null,
+        a: plans[planAIndex]?.id ?? null,
+        b: plans[planBIndex]?.id ?? null,
+      },
+    }
+  }
+
+  // 开机拉取:带着已存凭据启动 → 以云端存档为准(自动上传保证云端总是最后编辑态)。
+  // 例外:URL 带 #st=(别人分享的实时状态链接)时不拉——用户点开链接就是要看链接里的状态。
+  const termsReady = terms.length > 0
+  useEffect(() => {
+    if (!termsReady) return
+    if (!account || live) {
+      cloudReadyRef.current = true
+      return
+    }
+    let cancelled = false
+    setSyncStatus('syncing')
+    cloudLoad(account)
+      .then(({ config, updatedAt }) => {
+        if (cancelled) return
+        if (config) applyCloudConfig(config)
+        setSyncStatus('synced')
+        setSyncNote(updatedAt ?? '')
+      })
+      .catch((cause) => {
+        if (cancelled) return
+        setSyncStatus('error')
+        setSyncNote(cloudErrorText(cause))
+        if (isAuthError(cause)) handleSignOut()
+      })
+      .finally(() => {
+        if (!cancelled) cloudReadyRef.current = true
+      })
+    return () => {
+      cancelled = true
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- 只在 terms 首次就绪时跑一次
+  }, [termsReady])
+
+  // 排法签名回配:plans 就绪后按 plan.id 找回云端记录的选中排法;找不到(数据已变)静默放弃。
+  useEffect(() => {
+    const sigs = pendingPlanSigsRef.current
+    if (!sigs || plans.length === 0) return
+    pendingPlanSigsRef.current = null
+    const indexOf = (sig: string | null): number => (sig ? plans.findIndex((plan) => plan.id === sig) : -1)
+    const a = indexOf(sigs.a)
+    const b = indexOf(sigs.b)
+    const solo = indexOf(sigs.solo)
+    if (a >= 0) setPlanAIndex(a)
+    if (b >= 0) setPlanBIndex(b)
+    if (solo >= 0) {
+      setSoloPlanIndex(solo)
+      setPlanIndex(solo)
+    } else if (a >= 0) {
+      setPlanIndex(a)
+    }
+  }, [plans])
+
+  // 防抖自动上传:登录期间任何可携带状态的编辑,1.5s 静默推到云端(与 #st= 的 replaceState
+  // 同一手感)。冲突二选一挂起时暂停;凭据失效自动退出。
+  useEffect(() => {
+    if (!account || pendingCloud || !cloudReadyRef.current) return
+    const timer = window.setTimeout(() => {
+      setSyncStatus('syncing')
+      cloudSave(account, buildCloudConfig())
+        .then((updatedAt) => {
+          setSyncStatus('synced')
+          setSyncNote(updatedAt ?? '')
+        })
+        .catch((cause) => {
+          setSyncStatus('error')
+          setSyncNote(cloudErrorText(cause))
+          if (isAuthError(cause)) handleSignOut()
+        })
+    }, 1500)
+    return () => window.clearTimeout(timer)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- buildCloudConfig 的输入全在依赖里
+  }, [
+    account,
+    pendingCloud,
+    cart,
+    committed,
+    taken,
+    pins,
+    termSlug,
+    workStart,
+    workEnd,
+    enrollYear,
+    programId,
+    hideConflicts,
+    hideOutOfHours,
+    meetsOfficeHours,
+    meetsPrereq,
+    lecFits,
+    hideCompleted,
+    currentTermOnly,
+    excludeTba,
+    hideSuperseded,
+    programScope,
+    planAIndex,
+    planBIndex,
+    soloPlanIndex,
+    plans,
+  ])
+
   // #5 append-only 每课配色：课号（按 courseKey 归一）→ 调色盘槽位。committed 变化时只给
   // 尚未登记的 key 追加 map.size 作为槽位，已有 key 永不改动，故新增课不会重排既有课的颜色。
   // 课表页（TimetableCompare / 右栏列表）与导出图共用；信息/选课页仍走 subject 配色。
@@ -1148,6 +1320,100 @@ export default function App() {
     }
     reader.onerror = () => setConfigNote('导入失败：无法读取文件')
     reader.readAsText(file)
+  }
+
+  // ---- 账号:整体应用云端配置(与 handleConfigFile 同一套 setter 序,另加个人信息与排法签名) ----
+  function applyCloudConfig(cfg: CloudConfig): void {
+    // termSlug 为空/已不在本年 term 清单(数据换学年)时保持现状,别把课程清空。
+    if (cfg.termSlug && terms.some((item) => item.slug === cfg.termSlug)) setTermSlug(cfg.termSlug)
+    setCommitted(cfg.committed)
+    setTaken(cfg.taken)
+    setCart(cfg.cart)
+    setPins(cfg.pins)
+    setHideConflicts(cfg.hideConflicts)
+    setHideOutOfHours(cfg.hideOutOfHours)
+    setMeetsOfficeHours(cfg.meetsOfficeHours)
+    setMeetsPrereq(cfg.meetsPrereq)
+    setLecFits(cfg.lecFits)
+    setHideCompleted(cfg.hideCompleted)
+    setCurrentTermOnly(cfg.currentTermOnly)
+    setExcludeTba(cfg.excludeTba)
+    setHideSuperseded(cfg.hideSuperseded)
+    setProgramScope(cfg.programScope)
+    setWorkStart(cfg.workStart)
+    setWorkEnd(cfg.workEnd)
+    setEnrollYear(cfg.enrollYear)
+    setProgramId(cfg.programId)
+    setPlanIndex(0)
+    setAutoRemoved([])
+    pendingPlanSigsRef.current = cfg.planSigs
+  }
+
+  // 本地"还是白纸"的判定:登录遇到云端存档时,白纸直接载入,非白纸才让用户二选一。
+  function localIsEmpty(): boolean {
+    return (
+      committed.length === 0 && taken.length === 0 && cart.length === 0 && enrollYear === '' && programId === ''
+    )
+  }
+
+  async function pushToCloud(creds: CloudCreds): Promise<void> {
+    setSyncStatus('syncing')
+    const updatedAt = await cloudSave(creds, buildCloudConfig())
+    setSyncStatus('synced')
+    setSyncNote(updatedAt ?? '')
+  }
+
+  // 登录 / 注册(注册即登录):见 cloud.ts 顶部语义。成功后按「云端有没有存档 × 本地是否白纸」分流。
+  async function handleAccountSubmit(): Promise<void> {
+    const username = acctUser.trim()
+    if (!USERNAME_RE.test(username)) {
+      setAcctNote('用户名只能用 2–32 位字母、数字、点、横线、下划线')
+      return
+    }
+    if (acctPass.length === 0) {
+      setAcctNote('口令不能为空')
+      return
+    }
+    setAcctBusy(true)
+    setAcctNote('')
+    try {
+      const creds: CloudCreds = { username, password: acctPass }
+      const { created, hasConfig } = await cloudAuth(creds)
+      saveCreds(creds)
+      setAccount(creds)
+      setAcctUser('')
+      setAcctPass('')
+      cloudReadyRef.current = true
+      if (!hasConfig) {
+        await pushToCloud(creds)
+        setAcctNote(created ? '账号已创建,当前配置已存云端' : '已登录,当前配置已存云端')
+      } else {
+        const { config, updatedAt } = await cloudLoad(creds)
+        if (!config) {
+          await pushToCloud(creds)
+        } else if (localIsEmpty()) {
+          applyCloudConfig(config)
+          setSyncStatus('synced')
+          setAcctNote('已载入云端存档')
+        } else {
+          setPendingCloud({ config, updatedAt })
+        }
+      }
+    } catch (cause) {
+      setAcctNote(cloudErrorText(cause))
+      setSyncStatus('idle')
+    } finally {
+      setAcctBusy(false)
+    }
+  }
+
+  function handleSignOut(): void {
+    clearCreds()
+    setAccount(null)
+    setPendingCloud(null)
+    setSyncStatus('idle')
+    setSyncNote('')
+    setAcctNote('已退出,本地数据保留在这台设备上')
   }
 
   const candidates = useMemo(() => {
@@ -1739,6 +2005,112 @@ export default function App() {
       </div>
     </section>
   )
+
+  // 账号弹层(右上角人头按钮打开):未登录=登录/注册表单;已登录=账号菜单(同步状态/
+  // 冲突二选一/退出)。语义细节(注册即登录、无找回)不在界面上预先说教——错口令时的
+  // 错误文案(cloudErrorText)会在真正需要的时刻解释。
+  const syncStatusText =
+    syncStatus === 'syncing'
+      ? '同步中…'
+      : syncStatus === 'synced'
+        ? '已同步到云端'
+        : syncStatus === 'error'
+          ? syncNote || '同步失败'
+          : '未同步'
+  const accountPop = acctOpen ? (
+    <>
+      <div aria-hidden className="acct-overlay" onClick={() => setAcctOpen(false)} />
+      <div aria-label="账号" className="acct-pop" role="dialog">
+        {!account ? (
+          <>
+            <h3 className="acct-pop__title">登录 CU Schedule</h3>
+            <p className="acct-pop__sub">登录后配置自动保存到云端,换设备接着排。</p>
+            <div className="acct-form">
+              <input
+                autoComplete="username"
+                autoFocus
+                maxLength={32}
+                placeholder="用户名"
+                value={acctUser}
+                onChange={(event) => setAcctUser(event.target.value)}
+              />
+              <input
+                autoComplete="current-password"
+                maxLength={64}
+                placeholder="口令"
+                type="password"
+                value={acctPass}
+                onChange={(event) => setAcctPass(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter') void handleAccountSubmit()
+                }}
+              />
+              <button
+                className="acct-primary"
+                disabled={acctBusy}
+                type="button"
+                onClick={() => void handleAccountSubmit()}
+              >
+                {acctBusy ? '正在登录…' : '登录 / 注册'}
+              </button>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="acct-me">
+              <span aria-hidden className="acct-avatar acct-avatar--lg">
+                {account.username.slice(0, 1).toUpperCase()}
+              </span>
+              <div className="acct-me__text">
+                <span className="acct-user">{account.username}</span>
+                <span className="acct-status">
+                  <span aria-hidden className={`acct-dot acct-dot--${syncStatus}`} />
+                  {syncStatusText}
+                </span>
+              </div>
+            </div>
+            {pendingCloud && (
+              <div className="acct-conflict">
+                <p className="acct-pop__sub">云端已有存档,这台设备上也有内容。用哪份?</p>
+                <div className="acct-conflict__btns">
+                  <button
+                    className="acct-primary"
+                    type="button"
+                    onClick={() => {
+                      applyCloudConfig(pendingCloud.config)
+                      setPendingCloud(null)
+                      setSyncStatus('synced')
+                      setAcctNote('已载入云端存档')
+                    }}
+                  >
+                    载入云端存档
+                  </button>
+                  <button
+                    className="acct-primary acct-primary--ghost"
+                    type="button"
+                    onClick={() => {
+                      setPendingCloud(null)
+                      void pushToCloud(account).catch((cause) => {
+                        setSyncStatus('error')
+                        setSyncNote(cloudErrorText(cause))
+                      })
+                      setAcctNote('已用本地配置覆盖云端')
+                    }}
+                  >
+                    用本地覆盖云端
+                  </button>
+                </div>
+              </div>
+            )}
+            <button className="acct-signout" type="button" onClick={handleSignOut}>
+              退出登录
+            </button>
+          </>
+        )}
+        {acctNote && <p className="acct-note">{acctNote}</p>}
+      </div>
+    </>
+  ) : null
 
   // 信息页:「已完成课程」独立成卡。CodeInput 一体化承担手动录入(边打边搜提示 + IME 拼字
   // 安全)与已录入课程的 chip 展示/点击移除,搜索池用全年课程(已修课可能开在另一学期)。
@@ -2411,6 +2783,35 @@ export default function App() {
             ))}
           </nav>
           <div className="bar__tools">
+            {/* 账号入口:未登录=描边人头;已登录=首字母圆角矩形头像(与按钮同语言),
+                同步状态由按钮边框色标识(绿=已同步/黄=同步中/红=失败),不再用独立圆点。 */}
+            <button
+              aria-expanded={acctOpen}
+              aria-label={account ? `账号 ${account.username}` : '登录账号'}
+              className={account ? `bar__acct bar__acct--in acct-sync--${syncStatus}` : 'bar__acct'}
+              title={account ? `${account.username} · ${syncStatusText}` : '登录 / 注册'}
+              type="button"
+              onClick={() => {
+                setAcctNote('')
+                setAcctOpen((open) => !open)
+              }}
+            >
+              {account ? (
+                <span aria-hidden className="acct-avatar">
+                  {account.username.slice(0, 1).toUpperCase()}
+                </span>
+              ) : (
+                <svg aria-hidden fill="none" height="19" viewBox="0 0 24 24" width="19">
+                  <circle cx="12" cy="8" r="4" stroke="currentColor" strokeWidth="2" />
+                  <path
+                    d="M4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeWidth="2"
+                  />
+                </svg>
+              )}
+            </button>
             <button
               aria-label={`当前主题：${THEME_LABEL[theme]}，点击切换到${THEME_LABEL[nextTheme(theme)]}`}
               className="bar__theme"
@@ -2422,6 +2823,10 @@ export default function App() {
             </button>
           </div>
         </header>
+
+        {/* 账号弹层:fixed 定位锚到 header 右下方。作为 header 的兄弟渲染——放进 .bar 会被
+            其 backdrop-filter 变成 containing block,fixed 定位就不再相对视口。 */}
+        {accountPop}
 
         {error && <div className="alert">{error}</div>}
 
