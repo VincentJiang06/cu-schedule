@@ -56,21 +56,72 @@ export function courseColor(subjectOrCode: string): CSSProperties {
 /** Concrete hsl() strings for canvas rendering (fill / edge / text of one block). */
 export type CanvasPaint = { fill: string; edge: string; text: string }
 
-/** Which on-screen theme a canvas paint should mirror — a `<canvas>` can't read
- * `:root[data-theme]`, so every canvas/HTML exporter that wants theme-correct
- * blocks has to pick light or dark explicitly and pass it through. */
-export type PaintTheme = 'light' | 'dark'
+/** Which on-screen theme a canvas paint should mirror — the app has three
+ * (light/mid/dark), each with its own `:root[data-theme=…]` block in styles.css. */
+export type PaintTheme = 'light' | 'mid' | 'dark'
+
+/** Read whichever theme is currently applied to `<html>` — kept in sync by App's
+ * theme effect (and ShareView's applyTheme on mount). This is the literal "what's
+ * on screen right now" default for exporters that don't get an explicit theme
+ * (#里程碑4:PNG/HTML 单张导出要跟着用户当前正在看的主题走，不能再硬编码 'light'). */
+export function activeTheme(): PaintTheme {
+  const raw = typeof document === 'undefined' ? undefined : document.documentElement.dataset.theme
+  return raw === 'mid' || raw === 'dark' ? raw : 'light'
+}
+
+// Mirrors styles.css's three `:root[data-theme=…]` blocks' course-block tokens —
+// used only as a defensive fallback if a computed-style read is unavailable
+// (e.g. no `document`); the browser's real computed values are the source of truth.
+const FALLBACK_THEME_VARS: Record<PaintTheme, readonly [sat: number, fillL: number, edgeL: number, textL: number]> = {
+  light: [38, 93, 54, 29],
+  mid: [38, 93, 54, 29],
+  dark: [32, 24, 52, 82],
+}
+
+function parsePercent(raw: string): number | null {
+  const value = Number.parseFloat(raw)
+  return Number.isFinite(value) ? value : null
+}
+
+/**
+ * Resolve one theme's course-block CSS custom properties (`--sat`/`--fill-l`/
+ * `--edge-l`/`--text-l`) by reading them straight off styles.css via
+ * `getComputedStyle` — the single source of truth, not a hand-copied table
+ * (#里程碑4: the old hardcoded table drifted from styles.css once the three-theme
+ * light/mid/dark palette landed). If `theme` isn't the one currently applied to
+ * `<html>`, this briefly flips `data-theme` to it, reads, and flips it back before
+ * anything repaints — synchronous, so there's no visible flash (this is exactly the
+ * "探测元素/根" trick, applied to the root since the rules are `:root[data-theme=…]`).
+ */
+function readThemeVars(theme: PaintTheme): readonly [sat: number, fillL: number, edgeL: number, textL: number] {
+  const fallback = FALLBACK_THEME_VARS[theme]
+  if (typeof document === 'undefined') return fallback
+  const root = document.documentElement
+  const live = root.dataset.theme
+  const swapped = live !== theme
+  if (swapped) root.dataset.theme = theme
+  const style = getComputedStyle(root)
+  const sat = parsePercent(style.getPropertyValue('--sat')) ?? fallback[0]
+  const fillL = parsePercent(style.getPropertyValue('--fill-l')) ?? fallback[1]
+  const edgeL = parsePercent(style.getPropertyValue('--edge-l')) ?? fallback[2]
+  const textL = parsePercent(style.getPropertyValue('--text-l')) ?? fallback[3]
+  if (swapped) {
+    if (live === undefined) root.removeAttribute('data-theme')
+    else root.dataset.theme = live
+  }
+  return [sat, fillL, edgeL, textL]
+}
 
 /**
  * Resolve one hue (+ optional shade offset) into the block tint used by the canvas
- * exporters — mirrors styles.css's light values (`--sat: 38%`, `--fill-l: 93%`,
- * `--edge-l: 54%`, `--text-l: 29%`) and dark values (`--sat: 32%`, `--fill-l: 24%`,
- * `--edge-l: 52%`, `--text-l: 82%`) exactly (#里程碑2:PDF 一次导出明暗两页，两页的
- * 课块颜色都要跟屏幕上对应主题下的课表一致). Shared by subjectPaint (subject hash
- * colors) and the timetable-palette painter App builds for exports.
+ * exporters — reads the real, currently-computed `--sat`/`--fill-l`/`--edge-l`/
+ * `--text-l` for the given theme (defaults to whatever theme is active on screen
+ * right now), so exported blocks are pixel-for-pixel the same hsl() as the on-screen
+ * ones in the same theme. Shared by subjectPaint (subject hash colors) and the
+ * timetable-palette painter App builds for exports.
  */
-export function huePaint(hue: number, shade = 0, theme: PaintTheme = 'light'): CanvasPaint {
-  const [sat, fillL, edgeL, textL] = theme === 'dark' ? [32, 24, 52, 82] : [38, 93, 54, 29]
+export function huePaint(hue: number, shade = 0, theme?: PaintTheme): CanvasPaint {
+  const [sat, fillL, edgeL, textL] = readThemeVars(theme ?? activeTheme())
   return {
     fill: `hsl(${hue} ${sat}% ${fillL + shade}%)`,
     edge: `hsl(${hue} ${sat}% ${edgeL + shade}%)`,
@@ -81,10 +132,10 @@ export function huePaint(hue: number, shade = 0, theme: PaintTheme = 'light'): C
 /**
  * The same subject tint resolved to concrete `hsl()` strings for canvas rendering.
  * A `<canvas>` cannot read the `--hue`/`--shade`/`--sat`/… custom properties that
- * the DOM blocks rely on, so this mirrors styles.css's light/dark values (theme
- * defaults to light) plus the same per-subject shade offset (see huePaint).
+ * the DOM blocks rely on, so this reads them live off `<html>` (see huePaint) plus
+ * the same per-subject shade offset.
  */
-export function subjectPaint(subjectOrCode: string, theme: PaintTheme = 'light'): CanvasPaint {
+export function subjectPaint(subjectOrCode: string, theme?: PaintTheme): CanvasPaint {
   return huePaint(subjectHue(subjectOrCode), subjectShade(subjectOrCode) * SHADE_STEP, theme)
 }
 

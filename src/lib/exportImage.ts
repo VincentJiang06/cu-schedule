@@ -1,4 +1,4 @@
-import { subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
+import { activeTheme, subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
 
@@ -130,12 +130,14 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
 }
 
 /** #里程碑2:PDF 一次导出明暗两页，页面底色/线条/文字都要按主题切换——这里镜像
- * styles.css 的 --bg/--surface/--line/--line-soft/--ink/--ink-3 浅色与中间调深色取值
- * (见里程碑6 的 mid-tone 面板)，让画布页和屏幕上的对应主题读起来一致。 */
+ * styles.css 的 --bg/--surface/--line/--line-soft/--ink/--ink-3 浅色与深色取值，让画布页
+ * 和屏幕上的对应主题读起来一致。#里程碑4:补上 mid 档——mid 的 --surface/--ink 与 light
+ * 相同，只有 --line/--line-soft 更深一档，所以 mid 复用 light 的 page/ink/muted，只有
+ * faint/faintHalf(网格线)跟着 mid 的 --line 走。 */
 function themeInk(theme: PaintTheme): { page: string; ink: string; faint: string; faintHalf: string; muted: string } {
-  return theme === 'dark'
-    ? { page: '#35373e', ink: '#f0f1f4', faint: '#4b4e57', faintHalf: '#3f424a', muted: '#a1a7b2' }
-    : { page: '#ffffff', ink: '#1e2532', faint: '#e6e8ee', faintHalf: '#f0f1f5', muted: '#5c616c' }
+  if (theme === 'dark') return { page: '#35373e', ink: '#f0f1f4', faint: '#4b4e57', faintHalf: '#3f424a', muted: '#a1a7b2' }
+  if (theme === 'mid') return { page: '#ffffff', ink: '#1e2532', faint: '#c5c8cf', faintHalf: '#d7d9df', muted: '#575c67' }
+  return { page: '#ffffff', ink: '#1e2532', faint: '#e6e8ee', faintHalf: '#f0f1f5', muted: '#5c616c' }
 }
 
 /** #里程碑4:board size 是参数而不是模块常量——PNG 按选中的画面比例算出自己的
@@ -326,15 +328,18 @@ function renderTimetable(
 
 /** Render the timetable to a 2× PNG at the chosen aspect ratio (defaults to the
  * original 8:5 board), trigger a download, and return the file name.
- * #里程碑4:aspect 由导出页的六个比例按钮(或自定义 w:h)决定。 */
+ * #里程碑4:aspect 由导出页的六个比例按钮(或自定义 w:h)决定;theme 不传时用
+ * activeTheme() 读取用户当前正在看的主题(light/mid/dark)，导出图与屏幕所见即所得——
+ * 不再像以前那样不管用户在哪个主题下都硬导 'light'。 */
 export async function exportImage(
   plan: Plan,
   termName: string,
   paint: PaintFn = defaultPaint,
   aspect: Aspect = { w: 8, h: 5 },
+  theme?: PaintTheme,
 ): Promise<string> {
   const { W, H } = canvasSize(aspect)
-  const canvas = renderTimetable(plan, termName, paint, 'light', W, H)
+  const canvas = renderTimetable(plan, termName, paint, theme ?? activeTheme(), W, H)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
   if (!blob) throw new Error('生成图片失败')
   const filename = `cu-schedule-${slugTerm(termName)}.png`
