@@ -735,7 +735,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": "23 units of courses chosen from the",
+              "note": "23 units of courses",
               "courses": [
                 {
                   "code": "MATH1030",
@@ -790,7 +790,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "3 units of course chosen from",
+              "note": "3 units of course",
               "courses": [
                 {
                   "code": "MATH2060",
@@ -815,7 +815,7 @@
               "marker": "(iii)",
               "title": "",
               "units": null,
-              "note": "3 units of course chosen from",
+              "note": "3 units of course",
               "courses": [
                 {
                   "code": "MATH3270",
@@ -983,7 +983,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "9 units of courses that have not",
+              "note": "9 units of courses that have not been used to fulfill requirements of 2(a) and 3(a)(i), chosen according to either (A) or (B) below: (A) 9 units of MATH courses at 3000 or above level except MATH4400 and 4900 (B) 9 units of courses chosen from one of the following groups of subject areas Group 1: CHEM, EESC, LSCI, PHYS Group 2: DSPS, RMSC, STAT Group 3: DOTE, ECON Group 4: AIST, CSCI, IERG",
               "courses": [
                 {
                   "code": "MATH4400",

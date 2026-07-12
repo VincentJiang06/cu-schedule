@@ -1558,7 +1558,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "GPAD1020 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "GPAD1020",
@@ -2279,7 +2279,7 @@
               "marker": "(vi)",
               "title": "",
               "units": null,
-              "note": "Seminar courses at 4000 level",
+              "note": "Seminar courses at 4000 level: GPAD4010, 4020, 4027, 4030, 4065, 4077, 4080, 4111, 4142, 4200, 4211, 4225, 4335, 4385 Of the Elective Courses, at least nine courses (27 units), including the two (6 units) capstone courses, should be at 2000 or above level.",
               "courses": [
                 {
                   "code": "GPAD4010",

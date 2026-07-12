@@ -427,6 +427,31 @@ function main() {
       p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
   }
 
+  // case 9: 签名3(note 半句截断)R4 修复 —— 规则续行被课号列表卡断致 note 只剩 marker 行
+  // 碎片。两族:(i) 规则跨行到课单前 "At least five courses chosen from" + "the following
+  // (…): PSYC1020, …" 曾冻结为 "…chosen from"(dangling);(ii) 整段叙述式规则里顺带点名一
+  // 门课 "…other than PHIL1110 … are elective courses. Students …" 曾被当纯课单整段丢 note。
+  // 断言两族的 note 回到完整句(非空、非 dangling 结尾)。
+  {
+    const p = byId.get('2025:B.S.Sc. in Psychology')
+    const n3 = p && topByMarker(p, '3.')
+    const a = childByMarker(n3, '(a)')
+    const b = childByMarker(n3, '(b)')
+    const dang = /\b(from|the|of|to|and|or|with|at|below|following)\s*$/i
+    const okA = !!a && /At least five courses chosen from the following/i.test(a.note || '') && !dang.test((a.note || '').trim())
+    const okB = !!b && /capstone courses/i.test(b.note || '') && !dang.test((b.note || '').trim())
+    assert('PSYC2025 §3(a)/(b) note 续行完整不 dangling', okA && okB,
+      `(a)="${norm(a?.note || '')}" (b)="${norm(b?.note || '')}"`)
+  }
+  // case 10: 签名3 第二族 —— PHIL2023 §3 叙述式规则(顺带点名 PHIL1110)整段保留为 note,
+  // 不再因含课号被当纯课单丢弃(与 case 3 的 length>20 呼应,这里锁具体句首,防回退)。
+  {
+    const p = byId.get('2023:B.A. in Philosophy')
+    const n3 = p && topByMarker(p, '3.')
+    const ok = !!n3 && /All\s+Philosophy courses other than PHIL1110/i.test(norm(n3.note || ''))
+    assert('PHIL2023 §3 叙述式 note 整段保留', ok, n3 ? `note="${norm(n3.note || '').slice(0, 70)}…"` : 'node missing')
+  }
+
   const p6Fail = p6.filter((c) => !c.ok).length
 
   // --------------------------------------------------------------------- 输出

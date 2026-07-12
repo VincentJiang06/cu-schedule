@@ -845,7 +845,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "HIST1000 and any two courses",
       "courses": [
         {
           "code": "HIST1000",
@@ -950,7 +950,7 @@
       "marker": "2.",
       "title": "Required Courses",
       "units": 12,
-      "note": null,
+      "note": "HIST1001, 1002 Capstone Courses",
       "courses": [
         {
           "code": "HIST1001",
@@ -982,7 +982,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "(b) | Complete 51 units of HIST courses in",
+          "note": "(b) | Complete 51 units of HIST courses in addition to the HIST courses listed in (1) and (2) above, with: at least 6 units from: HIST2002, 2005, 2006, 2007 at least 9 units",
           "courses": [
             {
               "code": "HIST2002",

@@ -1338,7 +1338,7 @@
           "marker": "(a)",
           "title": "",
           "units": 3,
-          "note": "Any one course chosen from the",
+          "note": "Any one course chosen from the following basic courses",
           "courses": [
             {
               "code": "CHLL2121",
@@ -1572,7 +1572,7 @@
           "marker": "(c)",
           "title": "",
           "units": 4,
-          "note": "A minimum of 4 units chosen from the following Language",
+          "note": "A minimum of 4 units chosen from the following Language Teaching Methodology courses",
           "courses": [
             {
               "code": "CLED2540",
@@ -1613,7 +1613,7 @@
           "marker": "(d)",
           "title": "",
           "units": 2,
-          "note": "A minimum of 2 units chosen from the following Educational",
+          "note": "A minimum of 2 units chosen from the following Educational Studies courses",
           "courses": [
             {
               "code": "EDUC2210",

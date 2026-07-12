@@ -568,7 +568,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": 24,
-      "note": null,
+      "note": "All Philosophy courses other than PHIL1110 and the 30 units of required courses listed in (2) are elective courses. Students are required to take at least 6 units each from Areas 1, 2 and 3. Final year students are allowed to take a maximum of 6 units of courses from Area 5.",
       "courses": [
         {
           "code": "PHIL1110",

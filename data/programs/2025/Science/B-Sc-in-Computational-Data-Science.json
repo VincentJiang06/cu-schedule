@@ -1193,7 +1193,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Machine Learning: Choose 3 units from",
+          "note": "Machine Learning: Choose 3 units",
           "courses": [
             {
               "code": "CSCI3230",
@@ -1220,7 +1220,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "Sampling and Computing Methods: Choose 6",
+          "note": "Sampling and Computing Methods: Choose 6 units",
           "courses": [
             {
               "code": "STAT3003",
@@ -1258,7 +1258,7 @@
           "marker": "(e)",
           "title": "",
           "units": null,
-          "note": "Statistical Modeling: Choose 3",
+          "note": "Statistical Modeling: Choose 3 units",
           "courses": [
             {
               "code": "STAT3005",
@@ -1301,7 +1301,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Data Science Choose at least 6 units from CSCI courses, at least 6 units from RMSC/STAT courses, and at least 9 units of courses at 4000 or above level",
           "courses": [
             {
               "code": "CENG5030",
@@ -1604,7 +1604,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": "Choose at least 3 units from the",
+              "note": "Choose at least 3 units",
               "courses": [
                 {
                   "code": "PHPC1001",
@@ -1625,7 +1625,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "Choose at least 3 units from the",
+              "note": "Choose at least 3 units from the following: CSCI3220/ESTR3110, CSCI3290, STAT3210, STAT4008 Remaining units can be chosen from any courses under item 5(a) Computational Data Science",
               "courses": [
                 {
                   "code": "CSCI3220",

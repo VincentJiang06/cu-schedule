@@ -1018,7 +1018,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Finance and Business (12 units from the following, including at least",
+          "note": "Finance and Business (12 units from the following, including at least 9 units of FINA courses, with no more than six one-unit FINA courses)",
           "courses": [
             {
               "code": "ACCT2151",
@@ -1051,7 +1051,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Research (3 units from the following)",
           "courses": [
             {
               "code": "GLEF4070",

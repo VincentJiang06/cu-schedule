@@ -545,7 +545,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Any three courses",
       "courses": [
         {
           "code": "ANTH1020",

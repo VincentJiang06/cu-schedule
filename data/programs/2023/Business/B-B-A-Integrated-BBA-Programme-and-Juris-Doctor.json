@@ -1898,7 +1898,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "15 units of FINA courses at 3000 or above level, with no more than",
+              "note": "15 units of FINA courses at 3000 or above level, with no more than three 1-unit FINA courses",
               "courses": [],
               "children": []
             }
@@ -2281,7 +2281,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "12 units of DOTE/FINA/MGNT/MKTG",
+              "note": "12 units of DOTE/FINA/MGNT/MKTG courses at 3000 or above level, excluding the courses taken for fulfillment of requirement (i), with no more than three 1-unit FINA courses",
               "courses": [],
               "children": []
             }

@@ -917,7 +917,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "CURE1110 and any two courses",
       "courses": [
         {
           "code": "CURE1110",
@@ -1038,7 +1038,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "course from the following selected courses from Area 1",
           "courses": [
             {
               "code": "CURE2113",
@@ -1063,7 +1063,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "course from the following selected courses from Area 2",
           "courses": [
             {
               "code": "CURE1124",
@@ -1092,7 +1092,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "course from the following selected courses from Area 4",
           "courses": [
             {
               "code": "CURE2154",
@@ -1121,7 +1121,7 @@
           "marker": "(e)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Capstone course from the following selected courses from Area 5",
           "courses": [
             {
               "code": "CURE4153",
@@ -1180,7 +1180,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "9 CURE courses at 2000 or",
+          "note": "9 CURE courses at 2000 or above level, of which at least 2 courses are from the Cultural Studies Areas and at least 7 courses are from the Religious Studies Areas Religious Education",
           "courses": [],
           "children": []
         },
@@ -1188,7 +1188,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "6 units of EDUC courses at",
+          "note": "6 units of EDUC courses at 2000 and above level from Educational Core Component offered by the Faculty of Education",
           "courses": [],
           "children": []
         },
@@ -1225,7 +1225,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "4 CURE courses at 2000 or",
+          "note": "4 CURE courses at 2000 or above level from the Religious Studies Areas Arab Studies",
           "courses": [],
           "children": []
         },
@@ -1292,7 +1292,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "3 CURE courses at 2000 or",
+          "note": "3 CURE courses at 2000 or above level from the Religious Studies Areas (except CURE2180 and 2181) Religion and Health",
           "courses": [
             {
               "code": "CURE2180",
@@ -1367,7 +1367,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "4 CURE courses at 2000 or",
+          "note": "4 CURE courses at 2000 or above level from the Religious Studies Areas",
           "courses": [],
           "children": []
         }

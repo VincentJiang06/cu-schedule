@@ -1913,7 +1913,7 @@
           "marker": "(a)",
           "title": "",
           "units": 3,
-          "note": "Any one course from the following",
+          "note": "Any one course from the following: Chemistry Courses: CHEM1380 Life Science Courses: LSCI1001, 1003 Physics Courses",
           "courses": [
             {
               "code": "CHEM1380",

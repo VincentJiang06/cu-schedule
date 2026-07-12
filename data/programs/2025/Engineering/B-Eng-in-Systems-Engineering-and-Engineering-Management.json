@@ -1282,7 +1282,7 @@
       "marker": "4.",
       "title": "Elective Courses",
       "units": 18,
-      "note": null,
+      "note": "AIST3510#/SEEM3510, CSCI4140#, ENGG1820, FTEC4001#, 4002#, 4005#, 4007#, IERG4210#, MKTG2010#, SEEM2520, 3430, SEEM3460/ESTR3504, SEEM3490, 3500, 3580, SEEM3590/ESTR3509, SEEM3620/ESTR3514, SEEM3630/ESTR3510, SEEM3680/ESTR3512, SEEM4540, 4570, 4630, 4670, SEEM4720/ESTR4506, SEEM4730/ESTR4508, SEEM4750/ESTR4510, SEEM4760/ESTR4512 Streams of Specialization There are two streams: Business Information Systems, and Decision Analytics. Students choosing a stream should take at least six courses from the corresponding list for their chosen stream. Students who do not wish to specialize in any of the two streams should follow a study scheme devised with the advice of the academic advisers of the Department.",
       "courses": [
         {
           "code": "AIST3510",
@@ -1408,7 +1408,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Required Courses (6 units): SEEM3430, 4540 Elective Courses (12 units)",
           "courses": [
             {
               "code": "SEEM3430",
@@ -1479,7 +1479,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Required Courses (6 units): SEEM3620/ESTR3514, SEEM4760/ESTR4512 Elective Courses (12 units)",
           "courses": [
             {
               "code": "SEEM3620",

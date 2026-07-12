@@ -945,7 +945,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group C: MATH1010 or 1018 or 1030 or 1038 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D",
       "courses": [
         {
           "code": "MATH1010",
@@ -1109,7 +1109,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "18 units of courses chosen according to any one",
+          "note": "18 units of courses chosen according to any one stream below",
           "courses": [],
           "children": [
             {

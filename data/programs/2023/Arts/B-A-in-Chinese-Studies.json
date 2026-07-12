@@ -587,7 +587,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "CHES1100 and any 2 courses",
       "courses": [
         {
           "code": "CHES1100",
@@ -727,7 +727,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Foundation Students are required to take any 2 courses",
               "courses": [
                 {
                   "code": "CHES1005",
@@ -760,7 +760,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Students are required to take any 2 courses",
               "courses": [
                 {
                   "code": "CHES2001",
@@ -835,7 +835,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": 33,
-      "note": null,
+      "note": "Any 33 units from the following with at least 4 courses at 3000 or above level, except the courses used for fulfillment of 2(b) above: CHES2001, 2002, 2003, 2004, 2005, 2007, 2100, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2110, 2111, 2126, 3000, 3002, 3003, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3014, 3102, 3103, 3104, 3105, 3106, 3107, 3200, 3201, 3401, 3402, 4003, 4004, 4005",
       "courses": [
         {
           "code": "CHES2001",

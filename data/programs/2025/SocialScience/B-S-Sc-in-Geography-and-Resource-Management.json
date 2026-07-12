@@ -1291,7 +1291,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "GRMD1401 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "GRMD1401",

@@ -639,7 +639,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group A: LSCI1002 Group B: CHEM1280 (preferred) or 1070 A course from the following Group C: MATH1520 (preferred) or 1010 or 1018 Group D: (PHYS1001 or 1002) (preferred) or 1111 Group E",
       "courses": [
         {
           "code": "LSCI1002",
@@ -809,7 +809,7 @@
           "marker": "(b)",
           "title": "",
           "units": 17,
-          "note": "Of the 17 units of elective courses, at least 9 units,",
+          "note": "Of the 17 units of elective courses, at least 9 units, with one laboratory course, should be taken from List A. List A: BCHE4030/4830^, 4040/4640^, 4060/4760^, 4070, 4080, 4090, 4130/4830^ List B: BIOL2420#, ENSC3520# (or LSCI3520#)/3820#, 4250#, FNSC3010#, 4150#, LSCI3012#, 3030#, 3333#, MBTE3510#, 3518#, 3560#, 3568#, 4520# List C",
           "courses": [
             {
               "code": "BCHE4030",

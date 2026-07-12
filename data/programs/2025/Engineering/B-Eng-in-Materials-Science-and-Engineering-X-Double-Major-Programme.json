@@ -3089,7 +3089,7 @@
               "marker": "i)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK: EEEN4020, ELEG3201, 3301, 3302, 4304, MASE3102, 3104, 4102 Group B: Courses offered by CUHK",
               "courses": [
                 {
                   "code": "EEEN4020",
@@ -3222,7 +3222,7 @@
               "marker": "ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK) Group A: Courses offered by CUHK: CHEM4280, EEEN4020, 4050, EESC4240, MAEG4080, MASE2202, 4206, 4302 Group B: Courses offered by CUHK",
               "courses": [
                 {
                   "code": "CHEM4280",
@@ -3359,7 +3359,7 @@
               "marker": "iii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK) Group A: Courses offered by CUHK: MAEG3020, 4010, 4020, 4080, MASE2202, 3002, 3202, 4204 Group B: Courses offered by CUHK",
               "courses": [
                 {
                   "code": "MAEG3020",
@@ -3492,7 +3492,7 @@
               "marker": "iv)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK: CHEM3230, 4303, 4786, MASE2202, 3002, 4206 Group B: Courses offered by CUHK",
               "courses": [
                 {
                   "code": "CHEM3230",
@@ -3625,7 +3625,7 @@
               "marker": "v)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK: MASE2202, 3002, 3104, 4202, 4208, PHYS1712, 2061, 2401, 2711, 3021, 3022, 3051, 3061, 3410, 4011, 4031, 4041, 4050, 4061, 4420, 4430, 4440, 4450, 4460 Group B: Courses offered by CUHK",
               "courses": [
                 {
                   "code": "MASE2202",
@@ -3806,7 +3806,7 @@
               "marker": "vi)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK(SZ): CHM3130, 3530, 3540, 4330, ENE3005, MSE3002, 3009, 3510, 4005, PHY2002, 4960 Group B: Courses offered by CUHK(SZ): BIO1001, 2002, BME3001, 3006, 4007, CSC3002, ECE2001, 4010, ENE3004, 3006, MAT2001, 2040, MSE3405, 4570, PHY3007, 3310, 3410, 4001, 4510, 4720 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "EESC4240",
@@ -3855,7 +3855,7 @@
               "marker": "vii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK(SZ)) Group A: Courses offered by CUHK(SZ): ENE3005, 3006, 4001, MSE3007, 4570 Group B: Course offered by CUHK(SZ): BIO1001, BME3001, 3006, 4007, CHM3530, CSC3002, ECE4010, MAT2001, 2040, MSE3405, 4005, PHY3007, 3310, 3410, 3421, 4001, 4510, 4720, 4960 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "ELEG4304",
@@ -3900,7 +3900,7 @@
               "marker": "viii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK(SZ): BME3006, MSE3007, 3009, 3405, 3510, 4570, PHY1910, 1920, 2610, 2650, 3007, 3120, 3410, 3420, 3650, 3820, 3950, 4001, 4510, 4650, 4720, 4810, 4960 Group B: Course offered by CUHK(SZ): BIO1001, BME3001, 4007, CHM2310, 3530, CSC3002, ECE2001, 4010, ENE3004, 3005, 3006, MAT2001, 2040 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "EESC4240",
@@ -3949,7 +3949,7 @@
               "marker": "ix)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK(SZ)) Group A: Course offered by CUHK(SZ): BIM3001, 3006, 3008, BME4007, 4011, ECE2001, MSE3002, 3004, 3007, 4005, 4570 Group B: Course offered by CUHK(SZ): BIO1001, 2004, CHM2310, 2317, 3530, CSC1006, 3002, ECE4010, 4300, ERG2001, 4001, MAT3007, 3220, PHY2001, 2002, 3002, STA4001 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "EESC4240",

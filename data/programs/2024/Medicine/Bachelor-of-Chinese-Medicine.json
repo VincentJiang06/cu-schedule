@@ -803,7 +803,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": 2,
-      "note": null,
+      "note": "At least 2 units (with a maximum of 6 units) of courses",
       "courses": [
         {
           "code": "BCME1104",

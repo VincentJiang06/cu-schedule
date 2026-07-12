@@ -526,7 +526,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group A: LSCI1002 Group B: CHEM1280 (preferred) or 1070 A course from the following Group C: MATH1520 (preferred) or 1010 or 1018 Group D: (PHYS1001 or 1002) (preferred) or 1111 Group E",
       "courses": [
         {
           "code": "LSCI1002",
@@ -673,49 +673,58 @@
           "title": "",
           "units": null,
           "note": "Elective Courses: Remaining units can be chosen from the following courses",
-          "courses": [
+          "courses": [],
+          "children": [
             {
-              "code": "BCHE3040",
-              "alts": []
-            },
-            {
-              "code": "BIOL2420",
-              "alts": []
-            },
-            {
-              "code": "BMEG2001",
-              "alts": []
-            },
-            {
-              "code": "CMBI3101",
-              "alts": []
-            },
-            {
-              "code": "LSCI1012",
-              "alts": []
-            },
-            {
-              "code": "LSCI2002",
-              "alts": []
-            },
-            {
-              "code": "STAT3210",
-              "alts": []
-            },
-            {
-              "code": "MBTE3518",
-              "alts": []
-            },
-            {
-              "code": "MBTE3558",
-              "alts": []
-            },
-            {
-              "code": "MBTE3568",
-              "alts": []
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Elective Courses",
+              "courses": [
+                {
+                  "code": "BCHE3040",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL2420",
+                  "alts": []
+                },
+                {
+                  "code": "BMEG2001",
+                  "alts": []
+                },
+                {
+                  "code": "CMBI3101",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI1012",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI2002",
+                  "alts": []
+                },
+                {
+                  "code": "STAT3210",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3518",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3558",
+                  "alts": []
+                },
+                {
+                  "code": "MBTE3568",
+                  "alts": []
+                }
+              ],
+              "children": []
             }
-          ],
-          "children": []
+          ]
         }
       ]
     },

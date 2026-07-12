@@ -372,6 +372,75 @@ def _looks_like_rule(text: str) -> bool:
     return len(t.split()) >= 3 and bool(RULE_KW.search(t))
 
 
+# A course-list "tail" is a run of course tokens (full codes / bare continuation numbers
+# / '/'-twins / cross-listed brackets) glued only by separators, and/or connectors,
+# footnote symbols and parenthetical asides — NO prose. Used to tell a genuine inline
+# course list ("…: PSYC1020, 1030, …") apart from a prose sentence that merely names a
+# code in passing ("…other than PHIL1110 and the 30 units … are electives.").
+_CL_TOKEN_RE = re.compile(
+    r"[A-Z]{4}\[[A-Z]{4}\]\d{4}"
+    r"|[A-Z]{4}\d{4}(?:/(?:[A-Z]{4})?\d{4})*"
+    r"|\d{4}(?:/(?:[A-Z]{4})?\d{4})*"
+)
+_CL_GLUE = {
+    "and", "or", "the", "a", "an", "at", "above", "below", "level", "from", "of",
+    "to", "units", "unit", "course", "courses", "capstone", "either", "both", "up",
+}
+# List-introducer plumbing a rule note ends on ("… chosen from the following", "… as
+# follows") — it points at the course list, it is not content. Trimmed off a recovered
+# note so it reads clean and doesn't dangle on "following"/"the". Parentheses and the
+# sentence period are deliberately NOT in the char class, so a balanced "(… level)" tail
+# and a full-stop-terminated sentence are left intact.
+_INTRO_TAIL_RE = re.compile(
+    r"(?:\b(?:from|the|of|to|and|or|with|at|below|following|follows|chosen|selected|"
+    r"taken|drawn|listed|as|any|an?|those|these)\b|[\s,;:])+$",
+    re.I,
+)
+
+
+def _is_courselist_tail(s: str) -> bool:
+    """True when `s` is nothing but a course list: strip footnotes, parenthetical asides
+    and every course token, and the residue must be only list-glue words / punctuation."""
+    s = FOOTNOTE_RE.sub(" ", s)
+    s = PARENS_RE.sub(" ", s)
+    s = _CL_TOKEN_RE.sub(" ", s)
+    s = re.sub(r"[,/&*|.;:()#\[\]]", " ", s)
+    return all(w.lower() in _CL_GLUE for w in s.split())
+
+
+def _lead_note(text: str) -> str | None:
+    """Recover the leading prose *rule* from a body that mixes a rule with its inline
+    course list, so the rule survives as a `note` instead of being silently swallowed
+    when the body also carries course codes. Two shapes the calendar uses:
+
+      (1)  '<rule>: CODE, CODE, …'  — a colon introduces a pure course-list tail; the
+           prose before that colon is the note ("At least five courses chosen from the
+           following (…): PSYC1020, …" -> "At least five courses chosen from the
+           following (…)"). The list-introducer plumbing is trimmed off the tail.
+      (2)  a prose sentence that only *names* a code in passing and does NOT end in a
+           course list ("All Philosophy courses other than PHIL1110 and the 30 units …
+           are elective courses. Students must take …") — the whole sentence is the note
+           (the incidental code is still emitted as a course by extract_courses, so this
+           never drops a course; invariant I1 is untouched).
+
+    A bare course list ('CODE, CODE, …') yields None. Course extraction is unchanged; this
+    only *adds* a note, so P1 (courses ⊆ structure) can never regress."""
+    for m in re.finditer(r":", text):
+        tail = text[m.end():]
+        if CODE_RE.search(tail) and _is_courselist_tail(tail):
+            pre = _INTRO_TAIL_RE.sub("", normalize_label(text[: m.start()])).strip()
+            return pre if _looks_like_rule(pre) else None
+    cm = CODE_RE.search(text)
+    if (
+        cm
+        and not _is_courselist_tail(text[cm.start():])
+        and not re.search(r"[A-Z]{4}\d{4}\s*$|\b\d{4}\s*$", text)
+    ):
+        n = normalize_label(text)
+        return n if _looks_like_rule(n) else None
+    return None
+
+
 def normalize_label(text: str) -> str:
     """Collapse whitespace, drop footnote/annotation brackets ([a], [DSME]) and a
     trailing unit tail / colon, leaving a clean human label."""
@@ -465,7 +534,11 @@ def _parse_body(text: str) -> tuple[list[dict], str | None, list[dict]]:
     if not matches:
         courses = to_program_courses(extract_courses(text))
         if courses:
-            return courses, None, []
+            # A course-bearing body may still open with (or entirely be) a prose rule —
+            # "At least five courses chosen from the following (…): CODE, …" or "All …
+            # courses other than PHIL1110 … are electives.". Recover that rule as the
+            # note instead of dropping it just because course codes are present.
+            return courses, _lead_note(text), []
         norm = normalize_label(text)
         return [], (norm if _looks_like_rule(norm) else None), []
 
@@ -535,6 +608,7 @@ def _convert_row(row: _Row) -> dict:
 
     title = ""
     note: str | None = None
+    lead_rule: str | None = None
     body_lines = list(row.cont)
     direct_courses: list[dict] = []
 
@@ -576,12 +650,18 @@ def _convert_row(row: _Row) -> dict:
                 node_units = join_units
             body_lines = body_lines[consumed:]
         else:
-            # Case C: a bare free-text rule -> note (only if it reads like one; a
-            # lone word orphaned by line-wrapping is dropped, its courses still land
-            # via the body below).
-            note = title_candidate if is_rule else None
+            # Case C: a bare free-text rule -> note. The rule frequently continues onto
+            # the wrapped body lines up to the course list ("(a) | At least five courses
+            # chosen from" + "the following (…): PSYC1020, …"). Rather than freeze the note
+            # at this marker-line fragment — which strands the continuation and dangles the
+            # note on a preposition — fold the fragment into the body so _parse_body
+            # reconstitutes the full leading-prose note (via _lead_note) in one place.
+            if is_rule:
+                lead_rule = rest_wo
 
     body_joined = " ".join(s.strip() for s in body_lines).strip()
+    if lead_rule:
+        body_joined = (norm(lead_rule) + " " + body_joined).strip()
     # A course list can carry its unit total on a wrapped continuation line
     # ("(c) | ENGG2440..., \n ENGG2780..., MATH1510 | 10"); pick it up if the
     # marker line itself didn't already state one.
@@ -592,6 +672,11 @@ def _convert_row(row: _Row) -> dict:
     direct_courses.extend(b_courses)
     if note is None and b_note:
         note = b_note
+    # Safety net for a folded Case-C rule whose body carried no separable list (so
+    # _parse_body returned no note): keep the rule itself rather than losing it.
+    if note is None and lead_rule:
+        n = _INTRO_TAIL_RE.sub("", normalize_label(lead_rule)).strip()
+        note = n if _looks_like_rule(n) else None
 
     children = pseudo + [_convert_row(c) for c in row.children]
     return {

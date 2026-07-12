@@ -1270,7 +1270,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "GLSD1001 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "GLSD1001",
@@ -1486,7 +1486,7 @@
           "marker": "(b)",
           "title": "Elective Courses",
           "units": null,
-          "note": null,
+          "note": "Any two courses from COMM3941#, 4191#, GLSD2701, 3102, 3111, 3303 and 3701 Cultures and Societies",
           "courses": [
             {
               "code": "COMM3941",
@@ -1536,7 +1536,7 @@
           "marker": "(b)",
           "title": "Elective Courses",
           "units": null,
-          "note": null,
+          "note": "Any two courses from GDRS2002#, 3005#, 3012#, 4011#, GLSD2701, 3105, 3211, 3303, 3701, PSYC3610# and URSP2400# World Politics",
           "courses": [
             {
               "code": "GDRS2002",
@@ -1594,7 +1594,7 @@
           "marker": "(b)",
           "title": "Elective Courses",
           "units": null,
-          "note": null,
+          "note": "Any two courses from GLSD2701, 3106, 3302, 3311, 3402, 3403, 3404, 3405, 3701, 4401, 4402, GPAD2185#, 3365#, 4225# and SOWK3340# Sustainability and Environment",
           "courses": [
             {
               "code": "GLSD2701",
@@ -1672,7 +1672,7 @@
           "marker": "(b)",
           "title": "Elective Courses",
           "units": null,
-          "note": null,
+          "note": "Any two courses from ARCH3424#, 4721#, GLSD2701, 3411, 3701, GRMD2404#, 3202#, 3203#, 3224#, 3404#, URSP2100# and 3300# Global Economy",
           "courses": [
             {
               "code": "ARCH3424",
@@ -1769,7 +1769,7 @@
       "marker": "4.",
       "title": "Elective Course",
       "units": 3,
-      "note": null,
+      "note": "Any one course",
       "courses": [
         {
           "code": "ARCH3424",

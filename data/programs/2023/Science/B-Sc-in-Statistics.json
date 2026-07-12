@@ -535,7 +535,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group E: STAT1011 (preferred) or 1012 Group C: MATH1010 or 1018 or 1520 A course from the following Group A: LSCI1001 or 1002 or 1012 Group B: CHEM1070 or 1072 or 1280 Group D",
       "courses": [
         {
           "code": "STAT1011",
@@ -664,7 +664,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Eight courses from the following (with at least five",
+          "note": "Eight courses from the following (with at least five from STAT or RMSC courses coded at 4000 or above level)",
           "courses": [
             {
               "code": "RMSC4004",

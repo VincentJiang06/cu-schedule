@@ -826,7 +826,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "9 units of courses chosen from one",
+              "note": "9 units of courses chosen from one of the following subject areas: CSCI, ECON, PHYS, STAT",
               "courses": [],
               "children": []
             }

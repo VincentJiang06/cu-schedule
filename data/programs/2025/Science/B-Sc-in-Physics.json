@@ -787,7 +787,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group D: PHYS1111 or 1113 Group C: MATH1010 or 1018 A course from the following Group B: CHEM1070 or 1072 or 1280 Group E: STAT1011 or 1012 Group",
       "courses": [
         {
           "code": "PHYS1111",
@@ -949,7 +949,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": null,
-      "note": null,
+      "note": "27 or 24 units of the following courses: | 27 or 24 CSCI3320, EESC4010, 4520, MATH3290, 4030, PHYS2061 or equivalent, PHYS2401, 2610, 3022, 3023, 3031, 3051, 3061, 3403, 3410, 3420, 3430, 3440, 3610, 3630, 3730, 3810, 4011, 4021, 4031, 4041, 4050, 4051, 4061, 4420, 4430, 4440, 4450, 4460, 4470, 4480, 4490, 4491, 4492, 4620, 4630, 4710, 4711, 4712, 4802, 4811, 4812, and all PHYS and MSEG courses at 5000 level. Students may seek approval from the Department to substitute up to 6 units of elective courses with relevant courses at the appropriate (typically 2000 and above) level offered by other programmes.",
       "courses": [
         {
           "code": "CSCI3320",
@@ -1186,7 +1186,7 @@
               "marker": "(b)",
               "title": "",
               "units": null,
-              "note": "Elective courses (of which at least two courses from",
+              "note": "Elective courses (of which at least two courses from MATH4030, PHYS4011, 4021, 4041, 4460): MATH3290, 4030, PHYS3031, 4011, 4021, 4031, 4041, 4050, 4051, 4061, 4420, 4430, 4460, 4470 | 15 or 12",
               "courses": [
                 {
                   "code": "MATH4030",

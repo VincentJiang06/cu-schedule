@@ -980,7 +980,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "FAAS1900 and any two courses",
       "courses": [
         {
           "code": "FAAS1900",
@@ -1081,7 +1081,7 @@
       "marker": "2.",
       "title": "Required Courses",
       "units": 20,
-      "note": null,
+      "note": "Art History Stream FAAS1100, 1110, 1130, 1140, 1600, 1700 Capstone courses: FAAS4180, 4183 Studio Art Stream FAAS1100, 1110, 1130, 1140, 1600, 1700 Capstone courses: FAAS4280, 4283 Art History and Studio Art Stream FAAS1100, 1110, 1130, 1140, 1600, 1700 Capstone courses",
       "courses": [
         {
           "code": "FAAS1100",

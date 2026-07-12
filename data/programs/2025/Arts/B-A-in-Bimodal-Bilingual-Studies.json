@@ -188,7 +188,7 @@
       "marker": "2.",
       "title": "",
       "units": null,
-      "note": null,
+      "note": "to the Department’s approval, students can take the following HKSL courses to substitute the courses specified in 1(c): (i) HKSL1000 and 1002 to substitute HKSL1003; (ii) HKSL2001 and 2002 to substitute HKSL2003.",
       "courses": [
         {
           "code": "HKSL1000",
@@ -221,7 +221,7 @@
       "marker": "3.",
       "title": "For",
       "units": null,
-      "note": null,
+      "note": "students whose native language is Hong Kong Sign Language (HKSL) or who possess equivalent competence in HKSL, subject to the approval of the Major Department, they should take either an option of (a) and/or (b), or a combination of (a) to (c) to fufill the Major Programme Requirements: (a) courses for a modern language other than English, Chinese and HKSL; (b) courses listed under the above study scheme, and/or courses prefixed LING, with not more than six units of courses at the level of 1000; (c) up to three units of BMBL4000 taken in the first three terms of study. The exemption arrangements are specified below: Units of HKSL Courses Exempted | Course Substitution 3 units | (a), or",
       "courses": [
         {
           "code": "BMBL4000",

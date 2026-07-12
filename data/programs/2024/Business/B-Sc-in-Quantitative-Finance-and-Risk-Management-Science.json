@@ -1211,7 +1211,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Business (choose at least 6 units of courses from the",
+          "note": "Business (choose at least 6 units of courses from the following list, but no more than six 1-unit courses)",
           "courses": [
             {
               "code": "ACCT2121",
@@ -1392,7 +1392,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Quantitative Finance (choose at least 9 units of",
+          "note": "Quantitative Finance (choose at least 9 units of courses from the following list)",
           "courses": [
             {
               "code": "FINA4110",
@@ -1425,7 +1425,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "(choose at least 9 units of courses from the following list)",
           "courses": [
             {
               "code": "CSCI3150",

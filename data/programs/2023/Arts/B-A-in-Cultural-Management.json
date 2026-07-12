@@ -487,7 +487,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "CURE1400 and any two courses",
       "courses": [
         {
           "code": "CURE1400",
@@ -668,7 +668,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "Any 12 units of CUMT courses, with",
+          "note": "Any 12 units of CUMT courses, with at least 9 units at 2000 or above level",
           "courses": [],
           "children": []
         },

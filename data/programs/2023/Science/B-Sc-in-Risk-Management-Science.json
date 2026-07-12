@@ -541,7 +541,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group C: MATH1010 (preferred) or 1018 Group E: STAT1011 One course from the following Group A: LSCI1001 or 1002 or 1012 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113, or Courses from Faculty Package of the Faculty of Business Administration",
       "courses": [
         {
           "code": "MATH1010",
@@ -699,7 +699,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Choose five courses from the",
+          "note": "Choose five courses from the following list, with at least two RMSC courses",
           "courses": [
             {
               "code": "CSCI2520",

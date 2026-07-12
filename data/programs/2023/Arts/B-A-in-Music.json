@@ -2119,7 +2119,7 @@
           "marker": "(f)",
           "title": "Stream-specific courses (Students must declare one of the following",
           "units": null,
-          "note": null,
+          "note": "areas of study) (1) Composition Supporting courses MUSC3343 One course from MUSC3323, 3333, 3373, 3383, 3712, 3722, 3732, 3742 Capstone courses MUSC3353, 3363 (2) Performance Supporting courses MUSC3012, 3022 Capstone courses MUSC4000, 4003 (3) Research Supporting courses MUSC4243 One course from MUSC3213, 3223, 3233, 3243, 3452, 3462, 3472, 3482, 3512, 3522, 3532, 3542, 3562, 3582, 3802, 3832, 3852, 3892, 3902 Capstone courses MUSC4813, 4823 (4) Pedagogy Supporting courses MUSC4243 One course from MUSC2543, 3502, 3533, 3912, 3922, 3932, 3942 Capstone courses MUSC4513, 4523",
           "courses": [
             {
               "code": "MUSC3343",
@@ -2314,7 +2314,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": null,
-      "note": null,
+      "note": "Any MUSC courses other than the courses taken to fulfill requirement (2) above, with up to eight units from the following ensemble courses: MUSC1013, 1023, 2013, 2023, 3013, 3023, 4013, 4023, 1014, 1024, 2014, 2024, 3014, 3024, 4014, 4024, 1015, 1025, 2015, 2025, 3015, 3025, 4015, 4025, 1016, 1026, 2016, 2026, 3016, 3026, 4016, 4026, 1017, 1027, 2017, 2027, 3017, 3027, 4017, 4027, 1018, 1028, 2018, 2028, 3018, 3028, 4018, 4028, 1019, 1029, 2019, 2029, 3019, 3029, 4019, 4029",
       "courses": [
         {
           "code": "MUSC1013",

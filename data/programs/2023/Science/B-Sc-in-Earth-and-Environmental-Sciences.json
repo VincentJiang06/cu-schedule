@@ -10041,7 +10041,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Two courses from the following",
+          "note": "Two courses from the following : | 6 Group A: LSCI1012 (preferred) or 1002 Group B: CHEM1070 (preferred) or 1072 Group D",
           "courses": [
             {
               "code": "LSCI1012",
@@ -10211,7 +10211,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Six courses for intermediate-level",
+          "note": "Six courses for intermediate-level Earth and Environmental Sciences (at least one course from each category): | 17-18 Category A: EESC2160, 3100, 3110, 3120, 3130, 3140, 3320 Category B: EESC2800, 3200, 3220, 3300, 3600, 3601, 3800 Category C",
           "courses": [
             {
               "code": "EESC2160",
@@ -10530,7 +10530,7 @@
               "marker": "(iii)",
               "title": "",
               "units": null,
-              "note": "6 units from 3(b) Advanced",
+              "note": "6 units from 3(b) Advanced Earth and Environmental Sciences",
               "courses": [],
               "children": []
             }

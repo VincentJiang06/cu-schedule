@@ -736,7 +736,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Core Courses in Physical Education, Exercise Science and",
+          "note": "Core Courses in Physical Education, Exercise Science",
           "courses": [
             {
               "code": "PHPC1001",
@@ -947,7 +947,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Theoretical Courses in Physical Education, Exercise Science",
+          "note": "Theoretical Courses in Physical Education, Exercise Science and Health | 9 Three courses",
           "courses": [
             {
               "code": "CHPR4012",
@@ -992,7 +992,7 @@
           "marker": "(b)",
           "title": "",
           "units": 1,
-          "note": "Courses in Professional Skills",
+          "note": "Courses in Professional Skills One course",
           "courses": [
             {
               "code": "SPED2112",
@@ -1009,7 +1009,7 @@
           "marker": "(c)",
           "title": "",
           "units": 2,
-          "note": "Courses in Educational Studies",
+          "note": "Courses in Educational Studies One course",
           "courses": [
             {
               "code": "EDUC2210",

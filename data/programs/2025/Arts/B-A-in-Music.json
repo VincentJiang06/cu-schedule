@@ -1315,7 +1315,7 @@
           "marker": "(e)",
           "title": "Stream-specific courses (Students",
           "units": null,
-          "note": null,
+          "note": "must declare one of the following areas of study) (1) Composition Supporting courses: MUSC3343, and one course from MUSC3323, 3333, 3373, 3383, 3712, 3722, 3732, 3742 Capstone courses: MUSC3353, 3363 (2) Performance Supporting courses: MUSC3012, 3022 Capstone courses: MUSC4000, 4003 (3) Research Supporting courses: Two courses from MUSC2543, 3213, 3223, 3233, 3243, 3452, 3462, 3472, 3482, 3502, 3512, 3522, 3532, 3533, 3542, 3562, 3582, 3802, 3832, 3852, 3892, 3902, 3912, 3922, 3932, 3942 Capstone courses: MUSC4613, 4623",
           "courses": [
             {
               "code": "MUSC3343",

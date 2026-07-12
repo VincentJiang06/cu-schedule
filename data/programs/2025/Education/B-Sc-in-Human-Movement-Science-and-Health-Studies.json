@@ -451,7 +451,7 @@
           "marker": "(a)",
           "title": "",
           "units": 6,
-          "note": "Theoretical Courses in Human Movement Science",
+          "note": "Theoretical Courses in Human Movement Science Two courses",
           "courses": [
             {
               "code": "SPED3550",
@@ -476,7 +476,7 @@
           "marker": "(b)",
           "title": "",
           "units": 6,
-          "note": "Theoretical Courses in Health Studies",
+          "note": "Theoretical Courses in Health Studies Two courses",
           "courses": [
             {
               "code": "CHPR3002",

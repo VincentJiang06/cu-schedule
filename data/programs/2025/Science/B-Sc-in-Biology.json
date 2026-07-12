@@ -632,7 +632,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group A: LSCI1002 Group B: CHEM1280 (preferred) or 1070 A course from the following Group C: MATH1520 (preferred) or 1010 or 1018 Group D: (PHYS1001 or 1002) (preferred) or 1111 Group E",
       "courses": [
         {
           "code": "LSCI1002",
@@ -774,7 +774,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "BIOL3310, 3410, 3510, 3530, 3630 (or FNSC4101# and 4102#), 3710, 4120, 4230, 4240, 4242, 4260, 4310, 4420, 4510, 4610, CMBI4101#, 4102#, 4201#, 4202#, 4203#, FNSC3010#, 3180#, LSCI2002#, 2003#, 3012#, 3030#, 3333#, 3520#, MBTE3510#, 3511#, 3518#, 3521#, 3528#, 3531#, 3550#, 3558#, 3560#, 3568#, 4320#, 4510#, 4530#, STAT3210# and any course not taken in 3(a)",
           "courses": [
             {
               "code": "BCHE3050",
@@ -831,7 +831,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "Capstone course (at least 3",
+          "note": "Capstone course (at least 3 units, with a maximum of 7 units)",
           "courses": [
             {
               "code": "BIOL4901",

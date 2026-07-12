@@ -748,7 +748,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "6 units of",
+              "note": "6 units of courses chosen from the following: | 6 SBMS3202, 3203, 3204, 3205, 3206 Concentration Area B: Strategic Management and Entrepreneurship",
               "courses": [
                 {
                   "code": "SBMS3202",
@@ -798,7 +798,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "1 course chosen",
+              "note": "1 course chosen from the following: | 1 SBMS4203, 4204 Concentration Area C: Health Services and Consultation",
               "courses": [
                 {
                   "code": "SBMS4203",
@@ -844,7 +844,7 @@
               "marker": "(ii)",
               "title": "",
               "units": 1,
-              "note": "1 course chosen from the following",
+              "note": null,
               "courses": [
                 {
                   "code": "SBMS4203",
@@ -863,7 +863,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "17-18 units of courses chosen from",
+          "note": "17-18 units of courses",
           "courses": [
             {
               "code": "EPIN1020",

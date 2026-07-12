@@ -893,7 +893,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group B: CHEM1070 Group D: PHYS1001 or 1002 or 1111 A course from the following: Group A: LSCI1001 or 1002 or 1012 Group C: MATH1520 (preferred) or 1010 (preferred) or 1018 or 1550 Group E",
       "courses": [
         {
           "code": "CHEM1070",
@@ -1048,7 +1048,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "One course from",
+          "note": null,
           "courses": [
             {
               "code": "CHEM3230",
@@ -1065,7 +1065,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "8 units from the",
+          "note": "8 units from the following lists, of which at most one CHEM course at 3000 level and one non-CHEM course: Undergraduate electives: CHEM3420, 3820, 3840, 4100, 4101, 4200, 4280, 4300, 4303, 4400, 4440, 4471, 4630, 4640, 4710, 4730, 4780, 4784, 4785, 4786, 4788 CHEM courses at 5000 level (with approval from the Department): CHEM5301, 5303, 5540, 5550, 5560, 5620, 5642, 5680, 5780, 5784, 5785, 5910, 5920 Non-CHEM courses",
           "courses": [
             {
               "code": "CHEM3420",

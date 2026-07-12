@@ -619,7 +619,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "ARCH1001 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "ARCH1001",
@@ -789,53 +789,62 @@
           "title": "",
           "units": 33,
           "note": "Other Required Courses",
-          "courses": [
+          "courses": [],
+          "children": [
             {
-              "code": "ARCH1003",
-              "alts": []
-            },
-            {
-              "code": "ARCH2222",
-              "alts": []
-            },
-            {
-              "code": "ARCH2322",
-              "alts": []
-            },
-            {
-              "code": "ARCH2323",
-              "alts": []
-            },
-            {
-              "code": "ARCH2413",
-              "alts": []
-            },
-            {
-              "code": "ARCH2422",
-              "alts": []
-            },
-            {
-              "code": "ARCH3321",
-              "alts": []
-            },
-            {
-              "code": "ARCH3424",
-              "alts": []
-            },
-            {
-              "code": "ARCH3721",
-              "alts": []
-            },
-            {
-              "code": "ARCH4425",
-              "alts": []
-            },
-            {
-              "code": "ARCH4426",
-              "alts": []
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "Required Courses",
+              "courses": [
+                {
+                  "code": "ARCH1003",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH2222",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH2322",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH2323",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH2413",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH2422",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH3321",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH3424",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH3721",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH4425",
+                  "alts": []
+                },
+                {
+                  "code": "ARCH4426",
+                  "alts": []
+                }
+              ],
+              "children": []
             }
-          ],
-          "children": []
+          ]
         }
       ]
     },

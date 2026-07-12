@@ -478,7 +478,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "ECON2011 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "ECON2011",
@@ -703,7 +703,7 @@
                   "marker": "(i)",
                   "title": "",
                   "units": null,
-                  "note": "At least 3 units from",
+                  "note": "At least 3 units",
                   "courses": [
                     {
                       "code": "ECON3160",
@@ -961,7 +961,7 @@
               "marker": "(b)",
               "title": "Elective Courses",
               "units": 6,
-              "note": null,
+              "note": "At least 6 units from CSCI3320, 4190, IERG3280/ESTR3302, SEEM4630 and 4730 For students taking two concentration areas, the courses must not overlap and count towards both concentration areas. In addition to the courses listed above, the Department may approve the inclusion of relevant selected topics courses or courses at 5000 or above level in the concentration areas.",
               "courses": [
                 {
                   "code": "CSCI3320",

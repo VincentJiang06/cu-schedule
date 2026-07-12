@@ -1262,7 +1262,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Group C: MATH1010/1018 or 1030/1038 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113 For students who specialize in streams other than Enrichment Stream",
       "courses": [
         {
           "code": "MATH1010",
@@ -1599,7 +1599,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "0-6 units of either BMED courses at 3000 or above",
+              "note": "0-6 units of either BMED courses at 3000 or above level, or courses at 2000 or above level of one non-MATH subject area offered by the Faculties/Departments of Science, Engineering, Economics and Finance. The specific subject area codes are given in explanatory note.",
               "courses": [],
               "children": [
                 {
@@ -1641,7 +1641,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": "9-18 units of courses at 2000 or above level of at",
+              "note": "9-18 units of courses at 2000 or above level of at most two non-MATH subject areas offered by the Faculties/Departments of Science, Engineering, Economics, and Finance. The specific subject area codes are given in explanatory note; and",
               "courses": [],
               "children": []
             },

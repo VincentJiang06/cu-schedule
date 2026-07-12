@@ -1783,7 +1783,7 @@
               "marker": "(iii)",
               "title": "",
               "units": null,
-              "note": "one DOTE course",
+              "note": "one DOTE course at 3000 or above level, excluding the courses taken for fulfillment of requirement (i) or (ii)",
               "courses": [],
               "children": []
             }
@@ -2337,7 +2337,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "12 units of DOTE/FINA/MGNT/MKTG",
+              "note": "12 units of DOTE/FINA/MGNT/MKTG courses at 3000 or above level, excluding the courses taken for fulfillment of requirement (i), with no more than three 1-unit FINA courses",
               "courses": [],
               "children": []
             }

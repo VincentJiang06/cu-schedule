@@ -1001,7 +1001,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "PSYC1000 and any two courses, offered by two different Programmes/Departments/Schools",
       "courses": [
         {
           "code": "PSYC1000",
@@ -1194,7 +1194,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "At least five courses chosen from",
+          "note": "At least five courses chosen from the following (including at least 12 units of courses at 3000 or above level)",
           "courses": [
             {
               "code": "PSYC1020",
@@ -1331,7 +1331,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "At least 6 units chosen from the",
+          "note": "At least 6 units chosen from the following capstone courses",
           "courses": [
             {
               "code": "PSYC4900",

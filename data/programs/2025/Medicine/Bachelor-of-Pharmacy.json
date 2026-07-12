@@ -463,7 +463,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "2 units of courses chosen from the",
+              "note": "2 units of courses chosen from the following: PHAR4204, 4205, 4302, 4303, 4304, 4305, 4306, 4307, 4308, 4309, 4310, 4350, 4401, 4402, 4403, 4501, 4601, 4901 Area of Concentration: Research",
               "courses": [
                 {
                   "code": "PHAR4204",
@@ -563,7 +563,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "At least 2 units of courses chosen",
+          "note": "At least 2 units of courses",
           "courses": [
             {
               "code": "PHAR2710",

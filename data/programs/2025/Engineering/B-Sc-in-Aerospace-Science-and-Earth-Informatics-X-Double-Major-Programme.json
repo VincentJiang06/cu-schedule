@@ -6801,7 +6801,7 @@
               "marker": "vi)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC1002, DDA3005, 3020, 4220, MAT1002, 3007, STA2001 Group B: Courses offered by CUHK(SZ): CHM1001, ECE2001, 2050, 4010, MAT2001, PHY1010, 2020, 2650, 3650, URM3030, 3120, 4020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "EESC2020",
@@ -6854,7 +6854,7 @@
               "marker": "vii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK(SZ): URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ECE2001, 2050, 3060, 4010, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT1002, 2001, 3007, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "CHEM1072",
@@ -6947,7 +6947,7 @@
               "marker": "viii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK(SZ)) Group A: Courses offered by CUHK(SZ): ECE2001, 2050, 3060, 4010, MAT1002, 3007 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT2001, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "CHEM1072",
@@ -7064,7 +7064,7 @@
               "marker": "ix)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "(CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CHM1001, ECE2001, ENE3004, 3005, 3006, 3050, 4007, 4008, PHY1010 Group B: Course offered by CUHK(SZ): CSC1002, DDA3005, 3020, 4220, ECE2050, 3060, 4010, MAT1002, 2001, 3007, PHY2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "EEEN4070",
@@ -7181,7 +7181,7 @@
               "marker": "x)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "Group A: Courses offered by CUHK(SZ): MAT1002, 2001, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ECE2001, 2050, 3060, 4010, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT3007, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
               "courses": [
                 {
                   "code": "CHEM1072",

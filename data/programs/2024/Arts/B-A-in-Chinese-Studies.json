@@ -826,7 +826,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "CHES1101 and any 2 courses",
       "courses": [
         {
           "code": "CHES1101",
@@ -951,7 +951,7 @@
           "marker": "(b)",
           "title": "Stream Courses: Students are",
           "units": null,
-          "note": null,
+          "note": "required to take 12 units according to their respective stream. | 12 International Stream (IS) Students are required to take 4 Chinese language courses from the following: CLCP1113, 1123, 1133, 1153, 2213, 2223, 2233, 2243, 2253, 3313, 3323, 3333, 4413, 4423, 4433, 4443, 4453, 4463, 4513, 4533 Chinese Native Stream (CNSS) Students are required to take any 4 courses",
           "courses": [
             {
               "code": "CLCP1113",
@@ -1116,7 +1116,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": 33,
-      "note": null,
+      "note": "International Stream (IS) Any 11 courses from the following with at least 5 CHES courses and at least 4 courses at 3000 or above level, except the courses used for fulfillment of 2(b) above: CHES2001, 2002, 2003, 2004, 2005, 2007, 2102, 2103, 2104, 2105, 2106, 2107, 2108, 2109, 2111, 2126, 3000, 3002, 3004, 3005, 3006, 3007, 3008, 3009, 3010, 3011, 3012, 3014, 3102, 3103, 3104, 3105, 3106, 3107, 3200, 3201, 3401, 3402, 4003, 4004, 4005, CLCP2213, 2223, 2233, 2243, 2253, 3313, 3323, 3333, 4413, 4423, 4433, 4443, 4453, 4463, 4513, 4533 Chinese Native Stream (CNSS) Any 11 courses from the following with at least 4 courses at 3000 or above level, except the courses used for fulfillment of 2(b) above",
       "courses": [
         {
           "code": "CHES2001",

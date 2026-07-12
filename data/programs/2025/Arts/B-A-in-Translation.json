@@ -743,7 +743,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Any 3 courses",
       "courses": [
         {
           "code": "ANTH1020",
@@ -960,7 +960,7 @@
           "marker": "(c)",
           "title": "Other Electives",
           "units": null,
-          "note": null,
+          "note": "TRAN1120, 1130, 2020, 2050, 2110, 2130, 2840, 3170, 3180, 3270, 3280, 3620, 3800, 3810, 3820, 3830, 3844, 3845, 3850, 3860, 3870, 3880, 3890, 4800, 4840 and unselected courses from Clusters A and B.",
           "courses": [
             {
               "code": "TRAN1120",

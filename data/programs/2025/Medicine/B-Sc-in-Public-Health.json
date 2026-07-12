@@ -634,7 +634,7 @@
       "marker": "3.",
       "title": "Elective Courses",
       "units": 22,
-      "note": null,
+      "note": "22 units of courses chosen from the following, with 15 units of courses chosen from Group A and 7 units of courses chosen from Group B: Group A (with a maximum of 6 units chosen from courses labeled as #): ANTH4330#, CHPR4011, 4012, GPAD3255#, GRON3412#, PHPC2007, 2020, 3010, 3014, 3015, 3016, 3017, 3018, 3024, 3026, 3034, 3415, 4025, 4028, 4029, 4031, 4032, 4033, 4040, 4041, 4042, 4043, SOCI3227#, SPED2540#, 4560#, 4570# Group B: One combination of courses chosen from the following: i) PHPC4911, 4912 and 4913 ii) PHPC3014, 4921 and 4922",
       "courses": [
         {
           "code": "ANTH4330",

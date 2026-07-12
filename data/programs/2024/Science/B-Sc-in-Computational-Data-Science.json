@@ -1164,7 +1164,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Machine Learning: Choose 3 units from",
+          "note": "Machine Learning: Choose 3 units",
           "courses": [
             {
               "code": "CSCI3230",
@@ -1206,7 +1206,7 @@
           "marker": "(d)",
           "title": "",
           "units": null,
-          "note": "Sampling: Choose 6",
+          "note": "Sampling: Choose 6 units",
           "courses": [
             {
               "code": "STAT3003",
@@ -1244,7 +1244,7 @@
           "marker": "(f)",
           "title": "",
           "units": null,
-          "note": "Statistical Modeling: Choose 3",
+          "note": "Statistical Modeling: Choose 3 units",
           "courses": [
             {
               "code": "STAT3005",
@@ -1287,7 +1287,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "Data Science Choose at least 6 units from CSCI courses, at least 6 units from RMSC/STAT courses, and at least 9 units of courses at 4000 or above level",
           "courses": [
             {
               "code": "CENG5030",
@@ -1568,7 +1568,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": "Choose 3 units from the following",
+              "note": "Choose 3 units",
               "courses": [
                 {
                   "code": "PHPC1001",
@@ -1589,7 +1589,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "Choose 3 units from the following",
+              "note": "Choose 3 units",
               "courses": [
                 {
                   "code": "CSCI3220",

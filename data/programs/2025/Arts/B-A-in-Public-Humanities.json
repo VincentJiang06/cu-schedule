@@ -607,7 +607,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "CURE1000 or 1400, and any two courses",
       "courses": [
         {
           "code": "CURE1000",
@@ -770,7 +770,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Any three courses from the",
+          "note": "Any three courses",
           "courses": [
             {
               "code": "CURE2006",
@@ -803,7 +803,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Nine courses at 2000 or above level",
+          "note": "Nine courses at 2000 or above level from Cultural Studies Areas and Cultural Management Areas, with at least seven CURE courses, excluding the courses taken to fulfill other Major Programme Requirements",
           "courses": [],
           "children": []
         },
@@ -811,7 +811,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "One course from Religious Studies",
+          "note": "One course from Religious Studies Areas Concentrations Students may choose to declare up to one concentration by taking the following elective courses in place of 3. Elective Courses above. Cultural Management",
           "courses": [],
           "children": []
         },
@@ -832,7 +832,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Nine courses at 2000 or above level",
+          "note": "Nine courses at 2000 or above level from Cultural Management Areas, with at least seven CURE courses, excluding the courses taken to fulfill other Major Programme Requirements",
           "courses": [],
           "children": []
         },
@@ -865,7 +865,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "Nine courses at 2000 or above level",
+          "note": "Nine courses at 2000 or above level from Cultural Studies Areas, with at least seven CURE courses, excluding the courses taken to fulfill other Major Programme Requirements",
           "courses": [],
           "children": []
         },

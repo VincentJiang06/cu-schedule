@@ -1194,7 +1194,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "At least 9 units of Quantitative Methods courses from",
+          "note": "At least 9 units of Quantitative Methods courses",
           "courses": [
             {
               "code": "CSCI3150",
@@ -1251,7 +1251,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "At least 12 units of Business courses",
+          "note": "At least 12 units of Business courses from the following, including at least 6 units of FINA courses, with at most 6 one-unit courses",
           "courses": [
             {
               "code": "ACCT2121",

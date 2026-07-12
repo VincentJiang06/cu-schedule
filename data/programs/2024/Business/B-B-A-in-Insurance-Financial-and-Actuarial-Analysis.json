@@ -688,7 +688,7 @@
           "marker": "(a)",
           "title": "",
           "units": 18,
-          "note": "18 units of courses from the following",
+          "note": "18 units of courses",
           "courses": [
             {
               "code": "ACCT3151",
@@ -805,7 +805,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": "3 units of Capstone course from the",
+          "note": "3 units of Capstone course",
           "courses": [
             {
               "code": "FINA4270",

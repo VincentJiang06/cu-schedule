@@ -2273,7 +2273,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "JASP1090 and any two courses",
       "courses": [
         {
           "code": "JASP1090",
@@ -2385,7 +2385,7 @@
           "marker": "(a)",
           "title": "",
           "units": 33,
-          "note": null,
+          "note": "2050, 2470*, 2480* Capstone courses",
           "courses": [
             {
               "code": "JASP1470",
@@ -2435,7 +2435,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": "Non-language/(b) language course as listed below, with at least 3",
+          "note": "Non-language/(b) language course as listed below, with at least 3 units of 4000 level language course: | 6 (without stream)",
           "courses": [],
           "children": []
         },
@@ -2596,7 +2596,7 @@
           "marker": "(b)",
           "title": "Language Courses",
           "units": null,
-          "note": null,
+          "note": "JASP1490, 2000, 3180, 3200, 3310, 3320, 3330, 3340, 3350, 3360, 3380, 3390, 3600, 4180, 4350, 4380, 4390, 4440, 4510, 4520 Students choosing a stream must take 12 units of elective courses specified below. Students are encouraged to declare their stream choice as soon as possible and not later than the summer before their year of graduation. | 12 (with stream)",
           "courses": [
             {
               "code": "JASP1490",
@@ -2684,7 +2684,7 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "3 courses from the following: JASP2600, 4180, MGNT1010, 1020 1 course from the following: JASP4390, 4510, 4520, MGNT4530# Non-credit bearing internship programme (optional)",
               "courses": [
                 {
                   "code": "JASP2600",
@@ -2725,7 +2725,7 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "3 courses from the following: ANTH2350#, 2327#, JASP2520, 2600, 2910, 2920, 3480, 3500, 3700, 3900, 4110, SOCI2103# 1 course",
               "courses": [
                 {
                   "code": "ANTH2350",
@@ -2806,7 +2806,7 @@
               "marker": "(iii)",
               "title": "",
               "units": null,
-              "note": null,
+              "note": "2 courses from the following: JASP1120, 3700 1 course from the following: LING1000, 2003#, 2004#, 2005#, 2006#, 3101#, 3201#, 3204# 1 course",
               "courses": [
                 {
                   "code": "JASP1120",

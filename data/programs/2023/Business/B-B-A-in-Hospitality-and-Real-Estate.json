@@ -1212,7 +1212,7 @@
           "marker": "(a)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "HTMG3020, 3060, 3521, 3527, 4600 (with a topic in Hospitality) To further strengthen the stream area, students are recommended to take MGNT 4050, 4060, 4140, 4540, MKTG3020, 3030, 4040, 4080 for free electives.",
           "courses": [
             {
               "code": "HTMG3020",
@@ -1257,7 +1257,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "HTMG3502, 3523, 4100, 4190, 4600 (with a topic in Real Estate) To further strengthen the concentration area, students are recommended to take ECON3440, FINA3010, 3060, 3080, GRMD2105 for free electives.",
           "courses": [
             {
               "code": "HTMG3502",
@@ -1457,7 +1457,7 @@
           "marker": "(b)",
           "title": "",
           "units": null,
-          "note": null,
+          "note": "least 3 units of courses",
           "courses": [
             {
               "code": "HTMG3590",

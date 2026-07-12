@@ -407,7 +407,7 @@
       "marker": "1.",
       "title": "Faculty Package",
       "units": 9,
-      "note": null,
+      "note": "Any three courses",
       "courses": [
         {
           "code": "ANTH1020",
@@ -508,7 +508,7 @@
       "marker": "2.",
       "title": "Required Courses",
       "units": 28,
-      "note": null,
+      "note": "CURE1122, PHIL1110, THEO1211, 1212, 2235, 2236, 2241, 3221 Capstone Courses",
       "courses": [
         {
           "code": "CURE1122",
@@ -564,7 +564,7 @@
           "marker": "(a)",
           "title": "",
           "units": 9,
-          "note": "One course from each of Theological",
+          "note": "One course from each of Theological Studies Areas 2, 4 and 5",
           "courses": [],
           "children": []
         },
@@ -572,7 +572,7 @@
           "marker": "(b)",
           "title": "",
           "units": 12,
-          "note": "At least two courses at 2000 or",
+          "note": "At least two courses at 2000 or above level from each of Theological Studies Areas 1 and 3",
           "courses": [],
           "children": []
         },
@@ -580,7 +580,7 @@
           "marker": "(c)",
           "title": "",
           "units": null,
-          "note": "12 units of elective courses chosen",
+          "note": "12 units of elective courses chosen from the following: | 12 All THEO courses other than those taken in 2, 3(a) and (b) above, and all CURE courses except those listed under Cultural Studies Areas",
           "courses": [],
           "children": []
         }
