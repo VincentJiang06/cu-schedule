@@ -2124,6 +2124,7 @@ select {
 }
 
 .plan-card {
+  position: relative; /* #里程碑4:锚定右上角的删除(×)角标 */
   flex: 0 0 auto;
   display: flex;
   flex-direction: row;
@@ -2140,6 +2141,32 @@ select {
 
 .plan-card:hover {
   border-color: var(--brand);
+}
+
+/* #里程碑4:排法卡右上角的小删除角标——常态就悄悄露一半在卡片外沿，不用 hover 才现身
+   (悬停唤出会在触屏上摸不到);点击只从横条移除展示，不影响其它排法的编号(#里程碑5)。 */
+.plan-card__del {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 17px;
+  height: 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-3);
+  font-size: 11px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.plan-card__del:hover {
+  color: var(--bad);
+  border-color: var(--bad);
 }
 
 /* #12 单方案模式中被选中的排法卡。 */

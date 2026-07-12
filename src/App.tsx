@@ -541,6 +541,9 @@ export default function App() {
   const [selectedExportPlanIndex, setSelectedExportPlanIndex] = useState(0)
   // #12 单方案模式:点排法横条的方框 → 只看这一个排法(退出 A/B 对比);点 A / B 按钮回到对比。
   const [soloPlanIndex, setSoloPlanIndex] = useState<number | null>(null)
+  // #里程碑4(排法逐个删除):按 plan.id 记(不是下标——下标会随过滤/生成结果漂移，id 不会)。
+  // 被删的排法从排法横条里彻底移除、不参与 A/B/solo 选择;纯会话内状态,不持久化。
+  const [deletedPlanIds, setDeletedPlanIds] = useState<Set<string>>(() => new Set())
   const [page, setPage] = useState<Page>(bootPage)
   // 当前正在播放的切页动画（null = 无动画，直接渲染单页）。
   const [transition, setTransition] = useState<PageTransition | null>(null)
@@ -960,10 +963,17 @@ export default function App() {
     return intervals
   }, [committedCourses])
 
-  const plans = useMemo(() => generatePlans(committedCourses, prefs, pins), [committedCourses, pins, prefs])
+  const generatedPlans = useMemo(() => generatePlans(committedCourses, prefs, pins), [committedCourses, pins, prefs])
+  // #里程碑4(排法逐个删除):按 plan.id 过滤——不是下标,下标会随生成结果/过滤而漂移,id 不会。
+  // 过滤发生在 generatedPlans 之后,不影响「排不出课表」的判定(那要看 generatedPlans 本身是否
+  // 为空,不该被用户手动删光可见排法而误判成排不出)。
+  const plans = useMemo(
+    () => generatedPlans.filter((plan) => !deletedPlanIds.has(plan.id)),
+    [deletedPlanIds, generatedPlans],
+  )
   const clashes = useMemo(
-    () => (plans.length === 0 && committedCourses.length > 1 ? findClashes(committedCourses, prefs, pins) : []),
-    [committedCourses, pins, plans.length, prefs],
+    () => (generatedPlans.length === 0 && committedCourses.length > 1 ? findClashes(committedCourses, prefs, pins) : []),
+    [committedCourses, generatedPlans.length, pins, prefs],
   )
   useEffect(() => {
     if (planIndex >= plans.length) setPlanIndex(0)
@@ -2416,6 +2426,23 @@ export default function App() {
                   B
                 </button>
               </div>
+              {/* #里程碑4:逐个删除——按 plan.id 记，其余排法不受影响(不重排/不改标号)。 */}
+              <button
+                aria-label={`删除排法 ${index + 1}`}
+                className="plan-card__del"
+                title="从横条移除这个排法（不影响其它排法）"
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  setDeletedPlanIds((current) => {
+                    const next = new Set(current)
+                    next.add(plan.id)
+                    return next
+                  })
+                }}
+              >
+                ×
+              </button>
             </div>
           )
         })}
