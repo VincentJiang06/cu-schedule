@@ -10,3 +10,6 @@ __pycache__/
 
 # 一次性审计产物(生成物,不入库)
 req-audit.jsonl
+
+# 项目设计规范库(本地保留,不公开)
+fable_docs/
