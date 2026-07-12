@@ -21,8 +21,6 @@ type Block = {
   end: number
   /** true = 候选(可能学)课程的试排块,右上角带小角块标记。 */
   cart?: boolean
-  /** #里程碑5:该候选课是否被点角停用——只对 cart 块有意义,置灰展示、角标切换成「点击启用」。 */
-  disabled?: boolean
   lane: number
   lanes: number
 }
@@ -100,9 +98,9 @@ function Column({
         const shownEnd = displayEndMinutes(block.end)
         // #8 LEC 实心主色块；TUT/LAB 等同 hue 的浅色斜纹+虚线变体，一眼可分。
         const isLec = block.component === 'LEC'
-        // #里程碑5:候选课试排块——即使被停用也照常渲染(只是置灰)，角上的放大三角必须留在
-        // DOM 里才点得到，用来切回启用。
-        const cartOff = Boolean(block.cart) && Boolean(block.disabled)
+        // #修复4(隐藏=彻底移除,不是置灰):停用的候选课在 App.ghostBlocksFor 里已经被整门
+        // 过滤掉，根本不会作为 block 传进来——这里不再需要「已停用」的置灰变体，角上的三角
+        // 只表达一个动作:点它 = 停用展示(整块从课表消失，要重新启用去左栏列表点眼睛)。
         // #里程碑2:lanes 越多这一列越窄,按压缩等级决定地点缩写/时间折行/component 单字母。
         const squeeze = squeezeLevel(block.lanes)
         const componentText = squeeze >= 3 ? shortComponent(block.component) : block.component
@@ -110,7 +108,7 @@ function Column({
         const foldTime = squeeze >= 2
         return (
           <article
-            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}${cartOff ? ' tt2__block--cart-off' : ''}${squeeze ? ` tt2__block--sq${squeeze}` : ''}`}
+            className={`tt2__block ${isLec ? 'tt2__block--lec' : 'tt2__block--alt'}${block.cart ? ' tt2__block--cart' : ''}${squeeze ? ` tt2__block--sq${squeeze}` : ''}`}
             key={block.key}
             style={
               {
@@ -121,7 +119,7 @@ function Column({
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}${block.cart ? (cartOff ? '（可能学 · 已停用展示，点右上角重新启用）' : '（可能学 · 试排）') : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排，点右上角隐藏）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
           >
             {/* 第1行:component + 课号——卡片太矮时靠 .tt2__block 的 overflow:hidden 截断掉下面
                的行,这一行排最前面永远最先保住。 */}
@@ -139,9 +137,9 @@ function Column({
             {block.location && <span className="tt2__block-loc">{locationText}</span>}
             {block.cart && onToggleCandidate && (
               <button
-                aria-label={cartOff ? `启用候选课 ${block.code}` : `停用候选课 ${block.code}`}
+                aria-label={`停用候选课 ${block.code}`}
                 className="tt2__cart-corner"
-                title={cartOff ? '点击重新启用该候选课' : '点击停用该候选课（灰显）'}
+                title="点击停用该候选课（课表上的试排块整块移除，去左栏列表点眼睛重新启用）"
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation()

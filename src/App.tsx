@@ -530,9 +530,10 @@ export default function App() {
   const [taken, setTaken] = useState<string[]>(bootTaken)
   // 可能学 waitlist / cart — tentative picks, held apart from 必定学 (committed).
   const [cart, setCart] = useState<string[]>(bootCart)
-  // #里程碑5:候选课在大课表上的「启用/禁用展示」开关，按 courseKey 记；纯会话内 UI 状态
-  // (不进 localStorage/URL/配置导出——与 dropHover 等临时态同一档次)。禁用只影响候选试排块
-  // 在课表上的展示(置灰,见 ghostBlocksFor 的 disabled 标记),不影响 cart 本身的成员关系。
+  // #里程碑5/#修复4:候选课在大课表上的「启用/禁用展示」开关，按 courseKey 记；纯会话内
+  // UI 状态(不进 localStorage/URL/配置导出——与 dropHover 等临时态同一档次)。禁用只影响
+  // 候选试排块在课表上的展示(彻底不生成该课的 ghost 块,见 ghostBlocksFor),不影响 cart
+  // 本身的成员关系。
   const [disabledCandidates, setDisabledCandidates] = useState<Set<string>>(() => new Set())
   const toggleCandidateDisabled = useCallback((code: string): void => {
     const key = courseKey(code)
@@ -1235,6 +1236,9 @@ export default function App() {
   // #3 候选(可能学)课程的试排块:对每门 cart 课取「与该排法不冲突的第一种全组件组合」
   //（没有就退回第一种带时间的组合,与选课页 candidates 的展示口径一致),分别为 A / B
   // (或单方案) 各算一份,叠加到大课表上,右上角小角块标记。
+  // #修复4(隐藏=彻底移除,不是置灰):被眼睛(disabledCandidates)停用的候选课直接 continue
+  // 跳过——大课表上完全不出现这门课的 ghost 块(不渲染,不是置灰)。重新启用走 CommittedList
+  // 那一侧的眼睛按钮(不再靠课表上的角标点回来,因为隐藏后角标本身也不存在了)。
   // #里程碑3(核实,导出继承隐藏):这些 ghost 块只喂给 <TimetableCompare> 做屏幕叠加展示，
   // 从不进入任何导出路径——exportPlan()/exportImage.ts/exportHtml.ts/exportWallpaper.ts/
   // ics.ts 的 blocksOf() 都只读 plan.entries(committedCourses 排出来的那个 Plan)，cart
@@ -1248,14 +1252,12 @@ export default function App() {
       for (const code of cart) {
         const course = byCode.get(courseKey(code))
         if (!course) continue
+        if (disabledCandidates.has(course.key)) continue
         const combos = courseCombos(course, NO_PREFS)
         const timed = combos.filter((combo) => comboMeetings(combo).length > 0)
         if (timed.length === 0) continue
         const fit =
           timed.find((combo) => !meetingsClash(comboMeetings(combo), planMeetings)) ?? timed[0]
-        // #里程碑5:被点角停用的候选课仍然渲染(否则用户点角之后就再也点不到它来重新启用)，
-        // 只是带上 disabled 标记，交给 Column 置灰、角标切换成「点击启用」的样式。
-        const disabled = disabledCandidates.has(course.key)
         for (const section of fit) {
           for (const meeting of section.meetings) {
             out.push({
@@ -1269,7 +1271,6 @@ export default function App() {
               start: meeting.start,
               end: meeting.end,
               cart: true,
-              disabled,
             })
           }
         }

@@ -222,8 +222,9 @@ export function CommittedList({
   showTermBadge?: boolean
   /** 拖拽起点(可选,选课页):按住整行拖到「必定学 / 可能学」目标区或拖出移除。 */
   onRowPointerDown?: (code: string, isCart: boolean, event: ReactPointerEvent<HTMLElement>) => void
-  /** #里程碑5:被点角停用的候选课(按 courseKey)——课表页这份列表用来给对应候选行加
-   * 置灰样式，与大课表上试排块的禁用展示保持一致（"并在筛选里体现"）。 */
+  /** #修复4(隐藏=彻底移除,不是置灰):被点眼睛停用的候选课(按 courseKey)——这份列表用来把
+   * 对应候选行淡出/强制收起；大课表那边由 App.ghostBlocksFor 直接不生成该课的 ghost 块
+   * (不渲染,不是置灰),两处各自表达「隐藏」，语义一致但不是同一段样式代码。 */
   disabledCandidateKeys?: Set<string>
   /** #里程碑5(隐藏/显示快速开关):候选行右侧的眼睛按钮——快速禁用/启用该候选课在课表
    * 上的展示，与大课表试排块右上角的三角 toggle 走同一个 App.toggleCandidateDisabled，
@@ -266,13 +267,16 @@ export function CommittedList({
             const orders = termOrdersByKey.get(courseKey(code)) ?? []
             const badge = orders.includes(currentTermOrder) ? currentTermOrder : orders[0]
             const isDisabledCandidate = isCart && (disabledCandidateKeys?.has(courseKey(code)) ?? false)
-            const rowCollapsed = collapsedRows.has(code)
+            // #修复4:被隐藏的候选课强制收起(与手动折叠共用同一套渲染分支)，再叠一层淡出
+            // (见 .cl-row--cart-off)——"整行淡出/收起"，眼睛切回可见态时两者一起恢复。
+            const manualCollapsed = collapsedRows.has(code)
+            const rowCollapsed = isDisabledCandidate || manualCollapsed
             return (
               <li
                 className={`${isCart ? 'cl-row cl-row--cart' : 'cl-row'}${isDisabledCandidate ? ' cl-row--cart-off' : ''}`}
                 key={code}
                 style={(colorFor ?? courseColor)(code)}
-                title={isCart ? (isDisabledCandidate ? '可能学（候选课程 · 已在课表上停用展示）' : '可能学（候选课程）') : undefined}
+                title={isCart ? (isDisabledCandidate ? '可能学（候选课程 · 已隐藏，课表上不再显示）' : '可能学（候选课程）') : undefined}
                 onPointerDown={
                   onRowPointerDown ? (event) => onRowPointerDown(code, isCart, event) : undefined
                 }
@@ -301,7 +305,11 @@ export function CommittedList({
                         <button
                           aria-label={isDisabledCandidate ? `启用候选课 ${code}` : `隐藏候选课 ${code}`}
                           className={`cl-row__eye${isDisabledCandidate ? ' cl-row__eye--off' : ''}`}
-                          title={isDisabledCandidate ? '已停用课表展示，点击重新启用' : '点击隐藏（停用课表展示，不移除候选）'}
+                          title={
+                            isDisabledCandidate
+                              ? '已隐藏（课表上的试排块已整块移除），点击重新启用'
+                              : '点击隐藏（课表上的试排块整块移除，不影响候选身份）'
+                          }
                           type="button"
                           onClick={() => onToggleCandidateDisabled(code)}
                         >
@@ -316,9 +324,8 @@ export function CommittedList({
                     </span>
                   )}
                 </div>
-                {/* #修复3:折叠态下每门课只剩上面的 head 一行，时间/地点/pin 选择器/
-                    「本学期无此课」提示统统收起，不渲染——粒度现在是每门课自己(rowCollapsed)，
-                    不再是整卡一个开关。 */}
+                {/* #修复3/#修复4:折叠态(手动折叠，或候选课被隐藏)下每门课只剩上面的 head
+                    一行，时间/地点/pin 选择器/「本学期无此课」提示统统收起，不渲染。 */}
                 {course && !rowCollapsed ? (
                   interactive && onPin && !isCart ? (
                     <CoursePicker
