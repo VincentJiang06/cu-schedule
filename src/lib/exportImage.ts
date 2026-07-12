@@ -94,13 +94,17 @@ function layOutDay(blocks: Block[]): Laid[] {
   })
 }
 
-// #TUT/LAB 等非 LEC 课块要在导出物里也和 LEC 拉开视觉差异，复刻 styles.css 的
-// `.tt2__block--lec`(实心)vs `.tt2__block--alt`(更浅填充 + 虚线左条 + 更浅边框)。
-// ALT_FILL_ALPHA 比屏幕上 alt 块的 color-mix(55%) 更淡一档，让画布导出里两种课块的
-// 深浅对比比屏幕更明显（屏幕上还有虚线角标/文案等更多线索，画布里线索少，需要更纯粹
-// 靠色深拉开差距）。
+// #TUT/LAB 等非 LEC 课块在导出物里只保留更淡的底色区分——边框、文字粗细、左侧竖条都
+// 和 LEC 完全一样，不再额外加粗体/下划线/虚线边（那批视觉噪音已撤销）。
 const ALT_FILL_ALPHA = 0.38
-const ALT_EDGE_ALPHA = 0.5
+
+// #里程碑1(圆角更明显):课块圆角从 5 调大到 9，与屏幕上加大后的 .tt__block/.tt2__block
+// (12px/10px)观感一致（画布坐标系与 CSS px 不是同一把尺子，按块本身的典型高宽比目测对齐）。
+const BLOCK_RADIUS = 9
+
+// #里程碑2:课号是等宽字体，与屏幕 .tt__block-code/.tt2__block-code 的 var(--mono) 一致，
+// 让导出图和屏幕上的课号字体保持所见即所得。
+const MONO_STACK = 'ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace'
 
 /** Alpha-blend a solid `hsl(...)` paint color toward whatever is already painted behind
  * it — a `<canvas>` has no `color-mix()`, but painting a translucent fill over an
@@ -112,23 +116,6 @@ const ALT_EDGE_ALPHA = 0.5
  */
 function withAlpha(color: string, alpha: number): string {
   return color.endsWith(')') ? `${color.slice(0, -1)} / ${alpha})` : color
-}
-
-/** Canvas has no `text-decoration` — non-LEC blocks get a hand-drawn underline instead,
- * a thin bar a couple pixels under the baseline spanning the measured text width, in
- * the same (already-set) fillStyle as the text itself. Second, color-independent cue
- * for TUT/LAB, alongside the bold font weight the caller already switched to. */
-function fillTextMaybeUnderline(
-  ctx: CanvasRenderingContext2D,
-  text: string,
-  x: number,
-  y: number,
-  underline: boolean,
-): void {
-  ctx.fillText(text, x, y)
-  if (!underline) return
-  const width = ctx.measureText(text).width
-  ctx.fillRect(x, y + 2, width, 1.4)
 }
 
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number): void {
@@ -248,60 +235,43 @@ function draw(
       const h = yOf(shownEnd) - yOf(block.start) - 2
       if (h <= 0 || w <= 0) continue
       const tint = paint(block.code, block.subject, theme)
-      // LEC = 实心主色块（屏幕上的 .tt2__block--lec）；TUT/LAB/… 等非 LEC 走更浅的
-      // alt 处理（.tt2__block--alt）：更淡的填充、虚线左条、更浅边框，再加粗体+下划
-      // 线文字，多重线索区分，不只靠色深。
+      // #里程碑3:TUT/LAB 等非 LEC 课块只保留更淡的 fill——边框/左侧竖条/文字粗细都和
+      // LEC 完全一样，不再靠加粗/下划线/虚线边额外拉开差异。
       const isLec = block.component === 'LEC'
 
-      roundRect(ctx, x, y, w, h, 5)
+      roundRect(ctx, x, y, w, h, BLOCK_RADIUS)
       ctx.fillStyle = isLec ? tint.fill : withAlpha(tint.fill, ALT_FILL_ALPHA)
       ctx.fill()
-      ctx.strokeStyle = isLec ? tint.edge : withAlpha(tint.edge, ALT_EDGE_ALPHA)
+      ctx.strokeStyle = tint.edge
       ctx.lineWidth = 1
       ctx.stroke()
 
-      if (isLec) {
-        // left accent bar — solid, mirrors .tt2__block--lec's solid border-left.
-        ctx.fillStyle = tint.text
-        ctx.fillRect(x, y, 3, h)
-      } else {
-        // left accent bar — dashed, mirrors .tt2__block--alt's `border-left: 3px dashed`.
-        ctx.strokeStyle = tint.text
-        ctx.lineWidth = 3
-        ctx.setLineDash([5, 4])
-        ctx.beginPath()
-        ctx.moveTo(x + 1.5, y + 1)
-        ctx.lineTo(x + 1.5, y + h - 1)
-        ctx.stroke()
-        ctx.setLineDash([]) // 复位——不复位下一块（甚至下一次绘制的其它实线，如网格/边框）会被带成虚线
-        ctx.lineWidth = 1
-      }
+      // left accent bar — solid，LEC 与非 LEC 画法一致。
+      ctx.fillStyle = tint.text
+      ctx.fillRect(x, y, 3, h)
 
       ctx.save()
-      roundRect(ctx, x, y, w, h, 5)
+      roundRect(ctx, x, y, w, h, BLOCK_RADIUS)
       ctx.clip()
       ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 9
       let ty = y + 20
-      // 非 LEC 文字额外加粗+手绘下划线（canvas 无 text-decoration），LEC 保持原样常规字重。
-      ctx.font = '700 16px system-ui, -apple-system, sans-serif'
-      fillTextMaybeUnderline(ctx, block.code, tx, ty, !isLec)
+      // #里程碑2:课号用等宽字体栈，与屏幕上 .tt__block-code/.tt2__block-code 的
+      // var(--mono) 保持所见即所得一致；时间/地点仍用无衬线字体。
+      ctx.font = `700 16px ${MONO_STACK}`
+      ctx.fillText(block.code, tx, ty)
       if (h > 36) {
         ty += 18
-        ctx.font = isLec
-          ? '13px system-ui, -apple-system, sans-serif'
-          : '700 13px system-ui, -apple-system, sans-serif'
-        fillTextMaybeUnderline(ctx, `${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty, !isLec)
+        ctx.font = '13px system-ui, -apple-system, sans-serif'
+        ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       }
       if (h > 58) {
         ty += 16
         const meta = block.location ? `${block.component} · ${block.location}` : block.component
-        ctx.font = isLec
-          ? '12px system-ui, -apple-system, sans-serif'
-          : '700 12px system-ui, -apple-system, sans-serif'
-        fillTextMaybeUnderline(ctx, meta, tx, ty, !isLec)
+        ctx.font = '12px system-ui, -apple-system, sans-serif'
+        ctx.fillText(meta, tx, ty)
       }
       ctx.restore()
     }

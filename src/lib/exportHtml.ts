@@ -259,19 +259,21 @@ export function buildScheduleHtml(
     border-color: var(--edge-l);
     color: var(--text-l);
   }
-  /* TUT/LAB 等非 LEC 课块：比 LEC 更淡的填充(向面板底色混)、更浅边框、虚线左条，
-     再加粗体+下划线文字(text-decoration 会顺带覆盖到子级 span，font-weight 靠继承)——
-     和屏幕上 .tt2__block--lec(实心) vs .tt2__block--alt 的区分一致。 */
+  /* #里程碑3:TUT/LAB 等非 LEC 课块只保留更淡的填充(向面板底色混)区分，边框/左侧竖条/
+     文字粗细都继承 .block(与 LEC 完全一样)——不再加粗体/下划线/虚线左条。 */
   .block.block--alt {
     background: color-mix(in srgb, var(--fill-l) 38%, #ffffff);
-    border-color: color-mix(in srgb, var(--edge-l) 50%, #ffffff);
-    border-left-style: dashed;
-    border-left-color: var(--text-l);
-    font-weight: 700;
-    text-decoration: underline;
-    text-underline-offset: 2px;
   }
-  .block__code { font-weight: 750; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* #里程碑2:课号等宽字体，与屏幕上 .tt2__block-code 的 var(--mono) 一致——这份导出
+     HTML 是完全离线的独立文件，没有 app 的 CSS 变量可复用，字体栈直接写死在这里。 */
+  .block__code {
+    font-weight: 750;
+    font-size: 12px;
+    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .block__time { font-variant-numeric: tabular-nums; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .block__meta { opacity: 0.85; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   footer { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
@@ -304,10 +306,9 @@ export function buildScheduleHtml(
   :root[data-theme='dark'] .foot-byline { color: #eceff6; }
   :root[data-theme='dark'] .foot-note { color: #7a8397; }
   :root[data-theme='dark'] .block { background: var(--fill-d); border-color: var(--edge-d); color: var(--text-d); }
+  /* #里程碑3:同浅色主题——只覆盖更淡的 background，边框/左侧竖条继承上面 .block(dark)。 */
   :root[data-theme='dark'] .block.block--alt {
     background: color-mix(in srgb, var(--fill-d) 38%, #141926);
-    border-color: color-mix(in srgb, var(--edge-d) 50%, #141926);
-    border-left-color: var(--text-d);
   }
   :root[data-theme='dark'] .theme-toggle { background: #141926; border-color: #2e3648; color: #eceff6; }
 </style>
