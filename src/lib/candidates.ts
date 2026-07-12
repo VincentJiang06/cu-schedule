@@ -53,7 +53,8 @@ export function evaluateCandidates(params: {
   const selectedMeetings = selected ? planMeetings(selected) : []
   // 「冲突」的判定基准是已选课的**全部**可行排法(不再截断到前几个):候选课只要能与其中
   // 任何一个共存就不算死冲突,只算「时间可能冲突」(rearrange)。generatePlans 本身已按
-  // MAX_PLANS 枚举了所有 section 组合下的可行排法(封顶 12 个,与课表页可选的排法一致)。
+  // MAX_PLANS 枚举了所有 section 组合下的可行排法(封顶数量见 schedule.ts 的 MAX_PLANS，
+  // 与课表页可选的排法一致)。
   const alternates = params.plans
     .filter((plan) => plan.id !== selected?.id)
     .map(planMeetings)

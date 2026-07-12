@@ -73,6 +73,7 @@ import {
   NO_PREFS,
   overlaps,
   planFitsWindow,
+  planMatchesPins,
   type Pins,
   type Plan,
   type TimeWindow,
@@ -483,14 +484,15 @@ function usePlanStripPan() {
 }
 
 /** 排法横条 / 导出页单选横条共用的滚动容器:隐藏滚动条(CSS)、支持按住拖动平移、选中项
- * 变化时自动 scrollIntoView 到可见区。子项需要各自带 data-plan-index 供这里定位。 */
-function PlanStripRail({ selectedIndex, children }: { selectedIndex: number | null; children: ReactNode }) {
+ * 变化时自动 scrollIntoView 到可见区。子项需要各自带 data-plan-id 供这里定位。
+ * #里程碑5:定位键从数组下标改成 plan.id(下标会随 pins 过滤/删除漂移，id 不会)。 */
+function PlanStripRail({ selectedId, children }: { selectedId: string | null; children: ReactNode }) {
   const { railRef, onPointerDown } = usePlanStripPan()
   useEffect(() => {
-    if (selectedIndex == null) return
-    const card = railRef.current?.querySelector<HTMLElement>(`[data-plan-index="${selectedIndex}"]`)
+    if (selectedId == null) return
+    const card = railRef.current?.querySelector<HTMLElement>(`[data-plan-id="${CSS.escape(selectedId)}"]`)
     card?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
-  }, [selectedIndex])
+  }, [selectedId])
   return (
     <div className="plan-strip__rail" onPointerDown={onPointerDown} ref={railRef}>
       {children}
@@ -533,14 +535,17 @@ export default function App() {
   // Pinned sections (e.g. TUT T01) constrain which A / B timetables the scheduler builds.
   const [pins, setPins] = useState<Pins>(bootPins)
   const [planIndex, setPlanIndex] = useState(0)
-  // 课表页 A / B 各自选中的排法下标（默认第 1、第 2 种）；plans 变化越界时重置回默认。
-  const [planAIndex, setPlanAIndex] = useState(0)
-  const [planBIndex, setPlanBIndex] = useState(1)
-  // 导出页:用户从可行排法里【只选一个】要导出的确定方案(不再 A / B)。默认第一种；
-  // plans 变化越界时重置回 0(与 planAIndex/planBIndex 同一套越界回退模式)。
-  const [selectedExportPlanIndex, setSelectedExportPlanIndex] = useState(0)
+  // #里程碑5(排法编号稳定化):A / B / 导出 / 单方案的选中排法全部按 plan.id 引用，不是
+  // 数组下标——pins 约束/删除排法都只是过滤 allPlans，下标会随之漂移，id 不会。默认落在
+  // 第一 / 第二个可见排法上，靠下面的派生值(planA/planB/…)在渲染期兜底,不需要专门的
+  // 越界回退 effect(id 不在当前可见集合里时,派生值自己会 fallback，等它以后又满足过滤
+  // 条件时也会自动"复活"，比数组下标更贴合"约束只是过滤、不改变身份"的模型)。
+  const [planAId, setPlanAId] = useState<string | null>(null)
+  const [planBId, setPlanBId] = useState<string | null>(null)
+  // 导出页:用户从可行排法里【只选一个】要导出的确定方案(不再 A / B)。
+  const [selectedExportPlanId, setSelectedExportPlanId] = useState<string | null>(null)
   // #12 单方案模式:点排法横条的方框 → 只看这一个排法(退出 A/B 对比);点 A / B 按钮回到对比。
-  const [soloPlanIndex, setSoloPlanIndex] = useState<number | null>(null)
+  const [soloPlanId, setSoloPlanId] = useState<string | null>(null)
   // #里程碑4(排法逐个删除):按 plan.id 记(不是下标——下标会随过滤/生成结果漂移，id 不会)。
   // 被删的排法从排法横条里彻底移除、不参与 A/B/solo 选择;纯会话内状态,不持久化。
   const [deletedPlanIds, setDeletedPlanIds] = useState<Set<string>>(() => new Set())
@@ -963,39 +968,40 @@ export default function App() {
     return intervals
   }, [committedCourses])
 
-  const generatedPlans = useMemo(() => generatePlans(committedCourses, prefs, pins), [committedCourses, pins, prefs])
-  // #里程碑4(排法逐个删除):按 plan.id 过滤——不是下标,下标会随生成结果/过滤而漂移,id 不会。
-  // 过滤发生在 generatedPlans 之后,不影响「排不出课表」的判定(那要看 generatedPlans 本身是否
-  // 为空,不该被用户手动删光可见排法而误判成排不出)。
-  const plans = useMemo(
-    () => generatedPlans.filter((plan) => !deletedPlanIds.has(plan.id)),
-    [deletedPlanIds, generatedPlans],
-  )
+  // #里程碑5(排法编号稳定化):allPlans = 全集——不带用户的 section 约束(pins),只受基础
+  // cohort/冲突规则,按现有排序稳定生成;每个 allPlans[i] 的编号固定为 i+1("排法 i")，
+  // 后面不管怎么约束/删除都不会重新生成、重新编号，只会做过滤。
+  const allPlans = useMemo(() => generatePlans(committedCourses, prefs, {}), [committedCourses, prefs])
+  const allPlanNumberById = useMemo(() => {
+    const map = new Map<string, number>()
+    allPlans.forEach((plan, index) => map.set(plan.id, index + 1))
+    return map
+  }, [allPlans])
+  // 「排不出课表」看的是全集是否为空——不受用户的 pins/删除影响到"这些课本身排不排得出来"
+  // 这件事(pins 造成的可见排法为 0 是另一种状态,见下面的 plans,不在这里报"排不出")。
   const clashes = useMemo(
-    () => (generatedPlans.length === 0 && committedCourses.length > 1 ? findClashes(committedCourses, prefs, pins) : []),
-    [committedCourses, generatedPlans.length, pins, prefs],
+    () => (allPlans.length === 0 && committedCourses.length > 1 ? findClashes(committedCourses, prefs, pins) : []),
+    [allPlans.length, committedCourses, pins, prefs],
+  )
+  // pins(左栏点 section 约束,见 togglePin/#里程碑6)与 deletedPlanIds(#里程碑4 逐个删除)
+  // 都只做过滤,不重新生成、不重新编号——这就是"约束/删除只减少可见数量、保留编号"的核心。
+  const plans = useMemo(
+    () => allPlans.filter((plan) => planMatchesPins(plan, pins) && !deletedPlanIds.has(plan.id)),
+    [allPlans, deletedPlanIds, pins],
   )
   useEffect(() => {
     if (planIndex >= plans.length) setPlanIndex(0)
   }, [planIndex, plans.length])
-  // 排法列表变化时，越界的 A / B 下标回到默认（A→0、B→1）。
-  useEffect(() => {
-    if (planAIndex >= plans.length) setPlanAIndex(0)
-    if (planBIndex >= plans.length) setPlanBIndex(1)
-  }, [planAIndex, planBIndex, plans.length])
-  // 导出页选中方案下标同样越界回退到 0。
-  useEffect(() => {
-    if (selectedExportPlanIndex >= plans.length) setSelectedExportPlanIndex(0)
-  }, [selectedExportPlanIndex, plans.length])
-  const selectedExportPlan = plans[selectedExportPlanIndex] ?? null
+  const plansById = useMemo(() => new Map(plans.map((plan) => [plan.id, plan])), [plans])
+  // 导出页选中方案:按 plan.id 引用;约束/删除把它滤掉了就回退到第一个可见排法。
+  const selectedExportPlan = (selectedExportPlanId && plansById.get(selectedExportPlanId)) || plans[0] || null
 
-  // #7 排法横条数据：每个排法带上它在 plans 中的真实下标（A/B 选择以此为准）、冲突判定
-  // （实践中恒为 false，见 planHasConflict 注释）与「是否落在上下班窗口内」判定。
+  // #7 排法横条数据：每个排法带上冲突判定（实践中恒为 false，见 planHasConflict 注释）与
+  // 「是否落在上下班窗口内」判定；展示编号一律查 allPlanNumberById，不再用数组下标。
   const planViews = useMemo(
     () =>
-      plans.map((plan, index) => ({
+      plans.map((plan) => ({
         plan,
-        index,
         conflict: planHasConflict(plan),
         outOfHours: !planFitsWindow(plan, officeWindow),
       })),
@@ -1004,37 +1010,38 @@ export default function App() {
   const shownPlanViews = planViews.filter(
     (view) => (!hideConflicts || !view.conflict) && (!hideOutOfHours || !view.outOfHours),
   )
-  // 过滤后仍「可见」的排法下标集合——A / B 的实际展示要跟着这两个开关走，而不是盲选 plans[index]，
-  // 否则「不展示不符合上下班限制的方案」开着时,日历仍可能画出一个被过滤掉的排法。
-  const visiblePlanIndices = useMemo(() => new Set(shownPlanViews.map((view) => view.index)), [shownPlanViews])
+  const shownPlans = shownPlanViews.map((view) => view.plan)
+  // 过滤后仍「可见」的排法(plan.id 为键)——A / B 的实际展示要跟着这两个开关走，而不是盲选
+  // plansById.get(id)，否则「不展示不符合上下班限制的方案」开着时,日历仍可能画出一个被
+  // 过滤掉的排法。
+  const shownById = useMemo(() => new Map(shownPlans.map((plan) => [plan.id, plan])), [shownPlans])
 
   // The 课表 page compares two user-picked conflict-free timetables side by side, but only
-  // among the plans that survive the current filters (见上 visiblePlanIndices)。全部被滤掉时
+  // among the plans that survive the current filters (见上 shownById)。全部被滤掉时
   // 两者都是 null —— TimetableCompare 据此渲染 #4 全空空态（网格骨架 + 居中提示）。
   // B 允许与 A 相同(用户在排法横条上把同一张卡同时设为 A 和 B——原设计允许,plan-strip 上有
-  // 「与 A 相同」的显式标注),这里只在 planBIndex 本身被过滤掉时才回退到另一张可见的排法。
-  const visiblePlans = shownPlanViews.map((view) => view.plan)
-  const planA = visiblePlanIndices.has(planAIndex) ? plans[planAIndex] : (visiblePlans[0] ?? null)
-  const planB = visiblePlans.length < 2 ? null : (visiblePlanIndices.has(planBIndex) ? plans[planBIndex] : (visiblePlans[1] ?? null))
+  // 「与 A 相同」的显式标注),这里只在 planBId 本身被过滤掉时才回退到另一张可见的排法。
+  const planA = (planAId && shownById.get(planAId)) || shownPlans[0] || null
+  const planB = shownPlans.length < 2 ? null : (planBId && shownById.get(planBId)) || shownPlans[1] || null
   const totalUnits = committedCourses.reduce((sum, course) => sum + course.units, 0)
 
-  // #12 单方案模式只在被点的排法仍可见时生效;它被过滤掉/列表变化越界时自动退出。
-  useEffect(() => {
-    if (soloPlanIndex !== null && !visiblePlanIndices.has(soloPlanIndex)) setSoloPlanIndex(null)
-  }, [soloPlanIndex, visiblePlanIndices])
-  const soloActive = soloPlanIndex !== null && visiblePlanIndices.has(soloPlanIndex)
+  // #12 单方案模式只在被点的排法仍可见时生效——soloActive 每次渲染直接判定成员关系，不需要
+  // 专门的 effect 去清空 soloPlanId:被过滤掉时 soloActive 自然为 false(回到 A/B 对比)，
+  // 以后约束/删除撤销、这个排法又满足过滤条件时也会自动恢复选中，比数组下标更贴合
+  // "约束只是过滤、不改变身份"的模型。
+  const soloActive = soloPlanId !== null && shownById.has(soloPlanId)
   // 大课表实际展示的排法:单方案模式 → 只有被点的那个;否则 A / B 对比。
-  const shownPlanA = soloActive ? plans[soloPlanIndex!] : planA
+  const shownPlanA = soloActive ? (shownById.get(soloPlanId!) ?? null) : planA
   const shownPlanB = soloActive ? null : planB
 
-  // #里程碑4(#11):课表页当前选中的排法(单方案模式的 soloPlanIndex，或对比模式下的 A)
-  // 同步到导出页的 selectedExportPlanIndex——课表选了排法 5,进导出页时默认就是排法 5。
+  // #里程碑4(#11):课表页当前选中的排法(单方案模式的 soloPlanId，或对比模式下的 A)
+  // 同步到导出页的 selectedExportPlanId——课表选了排法 5,进导出页时默认就是排法 5。
   // 单向同步:只在"课表这边的选择"变化时推一次,导出页自己再挑(exportPlanPicker 直接
-  // setSelectedExportPlanIndex)不会被这里覆盖回去,因为这个 effect 不依赖它。
+  // setSelectedExportPlanId)不会被这里覆盖回去,因为这个 effect 不依赖它。
   useEffect(() => {
-    const source = soloActive ? soloPlanIndex : planAIndex
-    if (source !== null && source < plans.length) setSelectedExportPlanIndex(source)
-  }, [planAIndex, plans.length, soloActive, soloPlanIndex])
+    const sourceId = soloActive ? soloPlanId : (planA?.id ?? null)
+    if (sourceId) setSelectedExportPlanId(sourceId)
+  }, [planA, soloActive, soloPlanId])
 
   // ---- 账号:三个 effect(开机拉取 / 排法签名回配 / 防抖自动上传) ------------------------
 
@@ -1061,9 +1068,9 @@ export default function App() {
       enrollYear,
       programId,
       planSigs: {
-        solo: soloActive ? (plans[soloPlanIndex!]?.id ?? null) : null,
-        a: plans[planAIndex]?.id ?? null,
-        b: plans[planBIndex]?.id ?? null,
+        solo: soloActive ? soloPlanId : null,
+        a: planA?.id ?? null,
+        b: planB?.id ?? null,
       },
     }
   }
@@ -1101,24 +1108,25 @@ export default function App() {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- 只在 terms 首次就绪时跑一次
   }, [termsReady])
 
-  // 排法签名回配:plans 就绪后按 plan.id 找回云端记录的选中排法;找不到(数据已变)静默放弃。
+  // 排法签名回配:allPlans 就绪后按 plan.id 找回云端记录的选中排法;找不到(数据已变)静默
+  // 放弃。#里程碑5:直接校验 id 是否存在于全集里就够了,不用再转换成下标——A/B/solo 现在
+  // 本来就是按 id 引用(哪怕当前被 pins/删除过滤掉，一旦条件解除也能自动复原)。
   useEffect(() => {
     const sigs = pendingPlanSigsRef.current
-    if (!sigs || plans.length === 0) return
+    if (!sigs || allPlans.length === 0) return
     pendingPlanSigsRef.current = null
-    const indexOf = (sig: string | null): number => (sig ? plans.findIndex((plan) => plan.id === sig) : -1)
-    const a = indexOf(sigs.a)
-    const b = indexOf(sigs.b)
-    const solo = indexOf(sigs.solo)
-    if (a >= 0) setPlanAIndex(a)
-    if (b >= 0) setPlanBIndex(b)
-    if (solo >= 0) {
-      setSoloPlanIndex(solo)
-      setPlanIndex(solo)
-    } else if (a >= 0) {
-      setPlanIndex(a)
+    const exists = (sig: string | null): boolean => Boolean(sig) && allPlans.some((plan) => plan.id === sig)
+    if (exists(sigs.a)) setPlanAId(sigs.a)
+    if (exists(sigs.b)) setPlanBId(sigs.b)
+    if (exists(sigs.solo)) {
+      setSoloPlanId(sigs.solo)
+      const idx = plans.findIndex((plan) => plan.id === sigs.solo)
+      if (idx >= 0) setPlanIndex(idx)
+    } else if (exists(sigs.a)) {
+      const idx = plans.findIndex((plan) => plan.id === sigs.a)
+      if (idx >= 0) setPlanIndex(idx)
     }
-  }, [plans])
+  }, [allPlans, plans])
 
   // 防抖自动上传:登录期间任何可携带状态的编辑,1.5s 静默推到云端(与 #st= 的 replaceState
   // 同一手感)。冲突二选一挂起时暂停;凭据失效自动退出。
@@ -1161,10 +1169,10 @@ export default function App() {
     excludeTba,
     hideSuperseded,
     programScope,
-    planAIndex,
-    planBIndex,
-    soloPlanIndex,
-    plans,
+    planA,
+    planB,
+    soloActive,
+    soloPlanId,
   ])
 
   // #5 append-only 每课配色：课号（按 courseKey 归一）→ 调色盘槽位。committed 变化时只给
@@ -2323,30 +2331,32 @@ export default function App() {
   // 导出页:顶部「课表导出方案」——从可行排法里只选一个（单选，非 A / B）作为要导出的确定
   // 方案。视觉复用课表页排法横条的卡片样式（.plan-strip__rail / .plan-card），选中态直接
   // 借用既有的 .plan-card--solo 高亮，不需要额外的 A / B 拾取按钮。#里程碑4:同样套
-  // PlanStripRail(去滚动条 + 按住拖动 + 选中项自动滚入可见区)。
+  // PlanStripRail(去滚动条 + 按住拖动 + 选中项自动滚入可见区)。#里程碑5:标签一律查
+  // allPlanNumberById，不是这里的数组下标——排法在全集里的编号不受 pins/删除影响。
   const exportPlanPicker =
     plans.length > 0 ? (
-      <PlanStripRail selectedIndex={selectedExportPlanIndex}>
-        {plans.map((plan, index) => {
-          const isSelected = index === selectedExportPlanIndex
+      <PlanStripRail selectedId={selectedExportPlan?.id ?? null}>
+        {plans.map((plan) => {
+          const isSelected = plan.id === selectedExportPlan?.id
+          const label = allPlanNumberById.get(plan.id) ?? '?'
           return (
             <div
               className={`plan-card${isSelected ? ' plan-card--solo' : ''}`}
-              data-plan-index={index}
+              data-plan-id={plan.id}
               key={plan.id}
               role="button"
               tabIndex={0}
               title="选为要导出的方案"
-              onClick={() => setSelectedExportPlanIndex(index)}
+              onClick={() => setSelectedExportPlanId(plan.id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                   event.preventDefault()
-                  setSelectedExportPlanIndex(index)
+                  setSelectedExportPlanId(plan.id)
                 }
               }}
             >
               <div className="plan-card__info">
-                <span className="plan-card__name">排法 {index + 1}</span>
+                <span className="plan-card__name">排法 {label}</span>
                 <span className="plan-card__meta">
                   {plan.teachingDays.length} 天 · {plan.units} 学分
                 </span>
@@ -2366,61 +2376,64 @@ export default function App() {
   // 右侧两个方形小按钮「A」「B」分别设为该排法（选中态高亮）。#12 点卡片本体 → 单方案模式
   //（只看这一个排法,退出 A/B 对比）；点任意 A / B 按钮 → 回到对比模式。
   // #里程碑4(#10):isA/isB 都额外 && !soloActive——单方案模式下不再显示任何 A/B 徽标/
-  // 特殊样式(哪怕某张卡片下标恰好等于 planAIndex/planBIndex)，只有被选中的单排法本身
-  // 高亮(plan-card--solo)。点 A / B 按钮会先 setSoloPlanIndex(null) 退出单方案模式，
-  // 回到对比态后 isA/isB 才重新按 !soloActive 生效。
+  // 特殊样式(哪怕某张卡片恰好等于 planA/planB)，只有被选中的单排法本身高亮
+  // (plan-card--solo)。点 A / B 按钮会先 setSoloPlanId(null) 退出单方案模式，回到对比态
+  // 后 isA/isB 才重新按 !soloActive 生效。
+  // #里程碑5:选中态与展示编号全部按 plan.id / allPlanNumberById 走，不再是数组下标——
+  // 约束(pins)/删除只改变"这张卡在不在横条上"，不改变它显示的是「排法几」。
   const planStrip =
     plans.length > 0 ? (
-      <PlanStripRail selectedIndex={soloActive ? soloPlanIndex : planAIndex}>
-        {shownPlanViews.map(({ plan, index }) => {
-          const isA = !soloActive && index === planAIndex
-          const isB = !soloActive && plans.length >= 2 && index === planBIndex
-          const isSolo = soloActive && index === soloPlanIndex
+      <PlanStripRail selectedId={soloActive ? soloPlanId : (planA?.id ?? null)}>
+        {shownPlanViews.map(({ plan }) => {
+          const label = allPlanNumberById.get(plan.id) ?? '?'
+          const isA = !soloActive && plan.id === planA?.id
+          const isB = !soloActive && shownPlans.length >= 2 && plan.id === planB?.id
+          const isSolo = soloActive && plan.id === soloPlanId
           return (
             <div
               className={`plan-card${isA ? ' plan-card--a' : ''}${isB ? ' plan-card--b' : ''}${isSolo ? ' plan-card--solo' : ''}`}
-              data-plan-index={index}
+              data-plan-id={plan.id}
               key={plan.id}
               role="button"
               tabIndex={0}
               title="点击单独查看此排法"
-              onClick={() => setSoloPlanIndex(index)}
+              onClick={() => setSoloPlanId(plan.id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
                   event.preventDefault()
-                  setSoloPlanIndex(index)
+                  setSoloPlanId(plan.id)
                 }
               }}
             >
               <div className="plan-card__info">
-                <span className="plan-card__name">排法 {index + 1}</span>
+                <span className="plan-card__name">排法 {label}</span>
                 <span className="plan-card__meta">
                   {plan.teachingDays.length} 天 · {plan.units} 学分
                 </span>
               </div>
               <div className="plan-card__actions">
                 <button
-                  aria-label={`排法 ${index + 1} 设为 A`}
+                  aria-label={`排法 ${label} 设为 A`}
                   className={`plan-card__pick plan-card__pick--a${isA ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
                   title="设为 A（回到 A/B 对比）"
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation()
-                    setSoloPlanIndex(null)
-                    setPlanAIndex(index)
+                    setSoloPlanId(null)
+                    setPlanAId(plan.id)
                   }}
                 >
                   A
                 </button>
                 <button
-                  aria-label={`排法 ${index + 1} 设为 B`}
+                  aria-label={`排法 ${label} 设为 B`}
                   className={`plan-card__pick plan-card__pick--b${isB ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
                   title="设为 B（回到 A/B 对比）"
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation()
-                    setSoloPlanIndex(null)
-                    setPlanBIndex(index)
+                    setSoloPlanId(null)
+                    setPlanBId(plan.id)
                   }}
                 >
                   B
@@ -2428,7 +2441,7 @@ export default function App() {
               </div>
               {/* #里程碑4:逐个删除——按 plan.id 记，其余排法不受影响(不重排/不改标号)。 */}
               <button
-                aria-label={`删除排法 ${index + 1}`}
+                aria-label={`删除排法 ${label}`}
                 className="plan-card__del"
                 title="从横条移除这个排法（不影响其它排法）"
                 type="button"
@@ -2646,7 +2659,9 @@ export default function App() {
             {exportPlanPicker}
             <p className="card__sub">
               已选 {committedCourses.length} 门 · {totalUnits} 学分
-              {selectedExportPlan ? ` · 排法 ${selectedExportPlanIndex + 1}（${selectedExportPlan.teachingDays.length} 天）` : ''}
+              {selectedExportPlan
+                ? ` · 排法 ${allPlanNumberById.get(selectedExportPlan.id) ?? '?'}（${selectedExportPlan.teachingDays.length} 天）`
+                : ''}
             </p>
           </>
         )}

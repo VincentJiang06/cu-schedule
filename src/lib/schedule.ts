@@ -124,7 +124,12 @@ export function courseFitsWindow(course: Course, window: TimeWindow): boolean {
   return courseCombos(course, NO_PREFS).some((combo) => meetingsFitWindow(comboMeetings(combo), window))
 }
 
-const MAX_PLANS = 12
+// #里程碑5(排法编号稳定化):App 现在总是先在「全集」上生成(不带用户的 section 约束
+// pins,只受 cohort/冲突规则),再用 pins 过滤出可见排法——过滤不重新生成、不重排。这比
+// 旧模型(pins 直接喂进 courseCombos 再 backtrack)更容易在候选量大的科目组合下把 12 个
+// 名额提前耗在同一批"前缀"相近的排法上，所以把上限从 12 调高到 48，给"先生成全集、再靠
+// 约束筛掉大半"这个新流程留够素材（约束越严，能命中的全集样本就要求越多）。
+const MAX_PLANS = 48
 
 /** Conflict-free timetables covering every committed course, best (fewest teaching days) first. */
 export function generatePlans(courses: Course[], prefs: Prefs, pins: Pins = {}): Plan[] {
@@ -175,6 +180,36 @@ export function planFitsWindow(plan: Plan, window: TimeWindow): boolean {
     plan.entries.flatMap((entry) => entry.section.meetings),
     window,
   )
+}
+
+/**
+ * #里程碑5(排法编号稳定化):排法编号固定在「全集」(generatePlans(courses, prefs, {})，
+ * 不带用户的 section 约束)上——每个 allPlans[i] 的编号永远是 i+1。用户在左栏点 section
+ * (togglePin)产生的 pins 不再重新生成/重新编号，只是把 allPlans 过滤成"幸存排法"，幸存者
+ * 展示时仍用它在 allPlans 里的原始编号(例:全集 4 个排法，约束后只剩「排法 1」「排法 4」
+ * 两张卡，不会缩成「排法 1」「排法 2」)。
+ *
+ * 这个函数就是那把过滤器:一个排法"匹配" pins,当且仅当它每个 entry(某课某 component
+ * 选的具体 section)都跟该课该 component 的 pin(如果设了的话)一致——pins 里没提到的
+ * component 不做限制。 */
+export function planMatchesPins(plan: Plan, pins: Pins): boolean {
+  for (const entry of plan.entries) {
+    const pinnedId = pins[entry.course.code]?.[entry.section.component]
+    if (pinnedId && pinnedId !== entry.section.id) return false
+  }
+  return true
+}
+
+/** #里程碑6(左栏 section 高亮):把一个排法拆成 code → component → sectionId 的映射，
+ * 形状与 Pins 完全一样(所以可以直接拿去跟 pins 比对)——用来在左栏"当前课程"列表里标出
+ * 「这门课这个 component，当前选中的排法（A / B / 单方案）用的是哪个 section」。 */
+export function planSectionMap(plan: Plan): Pins {
+  const map: Pins = {}
+  for (const entry of plan.entries) {
+    const forCourse = map[entry.course.code] ?? (map[entry.course.code] = {})
+    forCourse[entry.section.component] = entry.section.id
+  }
+  return map
 }
 
 function toPlan(entries: Plan['entries']): Plan {
