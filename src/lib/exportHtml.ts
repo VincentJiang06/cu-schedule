@@ -124,7 +124,11 @@ export function buildScheduleHtml(
           `<span class="block__line1"><span class="block__code">${escapeHtml(block.code)}</span>` +
           (locAbbrev ? ` <span class="block__loc">${locAbbrev}</span>` : '') +
           `</span>` +
-          `<span class="block__time">${hhmm(block.start)}–${hhmm(shownEnd)}</span>` +
+          // #Bug C:时间文案用真实结束时间(与屏幕 Timetable/TimetableCompare、PNG 导出
+          // exportImage.ts 一致的 hhmm(block.end)),shownEnd(进位后的 displayEndMinutes)只用
+          // 于上面算块高度,不进这里的文案,否则会出现「PNG 显示 12:15、HTML 显示 12:30」的
+          // 进位不一致。
+          `<span class="block__time">${hhmm(block.start)}–${hhmm(block.end)}</span>` +
           `</article>`
       })
       .join('')
