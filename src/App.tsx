@@ -1013,6 +1013,18 @@ export default function App() {
     () => allPlans.filter((plan) => planMatchesPins(plan, pins) && !deletedPlanIds.has(plan.id)),
     [allPlans, deletedPlanIds, pins],
   )
+  // #里程碑1(默认单方案预览):约束(pins)/删除方案(deletedPlanIds)/加课(committedCourses,
+  // 继而带动 allPlans→plans 变化)这三类"方案集改变"事件后,默认回落到单方案模式(solo)
+  // 展示第一个可见排法,不再像之前那样隐式落进 A/B 对比(A/B 只应在用户显式点排法横条上的
+  // A / B 按钮时才进入——那两个按钮会自己 setSoloPlanId(null) 退出单方案模式)。初始态同理:
+  // mount 时这个 effect 也会跑一次,默认就是 solo 展示排法 1,不是 A/B。
+  // 源码顺序特意排在下面「排法签名回配」那个 effect 之前——云端/分享链接带回的显式 A/B 选择
+  // 在同一渲染批次里后跑、后写赢,能正确覆盖这里的默认值,不会被打断。
+  useEffect(() => {
+    setSoloPlanId(plans[0]?.id ?? null)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- 故意只在这三类"方案集改变"
+    // 触发时重置,plans 本身是它们的纯派生值,不需要单独再列一次
+  }, [committedCourses, deletedPlanIds, pins])
   useEffect(() => {
     if (planIndex >= plans.length) setPlanIndex(0)
   }, [planIndex, plans.length])
