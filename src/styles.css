@@ -598,47 +598,76 @@ select {
   line-height: 1.7;
 }
 
-/* 选课时间轴：左侧一条竖线 + 每站一个圆点，日期加粗、说明弱化。 */
-.appendix-timeline {
-  list-style: none;
-  margin: 4px 0 4px 6px;
-  padding: 0 0 0 20px;
-  border-left: 2px solid var(--line);
+/* #里程碑6(选课时间三日期强化):三张彩色日期卡取代原来的竖线+圆点时间轴——每张卡左侧
+   是一块强饱和度的"日期徽章"(月/日大字)，右侧是星期/时间 + 适用年级说明。配色公式与
+   全站课程块同一套(hsl(var(--hue) var(--sat) calc(var(--fill-l)+var(--shade)))…)，
+   --hue 由每条数据各自指定，三张卡三种颜色，一眼分清"哪天该我选课"。 */
+.appendix-enrol-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin: 4px 0 2px;
+}
+
+.appendix-enrol-card {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  border: 1.5px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
+  border-radius: 12px;
+  background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
+  padding: 10px 13px 10px 10px;
+}
+
+.appendix-enrol-card__badge {
+  flex: none;
+  width: 56px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  color: #fff;
 }
 
-.appendix-timeline li {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+:root[data-theme='dark'] .appendix-enrol-card__badge {
+  color: #0d1016;
 }
 
-.appendix-timeline li::before {
-  content: '';
-  position: absolute;
-  left: -25px;
-  top: 4px;
-  width: 11px;
-  height: 11px;
-  border-radius: 50%;
-  background: var(--brand);
-  border: 2px solid var(--surface);
-}
-
-.appendix-timeline__date {
-  font-weight: 750;
-  font-size: 13.5px;
-  color: var(--ink);
+.appendix-enrol-card__day {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
   font-variant-numeric: tabular-nums;
 }
 
-.appendix-timeline__desc {
-  font-size: 12.5px;
+.appendix-enrol-card__month {
+  font-size: 11px;
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+.appendix-enrol-card__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.appendix-enrol-card__when {
+  font-size: 12px;
+  font-weight: 750;
+  color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
+  font-variant-numeric: tabular-nums;
+}
+
+.appendix-enrol-card__desc {
+  font-size: 12px;
   color: var(--ink-2);
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 /* 友链邀请：比页脚 .sib-chip 更大更完整的展示卡，带图标 + 站名 + 一句话简介。 */

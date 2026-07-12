@@ -4,6 +4,8 @@
  * 这里做成更大、带简介的展示卡）。纯静态内容，无状态。
  */
 
+import type { CSSProperties } from 'react'
+
 const CALENDAR_LINKS = [
   {
     label: '繁体中文版',
@@ -50,17 +52,39 @@ const NEWCOMER_LINKS = [
   },
 ]
 
-const ENROL_TIMELINE = [
+// #里程碑6(选课时间三日期强化):三个正日期各配一个独立 hue，做成醒目的彩色日期卡——
+// 复用全站「课程按 --hue 上色」的同一套 hsl(var(--hue) var(--sat) …) 配方(见 color.ts/
+// styles.css)，三种颜色互不相同，一眼就能分清"哪天是我"。
+const ENROL_TIMELINE: Array<{
+  dayNum: string
+  month: string
+  weekday: string
+  time: string
+  hue: number
+  desc: string
+}> = [
   {
-    date: '8月14日（五）10:00–22:00',
+    dayNum: '14',
+    month: '8月',
+    weekday: '周五',
+    time: '10:00–22:00',
+    hue: 28,
     desc: 'Year 4+ / 最后一年学生、以 Advanced Standing 入学的 Year 3+、以 senior-year places 入学的 Year 2+',
   },
   {
-    date: '8月18日（二）10:00–22:00',
+    dayNum: '18',
+    month: '8月',
+    weekday: '周二',
+    time: '10:00–22:00',
+    hue: 205,
     desc: 'Year 3、以 Advanced Standing 入学的 Year 2',
   },
   {
-    date: '8月19日（三）10:00–22:00',
+    dayNum: '19',
+    month: '8月',
+    weekday: '周三',
+    time: '10:00–22:00',
+    hue: 280,
     desc: 'Year 2',
   },
 ]
@@ -124,14 +148,26 @@ export function AppendixPage({
           适用对象：Year 2 及以上全日制本科生（不含应届毕业生及副学士生）。以下选课日程均为
           10:00–22:00：
         </p>
-        <ol className="appendix-timeline">
+        <div className="appendix-enrol-grid">
           {ENROL_TIMELINE.map((item) => (
-            <li key={item.date}>
-              <span className="appendix-timeline__date">{item.date}</span>
-              <span className="appendix-timeline__desc">{item.desc}</span>
-            </li>
+            <div
+              className="appendix-enrol-card"
+              key={`${item.month}${item.dayNum}`}
+              style={{ '--hue': item.hue } as CSSProperties}
+            >
+              <div className="appendix-enrol-card__badge">
+                <span className="appendix-enrol-card__day">{item.dayNum}</span>
+                <span className="appendix-enrol-card__month">{item.month}</span>
+              </div>
+              <div className="appendix-enrol-card__body">
+                <span className="appendix-enrol-card__when">
+                  {item.weekday} · {item.time}
+                </span>
+                <span className="appendix-enrol-card__desc">{item.desc}</span>
+              </div>
+            </div>
           ))}
-        </ol>
+        </div>
         <p className="appendix-body">
           登入时间：10:00am 起 = Year 5+ / 以 Advanced Standing 入学的 Year 4+ / 以
           senior-year places 入学的 Year 3+；11:00am 起 = 其他学生。CUSIS「Enrolment
