@@ -259,20 +259,22 @@ function draw(
       ctx.textAlign = 'left'
       ctx.textBaseline = 'alphabetic'
       const tx = x + 9
-      let ty = y + 20
-      // #里程碑2:课号用等宽字体栈，与屏幕上 .tt__block-code/.tt2__block-code 的
-      // var(--mono) 保持所见即所得一致；时间/地点仍用无衬线字体。
-      ctx.font = `700 16px ${MONO_STACK}`
+      let ty = y + 24
+      // #里程碑2(课表字体加大)+#里程碑(导出字体再加大一档):课号用等宽字体栈，与屏幕上
+      // .tt__block-code/.tt2__block-code 的 var(--mono) 保持所见即所得一致；时间/地点仍用
+      // 无衬线字体。三行字号从 16/13/12 再整体加大到 20/16/15，行距与「够高才画这一行」的
+      // 门槛(h>44/h>72)同步放宽，保证课块矮时仍优先保住看得清的那几行、不会挤成一团。
+      ctx.font = `700 20px ${MONO_STACK}`
       ctx.fillText(block.code, tx, ty)
-      if (h > 36) {
-        ty += 18
-        ctx.font = '13px system-ui, -apple-system, sans-serif'
+      if (h > 44) {
+        ty += 22
+        ctx.font = '16px system-ui, -apple-system, sans-serif'
         ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
       }
-      if (h > 58) {
-        ty += 16
+      if (h > 72) {
+        ty += 19
         const meta = block.location ? `${block.component} · ${block.location}` : block.component
-        ctx.font = '12px system-ui, -apple-system, sans-serif'
+        ctx.font = '15px system-ui, -apple-system, sans-serif'
         ctx.fillText(meta, tx, ty)
       }
       ctx.restore()
