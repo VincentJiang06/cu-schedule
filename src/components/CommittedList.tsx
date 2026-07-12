@@ -78,6 +78,25 @@ function sectionChipState(
   return { on, curClass, curHint }
 }
 
+/** 眼睛图标(SVG 而非 emoji——emoji 在不同系统/字体下形状差异大，容易显得突兀)。
+ * 可见态=睁眼轮廓+瞳孔;隐藏态在同一轮廓上叠一条斜线(eye-off)，跟随 currentColor，
+ * 与按钮本身的 hover/off 配色联动。 */
+function EyeIcon({ off }: { off: boolean }) {
+  return (
+    <svg aria-hidden fill="none" height="14" viewBox="0 0 24 24" width="14">
+      <path
+        d="M2 12c2.6-4.6 6.2-7 10-7s7.4 2.4 10 7c-2.6 4.6-6.2 7-10 7s-7.4-2.4-10-7Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+      <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
+      {off && <path d="M3.5 3.5l17 17" stroke="currentColor" strokeLinecap="round" strokeWidth="1.8" />}
+    </svg>
+  )
+}
+
 /** Interactive rows: every component with more than one section becomes pinnable chips. */
 function CoursePicker({
   course,
@@ -245,7 +264,7 @@ export function CommittedList({
                           type="button"
                           onClick={() => onToggleCandidateDisabled(code)}
                         >
-                          {isDisabledCandidate ? '👁‍🗨' : '👁'}
+                          <EyeIcon off={isDisabledCandidate} />
                         </button>
                       )}
                       {onRemove && (

@@ -1246,11 +1246,15 @@ select {
   color: var(--bad);
 }
 
+/* #修复2(眼睛改 SVG):按钮从字体大小驱动的 emoji 改成 flex 居中的矢量图标容器——
+   尺寸由 EyeIcon 自身的 width/height(14px)决定，颜色继承自 currentColor。 */
 .cl-row__eye {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   background: transparent;
   color: var(--ink-3);
-  font-size: 13px;
   line-height: 1;
   cursor: pointer;
   padding: 0 2px;
