@@ -360,6 +360,14 @@
         ],
         "alt": false,
         "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
+      },
+      {
+        "raw": "DSPS4802",
+        "codes": [
+          "DSPS4802"
+        ],
+        "alt": false,
+        "from": "(a) DSPS1003, 1004, 3801, 4801 (capstone course), 4802"
       }
     ],
     "elective": [
@@ -688,7 +696,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 5
     },
     {
       "marker": "(b)",
@@ -929,6 +937,10 @@
             },
             {
               "code": "DSPS4801",
+              "alts": []
+            },
+            {
+              "code": "DSPS4802",
               "alts": []
             }
           ],

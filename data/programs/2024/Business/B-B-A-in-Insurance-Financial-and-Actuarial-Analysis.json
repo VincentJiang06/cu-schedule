@@ -101,6 +101,14 @@
         "from": "(a) MATH1010[a], 1540"
       },
       {
+        "raw": "MATH1540",
+        "codes": [
+          "MATH1540"
+        ],
+        "alt": false,
+        "from": "(a) MATH1010[a], 1540"
+      },
+      {
         "raw": "CSCI1510",
         "codes": [
           "CSCI1510"
@@ -395,7 +403,7 @@
       "units": "6",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -480,6 +488,10 @@
           "courses": [
             {
               "code": "MATH1010",
+              "alts": []
+            },
+            {
+              "code": "MATH1540",
               "alts": []
             }
           ],

@@ -42,6 +42,27 @@ LEVEL_DESCRIPTOR_RE = re.compile(r"\s*(?:(?:or|and)\s+above|above|level)\b", re.
 # to ENGG3803). "or" is deliberately NOT allowed — it marks an alternative, not a
 # co-requisite pair, so the two sides stay distinct references.
 CONT_GAP_RE = re.compile(r"[\s,]*(?:and[\s,]+)?")
+# A footnote/annotation marker the calendar attaches to a code or a shorthand list,
+# e.g. "ECON1101[a], 1111" or "Elective Courses[b][c]:". Left in place it sits in the
+# continuation gap and severs every following bare number from its subject (the
+# calendar-wide "lost course" bug). Stripped before tokenizing so the gap collapses to
+# plain "…, …". Lowercase-only so cross-listed brackets "DOTE[DSME]2021" (uppercase) and
+# the numeric part of any code are untouched. Mirrors the audit reference extractor.
+FOOTNOTE_RE = re.compile(r"\[[a-z]+\]")
+# A parenthetical insertion the calendar drops between a code and the next shorthand
+# number, e.g. "SOWK4030 (capstone course), 4510" or "…4903 (capstone course)". It too
+# lands in the continuation gap; we erase whole parentheticals from the *gap only* (not
+# the text) before the binding test, so the trailing numbers still re-attach. A course
+# code living inside the parenthetical is emitted independently by the tokenizer, so
+# this never drops one.
+PARENS_RE = re.compile(r"\([^)]*\)")
+
+
+def _gap_binds(gap: str) -> bool:
+    """Does this inter-token gap still bind a bare number to the running subject?
+    Whole parenthetical insertions are erased first (they are prose asides, not list
+    separators), then the residue must be pure spaces/commas + at most one "and"."""
+    return bool(CONT_GAP_RE.fullmatch(PARENS_RE.sub(" ", gap)))
 
 
 def norm(t: str) -> str:
@@ -61,6 +82,10 @@ def extract_courses(text: str) -> list[dict]:
     Returns a de-duplicated list of {raw, codes, alt} in first-seen order.
     Note refs like '[b]' and prose ('Chemistry Courses:') are ignored.
     """
+    # Strip footnote markers ([a], [bc], …) up front: left in place they wedge into the
+    # continuation gap ("ECON1101[a], 1111") and orphan every following shorthand number.
+    # Offsets below are all relative to this cleaned text, so gap computation stays exact.
+    text = FOOTNOTE_RE.sub("", text)
     out: list[dict] = []
     seen: set[str] = set()
     current_subj: str | None = None
@@ -97,7 +122,7 @@ def extract_courses(text: str) -> list[dict]:
             # the gap since the last accepted course is spaces/commas plus at most
             # one "and". Kills false positives like "at 1000 or 2000 level", "6 units".
             gap = text[last_end:tok.start()] if last_end is not None else "x"
-            if current_subj and last_was_course and CONT_GAP_RE.fullmatch(gap):
+            if current_subj and last_was_course and _gap_binds(gap):
                 # …but a bare number trailing straight into "level"/"above" is a
                 # course-level descriptor ("3000 and 4000 level"), not a course.
                 if LEVEL_DESCRIPTOR_RE.match(text[tok.end():]):

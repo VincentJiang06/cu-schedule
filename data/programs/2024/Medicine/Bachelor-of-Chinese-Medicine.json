@@ -241,6 +241,190 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2402",
+        "codes": [
+          "BCME2402"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2403",
+        "codes": [
+          "BCME2403"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2404",
+        "codes": [
+          "BCME2404"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME2405",
+        "codes": [
+          "BCME2405"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3102",
+        "codes": [
+          "BCME3102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3103",
+        "codes": [
+          "BCME3103"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3104",
+        "codes": [
+          "BCME3104"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3105",
+        "codes": [
+          "BCME3105"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3106",
+        "codes": [
+          "BCME3106"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3108",
+        "codes": [
+          "BCME3108"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3110",
+        "codes": [
+          "BCME3110"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3202",
+        "codes": [
+          "BCME3202"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3206",
+        "codes": [
+          "BCME3206"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3208",
+        "codes": [
+          "BCME3208"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3209",
+        "codes": [
+          "BCME3209"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME3210",
+        "codes": [
+          "BCME3210"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4101",
+        "codes": [
+          "BCME4101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4103",
+        "codes": [
+          "BCME4103"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4104",
+        "codes": [
+          "BCME4104"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4107",
+        "codes": [
+          "BCME4107"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4108",
+        "codes": [
+          "BCME4108"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4109",
+        "codes": [
+          "BCME4109"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "BCME4200",
+        "codes": [
+          "BCME4200"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -408,7 +592,7 @@
       "units": "145",
       "bucket": "required",
       "stream": null,
-      "n_courses": 16
+      "n_courses": 39
     },
     {
       "marker": "3.",
@@ -518,6 +702,98 @@
         },
         {
           "code": "BCME2401",
+          "alts": []
+        },
+        {
+          "code": "BCME2402",
+          "alts": []
+        },
+        {
+          "code": "BCME2403",
+          "alts": []
+        },
+        {
+          "code": "BCME2404",
+          "alts": []
+        },
+        {
+          "code": "BCME2405",
+          "alts": []
+        },
+        {
+          "code": "BCME3102",
+          "alts": []
+        },
+        {
+          "code": "BCME3103",
+          "alts": []
+        },
+        {
+          "code": "BCME3104",
+          "alts": []
+        },
+        {
+          "code": "BCME3105",
+          "alts": []
+        },
+        {
+          "code": "BCME3106",
+          "alts": []
+        },
+        {
+          "code": "BCME3108",
+          "alts": []
+        },
+        {
+          "code": "BCME3110",
+          "alts": []
+        },
+        {
+          "code": "BCME3202",
+          "alts": []
+        },
+        {
+          "code": "BCME3206",
+          "alts": []
+        },
+        {
+          "code": "BCME3208",
+          "alts": []
+        },
+        {
+          "code": "BCME3209",
+          "alts": []
+        },
+        {
+          "code": "BCME3210",
+          "alts": []
+        },
+        {
+          "code": "BCME4101",
+          "alts": []
+        },
+        {
+          "code": "BCME4103",
+          "alts": []
+        },
+        {
+          "code": "BCME4104",
+          "alts": []
+        },
+        {
+          "code": "BCME4107",
+          "alts": []
+        },
+        {
+          "code": "BCME4108",
+          "alts": []
+        },
+        {
+          "code": "BCME4109",
+          "alts": []
+        },
+        {
+          "code": "BCME4200",
           "alts": []
         }
       ],

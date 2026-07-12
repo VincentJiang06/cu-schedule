@@ -365,6 +365,14 @@
         "from": "(d) Teaching Practice"
       },
       {
+        "raw": "SPED4400",
+        "codes": [
+          "SPED4400"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
         "raw": "SPED4201",
         "codes": [
           "SPED4201"
@@ -376,6 +384,14 @@
         "raw": "SPED3630",
         "codes": [
           "SPED3630"
+        ],
+        "alt": false,
+        "from": "(f) Research Experience"
+      },
+      {
+        "raw": "SPED4900",
+        "codes": [
+          "SPED4900"
         ],
         "alt": false,
         "from": "(f) Research Experience"
@@ -622,7 +638,7 @@
       "units": "8",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(e)",
@@ -640,7 +656,7 @@
       "units": "6",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "3.",
@@ -872,6 +888,10 @@
             {
               "code": "SPED3400",
               "alts": []
+            },
+            {
+              "code": "SPED4400",
+              "alts": []
             }
           ],
           "children": []
@@ -897,6 +917,10 @@
           "courses": [
             {
               "code": "SPED3630",
+              "alts": []
+            },
+            {
+              "code": "SPED4900",
               "alts": []
             }
           ],

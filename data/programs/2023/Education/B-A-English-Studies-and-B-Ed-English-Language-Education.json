@@ -332,6 +332,14 @@
         "from": "(d) Research"
       },
       {
+        "raw": "ELED4860",
+        "codes": [
+          "ELED4860"
+        ],
+        "alt": false,
+        "from": "(d) Research"
+      },
+      {
         "raw": "EDUC2240",
         "codes": [
           "EDUC2240"
@@ -1269,7 +1277,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(e)",
@@ -1484,6 +1492,10 @@
           "courses": [
             {
               "code": "ELED4850",
+              "alts": []
+            },
+            {
+              "code": "ELED4860",
               "alts": []
             }
           ],

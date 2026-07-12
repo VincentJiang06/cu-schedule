@@ -207,6 +207,22 @@
         "from": "2. Foundation"
       },
       {
+        "raw": "STAT2005",
+        "codes": [
+          "STAT2005"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
         "raw": "AIST3020",
         "codes": [
           "AIST3020"
@@ -937,7 +953,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 6
     },
     {
       "marker": "3.",
@@ -1126,6 +1142,14 @@
         },
         {
           "code": "STAT2001",
+          "alts": []
+        },
+        {
+          "code": "STAT2005",
+          "alts": []
+        },
+        {
+          "code": "STAT2006",
           "alts": []
         }
       ],

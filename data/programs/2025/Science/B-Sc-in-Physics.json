@@ -97,6 +97,7 @@
     "PHYS5420",
     "PHYS5430",
     "PHYS5520",
+    "PHYS5562",
     "PHYS5610",
     "STAR2000",
     "STAR2050",
@@ -176,6 +177,62 @@
         "raw": "PHYS2051",
         "codes": [
           "PHYS2051"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2510",
+        "codes": [
+          "PHYS2510"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2520",
+        "codes": [
+          "PHYS2520"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS2722",
+        "codes": [
+          "PHYS2722"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "(a) Physics"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
         ],
         "alt": false,
         "from": "(a) Physics"
@@ -301,6 +358,294 @@
         ],
         "alt": false,
         "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3403",
+        "codes": [
+          "PHYS3403"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3420",
+        "codes": [
+          "PHYS3420"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3430",
+        "codes": [
+          "PHYS3430"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3440",
+        "codes": [
+          "PHYS3440"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3610",
+        "codes": [
+          "PHYS3610"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3630",
+        "codes": [
+          "PHYS3630"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3730",
+        "codes": [
+          "PHYS3730"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS3810",
+        "codes": [
+          "PHYS3810"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4021",
+        "codes": [
+          "PHYS4021"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4051",
+        "codes": [
+          "PHYS4051"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4440",
+        "codes": [
+          "PHYS4440"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4460",
+        "codes": [
+          "PHYS4460"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4470",
+        "codes": [
+          "PHYS4470"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4480",
+        "codes": [
+          "PHYS4480"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4490",
+        "codes": [
+          "PHYS4490"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4491",
+        "codes": [
+          "PHYS4491"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4492",
+        "codes": [
+          "PHYS4492"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4620",
+        "codes": [
+          "PHYS4620"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4630",
+        "codes": [
+          "PHYS4630"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4710",
+        "codes": [
+          "PHYS4710"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4711",
+        "codes": [
+          "PHYS4711"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4712",
+        "codes": [
+          "PHYS4712"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4802",
+        "codes": [
+          "PHYS4802"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4811",
+        "codes": [
+          "PHYS4811"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHYS4812",
+        "codes": [
+          "PHYS4812"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
       }
     ],
     "stream_elective": []
@@ -331,7 +676,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 11
     },
     {
       "marker": "(b)",
@@ -367,7 +712,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 47
     }
   ],
   "structure": [
@@ -427,6 +772,34 @@
             },
             {
               "code": "PHYS2051",
+              "alts": []
+            },
+            {
+              "code": "PHYS2510",
+              "alts": []
+            },
+            {
+              "code": "PHYS2520",
+              "alts": []
+            },
+            {
+              "code": "PHYS2711",
+              "alts": []
+            },
+            {
+              "code": "PHYS2722",
+              "alts": []
+            },
+            {
+              "code": "PHYS3011",
+              "alts": []
+            },
+            {
+              "code": "PHYS3021",
+              "alts": []
+            },
+            {
+              "code": "PHYS3031",
               "alts": []
             }
           ],
@@ -526,6 +899,150 @@
         {
           "code": "PHYS3031",
           "alts": []
+        },
+        {
+          "code": "PHYS3051",
+          "alts": []
+        },
+        {
+          "code": "PHYS3061",
+          "alts": []
+        },
+        {
+          "code": "PHYS3403",
+          "alts": []
+        },
+        {
+          "code": "PHYS3410",
+          "alts": []
+        },
+        {
+          "code": "PHYS3420",
+          "alts": []
+        },
+        {
+          "code": "PHYS3430",
+          "alts": []
+        },
+        {
+          "code": "PHYS3440",
+          "alts": []
+        },
+        {
+          "code": "PHYS3610",
+          "alts": []
+        },
+        {
+          "code": "PHYS3630",
+          "alts": []
+        },
+        {
+          "code": "PHYS3730",
+          "alts": []
+        },
+        {
+          "code": "PHYS3810",
+          "alts": []
+        },
+        {
+          "code": "PHYS4011",
+          "alts": []
+        },
+        {
+          "code": "PHYS4021",
+          "alts": []
+        },
+        {
+          "code": "PHYS4031",
+          "alts": []
+        },
+        {
+          "code": "PHYS4041",
+          "alts": []
+        },
+        {
+          "code": "PHYS4050",
+          "alts": []
+        },
+        {
+          "code": "PHYS4051",
+          "alts": []
+        },
+        {
+          "code": "PHYS4061",
+          "alts": []
+        },
+        {
+          "code": "PHYS4420",
+          "alts": []
+        },
+        {
+          "code": "PHYS4430",
+          "alts": []
+        },
+        {
+          "code": "PHYS4440",
+          "alts": []
+        },
+        {
+          "code": "PHYS4450",
+          "alts": []
+        },
+        {
+          "code": "PHYS4460",
+          "alts": []
+        },
+        {
+          "code": "PHYS4470",
+          "alts": []
+        },
+        {
+          "code": "PHYS4480",
+          "alts": []
+        },
+        {
+          "code": "PHYS4490",
+          "alts": []
+        },
+        {
+          "code": "PHYS4491",
+          "alts": []
+        },
+        {
+          "code": "PHYS4492",
+          "alts": []
+        },
+        {
+          "code": "PHYS4620",
+          "alts": []
+        },
+        {
+          "code": "PHYS4630",
+          "alts": []
+        },
+        {
+          "code": "PHYS4710",
+          "alts": []
+        },
+        {
+          "code": "PHYS4711",
+          "alts": []
+        },
+        {
+          "code": "PHYS4712",
+          "alts": []
+        },
+        {
+          "code": "PHYS4802",
+          "alts": []
+        },
+        {
+          "code": "PHYS4811",
+          "alts": []
+        },
+        {
+          "code": "PHYS4812",
+          "alts": []
         }
       ],
       "children": []
@@ -554,6 +1071,18 @@
                 {
                   "code": "PHYS2061",
                   "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4620",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4802",
+                  "alts": []
                 }
               ],
               "children": []
@@ -577,11 +1106,47 @@
                   "alts": []
                 },
                 {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4460",
+                  "alts": []
+                },
+                {
                   "code": "MATH3290",
                   "alts": []
                 },
                 {
                   "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4470",
                   "alts": []
                 }
               ],
@@ -634,6 +1199,14 @@
                 {
                   "code": "PHYS3810",
                   "alts": []
+                },
+                {
+                  "code": "PHYS4460",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS5562",
+                  "alts": []
                 }
               ],
               "children": []
@@ -655,6 +1228,14 @@
               "courses": [
                 {
                   "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
                   "alts": []
                 }
               ],

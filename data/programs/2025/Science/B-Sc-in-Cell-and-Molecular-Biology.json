@@ -165,6 +165,118 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "CMBI3101",
+        "codes": [
+          "CMBI3101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI3200",
+        "codes": [
+          "CMBI3200"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4001",
+        "codes": [
+          "CMBI4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4002",
+        "codes": [
+          "CMBI4002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4003",
+        "codes": [
+          "CMBI4003"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4101",
+        "codes": [
+          "CMBI4101"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4102",
+        "codes": [
+          "CMBI4102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4103",
+        "codes": [
+          "CMBI4103"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4201",
+        "codes": [
+          "CMBI4201"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4202",
+        "codes": [
+          "CMBI4202"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4203",
+        "codes": [
+          "CMBI4203"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4301",
+        "codes": [
+          "CMBI4301"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4302",
+        "codes": [
+          "CMBI4302"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "CMBI4303",
+        "codes": [
+          "CMBI4303"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "STAR2000",
         "codes": [
           "STAR2000"
@@ -255,6 +367,22 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "CMBI4902",
+        "codes": [
+          "CMBI4902"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CMBI4903",
+        "codes": [
+          "CMBI4903"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "LSCI1012",
         "codes": [
           "LSCI1012"
@@ -306,7 +434,7 @@
       "units": "41",
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 22
     },
     {
       "marker": "3.",
@@ -315,7 +443,7 @@
       "units": "8",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 11
     },
     {
       "marker": "1.",
@@ -430,6 +558,62 @@
         {
           "code": "CMBI3100",
           "alts": []
+        },
+        {
+          "code": "CMBI3101",
+          "alts": []
+        },
+        {
+          "code": "CMBI3200",
+          "alts": []
+        },
+        {
+          "code": "CMBI4001",
+          "alts": []
+        },
+        {
+          "code": "CMBI4002",
+          "alts": []
+        },
+        {
+          "code": "CMBI4003",
+          "alts": []
+        },
+        {
+          "code": "CMBI4101",
+          "alts": []
+        },
+        {
+          "code": "CMBI4102",
+          "alts": []
+        },
+        {
+          "code": "CMBI4103",
+          "alts": []
+        },
+        {
+          "code": "CMBI4201",
+          "alts": []
+        },
+        {
+          "code": "CMBI4202",
+          "alts": []
+        },
+        {
+          "code": "CMBI4203",
+          "alts": []
+        },
+        {
+          "code": "CMBI4301",
+          "alts": []
+        },
+        {
+          "code": "CMBI4302",
+          "alts": []
+        },
+        {
+          "code": "CMBI4303",
+          "alts": []
         }
       ],
       "children": []
@@ -458,6 +642,14 @@
         },
         {
           "code": "CMBI4901",
+          "alts": []
+        },
+        {
+          "code": "CMBI4902",
+          "alts": []
+        },
+        {
+          "code": "CMBI4903",
           "alts": []
         },
         {

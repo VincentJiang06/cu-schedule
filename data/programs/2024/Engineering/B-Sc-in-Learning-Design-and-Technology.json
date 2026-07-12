@@ -221,6 +221,14 @@
         ],
         "alt": false,
         "from": "(e) Research"
+      },
+      {
+        "raw": "LDTE4500",
+        "codes": [
+          "LDTE4500"
+        ],
+        "alt": false,
+        "from": "(e) Research"
       }
     ],
     "elective": [
@@ -435,7 +443,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "4.",
@@ -597,6 +605,10 @@
           "courses": [
             {
               "code": "LDTE3510",
+              "alts": []
+            },
+            {
+              "code": "LDTE4500",
               "alts": []
             }
           ],

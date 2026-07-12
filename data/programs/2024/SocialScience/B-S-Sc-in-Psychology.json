@@ -16,6 +16,7 @@
     "ARTS1005",
     "ARTS1010",
     "BMBL1001",
+    "BMBL1002",
     "BMBL2001",
     "BMBL2002",
     "BMBL2003",
@@ -527,6 +528,78 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2020",
+        "codes": [
+          "PSYC2020"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2050",
+        "codes": [
+          "PSYC2050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2190",
+        "codes": [
+          "PSYC2190"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2240",
+        "codes": [
+          "PSYC2240"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2300",
+        "codes": [
+          "PSYC2300"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2350",
+        "codes": [
+          "PSYC2350"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2540",
+        "codes": [
+          "PSYC2540"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2620",
+        "codes": [
+          "PSYC2620"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PSYC2650",
+        "codes": [
+          "PSYC2650"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -886,7 +959,7 @@
       "units": "31",
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 11
     },
     {
       "marker": "3.",
@@ -1062,6 +1135,42 @@
         },
         {
           "code": "PSYC2010",
+          "alts": []
+        },
+        {
+          "code": "PSYC2020",
+          "alts": []
+        },
+        {
+          "code": "PSYC2050",
+          "alts": []
+        },
+        {
+          "code": "PSYC2190",
+          "alts": []
+        },
+        {
+          "code": "PSYC2240",
+          "alts": []
+        },
+        {
+          "code": "PSYC2300",
+          "alts": []
+        },
+        {
+          "code": "PSYC2350",
+          "alts": []
+        },
+        {
+          "code": "PSYC2540",
+          "alts": []
+        },
+        {
+          "code": "PSYC2620",
+          "alts": []
+        },
+        {
+          "code": "PSYC2650",
           "alts": []
         }
       ],

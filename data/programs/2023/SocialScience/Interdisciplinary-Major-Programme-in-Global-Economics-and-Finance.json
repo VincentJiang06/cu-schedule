@@ -559,6 +559,22 @@
         ],
         "alt": false,
         "from": "(c) Capstone /"
+      },
+      {
+        "raw": "GLEF4080",
+        "codes": [
+          "GLEF4080"
+        ],
+        "alt": false,
+        "from": "(c) Capstone /"
+      },
+      {
+        "raw": "GLEF4090",
+        "codes": [
+          "GLEF4090"
+        ],
+        "alt": false,
+        "from": "(c) Capstone /"
       }
     ],
     "stream_elective": []
@@ -688,7 +704,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 3
     }
   ],
   "structure": [
@@ -1027,6 +1043,14 @@
           "courses": [
             {
               "code": "GLEF4070",
+              "alts": []
+            },
+            {
+              "code": "GLEF4080",
+              "alts": []
+            },
+            {
+              "code": "GLEF4090",
               "alts": []
             }
           ],

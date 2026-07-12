@@ -749,6 +749,94 @@
         ],
         "alt": false,
         "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4140",
+        "codes": [
+          "FINA4140"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4150",
+        "codes": [
+          "FINA4150"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4160",
+        "codes": [
+          "FINA4160"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4190",
+        "codes": [
+          "FINA4190"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4370",
+        "codes": [
+          "FINA4370"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4380",
+        "codes": [
+          "FINA4380"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4390",
+        "codes": [
+          "FINA4390"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4400",
+        "codes": [
+          "FINA4400"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4410",
+        "codes": [
+          "FINA4410"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4420",
+        "codes": [
+          "FINA4420"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
+      },
+      {
+        "raw": "FINA4430",
+        "codes": [
+          "FINA4430"
+        ],
+        "alt": false,
+        "from": "(c) At least 12 units of Core courses"
       }
     ],
     "stream_elective": []
@@ -860,7 +948,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 14
     }
   ],
   "structure": [
@@ -1265,6 +1353,50 @@
             },
             {
               "code": "FINA4130",
+              "alts": []
+            },
+            {
+              "code": "FINA4140",
+              "alts": []
+            },
+            {
+              "code": "FINA4150",
+              "alts": []
+            },
+            {
+              "code": "FINA4160",
+              "alts": []
+            },
+            {
+              "code": "FINA4190",
+              "alts": []
+            },
+            {
+              "code": "FINA4370",
+              "alts": []
+            },
+            {
+              "code": "FINA4380",
+              "alts": []
+            },
+            {
+              "code": "FINA4390",
+              "alts": []
+            },
+            {
+              "code": "FINA4400",
+              "alts": []
+            },
+            {
+              "code": "FINA4410",
+              "alts": []
+            },
+            {
+              "code": "FINA4420",
+              "alts": []
+            },
+            {
+              "code": "FINA4430",
               "alts": []
             }
           ],

@@ -343,6 +343,86 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON1111",
+        "codes": [
+          "ECON1111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON1902",
+        "codes": [
+          "ECON1902"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON2021",
+        "codes": [
+          "ECON2021"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON2121",
+        "codes": [
+          "ECON2121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON2901",
+        "codes": [
+          "ECON2901"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON3011",
+        "codes": [
+          "ECON3011"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON3021",
+        "codes": [
+          "ECON3021"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON3121",
+        "codes": [
+          "ECON3121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON4901",
+        "codes": [
+          "ECON4901"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ECON4903",
+        "codes": [
+          "ECON4903"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [],
@@ -365,7 +445,7 @@
       "units": "27",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 11
     },
     {
       "marker": "3.",
@@ -503,6 +583,46 @@
       "courses": [
         {
           "code": "ECON1101",
+          "alts": []
+        },
+        {
+          "code": "ECON1111",
+          "alts": []
+        },
+        {
+          "code": "ECON1902",
+          "alts": []
+        },
+        {
+          "code": "ECON2021",
+          "alts": []
+        },
+        {
+          "code": "ECON2121",
+          "alts": []
+        },
+        {
+          "code": "ECON2901",
+          "alts": []
+        },
+        {
+          "code": "ECON3011",
+          "alts": []
+        },
+        {
+          "code": "ECON3021",
+          "alts": []
+        },
+        {
+          "code": "ECON3121",
+          "alts": []
+        },
+        {
+          "code": "ECON4901",
+          "alts": []
+        },
+        {
+          "code": "ECON4903",
           "alts": []
         }
       ],

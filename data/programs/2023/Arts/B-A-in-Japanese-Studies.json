@@ -488,6 +488,54 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "JASP1480",
+        "codes": [
+          "JASP1480"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "JASP2010",
+        "codes": [
+          "JASP2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "JASP2030",
+        "codes": [
+          "JASP2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "JASP2050",
+        "codes": [
+          "JASP2050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "JASP2470",
+        "codes": [
+          "JASP2470"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "JASP2480",
+        "codes": [
+          "JASP2480"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "JASP4601",
         "codes": [
           "JASP4601"
@@ -754,6 +802,14 @@
         "from": "(a) Non-language Courses"
       },
       {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
         "raw": "MGNT1010",
         "codes": [
           "MGNT1010"
@@ -805,6 +861,142 @@
         "raw": "JASP3180",
         "codes": [
           "JASP3180"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3200",
+        "codes": [
+          "JASP3200"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3310",
+        "codes": [
+          "JASP3310"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3320",
+        "codes": [
+          "JASP3320"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3330",
+        "codes": [
+          "JASP3330"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3340",
+        "codes": [
+          "JASP3340"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3350",
+        "codes": [
+          "JASP3350"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3360",
+        "codes": [
+          "JASP3360"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3380",
+        "codes": [
+          "JASP3380"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3390",
+        "codes": [
+          "JASP3390"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP3600",
+        "codes": [
+          "JASP3600"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4180",
+        "codes": [
+          "JASP4180"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4350",
+        "codes": [
+          "JASP4350"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4380",
+        "codes": [
+          "JASP4380"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4390",
+        "codes": [
+          "JASP4390"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4440",
+        "codes": [
+          "JASP4440"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4510",
+        "codes": [
+          "JASP4510"
+        ],
+        "alt": false,
+        "from": "(b) Language Courses"
+      },
+      {
+        "raw": "JASP4520",
+        "codes": [
+          "JASP4520"
         ],
         "alt": false,
         "from": "(b) Language Courses"
@@ -973,6 +1165,14 @@
         "raw": "LING1000",
         "codes": [
           "LING1000"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
         ],
         "alt": false,
         "from": "(iii) Japanese Language and Linguistics"
@@ -1253,6 +1453,14 @@
         "raw": "LING1000",
         "codes": [
           "LING1000"
+        ],
+        "alt": false,
+        "from": "(a) Non-language Courses"
+      },
+      {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
         ],
         "alt": false,
         "from": "(a) Non-language Courses"
@@ -1682,6 +1890,14 @@
         "from": "(iii) Japanese Language and Linguistics"
       },
       {
+        "raw": "LING2003",
+        "codes": [
+          "LING2003"
+        ],
+        "alt": false,
+        "from": "(iii) Japanese Language and Linguistics"
+      },
+      {
         "raw": "JASP4100",
         "codes": [
           "JASP4100"
@@ -1778,7 +1994,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 35
+      "n_courses": 36
     },
     {
       "marker": "(b)",
@@ -1787,7 +2003,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 20
     },
     {
       "marker": "(i)",
@@ -1814,7 +2030,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 8
     },
     {
       "marker": "1.",
@@ -1832,7 +2048,7 @@
       "units": "33",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 9
     },
     {
       "marker": "3.",
@@ -1850,7 +2066,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 35
+      "n_courses": 36
     },
     {
       "marker": "(b)",
@@ -1886,7 +2102,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 8
     }
   ],
   "structure": [
@@ -2167,6 +2383,10 @@
               "alts": []
             },
             {
+              "code": "LING2003",
+              "alts": []
+            },
+            {
               "code": "MGNT1010",
               "alts": []
             },
@@ -2201,6 +2421,74 @@
             },
             {
               "code": "JASP3180",
+              "alts": []
+            },
+            {
+              "code": "JASP3200",
+              "alts": []
+            },
+            {
+              "code": "JASP3310",
+              "alts": []
+            },
+            {
+              "code": "JASP3320",
+              "alts": []
+            },
+            {
+              "code": "JASP3330",
+              "alts": []
+            },
+            {
+              "code": "JASP3340",
+              "alts": []
+            },
+            {
+              "code": "JASP3350",
+              "alts": []
+            },
+            {
+              "code": "JASP3360",
+              "alts": []
+            },
+            {
+              "code": "JASP3380",
+              "alts": []
+            },
+            {
+              "code": "JASP3390",
+              "alts": []
+            },
+            {
+              "code": "JASP3600",
+              "alts": []
+            },
+            {
+              "code": "JASP4180",
+              "alts": []
+            },
+            {
+              "code": "JASP4350",
+              "alts": []
+            },
+            {
+              "code": "JASP4380",
+              "alts": []
+            },
+            {
+              "code": "JASP4390",
+              "alts": []
+            },
+            {
+              "code": "JASP4440",
+              "alts": []
+            },
+            {
+              "code": "JASP4510",
+              "alts": []
+            },
+            {
+              "code": "JASP4520",
               "alts": []
             }
           ],
@@ -2314,6 +2602,10 @@
                   "alts": []
                 },
                 {
+                  "code": "LING2003",
+                  "alts": []
+                },
+                {
                   "code": "JASP4100",
                   "alts": []
                 },
@@ -2343,55 +2635,27 @@
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
         {
-          "code": "JASP3200",
+          "code": "JASP1480",
           "alts": []
         },
         {
-          "code": "JASP3310",
+          "code": "JASP2010",
           "alts": []
         },
         {
-          "code": "JASP3320",
+          "code": "JASP2030",
           "alts": []
         },
         {
-          "code": "JASP3330",
+          "code": "JASP2050",
           "alts": []
         },
         {
-          "code": "JASP3340",
+          "code": "JASP2470",
           "alts": []
         },
         {
-          "code": "JASP3350",
-          "alts": []
-        },
-        {
-          "code": "JASP3360",
-          "alts": []
-        },
-        {
-          "code": "JASP3380",
-          "alts": []
-        },
-        {
-          "code": "JASP3390",
-          "alts": []
-        },
-        {
-          "code": "JASP3600",
-          "alts": []
-        },
-        {
-          "code": "JASP4350",
-          "alts": []
-        },
-        {
-          "code": "JASP4380",
-          "alts": []
-        },
-        {
-          "code": "JASP4440",
+          "code": "JASP2480",
           "alts": []
         }
       ],

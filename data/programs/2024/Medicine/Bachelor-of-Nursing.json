@@ -199,6 +199,134 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3136",
+        "codes": [
+          "NURS3136"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3142",
+        "codes": [
+          "NURS3142"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3143",
+        "codes": [
+          "NURS3143"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3144",
+        "codes": [
+          "NURS3144"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3145",
+        "codes": [
+          "NURS3145"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3148",
+        "codes": [
+          "NURS3148"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3152",
+        "codes": [
+          "NURS3152"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3153",
+        "codes": [
+          "NURS3153"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3154",
+        "codes": [
+          "NURS3154"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3157",
+        "codes": [
+          "NURS3157"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS3159",
+        "codes": [
+          "NURS3159"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS4102",
+        "codes": [
+          "NURS4102"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS4121",
+        "codes": [
+          "NURS4121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS4122",
+        "codes": [
+          "NURS4122"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS4123",
+        "codes": [
+          "NURS4123"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "NURS4124",
+        "codes": [
+          "NURS4124"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -294,7 +422,7 @@
       "units": "99",
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 29
     },
     {
       "marker": "3.",
@@ -392,6 +520,70 @@
         },
         {
           "code": "NURS3135",
+          "alts": []
+        },
+        {
+          "code": "NURS3136",
+          "alts": []
+        },
+        {
+          "code": "NURS3142",
+          "alts": []
+        },
+        {
+          "code": "NURS3143",
+          "alts": []
+        },
+        {
+          "code": "NURS3144",
+          "alts": []
+        },
+        {
+          "code": "NURS3145",
+          "alts": []
+        },
+        {
+          "code": "NURS3148",
+          "alts": []
+        },
+        {
+          "code": "NURS3152",
+          "alts": []
+        },
+        {
+          "code": "NURS3153",
+          "alts": []
+        },
+        {
+          "code": "NURS3154",
+          "alts": []
+        },
+        {
+          "code": "NURS3157",
+          "alts": []
+        },
+        {
+          "code": "NURS3159",
+          "alts": []
+        },
+        {
+          "code": "NURS4102",
+          "alts": []
+        },
+        {
+          "code": "NURS4121",
+          "alts": []
+        },
+        {
+          "code": "NURS4122",
+          "alts": []
+        },
+        {
+          "code": "NURS4123",
+          "alts": []
+        },
+        {
+          "code": "NURS4124",
           "alts": []
         }
       ],

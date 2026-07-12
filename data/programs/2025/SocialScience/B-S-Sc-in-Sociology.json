@@ -191,7 +191,12 @@
     "GDRS3006",
     "GDRS3007",
     "GDRS3008",
+    "GDRS3009",
+    "GDRS3012",
+    "GDRS3015",
+    "GDRS3021",
     "GDRS3024",
+    "GDRS3025",
     "GDRS4006",
     "GDRS4007",
     "GDRS4008",
@@ -664,6 +669,14 @@
         ],
         "alt": false,
         "from": "2. Required"
+      },
+      {
+        "raw": "SOCI4020",
+        "codes": [
+          "SOCI4020"
+        ],
+        "alt": false,
+        "from": "2. Required"
       }
     ],
     "elective": [
@@ -1103,7 +1116,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 9
     },
     {
       "marker": "3.",
@@ -1281,6 +1294,10 @@
         },
         {
           "code": "SOCI4010",
+          "alts": []
+        },
+        {
+          "code": "SOCI4020",
           "alts": []
         }
       ],

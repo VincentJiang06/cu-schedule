@@ -242,6 +242,14 @@
         ],
         "alt": false,
         "from": "(e) Research Experience"
+      },
+      {
+        "raw": "BMED4520",
+        "codes": [
+          "BMED4520"
+        ],
+        "alt": false,
+        "from": "(e) Research Experience"
       }
     ],
     "elective": [
@@ -438,7 +446,7 @@
       "units": "6",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "3.",
@@ -615,6 +623,10 @@
           "courses": [
             {
               "code": "BMED4510",
+              "alts": []
+            },
+            {
+              "code": "BMED4520",
               "alts": []
             }
           ],

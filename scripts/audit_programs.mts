@@ -376,6 +376,19 @@ function main() {
     assert('BEdMath2023 2(a) Subject Knowledge=26,含18门', ok,
       n ? `title="${n.title}" units=${n.units} missing=[${want.filter((c) => !got.has(c)).join(',')}]` : 'node missing')
   }
+  // case 5: 签名1(脚注/插入语卡断裸续号)回收 —— SOWK "…4030 (capstone course), 4510, …,
+  // 4590, 4591, 4592" 一列曾整段丢课;只断言这些续号课号出现在 structure 任意节点(与归位/
+  // 标题无关,专锁续号回收)。修复前 SOWK4590/4591/4592 均为 P1 缺课。
+  {
+    const p = byId.get('2025:B.S.Sc. in Social Work')
+    const codes = new Set<string>()
+    if (p) collectStructCodes(p.structure, codes)
+    const want = ['SOWK4510', 'SOWK4520', 'SOWK4530', 'SOWK4540', 'SOWK4550', 'SOWK4570', 'SOWK4580', 'SOWK4590', 'SOWK4591', 'SOWK4592']
+    const ok = !!p && want.every((c) => codes.has(c))
+    assert('SOWK2025 脚注/插入语后续号全回收', ok,
+      p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
+  }
+
   const p6Fail = p6.filter((c) => !c.ok).length
 
   // --------------------------------------------------------------------- 输出

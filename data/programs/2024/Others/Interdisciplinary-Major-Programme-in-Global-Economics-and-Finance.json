@@ -586,6 +586,14 @@
         ],
         "alt": false,
         "from": "(c) Capstone (3 units from the following)"
+      },
+      {
+        "raw": "GLEF4080",
+        "codes": [
+          "GLEF4080"
+        ],
+        "alt": false,
+        "from": "(c) Capstone (3 units from the following)"
       }
     ],
     "stream_elective": []
@@ -724,7 +732,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     }
   ],
   "structure": [
@@ -1083,6 +1091,10 @@
           "courses": [
             {
               "code": "GLEF4070",
+              "alts": []
+            },
+            {
+              "code": "GLEF4080",
               "alts": []
             }
           ],

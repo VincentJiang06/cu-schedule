@@ -311,6 +311,150 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "PHPC3015",
+        "codes": [
+          "PHPC3015"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3016",
+        "codes": [
+          "PHPC3016"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3017",
+        "codes": [
+          "PHPC3017"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3018",
+        "codes": [
+          "PHPC3018"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3024",
+        "codes": [
+          "PHPC3024"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3026",
+        "codes": [
+          "PHPC3026"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3034",
+        "codes": [
+          "PHPC3034"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC3415",
+        "codes": [
+          "PHPC3415"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4025",
+        "codes": [
+          "PHPC4025"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4028",
+        "codes": [
+          "PHPC4028"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4029",
+        "codes": [
+          "PHPC4029"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4031",
+        "codes": [
+          "PHPC4031"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4032",
+        "codes": [
+          "PHPC4032"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4033",
+        "codes": [
+          "PHPC4033"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4040",
+        "codes": [
+          "PHPC4040"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4041",
+        "codes": [
+          "PHPC4041"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4042",
+        "codes": [
+          "PHPC4042"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4043",
+        "codes": [
+          "PHPC4043"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "SOCI3227",
         "codes": [
           "SOCI3227"
@@ -330,6 +474,38 @@
         "raw": "PHPC4911",
         "codes": [
           "PHPC4911"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4912",
+        "codes": [
+          "PHPC4912"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4913",
+        "codes": [
+          "PHPC4913"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4921",
+        "codes": [
+          "PHPC4921"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "PHPC4922",
+        "codes": [
+          "PHPC4922"
         ],
         "alt": false,
         "from": "3. Elective Courses"
@@ -363,7 +539,7 @@
       "units": "22",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 12
+      "n_courses": 34
     },
     {
       "marker": "4.",
@@ -509,6 +685,78 @@
           "alts": []
         },
         {
+          "code": "PHPC3015",
+          "alts": []
+        },
+        {
+          "code": "PHPC3016",
+          "alts": []
+        },
+        {
+          "code": "PHPC3017",
+          "alts": []
+        },
+        {
+          "code": "PHPC3018",
+          "alts": []
+        },
+        {
+          "code": "PHPC3024",
+          "alts": []
+        },
+        {
+          "code": "PHPC3026",
+          "alts": []
+        },
+        {
+          "code": "PHPC3034",
+          "alts": []
+        },
+        {
+          "code": "PHPC3415",
+          "alts": []
+        },
+        {
+          "code": "PHPC4025",
+          "alts": []
+        },
+        {
+          "code": "PHPC4028",
+          "alts": []
+        },
+        {
+          "code": "PHPC4029",
+          "alts": []
+        },
+        {
+          "code": "PHPC4031",
+          "alts": []
+        },
+        {
+          "code": "PHPC4032",
+          "alts": []
+        },
+        {
+          "code": "PHPC4033",
+          "alts": []
+        },
+        {
+          "code": "PHPC4040",
+          "alts": []
+        },
+        {
+          "code": "PHPC4041",
+          "alts": []
+        },
+        {
+          "code": "PHPC4042",
+          "alts": []
+        },
+        {
+          "code": "PHPC4043",
+          "alts": []
+        },
+        {
           "code": "SOCI3227",
           "alts": []
         },
@@ -518,6 +766,22 @@
         },
         {
           "code": "PHPC4911",
+          "alts": []
+        },
+        {
+          "code": "PHPC4912",
+          "alts": []
+        },
+        {
+          "code": "PHPC4913",
+          "alts": []
+        },
+        {
+          "code": "PHPC4921",
+          "alts": []
+        },
+        {
+          "code": "PHPC4922",
           "alts": []
         }
       ],

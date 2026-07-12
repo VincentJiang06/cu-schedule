@@ -413,6 +413,14 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "GRMD4002",
+        "codes": [
+          "GRMD4002"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -1212,7 +1220,7 @@
       "units": "27",
       "bucket": "required",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 10
     },
     {
       "marker": "3.",
@@ -1466,6 +1474,10 @@
         },
         {
           "code": "GRMD4001",
+          "alts": []
+        },
+        {
+          "code": "GRMD4002",
           "alts": []
         }
       ],

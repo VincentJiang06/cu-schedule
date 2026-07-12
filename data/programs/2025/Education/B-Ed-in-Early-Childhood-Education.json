@@ -82,6 +82,14 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "BECE2310",
+        "codes": [
+          "BECE2310"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "EDUC2240",
         "codes": [
           "EDUC2240"
@@ -224,6 +232,14 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "BECE4020",
+        "codes": [
+          "BECE4020"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -239,6 +255,54 @@
         "raw": "BECE3110",
         "codes": [
           "BECE3110"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3120",
+        "codes": [
+          "BECE3120"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3160",
+        "codes": [
+          "BECE3160"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3170",
+        "codes": [
+          "BECE3170"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3210",
+        "codes": [
+          "BECE3210"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE3220",
+        "codes": [
+          "BECE3220"
+        ],
+        "alt": false,
+        "from": "(a) At least 26 units of courses chosen from the"
+      },
+      {
+        "raw": "BECE4341",
+        "codes": [
+          "BECE4341"
         ],
         "alt": false,
         "from": "(a) At least 26 units of courses chosen from the"
@@ -510,7 +574,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "2.",
@@ -519,7 +583,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 17
+      "n_courses": 18
     },
     {
       "marker": "3.",
@@ -537,7 +601,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 10
     },
     {
       "marker": "(b)",
@@ -567,6 +631,10 @@
       "courses": [
         {
           "code": "BECE2110",
+          "alts": []
+        },
+        {
+          "code": "BECE2310",
           "alts": []
         },
         {
@@ -649,6 +717,10 @@
         {
           "code": "BECE4010",
           "alts": []
+        },
+        {
+          "code": "BECE4020",
+          "alts": []
         }
       ],
       "children": []
@@ -672,6 +744,30 @@
             },
             {
               "code": "BECE3110",
+              "alts": []
+            },
+            {
+              "code": "BECE3120",
+              "alts": []
+            },
+            {
+              "code": "BECE3160",
+              "alts": []
+            },
+            {
+              "code": "BECE3170",
+              "alts": []
+            },
+            {
+              "code": "BECE3210",
+              "alts": []
+            },
+            {
+              "code": "BECE3220",
+              "alts": []
+            },
+            {
+              "code": "BECE4341",
               "alts": []
             },
             {

@@ -409,6 +409,30 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "SOWK4350",
+        "codes": [
+          "SOWK4350"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SOWK4410",
+        "codes": [
+          "SOWK4410"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "SOWK4420",
+        "codes": [
+          "SOWK4420"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -443,6 +467,86 @@
         ],
         "alt": false,
         "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4510",
+        "codes": [
+          "SOWK4510"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4520",
+        "codes": [
+          "SOWK4520"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4530",
+        "codes": [
+          "SOWK4530"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4540",
+        "codes": [
+          "SOWK4540"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4550",
+        "codes": [
+          "SOWK4550"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4570",
+        "codes": [
+          "SOWK4570"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4580",
+        "codes": [
+          "SOWK4580"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4590",
+        "codes": [
+          "SOWK4590"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4591",
+        "codes": [
+          "SOWK4591"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
+      },
+      {
+        "raw": "SOWK4592",
+        "codes": [
+          "SOWK4592"
+        ],
+        "alt": false,
+        "from": "(b) at least three courses from SOWK4030"
       }
     ],
     "stream_elective": []
@@ -464,7 +568,7 @@
       "units": "51",
       "bucket": "required",
       "stream": null,
-      "n_courses": 14
+      "n_courses": 17
     },
     {
       "marker": "3.",
@@ -491,7 +595,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 11
     }
   ],
   "structure": [
@@ -673,6 +777,18 @@
         {
           "code": "SOWK4020",
           "alts": []
+        },
+        {
+          "code": "SOWK4350",
+          "alts": []
+        },
+        {
+          "code": "SOWK4410",
+          "alts": []
+        },
+        {
+          "code": "SOWK4420",
+          "alts": []
         }
       ],
       "children": []
@@ -724,6 +840,46 @@
         },
         {
           "code": "SOWK3250",
+          "alts": []
+        },
+        {
+          "code": "SOWK4510",
+          "alts": []
+        },
+        {
+          "code": "SOWK4520",
+          "alts": []
+        },
+        {
+          "code": "SOWK4530",
+          "alts": []
+        },
+        {
+          "code": "SOWK4540",
+          "alts": []
+        },
+        {
+          "code": "SOWK4550",
+          "alts": []
+        },
+        {
+          "code": "SOWK4570",
+          "alts": []
+        },
+        {
+          "code": "SOWK4580",
+          "alts": []
+        },
+        {
+          "code": "SOWK4590",
+          "alts": []
+        },
+        {
+          "code": "SOWK4591",
+          "alts": []
+        },
+        {
+          "code": "SOWK4592",
           "alts": []
         }
       ],

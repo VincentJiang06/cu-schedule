@@ -248,6 +248,22 @@
         "from": "(a) (b) (c) (d) (e) | Language"
       },
       {
+        "raw": "CLED3530",
+        "codes": [
+          "CLED3530"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4520",
+        "codes": [
+          "CLED4520"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
         "raw": "CLED3510",
         "codes": [
           "CLED3510"
@@ -283,6 +299,14 @@
         "raw": "CLED4720",
         "codes": [
           "CLED4720"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4730",
+        "codes": [
+          "CLED4730"
         ],
         "alt": false,
         "from": "(a) (b) (c) (d) (e) | Language"
@@ -1030,7 +1054,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 16
     },
     {
       "marker": "3.",
@@ -1199,6 +1223,14 @@
               "alts": []
             },
             {
+              "code": "CLED3530",
+              "alts": []
+            },
+            {
+              "code": "CLED4520",
+              "alts": []
+            },
+            {
               "code": "CLED3510",
               "alts": []
             },
@@ -1216,6 +1248,10 @@
             },
             {
               "code": "CLED4720",
+              "alts": []
+            },
+            {
+              "code": "CLED4730",
               "alts": []
             },
             {

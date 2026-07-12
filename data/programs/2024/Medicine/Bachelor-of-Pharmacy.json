@@ -80,6 +80,38 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "MEDF1012",
+        "codes": [
+          "MEDF1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1021",
+        "codes": [
+          "MEDF1021"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1031",
+        "codes": [
+          "MEDF1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MEDF1041",
+        "codes": [
+          "MEDF1041"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "PHAR1000",
         "codes": [
           "PHAR1000"
@@ -300,7 +332,7 @@
       "units": "10",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 5
     },
     {
       "marker": "2.",
@@ -375,6 +407,22 @@
       "courses": [
         {
           "code": "MEDF1011",
+          "alts": []
+        },
+        {
+          "code": "MEDF1012",
+          "alts": []
+        },
+        {
+          "code": "MEDF1021",
+          "alts": []
+        },
+        {
+          "code": "MEDF1031",
+          "alts": []
+        },
+        {
+          "code": "MEDF1041",
           "alts": []
         }
       ],

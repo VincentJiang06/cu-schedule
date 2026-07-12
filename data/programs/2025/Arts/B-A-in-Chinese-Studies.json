@@ -817,6 +817,22 @@
         "from": "3. Elective Courses"
       },
       {
+        "raw": "CHES3402",
+        "codes": [
+          "CHES3402"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "CHES4003",
+        "codes": [
+          "CHES4003"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
         "raw": "CLCP2213",
         "codes": [
           "CLCP2213"
@@ -1009,7 +1025,7 @@
       "units": "27",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 53
+      "n_courses": 55
     }
   ],
   "structure": [
@@ -1431,6 +1447,14 @@
         },
         {
           "code": "CHES3401",
+          "alts": []
+        },
+        {
+          "code": "CHES3402",
+          "alts": []
+        },
+        {
+          "code": "CHES4003",
           "alts": []
         },
         {

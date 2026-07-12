@@ -200,6 +200,14 @@
         "from": "(i) SBMS3201, 4201[e], 4202[e]"
       },
       {
+        "raw": "SBMS4202",
+        "codes": [
+          "SBMS4202"
+        ],
+        "alt": false,
+        "from": "(i) SBMS3201, 4201[e], 4202[e]"
+      },
+      {
         "raw": "SBMS3202",
         "codes": [
           "SBMS3202"
@@ -510,6 +518,22 @@
         ],
         "alt": false,
         "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS4204",
+        "codes": [
+          "SBMS4204"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
+      },
+      {
+        "raw": "SBMS4205",
+        "codes": [
+          "SBMS4205"
+        ],
+        "alt": false,
+        "from": "(b) 17-18[a] units of courses chosen from"
       }
     ],
     "stream_elective": []
@@ -558,7 +582,7 @@
       "units": "8",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 3
     },
     {
       "marker": "(ii)",
@@ -612,7 +636,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 21
+      "n_courses": 23
     }
   ],
   "structure": [
@@ -724,6 +748,10 @@
                 },
                 {
                   "code": "SBMS4201",
+                  "alts": []
+                },
+                {
+                  "code": "SBMS4202",
                   "alts": []
                 }
               ],
@@ -932,6 +960,14 @@
             },
             {
               "code": "SBMS4203",
+              "alts": []
+            },
+            {
+              "code": "SBMS4204",
+              "alts": []
+            },
+            {
+              "code": "SBMS4205",
               "alts": []
             }
           ],
