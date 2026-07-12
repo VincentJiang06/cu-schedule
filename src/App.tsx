@@ -953,6 +953,15 @@ export default function App() {
         .filter((course): course is Course => Boolean(course)),
     [byCode, committed],
   )
+  // #里程碑2(加课后重新生成所有方案):committedCourses 变化(加/删课)时 allPlans 本就会
+  // 随之重新生成,但 deletedPlanIds 记的是"旧方案集"里被删掉的那些 plan.id——对新方案集毫
+  // 无意义,残留下来只会让新方案集莫名少几个选项(万一 id 恰好撞上新方案里的某个)。这里在
+  // committedCourses 变化时清空它,恢复新方案集全部可见。pins 是用户对具体课 section 的
+  // 约束,加新课不影响旧课的约束意图,继续保留、不在这里清。用函数式更新 + size 守卫避免
+  // 已经是空集时还创建一个新 Set 引用,省一次无意义的下游 re-render。
+  useEffect(() => {
+    setDeletedPlanIds((current) => (current.size === 0 ? current : new Set()))
+  }, [committedCourses])
   const unknownCommitted = useMemo(
     () => (courses.length === 0 ? [] : committed.filter((code) => !byCode.has(courseKey(code)))),
     [byCode, committed, courses.length],
