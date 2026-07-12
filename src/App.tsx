@@ -1133,11 +1133,18 @@ export default function App() {
   }
 
   // 开机拉取:带着已存凭据启动 → 以云端存档为准(自动上传保证云端总是最后编辑态)。
-  // 例外:URL 带 #st=(别人分享的实时状态链接)时不拉——用户点开链接就是要看链接里的状态。
+  // 不再因 URL 带 #st= 就跳过这次拉取(之前的口子):#st= 只决定首屏渲染前的初始视图值
+  // (见上面一串 useState(live ? ... : ...)),不代表云端没有更新——旧标签页/旧书签/复制
+  // 出去的 #st= 链接完全可能落后于其它设备最近一次的云端保存。如果这里跳过拉取又照样把
+  // cloudReadyRef 置真,1.5s 防抖上传会在第一次编辑时把这份旧状态推上去,静默覆盖云端更新的
+  // 存档——登录用户的"开机拉取=云端权威"这条 LWW 保证就在推送侧被绕过了。改成已登录就无条件
+  // 拉云端,拉到后 applyCloudConfig 覆盖掉 #st= 派生的初始视图,和"本地存档也会被云端覆盖"的
+  // 既有分支保持同一套语义,cloudReadyRef 仍然只在这次拉取(成功或失败)结束后才置真,
+  // 拉取完成前自动上传保持关闭。
   const termsReady = terms.length > 0
   useEffect(() => {
     if (!termsReady) return
-    if (!account || live) {
+    if (!account) {
       cloudReadyRef.current = true
       return
     }
