@@ -687,13 +687,12 @@ select {
   padding: 12px 14px;
   text-decoration: none;
   color: var(--ink);
-  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+  transition: border-color 0.15s, background 0.15s;
 }
 
 .appendix-sib-card:hover {
   border-color: var(--brand);
   background: var(--brand-wash);
-  transform: translateY(-1px);
 }
 
 .appendix-sib-card img {
@@ -2465,17 +2464,12 @@ select {
   font-size: 12.5px;
   font-weight: 650;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .export-btn:hover:not(:disabled) {
   border-color: var(--brand);
   color: var(--brand-ink);
-  transform: translateY(-1px);
-}
-
-.export-btn:active:not(:disabled) {
-  transform: translateY(0);
 }
 
 .export-btn:disabled {
@@ -2503,13 +2497,12 @@ select {
   font-weight: 650;
   font-variant-numeric: tabular-nums;
   cursor: pointer;
-  transition: border-color 0.15s, color 0.15s, transform 0.15s;
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .aspect-btn:hover:not(:disabled) {
   border-color: var(--brand);
   color: var(--brand-ink);
-  transform: translateY(-1px);
 }
 
 .aspect-btn:disabled {
@@ -2935,13 +2928,12 @@ select {
   text-decoration: none;
   font-size: 0.86rem;
   line-height: 1;
-  transition: color 0.18s, border-color 0.18s, transform 0.18s;
+  transition: color 0.18s, border-color 0.18s;
 }
 
 .sib-chip:hover {
   color: var(--brand-ink);
   border-color: var(--brand);
-  transform: translateY(-1px);
 }
 
 .sib-chip img {
@@ -4348,7 +4340,7 @@ select {
   cursor: pointer;
   background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
-  transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease, transform 0.1s ease;
+  transition: background 0.14s ease, color 0.14s ease, border-color 0.14s ease;
 }
 
 /* Vertical accent bar down the right edge (replaces the old left bar / corner notch). */
@@ -4364,7 +4356,6 @@ select {
 }
 
 .pg-course:hover {
-  transform: translateY(-1px);
   filter: brightness(0.98);
 }
 
@@ -4434,16 +4425,6 @@ select {
 .pg-course--done .pg-course__units {
   color: inherit;
   opacity: 0.78;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pg-course,
-  .pg-course::after {
-    transition: none;
-  }
-  .pg-course:hover {
-    transform: none;
-  }
 }
 
 /* ---- 信息页:已完成课程网格 (takenCard) ------------------------------------ */
@@ -4890,17 +4871,11 @@ select {
 /* ---- #里程碑6:减少动态效果 ---------------------------------------------------
    放在文件最末尾——CSS 层叠只看源码顺序不看媒体查询，要稳赢前面所有无条件的 hover/
    动画规则，这个块必须排在它们全部之后。颜色/边框类过渡保留(不算「动效」，WCAG 的
-   prefers-reduced-motion 关注的是位移/缩放/闪烁这类动作)，只关掉会挪动位置或播放的：
-   课程块淡入 mount 动画、按钮 hover 位移。（#里程碑3 已整体去掉卡片 hover 上浮，
-   这里不再需要单独关它。） */
+   prefers-reduced-motion 关注的是位移/缩放/闪烁这类动作)，只关掉会播放的课程块淡入
+   mount 动画。（全站 hover 上浮/位移已在源头彻底去掉，不再需要在这里单独关。） */
 @media (prefers-reduced-motion: reduce) {
   .tt__block,
   .tt2__block {
     animation: none;
-  }
-
-  .export-btn:hover:not(:disabled),
-  .export-btn:active:not(:disabled) {
-    transform: none;
   }
 }
