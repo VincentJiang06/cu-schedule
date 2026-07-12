@@ -10241,6 +10241,66 @@
               "alts": []
             },
             {
+              "code": "BIOL2213",
+              "alts": []
+            },
+            {
+              "code": "BIOL3012",
+              "alts": []
+            },
+            {
+              "code": "BIOL3022",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL3560",
+              "alts": []
+            },
+            {
+              "code": "BIOL3570",
+              "alts": []
+            },
+            {
+              "code": "BIOL3610",
+              "alts": []
+            },
+            {
+              "code": "BIOL3620",
+              "alts": []
+            },
+            {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "BIOL3710",
+              "alts": []
+            },
+            {
+              "code": "BIOL4012",
+              "alts": []
+            },
+            {
+              "code": "BIOL4230",
+              "alts": []
+            },
+            {
+              "code": "BIOL4260",
+              "alts": []
+            },
+            {
+              "code": "BIOL4420",
+              "alts": []
+            },
+            {
+              "code": "BIOL4510",
+              "alts": []
+            },
+            {
               "code": "CHEM1070",
               "alts": []
             },
@@ -10939,34 +10999,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "BIOL3012",
-          "alts": []
-        },
-        {
-          "code": "BIOL3022",
-          "alts": []
-        },
-        {
-          "code": "BIOL3560",
-          "alts": []
-        },
-        {
-          "code": "BIOL3570",
-          "alts": []
-        },
-        {
-          "code": "BIOL3610",
-          "alts": []
-        },
-        {
-          "code": "BIOL3620",
-          "alts": []
-        },
-        {
-          "code": "BIOL3630",
-          "alts": []
-        },
         {
           "code": "EESC3110",
           "alts": []

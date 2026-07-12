@@ -1353,6 +1353,34 @@
                 {
                   "code": "CHLL3110",
                   "alts": []
+                },
+                {
+                  "code": "CHLL3141",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3142",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3143",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3151",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4121",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4141",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4161",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1365,6 +1393,38 @@
               "courses": [
                 {
                   "code": "CHLL3221",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3222",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3223",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3231",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL3232",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4224",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4242",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4243",
+                  "alts": []
+                },
+                {
+                  "code": "CHLL4244",
                   "alts": []
                 }
               ],
@@ -1645,75 +1705,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "CHLL3141",
-          "alts": []
-        },
-        {
-          "code": "CHLL3142",
-          "alts": []
-        },
-        {
-          "code": "CHLL3143",
-          "alts": []
-        },
-        {
-          "code": "CHLL3151",
-          "alts": []
-        },
-        {
-          "code": "CHLL4121",
-          "alts": []
-        },
-        {
-          "code": "CHLL4141",
-          "alts": []
-        },
-        {
-          "code": "CHLL4161",
-          "alts": []
-        },
-        {
-          "code": "CHLL3222",
-          "alts": []
-        },
-        {
-          "code": "CHLL3223",
-          "alts": []
-        },
-        {
-          "code": "CHLL3231",
-          "alts": []
-        },
-        {
-          "code": "CHLL3232",
-          "alts": []
-        },
-        {
-          "code": "CHLL4224",
-          "alts": []
-        },
-        {
-          "code": "CHLL4242",
-          "alts": []
-        },
-        {
-          "code": "CHLL4243",
-          "alts": []
-        },
-        {
-          "code": "CHLL4244",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

@@ -1692,6 +1692,34 @@
                 {
                   "code": "DOTE3000",
                   "alts": []
+                },
+                {
+                  "code": "DOTE3011",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3050",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3080",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3090",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4040",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4080",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1747,6 +1775,14 @@
                 {
                   "code": "DOTE4070",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4240",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4260",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1759,6 +1795,22 @@
               "courses": [
                 {
                   "code": "DOTE3030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4110",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4220",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4280",
                   "alts": []
                 },
                 {
@@ -2218,6 +2270,26 @@
                 {
                   "code": "MKTG4150",
                   "alts": []
+                },
+                {
+                  "code": "MKTG4160",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4170",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4180",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4190",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4200",
+                  "alts": []
                 }
               ],
               "children": []
@@ -2249,71 +2321,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "DOTE3011",
-          "alts": []
-        },
-        {
-          "code": "DOTE3050",
-          "alts": []
-        },
-        {
-          "code": "DOTE3080",
-          "alts": []
-        },
-        {
-          "code": "DOTE3090",
-          "alts": []
-        },
-        {
-          "code": "DOTE4040",
-          "alts": []
-        },
-        {
-          "code": "DOTE4080",
-          "alts": []
-        },
-        {
-          "code": "DOTE4240",
-          "alts": []
-        },
-        {
-          "code": "DOTE4260",
-          "alts": []
-        },
-        {
-          "code": "DOTE4030",
-          "alts": []
-        },
-        {
-          "code": "DOTE4220",
-          "alts": []
-        },
-        {
-          "code": "DOTE4280",
-          "alts": []
-        },
-        {
-          "code": "MKTG4170",
-          "alts": []
-        },
-        {
-          "code": "MKTG4180",
-          "alts": []
-        },
-        {
-          "code": "MKTG4190",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

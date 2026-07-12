@@ -1997,6 +1997,10 @@
             {
               "code": "MUSC3562",
               "alts": []
+            },
+            {
+              "code": "MUSC3582",
+              "alts": []
             }
           ],
           "children": []
@@ -2062,6 +2066,18 @@
             {
               "code": "MUSC3712",
               "alts": []
+            },
+            {
+              "code": "MUSC3722",
+              "alts": []
+            },
+            {
+              "code": "MUSC3732",
+              "alts": []
+            },
+            {
+              "code": "MUSC3742",
+              "alts": []
             }
           ],
           "children": []
@@ -2110,6 +2126,10 @@
             },
             {
               "code": "MUSC3892",
+              "alts": []
+            },
+            {
+              "code": "MUSC3902",
               "alts": []
             }
           ],

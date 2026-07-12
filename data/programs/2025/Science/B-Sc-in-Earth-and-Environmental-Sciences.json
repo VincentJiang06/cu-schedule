@@ -10168,6 +10168,66 @@
               "alts": []
             },
             {
+              "code": "BIOL2213",
+              "alts": []
+            },
+            {
+              "code": "BIOL3012",
+              "alts": []
+            },
+            {
+              "code": "BIOL3022",
+              "alts": []
+            },
+            {
+              "code": "BIOL3410",
+              "alts": []
+            },
+            {
+              "code": "BIOL3560",
+              "alts": []
+            },
+            {
+              "code": "BIOL3570",
+              "alts": []
+            },
+            {
+              "code": "BIOL3610",
+              "alts": []
+            },
+            {
+              "code": "BIOL3620",
+              "alts": []
+            },
+            {
+              "code": "BIOL3630",
+              "alts": []
+            },
+            {
+              "code": "BIOL3710",
+              "alts": []
+            },
+            {
+              "code": "BIOL4012",
+              "alts": []
+            },
+            {
+              "code": "BIOL4230",
+              "alts": []
+            },
+            {
+              "code": "BIOL4260",
+              "alts": []
+            },
+            {
+              "code": "BIOL4420",
+              "alts": []
+            },
+            {
+              "code": "BIOL4510",
+              "alts": []
+            },
+            {
               "code": "CHEM1070",
               "alts": []
             },
@@ -10864,34 +10924,6 @@
       "courses": [
         {
           "code": "MATH1520",
-          "alts": []
-        },
-        {
-          "code": "BIOL3012",
-          "alts": []
-        },
-        {
-          "code": "BIOL3022",
-          "alts": []
-        },
-        {
-          "code": "BIOL3560",
-          "alts": []
-        },
-        {
-          "code": "BIOL3570",
-          "alts": []
-        },
-        {
-          "code": "BIOL3610",
-          "alts": []
-        },
-        {
-          "code": "BIOL3620",
-          "alts": []
-        },
-        {
-          "code": "BIOL3630",
           "alts": []
         },
         {

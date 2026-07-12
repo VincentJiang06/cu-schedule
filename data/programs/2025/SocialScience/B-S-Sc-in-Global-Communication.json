@@ -1486,7 +1486,7 @@
           "marker": "(a)",
           "title": "",
           "units": 27,
-          "note": "2922, 3600 or 3710, 4150 (capstone course), 4250",
+          "note": null,
           "courses": [
             {
               "code": "COMM1180",
@@ -1506,6 +1506,26 @@
             },
             {
               "code": "COMM2560",
+              "alts": []
+            },
+            {
+              "code": "COMM2922",
+              "alts": []
+            },
+            {
+              "code": "COMM3600",
+              "alts": []
+            },
+            {
+              "code": "COMM3710",
+              "alts": []
+            },
+            {
+              "code": "COMM4150",
+              "alts": []
+            },
+            {
+              "code": "COMM4250",
               "alts": []
             }
           ],
@@ -1978,35 +1998,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "COMM2922",
-          "alts": []
-        },
-        {
-          "code": "COMM3600",
-          "alts": []
-        },
-        {
-          "code": "COMM3710",
-          "alts": []
-        },
-        {
-          "code": "COMM4150",
-          "alts": []
-        },
-        {
-          "code": "COMM4250",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

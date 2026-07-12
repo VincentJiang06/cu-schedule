@@ -1314,6 +1314,30 @@
             {
               "code": "GDRS1002",
               "alts": []
+            },
+            {
+              "code": "GDRS2010",
+              "alts": []
+            },
+            {
+              "code": "GDRS2011",
+              "alts": []
+            },
+            {
+              "code": "GDRS3005",
+              "alts": []
+            },
+            {
+              "code": "GDRS3007",
+              "alts": []
+            },
+            {
+              "code": "GDRS3009",
+              "alts": []
+            },
+            {
+              "code": "GDRS4012",
+              "alts": []
             }
           ],
           "children": []
@@ -1568,30 +1592,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "GDRS2010",
-          "alts": []
-        },
-        {
-          "code": "GDRS2011",
-          "alts": []
-        },
-        {
-          "code": "GDRS3005",
-          "alts": []
-        },
-        {
-          "code": "GDRS3007",
-          "alts": []
-        },
-        {
-          "code": "GDRS3009",
-          "alts": []
-        },
-        {
-          "code": "GDRS4012",
-          "alts": []
-        },
         {
           "code": "GDRS2002",
           "alts": []

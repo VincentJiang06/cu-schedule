@@ -1369,6 +1369,14 @@
             {
               "code": "URSP2400",
               "alts": []
+            },
+            {
+              "code": "URSP3400",
+              "alts": []
+            },
+            {
+              "code": "URSP4100",
+              "alts": []
             }
           ],
           "children": []
@@ -1754,23 +1762,6 @@
         },
         {
           "code": "URSP4050",
-          "alts": []
-        }
-      ],
-      "children": []
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "URSP3400",
-          "alts": []
-        },
-        {
-          "code": "URSP4100",
           "alts": []
         }
       ],

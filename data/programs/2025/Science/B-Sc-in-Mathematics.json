@@ -1340,6 +1340,34 @@
               "alts": [
                 "MATH2018"
               ]
+            },
+            {
+              "code": "MATH2020",
+              "alts": [
+                "MATH2028"
+              ]
+            },
+            {
+              "code": "MATH2040",
+              "alts": [
+                "MATH2048"
+              ]
+            },
+            {
+              "code": "MATH2050",
+              "alts": [
+                "MATH2058"
+              ]
+            },
+            {
+              "code": "MATH2060",
+              "alts": [
+                "MATH2068"
+              ]
+            },
+            {
+              "code": "MATH2221",
+              "alts": []
             }
           ],
           "children": []
@@ -1636,34 +1664,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "MATH2020",
-          "alts": [
-            "MATH2028"
-          ]
-        },
-        {
-          "code": "MATH2040",
-          "alts": [
-            "MATH2048"
-          ]
-        },
-        {
-          "code": "MATH2050",
-          "alts": [
-            "MATH2058"
-          ]
-        },
-        {
-          "code": "MATH2060",
-          "alts": [
-            "MATH2068"
-          ]
-        },
-        {
-          "code": "MATH2221",
-          "alts": []
-        },
         {
           "code": "MATH3360",
           "alts": []

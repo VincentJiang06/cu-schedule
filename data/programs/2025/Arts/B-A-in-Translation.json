@@ -874,6 +874,10 @@
             {
               "code": "TRAN2070",
               "alts": []
+            },
+            {
+              "code": "TRAN2610",
+              "alts": []
             }
           ],
           "children": []
@@ -1080,19 +1084,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "TRAN2610",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

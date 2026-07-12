@@ -1463,6 +1463,10 @@
               "alts": []
             },
             {
+              "code": "CSCI2520",
+              "alts": []
+            },
+            {
               "code": "DOTE2051",
               "alts": [
                 "DSME2051"
@@ -1483,6 +1487,26 @@
           "courses": [
             {
               "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "CSCI1530",
+              "alts": []
+            },
+            {
+              "code": "CSCI1540",
+              "alts": []
+            },
+            {
+              "code": "CSCI1550",
+              "alts": []
+            },
+            {
+              "code": "CSCI1580",
               "alts": []
             }
           ],
@@ -1976,39 +2000,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "CSCI2520",
-          "alts": []
-        },
-        {
-          "code": "CSCI1520",
-          "alts": []
-        },
-        {
-          "code": "CSCI1530",
-          "alts": []
-        },
-        {
-          "code": "CSCI1540",
-          "alts": []
-        },
-        {
-          "code": "CSCI1550",
-          "alts": []
-        },
-        {
-          "code": "CSCI1580",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

@@ -2129,6 +2129,10 @@
               "alts": []
             },
             {
+              "code": "CSCI3130",
+              "alts": []
+            },
+            {
               "code": "CSCI3150",
               "alts": [
                 "ESTR3102"
@@ -3245,19 +3249,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "CSCI3130",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

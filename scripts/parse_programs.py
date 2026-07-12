@@ -716,8 +716,27 @@ def _convert_row(row: _Row) -> dict:
     if node_units is None:
         tail_units, body_joined = strip_units(body_joined)
         node_units = tail_units
-    b_courses, b_note, pseudo = _parse_body(body_joined)
-    direct_courses.extend(b_courses)
+    if (
+        rest_codes
+        and body_joined
+        and not PROSE_HEADER_RE.search(body_joined)
+        and _is_courselist_tail(body_joined)
+    ):
+        # Wrapped continuation course list: the marker line is itself a course list
+        # (Case A) whose list runs onto the continuation body — "(a) | GDRS1001, 1002,\n
+        # 2010, 2011, 3007 | 15". Extracting the body ALONE strands the running subject
+        # at the marker/body boundary, so every bare tail number ("2010, 2011, 3007")
+        # loses its "GDRS" prefix and is silently dropped (the calendar-wide wrapped-list
+        # loss; invariant I1). Re-extract marker line + body in ONE pass so the subject
+        # crosses the wrap. Gated on `_is_courselist_tail` (body is nothing but course
+        # tokens + list glue) and no prose sub-header, so a body carrying a real note /
+        # pseudo-children never enters here; to_program_courses de-dups, so merging can
+        # only ever *recover* the orphaned tail, never invent or drop a course.
+        direct_courses = to_program_courses(extract_courses(rest_wo + " " + body_joined))
+        b_note, pseudo = None, []
+    else:
+        b_courses, b_note, pseudo = _parse_body(body_joined)
+        direct_courses.extend(b_courses)
     if note is None and b_note:
         note = b_note
     # Safety net for a folded Case-C rule whose body carried no separable list (so

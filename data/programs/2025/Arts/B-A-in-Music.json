@@ -1231,6 +1231,10 @@
               "alts": []
             },
             {
+              "code": "MUSC1061",
+              "alts": []
+            },
+            {
               "code": "MUSC1022",
               "alts": []
             },
@@ -1508,10 +1512,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "MUSC1061",
-          "alts": []
-        },
         {
           "code": "MUSC3061",
           "alts": []

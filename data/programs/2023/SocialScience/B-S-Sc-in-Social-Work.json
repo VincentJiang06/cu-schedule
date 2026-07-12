@@ -809,6 +809,14 @@
             {
               "code": "SOWK2050",
               "alts": []
+            },
+            {
+              "code": "SOWK3240",
+              "alts": []
+            },
+            {
+              "code": "SOWK3250",
+              "alts": []
             }
           ],
           "children": []
@@ -817,73 +825,56 @@
           "marker": "(b)",
           "title": "",
           "units": 9,
-          "note": "(capstone course), 4510, 4520, 4530, 4540, 4550, 4570, 4580, 4590, 4591, 4592",
+          "note": null,
           "courses": [
             {
               "code": "SOWK4030",
+              "alts": []
+            },
+            {
+              "code": "SOWK4510",
+              "alts": []
+            },
+            {
+              "code": "SOWK4520",
+              "alts": []
+            },
+            {
+              "code": "SOWK4530",
+              "alts": []
+            },
+            {
+              "code": "SOWK4540",
+              "alts": []
+            },
+            {
+              "code": "SOWK4550",
+              "alts": []
+            },
+            {
+              "code": "SOWK4570",
+              "alts": []
+            },
+            {
+              "code": "SOWK4580",
+              "alts": []
+            },
+            {
+              "code": "SOWK4590",
+              "alts": []
+            },
+            {
+              "code": "SOWK4591",
+              "alts": []
+            },
+            {
+              "code": "SOWK4592",
               "alts": []
             }
           ],
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "SOWK3240",
-          "alts": []
-        },
-        {
-          "code": "SOWK3250",
-          "alts": []
-        },
-        {
-          "code": "SOWK4510",
-          "alts": []
-        },
-        {
-          "code": "SOWK4520",
-          "alts": []
-        },
-        {
-          "code": "SOWK4530",
-          "alts": []
-        },
-        {
-          "code": "SOWK4540",
-          "alts": []
-        },
-        {
-          "code": "SOWK4550",
-          "alts": []
-        },
-        {
-          "code": "SOWK4570",
-          "alts": []
-        },
-        {
-          "code": "SOWK4580",
-          "alts": []
-        },
-        {
-          "code": "SOWK4590",
-          "alts": []
-        },
-        {
-          "code": "SOWK4591",
-          "alts": []
-        },
-        {
-          "code": "SOWK4592",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

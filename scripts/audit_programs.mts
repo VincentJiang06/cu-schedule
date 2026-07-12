@@ -501,6 +501,22 @@ function main() {
     assert('NS2025 §2 冠标签内联规则:title="Elective Courses" 保真', !!ok,
       `title="${n?.title ?? ''}"`)
   }
+  // case 15: 签名1「续行裸续号跨 marker/body 边界」(R6)—— Case A 的课单节标记行本身是课单,
+  // 而课单折行续到 cont 正文:"(a) | GDRS1001, 1002,\n2010, 2011, 3007 | 15"。旧路径把 marker
+  // 行(direct_courses)与 body(_parse_body)分两次 extract_courses,续行 body 拿不到运行中的
+  // subject "GDRS",裸续号 2010/2011/3007 全丢,(a) 只剩 2 门 6 学分 vs units=15(P2 FAIL)。
+  // 修复:body 是纯课单尾(_is_courselist_tail、无 prose 子标题)时,marker 行+body 合并一次抽取,
+  // subject 跨折行传导。断言 GDRS (a) 五门齐(1001/1002/2010/2011/3007)=15 学分。
+  {
+    const p = byId.get('2025:B.S.Sc. in Gender Studies')
+    const n1 = p && topByMarker(p, '1.')
+    const a = childByMarker(n1, '(a)')
+    const codes = (a?.courses || []).map((c) => c.code)
+    const want = ['GDRS1001', 'GDRS1002', 'GDRS2010', 'GDRS2011', 'GDRS3007']
+    const ok = !!a && a.units === 15 && want.every((c) => codes.includes(c))
+    assert('GDRS2025 §1(a) 折行裸续号回收:5门=15学分', ok,
+      `units=${a?.units} courses=[${codes.join(',')}]`)
+  }
 
   const p6Fail = p6.filter((c) => !c.ok).length
 

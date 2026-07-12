@@ -1032,6 +1032,58 @@
             {
               "code": "MATH2010",
               "alts": []
+            },
+            {
+              "code": "MATH2018",
+              "alts": []
+            },
+            {
+              "code": "MATH2020",
+              "alts": []
+            },
+            {
+              "code": "MATH2028",
+              "alts": []
+            },
+            {
+              "code": "MATH2040",
+              "alts": []
+            },
+            {
+              "code": "MATH2048",
+              "alts": []
+            },
+            {
+              "code": "MATH2050",
+              "alts": []
+            },
+            {
+              "code": "MATH2058",
+              "alts": []
+            },
+            {
+              "code": "MATH2060",
+              "alts": []
+            },
+            {
+              "code": "MATH2068",
+              "alts": []
+            },
+            {
+              "code": "MATH2070",
+              "alts": []
+            },
+            {
+              "code": "MATH2078",
+              "alts": []
+            },
+            {
+              "code": "MATH2221",
+              "alts": []
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
             }
           ],
           "children": []
@@ -1365,58 +1417,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "MATH2018",
-          "alts": []
-        },
-        {
-          "code": "MATH2020",
-          "alts": []
-        },
-        {
-          "code": "MATH2028",
-          "alts": []
-        },
-        {
-          "code": "MATH2040",
-          "alts": []
-        },
-        {
-          "code": "MATH2048",
-          "alts": []
-        },
-        {
-          "code": "MATH2050",
-          "alts": []
-        },
-        {
-          "code": "MATH2058",
-          "alts": []
-        },
-        {
-          "code": "MATH2060",
-          "alts": []
-        },
-        {
-          "code": "MATH2068",
-          "alts": []
-        },
-        {
-          "code": "MATH2070",
-          "alts": []
-        },
-        {
-          "code": "MATH2078",
-          "alts": []
-        },
-        {
-          "code": "MATH2221",
-          "alts": []
-        },
-        {
-          "code": "MATH2230",
-          "alts": []
-        },
         {
           "code": "STAR2000",
           "alts": []

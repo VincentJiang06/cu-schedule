@@ -1331,6 +1331,10 @@
                 {
                   "code": "PHYS5520",
                   "alts": []
+                },
+                {
+                  "code": "PHYS5610",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1396,10 +1400,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "PHYS5610",
-          "alts": []
-        },
         {
           "code": "STAR2000",
           "alts": []

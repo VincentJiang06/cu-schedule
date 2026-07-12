@@ -1412,6 +1412,10 @@
               "alts": []
             },
             {
+              "code": "MATH1018",
+              "alts": []
+            },
+            {
               "code": "MATH1030",
               "alts": []
             },
@@ -1977,10 +1981,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "MATH1018",
-          "alts": []
-        },
         {
           "code": "STAT2006",
           "alts": []

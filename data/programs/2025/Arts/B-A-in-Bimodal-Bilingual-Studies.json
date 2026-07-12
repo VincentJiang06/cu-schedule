@@ -928,10 +928,14 @@
               "marker": "(i)",
               "title": "",
               "units": null,
-              "note": "and 4102 (capstone courses – research)",
+              "note": null,
               "courses": [
                 {
                   "code": "BMBL4101",
+                  "alts": []
+                },
+                {
+                  "code": "BMBL4102",
                   "alts": []
                 }
               ],
@@ -941,10 +945,14 @@
               "marker": "(ii)",
               "title": "",
               "units": null,
-              "note": "and 4202 (capstone courses – service learning)",
+              "note": null,
               "courses": [
                 {
                   "code": "BMBL4201",
+                  "alts": []
+                },
+                {
+                  "code": "BMBL4202",
                   "alts": []
                 }
               ],
@@ -1182,14 +1190,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "BMBL4102",
-          "alts": []
-        },
-        {
-          "code": "BMBL4202",
-          "alts": []
-        },
         {
           "code": "HKSL1000",
           "alts": []

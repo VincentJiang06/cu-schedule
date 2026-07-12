@@ -1539,6 +1539,18 @@
               "alts": []
             },
             {
+              "code": "GLEF3030",
+              "alts": []
+            },
+            {
+              "code": "GLEF3040",
+              "alts": []
+            },
+            {
+              "code": "GLEF4020",
+              "alts": []
+            },
+            {
               "code": "GLSD2501",
               "alts": []
             },
@@ -1581,6 +1593,34 @@
             },
             {
               "code": "GLSD3311",
+              "alts": []
+            },
+            {
+              "code": "GLSD3402",
+              "alts": []
+            },
+            {
+              "code": "GLSD3403",
+              "alts": []
+            },
+            {
+              "code": "GLSD3404",
+              "alts": []
+            },
+            {
+              "code": "GLSD3405",
+              "alts": []
+            },
+            {
+              "code": "GLSD3411",
+              "alts": []
+            },
+            {
+              "code": "GLSD4401",
+              "alts": []
+            },
+            {
+              "code": "GLSD4402",
               "alts": []
             },
             {
@@ -1693,6 +1733,30 @@
               "alts": []
             },
             {
+              "code": "GRMD2404",
+              "alts": []
+            },
+            {
+              "code": "GRMD2501",
+              "alts": []
+            },
+            {
+              "code": "GRMD3202",
+              "alts": []
+            },
+            {
+              "code": "GRMD3304",
+              "alts": []
+            },
+            {
+              "code": "GRMD4203",
+              "alts": []
+            },
+            {
+              "code": "GRMD4503",
+              "alts": []
+            },
+            {
               "code": "PSYC3450",
               "alts": []
             },
@@ -1746,79 +1810,6 @@
       "courses": [
         {
           "code": "GLSD3601",
-          "alts": []
-        }
-      ],
-      "children": []
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "GLEF3030",
-          "alts": []
-        },
-        {
-          "code": "GLEF3040",
-          "alts": []
-        },
-        {
-          "code": "GLEF4020",
-          "alts": []
-        },
-        {
-          "code": "GLSD3402",
-          "alts": []
-        },
-        {
-          "code": "GLSD3403",
-          "alts": []
-        },
-        {
-          "code": "GLSD3404",
-          "alts": []
-        },
-        {
-          "code": "GLSD3405",
-          "alts": []
-        },
-        {
-          "code": "GLSD3411",
-          "alts": []
-        },
-        {
-          "code": "GLSD4401",
-          "alts": []
-        },
-        {
-          "code": "GLSD4402",
-          "alts": []
-        },
-        {
-          "code": "GRMD2404",
-          "alts": []
-        },
-        {
-          "code": "GRMD2501",
-          "alts": []
-        },
-        {
-          "code": "GRMD3202",
-          "alts": []
-        },
-        {
-          "code": "GRMD3304",
-          "alts": []
-        },
-        {
-          "code": "GRMD4203",
-          "alts": []
-        },
-        {
-          "code": "GRMD4503",
           "alts": []
         }
       ],

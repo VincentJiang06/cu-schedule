@@ -1186,6 +1186,14 @@
               "alts": []
             },
             {
+              "code": "BCHE4130",
+              "alts": []
+            },
+            {
+              "code": "BCHE4760",
+              "alts": []
+            },
+            {
               "code": "BIOL3410",
               "alts": []
             },
@@ -1280,14 +1288,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "BCHE4130",
-          "alts": []
-        },
-        {
-          "code": "BCHE4760",
-          "alts": []
-        },
         {
           "code": "FNSC4907",
           "alts": []

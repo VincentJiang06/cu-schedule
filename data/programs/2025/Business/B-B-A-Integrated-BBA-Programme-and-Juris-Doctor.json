@@ -2064,6 +2064,26 @@
                 {
                   "code": "MGNT4140",
                   "alts": []
+                },
+                {
+                  "code": "MGNT4510",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4530",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4540",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4550",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4570",
+                  "alts": []
                 }
               ],
               "children": []
@@ -2169,6 +2189,14 @@
                 {
                   "code": "MKTG3020",
                   "alts": []
+                },
+                {
+                  "code": "MKTG3030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4040",
+                  "alts": []
                 }
               ],
               "children": []
@@ -2261,6 +2289,10 @@
             {
               "code": "MKTG4080",
               "alts": []
+            },
+            {
+              "code": "MKTG4090",
+              "alts": []
             }
           ],
           "children": [
@@ -2344,39 +2376,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "MGNT4510",
-          "alts": []
-        },
-        {
-          "code": "MGNT4530",
-          "alts": []
-        },
-        {
-          "code": "MGNT4540",
-          "alts": []
-        },
-        {
-          "code": "MGNT4550",
-          "alts": []
-        },
-        {
-          "code": "MKTG3030",
-          "alts": []
-        },
-        {
-          "code": "MKTG4040",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

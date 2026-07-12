@@ -897,6 +897,30 @@
               "alts": [
                 "BCHE3730"
               ]
+            },
+            {
+              "code": "BCHE3040",
+              "alts": []
+            },
+            {
+              "code": "BCHE3050",
+              "alts": []
+            },
+            {
+              "code": "BCHE3070",
+              "alts": []
+            },
+            {
+              "code": "BCHE3080",
+              "alts": []
+            },
+            {
+              "code": "BCHE3092",
+              "alts": []
+            },
+            {
+              "code": "BCHE3650",
+              "alts": []
             }
           ],
           "children": []
@@ -951,6 +975,14 @@
                 {
                   "code": "BCHE4901",
                   "alts": []
+                },
+                {
+                  "code": "BCHE4902",
+                  "alts": []
+                },
+                {
+                  "code": "BCHE4903",
+                  "alts": []
                 }
               ],
               "children": []
@@ -963,6 +995,10 @@
               "courses": [
                 {
                   "code": "BCHE4902",
+                  "alts": []
+                },
+                {
+                  "code": "BCHE4903",
                   "alts": []
                 }
               ],
@@ -1159,34 +1195,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "BCHE3040",
-          "alts": []
-        },
-        {
-          "code": "BCHE3050",
-          "alts": []
-        },
-        {
-          "code": "BCHE3070",
-          "alts": []
-        },
-        {
-          "code": "BCHE3080",
-          "alts": []
-        },
-        {
-          "code": "BCHE3092",
-          "alts": []
-        },
-        {
-          "code": "BCHE3650",
-          "alts": []
-        },
-        {
-          "code": "BCHE4903",
-          "alts": []
-        },
         {
           "code": "STAR2000",
           "alts": []

@@ -1139,6 +1139,38 @@
               "alts": []
             },
             {
+              "code": "DSPS2830",
+              "alts": []
+            },
+            {
+              "code": "DSPS3190",
+              "alts": []
+            },
+            {
+              "code": "DSPS3202",
+              "alts": []
+            },
+            {
+              "code": "DSPS3330",
+              "alts": []
+            },
+            {
+              "code": "DSPS3350",
+              "alts": []
+            },
+            {
+              "code": "DSPS3790",
+              "alts": []
+            },
+            {
+              "code": "DSPS3791",
+              "alts": []
+            },
+            {
+              "code": "DSPS3802",
+              "alts": []
+            },
+            {
               "code": "ECON2121",
               "alts": []
             },
@@ -1335,6 +1367,14 @@
                   "alts": []
                 },
                 {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
                   "code": "URSP3100",
                   "alts": []
                 },
@@ -1356,55 +1396,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "DSPS2830",
-          "alts": []
-        },
-        {
-          "code": "DSPS3190",
-          "alts": []
-        },
-        {
-          "code": "DSPS3202",
-          "alts": []
-        },
-        {
-          "code": "DSPS3330",
-          "alts": []
-        },
-        {
-          "code": "DSPS3350",
-          "alts": []
-        },
-        {
-          "code": "DSPS3790",
-          "alts": []
-        },
-        {
-          "code": "DSPS3791",
-          "alts": []
-        },
-        {
-          "code": "DSPS3802",
-          "alts": []
-        },
-        {
-          "code": "GRMD4502",
-          "alts": []
-        },
-        {
-          "code": "GRMD4503",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

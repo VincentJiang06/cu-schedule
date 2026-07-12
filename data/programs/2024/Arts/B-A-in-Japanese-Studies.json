@@ -2641,7 +2641,7 @@
           "marker": "(a)",
           "title": "",
           "units": 33,
-          "note": "2050, 2470*, 2480* Capstone courses",
+          "note": null,
           "courses": [
             {
               "code": "JASP1470",
@@ -2657,6 +2657,18 @@
             },
             {
               "code": "JASP2030",
+              "alts": []
+            },
+            {
+              "code": "JASP2050",
+              "alts": []
+            },
+            {
+              "code": "JASP2470",
+              "alts": []
+            },
+            {
+              "code": "JASP2480",
               "alts": []
             },
             {
@@ -3166,27 +3178,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "JASP2050",
-          "alts": []
-        },
-        {
-          "code": "JASP2470",
-          "alts": []
-        },
-        {
-          "code": "JASP2480",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

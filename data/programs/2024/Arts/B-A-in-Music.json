@@ -1212,6 +1212,10 @@
               "alts": []
             },
             {
+              "code": "MUSC1061",
+              "alts": []
+            },
+            {
               "code": "MUSC1022",
               "alts": []
             },
@@ -1493,19 +1497,6 @@
       "units": null,
       "note": "Courses: Any MUSC courses other than the courses taken to fulfill requirement (2) above, with at least one course from Area 3 and two courses from Area 4, and up to six units from Area 2C “Other Ensemble Courses”.",
       "courses": [],
-      "children": []
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "MUSC1061",
-          "alts": []
-        }
-      ],
       "children": []
     }
   ]

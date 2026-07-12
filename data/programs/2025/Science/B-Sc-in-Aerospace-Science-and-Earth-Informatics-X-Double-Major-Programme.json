@@ -5589,6 +5589,26 @@
                   "alts": []
                 },
                 {
+                  "code": "EESC2009",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2119",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2129",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2909",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3900",
+                  "alts": []
+                },
+                {
                   "code": "GRMD2111",
                   "alts": []
                 },
@@ -8310,23 +8330,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "EESC2909",
-          "alts": []
-        },
-        {
-          "code": "EESC3900",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

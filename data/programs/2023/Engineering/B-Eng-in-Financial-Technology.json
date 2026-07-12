@@ -969,6 +969,14 @@
               "alts": []
             },
             {
+              "code": "FTEC4002",
+              "alts": []
+            },
+            {
+              "code": "FTEC4003",
+              "alts": []
+            },
+            {
               "code": "FTEC4004",
               "alts": [
                 "IERG4004"
@@ -1125,23 +1133,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "FTEC4002",
-          "alts": []
-        },
-        {
-          "code": "FTEC4003",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

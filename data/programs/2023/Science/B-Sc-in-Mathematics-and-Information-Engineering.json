@@ -3288,6 +3288,66 @@
             {
               "code": "MATH3080",
               "alts": []
+            },
+            {
+              "code": "MATH3093",
+              "alts": []
+            },
+            {
+              "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3270",
+              "alts": []
+            },
+            {
+              "code": "MATH3290",
+              "alts": []
+            },
+            {
+              "code": "MATH3310",
+              "alts": []
+            },
+            {
+              "code": "MATH3320",
+              "alts": []
+            },
+            {
+              "code": "MATH3330",
+              "alts": []
+            },
+            {
+              "code": "MATH3340",
+              "alts": []
+            },
+            {
+              "code": "MATH3360",
+              "alts": []
+            },
+            {
+              "code": "MATH4010",
+              "alts": []
+            },
+            {
+              "code": "MATH4020",
+              "alts": []
+            },
+            {
+              "code": "MATH4030",
+              "alts": []
+            },
+            {
+              "code": "MATH4230",
+              "alts": []
+            },
+            {
+              "code": "MATH4280",
+              "alts": []
             }
           ],
           "children": []
@@ -3308,66 +3368,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "MATH3093",
-          "alts": []
-        },
-        {
-          "code": "MATH3215",
-          "alts": []
-        },
-        {
-          "code": "MATH3230",
-          "alts": []
-        },
-        {
-          "code": "MATH3270",
-          "alts": []
-        },
-        {
-          "code": "MATH3290",
-          "alts": []
-        },
-        {
-          "code": "MATH3310",
-          "alts": []
-        },
-        {
-          "code": "MATH3320",
-          "alts": []
-        },
-        {
-          "code": "MATH3330",
-          "alts": []
-        },
-        {
-          "code": "MATH3340",
-          "alts": []
-        },
-        {
-          "code": "MATH3360",
-          "alts": []
-        },
-        {
-          "code": "MATH4010",
-          "alts": []
-        },
-        {
-          "code": "MATH4020",
-          "alts": []
-        },
-        {
-          "code": "MATH4030",
-          "alts": []
-        },
-        {
-          "code": "MATH4230",
-          "alts": []
-        },
-        {
-          "code": "MATH4280",
-          "alts": []
-        },
         {
           "code": "LSCI1001",
           "alts": []

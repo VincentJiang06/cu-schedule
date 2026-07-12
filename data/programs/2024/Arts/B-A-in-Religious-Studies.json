@@ -1070,6 +1070,22 @@
             {
               "code": "CURE1111",
               "alts": []
+            },
+            {
+              "code": "CURE1122",
+              "alts": []
+            },
+            {
+              "code": "CURE1123",
+              "alts": []
+            },
+            {
+              "code": "CURE2157",
+              "alts": []
+            },
+            {
+              "code": "CURE2170",
+              "alts": []
             }
           ],
           "children": []
@@ -1212,6 +1228,14 @@
             {
               "code": "CURE1010",
               "alts": []
+            },
+            {
+              "code": "CURE2001",
+              "alts": []
+            },
+            {
+              "code": "CURE2006",
+              "alts": []
             }
           ],
           "children": []
@@ -1248,6 +1272,10 @@
           "courses": [
             {
               "code": "CURE2131",
+              "alts": []
+            },
+            {
+              "code": "CURE3134",
               "alts": []
             },
             {
@@ -1320,6 +1348,26 @@
             {
               "code": "CURE3114",
               "alts": []
+            },
+            {
+              "code": "CURE3129",
+              "alts": []
+            },
+            {
+              "code": "CURE3376",
+              "alts": []
+            },
+            {
+              "code": "CURE3378",
+              "alts": []
+            },
+            {
+              "code": "CURE4157",
+              "alts": []
+            },
+            {
+              "code": "CURE4158",
+              "alts": []
             }
           ],
           "children": []
@@ -1349,6 +1397,10 @@
           "courses": [
             {
               "code": "CURE3144",
+              "alts": []
+            },
+            {
+              "code": "CURE3147",
               "alts": []
             }
           ],
@@ -1408,67 +1460,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "CURE1122",
-          "alts": []
-        },
-        {
-          "code": "CURE1123",
-          "alts": []
-        },
-        {
-          "code": "CURE2157",
-          "alts": []
-        },
-        {
-          "code": "CURE2170",
-          "alts": []
-        },
-        {
-          "code": "CURE2001",
-          "alts": []
-        },
-        {
-          "code": "CURE2006",
-          "alts": []
-        },
-        {
-          "code": "CURE3134",
-          "alts": []
-        },
-        {
-          "code": "CURE3129",
-          "alts": []
-        },
-        {
-          "code": "CURE3376",
-          "alts": []
-        },
-        {
-          "code": "CURE3378",
-          "alts": []
-        },
-        {
-          "code": "CURE4157",
-          "alts": []
-        },
-        {
-          "code": "CURE4158",
-          "alts": []
-        },
-        {
-          "code": "CURE3147",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

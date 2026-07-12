@@ -1640,6 +1640,34 @@
                 {
                   "code": "DOTE3000",
                   "alts": []
+                },
+                {
+                  "code": "DOTE3011",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3050",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3080",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE3090",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4040",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4080",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1691,6 +1719,14 @@
                 {
                   "code": "DOTE4070",
                   "alts": []
+                },
+                {
+                  "code": "DOTE4240",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4260",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1703,6 +1739,22 @@
               "courses": [
                 {
                   "code": "DOTE3030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4030",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4110",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4220",
+                  "alts": []
+                },
+                {
+                  "code": "DOTE4280",
                   "alts": []
                 },
                 {
@@ -1781,6 +1833,46 @@
                 {
                   "code": "MGNT3080",
                   "alts": []
+                },
+                {
+                  "code": "MGNT4070",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4160",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4170",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4270",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4570",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4711",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4712",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4713",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1820,6 +1912,54 @@
                 {
                   "code": "MGNT3010",
                   "alts": []
+                },
+                {
+                  "code": "MGNT3080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3100",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4110",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4140",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4510",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4530",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4540",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4550",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4570",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1858,6 +1998,42 @@
               "courses": [
                 {
                   "code": "MGNT3040",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3060",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3090",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT3100",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4050",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4060",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4080",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4110",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4130",
+                  "alts": []
+                },
+                {
+                  "code": "MGNT4140",
                   "alts": []
                 }
               ],
@@ -1906,6 +2082,50 @@
                 {
                   "code": "MKTG3040",
                   "alts": []
+                },
+                {
+                  "code": "MKTG3050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4010",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4020",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4070",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4080",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4090",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4110",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4160",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4200",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1953,6 +2173,42 @@
                 {
                   "code": "MKTG3020",
                   "alts": []
+                },
+                {
+                  "code": "MKTG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4050",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4120",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4150",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4160",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4170",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4180",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4190",
+                  "alts": []
+                },
+                {
+                  "code": "MKTG4200",
+                  "alts": []
                 }
               ],
               "children": []
@@ -1984,199 +2240,6 @@
           ]
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "DOTE3011",
-          "alts": []
-        },
-        {
-          "code": "DOTE3050",
-          "alts": []
-        },
-        {
-          "code": "DOTE3080",
-          "alts": []
-        },
-        {
-          "code": "DOTE3090",
-          "alts": []
-        },
-        {
-          "code": "DOTE4040",
-          "alts": []
-        },
-        {
-          "code": "DOTE4080",
-          "alts": []
-        },
-        {
-          "code": "DOTE4240",
-          "alts": []
-        },
-        {
-          "code": "DOTE4260",
-          "alts": []
-        },
-        {
-          "code": "DOTE4030",
-          "alts": []
-        },
-        {
-          "code": "DOTE4220",
-          "alts": []
-        },
-        {
-          "code": "DOTE4280",
-          "alts": []
-        },
-        {
-          "code": "MGNT4070",
-          "alts": []
-        },
-        {
-          "code": "MGNT4090",
-          "alts": []
-        },
-        {
-          "code": "MGNT4130",
-          "alts": []
-        },
-        {
-          "code": "MGNT4160",
-          "alts": []
-        },
-        {
-          "code": "MGNT4170",
-          "alts": []
-        },
-        {
-          "code": "MGNT4270",
-          "alts": []
-        },
-        {
-          "code": "MGNT4570",
-          "alts": []
-        },
-        {
-          "code": "MGNT4711",
-          "alts": []
-        },
-        {
-          "code": "MGNT4712",
-          "alts": []
-        },
-        {
-          "code": "MGNT4713",
-          "alts": []
-        },
-        {
-          "code": "MGNT3100",
-          "alts": []
-        },
-        {
-          "code": "MGNT4080",
-          "alts": []
-        },
-        {
-          "code": "MGNT4110",
-          "alts": []
-        },
-        {
-          "code": "MGNT4140",
-          "alts": []
-        },
-        {
-          "code": "MGNT4510",
-          "alts": []
-        },
-        {
-          "code": "MGNT4530",
-          "alts": []
-        },
-        {
-          "code": "MGNT4540",
-          "alts": []
-        },
-        {
-          "code": "MGNT4550",
-          "alts": []
-        },
-        {
-          "code": "MGNT3060",
-          "alts": []
-        },
-        {
-          "code": "MGNT3090",
-          "alts": []
-        },
-        {
-          "code": "MGNT4050",
-          "alts": []
-        },
-        {
-          "code": "MGNT4060",
-          "alts": []
-        },
-        {
-          "code": "MKTG3050",
-          "alts": []
-        },
-        {
-          "code": "MKTG4010",
-          "alts": []
-        },
-        {
-          "code": "MKTG4020",
-          "alts": []
-        },
-        {
-          "code": "MKTG4030",
-          "alts": []
-        },
-        {
-          "code": "MKTG4050",
-          "alts": []
-        },
-        {
-          "code": "MKTG4070",
-          "alts": []
-        },
-        {
-          "code": "MKTG4110",
-          "alts": []
-        },
-        {
-          "code": "MKTG4160",
-          "alts": []
-        },
-        {
-          "code": "MKTG4200",
-          "alts": []
-        },
-        {
-          "code": "MKTG4150",
-          "alts": []
-        },
-        {
-          "code": "MKTG4170",
-          "alts": []
-        },
-        {
-          "code": "MKTG4180",
-          "alts": []
-        },
-        {
-          "code": "MKTG4190",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

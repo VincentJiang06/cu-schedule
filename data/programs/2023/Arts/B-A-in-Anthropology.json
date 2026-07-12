@@ -1095,6 +1095,18 @@
             {
               "code": "ANTH2200",
               "alts": []
+            },
+            {
+              "code": "ANTH2210",
+              "alts": []
+            },
+            {
+              "code": "ANTH3380",
+              "alts": []
+            },
+            {
+              "code": "ANTH3630",
+              "alts": []
             }
           ],
           "children": []
@@ -1169,6 +1181,122 @@
             },
             {
               "code": "ANTH2380",
+              "alts": []
+            },
+            {
+              "code": "ANTH2390",
+              "alts": []
+            },
+            {
+              "code": "ANTH2510",
+              "alts": []
+            },
+            {
+              "code": "ANTH2520",
+              "alts": []
+            },
+            {
+              "code": "ANTH2530",
+              "alts": []
+            },
+            {
+              "code": "ANTH2540",
+              "alts": []
+            },
+            {
+              "code": "ANTH2550",
+              "alts": []
+            },
+            {
+              "code": "ANTH2730",
+              "alts": []
+            },
+            {
+              "code": "ANTH2740",
+              "alts": []
+            },
+            {
+              "code": "ANTH2810",
+              "alts": []
+            },
+            {
+              "code": "ANTH3310",
+              "alts": []
+            },
+            {
+              "code": "ANTH3321",
+              "alts": []
+            },
+            {
+              "code": "ANTH3322",
+              "alts": []
+            },
+            {
+              "code": "ANTH3323",
+              "alts": []
+            },
+            {
+              "code": "ANTH3340",
+              "alts": []
+            },
+            {
+              "code": "ANTH3350",
+              "alts": []
+            },
+            {
+              "code": "ANTH3360",
+              "alts": []
+            },
+            {
+              "code": "ANTH3370",
+              "alts": []
+            },
+            {
+              "code": "ANTH3390",
+              "alts": []
+            },
+            {
+              "code": "ANTH3540",
+              "alts": []
+            },
+            {
+              "code": "ANTH3770",
+              "alts": []
+            },
+            {
+              "code": "ANTH3780",
+              "alts": []
+            },
+            {
+              "code": "ANTH3820",
+              "alts": []
+            },
+            {
+              "code": "ANTH4210",
+              "alts": []
+            },
+            {
+              "code": "ANTH4220",
+              "alts": []
+            },
+            {
+              "code": "ANTH4321",
+              "alts": []
+            },
+            {
+              "code": "ANTH4330",
+              "alts": []
+            },
+            {
+              "code": "ANTH4410",
+              "alts": []
+            },
+            {
+              "code": "ANTH4720",
+              "alts": []
+            },
+            {
+              "code": "ANTH4750",
               "alts": []
             }
           ],
@@ -1260,143 +1388,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "ANTH2210",
-          "alts": []
-        },
-        {
-          "code": "ANTH3380",
-          "alts": []
-        },
-        {
-          "code": "ANTH3630",
-          "alts": []
-        },
-        {
-          "code": "ANTH2390",
-          "alts": []
-        },
-        {
-          "code": "ANTH2510",
-          "alts": []
-        },
-        {
-          "code": "ANTH2520",
-          "alts": []
-        },
-        {
-          "code": "ANTH2530",
-          "alts": []
-        },
-        {
-          "code": "ANTH2540",
-          "alts": []
-        },
-        {
-          "code": "ANTH2550",
-          "alts": []
-        },
-        {
-          "code": "ANTH2730",
-          "alts": []
-        },
-        {
-          "code": "ANTH2740",
-          "alts": []
-        },
-        {
-          "code": "ANTH2810",
-          "alts": []
-        },
-        {
-          "code": "ANTH3310",
-          "alts": []
-        },
-        {
-          "code": "ANTH3321",
-          "alts": []
-        },
-        {
-          "code": "ANTH3322",
-          "alts": []
-        },
-        {
-          "code": "ANTH3323",
-          "alts": []
-        },
-        {
-          "code": "ANTH3340",
-          "alts": []
-        },
-        {
-          "code": "ANTH3350",
-          "alts": []
-        },
-        {
-          "code": "ANTH3360",
-          "alts": []
-        },
-        {
-          "code": "ANTH3370",
-          "alts": []
-        },
-        {
-          "code": "ANTH3390",
-          "alts": []
-        },
-        {
-          "code": "ANTH3540",
-          "alts": []
-        },
-        {
-          "code": "ANTH3770",
-          "alts": []
-        },
-        {
-          "code": "ANTH3780",
-          "alts": []
-        },
-        {
-          "code": "ANTH3820",
-          "alts": []
-        },
-        {
-          "code": "ANTH4210",
-          "alts": []
-        },
-        {
-          "code": "ANTH4220",
-          "alts": []
-        },
-        {
-          "code": "ANTH4321",
-          "alts": []
-        },
-        {
-          "code": "ANTH4330",
-          "alts": []
-        },
-        {
-          "code": "ANTH4410",
-          "alts": []
-        },
-        {
-          "code": "ANTH4720",
-          "alts": []
-        },
-        {
-          "code": "ANTH4750",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

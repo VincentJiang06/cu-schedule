@@ -463,6 +463,14 @@
               ]
             },
             {
+              "code": "MATH2221",
+              "alts": []
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
+            },
+            {
               "code": "PHYS2041",
               "alts": []
             },
@@ -577,23 +585,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "MATH2221",
-          "alts": []
-        },
-        {
-          "code": "MATH2230",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }

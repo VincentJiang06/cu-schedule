@@ -918,6 +918,18 @@
               "alts": []
             },
             {
+              "code": "CSCI1540",
+              "alts": []
+            },
+            {
+              "code": "CSCI1550",
+              "alts": []
+            },
+            {
+              "code": "CSCI1580",
+              "alts": []
+            },
+            {
               "code": "STAT2005",
               "alts": []
             }
@@ -1039,27 +1051,6 @@
           "children": []
         }
       ]
-    },
-    {
-      "marker": "",
-      "title": "其他相关课程",
-      "units": null,
-      "note": "本方案文本中列出、未归入上述分区的课程",
-      "courses": [
-        {
-          "code": "CSCI1540",
-          "alts": []
-        },
-        {
-          "code": "CSCI1550",
-          "alts": []
-        },
-        {
-          "code": "CSCI1580",
-          "alts": []
-        }
-      ],
-      "children": []
     }
   ]
 }
