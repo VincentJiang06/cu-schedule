@@ -525,10 +525,10 @@ select {
   }
 }
 
-/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的几处动效(卡片 hover 微动、
-   课程块淡入、按钮 hover 位移)在文件末尾还有一个同名媒体查询里统一关闭——CSS 层叠不看
-   媒体查询、只看源码顺序,这里若也覆盖会被后面无条件的 .card:hover 等规则重新盖掉,
-   必须放在它们之后,所以那部分留给末尾那个块，这里只保留最早就有的页面切换动效。 */
+/* 尊重「减少动态效果」：直接瞬切，不滑动。#里程碑6 新增的课程块淡入/按钮 hover 位移
+   在文件末尾还有一个同名媒体查询里统一关闭——CSS 层叠不看媒体查询、只看源码顺序,
+   这里若也覆盖会被后面无条件的规则重新盖掉,必须放在它们之后,所以那部分留给末尾那个
+   块，这里只保留最早就有的页面切换动效。 */
 @media (prefers-reduced-motion: reduce) {
   .viewport--anim .layer {
     animation-duration: 0.01ms !important;
@@ -827,19 +827,6 @@ select {
   display: flex;
   flex-direction: column;
   gap: 9px;
-  /* #里程碑6:卡片 hover 微动——克制的一点点上浮 + 加深阴影，呼应页面其它交互反馈
-     (按钮/开关都有过渡)，让静态信息卡也有"活"的手感。prefers-reduced-motion 时整体
-     关闭(见文件末尾的减动效媒体查询)。 */
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.card:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 6px rgb(26 29 35 / 0.09), 0 8px 20px -10px rgb(26 29 35 / 0.22);
-}
-
-:root[data-theme='dark'] .card:hover {
-  box-shadow: 0 2px 6px rgb(0 0 0 / 0.4), 0 10px 24px -10px rgb(0 0 0 / 0.7);
 }
 
 /* ---- #4 拖拽(选课页):落点高亮 + 跟随 ghost + 拖拽期全局态 --------------------- */
@@ -4838,15 +4825,12 @@ select {
    放在文件最末尾——CSS 层叠只看源码顺序不看媒体查询，要稳赢前面所有无条件的 hover/
    动画规则，这个块必须排在它们全部之后。颜色/边框类过渡保留(不算「动效」，WCAG 的
    prefers-reduced-motion 关注的是位移/缩放/闪烁这类动作)，只关掉会挪动位置或播放的：
-   卡片 hover 微动、课程块淡入 mount 动画、按钮 hover 位移。 */
+   课程块淡入 mount 动画、按钮 hover 位移。（#里程碑3 已整体去掉卡片 hover 上浮，
+   这里不再需要单独关它。） */
 @media (prefers-reduced-motion: reduce) {
   .tt__block,
   .tt2__block {
     animation: none;
-  }
-
-  .card:hover {
-    transform: none;
   }
 
   .export-btn:hover:not(:disabled),
