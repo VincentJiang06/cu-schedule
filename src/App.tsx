@@ -1195,6 +1195,11 @@ export default function App() {
   // #3 候选(可能学)课程的试排块:对每门 cart 课取「与该排法不冲突的第一种全组件组合」
   //（没有就退回第一种带时间的组合,与选课页 candidates 的展示口径一致),分别为 A / B
   // (或单方案) 各算一份,叠加到大课表上,右上角小角块标记。
+  // #里程碑3(核实,导出继承隐藏):这些 ghost 块只喂给 <TimetableCompare> 做屏幕叠加展示，
+  // 从不进入任何导出路径——exportPlan()/exportImage.ts/exportHtml.ts/exportWallpaper.ts/
+  // ics.ts 的 blocksOf() 都只读 plan.entries(committedCourses 排出来的那个 Plan)，cart
+  // courses 本身从未混进 generatePlans 的输入。所以被眼睛(disabledCandidates)隐藏的
+  // 候选课"不出现在导出图里"是这条数据流天然成立的，不需要额外过滤 cartGhostsA/B。
   const ghostBlocksFor = useCallback(
     (plan: Plan | null): GhostBlock[] => {
       if (!plan) return []
@@ -1266,6 +1271,8 @@ export default function App() {
   }
   // 导出页六张卡全部只导出顶部选中的那一个方案（selectedExportPlan），不再 A / B。
   // #里程碑4:aspect 只有 format:'image' 用得到——导出页的六个比例按钮点哪个传哪个。
+  // #里程碑3(核实):exportPlan 只收 selectedExportPlan 这一个 Plan，从不带 cart/ghost 数据——
+  // 见 ghostBlocksFor 注释,候选课(可能学)不管是否被眼睛隐藏,本就从未出现在任何导出物里。
   async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
     if (!selectedExportPlan) return
     setExportNote('正在导出…')
