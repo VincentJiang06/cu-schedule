@@ -164,7 +164,16 @@ body {
   font-size: 14px;
   line-height: 1.45;
   color: var(--ink);
-  background: var(--bg);
+  /* #里程碑2(渐变底色):纯 --bg 换成一个克制的柔和渐变——同色系、明度只差一点点，
+     不抢内容。用 color-mix() 相对 --bg 取一档更亮/更暗，三个主题(light/mid/dark)各自
+     的 --bg 不同，这一条规则就自动跟着换出三版协调的渐变，不需要每个主题单独定义
+     渐变端点。 */
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--bg) 100%, white 7%) 0%,
+    var(--bg) 45%,
+    color-mix(in srgb, var(--bg) 100%, black 7%) 100%
+  );
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
