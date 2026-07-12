@@ -1153,7 +1153,19 @@ export default function App() {
     cloudLoad(account)
       .then(({ config, updatedAt }) => {
         if (cancelled) return
-        if (config) applyCloudConfig(config)
+        if (config) {
+          if (shared) {
+            // 入站分享链接(#s=)刚被 shared-import effect(见上方约 707 行)当作"本地状态"
+            // 落盘——这里若直接用云端配置覆盖,分享链接对登录用户就形同虚设(闪一下就被云端盖
+            // 掉,#s= 分享对登录用户几乎必定失效)。命中 shared 时不覆盖,而是复用登录时既有的
+            // "云端 vs 本地"二选一 UI(pendingCloud)挂起,让用户自己选载入云端存档还是保留刚
+            // 导入的分享并推上云端。防抖上传本就在 pendingCloud 挂起时暂停(见下方防抖上传
+            // effect 的 gate),不需要额外处理。
+            setPendingCloud({ config, updatedAt })
+          } else {
+            applyCloudConfig(config)
+          }
+        }
         setSyncStatus('synced')
         setSyncNote(updatedAt ?? '')
       })
