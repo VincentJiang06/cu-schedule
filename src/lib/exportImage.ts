@@ -164,7 +164,7 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
  */
 function drawBlockText(
   ctx: CanvasRenderingContext2D,
-  block: { code: string; location: string; start: number; end: number },
+  block: { code: string; component: string; location: string; start: number; end: number },
   x: number,
   y: number,
   w: number,
@@ -191,7 +191,7 @@ function drawBlockText(
     // 矮块降级:不论宽窄，只画课号+时间——短课(45 分钟，进位显示后 60 分钟高)在多道
     // 并排时最容易撞到这一档，与屏幕版矮块降级同一个判定精神。
     ctx.font = timeFont(timeSize)
-    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
+    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
     return
   }
 
@@ -210,7 +210,7 @@ function drawBlockText(
       if (locText) ctx.fillText(locText, tx + codeW, firstBaseline)
     }
     ctx.font = timeFont(timeSize)
-    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
+    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
     return
   }
 
@@ -224,10 +224,10 @@ function drawBlockText(
   ty += lineGap
   ctx.font = timeFont(timeSize)
   if (w < EXPORT_TIME_SPLIT_MAX) {
-    ctx.fillText(hhmm(block.start), tx, ty)
+    ctx.fillText(`${block.component} ${hhmm(block.start)}`, tx, ty)
     ctx.fillText(`–${hhmm(block.end)}`, tx, ty + lineGap * 0.85)
   } else {
-    ctx.fillText(`${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
   }
 }
 

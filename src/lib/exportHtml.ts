@@ -131,7 +131,8 @@ export function buildScheduleHtml(
           // exportImage.ts 一致的 hhmm(block.end)),shownEnd(进位后的 displayEndMinutes)只用
           // 于上面算块高度,不进这里的文案,否则会出现「PNG 显示 12:15、HTML 显示 12:30」的
           // 进位不一致。
-          `<span class="block__time"><span class="block__time-a">${hhmm(block.start)}</span>` +
+          `<span class="block__time"><span class="block__comp">${escapeHtml(block.component)} </span>` +
+          `<span class="block__time-a">${hhmm(block.start)}</span>` +
           `<span class="block__time-dash">–</span><span class="block__time-b">${hhmm(block.end)}</span></span>` +
           `</article>`
       })
@@ -338,6 +339,10 @@ export function buildScheduleHtml(
     opacity: 0.9;
     white-space: nowrap;
     font-size: 11px;
+  }
+  .block__comp {
+    font-weight: 700;
+    opacity: 0.85;
   }
   /* 宽档:全称地点现身、简写地点收起，课号/地点/时间字号都放大一档。 */
   @container blk (min-width: 130px) {
