@@ -1,4 +1,4 @@
-import type { CSSProperties, PointerEvent as ReactPointerEvent } from 'react'
+import { useState, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import type { Pins } from '../lib/schedule.ts'
@@ -76,6 +76,23 @@ function sectionChipState(
   const curClass = isCurA && isCurB ? ' cl-chip--cur-ab' : isCurA ? ' cl-chip--cur-a' : isCurB ? ' cl-chip--cur-b' : ''
   const curHint = isCurA && isCurB ? ' · A、B 都用这个' : isCurA ? ' · 当前 A 用这个' : isCurB ? ' · 当前 B 用这个' : ''
   return { on, curClass, curHint }
+}
+
+/** 折叠图标(单个课程行用):展开态箭头朝下、折叠态朝右——纯 CSS transform 转向，图标本身
+ * 不带状态，转向完全由调用方传入的 collapsed 决定。 */
+function FoldIcon({ collapsed }: { collapsed: boolean }) {
+  return (
+    <svg
+      aria-hidden
+      className={`cl-row__fold-icon${collapsed ? ' cl-row__fold-icon--collapsed' : ''}`}
+      fill="none"
+      height="12"
+      viewBox="0 0 16 16"
+      width="12"
+    >
+      <path d="M4 6l4 4 4-4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
+    </svg>
+  )
 }
 
 /** 眼睛图标(SVG 而非 emoji——emoji 在不同系统/字体下形状差异大，容易显得突兀)。
@@ -181,7 +198,6 @@ export function CommittedList({
   onRowPointerDown,
   disabledCandidateKeys,
   onToggleCandidateDisabled,
-  collapsed = false,
   currentA,
   currentB,
 }: {
@@ -213,9 +229,6 @@ export function CommittedList({
    * 上的展示，与大课表试排块右上角的三角 toggle 走同一个 App.toggleCandidateDisabled，
    * 两处状态互相同步。只对 isCart 行渲染；不传则不显示这个按钮。 */
   onToggleCandidateDisabled?: (code: string) => void
-  /** #里程碑2(整卡折叠):true 时每行只剩 head 一行(课号+基本信息)，时间/地点/pin 选择器
-   * 收起——列表内部滚动区域(见 .cl__rows)本身与折叠无关，两者独立生效。 */
-  collapsed?: boolean
   /** #里程碑6:当前选中排法(A,或单方案模式下唯一的那个)在各课各 component 用的
    * section，按 course.code 索引(与 pins 同一把 key)——供左栏 section 选择器高亮。 */
   currentA?: Pins
@@ -228,6 +241,19 @@ export function CommittedList({
     ...codes.map((code) => ({ code, isCart: false })),
     ...(cartCodes ?? []).map((code) => ({ code, isCart: true })),
   ]
+  // #修复3(折叠改单个折叠):粒度从"整卡一个开关"改成"每门课一个"——纯会话内 UI 状态，
+  // 按 code 记，不持久化。与旧的整卡 collapsed prop(已删除)相比，只影响这一门课自己的
+  // 时间/地点/pin 选择器展示，互不牵连；三张卡各自是独立的 CommittedList 实例，天然
+  // 各有各的折叠集合，不需要额外传参隔离。
+  const [collapsedRows, setCollapsedRows] = useState<Set<string>>(() => new Set())
+  const toggleRowCollapsed = (code: string): void => {
+    setCollapsedRows((current) => {
+      const next = new Set(current)
+      if (next.has(code)) next.delete(code)
+      else next.add(code)
+      return next
+    })
+  }
 
   return (
     <div className="cl">
@@ -240,6 +266,7 @@ export function CommittedList({
             const orders = termOrdersByKey.get(courseKey(code)) ?? []
             const badge = orders.includes(currentTermOrder) ? currentTermOrder : orders[0]
             const isDisabledCandidate = isCart && (disabledCandidateKeys?.has(courseKey(code)) ?? false)
+            const rowCollapsed = collapsedRows.has(code)
             return (
               <li
                 className={`${isCart ? 'cl-row cl-row--cart' : 'cl-row'}${isDisabledCandidate ? ' cl-row--cart-off' : ''}`}
@@ -251,6 +278,20 @@ export function CommittedList({
                 }
               >
                 <div className="cl-row__head">
+                  {/* #修复3(单个折叠):每门课自己的折叠开关,图标(chevron)而非文字字符——
+                      点击只影响这一行,不牵动列表里其它课。 */}
+                  {course && (
+                    <button
+                      aria-expanded={!rowCollapsed}
+                      aria-label={rowCollapsed ? `展开 ${code}` : `折叠 ${code}`}
+                      className="cl-row__fold"
+                      title={rowCollapsed ? '展开：显示时间/地点/时段选择' : '折叠：本行只留一行'}
+                      type="button"
+                      onClick={() => toggleRowCollapsed(code)}
+                    >
+                      <FoldIcon collapsed={rowCollapsed} />
+                    </button>
+                  )}
                   <span className="cl-row__code">{code}</span>
                   {course && <span className="cl-row__units">{course.units}学分</span>}
                   {showTermBadge && badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
@@ -275,9 +316,10 @@ export function CommittedList({
                     </span>
                   )}
                 </div>
-                {/* #里程碑2:折叠态下每门课只剩上面的 head 一行，时间/地点/pin 选择器/
-                    「本学期无此课」提示统统收起，不渲染。 */}
-                {course && !collapsed ? (
+                {/* #修复3:折叠态下每门课只剩上面的 head 一行，时间/地点/pin 选择器/
+                    「本学期无此课」提示统统收起，不渲染——粒度现在是每门课自己(rowCollapsed)，
+                    不再是整卡一个开关。 */}
+                {course && !rowCollapsed ? (
                   interactive && onPin && !isCart ? (
                     <CoursePicker
                       course={course}
@@ -296,7 +338,7 @@ export function CommittedList({
                       ))}
                     </div>
                   )
-                ) : !course && !collapsed ? (
+                ) : !course && !rowCollapsed ? (
                   <div className="cl-row__missing">本学期无此课</div>
                 ) : null}
               </li>

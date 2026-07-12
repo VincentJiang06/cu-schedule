@@ -1196,8 +1196,36 @@ select {
 
 .cl-row__head {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
+}
+
+/* #修复3(单个折叠):每门课自己的折叠按钮，放在行首——图标(chevron)而非文字字符，
+   展开态朝下、折叠态转 −90deg 朝右，transform 过渡而非切换两套图标。 */
+.cl-row__fold {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+
+.cl-row__fold:hover {
+  color: var(--brand-ink);
+}
+
+.cl-row__fold-icon {
+  transition: transform 0.14s ease;
+}
+
+.cl-row__fold-icon--collapsed {
+  transform: rotate(-90deg);
 }
 
 .cl-row__code {
@@ -2326,31 +2354,6 @@ select {
   justify-content: center;
   font-size: 13px;
   border-radius: 7px;
-}
-
-/* #里程碑2(左栏卡片折叠):三张"当前课程"卡标题栏右上角的 +/− 角标，与 .lock-toggle--corner
-   同一视觉语言(方形小按钮)，稍微更小一档、不占用横排说明文字的空间。悬停只变色，不做位移。 */
-.card-collapse-btn {
-  flex: none;
-  width: 22px;
-  height: 22px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--surface-2);
-  color: var(--ink-2);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.card-collapse-btn:hover {
-  border-color: var(--brand);
-  color: var(--brand-ink);
 }
 
 .tt2__tag {
