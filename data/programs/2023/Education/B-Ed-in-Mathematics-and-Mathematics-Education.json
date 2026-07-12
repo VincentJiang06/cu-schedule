@@ -116,17 +116,107 @@
         "from": "1. Faculty Package"
       },
       {
-        "raw": "MATH1010",
+        "raw": "MATH1010/1018",
         "codes": [
-          "MATH1010"
+          "MATH1010",
+          "MATH1018"
         ],
-        "alt": false,
+        "alt": true,
         "from": "1. Faculty Package"
       },
       {
-        "raw": "MATH1010",
+        "raw": "MATH1030/1038",
         "codes": [
-          "MATH1010"
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH1050/1058",
+        "codes": [
+          "MATH1050",
+          "MATH1058"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(a) Subject Knowledge"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
         ],
         "alt": false,
         "from": "(a) Subject Knowledge"
@@ -254,11 +344,12 @@
     ],
     "elective": [
       {
-        "raw": "MATH2060",
+        "raw": "MATH2060/2068",
         "codes": [
-          "MATH2060"
+          "MATH2060",
+          "MATH2068"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(i) MATH2060/2068, MATH courses at 3000"
       },
       {
@@ -392,7 +483,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -410,7 +501,7 @@
       "units": "26",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 10
     },
     {
       "marker": "(b)",
@@ -511,7 +602,15 @@
         },
         {
           "code": "MATH1010",
-          "alts": []
+          "alts": [
+            "MATH1018"
+          ]
+        },
+        {
+          "code": "MATH1030",
+          "alts": [
+            "MATH1038"
+          ]
         }
       ],
       "children": []
@@ -531,6 +630,58 @@
           "courses": [
             {
               "code": "MATH1010",
+              "alts": [
+                "MATH1018"
+              ]
+            },
+            {
+              "code": "MATH1030",
+              "alts": [
+                "MATH1038"
+              ]
+            },
+            {
+              "code": "MATH1050",
+              "alts": [
+                "MATH1058"
+              ]
+            },
+            {
+              "code": "MATH2010",
+              "alts": [
+                "MATH2018"
+              ]
+            },
+            {
+              "code": "MATH2020",
+              "alts": [
+                "MATH2028"
+              ]
+            },
+            {
+              "code": "MATH2040",
+              "alts": [
+                "MATH2048"
+              ]
+            },
+            {
+              "code": "MATH2050",
+              "alts": [
+                "MATH2058"
+              ]
+            },
+            {
+              "code": "MATH2070",
+              "alts": [
+                "MATH2078"
+              ]
+            },
+            {
+              "code": "MATH2221",
+              "alts": []
+            },
+            {
+              "code": "MATH2230",
               "alts": []
             }
           ],
@@ -656,7 +807,9 @@
               "courses": [
                 {
                   "code": "MATH2060",
-                  "alts": []
+                  "alts": [
+                    "MATH2068"
+                  ]
                 },
                 {
                   "code": "MATH4400",

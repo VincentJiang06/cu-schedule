@@ -170,9 +170,58 @@
         "from": "(a) BCHE2000, 2030, 3030/3730,"
       },
       {
-        "raw": "BCHE3030",
+        "raw": "BCHE3030/3730",
         "codes": [
-          "BCHE3030"
+          "BCHE3030",
+          "BCHE3730"
+        ],
+        "alt": true,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3040",
+        "codes": [
+          "BCHE3040"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3050",
+        "codes": [
+          "BCHE3050"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3070",
+        "codes": [
+          "BCHE3070"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3080",
+        "codes": [
+          "BCHE3080"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3092",
+        "codes": [
+          "BCHE3092"
+        ],
+        "alt": false,
+        "from": "(a) BCHE2000, 2030, 3030/3730,"
+      },
+      {
+        "raw": "BCHE3650",
+        "codes": [
+          "BCHE3650"
         ],
         "alt": false,
         "from": "(a) BCHE2000, 2030, 3030/3730,"
@@ -308,11 +357,12 @@
         "from": "(v) LSCI4000#"
       },
       {
-        "raw": "BCHE4030",
+        "raw": "BCHE4030/4830",
         "codes": [
-          "BCHE4030"
+          "BCHE4030",
+          "BCHE4830"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(b) Of the 17 units of elective courses, at least 9 units,"
       },
       {
@@ -464,7 +514,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 9
     },
     {
       "marker": "(b)",
@@ -657,7 +707,9 @@
             },
             {
               "code": "BCHE3030",
-              "alts": []
+              "alts": [
+                "BCHE3730"
+              ]
             }
           ],
           "children": []
@@ -761,7 +813,9 @@
           "courses": [
             {
               "code": "BCHE4030",
-              "alts": []
+              "alts": [
+                "BCHE4830"
+              ]
             },
             {
               "code": "BIOL2420",
@@ -834,6 +888,30 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
+        {
+          "code": "BCHE3040",
+          "alts": []
+        },
+        {
+          "code": "BCHE3050",
+          "alts": []
+        },
+        {
+          "code": "BCHE3070",
+          "alts": []
+        },
+        {
+          "code": "BCHE3080",
+          "alts": []
+        },
+        {
+          "code": "BCHE3092",
+          "alts": []
+        },
+        {
+          "code": "BCHE3650",
+          "alts": []
+        },
         {
           "code": "BCHE4903",
           "alts": []

@@ -20,6 +20,7 @@
     "CHLT1001",
     "CHLT1002",
     "CSCI1120",
+    "CSCI1130",
     "CSCI2040",
     "CSCI2100",
     "CSCI3150",
@@ -79,6 +80,7 @@
     "ESTR1006",
     "ESTR1007",
     "ESTR1100",
+    "ESTR1102",
     "ESTR2004",
     "ESTR2005",
     "ESTR2018",
@@ -265,20 +267,15 @@
         "from": "1. Faculty Package"
       },
       {
-        "raw": "AIST1110/CSCI1120",
+        "raw": "AIST1110/CSCI1120/1130/ESTR1100/1102",
         "codes": [
           "AIST1110",
-          "CSCI1120"
+          "CSCI1120",
+          "CSCI1130",
+          "ESTR1100",
+          "ESTR1102"
         ],
         "alt": true,
-        "from": "2. Foundation Courses"
-      },
-      {
-        "raw": "ESTR1100",
-        "codes": [
-          "ESTR1100"
-        ],
-        "alt": false,
         "from": "2. Foundation Courses"
       },
       {
@@ -814,7 +811,7 @@
       "units": "13",
       "bucket": "required",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 5
     },
     {
       "marker": "3.",
@@ -930,12 +927,11 @@
         {
           "code": "AIST1110",
           "alts": [
-            "CSCI1120"
+            "CSCI1120",
+            "CSCI1130",
+            "ESTR1100",
+            "ESTR1102"
           ]
-        },
-        {
-          "code": "ESTR1100",
-          "alts": []
         },
         {
           "code": "ENGG1130",

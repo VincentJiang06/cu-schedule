@@ -408,11 +408,12 @@
         "from": "2. Required Courses"
       },
       {
-        "raw": "CHEM4030",
+        "raw": "CHEM4030/4040",
         "codes": [
-          "CHEM4030"
+          "CHEM4030",
+          "CHEM4040"
         ],
-        "alt": false,
+        "alt": true,
         "from": "2. Required Courses"
       },
       {
@@ -1030,7 +1031,9 @@
         },
         {
           "code": "CHEM4030",
-          "alts": []
+          "alts": [
+            "CHEM4040"
+          ]
         }
       ],
       "children": []

@@ -261,11 +261,12 @@
         "from": "2. Foundation Courses"
       },
       {
-        "raw": "PHYS1003",
+        "raw": "PHYS1003/1110",
         "codes": [
-          "PHYS1003"
+          "PHYS1003",
+          "PHYS1110"
         ],
-        "alt": false,
+        "alt": true,
         "from": "2. Foundation Courses"
       },
       {
@@ -1549,7 +1550,9 @@
         },
         {
           "code": "PHYS1003",
-          "alts": []
+          "alts": [
+            "PHYS1110"
+          ]
         }
       ],
       "children": []

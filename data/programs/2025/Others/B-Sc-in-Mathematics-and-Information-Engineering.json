@@ -214,27 +214,30 @@
         "from": "1."
       },
       {
-        "raw": "MATH1025",
+        "raw": "MATH1025/1028",
         "codes": [
-          "MATH1025"
+          "MATH1025",
+          "MATH1028"
         ],
-        "alt": false,
+        "alt": true,
         "from": "1."
       },
       {
-        "raw": "MATH1030",
+        "raw": "MATH1030/1038",
         "codes": [
-          "MATH1030"
+          "MATH1030",
+          "MATH1038"
         ],
-        "alt": false,
+        "alt": true,
         "from": "1."
       },
       {
-        "raw": "MATH1010",
+        "raw": "MATH1010/1018",
         "codes": [
-          "MATH1010"
+          "MATH1010",
+          "MATH1018"
         ],
-        "alt": false,
+        "alt": true,
         "from": "(a) MATH1010/1018[a]"
       },
       {
@@ -399,9 +402,72 @@
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
       },
       {
-        "raw": "MATH1090",
+        "raw": "MATH1090/1098",
         "codes": [
-          "MATH1090"
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
         ],
         "alt": false,
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
@@ -441,11 +507,12 @@
         "from": "(b) Research"
       },
       {
-        "raw": "MATH1010",
+        "raw": "MATH1010/1018",
         "codes": [
-          "MATH1010"
+          "MATH1010",
+          "MATH1018"
         ],
-        "alt": false,
+        "alt": true,
         "from": "1. Science Faculty Package"
       },
       {
@@ -538,19 +605,21 @@
         "from": "2. Foundation"
       },
       {
-        "raw": "MATH1025",
+        "raw": "MATH1025/1028",
         "codes": [
-          "MATH1025"
+          "MATH1025",
+          "MATH1028"
         ],
-        "alt": false,
+        "alt": true,
         "from": "2. Foundation"
       },
       {
-        "raw": "MATH1030",
+        "raw": "MATH1030/1038",
         "codes": [
-          "MATH1030"
+          "MATH1030",
+          "MATH1038"
         ],
-        "alt": false,
+        "alt": true,
         "from": "2. Foundation"
       },
       {
@@ -641,9 +710,72 @@
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
       },
       {
-        "raw": "MATH1090",
+        "raw": "MATH1090/1098",
         "codes": [
-          "MATH1090"
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
         ],
         "alt": false,
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
@@ -2387,7 +2519,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 20
     },
     {
       "marker": "(b)",
@@ -2441,7 +2573,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 20
     },
     {
       "marker": "(b)",
@@ -2486,11 +2618,15 @@
         },
         {
           "code": "MATH1025",
-          "alts": []
+          "alts": [
+            "MATH1028"
+          ]
         },
         {
           "code": "MATH1030",
-          "alts": []
+          "alts": [
+            "MATH1038"
+          ]
         }
       ],
       "children": []
@@ -2510,7 +2646,9 @@
           "courses": [
             {
               "code": "MATH1010",
-              "alts": []
+              "alts": [
+                "MATH1018"
+              ]
             }
           ],
           "children": []
@@ -2644,6 +2782,48 @@
             },
             {
               "code": "MATH1090",
+              "alts": [
+                "MATH1098"
+              ]
+            },
+            {
+              "code": "MATH2010",
+              "alts": [
+                "MATH2018"
+              ]
+            },
+            {
+              "code": "MATH2020",
+              "alts": [
+                "MATH2028"
+              ]
+            },
+            {
+              "code": "MATH2040",
+              "alts": [
+                "MATH2048"
+              ]
+            },
+            {
+              "code": "MATH2050",
+              "alts": [
+                "MATH2058"
+              ]
+            },
+            {
+              "code": "MATH2060",
+              "alts": [
+                "MATH2068"
+              ]
+            },
+            {
+              "code": "MATH2070",
+              "alts": [
+                "MATH2078"
+              ]
+            },
+            {
+              "code": "MATH2230",
               "alts": []
             },
             {

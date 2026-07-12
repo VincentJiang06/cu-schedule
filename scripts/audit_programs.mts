@@ -412,6 +412,21 @@ function main() {
       `§2="${n2?.title ?? ''}" §3="${n3?.title ?? ''}"`)
   }
 
+  // case 8: 签名1 的「/ 孪生裸续号」半(R3 修复)—— 日历把一门课的两种形态写成
+  // "MATH1010/1018"、"1050/1058"、"CSCI2100/ESTR2102",后半常是裸 4 位数继承前缀。
+  // 旧 tokenizer 只跨 full/full 的斜杠,把裸半 silently 丢掉("MATH1010 only"全库丢课)。
+  // 断言两处独立程序的孪生两半都进 structure:BEdMath 2(a)(case 4 已锁,含 MATH1018/1058)
+  // 之外,再锁 MathSci 2(a) 的 "MATH2070/2078" 两半 —— 证明是通用规则,非单例特判。
+  {
+    const p = byId.get('2025:Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences')
+    const codes = new Set<string>()
+    if (p) collectStructCodes(p.structure, codes)
+    const want = ['MATH2070', 'MATH2078', 'IMSC2018', 'IMSC2058', 'IMSC2068']
+    const ok = !!p && want.every((c) => codes.has(c))
+    assert('MathSci2025 "/孪生裸续号"两半全回收', ok,
+      p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
+  }
+
   const p6Fail = p6.filter((c) => !c.ok).length
 
   // --------------------------------------------------------------------- 输出

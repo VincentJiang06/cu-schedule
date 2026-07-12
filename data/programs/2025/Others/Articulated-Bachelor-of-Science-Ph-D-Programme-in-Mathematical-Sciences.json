@@ -148,9 +148,26 @@
         "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
       },
       {
-        "raw": "MATH2070",
+        "raw": "MATH2070/2078",
         "codes": [
-          "MATH2070"
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
         ],
         "alt": false,
         "from": "(a) IMSC2018, 2028, 2048, 2058, 2068, MATH2070/2078,"
@@ -354,7 +371,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 11
+      "n_courses": 13
     },
     {
       "marker": "(b)",
@@ -441,7 +458,9 @@
             },
             {
               "code": "MATH2070",
-              "alts": []
+              "alts": [
+                "MATH2078"
+              ]
             },
             {
               "code": "PHYS2041",
@@ -558,6 +577,23 @@
           "children": []
         }
       ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "MATH2221",
+          "alts": []
+        },
+        {
+          "code": "MATH2230",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

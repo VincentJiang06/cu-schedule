@@ -63,6 +63,37 @@ FOOTNOTE_RE = re.compile(r"\[[a-z]+\]")
 PARENS_RE = re.compile(r"\([^)]*\)")
 
 
+# A '/'-joined shorthand twin the calendar uses for two forms of one course. The FIRST
+# half is a full code; later halves are frequently *bare* 4-digit numbers that inherit
+# the running subject: "MATH1010/1018" = MATH1010 / MATH1018, "CSCI2100/ESTR2102" =
+# CSCI2100 / ESTR2102. A whole twin can also appear as a bare continuation
+# ("MATH1010/1018 or 1030/1038" -> the second twin is 1030/1038 under MATH). Splitting on
+# '/' and inheriting the last-seen subject expands every half to a full 8-char code — the
+# old tokenizer only crossed '/' between two *full* codes, silently dropping the bare
+# halves (the "MATH1010 only" calendar-wide loss on twin lists). Mirrors nothing in the
+# audit reference extractor (which is deliberately simpler): making structure a superset
+# of bare-twin halves can only satisfy P1's `reference ⊆ structure`, never break it.
+SLASH_PART_RE = re.compile(r"([A-Z]{4})?(\d{4})")
+
+
+def _slash_codes(tok: str, lead_subj: str | None) -> tuple[list[str], str | None]:
+    """Expand a '/'-joined shorthand ('MATH1010/1018', '1050/1058', 'CSCI2100/ESTR2102')
+    into full 8-char codes. A bare half inherits the most recent subject; a half that
+    carries its own subject updates it. Returns (codes, running_subject) so the caller
+    keeps its subject in step for any following bare continuation number."""
+    codes: list[str] = []
+    subj = lead_subj
+    for part in tok.split("/"):
+        m = SLASH_PART_RE.fullmatch(part)
+        if not m:
+            continue
+        if m.group(1):
+            subj = m.group(1)
+        if subj:
+            codes.append(subj + m.group(2))
+    return codes, subj
+
+
 def _gap_binds(gap: str) -> bool:
     """Does this inter-token gap still bind a bare number to the running subject?
     Whole parenthetical insertions are erased first (prose asides, not list separators),
@@ -100,13 +131,16 @@ def extract_courses(text: str) -> list[dict]:
     current_subj: str | None = None
     last_end: int | None = None
     last_was_course = False
-    # token = a bracket cross-listing, OR a code (with optional /alts), OR a bare
-    # 4-digit continuation number. The bracket form is listed first so it wins over
-    # the bare-number branch (which would otherwise grab the trailing digits alone).
+    # token = a bracket cross-listing, OR a code (with optional /twins), OR a bare
+    # 4-digit continuation number (itself possibly a /twin). The bracket form is listed
+    # first so it wins over the bare-number branch (which would otherwise grab the
+    # trailing digits alone). A '/'-twin half may be a full code ("/ESTR2102") OR a bare
+    # number ("/1018") — both are consumed into the one token so _slash_codes can expand
+    # every half instead of the tokenizer severing the bare halves.
     token_re = re.compile(
         r"[A-Z]{4}\[[A-Z]{4}\]\d{4}"
-        r"|[A-Z]{4}\d{4}(?:/[A-Z]{4}\d{4})*"
-        r"|(?<![A-Za-z0-9])\d{4}(?![0-9])"
+        r"|[A-Z]{4}\d{4}(?:/(?:[A-Z]{4})?\d{4})*"
+        r"|(?<![A-Za-z0-9])\d{4}(?:/(?:[A-Z]{4})?\d{4})*(?![0-9])"
     )
     for tok in token_re.finditer(text):
         s = tok.group(0)
@@ -124,7 +158,7 @@ def extract_courses(text: str) -> list[dict]:
             last_was_course = True
             continue
         if s[0].isalpha():
-            current_subj = s[:4]
+            codes, current_subj = _slash_codes(s, s[:4])
             raw = s
         else:
             # bare number: expand ONLY if it directly continues a course list, i.e.
@@ -138,12 +172,13 @@ def extract_courses(text: str) -> list[dict]:
                     last_was_course = False
                     last_end = tok.end()
                     continue
-                raw = current_subj + s
+                lead = current_subj
+                codes, current_subj = _slash_codes(s, lead)
+                raw = lead + s
             else:
                 last_was_course = False
                 last_end = tok.end()
                 continue
-        codes = CODE_RE.findall(raw)
         if codes and raw not in seen:
             seen.add(raw)
             out.append({"raw": raw, "codes": codes, "alt": "/" in raw})

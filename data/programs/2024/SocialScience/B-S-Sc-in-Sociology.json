@@ -1628,7 +1628,19 @@
                 },
                 {
                   "code": "SOCI3245",
+                  "alts": [
+                    "SOCI4211"
+                  ]
+                },
+                {
+                  "code": "SOCI4020",
                   "alts": []
+                },
+                {
+                  "code": "SOCI4410",
+                  "alts": [
+                    "SOCI4420"
+                  ]
                 },
                 {
                   "code": "DSPS2201",
@@ -2076,6 +2088,16 @@
                 },
                 {
                   "code": "SOCI3245",
+                  "alts": [
+                    "SOCI4211"
+                  ]
+                },
+                {
+                  "code": "SOCI4020",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI4202",
                   "alts": []
                 }
               ],
@@ -2183,7 +2205,23 @@
                 },
                 {
                   "code": "SOCI3245",
+                  "alts": [
+                    "SOCI4211"
+                  ]
+                },
+                {
+                  "code": "SOCI4020",
                   "alts": []
+                },
+                {
+                  "code": "SOCI4202",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI4410",
+                  "alts": [
+                    "SOCI4420"
+                  ]
                 }
               ],
               "children": []

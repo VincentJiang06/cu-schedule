@@ -175,11 +175,12 @@
         "from": "1. Faculty Package"
       },
       {
-        "raw": "PHYS1110",
+        "raw": "PHYS1110/1111",
         "codes": [
-          "PHYS1110"
+          "PHYS1110",
+          "PHYS1111"
         ],
-        "alt": false,
+        "alt": true,
         "from": "1. Faculty Package"
       },
       {
@@ -3034,7 +3035,9 @@
         },
         {
           "code": "PHYS1110",
-          "alts": []
+          "alts": [
+            "PHYS1111"
+          ]
         }
       ],
       "children": []
