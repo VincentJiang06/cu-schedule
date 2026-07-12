@@ -1686,10 +1686,10 @@ select {
   z-index: 1;
   overflow: hidden;
   border-radius: 8px;
-  padding: 4px 6px;
+  padding: 5px 7px;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
@@ -1697,22 +1697,49 @@ select {
   animation: blockFadeIn 0.22s ease both;
 }
 
-.tt__block b {
+/* 第1行：component 徽标 + 课号——三行里最优先保留的一行，卡片太矮时靠 .tt__block 的
+   overflow:hidden 把下面的行截掉，这一行永远排最前面、最先保住。 */
+.tt__block-top {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 0;
+  flex: none;
+}
+
+.tt__block-comp {
+  flex: none;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  padding: 0 5px;
+  border-radius: 4px;
+  background: hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)) / 0.18);
+}
+
+.tt__block-code {
   font-family: var(--mono);
-  font-size: 11.5px;
+  font-size: 14px;
+  font-weight: 750;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 第2行：时间。 */
+.tt__block-time {
+  font-size: 12.5px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
   white-space: nowrap;
 }
 
-.tt__block time {
-  font-size: 10.5px;
-  font-variant-numeric: tabular-nums;
-  opacity: 0.85;
-}
-
-.tt__block-meta {
-  font-size: 10px;
-  opacity: 0.7;
+/* 第3行：地点，单独一行。 */
+.tt__block-loc {
+  font-size: 11.5px;
+  opacity: 0.72;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -2342,11 +2369,12 @@ select {
   z-index: 1;
   overflow: hidden;
   border-radius: 6px;
-  /* tight padding so a 45-min slot still fits 课号 + LEC/TUT + 时间 */
-  padding: 3px 5px;
+  /* 三行内容(component+课号 / 时间 / 地点)，45 分钟的窄块塞不下三行时靠 overflow:hidden
+     从下往上截断，第一行(课号)最优先保留。 */
+  padding: 4px 6px;
   display: flex;
   flex-direction: column;
-  gap: 1px;
+  gap: 2px;
   line-height: 1.2;
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
   /* #里程碑6:同 .tt__block 的淡入 mount 动画，见上方 @keyframes blockFadeIn。 */
@@ -2411,14 +2439,14 @@ select {
 .tt2__block-top {
   display: flex;
   align-items: center;
-  gap: 3px;
+  gap: 4px;
   min-width: 0;
   flex: none;
 }
 
 .tt2__block-comp {
   flex: none;
-  font-size: 9.5px;
+  font-size: 10.5px;
   font-weight: 850;
   letter-spacing: 0.03em;
   line-height: 1.35;
@@ -2442,7 +2470,7 @@ select {
 
 .tt2__block-code {
   font-family: var(--mono);
-  font-size: 12px;
+  font-size: 13.5px;
   font-weight: 750;
   letter-spacing: -0.02em;
   white-space: nowrap;
@@ -2450,14 +2478,21 @@ select {
   text-overflow: ellipsis;
 }
 
-/* 第二行：时间（· 地点，可省略）—— 单行、超出省略，绝不挤出第三行。 */
+/* 第二行：时间。 */
 .tt2__block-time {
-  font-size: 11px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
+}
+
+/* 第三行：地点，单独一行。 */
+.tt2__block-loc {
+  font-size: 11px;
+  opacity: 0.75;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* ---- export card ---------------------------------------------------------- */
@@ -4872,7 +4907,7 @@ select {
     font-size: 17px;
   }
 
-  .tt__block-meta {
+  .tt__block-loc {
     display: none;
   }
 }

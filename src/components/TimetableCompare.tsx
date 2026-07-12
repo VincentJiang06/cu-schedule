@@ -116,14 +116,18 @@ function Column({
             }
             title={`${block.code} ${block.title}${block.cart ? (cartOff ? '（可能学 · 已停用展示，点右上角重新启用）' : '（可能学 · 试排）') : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
           >
+            {/* 第1行:component + 课号——卡片太矮时靠 .tt2__block 的 overflow:hidden 截断掉下面
+               的行,这一行排最前面永远最先保住。 */}
             <span className="tt2__block-top">
               <b className="tt2__block-comp">{block.component}</b>
               <span className="tt2__block-code">{block.code}</span>
             </span>
+            {/* 第2行:时间。 */}
             <time className="tt2__block-time">
               {hhmm(block.start)}–{hhmm(block.end)}
-              {block.location ? ` · ${block.location}` : ''}
             </time>
+            {/* 第3行:地点,单独一行。 */}
+            {block.location && <span className="tt2__block-loc">{block.location}</span>}
             {block.cart && onToggleCandidate && (
               <button
                 aria-label={cartOff ? `启用候选课 ${block.code}` : `停用候选课 ${block.code}`}

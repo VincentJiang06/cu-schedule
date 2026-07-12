@@ -142,14 +142,18 @@ export function Timetable({
                     }
                     title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
                   >
-                    <b>{block.code}</b>
-                    <time>
+                    {/* 第1行:component + 课号——卡片太矮时,靠 .tt__block 的 overflow:hidden 优雅截断
+                       掉下面的行,这一行排最前面永远最先保住。 */}
+                    <span className="tt__block-top">
+                      <b className="tt__block-comp">{block.component}</b>
+                      <span className="tt__block-code">{block.code}</span>
+                    </span>
+                    {/* 第2行:时间。 */}
+                    <time className="tt__block-time">
                       {hhmm(block.start)}–{hhmm(block.end)}
                     </time>
-                    <span className="tt__block-meta">
-                      {block.component}
-                      {block.location ? ` · ${block.location}` : ''}
-                    </span>
+                    {/* 第3行:地点,单独一行。 */}
+                    {block.location && <span className="tt__block-loc">{block.location}</span>}
                   </article>
                 )
               })}
