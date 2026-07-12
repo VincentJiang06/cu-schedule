@@ -405,10 +405,13 @@ const bootCommitted = live?.committed ?? shared?.committed ?? saved?.committed ?
 const bootTaken = live?.taken ?? shared?.taken ?? saved?.taken ?? []
 const bootPins = live?.pins ?? shared?.pins ?? saved?.pins ?? {}
 const bootCart = saved?.cart ?? []
-// #里程碑2(真路由):page 现在由 location.pathname 决定(History API,不引路由库)——命中
-// /info|/select|/timetable|/export|/appendix 之一就用它;根 `/` 或未知路径落回 'info'
-// (下方 App 组件内的 mount effect 会把地址栏一次性纠正到这个落地页)。
-const bootPage: Page = pageFromPathname(typeof window !== 'undefined' ? window.location.pathname : '/') ?? 'info'
+// 真路由:page 现在由 location.pathname 决定(History API,不引路由库)——命中
+// /info|/select|/timetable|/export|/appendix 之一就用它。路径解不出时(根 `/`、或旧书签/
+// 旧分享出去的 #st= 链接——那种链接 page 编在 hash 里、路径还是根 /)才退回 live?.page,
+// 解不出 live.page 就再退到 'info'。下方 App 组件内的 mount effect 会把地址栏一次性
+// 纠正到这个落地页对应的真实路径,向后兼容旧链接的同时不需要一直读 #st= 里的 page。
+const bootPage: Page =
+  pageFromPathname(typeof window !== 'undefined' ? window.location.pathname : '/') ?? live?.page ?? 'info'
 
 // ---- #里程碑4 排法横条:隐藏原生滚动条 + 按住拖动(pan) + 边缘自动滚动 ----------------------
 // 6px 阈值区分 tap(触发选中)与 drag(平移,不触发选中)——与选课页课程卡的拖拽判定同一手法
@@ -583,8 +586,9 @@ export default function App() {
   // go() 的 pushState 需要读全部会话字段(termSlug/committed/…/workEnd),但那些 state 声明
   // 在 go 之后才出现;用一个稳定 ref 占位「构建 hash 的函数」,真正实现在下方渲染体里补上
   // （与下面 dragMoveImplRef 同一手法:ref 先占位、useCallback 引用 .current、实现体后补,
-  // 因为闭包只在调用时才读取 .current,不受声明顺序影响)。
-  const liveHashBuilderRef = useRef<(p: Page) => string>(() => '')
+  // 因为闭包只在调用时才读取 .current,不受声明顺序影响)。page 现在由路径决定、不再编进
+  // #st=,所以这个 hash builder 不再需要接收目标页参数。
+  const liveHashBuilderRef = useRef<() => string>(() => '')
   // popstate 恢复触发的这一轮 state 变化不需要再 replaceState 写回 URL(URL 已经是这个状态
   // 了)——见下方「URL 实时状态同步」两个 effect。
   const restoringUrlRef = useRef(false)
@@ -596,7 +600,7 @@ export default function App() {
     (to: Page) => {
       if (to === page) return
       setPage(to)
-      const hash = liveHashBuilderRef.current(to)
+      const hash = liveHashBuilderRef.current()
       window.history.pushState(null, '', `${PAGE_PATH[to]}${window.location.search}${hash}`)
     },
     [page],
@@ -835,10 +839,10 @@ export default function App() {
   // ---- URL 实时状态同步(用网址记录当前状态 + 返回键恢复) ----------------------------
   // 每次渲染把"构建 #st= hash"的最新实现刷新到 go() 早先占位的 ref 里(与 colorSlotRef 那种
   // 渲染体内直接改 ref 是同一手法),这样 go() 的 pushState 总能读到最新的 committed/pins/
-  // 开关等,而不必把 go 挪到这些 state 声明之后。
-  liveHashBuilderRef.current = (p: Page): string =>
+  // 开关等,而不必把 go 挪到这些 state 声明之后。page 现在由路径决定,不再写进 #st=(旧链接
+  // 里带的 page 仍能被 decodeLiveState 解出、供首屏向后兼容用,只是这里不再编码它)。
+  liveHashBuilderRef.current = (): string =>
     encodeLiveState({
-      page: p,
       termSlug,
       committed,
       taken,
@@ -867,7 +871,7 @@ export default function App() {
       return
     }
     const timer = window.setTimeout(() => {
-      const hash = liveHashBuilderRef.current(page)
+      const hash = liveHashBuilderRef.current()
       window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}${hash}`)
     }, 200)
     return () => window.clearTimeout(timer)
@@ -882,7 +886,6 @@ export default function App() {
     lecFits,
     meetsOfficeHours,
     meetsPrereq,
-    page,
     pins,
     programScope,
     taken,

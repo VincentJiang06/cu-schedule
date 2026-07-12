@@ -80,7 +80,10 @@ export function decodeShare(hash: string): SharePayload | null {
  * marker, separate lifecycle.
  */
 export type LiveState = SharePayload & {
-  page: PageSlug
+  /** #里程碑4(真路由):page 不再由 #st= 决定——路由页面现在来自 location.pathname。这个
+   *  字段只为向后兼容旧链接保留:encodeLiveState 不再写它(调用方不再传),但
+   *  decodeLiveState 解到旧链接里的合法 page 时仍会带出来,供调用方一次性纠正到对应路径。*/
+  page?: PageSlug
   hideConflicts: boolean
   hideOutOfHours: boolean
   meetsOfficeHours: boolean
@@ -125,7 +128,9 @@ export function decodeLiveState(hash: string): LiveState | null {
     if (typeof parsed !== 'object' || parsed === null) return null
     const r = parsed as Record<string, unknown>
     if (!isStringArray(r.committed) || !isStringArray(r.taken)) return null
-    const page = typeof r.page === 'string' && (PAGE_SLUGS as string[]).includes(r.page) ? (r.page as PageSlug) : 'select'
+    // #里程碑4:不再兜底默认页——page 现在由路径决定,这里只在旧链接确实带了合法 page 时才
+    // 把它带出去(供调用方一次性向后兼容 redirect),解不出就整个不带这个字段。
+    const page = typeof r.page === 'string' && (PAGE_SLUGS as string[]).includes(r.page) ? (r.page as PageSlug) : undefined
     const termSlug = typeof r.termSlug === 'string' ? r.termSlug : null
     const pins = typeof r.pins === 'object' && r.pins !== null ? (r.pins as Pins) : {}
     return {
