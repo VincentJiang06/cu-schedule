@@ -160,6 +160,14 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "MATH1510",
+        "codes": [
+          "MATH1510"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CSCI1120/ESTR1100",
         "codes": [
           "CSCI1120",
@@ -313,6 +321,14 @@
         "raw": "STAT3005",
         "codes": [
           "STAT3005"
+        ],
+        "alt": false,
+        "from": "(f) Statistical Modeling: Choose 3"
+      },
+      {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
         ],
         "alt": false,
         "from": "(f) Statistical Modeling: Choose 3"
@@ -898,7 +914,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 5
     },
     {
       "marker": "2.",
@@ -970,7 +986,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "4.",
@@ -1071,6 +1087,10 @@
         {
           "code": "MATH1010",
           "alts": []
+        },
+        {
+          "code": "MATH1510",
+          "alts": []
         }
       ],
       "children": []
@@ -1123,9 +1143,9 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Algorithms and Computer Systems",
           "units": null,
-          "note": "Algorithms and Computer Systems",
+          "note": null,
           "courses": [
             {
               "code": "AIST3020",
@@ -1169,9 +1189,9 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Operating Systems",
           "units": null,
-          "note": "Operating Systems",
+          "note": null,
           "courses": [
             {
               "code": "CSCI3150",
@@ -1205,9 +1225,9 @@
         },
         {
           "marker": "(e)",
-          "title": "",
+          "title": "Statistical Inference",
           "units": null,
-          "note": "Statistical Inference",
+          "note": null,
           "courses": [
             {
               "code": "STAT3008",
@@ -1228,6 +1248,10 @@
           "courses": [
             {
               "code": "STAT3005",
+              "alts": []
+            },
+            {
+              "code": "STAT4006",
               "alts": []
             }
           ],

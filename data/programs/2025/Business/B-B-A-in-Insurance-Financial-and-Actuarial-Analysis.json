@@ -118,6 +118,30 @@
         "from": "(b) CSCI1510 or 1520 or 1540 or 1580"
       },
       {
+        "raw": "CSCI1520",
+        "codes": [
+          "CSCI1520"
+        ],
+        "alt": false,
+        "from": "(b) CSCI1510 or 1520 or 1540 or 1580"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(b) CSCI1510 or 1520 or 1540 or 1580"
+      },
+      {
+        "raw": "CSCI1580",
+        "codes": [
+          "CSCI1580"
+        ],
+        "alt": false,
+        "from": "(b) CSCI1510 or 1520 or 1540 or 1580"
+      },
+      {
         "raw": "ACCT2121",
         "codes": [
           "ACCT2121"
@@ -280,6 +304,102 @@
         "from": "(a) 18 units of courses from the following"
       },
       {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA3260",
+        "codes": [
+          "FINA3260"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA3295",
+        "codes": [
+          "FINA3295"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4030",
+        "codes": [
+          "FINA4030"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4140",
+        "codes": [
+          "FINA4140"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4150",
+        "codes": [
+          "FINA4150"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4160",
+        "codes": [
+          "FINA4160"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4211",
+        "codes": [
+          "FINA4211"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4215",
+        "codes": [
+          "FINA4215"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4221",
+        "codes": [
+          "FINA4221"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
+        "raw": "FINA4280",
+        "codes": [
+          "FINA4280"
+        ],
+        "alt": false,
+        "from": "(a) 18 units of courses from the following"
+      },
+      {
         "raw": "IBBA3040",
         "codes": [
           "IBBA3040"
@@ -413,7 +533,7 @@
       "units": "3",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 4
     },
     {
       "marker": "(c)",
@@ -440,7 +560,7 @@
       "units": "18",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 15
+      "n_courses": 27
     },
     {
       "marker": "(b)",
@@ -506,6 +626,18 @@
           "courses": [
             {
               "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "CSCI1540",
+              "alts": []
+            },
+            {
+              "code": "CSCI1580",
               "alts": []
             }
           ],
@@ -585,6 +717,54 @@
             },
             {
               "code": "FINA3250",
+              "alts": []
+            },
+            {
+              "code": "FINA4110",
+              "alts": []
+            },
+            {
+              "code": "FINA3260",
+              "alts": []
+            },
+            {
+              "code": "FINA3295",
+              "alts": []
+            },
+            {
+              "code": "FINA4030",
+              "alts": []
+            },
+            {
+              "code": "FINA4120",
+              "alts": []
+            },
+            {
+              "code": "FINA4140",
+              "alts": []
+            },
+            {
+              "code": "FINA4150",
+              "alts": []
+            },
+            {
+              "code": "FINA4160",
+              "alts": []
+            },
+            {
+              "code": "FINA4211",
+              "alts": []
+            },
+            {
+              "code": "FINA4215",
+              "alts": []
+            },
+            {
+              "code": "FINA4221",
+              "alts": []
+            },
+            {
+              "code": "FINA4280",
               "alts": []
             },
             {

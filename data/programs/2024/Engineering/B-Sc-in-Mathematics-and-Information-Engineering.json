@@ -11,6 +11,8 @@
   "all_course_codes": [
     "AIST1110",
     "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
     "CSCI1120",
     "CSCI1130",
     "CSCI2100",
@@ -146,6 +148,7 @@
     "IERG5590",
     "IERG5670",
     "LSCI1001",
+    "LSCI1002",
     "MATH1010",
     "MATH1018",
     "MATH1030",
@@ -195,6 +198,9 @@
     "MIEG2051",
     "MIEG2440",
     "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
     "STAT1011"
   ],
   "buckets": {
@@ -283,6 +289,22 @@
         "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
       },
       {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(c) One of the following courses: ENGG1310, PHYS1001 or 1002 or 1111, STAT1011"
+      },
+      {
         "raw": "STAT1011",
         "codes": [
           "STAT1011"
@@ -312,6 +334,14 @@
         "raw": "IERG1810",
         "codes": [
           "IERG1810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810 or"
+      },
+      {
+        "raw": "IERG2820",
+        "codes": [
+          "IERG2820"
         ],
         "alt": false,
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810 or"
@@ -444,6 +474,14 @@
         "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
@@ -452,9 +490,49 @@
         "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "1. Science Faculty Package: Group C: MATH1010/1018 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113"
@@ -506,6 +584,14 @@
         "raw": "IERG1810",
         "codes": [
           "IERG1810"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810 or"
+      },
+      {
+        "raw": "IERG2820",
+        "codes": [
+          "IERG2820"
         ],
         "alt": false,
         "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG1810 or"
@@ -2300,7 +2386,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 5
     },
     {
       "marker": "3.",
@@ -2318,7 +2404,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 14
     },
     {
       "marker": "(b)",
@@ -2372,7 +2458,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 11
     },
     {
       "marker": "2.",
@@ -2399,7 +2485,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 14
     },
     {
       "marker": "(b)",
@@ -2541,6 +2627,14 @@
             },
             {
               "code": "PHYS1001",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1111",
               "alts": []
             },
             {
@@ -3074,6 +3168,10 @@
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
         {
+          "code": "IERG2820",
+          "alts": []
+        },
+        {
           "code": "CSCI5030",
           "alts": []
         },
@@ -3142,7 +3240,23 @@
           "alts": []
         },
         {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
           "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
           "alts": []
         }
       ],

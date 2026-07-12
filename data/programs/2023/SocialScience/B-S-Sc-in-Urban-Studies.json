@@ -1307,9 +1307,9 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Foundation courses",
           "units": 21,
-          "note": "Foundation courses",
+          "note": null,
           "courses": [
             {
               "code": "URSP1003",
@@ -1365,9 +1365,9 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Field Studies",
           "units": 2,
-          "note": "Field Studies",
+          "note": null,
           "courses": [
             {
               "code": "URSP2001",
@@ -1378,7 +1378,7 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Capstone courses",
           "units": 6,
           "note": null,
           "courses": [
@@ -1405,7 +1405,7 @@
     },
     {
       "marker": "3.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 27,
       "note": null,
       "courses": [

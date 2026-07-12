@@ -450,6 +450,14 @@
         "from": "(b) IERG3840[b] or 3842"
       },
       {
+        "raw": "IERG3842",
+        "codes": [
+          "IERG3842"
+        ],
+        "alt": false,
+        "from": "(b) IERG3840[b] or 3842"
+      },
+      {
         "raw": "IERG4998",
         "codes": [
           "IERG4998"
@@ -1101,7 +1109,7 @@
       "units": "1",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -1276,6 +1284,10 @@
             {
               "code": "IERG3840",
               "alts": []
+            },
+            {
+              "code": "IERG3842",
+              "alts": []
             }
           ],
           "children": []
@@ -1301,7 +1313,7 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 16,
       "note": null,
       "courses": [

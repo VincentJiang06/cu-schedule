@@ -63,6 +63,14 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "ENGG1110",
         "codes": [
           "ENGG1110"
@@ -202,6 +210,14 @@
         "raw": "PHYS1002",
         "codes": [
           "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(c) STEM Education"
+      },
+      {
+        "raw": "PHYS1004",
+        "codes": [
+          "PHYS1004"
         ],
         "alt": false,
         "from": "(c) STEM Education"
@@ -380,7 +396,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -425,7 +441,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "(d)",
@@ -464,6 +480,10 @@
       "courses": [
         {
           "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
           "alts": []
         },
         {
@@ -580,6 +600,10 @@
             {
               "code": "PHYS1002",
               "alts": []
+            },
+            {
+              "code": "PHYS1004",
+              "alts": []
             }
           ],
           "children": []
@@ -618,7 +642,7 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 7,
       "note": null,
       "courses": [

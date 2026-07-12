@@ -29,6 +29,7 @@
     "COMM2140",
     "COMM2160",
     "COMM2170",
+    "COMM2180",
     "COMM2210",
     "COMM2440",
     "COMM2500",
@@ -67,6 +68,7 @@
     "COMM3200",
     "COMM3550",
     "COMM3600",
+    "COMM3610",
     "COMM3620",
     "COMM3630",
     "COMM3640",
@@ -1520,7 +1522,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Quantitative Method Cluster",
               "units": 6,
               "note": null,
               "courses": [
@@ -1545,7 +1547,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Computational Method Cluster",
               "units": 3,
               "note": null,
               "courses": [
@@ -1562,7 +1564,7 @@
             },
             {
               "marker": "(c)",
-              "title": "",
+              "title": "Community Social Analysis Cluster",
               "units": 9,
               "note": null,
               "courses": [
@@ -2075,6 +2077,10 @@
                 {
                   "code": "SOCI3227",
                   "alts": []
+                },
+                {
+                  "code": "SOCI3236",
+                  "alts": []
                 }
               ],
               "children": []
@@ -2127,6 +2133,26 @@
                 },
                 {
                   "code": "SOCI3227",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3236",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3237",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3242",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3243",
+                  "alts": []
+                },
+                {
+                  "code": "SOCI3245",
                   "alts": []
                 }
               ],

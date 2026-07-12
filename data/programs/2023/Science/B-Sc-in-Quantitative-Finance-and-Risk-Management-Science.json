@@ -169,6 +169,14 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "DOTE[DSME]1030",
         "codes": [
           "DOTE1030",
@@ -258,6 +266,22 @@
         "from": "(b) MATH1030 or 1038, 2010# or 2018#"
       },
       {
+        "raw": "MATH1038",
+        "codes": [
+          "MATH1038"
+        ],
+        "alt": false,
+        "from": "(b) MATH1030 or 1038, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(b) MATH1030 or 1038, 2010# or 2018#"
+      },
+      {
         "raw": "ACCT1111",
         "codes": [
           "ACCT1111"
@@ -266,9 +290,57 @@
         "from": "(c) ACCT1111 or 2111"
       },
       {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "(c) ACCT1111 or 2111"
+      },
+      {
         "raw": "CSCI1510",
         "codes": [
           "CSCI1510"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1520",
+        "codes": [
+          "CSCI1520"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1530",
+        "codes": [
+          "CSCI1530"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1550",
+        "codes": [
+          "CSCI1550"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1580",
+        "codes": [
+          "CSCI1580"
         ],
         "alt": false,
         "from": "(d) CSCI1510 or 1520 or 1530 or 1540"
@@ -312,6 +384,14 @@
         "raw": "ACCT2151",
         "codes": [
           "ACCT2151"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
         ],
         "alt": false,
         "from": "(a) Business (choose at least 6 units of courses from the"
@@ -863,7 +943,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -890,7 +970,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 3
     },
     {
       "marker": "(c)",
@@ -899,7 +979,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(d)",
@@ -908,7 +988,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 6
     },
     {
       "marker": "(e)",
@@ -935,7 +1015,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 42
+      "n_courses": 43
     },
     {
       "marker": "(b)",
@@ -974,6 +1054,10 @@
       "courses": [
         {
           "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1018",
           "alts": []
         },
         {
@@ -1046,6 +1130,14 @@
             {
               "code": "MATH1030",
               "alts": []
+            },
+            {
+              "code": "MATH1038",
+              "alts": []
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
             }
           ],
           "children": []
@@ -1059,6 +1151,10 @@
             {
               "code": "ACCT1111",
               "alts": []
+            },
+            {
+              "code": "ACCT2111",
+              "alts": []
             }
           ],
           "children": []
@@ -1071,6 +1167,18 @@
           "courses": [
             {
               "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "CSCI1530",
+              "alts": []
+            },
+            {
+              "code": "CSCI1540",
               "alts": []
             }
           ],
@@ -1120,6 +1228,10 @@
             },
             {
               "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "ACCT3151",
               "alts": []
             },
             {
@@ -1421,6 +1533,23 @@
           "children": []
         }
       ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "CSCI1550",
+          "alts": []
+        },
+        {
+          "code": "CSCI1580",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

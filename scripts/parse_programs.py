@@ -38,10 +38,15 @@ BRACKET_CODE_RE = re.compile(r"([A-Z]{4})\[([A-Z]{4})\](\d{4})")
 # and "at 2000 or above level" from minting phantom course codes.
 LEVEL_DESCRIPTOR_RE = re.compile(r"\s*(?:(?:or|and)\s+above|above|level)\b", re.I)
 # A continuation gap that still binds a bare number to the running subject: any mix
-# of spaces/commas, optionally with a single "and" (so "ENGG3802 and 3803" expands
-# to ENGG3803). "or" is deliberately NOT allowed — it marks an alternative, not a
-# co-requisite pair, so the two sides stay distinct references.
-CONT_GAP_RE = re.compile(r"[\s,]*(?:and[\s,]+)?")
+# of spaces/commas plus footnote symbols (*, &), joined by any number of "and"/"or"
+# connectors. Both "ENGG3802 and 3803" and "MATH4400 or 4900" expand the trailing
+# number to a full code — the and/or distinction is a *choose-semantics* concern that
+# lives in the section's note/title, NOT a reason to silently drop a listed course
+# (invariant I1: zero course loss). Footnote symbols the calendar sprinkles between a
+# code and the next shorthand number ("PHIL1110*, 1310", "CSCI1130 & 1140") are erased
+# from the gap so they no longer sever the continuation. Kept byte-for-byte in step
+# with the audit reference extractor's gapBinds so structure ⊇ reference by construction.
+CONT_GAP_TOKENS = re.compile(r"[\s,*&]+")
 # A footnote/annotation marker the calendar attaches to a code or a shorthand list,
 # e.g. "ECON1101[a], 1111" or "Elective Courses[b][c]:". Left in place it sits in the
 # continuation gap and severs every following bare number from its subject (the
@@ -60,9 +65,13 @@ PARENS_RE = re.compile(r"\([^)]*\)")
 
 def _gap_binds(gap: str) -> bool:
     """Does this inter-token gap still bind a bare number to the running subject?
-    Whole parenthetical insertions are erased first (they are prose asides, not list
-    separators), then the residue must be pure spaces/commas + at most one "and"."""
-    return bool(CONT_GAP_RE.fullmatch(PARENS_RE.sub(" ", gap)))
+    Whole parenthetical insertions are erased first (prose asides, not list separators),
+    footnote symbols (*, &) and separators collapse to spaces, then the residue must be
+    empty or nothing but "and"/"or" connectors. Mirrors audit_programs.mts gapBinds."""
+    g = CONT_GAP_TOKENS.sub(" ", PARENS_RE.sub(" ", gap)).strip()
+    if not g:
+        return True
+    return all(w in ("and", "or") for w in g.split(" "))
 
 
 def norm(t: str) -> str:
@@ -496,13 +505,33 @@ def _convert_row(row: _Row) -> dict:
 
     if rest_codes:
         # Case A: the marker line IS a course list (possibly 'Label: <codes>').
+        direct_courses = to_program_courses(rest_codes)
         label = _leading_label(rest_wo)
         if label:
-            note = normalize_label(label) or None
-        direct_courses = to_program_courses(rest_codes)
+            lab = normalize_label(label)
+            # A section heading ("Faculty Package: LSCI1002, …", "Capstone Courses:
+            # BEHM4001, 4002") names the node -> title; a rule-ish prefix ("At least 6
+            # units from: …") stays a note.
+            if lab and not _looks_like_rule(lab):
+                title = lab
+            else:
+                note = lab or None
     else:
         title_candidate = normalize_label(rest_wo)
-        if row.children or HEADER_TITLE_KW.search(title_candidate):
+        is_rule = _looks_like_rule(title_candidate)
+        # A heading is: a structural parent (has children), a keyword-named leaf
+        # (stream/package/…), OR a marker line that carries an explicit unit budget or
+        # a colon-terminated label and does NOT read like a free-text rule. The last
+        # clause is what rescues plain numbered sections like "2. | Required Courses: |
+        # 27" and "3. | Elective Courses: | 36", whose titles the keyword list misses
+        # (invariant I4: titles must survive). Genuine rule sentences ("Choose 24 units
+        # from …") still fall through to the note branch.
+        is_heading = bool(
+            row.children
+            or HEADER_TITLE_KW.search(title_candidate)
+            or ((node_units is not None or rest_complete) and title_candidate and not is_rule)
+        )
+        if is_heading:
             # Case B: a heading (structural parent, or a named leaf like a stream).
             title, join_units, consumed = _join_title_continuation(
                 title_candidate, rest_complete, body_lines
@@ -515,7 +544,7 @@ def _convert_row(row: _Row) -> dict:
             # Case C: a bare free-text rule -> note (only if it reads like one; a
             # lone word orphaned by line-wrapping is dropped, its courses still land
             # via the body below).
-            note = title_candidate if _looks_like_rule(title_candidate) else None
+            note = title_candidate if is_rule else None
 
     body_joined = " ".join(s.strip() for s in body_lines).strip()
     # A course list can carry its unit total on a wrapped continuation line

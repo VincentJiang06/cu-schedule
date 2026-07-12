@@ -221,9 +221,25 @@
         "from": "(b) MATH1010"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
         "raw": "MATH1030",
         "codes": [
           "MATH1030"
+        ],
+        "alt": false,
+        "from": "(b) MATH1010"
+      },
+      {
+        "raw": "MATH1038",
+        "codes": [
+          "MATH1038"
         ],
         "alt": false,
         "from": "(b) MATH1010"
@@ -272,6 +288,46 @@
         "raw": "CSCI1510",
         "codes": [
           "CSCI1510"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "CSCI1520",
+        "codes": [
+          "CSCI1520"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "CSCI1530",
+        "codes": [
+          "CSCI1530"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "CSCI1550",
+        "codes": [
+          "CSCI1550"
+        ],
+        "alt": false,
+        "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
+      },
+      {
+        "raw": "CSCI1580",
+        "codes": [
+          "CSCI1580"
         ],
         "alt": false,
         "from": "(d) CSCI1510 or 1520 or 1530 or 1540 or 1550 or 1580"
@@ -418,6 +474,14 @@
         "raw": "ACCT2151",
         "codes": [
           "ACCT2151"
+        ],
+        "alt": false,
+        "from": "(b) At least 12 units of Business courses"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
         ],
         "alt": false,
         "from": "(b) At least 12 units of Business courses"
@@ -885,7 +949,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 5
     },
     {
       "marker": "(c)",
@@ -903,7 +967,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 6
     },
     {
       "marker": "(e)",
@@ -939,7 +1003,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 40
+      "n_courses": 41
     },
     {
       "marker": "(c)",
@@ -1033,6 +1097,10 @@
               "alts": []
             },
             {
+              "code": "MATH1038",
+              "alts": []
+            },
+            {
               "code": "MATH2010",
               "alts": []
             }
@@ -1072,6 +1140,26 @@
           "courses": [
             {
               "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "CSCI1530",
+              "alts": []
+            },
+            {
+              "code": "CSCI1540",
+              "alts": []
+            },
+            {
+              "code": "CSCI1550",
+              "alts": []
+            },
+            {
+              "code": "CSCI1580",
               "alts": []
             }
           ],
@@ -1180,6 +1268,10 @@
             },
             {
               "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "ACCT3151",
               "alts": []
             },
             {
@@ -1403,6 +1495,19 @@
           "children": []
         }
       ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "MATH1018",
+          "alts": []
+        }
+      ],
+      "children": []
     }
   ]
 }

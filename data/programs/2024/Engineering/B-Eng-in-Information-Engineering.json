@@ -339,6 +339,14 @@
         "from": "(a) CSCI2100/ESTR2102, IERG1000, IERG1810 or 2820, IERG2051/ESTR2302,"
       },
       {
+        "raw": "IERG2820",
+        "codes": [
+          "IERG2820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, IERG1000, IERG1810 or 2820, IERG2051/ESTR2302,"
+      },
+      {
         "raw": "IERG2051/ESTR2302",
         "codes": [
           "IERG2051",
@@ -437,6 +445,14 @@
         "raw": "IERG3840",
         "codes": [
           "IERG3840"
+        ],
+        "alt": false,
+        "from": "(b) IERG3840[b] or 3842"
+      },
+      {
+        "raw": "IERG3842",
+        "codes": [
+          "IERG3842"
         ],
         "alt": false,
         "from": "(b) IERG3840[b] or 3842"
@@ -1083,7 +1099,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 14
+      "n_courses": 15
     },
     {
       "marker": "(b)",
@@ -1092,7 +1108,7 @@
       "units": "1",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -1198,6 +1214,10 @@
               "alts": []
             },
             {
+              "code": "IERG2820",
+              "alts": []
+            },
+            {
               "code": "IERG2051",
               "alts": [
                 "ESTR2302"
@@ -1267,6 +1287,10 @@
             {
               "code": "IERG3840",
               "alts": []
+            },
+            {
+              "code": "IERG3842",
+              "alts": []
             }
           ],
           "children": []
@@ -1292,7 +1316,7 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 16,
       "note": null,
       "courses": [

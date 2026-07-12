@@ -369,9 +369,9 @@
   "structure": [
     {
       "marker": "1.",
-      "title": "",
+      "title": "Faculty Package",
       "units": 9,
-      "note": "Faculty Package",
+      "note": null,
       "courses": [
         {
           "code": "LSCI1002",
@@ -390,9 +390,9 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 33,
-      "note": "Required Courses",
+      "note": null,
       "courses": [
         {
           "code": "ACCT2111",
@@ -556,9 +556,9 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Capstone Courses",
       "units": 6,
-      "note": "Capstone Courses",
+      "note": null,
       "courses": [
         {
           "code": "BEHM4001",

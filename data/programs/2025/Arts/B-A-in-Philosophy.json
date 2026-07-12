@@ -14,10 +14,16 @@
     "ARTS1010",
     "BMBL1001",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CURE1000",
+    "CURE1110",
+    "CURE1400",
     "ENGE1000",
     "FAAS1900",
     "HIST1000",
+    "HIST1700",
+    "HIST1701",
     "JASP1090",
     "LING1000",
     "MUSC1000",
@@ -162,9 +168,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CURE1000",
         "codes": [
           "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -189,6 +227,22 @@
         "raw": "HIST1000",
         "codes": [
           "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -240,6 +294,86 @@
         ],
         "alt": false,
         "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL1310",
+        "codes": [
+          "PHIL1310"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL2020",
+        "codes": [
+          "PHIL2020"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL2030",
+        "codes": [
+          "PHIL2030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL2040",
+        "codes": [
+          "PHIL2040"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL2050",
+        "codes": [
+          "PHIL2050"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL2060",
+        "codes": [
+          "PHIL2060"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL3000",
+        "codes": [
+          "PHIL3000"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL3800",
+        "codes": [
+          "PHIL3800"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL3820",
+        "codes": [
+          "PHIL3820"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "PHIL4800",
+        "codes": [
+          "PHIL4800"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
       }
     ],
     "elective": [
@@ -262,7 +396,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 15
+      "n_courses": 21
     },
     {
       "marker": "2.",
@@ -271,7 +405,7 @@
       "units": "30",
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 11
     },
     {
       "marker": "3.",
@@ -315,7 +449,23 @@
           "alts": []
         },
         {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
           "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
           "alts": []
         },
         {
@@ -328,6 +478,14 @@
         },
         {
           "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {
@@ -355,12 +513,52 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 30,
       "note": null,
       "courses": [
         {
           "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "PHIL1310",
+          "alts": []
+        },
+        {
+          "code": "PHIL2020",
+          "alts": []
+        },
+        {
+          "code": "PHIL2030",
+          "alts": []
+        },
+        {
+          "code": "PHIL2040",
+          "alts": []
+        },
+        {
+          "code": "PHIL2050",
+          "alts": []
+        },
+        {
+          "code": "PHIL2060",
+          "alts": []
+        },
+        {
+          "code": "PHIL3000",
+          "alts": []
+        },
+        {
+          "code": "PHIL3800",
+          "alts": []
+        },
+        {
+          "code": "PHIL3820",
+          "alts": []
+        },
+        {
+          "code": "PHIL4800",
           "alts": []
         }
       ],
@@ -368,7 +566,7 @@
     },
     {
       "marker": "3.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 24,
       "note": null,
       "courses": [

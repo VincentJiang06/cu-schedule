@@ -596,9 +596,9 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Internship Course",
           "units": 1,
-          "note": "Internship Course",
+          "note": null,
           "courses": [
             {
               "code": "ENGG1820",

@@ -29,7 +29,9 @@
     "ELTU1001",
     "ELTU2005",
     "ELTU2012",
+    "ELTU2014",
     "ELTU2018",
+    "ELTU2019",
     "ELTU3012",
     "ELTU3014",
     "ELTU3018",
@@ -168,7 +170,8 @@
     "STAT4010",
     "STAT4011",
     "STAT4012",
-    "UGCP1001"
+    "UGCP1001",
+    "UGCP1002"
   ],
   "buckets": {
     "required": [
@@ -6109,7 +6112,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 24,
               "note": null,
               "courses": [
@@ -6163,7 +6166,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -6237,7 +6240,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 12,
               "note": null,
               "courses": [
@@ -6275,7 +6278,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 18,
               "note": null,
               "courses": [
@@ -6417,7 +6420,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 27,
               "note": null,
               "courses": [
@@ -6479,7 +6482,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 3,
               "note": null,
               "courses": [
@@ -6505,7 +6508,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 15,
               "note": null,
               "courses": [
@@ -6547,7 +6550,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 15,
               "note": null,
               "courses": [
@@ -6653,7 +6656,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 9,
               "note": null,
               "courses": [
@@ -6687,7 +6690,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 21,
               "note": null,
               "courses": [
@@ -6745,7 +6748,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 15,
               "note": null,
               "courses": [],
@@ -6761,7 +6764,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 15,
               "note": null,
               "courses": [],
@@ -6778,7 +6781,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 15,
               "note": null,
               "courses": [],
@@ -6794,7 +6797,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 15,
               "note": null,
               "courses": [],
@@ -6811,7 +6814,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 18,
               "note": null,
               "courses": [],
@@ -6827,7 +6830,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 12,
               "note": null,
               "courses": [],
@@ -6843,7 +6846,7 @@
             },
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 18,
               "note": null,
               "courses": [],
@@ -6859,7 +6862,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 12,
               "note": null,
               "courses": [],
@@ -6876,7 +6879,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 12,
               "note": null,
               "courses": [],
@@ -6892,7 +6895,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 18,
               "note": null,
               "courses": [],
@@ -6909,7 +6912,7 @@
           "children": [
             {
               "marker": "i)",
-              "title": "",
+              "title": "Required Courses",
               "units": 6,
               "note": null,
               "courses": [],
@@ -6925,7 +6928,7 @@
             },
             {
               "marker": "iii)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 24,
               "note": null,
               "courses": [],

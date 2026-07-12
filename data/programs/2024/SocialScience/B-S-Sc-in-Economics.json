@@ -614,7 +614,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 27,
       "note": null,
       "courses": [
@@ -667,7 +667,7 @@
     },
     {
       "marker": "3.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 36,
       "note": "36 units of elective ECON courses at 3000 or above level",
       "courses": [],
@@ -690,7 +690,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required Courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -762,7 +762,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required Courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -779,7 +779,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 9,
               "note": null,
               "courses": [
@@ -829,7 +829,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required Courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -846,7 +846,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 9,
               "note": null,
               "courses": [
@@ -900,7 +900,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required Courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -917,7 +917,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 9,
               "note": null,
               "courses": [
@@ -951,7 +951,7 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required Courses",
               "units": 9,
               "note": null,
               "courses": [
@@ -972,7 +972,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective Courses",
               "units": 6,
               "note": null,
               "courses": [

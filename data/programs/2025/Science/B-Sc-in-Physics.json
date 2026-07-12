@@ -11,6 +11,7 @@
   "all_course_codes": [
     "CHEM1070",
     "CHEM1072",
+    "CHEM1280",
     "CSCI2800",
     "CSCI3320",
     "EESC4010",
@@ -20,9 +21,14 @@
     "ELEG2202",
     "ELEG5491",
     "ENGG1310",
+    "ENGG2520",
     "ESTR1003",
+    "ESTR2006",
     "LSCI1001",
+    "LSCI1002",
+    "LSCI1012",
     "MATH1010",
+    "MATH1018",
     "MATH2010",
     "MATH2020",
     "MATH2530",
@@ -105,7 +111,8 @@
     "STAR3050",
     "STAR4000",
     "STAR4050",
-    "STAT1011"
+    "STAT1011",
+    "STAT1012"
   ],
   "buckets": {
     "required": [
@@ -113,6 +120,14 @@
         "raw": "PHYS1111",
         "codes": [
           "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -126,9 +141,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -142,9 +181,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "LSCI1001",
         "codes": [
           "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -658,7 +721,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 12
     },
     {
       "marker": "2.",
@@ -727,7 +790,15 @@
           "alts": []
         },
         {
+          "code": "PHYS1113",
+          "alts": []
+        },
+        {
           "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1018",
           "alts": []
         },
         {
@@ -735,11 +806,31 @@
           "alts": []
         },
         {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
           "code": "STAT1011",
           "alts": []
         },
         {
+          "code": "STAT1012",
+          "alts": []
+        },
+        {
           "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
           "alts": []
         }
       ],
@@ -852,7 +943,7 @@
     },
     {
       "marker": "3.",
-      "title": "",
+      "title": "Elective Courses",
       "units": null,
       "note": null,
       "courses": [
@@ -1064,9 +1155,9 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required courses",
               "units": 10,
-              "note": "Required courses",
+              "note": null,
               "courses": [
                 {
                   "code": "PHYS2061",
@@ -1163,9 +1254,9 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required courses",
               "units": 6,
-              "note": "Required courses",
+              "note": null,
               "courses": [
                 {
                   "code": "PHYS4430",
@@ -1180,7 +1271,7 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective courses",
               "units": 6,
               "note": null,
               "courses": [
@@ -1222,9 +1313,9 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required courses",
               "units": 9,
-              "note": "Required courses",
+              "note": null,
               "courses": [
                 {
                   "code": "PHYS2061",
@@ -1243,9 +1334,9 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective courses",
               "units": 3,
-              "note": "Elective courses",
+              "note": null,
               "courses": [
                 {
                   "code": "CSCI3320",
@@ -1277,12 +1368,20 @@
           "children": [
             {
               "marker": "(a)",
-              "title": "",
+              "title": "Required courses",
               "units": 6,
-              "note": "Required courses",
+              "note": null,
               "courses": [
                 {
                   "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3023",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4021",
                   "alts": []
                 }
               ],
@@ -1290,12 +1389,28 @@
             },
             {
               "marker": "(b)",
-              "title": "",
+              "title": "Elective courses",
               "units": null,
-              "note": "Elective courses",
+              "note": "4450 (or 5320), 5510 (or 5430), 5550 (or 5590) | 6 In addition to fulfilling the above Major Programme Requirement, students meeting the criteria as specified by the Faculty can take the following stream offered by the Faculty: Science, Technology And Research Stream Students are required to complete a minimum of 12 units of courses as follows",
               "courses": [
                 {
                   "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3023",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4440",
                   "alts": []
                 }
               ],

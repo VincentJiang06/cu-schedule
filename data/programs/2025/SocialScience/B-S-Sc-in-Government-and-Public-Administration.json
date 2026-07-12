@@ -1075,6 +1075,14 @@
         "from": "(vi) Professional Practicum (Students are required to take"
       },
       {
+        "raw": "GPAD4802",
+        "codes": [
+          "GPAD4802"
+        ],
+        "alt": false,
+        "from": "(vi) Professional Practicum (Students are required to take"
+      },
+      {
         "raw": "DSPS2102",
         "codes": [
           "DSPS2102"
@@ -1198,14 +1206,6 @@
         "raw": "GPAD4111",
         "codes": [
           "GPAD4111"
-        ],
-        "alt": false,
-        "from": "(vi) Professional Practicum (Students are required to take"
-      },
-      {
-        "raw": "GPAD4802",
-        "codes": [
-          "GPAD4802"
         ],
         "alt": false,
         "from": "(vi) Professional Practicum (Students are required to take"
@@ -1681,7 +1681,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 24,
       "note": null,
       "courses": [
@@ -2110,6 +2110,10 @@
                   "alts": []
                 },
                 {
+                  "code": "GPAD4802",
+                  "alts": []
+                },
+                {
                   "code": "DSPS2102",
                   "alts": []
                 },
@@ -2171,10 +2175,6 @@
                 },
                 {
                   "code": "GPAD4111",
-                  "alts": []
-                },
-                {
-                  "code": "GPAD4802",
                   "alts": []
                 }
               ],

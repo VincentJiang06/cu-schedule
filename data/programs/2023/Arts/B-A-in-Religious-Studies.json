@@ -18,6 +18,8 @@
     "BMBL1001",
     "CHES1100",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CUMT1000",
     "CURE1000",
     "CURE1009",
@@ -88,6 +90,7 @@
     "FAAS1900",
     "HIST1000",
     "HIST1700",
+    "HIST1701",
     "JASP1090",
     "LING1000",
     "MUSC1000",
@@ -168,6 +171,22 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CURE1000",
         "codes": [
           "CURE1000"
@@ -219,6 +238,14 @@
         "raw": "HIST1700",
         "codes": [
           "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -620,7 +647,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 21
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -834,6 +861,14 @@
           "alts": []
         },
         {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
           "code": "CURE1000",
           "alts": []
         },
@@ -859,6 +894,10 @@
         },
         {
           "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {

@@ -426,6 +426,30 @@
         ],
         "alt": false,
         "from": "(a) COMM1180, 2120, 2160, 2530, 2560,"
+      },
+      {
+        "raw": "COMM3710",
+        "codes": [
+          "COMM3710"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2530, 2560,"
+      },
+      {
+        "raw": "COMM4150",
+        "codes": [
+          "COMM4150"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2530, 2560,"
+      },
+      {
+        "raw": "COMM4250",
+        "codes": [
+          "COMM4250"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2530, 2560,"
       }
     ],
     "elective": [
@@ -1218,7 +1242,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 10
     },
     {
       "marker": "(b)",
@@ -1902,6 +1926,18 @@
         },
         {
           "code": "COMM3600",
+          "alts": []
+        },
+        {
+          "code": "COMM3710",
+          "alts": []
+        },
+        {
+          "code": "COMM4150",
+          "alts": []
+        },
+        {
+          "code": "COMM4250",
           "alts": []
         }
       ],

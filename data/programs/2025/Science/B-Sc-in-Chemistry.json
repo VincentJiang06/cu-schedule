@@ -126,6 +126,7 @@
     "EART3025",
     "ELTU1001",
     "ELTU2018",
+    "ELTU2019",
     "ENGG1003",
     "ENSC4525",
     "ENSC4535",
@@ -134,10 +135,15 @@
     "LSCI1002",
     "LSCI1012",
     "LSCI3520",
+    "MATH1010",
+    "MATH1018",
     "MATH1520",
+    "MATH1525",
+    "MATH1550",
     "MCEL3001",
     "PHYS1001",
     "PHYS1002",
+    "PHYS1111",
     "PHYS3021",
     "STAR2000",
     "STAR2050",
@@ -146,6 +152,7 @@
     "STAR4000",
     "STAR4050",
     "STAT1011",
+    "STAT1012",
     "UCIL2002",
     "UGCP1001",
     "UGCP1002"
@@ -169,9 +176,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "LSCI1001",
         "codes": [
           "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -185,9 +224,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1525",
+        "codes": [
+          "MATH1525"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1550",
+        "codes": [
+          "MATH1550"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "STAT1011",
         "codes": [
           "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -398,6 +469,14 @@
         "raw": "CHEM3230",
         "codes": [
           "CHEM3230"
+        ],
+        "alt": false,
+        "from": "(a) One course from"
+      },
+      {
+        "raw": "CHEM3340",
+        "codes": [
+          "CHEM3340"
         ],
         "alt": false,
         "from": "(a) One course from"
@@ -725,7 +804,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 13
     },
     {
       "marker": "2.",
@@ -752,7 +831,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(b)",
@@ -825,7 +904,23 @@
           "alts": []
         },
         {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
           "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
           "alts": []
         },
         {
@@ -833,7 +928,23 @@
           "alts": []
         },
         {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1525",
+          "alts": []
+        },
+        {
+          "code": "MATH1550",
+          "alts": []
+        },
+        {
           "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "STAT1012",
           "alts": []
         }
       ],
@@ -841,7 +952,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 49,
       "note": null,
       "courses": [
@@ -939,6 +1050,10 @@
           "courses": [
             {
               "code": "CHEM3230",
+              "alts": []
+            },
+            {
+              "code": "CHEM3340",
               "alts": []
             }
           ],

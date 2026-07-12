@@ -202,6 +202,14 @@
         ],
         "alt": false,
         "from": "(b) Capstone course: MATH4400 or 4900[a]"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(b) Capstone course: MATH4400 or 4900[a]"
       }
     ],
     "elective": [
@@ -355,7 +363,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "3.",
@@ -460,12 +468,16 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Capstone course",
           "units": null,
-          "note": "Capstone course",
+          "note": null,
           "courses": [
             {
               "code": "MATH4400",
+              "alts": []
+            },
+            {
+              "code": "MATH4900",
               "alts": []
             }
           ],

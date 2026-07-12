@@ -1417,7 +1417,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Resident Study Overseas",
           "units": 9,
           "note": "Students are required to study overseas for one academic term in a partner institution via an exchange programme administered by the Office of Academic Links or the Colleges, and complete at least 9 units of courses related to Global Studies approved by the Programme Director. Grades obtained in these courses are not included in the calculation of GPA. Students who are unable to obtain the required units from partner institutions must make up the shortfall by completing appropriate courses at CUHK, subject to the approval of the Programme Director.",
           "courses": [],
@@ -1425,7 +1425,7 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Language Courses",
           "units": 6,
           "note": "Students are required to take 6 units of language courses other than those on Chinese (Cantonese/Putonghua) or English. Non-local students whose native language is not Chinese or English must take courses on a language that is approved by the Programme Director.",
           "courses": [],
@@ -1433,7 +1433,7 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Capstone Courses",
           "units": 6,
           "note": null,
           "courses": [
@@ -1467,7 +1467,7 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1484,7 +1484,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1517,7 +1517,7 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1534,7 +1534,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1575,7 +1575,7 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1592,7 +1592,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1653,7 +1653,7 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1670,7 +1670,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1703,7 +1703,7 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1720,7 +1720,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -1767,7 +1767,7 @@
     },
     {
       "marker": "4.",
-      "title": "",
+      "title": "Elective Course",
       "units": 3,
       "note": null,
       "courses": [
@@ -1912,7 +1912,7 @@
     },
     {
       "marker": "5.",
-      "title": "",
+      "title": "Internship",
       "units": 3,
       "note": null,
       "courses": [

@@ -1707,9 +1707,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1720,9 +1720,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "ENGG5404",
@@ -1801,9 +1801,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1826,9 +1826,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "ELEG3701",
@@ -1861,9 +1861,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1886,9 +1886,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "BMEG3420",

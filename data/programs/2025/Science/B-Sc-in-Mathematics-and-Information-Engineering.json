@@ -11,6 +11,8 @@
   "all_course_codes": [
     "AIST1110",
     "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
     "CSCI1120",
     "CSCI1130",
     "CSCI2100",
@@ -145,6 +147,7 @@
     "IERG5590",
     "IERG5670",
     "LSCI1001",
+    "LSCI1002",
     "MATH1010",
     "MATH1018",
     "MATH1025",
@@ -194,6 +197,9 @@
     "MIEG2051",
     "MIEG2440",
     "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
     "STAT1011"
   ],
   "buckets": {
@@ -277,6 +283,22 @@
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
         ],
         "alt": false,
         "from": "(c) One"
@@ -443,6 +465,14 @@
         "from": "1. Science Faculty Package"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
@@ -451,9 +481,49 @@
         "from": "1. Science Faculty Package"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "1. Science Faculty Package"
@@ -2299,7 +2369,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 5
     },
     {
       "marker": "3.",
@@ -2344,7 +2414,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 11
     },
     {
       "marker": "2.",
@@ -2486,6 +2556,14 @@
             },
             {
               "code": "PHYS1001",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1111",
               "alts": []
             },
             {
@@ -3061,7 +3139,23 @@
           "alts": []
         },
         {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
           "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
           "alts": []
         }
       ],

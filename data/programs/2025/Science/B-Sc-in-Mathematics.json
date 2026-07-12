@@ -10,11 +10,14 @@
   "has_streams": false,
   "all_course_codes": [
     "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
     "CSCI1540",
     "ESTR3506",
     "ESTR3508",
     "IERG5124",
     "LSCI1001",
+    "LSCI1002",
     "MATH1010",
     "MATH1018",
     "MATH1020",
@@ -95,6 +98,9 @@
     "MATH5062",
     "MATH5070",
     "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
     "SEEM3550",
     "SEEM3570",
     "STAR2000",
@@ -134,6 +140,14 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
@@ -142,9 +156,49 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -166,6 +220,14 @@
         "from": "(b) Capstone"
       },
       {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(b) Capstone"
+      },
+      {
         "raw": "MATH1010",
         "codes": [
           "MATH1010"
@@ -177,6 +239,14 @@
         "raw": "MATH4400",
         "codes": [
           "MATH4400"
+        ],
+        "alt": false,
+        "from": "(b) Capstone course: Either"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
         ],
         "alt": false,
         "from": "(b) Capstone course: Either"
@@ -682,7 +752,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 11
     },
     {
       "marker": "2.",
@@ -709,7 +779,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "3.",
@@ -871,7 +941,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "3.",
@@ -993,11 +1063,35 @@
           "alts": []
         },
         {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
           "code": "CHEM1070",
           "alts": []
         },
         {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
           "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
           "alts": []
         }
       ],
@@ -1031,6 +1125,10 @@
           "courses": [
             {
               "code": "MATH4400",
+              "alts": []
+            },
+            {
+              "code": "MATH4900",
               "alts": []
             }
           ],

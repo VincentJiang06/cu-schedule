@@ -423,6 +423,38 @@
         ],
         "alt": false,
         "from": "(a) COMM1180, 2120, 2160, 2180, 2500,"
+      },
+      {
+        "raw": "COMM3710",
+        "codes": [
+          "COMM3710"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2180, 2500,"
+      },
+      {
+        "raw": "COMM3610",
+        "codes": [
+          "COMM3610"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2180, 2500,"
+      },
+      {
+        "raw": "COMM3700",
+        "codes": [
+          "COMM3700"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2180, 2500,"
+      },
+      {
+        "raw": "COMM4150",
+        "codes": [
+          "COMM4150"
+        ],
+        "alt": false,
+        "from": "(a) COMM1180, 2120, 2160, 2180, 2500,"
       }
     ],
     "elective": [
@@ -1279,7 +1311,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 12
     },
     {
       "marker": "(b)",
@@ -1527,7 +1559,7 @@
       "children": [
         {
           "marker": "(i)",
-          "title": "",
+          "title": "Advertising and Public Relations",
           "units": null,
           "note": null,
           "courses": [
@@ -2009,6 +2041,22 @@
         },
         {
           "code": "COMM3600",
+          "alts": []
+        },
+        {
+          "code": "COMM3710",
+          "alts": []
+        },
+        {
+          "code": "COMM3610",
+          "alts": []
+        },
+        {
+          "code": "COMM3700",
+          "alts": []
+        },
+        {
+          "code": "COMM4150",
           "alts": []
         }
       ],

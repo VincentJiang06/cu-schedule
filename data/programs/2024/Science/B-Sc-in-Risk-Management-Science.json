@@ -10,10 +10,13 @@
   "has_streams": false,
   "all_course_codes": [
     "ACCT1111",
+    "ACCT2111",
     "BUST1001",
     "BUST1002",
     "BUST1014",
     "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
     "CHLT1001",
     "CHLT1002",
     "CMSE1000",
@@ -27,6 +30,7 @@
     "CSCI2510",
     "CSCI2520",
     "CSCI2720",
+    "CSCI3100",
     "DOTE1030",
     "DOTE1031",
     "DOTE1040",
@@ -51,20 +55,28 @@
     "GRMD2102",
     "HTMG1010",
     "LSCI1001",
+    "LSCI1002",
+    "LSCI1012",
     "MATH1000",
     "MATH1003",
     "MATH1006",
     "MATH1009",
     "MATH1010",
+    "MATH1018",
     "MATH1030",
+    "MATH1038",
     "MATH1050",
     "MATH1113",
     "MATH1118",
     "MATH1120",
     "MATH2010",
+    "MATH2018",
     "MATH3215",
     "MGNT1020",
     "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
     "RMSC1101",
     "RMSC2001",
     "RMSC2101",
@@ -94,7 +106,8 @@
     "STAT4003",
     "STAT4004",
     "STAT4005",
-    "UGCP1001"
+    "UGCP1001",
+    "UGCP1002"
   ],
   "buckets": {
     "required": [
@@ -102,6 +115,14 @@
         "raw": "MATH1010",
         "codes": [
           "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -123,9 +144,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -139,9 +192,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "DOTE1031",
         "codes": [
           "DOTE1031"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -171,6 +256,14 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "DOTE1030",
         "codes": [
           "DOTE1030"
@@ -190,6 +283,30 @@
         "raw": "MATH1030",
         "codes": [
           "MATH1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH1038",
+        "codes": [
+          "MATH1038"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH2018",
+        "codes": [
+          "MATH2018"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -355,6 +472,14 @@
         ],
         "alt": false,
         "from": "(c) One capstone/research"
+      },
+      {
+        "raw": "RMSC4202",
+        "codes": [
+          "RMSC4202"
+        ],
+        "alt": false,
+        "from": "(c) One capstone/research"
       }
     ],
     "stream_elective": []
@@ -367,7 +492,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 8
+      "n_courses": 17
     },
     {
       "marker": "2.",
@@ -376,7 +501,7 @@
       "units": "42",
       "bucket": "required",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 10
     },
     {
       "marker": "3.",
@@ -412,7 +537,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     }
   ],
   "structure": [
@@ -427,6 +552,10 @@
           "alts": []
         },
         {
+          "code": "MATH1018",
+          "alts": []
+        },
+        {
           "code": "STAT1011",
           "alts": []
         },
@@ -435,7 +564,23 @@
           "alts": []
         },
         {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        },
+        {
           "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
           "alts": []
         },
         {
@@ -443,7 +588,23 @@
           "alts": []
         },
         {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
+          "alts": []
+        },
+        {
           "code": "DOTE1031",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
           "alts": []
         },
         {
@@ -459,12 +620,16 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 42,
       "note": null,
       "courses": [
         {
           "code": "ACCT1111",
+          "alts": []
+        },
+        {
+          "code": "ACCT2111",
           "alts": []
         },
         {
@@ -477,6 +642,18 @@
         },
         {
           "code": "MATH1030",
+          "alts": []
+        },
+        {
+          "code": "MATH1038",
+          "alts": []
+        },
+        {
+          "code": "MATH2010",
+          "alts": []
+        },
+        {
+          "code": "MATH2018",
           "alts": []
         },
         {
@@ -579,6 +756,10 @@
           "courses": [
             {
               "code": "RMSC4102",
+              "alts": []
+            },
+            {
+              "code": "RMSC4202",
               "alts": []
             }
           ],

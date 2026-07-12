@@ -152,6 +152,22 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHLL1401",
         "codes": [
           "CHLL1401"
@@ -272,9 +288,25 @@
         "from": "(a) (b) (c) (d) (e) | Language"
       },
       {
+        "raw": "CLED3610",
+        "codes": [
+          "CLED3610"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
         "raw": "CLED4510",
         "codes": [
           "CLED4510"
+        ],
+        "alt": false,
+        "from": "(a) (b) (c) (d) (e) | Language"
+      },
+      {
+        "raw": "CLED4650",
+        "codes": [
+          "CLED4650"
         ],
         "alt": false,
         "from": "(a) (b) (c) (d) (e) | Language"
@@ -1028,7 +1060,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 5
     },
     {
       "marker": "2.",
@@ -1046,7 +1078,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 16
+      "n_courses": 18
     },
     {
       "marker": "3.",
@@ -1148,6 +1180,14 @@
         {
           "code": "CHLL1900",
           "alts": []
+        },
+        {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
         }
       ],
       "children": []
@@ -1227,7 +1267,15 @@
               "alts": []
             },
             {
+              "code": "CLED3610",
+              "alts": []
+            },
+            {
               "code": "CLED4510",
+              "alts": []
+            },
+            {
+              "code": "CLED4650",
               "alts": []
             },
             {

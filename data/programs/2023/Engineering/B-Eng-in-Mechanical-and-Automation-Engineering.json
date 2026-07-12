@@ -58,6 +58,7 @@
     "EEEN4060",
     "ELEG2202",
     "ELEG2401",
+    "ELEG3701",
     "ELTU2014",
     "ELTU3014",
     "ENGG1110",
@@ -1022,6 +1023,14 @@
         "from": "(b) Elective Courses: ELEG2401 or 3701, ENGG2020/ESTR2104,"
       },
       {
+        "raw": "ELEG3701",
+        "codes": [
+          "ELEG3701"
+        ],
+        "alt": false,
+        "from": "(b) Elective Courses: ELEG2401 or 3701, ENGG2020/ESTR2104,"
+      },
+      {
         "raw": "ENGG2020/ESTR2104",
         "codes": [
           "ENGG2020",
@@ -1271,7 +1280,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "(a)",
@@ -1719,9 +1728,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1732,9 +1741,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "ENGG5404",
@@ -1813,9 +1822,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1838,12 +1847,16 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "ELEG2401",
+              "alts": []
+            },
+            {
+              "code": "ELEG3701",
               "alts": []
             },
             {
@@ -1873,9 +1886,9 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Required Courses",
           "units": null,
-          "note": "Required Courses",
+          "note": null,
           "courses": [
             {
               "code": "CSCI1020",
@@ -1898,9 +1911,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Elective Courses",
           "units": null,
-          "note": "Elective Courses",
+          "note": null,
           "courses": [
             {
               "code": "BMEG3420",

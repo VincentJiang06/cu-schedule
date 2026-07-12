@@ -18,6 +18,8 @@
     "CHES3101",
     "CHES3102",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "COMM2932",
     "COMM3939",
     "CUMT1000",
@@ -86,6 +88,7 @@
     "FAAS1900",
     "HIST1000",
     "HIST1700",
+    "HIST1701",
     "JASP1090",
     "JASP2200",
     "LING1000",
@@ -161,6 +164,22 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CURE1110",
         "codes": [
           "CURE1110"
@@ -212,6 +231,14 @@
         "raw": "HIST1700",
         "codes": [
           "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -297,6 +324,14 @@
         ],
         "alt": false,
         "from": "(b) Capstone courses: CURE4014 or 4038"
+      },
+      {
+        "raw": "CURE4038",
+        "codes": [
+          "CURE4038"
+        ],
+        "alt": false,
+        "from": "(b) Capstone courses: CURE4014 or 4038"
       }
     ],
     "stream_elective": []
@@ -309,7 +344,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 21
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -345,7 +380,7 @@
       "units": "3",
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "(c)",
@@ -406,6 +441,14 @@
           "alts": []
         },
         {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
           "code": "CURE1110",
           "alts": []
         },
@@ -431,6 +474,10 @@
         },
         {
           "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {
@@ -462,7 +509,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 18,
       "note": null,
       "courses": [
@@ -498,12 +545,16 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Capstone courses",
           "units": 3,
-          "note": "Capstone courses",
+          "note": null,
           "courses": [
             {
               "code": "CURE4014",
+              "alts": []
+            },
+            {
+              "code": "CURE4038",
               "alts": []
             }
           ],

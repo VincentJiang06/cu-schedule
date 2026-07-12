@@ -1025,9 +1025,9 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Non-core Electives",
           "units": null,
-          "note": "Non-core Electives",
+          "note": null,
           "courses": [
             {
               "code": "CHEM1380",

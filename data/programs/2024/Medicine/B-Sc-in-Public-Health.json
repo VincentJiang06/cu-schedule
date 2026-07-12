@@ -583,7 +583,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 32,
       "note": null,
       "courses": [
@@ -644,7 +644,7 @@
     },
     {
       "marker": "3.",
-      "title": "",
+      "title": "Elective Courses",
       "units": 22,
       "note": null,
       "courses": [

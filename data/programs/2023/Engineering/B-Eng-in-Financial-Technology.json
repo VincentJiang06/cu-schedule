@@ -61,6 +61,7 @@
     "ECON2011",
     "ECON2021",
     "ELTU1001",
+    "ELTU1002",
     "ELTU2014",
     "ELTU3014",
     "ENGG1004",
@@ -1009,7 +1010,7 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Practicum Course",
           "units": 1,
           "note": null,
           "courses": [
@@ -1022,7 +1023,7 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Legal Course",
           "units": 2,
           "note": null,
           "courses": [

@@ -82,6 +82,7 @@
     "COMM3682",
     "COMM3690",
     "COMM3700",
+    "COMM3710",
     "COMM3711",
     "COMM3721",
     "COMM3722",
@@ -404,6 +405,14 @@
         "raw": "ACCT2151",
         "codes": [
           "ACCT2151"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -1277,7 +1286,7 @@
       "units": "32-33",
       "bucket": "required",
       "stream": null,
-      "n_courses": 13
+      "n_courses": 14
     },
     {
       "marker": "3.",
@@ -1576,7 +1585,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 32,
       "note": null,
       "courses": [
@@ -1590,6 +1599,10 @@
         },
         {
           "code": "ACCT2151",
+          "alts": []
+        },
+        {
+          "code": "ACCT3151",
           "alts": []
         },
         {

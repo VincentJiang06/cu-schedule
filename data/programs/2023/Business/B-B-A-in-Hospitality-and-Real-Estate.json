@@ -1108,7 +1108,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 37,
       "note": null,
       "courses": [
@@ -1320,7 +1320,7 @@
           "children": [
             {
               "marker": "(i)",
-              "title": "",
+              "title": "Analytical Module",
               "units": null,
               "note": null,
               "courses": [
@@ -1361,7 +1361,7 @@
             },
             {
               "marker": "(ii)",
-              "title": "",
+              "title": "Innovative Module",
               "units": null,
               "note": null,
               "courses": [
@@ -1408,7 +1408,7 @@
             },
             {
               "marker": "(iii)",
-              "title": "",
+              "title": "Experiential Module",
               "units": null,
               "note": null,
               "courses": [

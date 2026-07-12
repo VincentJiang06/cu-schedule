@@ -521,6 +521,14 @@
         "from": "(b) Finance and Business (12 units from the following, including at least"
       },
       {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (12 units from the following, including at least"
+      },
+      {
         "raw": "FINA3030",
         "codes": [
           "FINA3030"
@@ -695,7 +703,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 6
     },
     {
       "marker": "(c)",
@@ -1014,6 +1022,10 @@
           "courses": [
             {
               "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "ACCT3151",
               "alts": []
             },
             {

@@ -14,8 +14,13 @@
     "ARTS1010",
     "BMBL1001",
     "CHES1101",
+    "CHES1102",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CURE1000",
+    "CURE1110",
+    "CURE1400",
     "ELTU1001",
     "ELTU2011",
     "ELTU3011",
@@ -118,6 +123,7 @@
     "HIST1001",
     "HIST1002",
     "HIST1700",
+    "HIST1701",
     "HIST2002",
     "HIST2005",
     "HIST2006",
@@ -180,6 +186,14 @@
         "from": "1. Faculty"
       },
       {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
         "raw": "CHLL1900",
         "codes": [
           "CHLL1900"
@@ -188,9 +202,41 @@
         "from": "1. Faculty"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
         "raw": "CURE1000",
         "codes": [
           "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
         ],
         "alt": false,
         "from": "1. Faculty"
@@ -207,6 +253,22 @@
         "raw": "HIST1000",
         "codes": [
           "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty"
@@ -303,6 +365,14 @@
         "raw": "ENGE4701",
         "codes": [
           "ENGE4701"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ENGE4702",
+        "codes": [
+          "ENGE4702"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -1008,7 +1078,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 16
+      "n_courses": 23
     },
     {
       "marker": "2.",
@@ -1017,7 +1087,7 @@
       "units": "21",
       "bucket": "required",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "3.",
@@ -1061,11 +1131,31 @@
           "alts": []
         },
         {
+          "code": "CHES1102",
+          "alts": []
+        },
+        {
           "code": "CHLL1900",
           "alts": []
         },
         {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
           "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
           "alts": []
         },
         {
@@ -1074,6 +1164,14 @@
         },
         {
           "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {
@@ -1105,7 +1203,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 21,
       "note": null,
       "courses": [
@@ -1131,6 +1229,10 @@
         },
         {
           "code": "ENGE4701",
+          "alts": []
+        },
+        {
+          "code": "ENGE4702",
           "alts": []
         }
       ],

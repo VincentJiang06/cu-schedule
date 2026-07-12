@@ -389,6 +389,29 @@ function main() {
       p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
   }
 
+  // case 6: 签名1 的 "or 续号" 半 —— "Capstone course: MATH4400 or 4900" 曾丢 MATH4900
+  // (旧 CONT_GAP_RE 只认 and,不认 or)。断言两门都落在 structure(gap 的 and/or 一视同仁,
+  // 差异只体现在 note/title 的选择语义,不构成丢课理由)。
+  {
+    const p = byId.get('2025:Articulated Bachelor of Science – Ph.D. Programme in Mathematical Sciences')
+    const codes = new Set<string>()
+    if (p) collectStructCodes(p.structure, codes)
+    const want = ['MATH4400', 'MATH4900']
+    const ok = !!p && want.every((c) => codes.has(c))
+    assert('MathSci2025 "MATH4400 or 4900" 两门都回收', ok,
+      p ? `missing=[${want.filter((c) => !codes.has(c)).join(',')}]` : 'program missing')
+  }
+  // case 7: 签名2(节标题静默丢失)—— "2. | Required Courses: | 27" / "3. | Elective
+  // Courses: | 36" 这类无关键词的编号节曾 title=""。断言其 title 非空且与原文一致。
+  {
+    const p = byId.get('2025:B.S.Sc. in Economics')
+    const n2 = p && topByMarker(p, '2.')
+    const n3 = p && topByMarker(p, '3.')
+    const ok = titleSlug(n2?.title) === 'required courses' && titleSlug(n3?.title) === 'elective courses'
+    assert('ECON2025 §2/§3 节标题非空保真', !!ok,
+      `§2="${n2?.title ?? ''}" §3="${n3?.title ?? ''}"`)
+  }
+
   const p6Fail = p6.filter((c) => !c.ok).length
 
   // --------------------------------------------------------------------- 输出

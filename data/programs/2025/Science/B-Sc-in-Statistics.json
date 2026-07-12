@@ -10,10 +10,17 @@
   "has_streams": false,
   "all_course_codes": [
     "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
     "CHLT1001",
     "CHLT1002",
     "CSCI1120",
+    "CSCI1130",
+    "CSCI1520",
+    "CSCI1530",
+    "CSCI1550",
     "CSCI2100",
+    "CSCI2520",
     "CSCI3150",
     "CSCI3160",
     "CSCI3170",
@@ -38,15 +45,24 @@
     "FINA2220",
     "GRMD2102",
     "LSCI1001",
+    "LSCI1002",
+    "LSCI1012",
     "MATH1000",
     "MATH1001",
     "MATH1006",
     "MATH1009",
     "MATH1010",
+    "MATH1018",
     "MATH1030",
+    "MATH1038",
     "MATH1050",
+    "MATH1520",
+    "MATH1550",
     "MKTG3010",
     "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
     "RMSC4001",
     "RMSC4002",
     "RMSC4003",
@@ -112,9 +128,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "MATH1010",
         "codes": [
           "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -128,9 +168,41 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -144,9 +216,49 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "MATH1030",
         "codes": [
           "MATH1030"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH1038",
+        "codes": [
+          "MATH1038"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "MATH1550",
+        "codes": [
+          "MATH1550"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -360,6 +472,14 @@
         ],
         "alt": false,
         "from": "(b) One capstone/research"
+      },
+      {
+        "raw": "STAT4013",
+        "codes": [
+          "STAT4013"
+        ],
+        "alt": false,
+        "from": "(b) One capstone/research"
       }
     ],
     "stream_elective": []
@@ -372,7 +492,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 15
     },
     {
       "marker": "2.",
@@ -381,7 +501,7 @@
       "units": "27",
       "bucket": "required",
       "stream": null,
-      "n_courses": 9
+      "n_courses": 11
     },
     {
       "marker": "3.",
@@ -408,7 +528,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     }
   ],
   "structure": [
@@ -423,7 +543,19 @@
           "alts": []
         },
         {
+          "code": "STAT1012",
+          "alts": []
+        },
+        {
           "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1018",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
           "alts": []
         },
         {
@@ -431,11 +563,39 @@
           "alts": []
         },
         {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        },
+        {
           "code": "CHEM1070",
           "alts": []
         },
         {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
           "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
           "alts": []
         }
       ],
@@ -443,12 +603,20 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 27,
       "note": null,
       "courses": [
         {
           "code": "MATH1030",
+          "alts": []
+        },
+        {
+          "code": "MATH1038",
+          "alts": []
+        },
+        {
+          "code": "MATH1550",
           "alts": []
         },
         {
@@ -578,6 +746,10 @@
           "courses": [
             {
               "code": "STAT4011",
+              "alts": []
+            },
+            {
+              "code": "STAT4013",
               "alts": []
             }
           ],

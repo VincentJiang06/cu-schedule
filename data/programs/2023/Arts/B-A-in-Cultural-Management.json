@@ -25,6 +25,8 @@
     "BMBL1001",
     "CHES1100",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CUMT1000",
     "CUMT1001",
     "CUMT1002",
@@ -106,6 +108,7 @@
     "FAAS4201",
     "HIST1000",
     "HIST1700",
+    "HIST1701",
     "JASP1090",
     "JASP3470",
     "LING1000",
@@ -193,6 +196,22 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CURE1000",
         "codes": [
           "CURE1000"
@@ -236,6 +255,14 @@
         "raw": "HIST1700",
         "codes": [
           "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -369,6 +396,14 @@
         ],
         "alt": false,
         "from": "(e) Capstone Courses: CUMT4102 or 4103"
+      },
+      {
+        "raw": "CUMT4103",
+        "codes": [
+          "CUMT4103"
+        ],
+        "alt": false,
+        "from": "(e) Capstone Courses: CUMT4102 or 4103"
       }
     ],
     "stream_elective": []
@@ -381,7 +416,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 21
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -444,7 +479,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     }
   ],
   "structure": [
@@ -491,6 +526,14 @@
           "alts": []
         },
         {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
           "code": "CURE1000",
           "alts": []
         },
@@ -512,6 +555,10 @@
         },
         {
           "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {
@@ -543,7 +590,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 18,
       "note": null,
       "courses": [
@@ -627,12 +674,16 @@
         },
         {
           "marker": "(e)",
-          "title": "",
+          "title": "Capstone Courses",
           "units": null,
-          "note": "Capstone Courses",
+          "note": null,
           "courses": [
             {
               "code": "CUMT4102",
+              "alts": []
+            },
+            {
+              "code": "CUMT4103",
               "alts": []
             }
           ],

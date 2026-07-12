@@ -540,6 +540,14 @@
         "from": "(b) Finance and Business (at least 9 units from the following, including"
       },
       {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
         "raw": "DOTE3010",
         "codes": [
           "DOTE3010"
@@ -723,7 +731,7 @@
       "units": null,
       "bucket": "elective",
       "stream": null,
-      "n_courses": 6
+      "n_courses": 7
     },
     {
       "marker": "(c)",
@@ -1054,6 +1062,10 @@
           "courses": [
             {
               "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "ACCT3151",
               "alts": []
             },
             {

@@ -873,6 +873,14 @@
         "from": "(a) Geo-spatial Data Science"
       },
       {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "(a) Geo-spatial Data Science"
+      },
+      {
         "raw": "GRMD2106",
         "codes": [
           "GRMD2106"
@@ -884,14 +892,6 @@
         "raw": "GRMD3104",
         "codes": [
           "GRMD3104"
-        ],
-        "alt": false,
-        "from": "(a) Geo-spatial Data Science"
-      },
-      {
-        "raw": "GRMD3106",
-        "codes": [
-          "GRMD3106"
         ],
         "alt": false,
         "from": "(a) Geo-spatial Data Science"
@@ -940,6 +940,14 @@
         "raw": "GRMD3202",
         "codes": [
           "GRMD3202"
+        ],
+        "alt": false,
+        "from": "(b) Physical Environment and Resource Management"
+      },
+      {
+        "raw": "GRMD3205",
+        "codes": [
+          "GRMD3205"
         ],
         "alt": false,
         "from": "(b) Physical Environment and Resource Management"
@@ -996,14 +1004,6 @@
         "raw": "GRMD3203",
         "codes": [
           "GRMD3203"
-        ],
-        "alt": false,
-        "from": "(b) Physical Environment and Resource Management"
-      },
-      {
-        "raw": "GRMD3205",
-        "codes": [
-          "GRMD3205"
         ],
         "alt": false,
         "from": "(b) Physical Environment and Resource Management"
@@ -1089,6 +1089,14 @@
         "from": "(c) Urban and Regional Development"
       },
       {
+        "raw": "GRMD3323",
+        "codes": [
+          "GRMD3323"
+        ],
+        "alt": false,
+        "from": "(c) Urban and Regional Development"
+      },
+      {
         "raw": "GRMD2303",
         "codes": [
           "GRMD2303"
@@ -1116,14 +1124,6 @@
         "raw": "GRMD3304",
         "codes": [
           "GRMD3304"
-        ],
-        "alt": false,
-        "from": "(c) Urban and Regional Development"
-      },
-      {
-        "raw": "GRMD3323",
-        "codes": [
-          "GRMD3323"
         ],
         "alt": false,
         "from": "(c) Urban and Regional Development"
@@ -1436,7 +1436,7 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 27,
       "note": null,
       "courses": [

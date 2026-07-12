@@ -156,6 +156,8 @@
     "LSCI2003",
     "MAEG2030",
     "MATH1010",
+    "MATH1018",
+    "MATH1520",
     "MATH2010",
     "MATH2020",
     "MATH2040",
@@ -210,6 +212,7 @@
     "STAR4000",
     "STAR4050",
     "STAT1011",
+    "STAT1012",
     "STAT2001",
     "STAT2006",
     "STAT3007",
@@ -234,9 +237,33 @@
         "from": "(a) Group C: MATH1010 or 1018 or"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "(a) Group C: MATH1010 or 1018 or"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "(a) Group C: MATH1010 or 1018 or"
+      },
+      {
         "raw": "STAT1011",
         "codes": [
           "STAT1011"
+        ],
+        "alt": false,
+        "from": "(a) Group C: MATH1010 or 1018 or"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
         ],
         "alt": false,
         "from": "(a) Group C: MATH1010 or 1018 or"
@@ -250,6 +277,14 @@
         "from": "(b) Two courses from the following"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from the following"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
@@ -258,9 +293,41 @@
         "from": "(b) Two courses from the following"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from the following"
+      },
+      {
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from the following"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from the following"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(b) Two courses from the following"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "(b) Two courses from the following"
@@ -442,9 +509,33 @@
         "from": "1. Faculty"
       },
       {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
         "raw": "MATH1010",
         "codes": [
           "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
         ],
         "alt": false,
         "from": "1. Faculty"
@@ -458,9 +549,41 @@
         "from": "1. Faculty"
       },
       {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
         "raw": "STAT1011",
         "codes": [
           "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
         ],
         "alt": false,
         "from": "1. Faculty"
@@ -746,9 +869,49 @@
         "from": "(a) Group"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
         "raw": "PHYS1111",
         "codes": [
           "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
         ],
         "alt": false,
         "from": "(a) Group"
@@ -762,6 +925,14 @@
         "from": "(a) Group"
       },
       {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
         "raw": "LSCI1012",
         "codes": [
           "LSCI1012"
@@ -770,9 +941,25 @@
         "from": "(b) One course"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "(b) One course"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
+        ],
+        "alt": false,
+        "from": "(b) One course"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
         ],
         "alt": false,
         "from": "(b) One course"
@@ -1050,9 +1237,25 @@
         "from": "(a) Group"
       },
       {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
         "raw": "CHEM1070",
         "codes": [
           "CHEM1070"
+        ],
+        "alt": false,
+        "from": "(a) Group"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
         ],
         "alt": false,
         "from": "(a) Group"
@@ -1066,6 +1269,22 @@
         "from": "(b) Group"
       },
       {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
         "raw": "PHYS1001",
         "codes": [
           "PHYS1001"
@@ -1074,9 +1293,41 @@
         "from": "(b) Group"
       },
       {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
         "raw": "STAT1011",
         "codes": [
           "STAT1011"
+        ],
+        "alt": false,
+        "from": "(b) Group"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
         ],
         "alt": false,
         "from": "(b) Group"
@@ -9111,7 +9362,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 5
     },
     {
       "marker": "(b)",
@@ -9120,7 +9371,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 8
     },
     {
       "marker": "2.",
@@ -9237,7 +9488,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 4
+      "n_courses": 11
     },
     {
       "marker": "2.",
@@ -9399,7 +9650,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 9
     },
     {
       "marker": "(b)",
@@ -9408,7 +9659,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 4
     },
     {
       "marker": "2.",
@@ -9570,7 +9821,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 2
+      "n_courses": 4
     },
     {
       "marker": "(b)",
@@ -9579,7 +9830,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 9
     },
     {
       "marker": "2.",
@@ -9763,16 +10014,24 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Group C",
           "units": 6,
-          "note": "Group C",
+          "note": null,
           "courses": [
             {
               "code": "MATH1010",
               "alts": []
             },
             {
+              "code": "MATH1018",
+              "alts": []
+            },
+            {
               "code": "STAT1011",
+              "alts": []
+            },
+            {
+              "code": "STAT1012",
               "alts": []
             }
           ],
@@ -9789,11 +10048,31 @@
               "alts": []
             },
             {
+              "code": "LSCI1002",
+              "alts": []
+            },
+            {
               "code": "CHEM1070",
               "alts": []
             },
             {
+              "code": "CHEM1072",
+              "alts": []
+            },
+            {
               "code": "PHYS1001",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1111",
+              "alts": []
+            },
+            {
+              "code": "PHYS1113",
               "alts": []
             }
           ],
@@ -9810,7 +10089,7 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Foundational Courses",
           "units": 9,
           "note": null,
           "courses": [
@@ -9831,7 +10110,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Laboratory/Field Methods",
           "units": 1,
           "note": null,
           "courses": [
@@ -10259,9 +10538,9 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Other electives",
           "units": 9,
-          "note": "Other electives",
+          "note": null,
           "courses": [
             {
               "code": "BCHE2030",
@@ -11050,6 +11329,10 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
+        {
+          "code": "MATH1520",
+          "alts": []
+        },
         {
           "code": "STAR2000",
           "alts": []

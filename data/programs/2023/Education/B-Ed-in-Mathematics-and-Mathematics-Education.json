@@ -525,7 +525,7 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Subject Knowledge",
           "units": 26,
           "note": null,
           "courses": [
@@ -538,7 +538,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Pedagogy",
           "units": 21,
           "note": null,
           "courses": [
@@ -575,7 +575,7 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Educational Studies",
           "units": 10,
           "note": null,
           "courses": [
@@ -600,7 +600,7 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Teaching Practice",
           "units": 10,
           "note": null,
           "courses": [
@@ -681,7 +681,7 @@
         },
         {
           "marker": "(b)",
-          "title": "",
+          "title": "Educational Studies 2 units of course chosen from the following",
           "units": 2,
           "note": null,
           "courses": [

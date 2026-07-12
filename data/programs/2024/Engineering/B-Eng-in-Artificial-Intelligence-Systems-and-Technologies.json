@@ -39,6 +39,7 @@
     "BMEG4320",
     "BMEG4510",
     "CSCI1550",
+    "CSCI2040",
     "CSCI2100",
     "CSCI2520",
     "CSCI2740",
@@ -144,6 +145,10 @@
     "IERG4330",
     "IERG5130",
     "LING2003",
+    "LING2004",
+    "LING2005",
+    "LING2006",
+    "LING4201",
     "MAEG2020",
     "MAEG3020",
     "MAEG3040",
@@ -166,6 +171,7 @@
     "SEEM5680",
     "STAT2001",
     "STAT2006",
+    "STAT2102",
     "STAT4001",
     "STAT4005"
   ],
@@ -979,6 +985,34 @@
             "alt": false
           },
           {
+            "raw": "LING2004",
+            "codes": [
+              "LING2004"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "LING2005",
+            "codes": [
+              "LING2005"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "LING2006",
+            "codes": [
+              "LING2006"
+            ],
+            "alt": false
+          },
+          {
+            "raw": "LING4201",
+            "codes": [
+              "LING4201"
+            ],
+            "alt": false
+          },
+          {
             "raw": "SEEM5680",
             "codes": [
               "SEEM5680"
@@ -1385,7 +1419,7 @@
       "units": null,
       "bucket": "stream_elective",
       "stream": null,
-      "n_courses": 22
+      "n_courses": 26
     },
     {
       "marker": "(d)",
@@ -1546,7 +1580,7 @@
         },
         {
           "marker": "(c)",
-          "title": "",
+          "title": "Practicum Courses",
           "units": 3,
           "note": null,
           "courses": [
@@ -1983,6 +2017,22 @@
             },
             {
               "code": "LING2003",
+              "alts": []
+            },
+            {
+              "code": "LING2004",
+              "alts": []
+            },
+            {
+              "code": "LING2005",
+              "alts": []
+            },
+            {
+              "code": "LING2006",
+              "alts": []
+            },
+            {
+              "code": "LING4201",
               "alts": []
             },
             {

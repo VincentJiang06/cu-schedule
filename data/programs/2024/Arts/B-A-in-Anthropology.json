@@ -85,7 +85,10 @@
     "BMBL1001",
     "CHEM1072",
     "CHES1101",
+    "CHES1102",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CUMT1000",
     "CUMT2004",
     "CUMT3009",
@@ -106,12 +109,26 @@
     "GRMD2105",
     "GRMD2209",
     "HIST1000",
+    "HIST1700",
+    "HIST1701",
     "HIST2140",
     "HIST2500",
+    "HIST2501",
+    "HIST2701",
     "HIST3106",
+    "HIST3406",
+    "HIST3441",
+    "HIST3505",
+    "HIST3701",
     "HIST4141",
     "HIST4142",
     "HIST4390",
+    "HIST4500",
+    "HIST4502",
+    "HIST4600",
+    "HIST4700",
+    "HIST4702",
+    "HIST4703",
     "JASP1090",
     "LING1000",
     "MUSC1000",
@@ -163,9 +180,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHLL1900",
         "codes": [
           "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -222,6 +263,22 @@
         "raw": "HIST1000",
         "codes": [
           "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -783,7 +840,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 19
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -868,7 +925,19 @@
           "alts": []
         },
         {
+          "code": "CHES1102",
+          "alts": []
+        },
+        {
           "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
           "alts": []
         },
         {
@@ -897,6 +966,14 @@
         },
         {
           "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {

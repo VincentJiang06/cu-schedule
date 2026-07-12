@@ -109,6 +109,102 @@
         "from": "2. Required Courses"
       },
       {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3003",
+        "codes": [
+          "ACCT3003"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3111",
+        "codes": [
+          "ACCT3111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3112",
+        "codes": [
+          "ACCT3112"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3121",
+        "codes": [
+          "ACCT3121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3142",
+        "codes": [
+          "ACCT3142"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3152",
+        "codes": [
+          "ACCT3152"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3161",
+        "codes": [
+          "ACCT3161"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4001",
+        "codes": [
+          "ACCT4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4111",
+        "codes": [
+          "ACCT4111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4131",
+        "codes": [
+          "ACCT4131"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
         "raw": "DOTE[DSME]2011",
         "codes": [
           "DOTE2011",
@@ -161,6 +257,118 @@
         "raw": "ACCT2111",
         "codes": [
           "ACCT2111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT2121",
+        "codes": [
+          "ACCT2121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3003",
+        "codes": [
+          "ACCT3003"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3004",
+        "codes": [
+          "ACCT3004"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3111",
+        "codes": [
+          "ACCT3111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3112",
+        "codes": [
+          "ACCT3112"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3121",
+        "codes": [
+          "ACCT3121"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3142",
+        "codes": [
+          "ACCT3142"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3152",
+        "codes": [
+          "ACCT3152"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT3161",
+        "codes": [
+          "ACCT3161"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4001",
+        "codes": [
+          "ACCT4001"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4111",
+        "codes": [
+          "ACCT4111"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4131",
+        "codes": [
+          "ACCT4131"
+        ],
+        "alt": false,
+        "from": "2. Required Courses"
+      },
+      {
+        "raw": "ACCT4215",
+        "codes": [
+          "ACCT4215"
         ],
         "alt": false,
         "from": "2. Required Courses"
@@ -775,7 +983,7 @@
       "units": "51",
       "bucket": "required",
       "stream": null,
-      "n_courses": 7
+      "n_courses": 19
     },
     {
       "marker": "3.",
@@ -874,7 +1082,7 @@
       "units": "54",
       "bucket": "required",
       "stream": null,
-      "n_courses": 5
+      "n_courses": 19
     },
     {
       "marker": "3.",
@@ -930,12 +1138,60 @@
     },
     {
       "marker": "2.",
-      "title": "",
+      "title": "Required Courses",
       "units": 51,
       "note": null,
       "courses": [
         {
           "code": "ACCT2111",
+          "alts": []
+        },
+        {
+          "code": "ACCT2121",
+          "alts": []
+        },
+        {
+          "code": "ACCT3003",
+          "alts": []
+        },
+        {
+          "code": "ACCT3111",
+          "alts": []
+        },
+        {
+          "code": "ACCT3112",
+          "alts": []
+        },
+        {
+          "code": "ACCT3121",
+          "alts": []
+        },
+        {
+          "code": "ACCT3142",
+          "alts": []
+        },
+        {
+          "code": "ACCT3151",
+          "alts": []
+        },
+        {
+          "code": "ACCT3152",
+          "alts": []
+        },
+        {
+          "code": "ACCT3161",
+          "alts": []
+        },
+        {
+          "code": "ACCT4001",
+          "alts": []
+        },
+        {
+          "code": "ACCT4111",
+          "alts": []
+        },
+        {
+          "code": "ACCT4131",
           "alts": []
         },
         {
@@ -1097,6 +1353,14 @@
           "alts": [
             "DSME2021"
           ]
+        },
+        {
+          "code": "ACCT3004",
+          "alts": []
+        },
+        {
+          "code": "ACCT4215",
+          "alts": []
         },
         {
           "code": "DOTE3050",

@@ -321,6 +321,14 @@
         "from": "(e) Statistical Modeling: Choose 3"
       },
       {
+        "raw": "STAT4006",
+        "codes": [
+          "STAT4006"
+        ],
+        "alt": false,
+        "from": "(e) Statistical Modeling: Choose 3"
+      },
+      {
         "raw": "CDAS4998",
         "codes": [
           "CDAS4998"
@@ -1007,7 +1015,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 1
+      "n_courses": 2
     },
     {
       "marker": "4.",
@@ -1164,9 +1172,9 @@
       "children": [
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Algorithms and Computer Systems",
           "units": null,
-          "note": "Algorithms and Computer Systems",
+          "note": null,
           "courses": [
             {
               "code": "AIST3020",
@@ -1231,9 +1239,9 @@
         },
         {
           "marker": "(d)",
-          "title": "",
+          "title": "Statistical Inference",
           "units": null,
-          "note": "Statistical Inference",
+          "note": null,
           "courses": [
             {
               "code": "STAT3008",
@@ -1254,6 +1262,10 @@
           "courses": [
             {
               "code": "STAT3005",
+              "alts": []
+            },
+            {
+              "code": "STAT4006",
               "alts": []
             }
           ],

@@ -16,7 +16,10 @@
     "ARTS1010",
     "BMBL1001",
     "CHES1101",
+    "CHES1102",
     "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
     "CUMT1000",
     "CURE1000",
     "CURE1110",
@@ -27,6 +30,7 @@
     "HIST1001",
     "HIST1002",
     "HIST1700",
+    "HIST1701",
     "HIST2002",
     "HIST2005",
     "HIST2006",
@@ -167,9 +171,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHLL1900",
         "codes": [
           "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -231,6 +259,22 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "LING1000",
         "codes": [
           "LING1000"
@@ -274,6 +318,54 @@
         "raw": "JASP1470",
         "codes": [
           "JASP1470"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP1480",
+        "codes": [
+          "JASP1480"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP2010",
+        "codes": [
+          "JASP2010"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP2030",
+        "codes": [
+          "JASP2030"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP2050",
+        "codes": [
+          "JASP2050"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP2470",
+        "codes": [
+          "JASP2470"
+        ],
+        "alt": false,
+        "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
+      },
+      {
+        "raw": "JASP2480",
+        "codes": [
+          "JASP2480"
         ],
         "alt": false,
         "from": "(a) JASP1470*[b], 1480*[b], 2010, 2030,"
@@ -343,9 +435,33 @@
         "from": "1. Faculty Package"
       },
       {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
         "raw": "CHLL1900",
         "codes": [
           "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -402,6 +518,22 @@
         "raw": "HIST1000",
         "codes": [
           "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
         ],
         "alt": false,
         "from": "1. Faculty Package"
@@ -1971,7 +2103,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 19
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -1989,7 +2121,7 @@
       "units": null,
       "bucket": "required",
       "stream": null,
-      "n_courses": 3
+      "n_courses": 9
     },
     {
       "marker": "(b)",
@@ -2070,7 +2202,7 @@
       "units": "9",
       "bucket": "required",
       "stream": null,
-      "n_courses": 19
+      "n_courses": 24
     },
     {
       "marker": "2.",
@@ -2168,7 +2300,19 @@
           "alts": []
         },
         {
+          "code": "CHES1102",
+          "alts": []
+        },
+        {
           "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
           "alts": []
         },
         {
@@ -2197,6 +2341,14 @@
         },
         {
           "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
           "alts": []
         },
         {
@@ -2240,6 +2392,18 @@
               "alts": []
             },
             {
+              "code": "JASP1480",
+              "alts": []
+            },
+            {
+              "code": "JASP2010",
+              "alts": []
+            },
+            {
+              "code": "JASP2030",
+              "alts": []
+            },
+            {
               "code": "JASP4601",
               "alts": []
             },
@@ -2277,7 +2441,7 @@
         },
         {
           "marker": "(a)",
-          "title": "",
+          "title": "Non-language Courses",
           "units": null,
           "note": null,
           "courses": [
@@ -2689,18 +2853,6 @@
       "units": null,
       "note": "本方案文本中列出、未归入上述分区的课程",
       "courses": [
-        {
-          "code": "JASP1480",
-          "alts": []
-        },
-        {
-          "code": "JASP2010",
-          "alts": []
-        },
-        {
-          "code": "JASP2030",
-          "alts": []
-        },
         {
           "code": "JASP2050",
           "alts": []
