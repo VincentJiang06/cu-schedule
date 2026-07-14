@@ -584,6 +584,231 @@ select {
   line-height: 1.45;
 }
 
+/* 「本学期选课时间」卡片顶部的官方原文直达按钮：一眼可见、一键跳到 RES 原页看原文。 */
+.appendix-source-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid color-mix(in srgb, var(--brand) 42%, var(--line));
+  border-radius: 10px;
+  background: var(--brand-wash);
+  padding: 10px 13px;
+  color: var(--brand-ink);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12.5px;
+  line-height: 1.4;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.appendix-source-link:hover {
+  border-color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 15%, transparent);
+}
+
+.appendix-source-link svg {
+  flex: none;
+  opacity: 0.85;
+}
+
+.appendix-source-link__arrow {
+  margin-left: auto;
+  opacity: 0.7;
+  font-weight: 800;
+}
+
+/* 关键提醒高亮框（如「无论天气如何均不停止、不延期」），借用全站 --warn 视觉语汇。 */
+.appendix-callout {
+  margin: 0;
+  display: flex;
+  gap: 9px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--warn-wash);
+  border: 1px solid color-mix(in srgb, var(--warn) 42%, transparent);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.appendix-callout__icon {
+  flex: none;
+}
+
+.appendix-callout b {
+  color: var(--warn);
+}
+
+/* 卡片内分组小标题（在校生 / 新生 / 加退选 / 准备与超修）。 */
+.appendix-subhead {
+  margin: 4px 0 -2px;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--ink-3);
+}
+
+/* 「必备程序」单卡推荐：最左是作者署名（by + 高亮名字），中间产品简介，右侧两个按钮
+   （进网页 / 复制微信小程序链接）。窄屏下三列自动堆叠。 */
+.rec-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-2);
+  padding: 14px 16px;
+}
+
+.rec-card__author {
+  flex: none;
+  width: 92px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+  padding-right: 14px;
+  border-right: 1.5px solid var(--line);
+}
+
+.rec-card__avatar {
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--brand-wash);
+  font-size: 26px;
+  line-height: 1;
+}
+
+.rec-card__by {
+  font-size: 11px;
+  font-weight: 650;
+  color: var(--ink-3);
+}
+
+.rec-card__name {
+  font-size: 13.5px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--brand-ink);
+}
+
+.rec-card__body {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.rec-card__title-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.rec-card__product {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.rec-card__product-en {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink-3);
+  font-family: var(--mono);
+}
+
+.rec-card__desc {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+
+.rec-card__actions {
+  flex: none;
+  width: 208px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rec-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 1.5px solid var(--brand);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 12.5px;
+  font-weight: 750;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s, border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.rec-btn--primary {
+  background: var(--brand);
+  color: var(--on-brand);
+}
+
+.rec-btn--primary:hover {
+  opacity: 0.88;
+}
+
+.rec-btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--line);
+}
+
+.rec-btn--ghost:hover {
+  border-color: var(--brand);
+}
+
+.rec-btn--ok {
+  background: var(--brand-wash);
+  color: var(--brand-ink);
+  border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
+}
+
+.rec-card__hint {
+  margin: 1px 0 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+
+@media (max-width: 560px) {
+  .rec-card__author {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    gap: 9px;
+    padding-right: 0;
+    padding-bottom: 11px;
+    border-right: none;
+    border-bottom: 1.5px solid var(--line);
+  }
+
+  .rec-card__actions {
+    width: 100%;
+  }
+}
+
 /* 友链邀请：比页脚 .sib-chip 更大更完整的展示卡，带图标 + 站名 + 一句话简介。 */
 .appendix-sib-grid {
   display: grid;
@@ -4815,6 +5040,16 @@ select {
   font-variant-numeric: tabular-nums;
 }
 
+/* 选择语义 chip: this section's N 学分 are to be *filled by choosing* from the courses
+   below, not all taken. Amber-wash emphasis (the app's --warn "attention" hue) + bolder
+   weight so it reads at a glance as different from a plain "take everything" total. */
+.pg-section__units--choose {
+  color: var(--warn);
+  background: var(--warn-wash);
+  border-color: var(--warn);
+  font-weight: 750;
+}
+
 .pg-section__children {
   display: flex;
   flex-direction: column;
@@ -4898,6 +5133,55 @@ select {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 7px;
+}
+
+/* Relative wrapper so the ⋯ 详情 button can sit as a SIBLING of the card <button>
+   (HTML forbids nesting a button inside a button) and absolutely position to the
+   card's top-right corner. The card button flexes to fill the whole grid cell. */
+.pg-course-wrap {
+  position: relative;
+  display: flex;
+  min-width: 0;
+}
+
+.pg-course-wrap > .pg-course {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Reserve room on the code row so a long code / alt list never slides under the ⋯. */
+.pg-course-wrap .pg-course__code {
+  padding-right: 24px;
+}
+
+/* ⋯ 详情 button: opaque pill lifted off the tile so it stays legible over any subject
+   color and on the flooded (done) fill in both themes. ≥24×24 touch target. */
+.pg-course__detail {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--ink-2);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  box-shadow: 0 1px 3px hsl(220 20% 12% / 0.18);
+  cursor: pointer;
+  transition: color 0.14s ease, border-color 0.14s ease, background 0.14s ease;
+}
+
+.pg-course__detail:hover {
+  color: var(--brand-ink);
+  border-color: var(--brand);
+  background: var(--surface-2);
 }
 
 .pg-course {
@@ -4986,6 +5270,26 @@ select {
   font-style: italic;
   color: var(--ink-3);
   opacity: 0.85;
+}
+
+/* 「任选一门/N 门即可」hint on a pick-one/pick-n card: squeeze the title to a single line
+   so the hint gets its own row and every card in the grid keeps the same 2-line height. */
+.pg-course--pick .pg-course__title {
+  -webkit-line-clamp: 1;
+  max-height: 1.35em; /* 兜底 for engines that ignore -webkit-line-clamp */
+}
+
+.pg-course__pick {
+  font-size: 10.5px;
+  font-weight: 650;
+  line-height: 1.25;
+  color: var(--warn);
+}
+
+/* On a flooded (done) tile the hint rides the tile's text color like the rest. */
+.pg-course--done .pg-course__pick {
+  color: inherit;
+  opacity: 0.82;
 }
 
 /* On a flooded (done) tile, all text rides the tile's light/dark text color. */

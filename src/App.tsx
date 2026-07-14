@@ -278,12 +278,6 @@ const SIBLINGS: Array<{ icon: string; url: string; name: string; desc: string }>
     name: '理大野史',
     desc: '理大生的野史吐槽站',
   },
-  {
-    icon: '/assets/sib-icons/hkuniwild.png',
-    url: 'https://hkuniwild.com/',
-    name: '港校通门户',
-    desc: '港校信息门户，五校资讯一站看',
-  },
 ]
 
 // 一个排法内部两两 meeting 是否重叠。generatePlans/courseCombos 已保证返回的排法无冲突
@@ -2286,6 +2280,7 @@ export default function App() {
       program={selectedProgram ?? null}
       takenSet={takenSet}
       onBulkTaken={bulkTaken}
+      onShowDetail={setDetailCourse}
       onToggleTaken={toggleTaken}
     />
   )
