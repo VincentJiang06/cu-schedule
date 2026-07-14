@@ -2640,6 +2640,22 @@ select {
   gap: 8px;
 }
 
+/* 卡片标题栏右上角的小「清空」按钮(如已完成课程一键清空)。默认弱化,hover 转警示红。 */
+.card__clear {
+  border: none;
+  background: none;
+  padding: 0 1px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--ink-3);
+  cursor: pointer;
+  transition: color 0.14s ease;
+}
+
+.card__clear:hover {
+  color: var(--bad);
+}
+
 /* 上下班时间锁按钮：默认「锁定」态与卡片其它控件同色(中性);「解锁」态借用既有 --warn
    语义色提醒「当前可被误改」——不是新引入的高饱和色,复用全站已有的警示色变量。 */
 .lock-toggle {
@@ -5206,6 +5222,10 @@ select {
   min-height: 62px;
   padding: 12px 13px;
   border-radius: 10px;
+  /* 宽度只够包裹内容:短约束贴合文字,长约束填到容器宽再换行(不再整行铺满)。 */
+  width: fit-content;
+  max-width: 100%;
+  align-self: flex-start;
   /* 中性浅灰,较 --surface-2 再淡一度(掺入 --surface),整体灰调降一级。 */
   background: color-mix(in srgb, var(--surface-2) 40%, var(--surface));
 }
@@ -5220,18 +5240,23 @@ select {
   align-items: center;
   padding: 10px 13px;
   border-radius: 9px;
+  /* 宽度只够包裹内容(同叶子约束卡)。 */
+  width: fit-content;
+  max-width: 100%;
+  align-self: flex-start;
   background: color-mix(in srgb, var(--surface-2) 40%, var(--surface));
 }
 
 .pg-noterule__text {
-  font-size: 12.5px;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--ink);
   line-height: 1.4;
 }
 
 .pg-leaf__marker {
   font-family: var(--mono);
-  font-size: 12.5px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--ink);
   /* 卡底降淡后,药丸用 --surface-2(略深于卡底)保持可辨。 */
@@ -5241,16 +5266,19 @@ select {
   white-space: nowrap;
 }
 
+/* 正文用中等字重(500),给数字锚点的加粗留出反差空间。 */
 .pg-leaf__text {
-  font-size: 12.5px;
+  font-size: 15px;
+  font-weight: 500;
   color: var(--ink);
   line-height: 1.4;
 }
 
-/* 数字锚点(「3 units」「6 units」「3000」)——叶子正文里最易漏的信息,加粗提亮。 */
+/* 数字锚点(「3 units」「6 units」「3000」)——叶子正文里最易漏的信息,用最重字重(900)从
+   500 的正文里突出出来,一眼可辨。 */
 .pg-leaf__em {
   color: var(--ink);
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .pg-bulk {
@@ -5318,19 +5346,19 @@ select {
   height: 7px;
 }
 
-/* pick 规则卡:条纹跟着本组课程的配色走(该 hue 的 edge 档、~62% 不透明),与其彩色底一体。 */
+/* pick 规则卡:条纹跟着本组课程的配色走(该 hue 的 edge 档),加深到 ~85% 不透明,与其彩色底一体。 */
 .pg-rule::before,
 .pg-rule::after {
   background: repeating-linear-gradient(
     -45deg,
-    color-mix(in srgb, hsl(var(--hue, 225) var(--sat) calc(var(--edge-l) + var(--shade, 0%))) 62%, transparent)
+    color-mix(in srgb, hsl(var(--hue, 225) var(--sat) calc(var(--edge-l) + var(--shade, 0%))) 85%, transparent)
       0 6px,
     transparent 6px 12px
   );
 }
 
-/* 叶子约束卡 / 章节规则条:灰色条纹(半透明 --ink ~27%)——通用约束,不跟课程色,视觉中性。
-   高度砍到彩色 rule 卡的一半(7px → 3.5px),条带更细,与降淡的底色成套(彩色 rule 卡仍 7px)。 */
+/* 叶子约束卡 / 章节规则条:灰色条纹(半透明 --ink),加深到 ~45%——通用约束,不跟课程色、视觉中性。
+   高度砍到彩色 rule 卡的一半(7px → 3.5px),条带更细(彩色 rule 卡仍 7px)。 */
 .pg-leaf::before,
 .pg-leaf::after,
 .pg-noterule::before,
@@ -5338,7 +5366,7 @@ select {
   height: 3.5px;
   background: repeating-linear-gradient(
     -45deg,
-    color-mix(in srgb, var(--ink) 27%, transparent) 0 6px,
+    color-mix(in srgb, var(--ink) 45%, transparent) 0 6px,
     transparent 6px 12px
   );
 }
@@ -5356,14 +5384,15 @@ select {
 }
 
 .pg-rule__zh {
-  font-size: 13px;
+  font-size: 14.5px;
   font-weight: 750;
   color: var(--ink);
   line-height: 1.2;
 }
 
 .pg-rule__en {
-  font-size: 11px;
+  font-size: 12.5px;
+  font-weight: 600;
   color: var(--ink-3);
   line-height: 1.3;
 }

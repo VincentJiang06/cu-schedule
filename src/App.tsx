@@ -2285,7 +2285,19 @@ export default function App() {
     <section className="card">
       <h2 className="card__title">
         已完成课程
-        <span className="card__note">排除已修 · 判断先修</span>
+        <span className="card__title-actions">
+          <span className="card__note">排除已修 · 判断先修</span>
+          {taken.length > 0 && (
+            <button
+              aria-label="清空已完成课程"
+              className="card__clear"
+              type="button"
+              onClick={() => setTaken([])}
+            >
+              清空
+            </button>
+          )}
+        </span>
       </h2>
       <p className="card__sub">已录入 {taken.length} 门</p>
       <CodeInput
