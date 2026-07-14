@@ -5,9 +5,7 @@
  * 外基本为静态内容。
  */
 
-import { useState, type CSSProperties } from 'react'
-
-import { copyText } from '../lib/clipboard.ts'
+import type { CSSProperties } from 'react'
 
 const CALENDAR_LINKS = [
   {
@@ -161,24 +159,11 @@ function DocIcon() {
   )
 }
 
-// 「必备程序」推荐:安利独立作者「坏坏大饼干儿」做的选餐小工具。网页版直接开;微信小程序
-// 版走「复制官方分享链接 → 切回微信自动识别跳转」的通用做法(浏览器无法可靠直接唤起微信
-// 小程序,微信会在剪贴板里认出 #小程序:// 口令并弹出打开提示)。
+// 「必备程序」推荐:安利独立作者「坏坏大饼干儿」做的选餐小工具,只给网页版直达。
 const UEATWHAT_AUTHOR = '坏坏大饼干儿'
 const UEATWHAT_URL = 'https://ueatwhat.com/'
-const UEATWHAT_WECHAT_LINK = '#小程序://可以吃点什么捏/8KjSbUhvipfRxew'
 
 function EssentialAppCard() {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopyWechat = async () => {
-    const ok = await copyText(UEATWHAT_WECHAT_LINK)
-    if (ok) {
-      setCopied(true)
-      window.setTimeout(() => setCopied(false), 2800)
-    }
-  }
-
   return (
     <div className="rec-card">
       <div className="rec-card__author">
@@ -195,8 +180,8 @@ function EssentialAppCard() {
           <span className="rec-card__product-en">ueatwhat</span>
         </div>
         <p className="rec-card__desc">
-          专治「今天吃什么」的选择困难——随机推荐、按口味与距离筛选，网页版与微信小程序都很
-          顺手。作者手艺很好，单独开一列推荐给你。
+          专治「今天吃什么」的选择困难——随机推荐、按口味与距离筛选，做得很顺手。作者手艺很
+          好，单独开一列推荐给你。
         </p>
       </div>
 
@@ -210,16 +195,6 @@ function EssentialAppCard() {
           <span>进入网页</span>
           <span aria-hidden>→</span>
         </a>
-        <button
-          className={`rec-btn rec-btn--ghost${copied ? ' rec-btn--ok' : ''}`}
-          onClick={handleCopyWechat}
-          type="button"
-        >
-          {copied ? '✓ 已复制，去微信打开' : '复制链接 · 微信打开'}
-        </button>
-        <p className="rec-card__hint">
-          微信小程序：点上方按钮复制链接，切回微信即会自动识别并跳转小程序。
-        </p>
       </div>
     </div>
   )

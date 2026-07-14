@@ -663,39 +663,43 @@ select {
 
 .rec-card__author {
   flex: none;
-  width: 92px;
+  width: 116px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  gap: 6px;
   text-align: center;
-  padding-right: 14px;
+  padding-right: 16px;
   border-right: 1.5px solid var(--line);
 }
 
 .rec-card__avatar {
-  width: 46px;
-  height: 46px;
+  width: 60px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 15px;
   background: var(--brand-wash);
-  font-size: 26px;
+  border: 1.5px solid color-mix(in srgb, var(--brand) 22%, var(--line));
+  font-size: 34px;
   line-height: 1;
 }
 
 .rec-card__by {
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--ink-3);
 }
 
 .rec-card__name {
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
   color: var(--brand-ink);
 }
 
@@ -737,7 +741,8 @@ select {
 
 .rec-card__actions {
   flex: none;
-  width: 208px;
+  width: auto;
+  min-width: 132px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -751,7 +756,7 @@ select {
   gap: 6px;
   border: 1.5px solid var(--brand);
   border-radius: 9px;
-  padding: 9px 12px;
+  padding: 10px 16px;
   font-size: 12.5px;
   font-weight: 750;
   text-decoration: none;
@@ -766,29 +771,6 @@ select {
 
 .rec-btn--primary:hover {
   opacity: 0.88;
-}
-
-.rec-btn--ghost {
-  background: transparent;
-  color: var(--ink);
-  border-color: var(--line);
-}
-
-.rec-btn--ghost:hover {
-  border-color: var(--brand);
-}
-
-.rec-btn--ok {
-  background: var(--brand-wash);
-  color: var(--brand-ink);
-  border-color: color-mix(in srgb, var(--brand) 40%, var(--line));
-}
-
-.rec-card__hint {
-  margin: 1px 0 0;
-  font-size: 11px;
-  line-height: 1.5;
-  color: var(--ink-3);
 }
 
 @media (max-width: 560px) {
