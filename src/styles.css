@@ -4960,19 +4960,34 @@ select {
   border-left: 2px solid var(--line);
 }
 
-/* 「专业方向 · Concentration Area」可选段:整块以品牌色底纹 + 左描边标示,
-   让用户一眼看出这是可选的专业方向分区,内部方向子区照常递归渲染。 */
+/* 「专业方向 / 选修方向」可选段:描边卡 + 顶部标签条——只有标题栏染品牌色底,正文(方向
+   子区、必修/选修、课程卡)回到纯净背景,避免整块大面积色斑压低可读性。可选性靠标题旁的
+   徽章(可选方向 / 选修方向)表达。--stream 与 --concentration 同时挂,共用此段,由徽章区分。 */
 .pg-section--concentration {
+  gap: 0;
+  padding: 0;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.pg-section--concentration > .pg-section__head {
   background: var(--brand-wash);
-  border-left: 3px solid hsl(var(--accent) 46% 52% / 0.55);
-  border-radius: 10px;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pg-section--concentration > .pg-note {
+  padding: 10px 12px 0;
+}
+
+.pg-section--concentration > .pg-grid {
   padding: 10px 12px;
 }
 
-/* 「选修方向 · Streams」段:与 Concentration 共用可选段底纹,左描边换用中性色
-   以便与专业方向段作细微区分,内部方向子区照常递归渲染。 */
-.pg-section--stream {
-  border-left-color: hsl(var(--accent) 20% 55% / 0.5);
+.pg-section--concentration > .pg-section__children {
+  padding: 10px 12px 12px;
 }
 
 /* 小徽章:紧跟区块标题,标注该段为「可选方向」/「选修方向」。 */
@@ -5069,46 +5084,47 @@ select {
   opacity: 0.72;
 }
 
-/* 叶子要求条目卡片化:一排 1×2 卡片(marker 徽章 | 正文),宽屏两列,窄屏(容器变窄)回退单列。
-   容器查询挂在 .pg 上——这个面板的实际宽度取决于左右分栏比例，跟浏览器视口宽度关系不大。 */
+/* 叶子要求条目(如「(ii) to 6 units MATH courses…」):这些是"约束/规则"而非可选课程,用
+   虚线框 + 圆角 marker 药丸和实心课程卡区分开;整列铺满(不再两列并排)避免半句被截断;正文
+   里的学分/级别数字加粗,降低漏读。 */
 .pg-leaf-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 7px;
-}
-
-@container (max-width: 460px) {
-  .pg-leaf-grid {
-    grid-template-columns: 1fr;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .pg-leaf {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: start;
-  gap: 3px 9px;
-  padding: 7px 10px;
+  gap: 3px 10px;
+  padding: 7px 11px;
   border-radius: 10px;
-  background: var(--surface-2);
-  border: 1px solid var(--line);
+  background: transparent;
+  border: 1.5px dashed color-mix(in srgb, var(--warn) 50%, var(--line));
 }
 
 .pg-leaf__marker {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
-  color: var(--ink-2);
-  background: var(--mute-wash);
+  color: var(--warn);
+  background: var(--warn-wash);
   border-radius: 999px;
-  padding: 1px 7px;
+  padding: 2px 8px;
   white-space: nowrap;
 }
 
 .pg-leaf__text {
-  font-size: 11.5px;
+  font-size: 12px;
   color: var(--ink-2);
-  line-height: 1.4;
+  line-height: 1.45;
+}
+
+/* 数字锚点(「3 units」「6 units」「3000」)——叶子正文里最易漏的信息,加粗提亮。 */
+.pg-leaf__em {
+  color: var(--ink);
+  font-weight: 750;
 }
 
 .pg-bulk {

@@ -136,15 +136,39 @@ function isLeafRequirement(node: SectionNode): boolean {
   return Boolean(node.marker) && !node.title && node.children.length === 0 && node.courses.length === 0 && Boolean(node.note)
 }
 
-// Compact 1×2 card for one leaf requirement: marker badge on the left, requirement
-// prose on the right. Several of these render side by side in a .pg-leaf-grid (see
-// SectionBlock's children renderer below) — two per row on wide screens, one on narrow.
+// The numeric anchors a leaf rule hinges on — "3 units", "6 units", a "3000"-level gate —
+// are the easiest things to skim past in a dense prose fragment. Bold them. `split` on a
+// single-capture-group regex yields alternating [text, match, text, match, …], so odd
+// indices are the captured number phrases.
+const LEAF_NUM = /(\d+(?:\s*[-–]\s*\d+)?\s*units?|\b\d{4}\b)/gi
+function emphasizeUnits(text: string) {
+  return text.split(LEAF_NUM).map((part, i) =>
+    i % 2 === 1 ? (
+      <b className="pg-leaf__em" key={i}>
+        {part}
+      </b>
+    ) : (
+      part
+    ),
+  )
+}
+
+// Leaf prose: a known要求词 keeps its gloss; anything else (the real "At least 3 units" /
+// "to 6 units MATH courses…" fragments) gets its numbers emphasized instead.
+function LeafText({ note }: { note: string }) {
+  if (GLOSS[note]) return <NoteContent note={note} />
+  return <>{emphasizeUnits(note)}</>
+}
+
+// One leaf requirement, full-width: a rounded marker pill + the requirement prose inside a
+// dashed frame (marking it a rule/constraint, distinct from the solid course cards). Stacks
+// one-per-row in a .pg-leaf-grid so nothing gets truncated.
 function LeafCard({ node }: { node: SectionNode }) {
   return (
     <div className="pg-leaf">
       <span className="pg-leaf__marker">{node.marker}</span>
       <span className="pg-leaf__text">
-        <NoteContent note={node.note ?? ''} />
+        <LeafText note={node.note ?? ''} />
       </span>
     </div>
   )
