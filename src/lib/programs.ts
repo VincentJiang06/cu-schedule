@@ -348,7 +348,7 @@ const SECTION_GLOSS: Record<string, string> = {
   'Elective Course 2': '选修组二',
 }
 
-function glossSection(title: string): BiLabel {
+export function glossSection(title: string): BiLabel {
   if (!title) return { zh: '', en: '' }
   if (SECTION_GLOSS[title]) return { zh: SECTION_GLOSS[title], en: title }
   if (title.includes('Choose any ONE')) return { zh: '任选其一', en: title }

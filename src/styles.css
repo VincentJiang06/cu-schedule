@@ -851,6 +851,119 @@ select {
   color: var(--ink-3);
 }
 
+/* ---- 信息页「学分进度」计算器 ------------------------------------------------
+   已完成课程按培养方案顶层 section 归类,逐组「已修 / 需修」学分 + 进度条,末尾本方案累计。
+   走 .card 底盘,只补内部排版:紧凑的行、tabular-nums 数字、--brand 填充的细进度条。 */
+.prog-progress__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.prog-progress__row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prog-progress__line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.prog-progress__label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.prog-progress__marker {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--ink-3);
+  flex: none;
+}
+
+.prog-progress__en {
+  font-size: 10.5px;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--ink-3);
+}
+
+.prog-progress__nums {
+  flex: none;
+  font-size: 12px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.prog-progress__nums b {
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.prog-progress__bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.prog-progress__fill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--brand);
+  opacity: 0.5;
+  transition: width 180ms ease;
+}
+
+/* 修满该组:实心 brand,与未满的半透明填充区分开。 */
+.prog-progress__fill--done {
+  opacity: 1;
+}
+
+.prog-progress__hint {
+  font-size: 11px;
+  color: var(--warn);
+}
+
+.prog-progress__total {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 3px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.prog-progress__total-label {
+  font-size: 12.5px;
+  font-weight: 750;
+  color: var(--ink);
+}
+
+.prog-progress__outside {
+  margin: 0;
+  font-size: 11.5px;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Small muted caption under a card title (小结 / 说明). */
 .card__sub {
   margin: 0;
@@ -4960,8 +5073,8 @@ select {
   border-bottom: 1px solid var(--line);
 }
 
-.pg-section--concentration > .pg-note {
-  padding: 10px 12px 0;
+.pg-section--concentration > .pg-noterule {
+  margin: 10px 12px 0;
 }
 
 .pg-section--concentration > .pg-grid {
@@ -5066,9 +5179,10 @@ select {
   opacity: 0.72;
 }
 
-/* 叶子要求条目(如「(ii) to 6 units MATH courses…」):这些是"约束/规则"而非可选课程,用
-   虚线框 + 圆角 marker 药丸和实心课程卡区分开;整列铺满(不再两列并排)避免半句被截断;正文
-   里的学分/级别数字加粗,降低漏读。 */
+/* 叶子要求条目(如「(iii) one DOTE course at 3000 or above level, excluding…」):这些是
+   "约束/规则"而非可选课程。做成与课程卡同高、纯白底的独立卡片,无外框——上下两条降浓警示条纹
+   (下方 .pg-rule 共用)充当"框",给约束感;marker 与正文统一到课号(DOTE)字号,整列铺满避免
+   半句被截断;正文里的学分/级别数字加粗。 */
 .pg-leaf-grid {
   display: flex;
   flex-direction: column;
@@ -5076,37 +5190,60 @@ select {
 }
 
 .pg-leaf {
+  position: relative;
+  overflow: hidden;
   display: grid;
   grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 3px 10px;
-  padding: 7px 11px;
+  align-items: center;
+  gap: 4px 10px;
+  min-height: 62px;
+  padding: 12px 13px;
   border-radius: 10px;
-  background: transparent;
-  border: 1.5px dashed color-mix(in srgb, var(--warn) 50%, var(--line));
+  /* 中性浅灰,较 --surface-2 再淡一度(掺入 --surface),整体灰调降一级。 */
+  background: color-mix(in srgb, var(--surface-2) 40%, var(--surface));
+}
+
+/* 章节级约束/规则条(如「Students must choose at least one concentration…」):与叶子约束卡
+   同款语言(浅灰底色 + 上下灰色警示条纹),但更窄——更矮、圆角小一档、无 marker,单行文字。 */
+.pg-noterule {
+  position: relative;
+  overflow: hidden;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--surface-2) 40%, var(--surface));
+}
+
+.pg-noterule__text {
+  font-size: 12.5px;
+  color: var(--ink);
+  line-height: 1.4;
 }
 
 .pg-leaf__marker {
   font-family: var(--mono);
-  font-size: 10.5px;
+  font-size: 12.5px;
   font-weight: 700;
-  color: var(--warn);
-  background: var(--warn-wash);
+  color: var(--ink);
+  /* 卡底降淡后,药丸用 --surface-2(略深于卡底)保持可辨。 */
+  background: var(--surface-2);
   border-radius: 999px;
-  padding: 2px 8px;
+  padding: 1px 8px;
   white-space: nowrap;
 }
 
 .pg-leaf__text {
-  font-size: 12px;
-  color: var(--ink-2);
-  line-height: 1.45;
+  font-size: 12.5px;
+  color: var(--ink);
+  line-height: 1.4;
 }
 
 /* 数字锚点(「3 units」「6 units」「3000」)——叶子正文里最易漏的信息,加粗提亮。 */
 .pg-leaf__em {
   color: var(--ink);
-  font-weight: 750;
+  font-weight: 800;
 }
 
 .pg-bulk {
@@ -5131,6 +5268,97 @@ select {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 7px;
+}
+
+/* 「任选 N 门即可」规则卡:pick-one/pick-n 节点的选择规则单独成一张卡,置于课程网格首位。
+   宽度随文字:默认占一张课卡(1×1),文字长时 .pg-rule--wide 拓成 1×2。上下各一条单色「警示
+   条纹」强调线——照搬黄黑危险胶带的斜向平行四边形图案,但只取图案不取颜色(用主题 --ink,
+   浅色主题近黑、深色主题近白),让「要选几门」在成片课卡里第一眼被框住。底色跟着本组课程的
+   常见配色(--hue/--shade 由组件按 dominant subject 注入),取比课卡略淡一档 lightness(+3%),
+   与课卡同源又不至于被误当成一门课;--hue 缺省时回落中性灰。 */
+.pg-rule {
+  grid-column: span 1;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 13px;
+  border-radius: 10px;
+  /* 底色跟本组课程配色,取与课卡同档的 fill(清晰可见,不再是近白的 +3%);--hue/--shade 由
+     组件按本组 dominant subject 注入,缺省(理论不会)回落中性 hue。 */
+  background: hsl(var(--hue, 225) var(--sat) calc(var(--fill-l) + var(--shade, 0%)));
+}
+
+.pg-rule--wide {
+  grid-column: span 2;
+}
+
+/* 上下两条危险胶带式斜条纹:-45° 重复渐变,实心段=平行四边形、透明段露出卡底。三类卡共用
+   几何,只是颜色分两路(下面两条规则)。 */
+.pg-rule::before,
+.pg-rule::after,
+.pg-leaf::before,
+.pg-leaf::after,
+.pg-noterule::before,
+.pg-noterule::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 7px;
+}
+
+/* pick 规则卡:条纹跟着本组课程的配色走(该 hue 的 edge 档、~62% 不透明),与其彩色底一体。 */
+.pg-rule::before,
+.pg-rule::after {
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, hsl(var(--hue, 225) var(--sat) calc(var(--edge-l) + var(--shade, 0%))) 62%, transparent)
+      0 6px,
+    transparent 6px 12px
+  );
+}
+
+/* 叶子约束卡 / 章节规则条:灰色条纹(半透明 --ink ~27%)——通用约束,不跟课程色,视觉中性。
+   高度砍到彩色 rule 卡的一半(7px → 3.5px),条带更细,与降淡的底色成套(彩色 rule 卡仍 7px)。 */
+.pg-leaf::before,
+.pg-leaf::after,
+.pg-noterule::before,
+.pg-noterule::after {
+  height: 3.5px;
+  background: repeating-linear-gradient(
+    -45deg,
+    color-mix(in srgb, var(--ink) 27%, transparent) 0 6px,
+    transparent 6px 12px
+  );
+}
+
+.pg-rule::before,
+.pg-leaf::before,
+.pg-noterule::before {
+  top: 0;
+}
+
+.pg-rule::after,
+.pg-leaf::after,
+.pg-noterule::after {
+  bottom: 0;
+}
+
+.pg-rule__zh {
+  font-size: 13px;
+  font-weight: 750;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.pg-rule__en {
+  font-size: 11px;
+  color: var(--ink-3);
+  line-height: 1.3;
 }
 
 /* Relative wrapper so the ⋯ 详情 button can sit as a SIBLING of the card <button>
@@ -5268,26 +5496,6 @@ select {
   font-style: italic;
   color: var(--ink-3);
   opacity: 0.85;
-}
-
-/* 「任选一门/N 门即可」hint on a pick-one/pick-n card: squeeze the title to a single line
-   so the hint gets its own row and every card in the grid keeps the same 2-line height. */
-.pg-course--pick .pg-course__title {
-  -webkit-line-clamp: 1;
-  max-height: 1.35em; /* 兜底 for engines that ignore -webkit-line-clamp */
-}
-
-.pg-course__pick {
-  font-size: 10.5px;
-  font-weight: 650;
-  line-height: 1.25;
-  color: var(--warn);
-}
-
-/* On a flooded (done) tile the hint rides the tile's text color like the rest. */
-.pg-course--done .pg-course__pick {
-  color: inherit;
-  opacity: 0.82;
 }
 
 /* On a flooded (done) tile, all text rides the tile's light/dark text color. */

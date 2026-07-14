@@ -13,6 +13,7 @@ import { CodeInput } from './components/CodeInput.tsx'
 import { CommittedList } from './components/CommittedList.tsx'
 import { CourseModal } from './components/CourseModal.tsx'
 import { ProgramPicker } from './components/ProgramPicker.tsx'
+import { ProgramProgress } from './components/ProgramProgress.tsx'
 import { ProgramTable } from './components/ProgramTable.tsx'
 import {
   SearchResults,
@@ -54,6 +55,7 @@ import {
   type CourseStanding,
   type Program,
 } from './lib/programs.ts'
+import { computeProgramProgress } from './lib/programProgress.ts'
 import { decodeLiveState, decodeShare, encodeLiveState, type LiveState } from './lib/shareLink.ts'
 import { createShare } from './lib/shareStore.ts'
 import {
@@ -1621,6 +1623,16 @@ export default function App() {
   const takenSet = useMemo(() => new Set(taken.map(courseKey)), [taken])
   const cartSet = useMemo(() => new Set(cart.map(courseKey)), [cart])
 
+  // 信息页「学分进度」:已完成课程按培养方案顶层 section 归类求和。units 从本学年目录(catalogByKey)
+  // 取,与大课表课卡显示的学分同口径;查不到的记为「学分未知」。无主修时不算(无 section 可归)。
+  const programProgress = useMemo(
+    () =>
+      selectedProgram
+        ? computeProgramProgress(selectedProgram, takenSet, (key) => catalogByKey.get(key)?.units ?? null)
+        : null,
+    [selectedProgram, takenSet, catalogByKey],
+  )
+
   function dropPins(code: string): void {
     setPins((current) => {
       if (!(code in current)) return current
@@ -2823,6 +2835,7 @@ export default function App() {
             <aside className="side side--info">
               {myInfoCard}
               {takenCard}
+              {programProgress && <ProgramProgress data={programProgress} takenTotal={taken.length} />}
               <p className="info-note">这些信息用于判断先修与本专业筛选。</p>
             </aside>
           </>

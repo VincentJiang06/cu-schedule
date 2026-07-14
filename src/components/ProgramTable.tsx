@@ -1,4 +1,5 @@
-import { courseColor } from '../lib/color.ts'
+import type { CSSProperties } from 'react'
+import { colorKey, courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { detectChooseRule, type ChooseRule } from '../lib/programChoose.ts'
 import type { ProgramCourse, Program, SectionNode } from '../lib/programs.ts'
@@ -53,6 +54,23 @@ function collectCourses(node: SectionNode): ProgramCourse[] {
   const out: ProgramCourse[] = [...node.courses]
   for (const child of node.children) out.push(...collectCourses(child))
   return out
+}
+
+// The color vars (--hue/--shade) of a course list's DOMINANT subject — the most common
+// colorKey among the cards, ties → first course. Lets the pick-rule card tint to the same
+// hue as the courses beside it. undefined for an empty list (caller then leaves it neutral).
+function dominantCourseColor(courses: ProgramCourse[]): CSSProperties | undefined {
+  if (courses.length === 0) return undefined
+  const byKey = new Map<string, { count: number; code: string }>()
+  for (const course of courses) {
+    const key = colorKey(course.code)
+    const seen = byKey.get(key)
+    if (seen) seen.count += 1
+    else byKey.set(key, { count: 1, code: course.code })
+  }
+  let best: { count: number; code: string } | undefined
+  for (const entry of byKey.values()) if (!best || entry.count > best.count) best = entry
+  return best ? courseColor(best.code) : undefined
 }
 
 // Partitions a children list into runs of consecutive leaf requirements (→ one
@@ -118,12 +136,17 @@ function NoteContent({ note }: { note: string }) {
   )
 }
 
-// Prose rule row (muted). Glossed when it matches a known要求词.
+// Section-level prose rule (e.g. "Students must choose at least one concentration and take
+// five or six courses…"). Rendered as a constraint bar in the same visual language as the
+// leaf cards (light-gray bg + GRAY hazard stripes) but SLIMMER (更窄). Neutral on purpose —
+// only the pick-rule cards carry the group's course color; generic constraints stay gray.
 function NoteLine({ note }: { note: string }) {
   return (
-    <p className="pg-note">
-      <NoteContent note={note} />
-    </p>
+    <div className="pg-noterule">
+      <span className="pg-noterule__text">
+        <NoteContent note={note} />
+      </span>
+    </div>
   )
 }
 
@@ -180,7 +203,7 @@ function CourseGrid({
   takenSet,
   onToggleTaken,
   onShowDetail,
-  pickHint,
+  rule,
 }: {
   courses: ProgramCourse[]
   catalogByKey: Map<string, Course>
@@ -188,11 +211,27 @@ function CourseGrid({
   onToggleTaken: (code: string) => void
   /** Opens the shared CourseModal for a resolved course (⋯ 详情 button). */
   onShowDetail?: (course: Course) => void
-  /** 「任选一门/N 门即可」line added to every card when this node is a pick-one/pick-n. */
-  pickHint?: string | null
+  /**
+   * 选择规则(任选一门 / N 门即可)独立成一张卡:置于课程网格首位,横跨两列(1×2),
+   * 与课程卡同高。null = 不是 pick-one/pick-n 节点(不显示规则卡)。
+   */
+  rule?: { zh: string; en: string } | null
 }) {
+  // 规则卡宽度随文字长短:短(如「任选 2 门即可 / two courses selected from」)占一张课卡的
+  // 位置(1×1);英文引子偏长时拓成 1×2,免得挤成瘦高多行。阈值卡在语料里的自然断点——干净的
+  // 引子 ≤28 字符,再长的都带描述/内嵌课号(见 build 期语料统计,断在 44+)。
+  const ruleWide = Boolean(rule && rule.en.length > 30)
+  // 规则卡底色跟着本组课程的「常见配色」走(dominant subject hue),读起来就是这一组的选课规则;
+  // CSS 里再取比课卡略淡的一档 lightness。无课程时(不会发生,rule 必伴 ≥2 门课)回落到中性底。
+  const ruleColor = rule ? dominantCourseColor(courses) : undefined
   return (
     <div className="pg-grid">
+      {rule && (
+        <div className={`pg-rule${ruleWide ? ' pg-rule--wide' : ''}`} role="note" style={ruleColor}>
+          <span className="pg-rule__zh">{rule.zh}</span>
+          {rule.en && <span className="pg-rule__en">{rule.en}</span>}
+        </div>
+      )}
       {courses.map((course, index) => {
         // Resolve title/units from the primary key, falling back to any alternative.
         const resolved =
@@ -206,7 +245,7 @@ function CourseGrid({
         return (
           <div className="pg-course-wrap" key={`${course.code}-${index}`}>
             <button
-              className={`pg-course${done ? ' pg-course--done' : ''}${pickHint ? ' pg-course--pick' : ''}`}
+              className={`pg-course${done ? ' pg-course--done' : ''}`}
               style={courseColor(course.code)}
               title={resolved?.title ?? course.code}
               type="button"
@@ -222,7 +261,6 @@ function CourseGrid({
               ) : (
                 <span className="pg-course__title pg-course__title--unknown">Unknown course</span>
               )}
-              {pickHint && <span className="pg-course__pick">{pickHint}</span>}
             </button>
             {resolved && onShowDetail && (
               <button
@@ -278,10 +316,14 @@ function SectionBlock({
   const promoteNote = !node.marker && !node.title && Boolean(node.note)
   const headLabel = node.title || (promoteNote ? (node.note ?? '') : '')
   // 选择语义:this node's prose may say "choose one/N course(s)" or "choose N units".
-  // Drives the units-chip emphasis (these N 学分 are to be *filled* from below) and the
-  // per-card 「任选…即可」hint on this node's DIRECT courses (children carry their own rule).
+  // Drives the units-chip emphasis (these N 学分 are to be *filled* from below) and, for a
+  // pick-one/pick-n node, a standalone 1×2 「任选…即可」rule card at the head of its course
+  // grid (children carry their own rule). The card carries the English lead-in (node.note)
+  // as its subtitle, so that note isn't ALSO shown as a separate muted line below the head —
+  // unless it was promoted into the head label (then the head already shows it).
   const chooseRule = detectChooseRule(node)
   const pickHint = pickHintText(chooseRule, node.courses.length)
+  const ruleCard = pickHint ? { zh: pickHint, en: promoteNote ? '' : (node.note ?? '') } : null
 
   return (
     <div
@@ -309,12 +351,12 @@ function SectionBlock({
           </button>
         )}
       </div>
-      {node.note && !promoteNote && <NoteLine note={node.note} />}
+      {node.note && !promoteNote && !ruleCard && <NoteLine note={node.note} />}
       {node.courses.length > 0 && (
         <CourseGrid
           catalogByKey={catalogByKey}
           courses={node.courses}
-          pickHint={pickHint}
+          rule={ruleCard}
           takenSet={takenSet}
           onShowDetail={onShowDetail}
           onToggleTaken={onToggleTaken}
