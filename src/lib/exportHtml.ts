@@ -1,4 +1,5 @@
 import { abbreviateLocation } from './buildingAbbrev.ts'
+import { RED_HAT_MONO_WOFF2_DATA_URI } from '../fonts/redHatMonoInline.ts'
 import { subjectPaint, type CanvasPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
@@ -93,6 +94,28 @@ export function buildScheduleHtml(
   const span = (ceilHour - floorHour) * 60
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
+  // #导出课块统一排版(用户拍板 2026-07-14,v3 硬编码,与 exportImage.ts 同一套强约束):
+  // 导出 HTML 是固定尺寸版面(页宽 PAGE_W 写死,窄屏横向滚动,不做响应式),课块文字
+  // 恰好两行、一行文字对齐一格 30 分钟网格行(行高 = GRID_H × 30/span);字号硬编码:
+  // 「一列宽恰好放下一行 17 个等宽字符」(课号 8 + 空格 + 楼宇 3 + 空格 + 房间 ≤4;
+  // 时间行 组件3+空格+时间11 = 15 字符 < 17),按行高封顶。字重:课号/地点/组件 bold、
+  // 时间 normal。全部尺寸构建时算死,px 内联进 <style>,零运行时自适应。
+  const GRID_H = 640
+  const PAGE_W = 1100
+  const rowPx = (GRID_H * 30) / span
+  const rowLine = rowPx.toFixed(2)
+  const CHAR_RATIO = 0.62 // 等宽字符宽/字号 保守比(Menlo .60 / Consolas .55 / DejaVu .602)
+  const colPx = (PAGE_W - 2 - 56) / dayCount // .tt 边框 2 + 时间轴 56
+  const textAvailPx = colPx - 4 - 4 - 16 // 块 margin 2×2 + 边框 1+3 + padding 8×2
+  const fontPx = Math.max(8, Math.floor(Math.min(textAvailPx / (17 * CHAR_RATIO), rowPx * 0.75)))
+  // 内容降级断点(并道窄块):第 2 行放不下 15 字符时收起组件前缀;第 1 行放不下 17
+  // 字符时收起地点。断点按硬编码字号换算成固定 px;@container 尺寸查询对的是容器的
+  // *内容盒*(不含 padding/边框),所以这里不加盒模型开销。
+  const needCompPx = Math.round(15 * CHAR_RATIO * fontPx)
+  const needLocPx = Math.round(17 * CHAR_RATIO * fontPx)
+  // 矮块降级线:不足两行高(仅非整半点开始的 45 分钟课会撞到)时收起第 2 行。
+  const shortMaxPx = Math.round(rowPx * 1.8)
+
   const hourTicks: number[] = []
   for (let tick = floorHour * 60; tick <= ceilHour * 60; tick += 30) hourTicks.push(tick)
 
@@ -110,11 +133,9 @@ export function buildScheduleHtml(
         // (见下方 .block / :root[data-theme='dark'] .block)，课块不用重新渲染整份 HTML。
         const light: CanvasPaint = paint(block.code, block.subject, 'light')
         const dark: CanvasPaint = paint(block.code, block.subject, 'dark')
-        // #容器查询方法论对齐导出:这份导出 HTML 本身就是活的 CSS,与屏幕课表能用同一套
-        // 手法——课号/全称地点/简写地点/时间四个片段全部渲染进 DOM,用 `<style>` 里的
-        // `@container` 规则(见下方)按块自己实际渲染出的宽高选档,不用 JS 算宽度、不用
-        // 额外过一遍 class。地点为空(TBA)时不渲染地点片段,天然不占位。
-        const locFull = block.location ? escapeHtml(block.location) : ''
+        // 地点恒用简写(abbreviateLocation,用户拍板 2026-07-14 v2,不再渲染全称片段);
+        // `<style>` 里的 `@container` 规则(见下方)按块实际宽高做*内容*降级(收起地点/
+        // 组件前缀/第 2 行)——字号不分档,全块统一。地点为空(TBA)时不渲染,天然不占位。
         const locAbbr = block.location ? escapeHtml(abbreviateLocation(block.location)) : ''
         // LEC 保持 .block 的实心样式；TUT/LAB 等非 LEC 加 .block--alt，与屏幕上
         // .tt2__block--lec vs .tt2__block--alt 的区分一致（见下方 CSS）。
@@ -123,18 +144,20 @@ export function buildScheduleHtml(
           `top:${top}%;height:${height}%;left:${left}%;width:${width}%;` +
           `--fill-l:${light.fill};--edge-l:${light.edge};--text-l:${light.text};` +
           `--fill-d:${dark.fill};--edge-d:${dark.edge};--text-d:${dark.text}`
+        // #Bug C:时间文案用真实结束时间(与屏幕 Timetable/TimetableCompare、PNG 导出
+        // exportImage.ts 一致的 hhmm(block.end)),shownEnd(进位后的 displayEndMinutes)只用
+        // 于上面算块高度,不进这里的文案,否则会出现「PNG 显示 12:15、HTML 显示 12:30」的
+        // 进位不一致。
+        const timeText = `${hhmm(block.start)}–${hhmm(block.end)}`
         return `<article class="block${isLec ? '' : ' block--alt'}" style="${style}">` +
-          `<span class="block__code">${escapeHtml(block.code)}</span>` +
-          (block.location
-            ? `<span class="block__loc-full">${locFull}</span><span class="block__loc-abbr">${locAbbr}</span>`
-            : '') +
-          // #Bug C:时间文案用真实结束时间(与屏幕 Timetable/TimetableCompare、PNG 导出
-          // exportImage.ts 一致的 hhmm(block.end)),shownEnd(进位后的 displayEndMinutes)只用
-          // 于上面算块高度,不进这里的文案,否则会出现「PNG 显示 12:15、HTML 显示 12:30」的
-          // 进位不一致。
-          `<span class="block__time"><span class="block__comp">${escapeHtml(block.component)} </span>` +
-          `<span class="block__time-a">${hhmm(block.start)}</span>` +
-          `<span class="block__time-dash">–</span><span class="block__time-b">${hhmm(block.end)}</span></span>` +
+          `<span class="block__l1"><span class="block__code">${escapeHtml(block.code)}</span>` +
+          (block.location ? `<span class="block__loc"> ${locAbbr}</span>` : '') +
+          // 矮块降级备用片段:默认隐藏,矮块(第 2 行被收起)时改为显示,把时间并进第 1
+          // 行——与画布导出的矮块单行「课号 + 时间」一致。
+          `<span class="block__time-inline"> ${timeText}</span>` +
+          `</span>` +
+          `<span class="block__l2"><span class="block__comp">${escapeHtml(block.component)} </span>` +
+          `<span class="block__time">${timeText}</span></span>` +
           `</article>`
       })
       .join('')
@@ -163,6 +186,16 @@ export function buildScheduleHtml(
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CU Schedule · ${escapeHtml(termName)}</title>
+<style>
+/* 课块等宽字体 Red Hat Mono **内嵌**进本文件(可变字体 300–700 latin 子集 data URI,
+   用户拍板 2026-07-15)——离线打开照常渲染,不依赖任何 CDN,字体绝不兜底。 */
+@font-face {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 300 700;
+  src: url(${RED_HAT_MONO_WOFF2_DATA_URI}) format('woff2');
+}
+</style>
 <script>
   // #里程碑5:在首次绘制前就把 data-theme 定下来(存过的选择 > 系统偏好)，避免切页闪一下。
   (function () {
@@ -186,7 +219,8 @@ export function buildScheduleHtml(
     color: #141a2b;
     background: #e7e9f0;
   }
-  .wrap { max-width: 1100px; margin: 0 auto; }
+  /* 固定版面宽(v3 硬编码):列宽/字号都按这个宽度算死,窄屏横向滚动,不缩排版。 */
+  .wrap { width: ${PAGE_W}px; margin: 0 auto; }
   h1 { margin: 0 0 2px; font-size: 22px; font-weight: 750; }
   .sub { margin: 0 0 18px; font-size: 13px; color: #6c7488; }
   .tt {
@@ -226,7 +260,7 @@ export function buildScheduleHtml(
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: 56px repeat(${dayCount}, minmax(0, 1fr));
-    grid-template-rows: 640px;
+    grid-template-rows: ${GRID_H}px;
     position: relative;
   }
   .axis, .day {
@@ -254,29 +288,26 @@ export function buildScheduleHtml(
   .grid-line--half {
     background: #f0f1f5;
   }
-  /* #容器查询方法论对齐导出:这份导出 HTML 完全离线自包含，正好可以跟屏幕课表用*同一套*
-     真正的 CSS 容器查询方法论(而不是 JS 算宽度加 class)——.block 挂 container-type:size
-     + container-name:blk，课号/全称地点/简写地点/时间四个片段全部渲染进 DOM(dayColumns
-     那段拼接见上方)，具体哪档可见、要不要折行/降级，全交给下面的 @container blk 规则
-     按块自己实际渲染出的宽高决定。断点数值与屏幕版(styles.css 的「共享的容器查询规则」
-     一节)同一套——两边的 border+padding 开销量级相近，同一组数字够用，不必为这份离线
-     导出文件单独再核验一轮。 */
+  /* #导出课块统一排版(用户拍板 2026-07-14,与 exportImage.ts 同一套强约束):
+     恰好两行,每行行高 = 一格 30 分钟网格行的像素高(构建时从 span 算好内联进来),
+     两行合起来刚好占满最短课块(45 分钟课进位显示为 60 分钟 = 两格);全块统一字号,
+     不再按宽窄分字号档。@container 规则只做*内容*降级:全称地点↔简写、极窄收起
+     组件前缀/地点、矮块收起第 2 行。.block 挂 container-type:size + container-name:blk。 */
   .block {
     position: absolute;
     z-index: 1;
-    display: flex;
-    flex-flow: row wrap;
-    align-items: baseline;
-    column-gap: 6px;
-    row-gap: 1px;
     margin: 1px 2px;
-    padding: 4px 8px;
+    padding: 0 8px;
     /* #里程碑1(圆角更明显):6px → 10px，与屏幕上加大后的 .tt2__block 一致。 */
     border-radius: 10px;
     border: 1px solid;
     border-left-width: 3px;
     overflow: hidden;
-    line-height: 1.2;
+    line-height: ${rowLine}px;
+    /* 课块文字全部等宽、字号硬编码(用户拍板 2026-07-14 v2/v3/v4)——课号/地点/组件/
+       时间一律 Red Hat Mono,一个字号,与画布横屏导出同一套 17 字符预算。 */
+    font-family: "Red Hat Mono", Menlo, Consolas, monospace;
+    font-size: ${fontPx}px;
     container-type: size;
     container-name: blk;
     /* #里程碑5:明暗两套色阶都以自定义属性内联在每个课块上，切主题只是换用哪一组，
@@ -290,95 +321,39 @@ export function buildScheduleHtml(
   .block.block--alt {
     background: color-mix(in srgb, var(--fill-l) 38%, #ffffff);
   }
-  /* 课号——唯一在所有档位都保留的片段。默认(窄档)给紧凑字号，宽档由下面的 @container
-     放大。min-width:0 而不是 flex-shrink:0——容器极窄时得允许它缩到比自身内容还窄，
-     靠 overflow/ellipsis 截断，不能把兄弟片段(时间行)一起挤出容器。 */
-  .block__code {
-    font-weight: 750;
-    font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
+  /* 两个行盒:各占一格 30 分钟行的高度，行内垂直居中(line-height = height)，超宽用
+     省略号截断——一行文字对表格的一行。字号继承 .block 的硬编码值,不再自适应。 */
+  .block__l1, .block__l2 {
+    display: block;
+    height: ${rowLine}px;
+    line-height: ${rowLine}px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 0;
-    max-width: 100%;
-    font-size: 13px;
   }
-  /* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
-     宽档由 @container 反过来。 */
-  .block__loc-full {
-    font-weight: 650;
-    opacity: 0.92;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    max-width: 100%;
-    display: none;
-    font-size: 13.5px;
+  /* 第 2 行向上收 0.12 格,两行贴得更近(用户拍板 2026-07-15)——与画布导出的
+     line2Y = rowH×1.38 同一收紧量。 */
+  .block__l2 { margin-top: -${(rowPx * 0.12).toFixed(2)}px; }
+  /* 字重阶梯(用户拍板 2026-07-14 v5):课号 700 / 地点 600 / 组件 600 / 时间 500。
+     字号/字体全部继承 .block。 */
+  .block__code { font-weight: 700; }
+  .block__loc { font-weight: 600; }
+  .block__comp { font-weight: 600; }
+  .block__time { font-weight: 500; font-variant-numeric: tabular-nums; }
+  .block__time-inline { font-weight: 500; font-variant-numeric: tabular-nums; display: none; }
+  /* 并道窄块的内容降级(只增删内容,字号不变;断点由硬编码字号换算成固定 px):
+     第 1 行放不下 17 字符 → 收起地点;第 2 行放不下 15 字符 → 收起组件前缀。 */
+  @container blk (max-width: ${needLocPx}px) {
+    .block__loc { display: none; }
   }
-  .block__loc-abbr {
-    font-weight: 650;
-    opacity: 0.92;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    min-width: 0;
-    max-width: 100%;
-    flex-basis: 100%;
-    font-size: 11px;
+  @container blk (max-width: ${needCompPx}px) {
+    .block__comp { display: none; }
   }
-  /* 时间——独占一行(flex-basis:100%)。默认按窄档给尺寸；容器窄到极限时(见下方
-     @container)再从一行"09:30–12:15"折成两行。 */
-  .block__time {
-    display: flex;
-    align-items: baseline;
-    flex-basis: 100%;
-    min-width: 0;
-    max-width: 100%;
-    overflow: hidden;
-    font-variant-numeric: tabular-nums;
-    opacity: 0.9;
-    white-space: nowrap;
-    font-size: 11px;
-  }
-  .block__comp {
-    font-weight: 700;
-    opacity: 0.85;
-  }
-  /* 宽档:全称地点现身、简写地点收起，课号/地点/时间字号都放大一档。 */
-  @container blk (min-width: 130px) {
-    .block__code { font-size: 16px; }
-    .block__loc-full { display: inline; }
-    .block__loc-abbr { display: none; }
-    .block__time { font-size: 13.5px; }
-  }
-  /* 窄档专属子断点:时间从一行拆成两行"09:30" / "–12:15"。 */
-  @container blk (max-width: 70px) {
-    .block__time { flex-direction: column; align-items: flex-start; line-height: 1.15; gap: 0; }
-    .block__time-dash { display: none; }
-    .block__time-b::before { content: '–'; }
-  }
-  /* 矮块降级:不论宽窄，地点行整个收起，只留课号+时间，字号摁回窄档同一档紧凑值
-     (宽档大字号在矮块的高度预算里放不下——与屏幕版调容器查询断点时踩过的坑一致)。 */
-  @container blk (max-height: 38px) {
-    .block__loc-full, .block__loc-abbr { display: none; }
-    .block__code { font-size: 13px; }
-    .block__time { font-size: 11px; }
-  }
-  /* 窄(已两行拆分)+矮 的交集:两行时间 + 课号常已超出矮档预算，直接连时间也收起。 */
-  @container blk (max-height: 49px) and (max-width: 70px) {
-    .block__time { display: none; }
-  }
-  /* 宽+矮 的交集:宽档字号比矮档降级预算的 38px 更占地方，续一档更高的降级线。 */
-  @container blk (max-height: 49px) and (min-width: 130px) {
-    .block__loc-full { display: none; }
-    .block__code { font-size: 13px; }
-    .block__time { font-size: 11px; }
-  }
-  /* 极矮降级:再退一步，时间也收起，只剩课号一行。 */
-  @container blk (max-height: 26px) {
-    .block__time { display: none; }
-    .block__code { font-size: 11px; line-height: 1; }
+  /* 矮块降级(不足两行高,仅非整半点开始的 45 分钟课会撞到):收起第 2 行和地点,
+     把时间并进第 1 行——与画布导出的矮块单行「课号 + 时间」一致。 */
+  @container blk (max-height: ${shortMaxPx}px) {
+    .block__l2, .block__loc { display: none; }
+    .block__time-inline { display: inline; }
   }
   footer { margin-top: 14px; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
   .foot-byline { font-size: 12.5px; font-weight: 750; color: #141a2b; text-decoration: none; }

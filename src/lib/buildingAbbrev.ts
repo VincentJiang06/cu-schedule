@@ -1,19 +1,30 @@
-/** 里程碑2「地点缩写」：横向空间不足时，把课程块地点里的楼名换成官方缩写，
- * 房间号/LT 号原样保留——例："Ho Sin-Hang Engg Bldg Rm123" → "SHB Rm123"。
+/** 地点缩写:把课程块地点里的楼名换成 CUHK 官方缩写,房间号/LT 号原样保留——
+ * 例:"Ho Sin-Hang Engg Bldg Rm123" → "SHB Rm123"。
  *
- * 官方缩写表来自 CUHK Graduate School。数据源(scraped course locations)里楼名常写
- * 成缩略形式（Bldg=Building、Engg/Eng=Engineering、Archi=Architecture、
- * Med Sci=Medical Sciences 等——后两个是从实际抓到的地点字符串里核对出来的，不是
- * 官方缩略惯例，但同一楼名在数据里就是这么写的，不认它就永远匹配不上表里那一行），
- * 匹配时把这些缩略词都展开成官方全称的写法再比较，就不用为每种缩写单独收录一条表项。
+ * 缩写表**只收官方条目,不自造**(用户拍板 2026-07-15):
+ *  - 主来源:Registration and Examinations Section「Buildings/Halls」
+ *    https://www.res.cuhk.edu.hk/teaching-timetable-classroom-booking/teaching-timetable/buildings-halls/
+ *  - 补充:Graduate School「Building Abbreviations」(AB/BATC/HKSP/KSB SQ/USC 等
+ *    RES 表未列的条目)
+ *    https://www.gs.cuhk.edu.hk/academics/teaching-timetable/building-abbreviation
+ * 两表都没有的场馆(如 Fok Ying Tung RS Sci Bldg、Graduate Law Centre)**保持原样
+ * 返回,不做首字母拼凑**。
  *
- * 表里没有的楼名（或匹配失败）走兜底规则：取楼名各词首字母拼成缩写。 */
+ * 数据源(scraped course locations)里楼名常写成缩略形式(Bldg=Building、
+ * Engg/Eng=Engineering 等),匹配时把这些缩略词展开成官方全称用词再比较;展开覆盖
+ * 不了的数据侧变体(截断/逗号/连字符/词序不同)在 DATA_ALIASES 里逐条收录**数据里
+ * 的原样拼写**——2026-27 全年数据 419 个地点已逐一核对(见 WORKLOG 2026-07-15)。 */
 
-/** [官方全称, 缩写]。 */
+/** [官方全称, 官方缩写]。名称里的逗号已去掉(归一化本来就会剥掉,写表时省去)。 */
 const OFFICIAL_BUILDINGS: [name: string, abbr: string][] = [
-  ['Academic Building', 'AB'],
+  // ── RES Buildings/Halls(主来源)──
+  ['Academic Building No.1', 'AB1'],
+  ['Art Museum East Wing', 'AMEW'],
   ['Lee Shau Kee Architecture Building', 'ARC'],
   ['Basic Medical Sciences Building', 'BMS'],
+  ['Chung Chi College Chapel', 'CCCC'],
+  ['Chung Chi College Theology Building', 'CCT'],
+  ["C.K. Tse Room", 'CK TSE'],
   ['Chen Kou Bun Building', 'CKB'],
   ["Ch'ien Mu Library", 'CML'],
   ['C.W. Chu College', 'CWC'],
@@ -21,33 +32,97 @@ const OFFICIAL_BUILDINGS: [name: string, abbr: string][] = [
   ['Esther Lee Building', 'ELB'],
   ['William M.W. Mong Engineering Building', 'ERB'],
   ['Wong Foo Yuan Building', 'FYB'],
-  ["Pi-Ch'iu Building", 'HCA'],
+  ['Pi Chiu Building', 'HCA'],
+  ['Sir Philip Haddon-Cave Sports Field', 'HCF'],
   ['Ho Tim Building', 'HTB'],
+  ['Haddon-Cave Tennis Court', 'HTC'],
   ['Hui Yeung Shing Building', 'HYS'],
+  ['Lo Kwee-Seong Integrated Biomedical Sciences Building', 'IBSB'],
   ['Institute of Chinese Studies', 'ICS'],
   ['Fung King Hey Building', 'KHB'],
   ['Leung Kau Kui Building', 'KKB'],
   ['Kwok Sports Building', 'KSB'],
   ['Li Dak Sum Building', 'LDS'],
   ['Y.C. Liang Hall', 'LHC'],
+  ['Lee Hysan Concert Hall', 'LHCH'],
   ['Li Koon Chun Hall', 'LKC'],
+  ['Lingnan Stadium Chung Chi College', 'LN'],
+  ['Lai Chan Pui Ngong Lecture Theatre', 'LPN LT'],
   ['Lady Shaw Building', 'LSB'],
   ['Lee Shau Kee Building', 'LSK'],
+  ['Li Wai Chun Building', 'LWC'],
+  ['Morningside College Seminar Room', 'MCO'],
   ['Mong Man Wai Building', 'MMW'],
   ['Cheng Ming Building New Asia College', 'NAA'],
+  ['New Asia College Gymnasium', 'NAG'],
   ['Humanities Building New Asia College', 'NAH'],
+  ['New Asia College Table Tennis Room', 'NATT'],
+  ['Multi-purpose Hall Jockey Club Postgraduate Hall 3', 'PGH3 MPH'],
+  ['Multi-purpose Hall Pommerenke Student Centre', 'PSC MPH'],
+  ['Prince of Wales Hospital', 'PWH'],
   ['Sir Run Run Shaw Hall', 'RRS'],
   ['Sino Building', 'SB'],
   ['Science Centre', 'SC'],
   ['Science Centre East Block', 'SCE'],
+  ['Multi-purpose Sports Hall Shaw College', 'SCSH'],
+  ['Table Tennis Room Shaw College', 'SCTT'],
   ['Ho Sin-Hang Engineering Building', 'SHB'],
-  ['Swire Hall', 'SWH'],
+  ['Swimming Pool', 'SP'],
+  ['Lecture Theatre Shaw College', 'SWC LT'],
+  ['Swire Hall Fung King Hey Building', 'SWH'],
+  ['Tennis Court', 'TC'],
+  ['T.Y. Wong Hall Ho Sin-Hang Engineering Building', 'TYW LT'],
+  ['Table Tennis Room United College', 'UC TT'],
   ['Tsang Shiu Tim Building United College', 'UCA'],
   ['T.C. Cheng Building United College', 'UCC'],
+  ['The Thomas H.C. Cheung Gymnasium of United College', 'UCG'],
   ['University Gymnasium', 'UG'],
-  ['University Sports Centre', 'USC'],
+  ['University Sports Centre Table Tennis Room', 'USC TT'],
+  ['Wen Lan Tang Shaw College', 'WLS'],
   ['Wu Ho Man Yuen Building', 'WMY'],
+  ['Lee W.S. College South Block', 'WS1'],
+  ['Wu Yee Sun College Theatre', 'WYST'],
+  ['President Chi-tung Yung Memorial Building', 'YCT'],
   ['Yasumoto International Academic Park', 'YIA'],
+  // ── Graduate School 补充(RES 表未列)──
+  ['Academic Building', 'AB'],
+  ['MBA Town Centre', 'BATC'],
+  ['Hong Kong Science And Technology Parks Corporation', 'HKSP'],
+  ['Squash Court Kwok Sports Building', 'KSB SQ'],
+  ['University Sports Centre', 'USC'],
+]
+
+/** 数据侧变体 → 官方缩写:词展开覆盖不了的截断/逗号/连字符/词序差异,按数据里的
+ * **原样拼写**逐条收录(两边走同一套 tokenize 归一化,所以逗号/点号差异无所谓,
+ * 但词序和截断必须原样)。 */
+const DATA_ALIASES: [name: string, abbr: string][] = [
+  ['Academic Building I', 'AB1'],
+  ['ARC Bldg', 'ARC'],
+  ['CC College Theology Bldg', 'CCT'],
+  ['Chung Chi College Lib CK TSE', 'CK TSE'],
+  ['Covered Playgrd, U Sport Centr', 'USC'],
+  ['Fung King Hey Bldg Swire Hall', 'SWH'],
+  ['Kwok Sports Bldg Squash Court', 'KSB SQ'],
+  ['LKS Intg Biomed Sci Bldg', 'IBSB'],
+  ['Lai Chan Pui Ngong LT', 'LPN LT'],
+  ['Lee W.S Col', 'WS1'],
+  ['Li Wai Chun', 'LWC'],
+  ['Lingnan Stadium, CC College', 'LN'],
+  ['Morningside College', 'MCO'],
+  ['Multi-purpose Halls,JCPG', 'PGH3 MPH'],
+  ['Multi-purpose Sports Hall, SC', 'SCSH'],
+  ["Pi-Ch'iu Building", 'HCA'],
+  ['Pres Chi-tung Yung MBldg', 'YCT'],
+  ['President Chi-tung Yung MBldg', 'YCT'],
+  ['Shaw College LT', 'SWC LT'],
+  ['Sir Philip Haddon-Cave Sport F', 'HCF'],
+  ['T.Y.Wong Hall LT', 'TYW LT'],
+  ['T.Y.Wong Hall', 'TYW LT'],
+  ['Table Tennis Rm, U Sport Centr', 'USC TT'],
+  ['Table Tennis Room, UC', 'UC TT'],
+  ['The Thomas H.C. Cheung Gym, UC', 'UCG'],
+  ['Town Centre', 'BATC'],
+  ['Tsang Shiu Tim Bldg', 'UCA'],
 ]
 
 /** 数据源里常见的楼名缩略词 → 展开成官方全称用词，比较时双方都走这一份归一化。
@@ -64,16 +139,17 @@ const WORD_EXPAND: Record<string, string> = {
   sci: 'sciences',
   intl: 'international',
   acad: 'academic',
+  chin: 'chinese',
 }
 
-/** 楼名/学院限定后缀——数据里楼名常常不带这个后缀（比如 "T.C. Cheng Bldg"，没有
+/** 楼名/书院限定后缀——数据里楼名常常不带这个后缀（比如 "T.C. Cheng Bldg"，没有
  * "United College"），所以官方全称里带这类后缀的条目，额外收录一份去掉后缀的别名。 */
-const COLLEGE_SUFFIXES = [' New Asia College', ' United College']
+const COLLEGE_SUFFIXES = [' New Asia College', ' United College', ' Shaw College', ' Chung Chi College']
 
 type Tok = { norm: string; raw: string[] }
 
 function normalizeWord(word: string): string {
-  const stripped = word.toLowerCase().replace(/[.'’]/g, '')
+  const stripped = word.toLowerCase().replace(/[.,'’]/g, '')
   return WORD_EXPAND[stripped] ?? stripped
 }
 
@@ -102,7 +178,7 @@ type Alias = { tokens: Tok[]; abbr: string }
 
 function buildAliases(): Alias[] {
   const aliases: Alias[] = []
-  for (const [name, abbr] of OFFICIAL_BUILDINGS) {
+  for (const [name, abbr] of [...OFFICIAL_BUILDINGS, ...DATA_ALIASES]) {
     aliases.push({ tokens: tokenize(name), abbr })
     for (const suffix of COLLEGE_SUFFIXES) {
       if (name.endsWith(suffix)) aliases.push({ tokens: tokenize(name.slice(0, -suffix.length)), abbr })
@@ -115,37 +191,9 @@ function buildAliases(): Alias[] {
 
 const SORTED_ALIASES = buildAliases()
 
-/** 表里没匹配到的楼名兜底：从右往左找第一个带数字的词，认定它（以及紧邻它左边、
- * 纯字母且很短的一个标签词，比如 "Rm"）是房间号的起点，房间号左边的词各取首字母
- * 拼成缩写。找不到数字（没有明显的"房间号"边界）就原样返回，不瞎猜。 */
-function fallbackAbbreviate(loc: string): string {
-  const words = loc.split(/\s+/).filter(Boolean)
-  if (words.length < 2) return loc
-
-  let roomStart = -1
-  for (let i = words.length - 1; i >= 0; i -= 1) {
-    if (/\d/.test(words[i])) {
-      roomStart = i
-      break
-    }
-  }
-  if (roomStart <= 0) return loc
-  if (/^[A-Za-z]{1,3}$/.test(words[roomStart - 1])) roomStart -= 1
-  if (roomStart < 1) return loc
-
-  const buildingWords = words.slice(0, roomStart)
-  const roomWords = words.slice(roomStart)
-  const initials = buildingWords
-    .map((word) => word.replace(/[^A-Za-z]/g, '')[0])
-    .filter((ch): ch is string => Boolean(ch))
-    .map((ch) => ch.toUpperCase())
-    .join('')
-  if (initials.length < 2) return loc
-  return `${initials} ${roomWords.join(' ')}`
-}
-
-/** 把地点里的楼名换成官方缩写，房间号/LT 号原样保留；表里没有的楼名走首字母兜底；
- * 已经很短（单个词）的地点原样返回。 */
+/** 把地点里的楼名换成官方缩写，房间号/LT 号原样保留。表里没有的楼名**原样返回**——
+ * 官方两表都没收录的场馆不做任何自造缩写(用户拍板 2026-07-15,撤掉了旧的首字母
+ * 拼凑兜底)；已经很短（单个词）的地点同样原样返回。 */
 export function abbreviateLocation(raw: string): string {
   const loc = (raw ?? '').trim()
   if (!loc) return raw
@@ -163,5 +211,5 @@ export function abbreviateLocation(raw: string): string {
     }
   }
 
-  return fallbackAbbreviate(loc)
+  return loc
 }

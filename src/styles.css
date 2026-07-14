@@ -10,6 +10,18 @@
    Course colors come from --hue, set inline from the four-letter subject code.
    =========================================================================== */
 
+/* 导出课块指定等宽字体 Red Hat Mono——自托管(用户拍板 2026-07-15,撤 Google CDN):
+   可变字体单文件覆盖 300–700 全部字重(latin 子集,22KB,含 en-dash U+2013)。
+   font-display: swap = 屏上预览时字体未就绪先用兜底 mono 顶着;导出侧绝不允许兜底,
+   由 exportImage.ts 的 ensureExportFonts 在画图前强制等字体就绪、不就绪直接报错。 */
+@font-face {
+  font-family: 'Red Hat Mono';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('./fonts/red-hat-mono-latin.woff2') format('woff2');
+}
+
 :root {
   --font: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
     'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;

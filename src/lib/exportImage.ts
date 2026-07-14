@@ -104,29 +104,67 @@ const ALT_FILL_ALPHA = 0.38
 // (12px/10px)观感一致（画布坐标系与 CSS px 不是同一把尺子，按块本身的典型高宽比目测对齐）。
 const BLOCK_RADIUS = 9
 
-// #里程碑2:课号是等宽字体，与屏幕 .tt__block-code/.tt2__block-code 的 var(--mono) 一致，
-// 让导出图和屏幕上的课号字体保持所见即所得。
-const MONO_STACK = 'ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace'
+// 课块文字全部等宽字体(用户拍板 2026-07-14 v4):指定 Red Hat Mono(Google Fonts,
+// index.html 挂载 400/700 两档),Menlo/Consolas 仅作字体加载失败时的兜底——课号/
+// 地点/组件/时间一律用它;字号按字符预算一次算死(见 blockFontSize),不做自适应。
+const MONO_STACK = '"Red Hat Mono", Menlo, Consolas, monospace'
 
-// #容器查询方法论对齐导出:导出画布的课块按*块自己的实际像素宽高*选档,与屏幕上课表
-// 同一套方法论(见 Timetable.tsx/TimetableCompare.tsx + styles.css 的 @container blk)——
-// 不再固定画两行。宽档:课号+地点同一行大字、第2行时间；窄档:课号/简写地点/时间三行
-// 堆叠、更窄时时间再拆两行；矮块降级(不论宽窄):只画课号+时间，收起地点。
-// 宽档字号(课号最大最醒目，地点次之，时间与地点相近)。
-const BLOCK_CODE_SIZE = 26
-const BLOCK_LOC_SIZE = 22
-const BLOCK_TIME_SIZE = 20
-// 窄档/矮块降级共用的紧凑字号——矮块不论宽窄都用这一档小字（教训与屏幕版一致：宽档的大
-// 字号在矮块的两行预算里放不下，矮块降级必须统一摁回小字号，而不是继承宽档大字号）。
-const BLOCK_CODE_SIZE_SM = 20
-const BLOCK_LOC_SIZE_SM = 17
-const BLOCK_TIME_SIZE_SM = 16
+// 字重阶梯(用户拍板 2026-07-14 v5,按行):课号 700 / 地点 600 / 组件 600 / 时间 500。
+const WEIGHT_CODE = 700
+const WEIGHT_LOC = 600
+const WEIGHT_COMP = 600
+const WEIGHT_TIME = 500
 
-// 两档判定阈值(画布坐标——与屏幕 CSS px 不是同一把尺子；导出字号本来就比屏幕大出
-// 一截，阈值按同样比例放大过)。
-const EXPORT_WIDE_MIN = 230 // 宽档:课号+地点横排大字
-const EXPORT_TIME_SPLIT_MAX = 140 // 窄档再窄一档:时间从一行拆成两行
-const EXPORT_SHORT_MAX_H = 80 // 矮块降级:收起地点，只留课号+时间
+/** canvas 的 fillText 不会等 webfont——绘制前把 Red Hat Mono 用到的字重显式 load 完。
+ * 屏上预览允许 swap 兜底(styles.css font-display: swap),但**导出绝不允许兜底**
+ * (用户拍板 2026-07-15):字体已自托管同源(styles.css @font-face,可变字体单文件),
+ * load 后仍不可用只会是极早期竞态——小睡重试一次,再不行直接报错中止导出,绝不让
+ * 兜底字体混进导出物(兜底 mono 无 500/600 档,字重阶梯会塌)。 */
+async function ensureExportFonts(): Promise<void> {
+  const specs = [WEIGHT_CODE, WEIGHT_LOC, WEIGHT_TIME].map((weight) => `${weight} 16px "Red Hat Mono"`)
+  const ready = () => specs.every((spec) => document.fonts.check(spec))
+  await Promise.all(specs.map((spec) => document.fonts.load(spec)))
+  if (!ready()) {
+    await new Promise((resolve) => setTimeout(resolve, 300))
+    await Promise.all(specs.map((spec) => document.fonts.load(spec)))
+    if (!ready()) throw new Error(t('导出字体尚未就绪，请稍后重试'))
+  }
+}
+
+// #导出课块统一排版(用户拍板 2026-07-14,v4 分横竖两种固定模式,对所有导出格式强约束):
+// 共同约束:一个课块内所有文字同一字号且整张图一个字号(硬编码,不做逐块自适应);
+// 字重阶梯 课号 700 / 地点 600 / 组件 600 / 时间 500(见 WEIGHT_*);字体全部等宽
+// (Red Hat Mono);地点恒用简写(abbreviateLocation,不出现全称)。
+// - 横屏(W ≥ H,含 PDF):与导出 HTML 同一套两行渲染——恰好两行,一行文字对齐一格
+//   30 分钟网格行;字号 =「一列宽放满 17 个等宽字符」(课号 8 + 空格 + 楼宇简写 3 +
+//   空格 + 房间号 ≤4 = 17;第 2 行 组件 3 + 空格 + 时间 11 = 15 < 17),按行高封顶。
+// - 竖屏(H > W):从头另排——行距 = 半格(15 分钟),最短课块(显示 60 分钟 = 两格)
+//   恰好四行:课号 / 地点简写 / 组件 / 「开始时间+时长标记」(无空格,用户拍板);
+//   时长标记 4 字符(+45m/+1hr/+2hr/+3hr,>1hr 记 2hr、>2hr 一律 3hr),时间行
+//   5+4 = 9 字符 = 竖屏字符预算(课号/地点 ≤8 更短)。
+// 等宽字符实宽用 measureText 实测(不猜字宽比)。
+const LINE_CHAR_BUDGET_LANDSCAPE = 17
+const LINE_CHAR_BUDGET_PORTRAIT = 9
+
+/** 整张导出图共用的课块字号:一列宽(单道课块的文字可用宽)放满 budget 个等宽字符,
+ * 再按行距封顶防纵向溢出。 */
+function blockFontSize(ctx: CanvasRenderingContext2D, colW: number, linePitch: number, budget: number): number {
+  ctx.font = `700 100px ${MONO_STACK}`
+  const charW = ctx.measureText('0').width / 100 // 每字符宽 / 字号 比(等宽字体恒定)
+  const textAvail = colW - 6 - 15 // 块宽 = colW-6(左右各 3px 间隙);文字左缩进 9 + 右缓冲 6
+  const fitByCol = textAvail / (budget * charW)
+  return Math.max(8, Math.floor(Math.min(fitByCol, linePitch * 0.75)))
+}
+
+/** 竖屏时间行的时长标记(用户拍板):45 分钟内 +45m;1 小时内 +1hr;超过 1 小时记
+ * +2hr;超过 2 小时一律 +3hr。恒 4 字符。 */
+function durationTag(startMin: number, endMin: number): string {
+  const mins = endMin - startMin
+  if (mins <= 45) return '+45m'
+  if (mins <= 60) return '+1hr'
+  if (mins <= 120) return '+2hr'
+  return '+3hr'
+}
 
 /** Alpha-blend a solid `hsl(...)` paint color toward whatever is already painted behind
  * it — a `<canvas>` has no `color-mix()`, but painting a translucent fill over an
@@ -151,17 +189,14 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath()
 }
 
-/** #容器查询方法论对齐导出:按课块*实际像素宽高*(w/h,调用方已经算好、已经是 lane 分道
- * 后的真实宽高)选档画文字，与屏幕课表同一套两档+矮块降级方法论——canvas 没有 CSS 的
- * 自动换行/省略号，这里手动用 ctx.measureText 量出文字宽度决定排法；调用方已经把这段
- * 绘制包在 ctx.clip() 到圆角矩形范围内，量算稍有出入也只会被裁掉，不会真的溢出到相邻
- * 课块上。
- * - 宽档(w ≥ EXPORT_WIDE_MIN)：第1行「课号 + 地点」横排大字——地点优先用全称，量出来
- *   放不下就退到简写，简写也放不下就只画课号；第2行时间整串。
- * - 窄档(w < EXPORT_WIDE_MIN)：课号 / 简写地点 / 时间三行堆叠；块还窄到
- *   < EXPORT_TIME_SPLIT_MAX 时时间从一行拆成两行。
- * - 矮块降级(h < EXPORT_SHORT_MAX_H)：不论宽窄，只画课号+时间两行，收起地点行，字号
- *   统一摁回窄档同一档的紧凑值(宽档大字号在矮块的高度预算里放不下)。
+/** #导出课块统一排版(见 LINE_CHAR_BUDGET 上方的四条强约束):字号由 blockFontSize
+ * 整图算死后传入,本函数只排内容、不再调字号;canvas 没有 CSS 的自动换行/省略号,
+ * 这里用 ctx.measureText 量宽决定内容降级;调用方已把这段绘制 clip 到圆角矩形内,
+ * 量算稍有出入也只会被裁掉,不会溢出到相邻课块。字体全部等宽。
+ * - 第 1 行「课号 700 + 简写地点 600」;并道窄块放不下地点时收起地点。
+ * - 第 2 行「组件 600 + 时间 500」;放不下先丢组件前缀。
+ * - 两行各自垂直居中于块内第 1/第 2 格 30 分钟行(行高 rowH),块不足两行高(仅出现在
+ *   非整半点开始的 45 分钟课)时降级为单行「课号 + 时间」居中。
  */
 function drawBlockText(
   ctx: CanvasRenderingContext2D,
@@ -170,66 +205,103 @@ function drawBlockText(
   y: number,
   w: number,
   h: number,
+  rowH: number,
+  size: number,
 ): void {
   const tx = x + 9
   const avail = x + w - tx - 6 // 右边留 6px 缓冲，量算某段文字是否放得下时用
-  const isWide = w >= EXPORT_WIDE_MIN
-  const isShort = h < EXPORT_SHORT_MAX_H
-  const big = isWide && !isShort
-  const codeSize = big ? BLOCK_CODE_SIZE : BLOCK_CODE_SIZE_SM
-  const locSize = big ? BLOCK_LOC_SIZE : BLOCK_LOC_SIZE_SM
-  const timeSize = big ? BLOCK_TIME_SIZE : BLOCK_TIME_SIZE_SM
-  const lineGap = big ? 27 : 20
-  const firstBaseline = big ? y + 30 : y + 23
-  const monoFont = (size: number) => `700 ${size}px ${MONO_STACK}`
-  const locFont = (size: number) => `600 ${size}px system-ui, -apple-system, sans-serif`
-  const timeFont = (size: number) => `${size}px system-ui, -apple-system, sans-serif`
+  const timeText = `${hhmm(block.start)}–${hhmm(block.end)}`
+  const fontCode = `${WEIGHT_CODE} ${size}px ${MONO_STACK}`
+  const fontLoc = `${WEIGHT_LOC} ${size}px ${MONO_STACK}`
+  const fontComp = `${WEIGHT_COMP} ${size}px ${MONO_STACK}`
+  const fontTime = `${WEIGHT_TIME} ${size}px ${MONO_STACK}`
+  ctx.textBaseline = 'middle'
 
-  ctx.font = monoFont(codeSize)
-  ctx.fillText(block.code, tx, firstBaseline)
-
-  if (isShort) {
-    // 矮块降级:不论宽窄，只画课号+时间——短课(45 分钟，进位显示后 60 分钟高)在多道
-    // 并排时最容易撞到这一档，与屏幕版矮块降级同一个判定精神。
-    ctx.font = timeFont(timeSize)
-    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
-    return
-  }
-
-  if (isWide) {
-    // 宽档:课号 + 地点同一行大字。
-    if (block.location) {
-      const codeW = ctx.measureText(block.code).width
-      const full = ` ${block.location}`
-      const abbr = ` ${abbreviateLocation(block.location)}`
-      ctx.font = locFont(locSize)
-      let locText = full
-      if (codeW + ctx.measureText(full).width > avail) {
-        locText = abbr
-        if (codeW + ctx.measureText(abbr).width > avail) locText = ''
-      }
-      if (locText) ctx.fillText(locText, tx + codeW, firstBaseline)
+  if (h < rowH * 1.8) {
+    // 矮块降级:单行「课号 + 时间」在块内垂直居中。
+    const cy = y + h / 2
+    ctx.font = fontCode
+    ctx.fillText(block.code, tx, cy)
+    const codeW = ctx.measureText(block.code).width
+    ctx.font = fontTime
+    if (codeW + ctx.measureText(` ${timeText}`).width <= avail) {
+      ctx.fillText(` ${timeText}`, tx + codeW, cy)
     }
-    ctx.font = timeFont(timeSize)
-    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, firstBaseline + lineGap)
     return
   }
 
-  // 窄档:课号 / 简写地点 / 时间三行堆叠；块本身太窄时时间从一行拆成两行。
-  let ty = firstBaseline
+  const line1Y = y + rowH * 0.5
+  // 第 2 行在"第 2 格行心"基础上向上收 0.12 格——两行贴得更近(用户拍板 2026-07-15
+  // "两行之间的距离缩短一点点"),行↔格的对应关系不变。
+  const line2Y = y + rowH * 1.38
+
+  ctx.font = fontCode
+  ctx.fillText(block.code, tx, line1Y)
   if (block.location) {
-    ty += lineGap
-    ctx.font = locFont(locSize)
-    ctx.fillText(abbreviateLocation(block.location), tx, ty)
+    const codeW = ctx.measureText(block.code).width
+    const abbr = ` ${abbreviateLocation(block.location)}`
+    ctx.font = fontLoc
+    if (codeW + ctx.measureText(abbr).width <= avail) ctx.fillText(abbr, tx + codeW, line1Y)
   }
-  ty += lineGap
-  ctx.font = timeFont(timeSize)
-  if (w < EXPORT_TIME_SPLIT_MAX) {
-    ctx.fillText(`${block.component} ${hhmm(block.start)}`, tx, ty)
-    ctx.fillText(`–${hhmm(block.end)}`, tx, ty + lineGap * 0.85)
+
+  ctx.font = fontComp
+  const compText = `${block.component} `
+  const compW = ctx.measureText(compText).width
+  ctx.font = fontTime
+  if (compW + ctx.measureText(timeText).width <= avail) {
+    ctx.font = fontComp
+    ctx.fillText(compText, tx, line2Y)
+    ctx.font = fontTime
+    ctx.fillText(timeText, tx + compW, line2Y)
+  } else if (ctx.measureText(timeText).width <= avail) {
+    ctx.fillText(timeText, tx, line2Y)
   } else {
-    ctx.fillText(`${block.component} ${hhmm(block.start)}–${hhmm(block.end)}`, tx, ty)
+    // 并道窄块连整串时间也放不下:画「起始时间–」,不硬裁半个字符(结束时间由块的
+    // 高度本身表达)。
+    ctx.fillText(`${hhmm(block.start)}–`, tx, line2Y)
   }
+}
+
+/** 竖屏四行渲染(见 LINE_CHAR_BUDGET_PORTRAIT 上方说明):行距 = 半格 15 分钟,最短
+ * 课块(显示 60 分钟)恰好四行——课号 700 / 地点简写 600 / 组件 600 / 「开始+时长」500
+ * (时间与 + 号间无空格,用户拍板)。块高不足四行时按优先级取行:3 行 = 课号/地点/
+ * 时间,2 行 = 课号/时间,1 行 = 课号。 */
+function drawBlockTextPortrait(
+  ctx: CanvasRenderingContext2D,
+  block: { code: string; component: string; location: string; start: number; end: number },
+  x: number,
+  y: number,
+  h: number,
+  linePitch: number,
+  size: number,
+): void {
+  const tx = x + 9
+  ctx.textBaseline = 'middle'
+
+  const timeLine = {
+    text: `${hhmm(block.start)}${durationTag(block.start, block.end)}`,
+    font: `${WEIGHT_TIME} ${size}px ${MONO_STACK}`,
+  }
+  const codeLine = { text: block.code, font: `${WEIGHT_CODE} ${size}px ${MONO_STACK}` }
+  const locLine = block.location
+    ? { text: abbreviateLocation(block.location), font: `${WEIGHT_LOC} ${size}px ${MONO_STACK}` }
+    : null
+  const compLine = { text: block.component, font: `${WEIGHT_COMP} ${size}px ${MONO_STACK}` }
+
+  const fit = Math.floor(h / linePitch + 0.05)
+  const lines =
+    fit >= 4
+      ? [codeLine, locLine, compLine, timeLine].filter((line) => line !== null)
+      : fit === 3
+        ? [codeLine, locLine ?? compLine, timeLine]
+        : fit === 2
+          ? [codeLine, timeLine]
+          : [codeLine]
+
+  lines.forEach((line, index) => {
+    ctx.font = line.font
+    ctx.fillText(line.text, tx, y + linePitch * (index + 0.5))
+  })
 }
 
 /** #里程碑2:PDF 一次导出明暗两页，页面底色/线条/文字都要按主题切换——这里镜像
@@ -284,6 +356,18 @@ function draw(
   const gridH = gridBottom - gridTop
   const colW = gridW / dayCount
   const yOf = (minutes: number) => gridTop + ((minutes - floorHour * 60) / span) * gridH
+  // 横竖模式(v4)+ 一格 30 分钟网格行的像素高 + 整图统一的课块字号——都在此一次
+  // 算死,所有课块共用。横屏:行距 = 一格、17 字符预算、两行渲染(与导出 HTML 同构);
+  // 竖屏:行距 = 半格、10 字符预算、四行渲染。
+  const portrait = H > W
+  const rowH = (gridH / span) * 30
+  const linePitch = portrait ? rowH / 2 : rowH
+  const blockFont = blockFontSize(
+    ctx,
+    colW,
+    linePitch,
+    portrait ? LINE_CHAR_BUDGET_PORTRAIT : LINE_CHAR_BUDGET_LANDSCAPE,
+  )
 
   // Hour + half-hour rules（半点线更浅），与网格线同一套 floor/ceil 换算——课块的
   // top/height 也用同一个 yOf，保证课块边缘总能落在某条线上。
@@ -328,8 +412,7 @@ function draw(
   ctx.stroke()
 
   // Course blocks — one column per weekday (single plan, no A/B split).
-  // #里程碑2:课号/时间/地点字号整体加大，让打印出来的 PDF 更清晰易读。
-  // #里程碑(两行排版):现在统一只画两行，字号在此基础上再放大一档（见 BLOCK_*_SIZE）。
+  // #导出课块统一排版:两行文字各对齐一格 30 分钟行、全块同一字号(见 drawBlockText)。
   const drawColumn = (blocks: Block[], baseX: number) => {
     for (const block of layOutDay(blocks)) {
       const laneW = colW / block.lanes
@@ -361,10 +444,11 @@ function draw(
       ctx.clip()
       ctx.fillStyle = tint.text
       ctx.textAlign = 'left'
-      ctx.textBaseline = 'alphabetic'
-      // #容器查询方法论对齐导出:按这个块的实际 w/h 选档画文字(宽档课号+地点横排大字/
-      // 窄档三行堆叠/矮块降级只留课号+时间)，见 drawBlockText 顶部注释。
-      drawBlockText(ctx, block, x, y, w, h)
+      // #导出课块统一排版(v4):横屏两行(对齐 30 分钟格)/竖屏四行(行距半格),
+      // 见各 drawBlockText* 顶部注释(textBaseline 在其内部设为 middle,包在本层
+      // save/restore 里不外泄)。
+      if (portrait) drawBlockTextPortrait(ctx, block, x, y, h, linePitch, blockFont)
+      else drawBlockText(ctx, block, x, y, w, h, rowH, blockFont)
       ctx.restore()
     }
   }
@@ -428,6 +512,7 @@ export async function exportImage(
   aspect: Aspect = { w: 8, h: 5 },
   theme?: PaintTheme,
 ): Promise<string> {
+  await ensureExportFonts()
   const { W, H } = canvasSize(aspect)
   const canvas = renderTimetable(plan, termName, paint, theme ?? activeTheme(), W, H)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
@@ -454,6 +539,7 @@ export async function exportPdf(
   termName: string,
   paint: PaintFn = defaultPaint,
 ): Promise<string> {
+  await ensureExportFonts()
   const pageW = 842 // A4 landscape width, points.
   const pages = (['light', 'dark'] as const).map((theme) => {
     const canvas = renderTimetable(plan, termName, paint, theme)

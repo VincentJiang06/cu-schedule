@@ -11,6 +11,10 @@
     <meta name="theme-color" content="#1e1b4b" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- 导出课块等宽字体 Red Hat Mono 已自托管(@font-face 在 styles.css,可变字体
+         300–700 单文件,font-display: swap)——不再挂 Google CDN。canvas 导出画字前由
+         exportImage.ts ensureExportFonts 强制等字体就绪,不就绪直接报错、绝不兜底。 -->
+
     <title>CUHK Schedule</title>
     <meta
       name="description"
