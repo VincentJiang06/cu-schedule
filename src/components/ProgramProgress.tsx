@@ -70,8 +70,8 @@ function SectionRow({ section }: { section: SectionProgress }) {
         <Nums earned={section.earned} required={section.required} />
       </div>
       <Bar earned={section.earned} required={section.required} />
-      {section.unknownUnits > 0 && (
-        <span className="prog-progress__hint">其中 {section.unknownUnits} 门今年未开课，学分未计</span>
+      {section.estimated > 0 && (
+        <span className="prog-progress__hint">其中 {section.estimated} 门今年未开课，按 3 学分估算</span>
       )}
     </li>
   )

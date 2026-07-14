@@ -99,8 +99,8 @@ function groupLeafRuns(children: SectionNode[]): ChildGroup[] {
   return groups
 }
 
-// Title label: gloss通用词 (中文 + 原文小字), 前缀「任选其一」for the "Choose any ONE…"
-// 顶层项, otherwise专名 (General …/Stream N: …) 原样.
+// Title label: gloss通用词 (中文 + 原文小字), 「分流」for the "Choose any …" 分流选择项,
+// otherwise专名 (General …/Stream N: …) 原样.
 function TitleLabel({ title }: { title: string }) {
   if (!title) return null
   const zh = GLOSS[title]
@@ -112,13 +112,9 @@ function TitleLabel({ title }: { title: string }) {
       </span>
     )
   }
-  if (title.includes('Choose any ONE from the following')) {
-    return (
-      <span className="pg-section__title">
-        任选其一
-        <em className="pg-section__en">· {title}</em>
-      </span>
-    )
+  // 「Choose any ONE/…from the following」这类分流选择标注:统一标为「分流」,不带英文原文。
+  if (/^choose/i.test(title)) {
+    return <span className="pg-section__title">分流</span>
   }
   return <span className="pg-section__title pg-section__title--plain">{title}</span>
 }
@@ -202,15 +198,12 @@ function CourseGrid({
   catalogByKey,
   takenSet,
   onToggleTaken,
-  onShowDetail,
   rule,
 }: {
   courses: ProgramCourse[]
   catalogByKey: Map<string, Course>
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
-  /** Opens the shared CourseModal for a resolved course (⋯ 详情 button). */
-  onShowDetail?: (course: Course) => void
   /**
    * 选择规则(任选一门 / N 门即可)独立成一张卡:置于课程网格首位,横跨两列(1×2),
    * 与课程卡同高。null = 不是 pick-one/pick-n 节点(不显示规则卡)。
@@ -238,10 +231,7 @@ function CourseGrid({
           catalogByKey.get(courseKey(course.code)) ??
           course.alts.map((alt) => catalogByKey.get(courseKey(alt))).find(Boolean)
         const done = courseDone(course, takenSet)
-        // The tile itself is a <button> (click = toggle 已完成); the ⋯ 详情 button can't
-        // nest inside it (invalid HTML), so both live as siblings in a relative wrapper and
-        // the ⋯ absolutely positions to the top-right corner. Only resolved courses (with a
-        // real Course to hand the modal) get one — Unknown courses have nothing to show.
+        // 整张卡点击 = 切换「已完成」。课卡外仍套一层 .pg-course-wrap(撑满网格格 + 最小宽 0)。
         return (
           <div className="pg-course-wrap" key={`${course.code}-${index}`}>
             <button
@@ -262,19 +252,6 @@ function CourseGrid({
                 <span className="pg-course__title pg-course__title--unknown">Unknown course</span>
               )}
             </button>
-            {resolved && onShowDetail && (
-              <button
-                aria-label={`${course.code} 详情`}
-                className="pg-course__detail"
-                type="button"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onShowDetail(resolved)
-                }}
-              >
-                ⋯
-              </button>
-            )}
           </div>
         )
       })}
@@ -289,7 +266,6 @@ function SectionBlock({
   takenSet,
   onToggleTaken,
   onBulkTaken,
-  onShowDetail,
 }: {
   node: SectionNode
   depth: number
@@ -297,7 +273,6 @@ function SectionBlock({
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
   onBulkTaken: (codes: string[], add: boolean) => void
-  onShowDetail?: (course: Course) => void
 }) {
   const subCourses = collectCourses(node)
   const hasCourses = subCourses.length > 0
@@ -358,7 +333,6 @@ function SectionBlock({
           courses={node.courses}
           rule={ruleCard}
           takenSet={takenSet}
-          onShowDetail={onShowDetail}
           onToggleTaken={onToggleTaken}
         />
       )}
@@ -378,7 +352,6 @@ function SectionBlock({
                 key={`${group.node.marker}-${group.node.title}-${groupIndex}`}
                 node={group.node}
                 onBulkTaken={onBulkTaken}
-                onShowDetail={onShowDetail}
                 onToggleTaken={onToggleTaken}
                 takenSet={takenSet}
               />
@@ -396,7 +369,6 @@ export function ProgramTable({
   takenSet,
   onToggleTaken,
   onBulkTaken,
-  onShowDetail,
 }: {
   program: Program | null
   /** Every course offered this academic year, indexed by course.key (for units/title). */
@@ -405,8 +377,6 @@ export function ProgramTable({
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
   onBulkTaken: (codes: string[], add: boolean) => void
-  /** Opens the shared CourseModal for a resolved course (⋯ 详情 button on each card). */
-  onShowDetail?: (course: Course) => void
 }) {
   if (!program) {
     return (
@@ -438,7 +408,6 @@ export function ProgramTable({
               key={`${node.marker}-${node.title}-${index}`}
               node={node}
               onBulkTaken={onBulkTaken}
-              onShowDetail={onShowDetail}
               onToggleTaken={onToggleTaken}
               takenSet={takenSet}
             />
@@ -468,7 +437,6 @@ export function ProgramTable({
               catalogByKey={catalogByKey}
               courses={fallbackCourses}
               takenSet={takenSet}
-              onShowDetail={onShowDetail}
               onToggleTaken={onToggleTaken}
             />
           </div>

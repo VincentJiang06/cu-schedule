@@ -134,16 +134,6 @@ export function loadPrograms(): Promise<Program[]> {
   return cache
 }
 
-/**
- * Force a fresh load of the programme bundle: drops the module-level cache so the next
- * load re-resolves `dataVersion()` and re-fetches `programs.json?v=…` through the same
- * versioned channel (no bare fetch). Used by the 信息 page's 刷新 button.
- */
-export function reloadPrograms(): Promise<Program[]> {
-  cache = null
-  return loadPrograms()
-}
-
 // ---- queries ------------------------------------------------------------------
 
 export function listYears(programs: Program[]): string[] {
@@ -240,7 +230,7 @@ const canonicalCache = new Map<string, string | null>()
  * required lists are CSCI-heavy). Falls back to the dominant non-generic required subject
  * when no title matches the name.
  */
-function canonicalSubject(p: Program, subjects: SubjectTitle[]): string | null {
+export function canonicalSubject(p: Program, subjects: SubjectTitle[]): string | null {
   const cached = canonicalCache.get(p.id)
   if (cached !== undefined) return cached
   let best: string | null = null

@@ -47,11 +47,11 @@ import { downloadBlob } from './lib/exportImage.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
 import type { Aspect } from './lib/exportImage.ts'
 import {
+  canonicalSubject,
   classifyPrograms,
   getProgram,
   loadPrograms,
   programCourseKeys,
-  reloadPrograms,
   type CourseStanding,
   type Program,
 } from './lib/programs.ts'
@@ -649,8 +649,11 @@ export default function App() {
   const [enrollYear, setEnrollYear] = useState(() => window.localStorage.getItem('cu-schedule:year') ?? '')
   const [programs, setPrograms] = useState<Program[]>([])
   const [programId, setProgramId] = useState(() => window.localStorage.getItem('cu-schedule:program') ?? '')
-  // 大课表数据刷新中（信息页入学年份旁的 ↻ 按钮）。
-  const [refreshingPrograms, setRefreshingPrograms] = useState(false)
+  // 「我的情况」折叠态:入学年份 + 主修都填过就默认折叠成一行摘要(点开可编辑)。
+  const [infoCollapsed, setInfoCollapsed] = useState(
+    () =>
+      Boolean(window.localStorage.getItem('cu-schedule:year') && window.localStorage.getItem('cu-schedule:program')),
+  )
   // 因已修互斥课而被自动移出「当前选择」的课号(非阻断提示用,按 key 去重累积)。
   const [autoRemoved, setAutoRemoved] = useState<string[]>([])
 
@@ -1573,6 +1576,18 @@ export default function App() {
     if (!selectedProgram && programScope !== 'all') setProgramScope('all')
   }, [selectedProgram, programScope])
 
+  // 填完入学年份 + 主修就自动折叠「我的情况」为一行。点开后(setInfoCollapsed(false))保持展开——
+  // 本 effect 只在年份/主修「变化」时触发,不会把用户手动展开的卡再收回去。
+  useEffect(() => {
+    if (enrollYear && programId) setInfoCollapsed(true)
+  }, [enrollYear, programId])
+
+  // 折叠摘要用的主修学科代号(如 CSCI):所选方案的 canonical subject。
+  const majorSubject = useMemo(
+    () => (selectedProgram ? canonicalSubject(selectedProgram, subjects) : null),
+    [selectedProgram, subjects],
+  )
+
   // The programme's course keys to narrow the catalog to (by course.key), or null for 全部课程.
   const majorKeys = useMemo(
     () => (selectedProgram && programScope === 'program' ? programCourseKeys(selectedProgram) : null),
@@ -1866,28 +1881,16 @@ export default function App() {
     }
   }, [dragCourse])
 
-  // 信息页「入学年份」旁的刷新:强制重载 programs.json(走版本化通道,非裸 fetch),
-  // 并按当前入学年份重解析所选方案——若存在 name_en 相同、year===enrollYear 的另一版本,
-  // 则切过去,让「改了入学年份 → 刷新 → 大课表切到该年份版本」成立。无所选/无匹配则仅重载。
-  async function refreshPrograms(): Promise<void> {
-    if (refreshingPrograms) return
-    setRefreshingPrograms(true)
-    try {
-      const next = await reloadPrograms()
-      setPrograms(next)
-      if (programId && enrollYear) {
-        const current = next.find((p) => p.id === programId)
-        if (current) {
-          const match = next.find((p) => p.name_en === current.name_en && p.year === enrollYear)
-          if (match && match.id !== programId) setProgramId(match.id)
-        }
-      }
-    } catch {
-      // 重载失败保持现状,不打断信息页。
-    } finally {
-      setRefreshingPrograms(false)
-    }
-  }
+  // 改入学年份 → 自动把所选方案切到该年份的同名版本(右侧大课表随之刷新),不用手动刷新。
+  // 全部年份的方案已随 programs.json 一次载入(loadPrograms),无需再走网络,直接在内存里
+  // 按 name_en 找 year===enrollYear 的那一版即可;无所选/无同名版本则不动。
+  useEffect(() => {
+    if (!programId || !enrollYear || programs.length === 0) return
+    const current = programs.find((p) => p.id === programId)
+    if (!current) return
+    const match = programs.find((p) => p.name_en === current.name_en && p.year === enrollYear)
+    if (match && match.id !== programId) setProgramId(match.id)
+  }, [enrollYear, programId, programs])
 
   // 选课页右栏两张卡同时是 #4 拖拽的落点:拖拽中高亮示意,悬停到卡上再加一档。
   const committedCard = (
@@ -2078,11 +2081,30 @@ export default function App() {
     </section>
   )
 
-  // 信息页:「我的情况」= 入学年份 + 主修(具体培养方案单选,整宽长条框)。
+  // 信息页:「我的情况」= 入学年份 + 主修(具体培养方案单选)。填完(年份+主修都有)自动折叠成一行
+  // 摘要「YYYY届 SUBJ」,点标题栏展开/收起;未填全时不可折叠、常保持展开。
+  const canCollapseInfo = Boolean(enrollYear && programId)
+  const infoCollapsedNow = infoCollapsed && canCollapseInfo
+  const infoSummary = `${enrollYear}届${majorSubject ? ` ${majorSubject}` : ''}`
   const myInfoCard = (
-    <section className="card">
-      <h2 className="card__title">我的情况</h2>
-      <div className="profile-row profile-row--stack">
+    <section className="card myinfo">
+      <button
+        aria-expanded={!infoCollapsedNow}
+        className="myinfo__head"
+        disabled={!canCollapseInfo}
+        type="button"
+        onClick={() => setInfoCollapsed((value) => !value)}
+      >
+        <span className="myinfo__title">我的情况</span>
+        {infoCollapsedNow && <span className="myinfo__summary">{infoSummary}</span>}
+        {canCollapseInfo && (
+          <span aria-hidden className="myinfo__caret">
+            {infoCollapsedNow ? '▾' : '▴'}
+          </span>
+        )}
+      </button>
+      {!infoCollapsedNow && (
+        <div className="profile-row profile-row--stack">
         {mainTerms.length > 0 && (
           <div className="field">
             <span className="field__label">当前学期</span>
@@ -2112,16 +2134,6 @@ export default function App() {
                 <option key={year} value={year}>{year}</option>
               ))}
             </select>
-            <button
-              aria-label="刷新培养方案课表"
-              className={`profile-refresh${refreshingPrograms ? ' profile-refresh--busy' : ''}`}
-              disabled={refreshingPrograms}
-              title="按入学年份刷新右侧大课表数据"
-              type="button"
-              onClick={() => void refreshPrograms()}
-            >
-              ↻
-            </button>
           </div>
         </div>
         <div className="field">
@@ -2156,7 +2168,8 @@ export default function App() {
           </button>
           {configNote && <p className="card__sub">{configNote}</p>}
         </div>
-      </div>
+        </div>
+      )}
     </section>
   )
 
@@ -2285,6 +2298,11 @@ export default function App() {
     </section>
   )
 
+  // 学分进度卡(选了主修才有)。信息页与选课页共用同一张,便于选课时随手看毕业进度。
+  const progressCard = programProgress ? (
+    <ProgramProgress data={programProgress} takenTotal={taken.length} />
+  ) : null
+
   // 信息页左栏:培养方案大课表(必修 / 选修 / 分流分组)。
   const programTable = (
     <ProgramTable
@@ -2292,7 +2310,6 @@ export default function App() {
       program={selectedProgram ?? null}
       takenSet={takenSet}
       onBulkTaken={bulkTaken}
-      onShowDetail={setDetailCourse}
       onToggleTaken={toggleTaken}
     />
   )
@@ -2835,7 +2852,7 @@ export default function App() {
             <aside className="side side--info">
               {myInfoCard}
               {takenCard}
-              {programProgress && <ProgramProgress data={programProgress} takenTotal={taken.length} />}
+              {progressCard}
               <p className="info-note">这些信息用于判断先修与本专业筛选。</p>
             </aside>
           </>
@@ -2875,6 +2892,7 @@ export default function App() {
               {cartCard}
               {autoRemovedNote}
               {problemsCard}
+              {progressCard}
               {resetButton}
             </aside>
           </>

@@ -61,13 +61,13 @@ export type SectionProgress = {
   earned: number
   /** Declared / aggregated unit budget for this section, or null when unstated. */
   required: number | null
-  /** Distinct completed courses inside this section (incl. unknown-units ones). */
+  /** Distinct completed courses inside this section (incl. estimated-units ones). */
   count: number
-  /** Of `count`, how many had no resolvable units in this year's catalog. */
-  unknownUnits: number
+  /** Of `count`, how many had no catalog units this year and were counted at the 3-unit estimate. */
+  estimated: number
 }
 
-export type CreditBucket = { earned: number; count: number; unknownUnits: number }
+export type CreditBucket = { earned: number; count: number; estimated: number }
 
 export type ProgramProgress = {
   sections: SectionProgress[]
@@ -79,17 +79,25 @@ export type ProgramProgress = {
   totalRequired: number | null
 }
 
+// 已完成但本学年目录查不到 units 的课(如今年停开/未开):用户既已修就该算分,不因今年不开
+// 而漏计。按 CUHK 绝大多数本科课的 3 学分估算计入 earned,门数另记 estimated 供如实标注。
+const ESTIMATED_UNITS = 3
+
 function tallyKeys(keys: Iterable<string>, unitsFor: (key: string) => number | null): CreditBucket {
   let earned = 0
   let count = 0
-  let unknownUnits = 0
+  let estimated = 0
   for (const key of keys) {
     count += 1
     const units = unitsFor(key)
-    if (units == null) unknownUnits += 1
-    else earned += units
+    if (units == null) {
+      earned += ESTIMATED_UNITS
+      estimated += 1
+    } else {
+      earned += units
+    }
   }
-  return { earned, count, unknownUnits }
+  return { earned, count, estimated }
 }
 
 /**
@@ -124,7 +132,7 @@ export function computeProgramProgress(
       earned: bucket.earned,
       required: requiredUnits(node),
       count: bucket.count,
-      unknownUnits: bucket.unknownUnits,
+      estimated: bucket.estimated,
     }
   })
 
