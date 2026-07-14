@@ -1,5 +1,6 @@
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
+import { detectChooseRule, type ChooseRule } from '../lib/programChoose.ts'
 import type { ProgramCourse, Program, SectionNode } from '../lib/programs.ts'
 import type { Course } from '../lib/types.ts'
 
@@ -35,6 +36,16 @@ const GLOSS: Record<string, string> = {
 function courseDone(course: ProgramCourse, takenSet: Set<string>): boolean {
   if (takenSet.has(courseKey(course.code))) return true
   return course.alts.some((alt) => takenSet.has(courseKey(alt)))
+}
+
+// 「任选」提示文案 for a node's DIRECT course cards, derived from its selection rule.
+// Only a "pick one / pick N course(s)" rule with ≥2 cards to choose among earns a hint
+// (a units budget or a single-card list gets none — nothing to disambiguate on the card).
+function pickHintText(rule: ChooseRule | null, courseCount: number): string | null {
+  if (!rule || courseCount < 2) return null
+  if (rule.kind === 'pick-one') return '任选一门即可'
+  if (rule.kind === 'pick-n') return `任选 ${rule.n} 门即可`
+  return null
 }
 
 // Every course under a node (itself + descendants), for the 整区一键 button.
@@ -144,11 +155,17 @@ function CourseGrid({
   catalogByKey,
   takenSet,
   onToggleTaken,
+  onShowDetail,
+  pickHint,
 }: {
   courses: ProgramCourse[]
   catalogByKey: Map<string, Course>
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
+  /** Opens the shared CourseModal for a resolved course (⋯ 详情 button). */
+  onShowDetail?: (course: Course) => void
+  /** 「任选一门/N 门即可」line added to every card when this node is a pick-one/pick-n. */
+  pickHint?: string | null
 }) {
   return (
     <div className="pg-grid">
@@ -158,26 +175,45 @@ function CourseGrid({
           catalogByKey.get(courseKey(course.code)) ??
           course.alts.map((alt) => catalogByKey.get(courseKey(alt))).find(Boolean)
         const done = courseDone(course, takenSet)
+        // The tile itself is a <button> (click = toggle 已完成); the ⋯ 详情 button can't
+        // nest inside it (invalid HTML), so both live as siblings in a relative wrapper and
+        // the ⋯ absolutely positions to the top-right corner. Only resolved courses (with a
+        // real Course to hand the modal) get one — Unknown courses have nothing to show.
         return (
-          <button
-            className={`pg-course${done ? ' pg-course--done' : ''}`}
-            key={`${course.code}-${index}`}
-            style={courseColor(course.code)}
-            title={resolved?.title ?? course.code}
-            type="button"
-            onClick={() => onToggleTaken(course.code)}
-          >
-            <span className="pg-course__code">
-              {course.code}
-              {course.alts.length > 0 && <em className="pg-course__alt">/{course.alts.join('/')}</em>}
-            </span>
-            {resolved && <span className="pg-course__units">{resolved.units}学分</span>}
-            {resolved ? (
-              <span className="pg-course__title">{resolved.title}</span>
-            ) : (
-              <span className="pg-course__title pg-course__title--unknown">Unknown course</span>
+          <div className="pg-course-wrap" key={`${course.code}-${index}`}>
+            <button
+              className={`pg-course${done ? ' pg-course--done' : ''}${pickHint ? ' pg-course--pick' : ''}`}
+              style={courseColor(course.code)}
+              title={resolved?.title ?? course.code}
+              type="button"
+              onClick={() => onToggleTaken(course.code)}
+            >
+              <span className="pg-course__code">
+                {course.code}
+                {course.alts.length > 0 && <em className="pg-course__alt">/{course.alts.join('/')}</em>}
+              </span>
+              {resolved && <span className="pg-course__units">{resolved.units}学分</span>}
+              {resolved ? (
+                <span className="pg-course__title">{resolved.title}</span>
+              ) : (
+                <span className="pg-course__title pg-course__title--unknown">Unknown course</span>
+              )}
+              {pickHint && <span className="pg-course__pick">{pickHint}</span>}
+            </button>
+            {resolved && onShowDetail && (
+              <button
+                aria-label={`${course.code} 详情`}
+                className="pg-course__detail"
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onShowDetail(resolved)
+                }}
+              >
+                ⋯
+              </button>
             )}
-          </button>
+          </div>
         )
       })}
     </div>
@@ -191,6 +227,7 @@ function SectionBlock({
   takenSet,
   onToggleTaken,
   onBulkTaken,
+  onShowDetail,
 }: {
   node: SectionNode
   depth: number
@@ -198,6 +235,7 @@ function SectionBlock({
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
   onBulkTaken: (codes: string[], add: boolean) => void
+  onShowDetail?: (course: Course) => void
 }) {
   const subCourses = collectCourses(node)
   const hasCourses = subCourses.length > 0
@@ -215,6 +253,11 @@ function SectionBlock({
   // so the button always sits beside a real name. (Marker/titled sections keep the note below.)
   const promoteNote = !node.marker && !node.title && Boolean(node.note)
   const headLabel = node.title || (promoteNote ? (node.note ?? '') : '')
+  // 选择语义:this node's prose may say "choose one/N course(s)" or "choose N units".
+  // Drives the units-chip emphasis (these N 学分 are to be *filled* from below) and the
+  // per-card 「任选…即可」hint on this node's DIRECT courses (children carry their own rule).
+  const chooseRule = detectChooseRule(node)
+  const pickHint = pickHintText(chooseRule, node.courses.length)
 
   return (
     <div
@@ -227,7 +270,11 @@ function SectionBlock({
         <TitleLabel title={headLabel} />
         {isConcentration && <span className="pg-badge">可选方向</span>}
         {isStream && <span className="pg-badge pg-badge--stream">选修方向</span>}
-        {node.units != null && <span className="pg-section__units">{node.units} 学分</span>}
+        {node.units != null && (
+          <span className={`pg-section__units${chooseRule ? ' pg-section__units--choose' : ''}`}>
+            {node.units} 学分
+          </span>
+        )}
         {hasCourses && (
           <button
             className="pg-bulk"
@@ -243,7 +290,9 @@ function SectionBlock({
         <CourseGrid
           catalogByKey={catalogByKey}
           courses={node.courses}
+          pickHint={pickHint}
           takenSet={takenSet}
+          onShowDetail={onShowDetail}
           onToggleTaken={onToggleTaken}
         />
       )}
@@ -263,6 +312,7 @@ function SectionBlock({
                 key={`${group.node.marker}-${group.node.title}-${groupIndex}`}
                 node={group.node}
                 onBulkTaken={onBulkTaken}
+                onShowDetail={onShowDetail}
                 onToggleTaken={onToggleTaken}
                 takenSet={takenSet}
               />
@@ -280,6 +330,7 @@ export function ProgramTable({
   takenSet,
   onToggleTaken,
   onBulkTaken,
+  onShowDetail,
 }: {
   program: Program | null
   /** Every course offered this academic year, indexed by course.key (for units/title). */
@@ -288,6 +339,8 @@ export function ProgramTable({
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
   onBulkTaken: (codes: string[], add: boolean) => void
+  /** Opens the shared CourseModal for a resolved course (⋯ 详情 button on each card). */
+  onShowDetail?: (course: Course) => void
 }) {
   if (!program) {
     return (
@@ -319,6 +372,7 @@ export function ProgramTable({
               key={`${node.marker}-${node.title}-${index}`}
               node={node}
               onBulkTaken={onBulkTaken}
+              onShowDetail={onShowDetail}
               onToggleTaken={onToggleTaken}
               takenSet={takenSet}
             />
@@ -348,6 +402,7 @@ export function ProgramTable({
               catalogByKey={catalogByKey}
               courses={fallbackCourses}
               takenSet={takenSet}
+              onShowDetail={onShowDetail}
               onToggleTaken={onToggleTaken}
             />
           </div>
