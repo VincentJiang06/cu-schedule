@@ -1,4 +1,5 @@
 import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } from 'react'
+import { t } from '../i18n/index.ts'
 import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
 import { displayEndMinutes, hhmm } from '../lib/time.ts'
@@ -117,7 +118,7 @@ function Column({
                 width: `calc(${width}% - 2px)`,
               } as CSSProperties
             }
-            title={`${block.code} ${block.title}${block.cart ? '（可能学 · 试排，点右上角隐藏）' : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+            title={`${block.code} ${block.title}${block.cart ? t('（可能学 · 试排，点右上角隐藏）') : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || t('地点待定')}`}
           >
             <span className="tt2__block-code">{block.code}</span>
             {block.location && (
@@ -133,9 +134,9 @@ function Column({
             </time>
             {block.cart && onToggleCandidate && (
               <button
-                aria-label={`停用候选课 ${block.code}`}
+                aria-label={t('停用候选课 {code}', { code: block.code })}
                 className="tt2__cart-corner"
-                title="点击停用该候选课（课表上的试排块整块移除，去左栏列表点眼睛重新启用）"
+                title={t('点击停用该候选课（课表上的试排块整块移除，去左栏列表点眼睛重新启用）')}
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation()
@@ -266,7 +267,7 @@ export function TimetableCompare({
       <div className="tt2__head">
         {DAYS.slice(0, dayCount).map((day) => (
           <div className="tt2__day-name" key={day}>
-            <span>{day}</span>
+            <span>{t(day)}</span>
             {!solo && (
               <div className="tt2__ab-labels">
                 <i className="tt2__tag tt2__tag--a">A</i>
@@ -326,7 +327,7 @@ export function TimetableCompare({
             className={`tt2__guide tt2__guide--${guide.tone}${draggable ? ' tt2__guide--drag' : ''}`}
             key={guide.tone}
             style={{ top: `${pct(guide.minutes)}%` }}
-            title={draggable ? '按住上下拖动调整时间（15 分钟粒度）' : undefined}
+            title={draggable ? t('按住上下拖动调整时间（15 分钟粒度）') : undefined}
             onPointerDown={beginGuideDrag(guide.tone)}
           >
             <span className="tt2__guide-tag">

@@ -3,6 +3,7 @@ import { subjectPaint, type CanvasPaint } from './color.ts'
 import type { Plan } from './schedule.ts'
 import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
+import { t } from '../i18n/index.ts'
 
 /**
  * Self-contained, offline-openable HTML export of a single timetable (排法). No
@@ -141,7 +142,7 @@ export function buildScheduleHtml(
   }).join('')
 
   const dayHeaders = DAYS.slice(0, dayCount)
-    .map((day) => `<div class="head__day">${day}</div>`)
+    .map((day) => `<div class="head__day">${t(day)}</div>`)
     .join('')
 
   const axisTicks = hourTicks
@@ -417,10 +418,10 @@ export function buildScheduleHtml(
 </style>
 </head>
 <body>
-  <button aria-label="切换明暗主题" class="theme-toggle" id="theme-toggle" type="button">🌙</button>
+  <button aria-label="${t('切换明暗主题')}" class="theme-toggle" id="theme-toggle" type="button">🌙</button>
   <div class="wrap">
-    <h1>CU Schedule · ${escapeHtml(termName || '课表')}</h1>
-    <p class="sub">导出于 ${generated} · 离线可直接打开 · 时间以 CUSIS 为准</p>
+    <h1>CU Schedule · ${escapeHtml(termName || t('课表'))}</h1>
+    <p class="sub">${t('导出于 {date} · 离线可直接打开 · 时间以 CUSIS 为准', { date: generated })}</p>
     <div class="tt">
       <div class="corner"></div>
       ${dayHeaders}

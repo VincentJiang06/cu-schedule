@@ -3,6 +3,7 @@ import { exportImage, exportPdf, type Aspect, type PaintFn } from './exportImage
 import { exportHtmlFile } from './exportHtml.ts'
 import { exportWallpaper } from './exportWallpaper.ts'
 import type { Plan } from './schedule.ts'
+import { t } from '../i18n/index.ts'
 
 export type ExportFormat = 'ics' | 'image' | 'pdf' | 'wallpaper' | 'html'
 
@@ -35,15 +36,15 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
     switch (request.format) {
       case 'ics': {
         const filename = exportIcs(request.plan, request.termName)
-        return { ok: true, note: `已下载 ${filename}` }
+        return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
       case 'image': {
         const filename = await exportImage(request.plan, request.termName, request.paint, request.aspect)
-        return { ok: true, note: `已下载 ${filename}` }
+        return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
       case 'pdf': {
         const filename = await exportPdf(request.plan, request.termName, request.paint)
-        return { ok: true, note: `已下载 ${filename}` }
+        return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
       case 'wallpaper': {
         const note = await exportWallpaper(request.plan, request.termName, request.paint)
@@ -51,10 +52,10 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
       }
       case 'html': {
         const filename = exportHtmlFile(request.plan, request.termName, request.paint)
-        return { ok: true, note: `已下载 ${filename}` }
+        return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
     }
   } catch (cause) {
-    return { ok: false, reason: cause instanceof Error ? cause.message : '导出失败' }
+    return { ok: false, reason: cause instanceof Error ? cause.message : t('导出失败') }
   }
 }

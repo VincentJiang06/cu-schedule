@@ -43,6 +43,7 @@ import {
 import { huePaint, TIMETABLE_PALETTE, type PaintTheme } from './lib/color.ts'
 import { configMdFilename, decodeConfigMd, encodeConfigMd, type ConfigMdState } from './lib/configMd.ts'
 import { courseKey } from './lib/courseKey.ts'
+import { LANG_LABEL, nextLang, setLang, t, type Lang } from './i18n/index.ts'
 import { downloadBlob } from './lib/exportImage.ts'
 import { exportPlan, type ExportFormat } from './lib/exportPlan.ts'
 import type { Aspect } from './lib/exportImage.ts'
@@ -377,6 +378,14 @@ function readShared(): Saved | null {
 const bootTheme = loadTheme()
 if (typeof document !== 'undefined') document.documentElement.dataset.theme = bootTheme
 
+// 界面语言(简体 / 繁体 / English),localStorage 记忆,boot 时同步落地模块级 currentLang。
+function loadLang(): Lang {
+  const saved = window.localStorage.getItem('cu-schedule:lang')
+  return saved === 'zht' || saved === 'en' ? saved : 'zh'
+}
+const bootLang = loadLang()
+setLang(bootLang)
+
 const live = readLive()
 const shared = live ? null : readShared()
 const saved = loadSaved()
@@ -515,6 +524,9 @@ function PlanStripRail({ selectedId, children }: { selectedId: string | null; ch
 
 export default function App() {
   const [theme, setTheme] = useState<Theme>(bootTheme)
+  const [lang, setLangState] = useState<Lang>(bootLang)
+  // 在渲染顶层同步落地当前语言,使本轮所有 t() 立即用新语言(项目无 memo,子树随父重渲染读到)。
+  setLang(lang)
   const [terms, setTerms] = useState<TermRef[]>([])
   const [termSlug, setTermSlug] = useState<string | null>(bootTermSlug)
   const [offerings, setOfferings] = useState<Offering[]>([])
@@ -700,6 +712,11 @@ export default function App() {
     document.documentElement.dataset.theme = theme
     window.localStorage.setItem('cu-schedule:theme', theme)
   }, [theme])
+
+  useEffect(() => {
+    window.localStorage.setItem('cu-schedule:lang', lang)
+    document.documentElement.lang = lang === 'en' ? 'en' : lang === 'zht' ? 'zh-Hant' : 'zh-Hans'
+  }, [lang])
 
   // An opened share link: persist it immediately and strip the hash so a refresh
   // doesn't re-import (and doesn't keep clobbering later local edits).
@@ -1349,7 +1366,7 @@ export default function App() {
   async function handleCreateShare(): Promise<void> {
     if (shareBusy) return
     setShareBusy(true)
-    setShareNote('正在生成只读分享链接…')
+    setShareNote(t('正在生成只读分享链接…'))
     const result = await createShare({
       termSlug,
       termName: term?.name ?? '',
@@ -1358,12 +1375,16 @@ export default function App() {
       pins,
     })
     if (!result.ok) {
-      setShareNote(`生成失败：${result.reason}`)
+      setShareNote(t('生成失败：{reason}', { reason: result.reason }))
       setShareBusy(false)
       return
     }
     const copied = await copyText(result.url)
-    setShareNote(copied ? `只读链接已复制（一天有效）：${result.url}` : `只读链接（一天有效）：${result.url}`)
+    setShareNote(
+      copied
+        ? t('只读链接已复制（一天有效）：{url}', { url: result.url })
+        : t('只读链接（一天有效）：{url}', { url: result.url }),
+    )
     setShareBusy(false)
   }
   // 导出页六张卡全部只导出顶部选中的那一个方案（selectedExportPlan），不再 A / B。
@@ -1372,7 +1393,7 @@ export default function App() {
   // 见 ghostBlocksFor 注释,候选课(可能学)不管是否被眼睛隐藏,本就从未出现在任何导出物里。
   async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
     if (!selectedExportPlan) return
-    setExportNote('正在导出…')
+    setExportNote(t('正在导出…'))
     const result = await exportPlan({
       format,
       plan: selectedExportPlan,
@@ -1411,7 +1432,7 @@ export default function App() {
       titleFor: (code) => catalogByKey.get(courseKey(code))?.title,
     })
     downloadBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), configMdFilename())
-    setConfigNote('已下载配置文件')
+    setConfigNote(t('已下载配置文件'))
   }
 
   // 信息页「我的情况」区「导入之前的配置」:读取 .md 文件 → decodeConfigMd → 整体恢复状态。
@@ -1422,7 +1443,7 @@ export default function App() {
       const text = typeof reader.result === 'string' ? reader.result : ''
       const state = decodeConfigMd(text)
       if (!state) {
-        setConfigNote('导入失败：文件内容无法识别')
+        setConfigNote(t('导入失败：文件内容无法识别'))
         return
       }
       setTermSlug(state.termSlug)
@@ -1443,9 +1464,9 @@ export default function App() {
       setWorkStart(state.workStart)
       setWorkEnd(state.workEnd)
       setPlanIndex(0)
-      setConfigNote('已导入配置')
+      setConfigNote(t('已导入配置'))
     }
-    reader.onerror = () => setConfigNote('导入失败：无法读取文件')
+    reader.onerror = () => setConfigNote(t('导入失败：无法读取文件'))
     reader.readAsText(file)
   }
 
@@ -1494,11 +1515,11 @@ export default function App() {
   async function handleAccountSubmit(): Promise<void> {
     const username = acctUser.trim()
     if (!USERNAME_RE.test(username)) {
-      setAcctNote('用户名只能用 2–32 位字母、数字、点、横线、下划线')
+      setAcctNote(t('用户名只能用 2–32 位字母、数字、点、横线、下划线'))
       return
     }
     if (acctPass.length === 0) {
-      setAcctNote('口令不能为空')
+      setAcctNote(t('口令不能为空'))
       return
     }
     setAcctBusy(true)
@@ -1513,7 +1534,7 @@ export default function App() {
       cloudReadyRef.current = true
       if (!hasConfig) {
         await pushToCloud(creds)
-        setAcctNote(created ? '账号已创建,当前配置已存云端' : '已登录,当前配置已存云端')
+        setAcctNote(created ? t('账号已创建,当前配置已存云端') : t('已登录,当前配置已存云端'))
       } else {
         const { config, updatedAt } = await cloudLoad(creds)
         if (!config) {
@@ -1521,7 +1542,7 @@ export default function App() {
         } else if (localIsEmpty()) {
           applyCloudConfig(config)
           setSyncStatus('synced')
-          setAcctNote('已载入云端存档')
+          setAcctNote(t('已载入云端存档'))
         } else {
           setPendingCloud({ config, updatedAt })
         }
@@ -1540,7 +1561,7 @@ export default function App() {
     setPendingCloud(null)
     setSyncStatus('idle')
     setSyncNote('')
-    setAcctNote('已退出,本地数据保留在这台设备上')
+    setAcctNote(t('已退出,本地数据保留在这台设备上'))
   }
 
   const candidates = useMemo(() => {
@@ -1607,11 +1628,11 @@ export default function App() {
   const detailBlockedReason: string | null = !detailCourse
     ? null
     : barredKeys.has(detailCourse.key)
-      ? '已修互斥课，无法添加'
+      ? t('已修互斥课，无法添加')
       : statusByCode.get(detailCourse.key) === 'conflict'
-        ? '与已选课时间冲突'
+        ? t('与已选课时间冲突')
         : statusByCode.get(detailCourse.key) === 'tba'
-          ? '时间待定，暂不能加入排课'
+          ? t('时间待定，暂不能加入排课')
           : null
 
   const filters: SearchFilters = {
@@ -1901,9 +1922,9 @@ export default function App() {
       }}
     >
       <h2 className="card__title">
-        当前必修课程
+        {t('当前必修课程')}
         <span className="card__title-actions">
-          <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分` : '一课一行'}</span>
+          <span className="card__note">{totalUnits > 0 ? t('{n} 学分', { n: totalUnits }) : t('一课一行')}</span>
         </span>
       </h2>
       <CommittedList
@@ -1915,7 +1936,7 @@ export default function App() {
         onRowPointerDown={(code, _isCart, event) => beginCourseDrag(code, 'committed', event)}
       />
       {unknownCommitted.length > 0 && (
-        <p className="card__warn">本学期没有开设：{unknownCommitted.join('、')}</p>
+        <p className="card__warn">{t('本学期没有开设：{list}', { list: unknownCommitted.join('、') })}</p>
       )}
     </section>
   )
@@ -1929,9 +1950,9 @@ export default function App() {
       }}
     >
       <h2 className="card__title">
-        当前可能课程
+        {t('当前可能课程')}
         <span className="card__title-actions">
-          <span className="card__note">{cart.length > 0 ? `${cart.length} 门候选` : '可能会学'}</span>
+          <span className="card__note">{cart.length > 0 ? t('{n} 门候选', { n: cart.length }) : t('可能会学')}</span>
         </span>
       </h2>
       <CommittedList
@@ -1940,7 +1961,7 @@ export default function App() {
         codes={[]}
         currentTermOrder={currentTermOrder}
         disabledCandidateKeys={disabledCandidates}
-        emptyHint="还没有候选课程。在中间的课程列表点「可能学」来添加。"
+        emptyHint={t('还没有候选课程。在中间的课程列表点「可能学」来添加。')}
         termOrdersByKey={termOrdersByKey}
         onRemove={removeCart}
         onRowPointerDown={(code, _isCart, event) => beginCourseDrag(code, 'cart', event)}
@@ -1955,8 +1976,8 @@ export default function App() {
   const guideLines = useMemo(
     () =>
       [
-        workStart != null ? { minutes: workStart, label: '上班', tone: 'am' as const } : null,
-        workEnd != null ? { minutes: workEnd, label: '下班', tone: 'pm' as const } : null,
+        workStart != null ? { minutes: workStart, label: t('上班'), tone: 'am' as const } : null,
+        workEnd != null ? { minutes: workEnd, label: t('下班'), tone: 'pm' as const } : null,
       ].filter((g): g is { minutes: number; label: string; tone: 'am' | 'pm' } => g != null),
     [workEnd, workStart],
   )
@@ -1965,28 +1986,28 @@ export default function App() {
       {/* #里程碑3:锁按钮从两个时间框正旁边挪到卡片标题栏右上角，做成一个小角标——不再挤占
           输入框的空间，功能不变（默认锁住,防止拖动虚线 / 改这两个输入框被误操作）。 */}
       <h2 className="card__title">
-        上下班时间
+        {t('上下班时间')}
         <span className="card__title-actions">
-          <span className="card__note">日历参考线 · 排法过滤</span>
+          <span className="card__note">{t('日历参考线 · 排法过滤')}</span>
           {/* #里程碑3(重置所有方案):删了几个特定排法后一键恢复全部,继续删/挑——纯清空
               deletedPlanIds,不碰 pins/committedCourses。没删过任何排法时禁用,避免空点。 */}
           <button
-            aria-label="重置所有方案"
+            aria-label={t('重置所有方案')}
             className="lock-toggle lock-toggle--corner reset-plans-btn"
             disabled={deletedPlanIds.size === 0}
-            title={deletedPlanIds.size === 0 ? '当前没有被删除的排法' : '恢复全部排法,重新开始删/挑'}
+            title={deletedPlanIds.size === 0 ? t('当前没有被删除的排法') : t('恢复全部排法,重新开始删/挑')}
             type="button"
             onClick={() => setDeletedPlanIds(new Set())}
           >
             <span aria-hidden>↺</span>
           </button>
           <button
-            aria-label={workTimeLocked ? '解锁上下班时间设置' : '锁定上下班时间设置'}
+            aria-label={workTimeLocked ? t('解锁上下班时间设置') : t('锁定上下班时间设置')}
             className={`lock-toggle lock-toggle--corner${workTimeLocked ? '' : ' lock-toggle--unlocked'}`}
             title={
               workTimeLocked
-                ? '已锁定：日历上的拖动虚线与下方两个输入框都已禁用，点击解锁'
-                : '已解锁：可拖动虚线、修改时间，点击重新锁定防止误改'
+                ? t('已锁定：日历上的拖动虚线与下方两个输入框都已禁用，点击解锁')
+                : t('已解锁：可拖动虚线、修改时间，点击重新锁定防止误改')
             }
             type="button"
             onClick={() => setWorkTimeLocked((locked) => !locked)}
@@ -2000,10 +2021,10 @@ export default function App() {
           清空入口；仍可通过原生 time input 自带的清除方式取消设置（值语义仍是
           number|null，未破坏排课/渲染）。 */}
       <div className="time-row">
-        <div className="field" title="希望一天的课不早于此">
-          <span className="field__label">上班时间</span>
+        <div className="field" title={t('希望一天的课不早于此')}>
+          <span className="field__label">{t('上班时间')}</span>
           <input
-            aria-label="上班时间"
+            aria-label={t('上班时间')}
             className="time-input"
             disabled={workTimeLocked}
             step={300}
@@ -2012,10 +2033,10 @@ export default function App() {
             onChange={(event) => setWorkStart(parseHHMM(event.target.value))}
           />
         </div>
-        <div className="field" title="希望一天的课不晚于此">
-          <span className="field__label">下班时间</span>
+        <div className="field" title={t('希望一天的课不晚于此')}>
+          <span className="field__label">{t('下班时间')}</span>
           <input
-            aria-label="下班时间"
+            aria-label={t('下班时间')}
             className="time-input"
             disabled={workTimeLocked}
             step={300}
@@ -2032,11 +2053,11 @@ export default function App() {
             type="checkbox"
             onChange={(event) => setHideConflicts(event.target.checked)}
           />
-          <span>不展示冲突的方案</span>
+          <span>{t('不展示冲突的方案')}</span>
         </label>
         <label
           className={`check${officeWindowUnset ? ' check--disabled' : ''}`}
-          title={officeWindowUnset ? '先设置上下班时间' : undefined}
+          title={officeWindowUnset ? t('先设置上下班时间') : undefined}
         >
           <input
             checked={hideOutOfHours}
@@ -2044,7 +2065,7 @@ export default function App() {
             type="checkbox"
             onChange={(event) => setHideOutOfHours(event.target.checked)}
           />
-          <span>不展示不符合上下班限制的方案</span>
+          <span>{t('不展示不符合上下班限制的方案')}</span>
         </label>
       </div>
     </section>
@@ -2055,9 +2076,11 @@ export default function App() {
   const committedCardTT = (
     <section className="card committed-card">
       <h2 className="card__title">
-        当前课程
+        {t('当前课程')}
         <span className="card__title-actions">
-          <span className="card__note">{totalUnits > 0 ? `${totalUnits} 学分 · 选时段` : '选时段'}</span>
+          <span className="card__note">
+            {totalUnits > 0 ? t('{n} 学分 · 选时段', { n: totalUnits }) : t('选时段')}
+          </span>
         </span>
       </h2>
       <CommittedList
@@ -2076,7 +2099,7 @@ export default function App() {
         onToggleCandidateDisabled={toggleCandidateDisabled}
       />
       {unknownCommitted.length > 0 && (
-        <p className="card__warn">本学期没有开设：{unknownCommitted.join('、')}</p>
+        <p className="card__warn">{t('本学期没有开设：{list}', { list: unknownCommitted.join('、') })}</p>
       )}
     </section>
   )
@@ -2085,7 +2108,9 @@ export default function App() {
   // 摘要「YYYY届 SUBJ」,点标题栏展开/收起;未填全时不可折叠、常保持展开。
   const canCollapseInfo = Boolean(enrollYear && programId)
   const infoCollapsedNow = infoCollapsed && canCollapseInfo
-  const infoSummary = `${enrollYear}届${majorSubject ? ` ${majorSubject}` : ''}`
+  const infoSummary = majorSubject
+    ? t('{year}届 {major}', { year: enrollYear, major: majorSubject })
+    : t('{year}届', { year: enrollYear })
   const myInfoCard = (
     <section className="card myinfo">
       <button
@@ -2095,7 +2120,7 @@ export default function App() {
         type="button"
         onClick={() => setInfoCollapsed((value) => !value)}
       >
-        <span className="myinfo__title">我的情况</span>
+        <span className="myinfo__title">{t('我的情况')}</span>
         {infoCollapsedNow && <span className="myinfo__summary">{infoSummary}</span>}
         {canCollapseInfo && (
           <span aria-hidden className="myinfo__caret">
@@ -2107,8 +2132,8 @@ export default function App() {
         <div className="profile-row profile-row--stack">
         {mainTerms.length > 0 && (
           <div className="field">
-            <span className="field__label">当前学期</span>
-            <div className="term-switch" aria-label="当前选课学期">
+            <span className="field__label">{t('当前学期')}</span>
+            <div className="term-switch" aria-label={t('当前选课学期')}>
               {mainTerms.map((item) => (
                 <button
                   className={item.slug === termSlug ? 'term-switch__btn term-switch__btn--on' : 'term-switch__btn'}
@@ -2126,10 +2151,10 @@ export default function App() {
           </div>
         )}
         <div className="field">
-          <span className="field__label">入学年份</span>
+          <span className="field__label">{t('入学年份')}</span>
           <div className="profile-year__row">
             <select value={enrollYear} onChange={(event) => setEnrollYear(event.target.value)}>
-              <option value="">选择</option>
+              <option value="">{t('选择')}</option>
               {['2022', '2023', '2024', '2025', '2026'].map((year) => (
                 <option key={year} value={year}>{year}</option>
               ))}
@@ -2137,7 +2162,7 @@ export default function App() {
           </div>
         </div>
         <div className="field">
-          <span className="field__label">主修 Major</span>
+          <span className="field__label">{t('主修 Major')}</span>
           <ProgramPicker
             programs={programs}
             selectedId={programId}
@@ -2147,7 +2172,7 @@ export default function App() {
           />
         </div>
         <div className="field">
-          <span className="field__label">配置备份</span>
+          <span className="field__label">{t('配置备份')}</span>
           <input
             accept=".md,text/markdown"
             hidden
@@ -2164,7 +2189,7 @@ export default function App() {
             type="button"
             onClick={() => configFileInputRef.current?.click()}
           >
-            导入之前的配置
+            {t('导入之前的配置')}
           </button>
           {configNote && <p className="card__sub">{configNote}</p>}
         </div>
@@ -2178,33 +2203,33 @@ export default function App() {
   // 错误文案(cloudErrorText)会在真正需要的时刻解释。
   const syncStatusText =
     syncStatus === 'syncing'
-      ? '同步中…'
+      ? t('同步中…')
       : syncStatus === 'synced'
-        ? '已同步到云端'
+        ? t('已同步到云端')
         : syncStatus === 'error'
-          ? syncNote || '同步失败'
-          : '未同步'
+          ? syncNote || t('同步失败')
+          : t('未同步')
   const accountPop = acctOpen ? (
     <>
       <div aria-hidden className="acct-overlay" onClick={() => setAcctOpen(false)} />
-      <div aria-label="账号" className="acct-pop" role="dialog">
+      <div aria-label={t('账号')} className="acct-pop" role="dialog">
         {!account ? (
           <>
-            <h3 className="acct-pop__title">登录 CU Schedule</h3>
-            <p className="acct-pop__sub">登录后配置自动保存到云端,换设备接着排。</p>
+            <h3 className="acct-pop__title">{t('登录 CU Schedule')}</h3>
+            <p className="acct-pop__sub">{t('登录后配置自动保存到云端,换设备接着排。')}</p>
             <div className="acct-form">
               <input
                 autoComplete="username"
                 autoFocus
                 maxLength={32}
-                placeholder="用户名"
+                placeholder={t('用户名')}
                 value={acctUser}
                 onChange={(event) => setAcctUser(event.target.value)}
               />
               <input
                 autoComplete="current-password"
                 maxLength={64}
-                placeholder="口令"
+                placeholder={t('口令')}
                 type="password"
                 value={acctPass}
                 onChange={(event) => setAcctPass(event.target.value)}
@@ -2218,7 +2243,7 @@ export default function App() {
                 type="button"
                 onClick={() => void handleAccountSubmit()}
               >
-                {acctBusy ? '正在登录…' : '登录 / 注册'}
+                {acctBusy ? t('正在登录…') : t('登录 / 注册')}
               </button>
             </div>
           </>
@@ -2238,7 +2263,7 @@ export default function App() {
             </div>
             {pendingCloud && (
               <div className="acct-conflict">
-                <p className="acct-pop__sub">云端已有存档,这台设备上也有内容。用哪份?</p>
+                <p className="acct-pop__sub">{t('云端已有存档,这台设备上也有内容。用哪份?')}</p>
                 <div className="acct-conflict__btns">
                   <button
                     className="acct-primary"
@@ -2247,10 +2272,10 @@ export default function App() {
                       applyCloudConfig(pendingCloud.config)
                       setPendingCloud(null)
                       setSyncStatus('synced')
-                      setAcctNote('已载入云端存档')
+                      setAcctNote(t('已载入云端存档'))
                     }}
                   >
-                    载入云端存档
+                    {t('载入云端存档')}
                   </button>
                   <button
                     className="acct-primary acct-primary--ghost"
@@ -2261,16 +2286,16 @@ export default function App() {
                         setSyncStatus('error')
                         setSyncNote(cloudErrorText(cause))
                       })
-                      setAcctNote('已用本地配置覆盖云端')
+                      setAcctNote(t('已用本地配置覆盖云端'))
                     }}
                   >
-                    用本地覆盖云端
+                    {t('用本地覆盖云端')}
                   </button>
                 </div>
               </div>
             )}
             <button className="acct-signout" type="button" onClick={handleSignOut}>
-              退出登录
+              {t('退出登录')}
             </button>
           </>
         )}
@@ -2284,26 +2309,26 @@ export default function App() {
   const takenCard = (
     <section className="card">
       <h2 className="card__title">
-        已完成课程
+        {t('已完成课程')}
         <span className="card__title-actions">
-          <span className="card__note">排除已修 · 判断先修</span>
+          <span className="card__note">{t('排除已修 · 判断先修')}</span>
           {taken.length > 0 && (
             <button
-              aria-label="清空已完成课程"
+              aria-label={t('清空已完成课程')}
               className="card__clear"
               type="button"
               onClick={() => setTaken([])}
             >
-              清空
+              {t('清空')}
             </button>
           )}
         </span>
       </h2>
-      <p className="card__sub">已录入 {taken.length} 门</p>
+      <p className="card__sub">{t('已录入 {n} 门', { n: taken.length })}</p>
       <CodeInput
         codes={taken}
         courses={allCourses}
-        placeholder="粘贴成绩单上的课号，回车录入…"
+        placeholder={t('粘贴成绩单上的课号，回车录入…')}
         variant="taken"
         onChange={setTaken}
       />
@@ -2328,79 +2353,79 @@ export default function App() {
 
   const searchCard = (
     <section className="card search-card">
-      <h2 className="card__title">搜索</h2>
+      <h2 className="card__title">{t('搜索')}</h2>
       <label className="field">
-        <span className="field__label">关键词</span>
+        <span className="field__label">{t('关键词')}</span>
         <input
           className="search-box"
-          placeholder="课号或课名…"
+          placeholder={t('课号或课名…')}
           value={search}
           onChange={(event) => setSearch(event.target.value)}
         />
       </label>
       <div className="field">
-        <span className="field__label field__label--include">想要的学科</span>
+        <span className="field__label field__label--include">{t('想要的学科')}</span>
         <SubjectPicker
           onChange={setIncludeSubjects}
-          placeholder="包含，如 CSCI…"
+          placeholder={t('包含，如 CSCI…')}
           selected={includeSubjects}
           subjects={subjects}
           variant="include"
         />
       </div>
       <div className="field">
-        <span className="field__label field__label--exclude">排除的学科</span>
+        <span className="field__label field__label--exclude">{t('排除的学科')}</span>
         <SubjectPicker
           onChange={setExcludeSubjects}
-          placeholder="排除…"
+          placeholder={t('排除…')}
           selected={excludeSubjects}
           subjects={subjects}
           variant="exclude"
         />
       </div>
       <div className="filter-block">
-        <span className="filter-block__title">课程范围</span>
+        <span className="filter-block__title">{t('课程范围')}</span>
         <Toggle
           checked={programScope === 'program'}
           disabled={!selectedProgram}
-          title={!selectedProgram ? '先在信息页选择主修' : undefined}
+          title={!selectedProgram ? t('先在信息页选择主修') : undefined}
           onChange={(on) => setProgramScope(on ? 'program' : 'all')}
         >
-          只看本专业的课
+          {t('只看本专业的课')}
         </Toggle>
         <Toggle checked={meetsPrereq} onChange={setMeetsPrereq}>
-          符合先修
+          {t('符合先修')}
         </Toggle>
         <Toggle checked={hideCompleted} onChange={setHideCompleted}>
-          隐藏已完成
+          {t('隐藏已完成')}
         </Toggle>
         <Toggle checked={hideSuperseded} onChange={setHideSuperseded}>
-          隐藏已替代修课
+          {t('隐藏已替代修课')}
         </Toggle>
       </div>
       <div className="filter-block">
-        <span className="filter-block__title">时间约束 · 可选性</span>
+        <span className="filter-block__title">{t('时间约束 · 可选性')}</span>
         <Toggle checked={lecFits} onChange={setLecFits}>
-          符合时间表（仅LEC）
+          {t('符合时间表（仅LEC）')}
         </Toggle>
         <Toggle
           checked={meetsOfficeHours}
           disabled={officeWindowUnset}
-          title={officeWindowUnset ? '先在课表页设置上下班时间' : undefined}
+          title={officeWindowUnset ? t('先在课表页设置上下班时间') : undefined}
           onChange={setMeetsOfficeHours}
         >
-          符合上下班时间
+          {t('符合上下班时间')}
         </Toggle>
         <Toggle checked={currentTermOnly} onChange={setCurrentTermOnly}>
-          只包括当前学期
+          {t('只包括当前学期')}
         </Toggle>
         <Toggle checked={excludeTba} onChange={setExcludeTba}>
-          排除时间待定
+          {t('排除时间待定')}
         </Toggle>
       </div>
       <div className="field">
-        <span className="field__label">学分</span>
-        <div className="chips" role="group" aria-label="学分">
+        <span className="field__label">{t('学分')}</span>
+        <div className="chips" role="group" aria-label={t('学分')}>
           {UNIT_PICKS.map(({ value, label }) => (
             <button
               className={units.includes(value) ? 'chip chip--on' : 'chip'}
@@ -2414,8 +2439,8 @@ export default function App() {
         </div>
       </div>
       <div className="field">
-        <span className="field__label">课程等级</span>
-        <div className="chips" role="group" aria-label="课程等级">
+        <span className="field__label">{t('课程等级')}</span>
+        <div className="chips" role="group" aria-label={t('课程等级')}>
           {LEVEL_BUCKETS.map(({ value, label }) => (
             <button
               className={levels.includes(value) ? 'chip chip--on' : 'chip'}
@@ -2434,11 +2459,12 @@ export default function App() {
   const problemsCard =
     clashes.length > 0 ? (
       <section className="card card--problem">
-        <h2 className="card__title">排不出课表</h2>
+        <h2 className="card__title">{t('排不出课表')}</h2>
         {clashes.slice(0, 4).map((clash) => (
           <p key={`${clash.codes.join()}-${clash.start}`}>
-            <b>{clash.codes[0]}</b> 与 <b>{clash.codes[1]}</b> 在{DAY_NAMES[clash.dayIndex - 1]}{' '}
-            {hhmm(clash.start)}–{hhmm(clash.end)} 冲突
+            <b>{clash.codes[0]}</b> {t('与')} <b>{clash.codes[1]}</b> {t('在')}
+            {t(DAY_NAMES[clash.dayIndex - 1])}{' '}
+            {hhmm(clash.start)}–{hhmm(clash.end)} {t('冲突')}
           </p>
         ))}
       </section>
@@ -2448,7 +2474,7 @@ export default function App() {
   const autoRemovedNote =
     autoRemoved.length > 0 ? (
       <p className="auto-removed" role="status">
-        <b>{autoRemoved.join('、')}</b> 因已修互斥课已自动移除
+        <b>{autoRemoved.join('、')}</b> {t('因已修互斥课已自动移除')}
       </p>
     ) : null
 
@@ -2470,7 +2496,7 @@ export default function App() {
               key={plan.id}
               role="button"
               tabIndex={0}
-              title="选为要导出的方案"
+              title={t('选为要导出的方案')}
               onClick={() => setSelectedExportPlanId(plan.id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
@@ -2480,9 +2506,9 @@ export default function App() {
               }}
             >
               <div className="plan-card__info">
-                <span className="plan-card__name">排法 {label}</span>
+                <span className="plan-card__name">{t('排法 {n}', { n: label })}</span>
                 <span className="plan-card__meta">
-                  {plan.teachingDays.length} 天 · {plan.units} 学分
+                  {t('{days} 天 · {units} 学分', { days: plan.teachingDays.length, units: plan.units })}
                 </span>
               </div>
               {isSelected && (
@@ -2520,7 +2546,7 @@ export default function App() {
               key={plan.id}
               role="button"
               tabIndex={0}
-              title="点击单独查看此排法"
+              title={t('点击单独查看此排法')}
               onClick={() => setSoloPlanId(plan.id)}
               onKeyDown={(event) => {
                 if (event.key === 'Enter' || event.key === ' ') {
@@ -2530,16 +2556,16 @@ export default function App() {
               }}
             >
               <div className="plan-card__info">
-                <span className="plan-card__name">排法 {label}</span>
+                <span className="plan-card__name">{t('排法 {n}', { n: label })}</span>
                 <span className="plan-card__meta">
-                  {plan.teachingDays.length} 天 · {plan.units} 学分
+                  {t('{days} 天 · {units} 学分', { days: plan.teachingDays.length, units: plan.units })}
                 </span>
               </div>
               <div className="plan-card__actions">
                 <button
-                  aria-label={`排法 ${label} 设为 A`}
+                  aria-label={t('排法 {n} 设为 A', { n: label })}
                   className={`plan-card__pick plan-card__pick--a${isA ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
-                  title="设为 A（回到 A/B 对比）"
+                  title={t('设为 A（回到 A/B 对比）')}
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation()
@@ -2550,9 +2576,9 @@ export default function App() {
                   A
                 </button>
                 <button
-                  aria-label={`排法 ${label} 设为 B`}
+                  aria-label={t('排法 {n} 设为 B', { n: label })}
                   className={`plan-card__pick plan-card__pick--b${isB ? ' plan-card__pick--on' : ''}${soloActive ? ' plan-card__pick--dimmed' : ''}`}
-                  title="设为 B（回到 A/B 对比）"
+                  title={t('设为 B（回到 A/B 对比）')}
                   type="button"
                   onClick={(event) => {
                     event.stopPropagation()
@@ -2565,9 +2591,9 @@ export default function App() {
               </div>
               {/* #里程碑4:逐个删除——按 plan.id 记，其余排法不受影响(不重排/不改标号)。 */}
               <button
-                aria-label={`删除排法 ${label}`}
+                aria-label={t('删除排法 {n}', { n: label })}
                 className="plan-card__del"
-                title="从横条移除这个排法（不影响其它排法）"
+                title={t('从横条移除这个排法（不影响其它排法）')}
                 type="button"
                 onClick={(event) => {
                   event.stopPropagation()
@@ -2615,12 +2641,12 @@ export default function App() {
         type="button"
         onClick={() => setCustomAspectOpen((value) => !value)}
       >
-        自定义
+        {t('自定义')}
       </button>
       {customAspectOpen && (
         <div className="aspect-custom">
           <input
-            aria-label="宽"
+            aria-label={t('宽')}
             className="aspect-custom__input"
             inputMode="decimal"
             value={customAspectW}
@@ -2628,7 +2654,7 @@ export default function App() {
           />
           <span aria-hidden>:</span>
           <input
-            aria-label="高"
+            aria-label={t('高')}
             className="aspect-custom__input"
             inputMode="decimal"
             value={customAspectH}
@@ -2644,7 +2670,7 @@ export default function App() {
               void handleExport('image', { w: w > 0 ? w : 1, h: h > 0 ? h : 1 })
             }}
           >
-            按此比例导出
+            {t('按此比例导出')}
           </button>
         </div>
       )}
@@ -2674,9 +2700,9 @@ export default function App() {
           <path d="M10 19h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
         </svg>
       ),
-      title: '手机壁纸',
-      desc: '竖屏壁纸图，把选中的课表铺成手机锁屏背景，顶部留白避开系统时间。导出两张：纯背景 + 带课表。',
-      ctaLabel: '下载壁纸',
+      title: t('手机壁纸'),
+      desc: t('竖屏壁纸图，把选中的课表铺成手机锁屏背景，顶部留白避开系统时间。导出两张：纯背景 + 带课表。'),
+      ctaLabel: t('下载壁纸'),
       disabled: !selectedExportPlan,
       onClick: () => void handleExport('wallpaper'),
     },
@@ -2688,9 +2714,9 @@ export default function App() {
           <path d="M3 9.5h18M8 2.5v4M16 2.5v4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
         </svg>
       ),
-      title: '日历（.ics）',
-      desc: '导入手机系统日历 / Google Calendar，每周自动重复。周期为按学期估算，开学后请回 CUSIS 核对真实起止日期。',
-      ctaLabel: '下载 .ics',
+      title: t('日历（.ics）'),
+      desc: t('导入手机系统日历 / Google Calendar，每周自动重复。周期为按学期估算，开学后请回 CUSIS 核对真实起止日期。'),
+      ctaLabel: t('下载 .ics'),
       disabled: !selectedExportPlan,
       onClick: () => void handleExport('ics'),
     },
@@ -2706,9 +2732,9 @@ export default function App() {
           <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4Z" stroke="currentColor" strokeWidth="2" />
         </svg>
       ),
-      title: '只读分享',
-      desc: '生成一个一天有效的只读链接，手机打开即可查看当前选课与课表，无需登录，对方不能编辑。',
-      ctaLabel: shareBusy ? '生成中…' : '生成只读链接',
+      title: t('只读分享'),
+      desc: t('生成一个一天有效的只读链接，手机打开即可查看当前选课与课表，无需登录，对方不能编辑。'),
+      ctaLabel: shareBusy ? t('生成中…') : t('生成只读链接'),
       disabled: committed.length === 0 || shareBusy,
       busy: shareBusy,
       onClick: () => void handleCreateShare(),
@@ -2725,9 +2751,9 @@ export default function App() {
           <path d="M14 2.5V7h4" stroke="currentColor" strokeLinecap="round" strokeWidth="2" />
         </svg>
       ),
-      title: '表格 PDF',
-      desc: '一页 A4 的课表，线条清晰，适合打印出来贴在墙上或夹进笔记本。',
-      ctaLabel: '下载 PDF',
+      title: t('表格 PDF'),
+      desc: t('一页 A4 的课表，线条清晰，适合打印出来贴在墙上或夹进笔记本。'),
+      ctaLabel: t('下载 PDF'),
       disabled: !selectedExportPlan,
       onClick: () => void handleExport('pdf'),
     },
@@ -2740,9 +2766,9 @@ export default function App() {
           <path d="m4 17 5-5 4 3 3-3 4 4" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" />
         </svg>
       ),
-      title: '图片 PNG',
-      desc: '课表截图，先选画面比例(六选一，也可自定义 w:h)，再导出这张比例的图。',
-      ctaLabel: '下载图片',
+      title: t('图片 PNG'),
+      desc: t('课表截图，先选画面比例(六选一，也可自定义 w:h)，再导出这张比例的图。'),
+      ctaLabel: t('下载图片'),
       disabled: !selectedExportPlan,
       onClick: () => void handleExport('image', { w: 8, h: 5 }),
       footer: pngAspectPicker,
@@ -2760,9 +2786,9 @@ export default function App() {
           <path d="m9.5 13-1.7 1.7 1.7 1.7M14.5 13l1.7 1.7-1.7 1.7" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.6" />
         </svg>
       ),
-      title: '导出为 HTML',
-      desc: '独立的自包含网页文件，不依赖网络，离线也能双击打开，内含完整课表，适合长期留存。',
-      ctaLabel: '下载 HTML',
+      title: t('导出为 HTML'),
+      desc: t('独立的自包含网页文件，不依赖网络，离线也能双击打开，内含完整课表，适合长期留存。'),
+      ctaLabel: t('下载 HTML'),
       disabled: !selectedExportPlan,
       onClick: () => void handleExport('html'),
     },
@@ -2772,26 +2798,29 @@ export default function App() {
     <div className="page-center page-center--export">
       <section className="card">
         <h2 className="card__title">
-          课表导出方案
+          {t('课表导出方案')}
           <span className="card__note">{term?.name ?? ''}</span>
         </h2>
         {plans.length === 0 ? (
-          <p className="card__sub">先在选课页选课，才能导出课表</p>
+          <p className="card__sub">{t('先在选课页选课，才能导出课表')}</p>
         ) : (
           <>
-            <p className="card__sub">从可行排法里选一个作为要导出的方案（下面所有导出方式都只导出这一个）。</p>
+            <p className="card__sub">{t('从可行排法里选一个作为要导出的方案（下面所有导出方式都只导出这一个）。')}</p>
             {exportPlanPicker}
             <p className="card__sub">
-              已选 {committedCourses.length} 门 · {totalUnits} 学分
+              {t('已选 {n} 门 · {units} 学分', { n: committedCourses.length, units: totalUnits })}
               {selectedExportPlan
-                ? ` · 排法 ${allPlanNumberById.get(selectedExportPlan.id) ?? '?'}（${selectedExportPlan.teachingDays.length} 天）`
+                ? t(' · 排法 {num}（{days} 天）', {
+                    num: allPlanNumberById.get(selectedExportPlan.id) ?? '?',
+                    days: selectedExportPlan.teachingDays.length,
+                  })
                 : ''}
             </p>
           </>
         )}
       </section>
 
-      <h3 className="export-group-title">导出方式</h3>
+      <h3 className="export-group-title">{t('导出方式')}</h3>
       <div className="export-methods-grid">
         {exportMethods.map((method) => (
           <section className="card export-card export-method-card" key={method.key}>
@@ -2816,16 +2845,16 @@ export default function App() {
         ))}
       </div>
 
-      <h3 className="export-group-title">其他</h3>
+      <h3 className="export-group-title">{t('其他')}</h3>
       <section className="card export-bar">
         <div className="export-bar__text">
-          <h3 className="card__title">导出所有配置</h3>
+          <h3 className="card__title">{t('导出所有配置')}</h3>
           <p className="card__sub">
-            把要上的课、已修过的课、备选课、锁定时段与筛选开关打包成一份 Markdown，方便备份或换设备导入。
+            {t('把要上的课、已修过的课、备选课、锁定时段与筛选开关打包成一份 Markdown，方便备份或换设备导入。')}
           </p>
         </div>
         <button className="export-btn export-bar__btn" type="button" onClick={handleExportConfigMd}>
-          下载 .md
+          {t('下载 .md')}
         </button>
       </section>
 
@@ -2849,7 +2878,7 @@ export default function App() {
           setAutoRemoved([])
         }}
       >
-        清空全部
+        {t('清空全部')}
       </button>
     ) : null
 
@@ -2865,7 +2894,7 @@ export default function App() {
               {myInfoCard}
               {takenCard}
               {progressCard}
-              <p className="info-note">这些信息用于判断先修与本专业筛选。</p>
+              <p className="info-note">{t('这些信息用于判断先修与本专业筛选。')}</p>
             </aside>
           </>
         )
@@ -2875,7 +2904,7 @@ export default function App() {
             <aside className="side side--filters">{searchCard}</aside>
             <section className="results-pane">
               {loading ? (
-                <div className="pane__loading">正在加载 {year ?? ''} 全部课程…</div>
+                <div className="pane__loading">{t('正在加载 {year} 全部课程…', { year: year ?? '' })}</div>
               ) : (
                 <SearchResults
                   barredKeys={barredKeys}
@@ -2927,8 +2956,8 @@ export default function App() {
                 colorForCode={colorForCode}
                 emptyMessage={
                   committedCourses.length === 0
-                    ? '在左侧选择当前选择课程，A / B 两种排法会自动排出来'
-                    : '当前无可行方案'
+                    ? t('在左侧选择当前选择课程，A / B 两种排法会自动排出来')
+                    : t('当前无可行方案')
                 }
                 guides={guideLines}
                 locked={workTimeLocked}
@@ -2959,12 +2988,12 @@ export default function App() {
           <span className="drag-ghost__code">{dragCourse.code}</span>
           <span className="drag-ghost__hint">
             {dropHover === 'committed'
-              ? '放开 → 必定学'
+              ? t('放开 → 必定学')
               : dropHover === 'cart'
-                ? '放开 → 可能学'
+                ? t('放开 → 可能学')
                 : dragCourse.from === 'catalog'
-                  ? '拖到右侧「必定学 / 可能学」'
-                  : '拖到另一栏移动 · 拖到空白处移除'}
+                  ? t('拖到右侧「必定学 / 可能学」')
+                  : t('拖到另一栏移动 · 拖到空白处移除')}
           </span>
         </div>
       )}
@@ -2988,7 +3017,7 @@ export default function App() {
                 onClick={() => go(value)}
               >
                 <span className="bar__nav-icon">{PAGE_ICON[value]}</span>
-                {label}
+                {t(label)}
               </button>
             ))}
           </nav>
@@ -2997,9 +3026,9 @@ export default function App() {
                 同步状态由按钮边框色标识(绿=已同步/黄=同步中/红=失败),不再用独立圆点。 */}
             <button
               aria-expanded={acctOpen}
-              aria-label={account ? `账号 ${account.username}` : '登录账号'}
+              aria-label={account ? t('账号 {user}', { user: account.username }) : t('登录账号')}
               className={account ? `bar__acct bar__acct--in acct-sync--${syncStatus}` : 'bar__acct'}
-              title={account ? `${account.username} · ${syncStatusText}` : '登录 / 注册'}
+              title={account ? t('{user} · {status}', { user: account.username, status: syncStatusText }) : t('登录 / 注册')}
               type="button"
               onClick={() => {
                 setAcctNote('')
@@ -3021,6 +3050,15 @@ export default function App() {
                   />
                 </svg>
               )}
+            </button>
+            <button
+              aria-label={t('切换语言，当前 {lang}', { lang: LANG_LABEL[lang] })}
+              className="bar__lang"
+              title={t('切换界面语言 / Switch language')}
+              type="button"
+              onClick={() => setLangState((value) => nextLang(value))}
+            >
+              <span aria-hidden>{LANG_LABEL[lang]}</span>
             </button>
             <button
               aria-label={`当前主题：${THEME_LABEL[theme]}，点击切换到${THEME_LABEL[nextTheme(theme)]}`}
@@ -3063,7 +3101,7 @@ export default function App() {
           </a>
         </div>
         <div className="foot__sibs">
-          <span className="sib-label">友链</span>
+          <span className="sib-label">{t('友链')}</span>
           <div className="sib-row">
             {SIBLINGS.map((sib) => (
               <a
@@ -3074,7 +3112,7 @@ export default function App() {
                 target="_blank"
               >
                 <img alt="" src={sib.icon} />
-                {sib.name}
+                {t(sib.name)}
               </a>
             ))}
           </div>

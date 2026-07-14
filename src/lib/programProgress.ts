@@ -77,6 +77,12 @@ export type ProgramProgress = {
   outside: CreditBucket
   /** program.total_units, the whole-degree budget (null when unknown). */
   totalRequired: number | null
+  /**
+   * 每节的必修学分是否可信。true = 各节推导学分自洽(全部非空且加总==total_units),按节显示上限;
+   * false = 该方案结构无法可靠拆分(合并/重叠/无预算节,如「二选一」分流会被各算一遍),此时只对
+   * 数据【显式声明 units】的节给上限,其余不显示上限,毕业进度以整方案累计(inProgram/totalRequired)为准。
+   */
+  reconciled: boolean
 }
 
 // 已完成但本学年目录查不到 units 的课(如今年停开/未开):用户既已修就该算分,不因今年不开
@@ -112,7 +118,8 @@ export function computeProgramProgress(
   // Keys of every completed course that lands somewhere in the programme (dedup across sections).
   const inProgramKeys = new Set<string>()
 
-  const sections: SectionProgress[] = program.structure.map((node) => {
+  // 第一遍:每节的已修学分 + 推导必修学分(node.units,缺则加总子节点)。
+  const raw = program.structure.map((node) => {
     const courses: ProgramCourse[] = []
     collectCourses(node, courses)
     // Dedup completed courses within this section (a course listed under several streams counts once).
@@ -124,17 +131,28 @@ export function computeProgramProgress(
         inProgramKeys.add(key)
       }
     }
-    const bucket = tallyKeys(seen, unitsFor)
-    return {
-      marker: node.marker,
-      title: node.title,
-      note: node.note,
-      earned: bucket.earned,
-      required: requiredUnits(node),
-      count: bucket.count,
-      estimated: bucket.estimated,
-    }
+    return { node, bucket: tallyKeys(seen, unitsFor), derived: requiredUnits(node) }
   })
+
+  // 结构是否自洽:每节都推导出非空必修学分、且加总恰等于 total_units → 这个方案的分节拆分可信,
+  // 按节显示上限;否则(近半数方案:节间重叠/合并/含无预算节,推导会把「二选一」分流各算一遍等)
+  // 只认数据【显式声明 units】的节,其余不给上限——按 program info 灵活切换,不臆造错误的分节学分。
+  const totalRequired = program.total_units
+  const reconciled =
+    totalRequired != null &&
+    raw.length > 0 &&
+    raw.every((r) => r.derived != null) &&
+    raw.reduce((sum, r) => sum + (r.derived ?? 0), 0) === totalRequired
+
+  const sections: SectionProgress[] = raw.map((r) => ({
+    marker: r.node.marker,
+    title: r.node.title,
+    note: r.node.note,
+    earned: r.bucket.earned,
+    required: reconciled ? r.derived : r.node.units,
+    count: r.bucket.count,
+    estimated: r.bucket.estimated,
+  }))
 
   // prose-only programmes (no structured tree): fold the whole flat inventory into 本方案.
   if (program.structure.length === 0) {
@@ -150,6 +168,7 @@ export function computeProgramProgress(
     sections,
     inProgram: tallyKeys(inProgramKeys, unitsFor),
     outside: tallyKeys(outsideKeys, unitsFor),
-    totalRequired: program.total_units,
+    totalRequired,
+    reconciled,
   }
 }

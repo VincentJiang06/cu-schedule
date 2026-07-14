@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react'
 import { getProgram, searchPrograms, type Program, type SubjectTitle } from '../lib/programs.ts'
+import { t } from '../i18n/index.ts'
 
 // Programme names in the data are Traditional Chinese (計算機), so a Simplified query
 // (计算机) would miss. This is a small char-level 简→繁 map covering characters common in
@@ -87,7 +88,7 @@ export function ProgramPicker({
       <div className="pp">
         <button
           className="pp__chip"
-          title="点击清除主修"
+          title={t('点击清除主修')}
           type="button"
           onClick={() => onChange(null)}
         >
@@ -104,7 +105,7 @@ export function ProgramPicker({
       <input
         ref={inputRef}
         className="search-box"
-        placeholder="中英文名，如 Computer / 計算機"
+        placeholder={t('中英文名，如 Computer / 計算機')}
         value={draft}
         onBlur={() => window.setTimeout(() => setOpen(false), 120)}
         onChange={(event) => {

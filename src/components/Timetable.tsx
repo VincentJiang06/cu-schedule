@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react'
+import { t } from '../i18n/index.ts'
 import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
@@ -87,7 +88,7 @@ export function Timetable({
       <div className="tt__head">
         {DAYS.slice(0, dayCount).map((day) => (
           <div className="tt__day-name" key={day}>
-            {day}
+            {t(day)}
           </div>
         ))}
       </div>
@@ -145,7 +146,7 @@ export function Timetable({
                         width: `calc(${width}% - 4px)`,
                       } as CSSProperties
                     }
-                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || '地点待定'}`}
+                    title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || t('地点待定')}`}
                   >
                     <span className="tt__block-code">{block.code}</span>
                     {block.location && (

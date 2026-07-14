@@ -4,6 +4,7 @@ import { courseKey } from '../lib/courseKey.ts'
 import { detectChooseRule, type ChooseRule } from '../lib/programChoose.ts'
 import type { ProgramCourse, Program, SectionNode } from '../lib/programs.ts'
 import type { Course } from '../lib/types.ts'
+import { t } from '../i18n/index.ts'
 
 /**
  * The big study-scheme table on the 信息 page. Renders a programme's faithful
@@ -44,8 +45,8 @@ function courseDone(course: ProgramCourse, takenSet: Set<string>): boolean {
 // (a units budget or a single-card list gets none — nothing to disambiguate on the card).
 function pickHintText(rule: ChooseRule | null, courseCount: number): string | null {
   if (!rule || courseCount < 2) return null
-  if (rule.kind === 'pick-one') return '任选一门即可'
-  if (rule.kind === 'pick-n') return `任选 ${rule.n} 门即可`
+  if (rule.kind === 'pick-one') return t('任选一门即可')
+  if (rule.kind === 'pick-n') return t('任选 {n} 门即可', { n: rule.n })
   return null
 }
 
@@ -107,14 +108,14 @@ function TitleLabel({ title }: { title: string }) {
   if (zh) {
     return (
       <span className="pg-section__title">
-        {zh}
+        {t(zh)}
         <em className="pg-section__en">{title}</em>
       </span>
     )
   }
   // 「Choose any ONE/…from the following」这类分流选择标注:统一标为「分流」,不带英文原文。
   if (/^choose/i.test(title)) {
-    return <span className="pg-section__title">分流</span>
+    return <span className="pg-section__title">{t('分流')}</span>
   }
   return <span className="pg-section__title pg-section__title--plain">{title}</span>
 }
@@ -126,7 +127,7 @@ function NoteContent({ note }: { note: string }) {
   if (!zh) return <>{note}</>
   return (
     <>
-      {zh}
+      {t(zh)}
       <em className="pg-note__en">{note}</em>
     </>
   )
@@ -245,7 +246,9 @@ function CourseGrid({
                 {course.code}
                 {course.alts.length > 0 && <em className="pg-course__alt">/{course.alts.join('/')}</em>}
               </span>
-              {resolved && <span className="pg-course__units">{resolved.units}学分</span>}
+              {resolved && (
+                <span className="pg-course__units">{t('{n} 学分', { n: resolved.units })}</span>
+              )}
               {resolved ? (
                 <span className="pg-course__title">{resolved.title}</span>
               ) : (
@@ -309,11 +312,11 @@ function SectionBlock({
       <div className="pg-section__head">
         {node.marker && <span className="pg-section__marker">{node.marker}</span>}
         <TitleLabel title={headLabel} />
-        {isConcentration && <span className="pg-badge">可选方向</span>}
-        {isStream && <span className="pg-badge pg-badge--stream">选修方向</span>}
+        {isConcentration && <span className="pg-badge">{t('可选方向')}</span>}
+        {isStream && <span className="pg-badge pg-badge--stream">{t('选修方向')}</span>}
         {node.units != null && (
           <span className={`pg-section__units${chooseRule ? ' pg-section__units--choose' : ''}`}>
-            {node.units} 学分
+            {t('{n} 学分', { n: node.units })}
           </span>
         )}
         {hasCourses && (
@@ -322,7 +325,7 @@ function SectionBlock({
             type="button"
             onClick={() => onBulkTaken(subCodes, !allDone)}
           >
-            {allDone ? '取消全部' : '全部标记为已完成'}
+            {allDone ? t('取消全部') : t('全部标记为已完成')}
           </button>
         )}
       </div>
@@ -381,7 +384,7 @@ export function ProgramTable({
   if (!program) {
     return (
       <div className="pg pg--empty">
-        在右侧选择主修培养方案，这里会列出该方案的必修 / 选修 / 分流课程
+        {t('在右侧选择主修培养方案，这里会列出该方案的必修 / 选修 / 分流课程')}
       </div>
     )
   }
@@ -415,8 +418,8 @@ export function ProgramTable({
         ) : fallbackCourses.length > 0 ? (
           <div className="pg-section">
             <div className="pg-section__head">
-              <span className="pg-section__title pg-section__title--plain">全部课程</span>
-              <span className="pg-section__units">{fallbackCourses.length} 门</span>
+              <span className="pg-section__title pg-section__title--plain">{t('全部课程')}</span>
+              <span className="pg-section__units">{t('{n} 门', { n: fallbackCourses.length })}</span>
               <button
                 className="pg-bulk"
                 type="button"
@@ -428,11 +431,11 @@ export function ProgramTable({
                 }
               >
                 {fallbackCourses.every((course) => courseDone(course, takenSet))
-                  ? '取消全部'
-                  : '全部标记为已完成'}
+                  ? t('取消全部')
+                  : t('全部标记为已完成')}
               </button>
             </div>
-            <p className="pg-note">该方案暂无结构化清单</p>
+            <p className="pg-note">{t('该方案暂无结构化清单')}</p>
             <CourseGrid
               catalogByKey={catalogByKey}
               courses={fallbackCourses}
@@ -441,7 +444,7 @@ export function ProgramTable({
             />
           </div>
         ) : (
-          <p className="pg-note">该方案暂无课程清单</p>
+          <p className="pg-note">{t('该方案暂无课程清单')}</p>
         )}
       </div>
     </div>

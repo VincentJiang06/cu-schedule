@@ -4,6 +4,7 @@ import { courseKey } from '../lib/courseKey.ts'
 import type { Pins } from '../lib/schedule.ts'
 import { DAY_SHORT, hhmm } from '../lib/time.ts'
 import type { Course, Section } from '../lib/types.ts'
+import { t } from '../i18n/index.ts'
 
 const TERM_LABEL: Record<number, string> = { 1: '上学期', 2: '下学期' }
 
@@ -11,8 +12,12 @@ function sectionTimes(section: Section): string {
   const timed = section.meetings
     .filter((meeting) => meeting.dayIndex >= 1 && meeting.dayIndex <= 7)
     .sort((a, b) => a.dayIndex - b.dayIndex || a.start - b.start)
-  if (timed.length === 0) return '时间待定'
-  return timed.map((m) => `周${DAY_SHORT[m.dayIndex - 1]} ${hhmm(m.start)}–${hhmm(m.end)}`).join(' · ')
+  if (timed.length === 0) return t('时间待定')
+  return timed
+    .map((m) =>
+      t('周{day} {start}–{end}', { day: DAY_SHORT[m.dayIndex - 1], start: hhmm(m.start), end: hhmm(m.end) }),
+    )
+    .join(' · ')
 }
 
 function sectionLabel(section: Section, index: number): string {
@@ -43,7 +48,12 @@ function courseLines(course: Course): Line[] {
     } else if (sections.length === 1) {
       lines.push({ key: component, label: component, time: sectionTimes(sections[0]), muted: false })
     } else {
-      lines.push({ key: component, label: component, time: `${sections.length} 个时段（待选）`, muted: true })
+      lines.push({
+        key: component,
+        label: component,
+        time: t('{n} 个时段（待选）', { n: sections.length }),
+        muted: true,
+      })
     }
   }
   return lines
@@ -74,7 +84,7 @@ function sectionChipState(
   const isCurA = currentA?.[component] === sectionId
   const isCurB = currentB?.[component] === sectionId
   const curClass = isCurA && isCurB ? ' cl-chip--cur-ab' : isCurA ? ' cl-chip--cur-a' : isCurB ? ' cl-chip--cur-b' : ''
-  const curHint = isCurA && isCurB ? ' · A、B 都用这个' : isCurA ? ' · 当前 A 用这个' : isCurB ? ' · 当前 B 用这个' : ''
+  const curHint = isCurA && isCurB ? t(' · A、B 都用这个') : isCurA ? t(' · 当前 A 用这个') : isCurB ? t(' · 当前 B 用这个') : ''
   return { on, curClass, curHint }
 }
 
@@ -162,7 +172,7 @@ function CoursePicker({
                   <button
                     className={`cl-chip${on ? ' cl-chip--on' : ''}${curClass}`}
                     key={section.id}
-                    title={`${sectionTimes(section)}${on ? ' · 已约束' : ''}${curHint}`}
+                    title={`${sectionTimes(section)}${on ? t(' · 已约束') : ''}${curHint}`}
                     type="button"
                     onClick={() => onPin(component, section.id)}
                   >
@@ -174,7 +184,7 @@ function CoursePicker({
             <span className="cl-pick__time">
               {chosenId
                 ? sectionTimes(sections.find((section) => section.id === chosenId) ?? sections[0])
-                : `${sections.length} 个时段 · 自动`}
+                : t('{n} 个时段 · 自动', { n: sections.length })}
             </span>
           </div>
         )
@@ -259,7 +269,7 @@ export function CommittedList({
   return (
     <div className="cl">
       {rows.length === 0 ? (
-        <p className="cl__empty empty-hint">{emptyHint ?? '还没有课程。在中间的课程列表点「必定学」来添加。'}</p>
+        <p className="cl__empty empty-hint">{emptyHint ?? t('还没有课程。在中间的课程列表点「必定学」来添加。')}</p>
       ) : (
         <ul className="cl__rows">
           {rows.map(({ code, isCart }) => {
@@ -276,7 +286,13 @@ export function CommittedList({
                 className={`${isCart ? 'cl-row cl-row--cart' : 'cl-row'}${isDisabledCandidate ? ' cl-row--cart-off' : ''}`}
                 key={code}
                 style={(colorFor ?? courseColor)(code)}
-                title={isCart ? (isDisabledCandidate ? '可能学（候选课程 · 已隐藏，课表上不再显示）' : '可能学（候选课程）') : undefined}
+                title={
+                  isCart
+                    ? isDisabledCandidate
+                      ? t('可能学（候选课程 · 已隐藏，课表上不再显示）')
+                      : t('可能学（候选课程）')
+                    : undefined
+                }
                 onPointerDown={
                   onRowPointerDown ? (event) => onRowPointerDown(code, isCart, event) : undefined
                 }
@@ -287,9 +303,9 @@ export function CommittedList({
                   {course && (
                     <button
                       aria-expanded={!rowCollapsed}
-                      aria-label={rowCollapsed ? `展开 ${code}` : `折叠 ${code}`}
+                      aria-label={rowCollapsed ? t('展开 {code}', { code }) : t('折叠 {code}', { code })}
                       className="cl-row__fold"
-                      title={rowCollapsed ? '展开：显示时间/地点/时段选择' : '折叠：本行只留一行'}
+                      title={rowCollapsed ? t('展开：显示时间/地点/时段选择') : t('折叠：本行只留一行')}
                       type="button"
                       onClick={() => toggleRowCollapsed(code)}
                     >
@@ -297,18 +313,20 @@ export function CommittedList({
                     </button>
                   )}
                   <span className="cl-row__code">{code}</span>
-                  {course && <span className="cl-row__units">{course.units}学分</span>}
-                  {showTermBadge && badge ? <span className="cl-row__term">{TERM_LABEL[badge]}</span> : null}
+                  {course && <span className="cl-row__units">{t('{n}学分', { n: course.units })}</span>}
+                  {showTermBadge && badge ? <span className="cl-row__term">{t(TERM_LABEL[badge])}</span> : null}
                   {(onRemove || (isCart && onToggleCandidateDisabled)) && (
                     <span className="cl-row__actions">
                       {isCart && onToggleCandidateDisabled && (
                         <button
-                          aria-label={isDisabledCandidate ? `启用候选课 ${code}` : `隐藏候选课 ${code}`}
+                          aria-label={
+                            isDisabledCandidate ? t('启用候选课 {code}', { code }) : t('隐藏候选课 {code}', { code })
+                          }
                           className={`cl-row__eye${isDisabledCandidate ? ' cl-row__eye--off' : ''}`}
                           title={
                             isDisabledCandidate
-                              ? '已隐藏（课表上的试排块已整块移除），点击重新启用'
-                              : '点击隐藏（课表上的试排块整块移除，不影响候选身份）'
+                              ? t('已隐藏（课表上的试排块已整块移除），点击重新启用')
+                              : t('点击隐藏（课表上的试排块整块移除，不影响候选身份）')
                           }
                           type="button"
                           onClick={() => onToggleCandidateDisabled(code)}
@@ -317,7 +335,7 @@ export function CommittedList({
                         </button>
                       )}
                       {onRemove && (
-                        <button className="cl-row__x" title="移除" type="button" onClick={() => onRemove(code)}>
+                        <button className="cl-row__x" title={t('移除')} type="button" onClick={() => onRemove(code)}>
                           ×
                         </button>
                       )}
@@ -346,7 +364,7 @@ export function CommittedList({
                     </div>
                   )
                 ) : !course && !rowCollapsed ? (
-                  <div className="cl-row__missing">本学期无此课</div>
+                  <div className="cl-row__missing">{t('本学期无此课')}</div>
                 ) : null}
               </li>
             )

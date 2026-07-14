@@ -1,4 +1,5 @@
 import { subjectPaint } from './color.ts'
+import { t } from '../i18n/index.ts'
 import type { Plan } from './schedule.ts'
 import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
 
@@ -76,7 +77,7 @@ function paintBackground(ctx: CanvasRenderingContext2D, termName: string): void 
   ctx.fillText('CU Schedule', W / 2, markY + markSize + 78)
   ctx.fillStyle = 'rgba(199, 210, 254, 0.7)'
   ctx.font = '400 28px system-ui, -apple-system, "PingFang SC", sans-serif'
-  ctx.fillText(termName || '本学期课表', W / 2, markY + markSize + 122)
+  ctx.fillText(termName || t('本学期课表'), W / 2, markY + markSize + 122)
 
   // Faint signature, tucked well inside the bottom safe zone — doesn't compete with
   // the lock-screen date.
@@ -87,7 +88,7 @@ function paintBackground(ctx: CanvasRenderingContext2D, termName: string): void 
 
 async function canvasToPng(canvas: HTMLCanvasElement): Promise<Blob> {
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
-  if (!blob) throw new Error('生成壁纸失败')
+  if (!blob) throw new Error(t('生成壁纸失败'))
   return blob
 }
 
@@ -96,7 +97,7 @@ function freshCanvas(): { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext
   canvas.width = W
   canvas.height = H
   const ctx = canvas.getContext('2d')
-  if (!ctx) throw new Error('无法创建画布')
+  if (!ctx) throw new Error(t('无法创建画布'))
   return { canvas, ctx }
 }
 
@@ -115,7 +116,7 @@ export async function exportWallpaper(
 
   const { canvas, ctx } = freshCanvas()
   paintBackground(ctx, termName)
-  downloadBlob(await canvasToPng(canvas), `cu-schedule-壁纸-${slug}.png`)
+  downloadBlob(await canvasToPng(canvas), `cu-schedule-${t('壁纸')}-${slug}.png`)
 
-  return '已下载壁纸（纯渐变，无课表），iPhone 比例 1206×2622'
+  return t('已下载壁纸（纯渐变，无课表），iPhone 比例 1206×2622')
 }

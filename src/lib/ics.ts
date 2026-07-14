@@ -1,4 +1,5 @@
 import type { Plan } from './schedule.ts'
+import { t } from '../i18n/index.ts'
 
 /**
  * Serialize one timetable (排法 A) into an RFC 5545 VCALENDAR.
@@ -80,9 +81,9 @@ export function buildIcs(plan: Plan, termName: string, now: Date = new Date()): 
     'PRODID:-//CU Schedule//CU Schedule//EN',
     'CALSCALE:GREGORIAN',
     'METHOD:PUBLISH',
-    `X-WR-CALNAME:${escapeText(`CU Schedule ${termName} 排法A`)}`,
+    `X-WR-CALNAME:${escapeText(t('CU Schedule {termName} 排法A', { termName }))}`,
     `X-WR-CALDESC:${escapeText(
-      '学期起止日期未知：事件自即将到来的对应星期几起按周重复 13 周，仅为估计，请以 CUSIS 为准。',
+      t('学期起止日期未知：事件自即将到来的对应星期几起按周重复 13 周，仅为估计，请以 CUSIS 为准。'),
     )}`,
     'X-WR-TIMEZONE:Asia/Hong_Kong',
     'BEGIN:VTIMEZONE',

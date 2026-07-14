@@ -1,5 +1,6 @@
 import { glossSection } from '../lib/programs.ts'
 import type { ProgramProgress as Progress, SectionProgress } from '../lib/programProgress.ts'
+import { t } from '../i18n/index.ts'
 
 /**
  * 信息页「已完成课程」下方的学分进度计算器。把已完成课程按当前培养方案的顶层 section
@@ -26,7 +27,7 @@ function SectionName({ title }: { title: string }) {
     )
   }
   if (label.en) return <>{label.en}</>
-  return <>课程要求</>
+  return <>{t('课程要求')}</>
 }
 
 // 已修学分 / 需修学分 数字块。required 缺省时只显示已修。
@@ -34,7 +35,7 @@ function Nums({ earned, required }: { earned: number; required: number | null })
   return (
     <span className="prog-progress__nums">
       <b>{earned}</b>
-      {required != null && <> / {required}</>} 学分
+      {required != null && <> / {required}</>} {t('学分')}
     </span>
   )
 }
@@ -71,7 +72,9 @@ function SectionRow({ section }: { section: SectionProgress }) {
       </div>
       <Bar earned={section.earned} required={section.required} />
       {section.estimated > 0 && (
-        <span className="prog-progress__hint">其中 {section.estimated} 门今年未开课，按 3 学分估算</span>
+        <span className="prog-progress__hint">
+          {t('其中 {n} 门今年未开课，按 3 学分估算', { n: section.estimated })}
+        </span>
       )}
     </li>
   )
@@ -83,16 +86,16 @@ export function ProgramProgress({ data, takenTotal }: { data: Progress; takenTot
   return (
     <section className="card prog-progress">
       <h2 className="card__title">
-        学分进度
-        <span className="card__note">已完成课程按培养方案归类</span>
+        {t('学分进度')}
+        <span className="card__note">{t('已完成课程按培养方案归类')}</span>
       </h2>
 
       {takenTotal === 0 && (
-        <p className="card__sub">还没有已完成课程——在上方录入成绩单课号，这里会算出各组已修学分。</p>
+        <p className="card__sub">{t('还没有已完成课程——在上方录入成绩单课号，这里会算出各组已修学分。')}</p>
       )}
 
       {proseOnly ? (
-        <p className="card__sub">该方案暂无结构化清单，无法按组拆分，仅统计本方案累计。</p>
+        <p className="card__sub">{t('该方案暂无结构化清单，无法按组拆分，仅统计本方案累计。')}</p>
       ) : (
         <ul className="prog-progress__list">
           {data.sections.map((section, index) => (
@@ -102,21 +105,21 @@ export function ProgramProgress({ data, takenTotal }: { data: Progress; takenTot
       )}
 
       <div className="prog-progress__total">
-        <span className="prog-progress__total-label">本方案已修</span>
+        <span className="prog-progress__total-label">{t('本方案已修')}</span>
         <Nums earned={data.inProgram.earned} required={data.totalRequired} />
       </div>
       <Bar earned={data.inProgram.earned} required={data.totalRequired} />
 
       {data.outside.count > 0 && (
         <p className="prog-progress__outside">
-          另有 {data.outside.count} 门
-          {data.outside.earned > 0 && ` · ${data.outside.earned} 学分`}
-          不在本方案内（自由选修 / 通识等）
+          {t('另有 {n} 门', { n: data.outside.count })}
+          {data.outside.earned > 0 && t(' · {n} 学分', { n: data.outside.earned })}
+          {t('不在本方案内（自由选修 / 通识等）')}
         </p>
       )}
 
       <p className="card__sub">
-        学分以本学年目录为准；「任选其一」等多组共享、超修情况以 CUSIS 与培养方案为准。
+        {t('学分以本学年目录为准；「任选其一」等多组共享、超修情况以 CUSIS 与培养方案为准。')}
       </p>
     </section>
   )

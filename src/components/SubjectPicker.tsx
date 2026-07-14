@@ -2,6 +2,7 @@ import { useMemo, useRef, useState } from 'react'
 import { courseColor } from '../lib/color.ts'
 import type { SubjectInfo } from '../lib/data.ts'
 import { subjectBlurb } from '../lib/subjectNames.ts'
+import { t } from '../i18n/index.ts'
 
 export function SubjectPicker({
   subjects,
@@ -65,7 +66,7 @@ export function SubjectPicker({
           <button
             className="sp__chip"
             style={courseColor(code)}
-            title="点击清除主修"
+            title={t('点击清除主修')}
             type="button"
             onClick={() => onChange([])}
           >
@@ -87,7 +88,7 @@ export function SubjectPicker({
               className={variant === 'exclude' ? 'sp__chip sp__chip--exclude' : 'sp__chip'}
               key={code}
               style={variant === 'exclude' ? undefined : courseColor(code)}
-              title="点击移除"
+              title={t('点击移除')}
               type="button"
               onClick={() => onChange(selected.filter((item) => item !== code))}
             >
@@ -103,7 +104,7 @@ export function SubjectPicker({
         <input
           ref={inputRef}
           className="sp__field"
-          placeholder={placeholder ?? '输入学科字母，如 C…'}
+          placeholder={placeholder ?? t('输入学科字母，如 C…')}
           value={draft}
           onBlur={() => window.setTimeout(() => setOpen(false), 120)}
           onChange={(event) => {

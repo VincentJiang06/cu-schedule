@@ -1,5 +1,6 @@
 import { abbreviateLocation } from './buildingAbbrev.ts'
 import { activeTheme, subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
+import { t } from '../i18n/index.ts'
 import type { Plan } from './schedule.ts'
 import { displayEndMinutes, hhmm } from './time.ts'
 
@@ -273,7 +274,7 @@ function draw(
   ctx.font = '700 26px system-ui, -apple-system, "PingFang SC", sans-serif'
   ctx.textBaseline = 'alphabetic'
   ctx.textAlign = 'left'
-  ctx.fillText(`CU Schedule · ${termName} 课表`, 28, 44)
+  ctx.fillText(t('CU Schedule · {termName} 课表', { termName }), 28, 44)
 
   const gridTop = 108
   const gridBottom = H - 48
@@ -318,7 +319,7 @@ function draw(
     ctx.font = '700 17px system-ui, -apple-system, "PingFang SC", sans-serif'
     ctx.textAlign = 'center'
     ctx.textBaseline = 'alphabetic'
-    ctx.fillText(DAYS[day], x + colW / 2, gridTop - 14)
+    ctx.fillText(t(DAYS[day]), x + colW / 2, gridTop - 14)
   }
   ctx.strokeStyle = faint
   ctx.beginPath()
@@ -409,7 +410,7 @@ function renderTimetable(
   canvas.width = boardW * SCALE
   canvas.height = boardH * SCALE
   const ctx = canvas.getContext('2d')
-  if (!ctx) throw new Error('无法创建画布')
+  if (!ctx) throw new Error(t('无法创建画布'))
   ctx.scale(SCALE, SCALE)
   draw(ctx, plan, termName, paint, theme, boardW, boardH)
   return canvas
@@ -430,7 +431,7 @@ export async function exportImage(
   const { W, H } = canvasSize(aspect)
   const canvas = renderTimetable(plan, termName, paint, theme ?? activeTheme(), W, H)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
-  if (!blob) throw new Error('生成图片失败')
+  if (!blob) throw new Error(t('生成图片失败'))
   const filename = `cu-schedule-${slugTerm(termName)}.png`
   downloadBlob(blob, filename)
   return filename

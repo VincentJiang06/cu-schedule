@@ -1,4 +1,5 @@
 import { Fragment, useMemo, type PointerEvent as ReactPointerEvent } from 'react'
+import { t } from '../i18n/index.ts'
 import type { CandidateStatus } from '../lib/candidates.ts'
 import { courseColor } from '../lib/color.ts'
 import type { Offering } from '../lib/data.ts'
@@ -59,11 +60,11 @@ const FREE_STANDING: CourseStanding = { kind: 'free' }
 type CardFlag = { kind: 'blocked' | 'neutral'; tone: 'bad' | 'warn' | 'mute'; text: string }
 
 function flagFor(status: CandidateStatus | undefined, isBarred: boolean): CardFlag | null {
-  if (isBarred) return { kind: 'blocked', tone: 'bad', text: '已修替代课' }
-  if (status === 'conflict') return { kind: 'blocked', tone: 'bad', text: '时间冲突' }
-  if (status === 'tba') return { kind: 'blocked', tone: 'mute', text: '时间待定' }
+  if (isBarred) return { kind: 'blocked', tone: 'bad', text: t('已修替代课') }
+  if (status === 'conflict') return { kind: 'blocked', tone: 'bad', text: t('时间冲突') }
+  if (status === 'tba') return { kind: 'blocked', tone: 'mute', text: t('时间待定') }
   // rearrange: 塞不进当前排法,但换一种可行排法就能共存 —— 中性提示,不禁用。
-  if (status === 'rearrange') return { kind: 'neutral', tone: 'warn', text: '时间可能冲突' }
+  if (status === 'rearrange') return { kind: 'neutral', tone: 'warn', text: t('时间可能冲突') }
   return null
 }
 
@@ -251,11 +252,12 @@ export function SearchResults({
   return (
     <div className="cg">
       <p className="cg__count">
-        共 <b>{total}</b> 门 · {groups.length} 个学科{capped ? ` · 已显示前 ${RENDER_CAP} 门，请缩小范围` : ''}
+        {t('共')} <b>{total}</b> {t('门')} · {groups.length} {t('个学科')}
+        {capped ? t(' · 已显示前 {cap} 门，请缩小范围', { cap: RENDER_CAP }) : ''}
       </p>
       <div className="cg__scroll">
         {total === 0 ? (
-          <div className="cg__empty empty-hint">没有符合条件的课程</div>
+          <div className="cg__empty empty-hint">{t('没有符合条件的课程')}</div>
         ) : (
           shownGroups.map((group) => (
             <Fragment key={group.subject}>
@@ -266,7 +268,7 @@ export function SearchResults({
               </div>
               {group.terms.map((term) => (
                 <Fragment key={term.termOrder}>
-                  <div className="cg__term">{TERM_LABEL[term.termOrder] ?? '其他'}</div>
+                  <div className="cg__term">{t(TERM_LABEL[term.termOrder] ?? '其他')}</div>
                   <div className="cg__grid">
                     {term.courses.map((course) => {
                       const status = statusByCode.get(course.key)
@@ -286,9 +288,17 @@ export function SearchResults({
                       // 右上角角标:缺先修 / 看先修 + 时间类提示(冲突/待定/时间可能冲突/已修替代课),特殊切角格式。
                       const tags: Array<{ tone: 'bad' | 'warn' | 'mute'; text: string; title: string }> = []
                       if (prereq?.status === 'missing') {
-                        tags.push({ tone: 'bad', text: '缺先修', title: `先修未满足：${prereq.text}` })
+                        tags.push({
+                          tone: 'bad',
+                          text: t('缺先修'),
+                          title: t('先修未满足：{text}', { text: prereq.text }),
+                        })
                       } else if (prereq?.status === 'unverifiable' && prereq.text) {
-                        tags.push({ tone: 'mute', text: '看先修', title: `有先修/成绩等要求，请自查：${prereq.text}` })
+                        tags.push({
+                          tone: 'mute',
+                          text: t('看先修'),
+                          title: t('有先修/成绩等要求，请自查：{text}', { text: prereq.text }),
+                        })
                       }
                       if (flag) {
                         tags.push({ tone: flag.tone, text: flag.text, title: flag.text })
@@ -306,7 +316,7 @@ export function SearchResults({
                             className="cc__info"
                             role="button"
                             tabIndex={0}
-                            title="查看课程详情"
+                            title={t('查看课程详情')}
                             onClick={() => onOpenDetail(course)}
                             onKeyDown={(event) => {
                               if (event.key === 'Enter' || event.key === ' ') {
@@ -317,7 +327,7 @@ export function SearchResults({
                           >
                             <div className="cc__head">
                               <span className="cc__code">{course.code}</span>
-                              <span className="cc__units">[{course.units}学分]</span>
+                              <span className="cc__units">[{course.units}{t('学分')}]</span>
                               {tags.length > 0 && (
                                 <div className="cc__tags">
                                   {tags.map((tag) => (
@@ -331,12 +341,12 @@ export function SearchResults({
                             {standing && (
                               <div className={`cc__class cc__class--${standing.kind}`}>
                                 <span className="cc__class-kind">
-                                  {STANDING_LABEL[standing.kind].zh}
+                                  {t(STANDING_LABEL[standing.kind].zh)}
                                   <em>{STANDING_LABEL[standing.kind].en}</em>
                                 </span>
                                 {standing.kind !== 'free' && (standing.section.zh || standing.section.en) && (
                                   <span className="cc__class-sec">
-                                    {standing.section.zh && <>{standing.section.zh} </>}
+                                    {standing.section.zh && <>{t(standing.section.zh)} </>}
                                     <em>{standing.section.en}</em>
                                   </span>
                                 )}
@@ -352,14 +362,14 @@ export function SearchResults({
                               type="button"
                               onClick={() => onTaken(course.code)}
                             >
-                              {isTaken ? '已学完 ✓' : '已学完'}
+                              {isTaken ? t('已学完 ✓') : t('已学完')}
                             </button>
                             <button
                               className={`cc__btn cc__btn--maybe${isCart ? ' cc__btn--on' : ''}`}
                               type="button"
                               onClick={() => onCart(course.code)}
                             >
-                              {isCart ? '可能学 ✓' : '可能学'}
+                              {isCart ? t('可能学 ✓') : t('可能学')}
                             </button>
                             <button
                               className={`cc__btn cc__btn--soon${isCommitted ? ' cc__btn--on' : ''}`}
@@ -368,7 +378,7 @@ export function SearchResults({
                               type="button"
                               onClick={() => onCommit(course.code)}
                             >
-                              {isCommitted ? '必定学 ✓' : '必定学'}
+                              {isCommitted ? t('必定学 ✓') : t('必定学')}
                             </button>
                           </div>
                         </article>

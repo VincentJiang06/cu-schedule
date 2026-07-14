@@ -1,5 +1,6 @@
 import { useMemo, useRef, useState } from 'react'
 import { courseColor } from '../lib/color.ts'
+import { t } from '../i18n/index.ts'
 import { parseCourseCodes, searchCourses } from '../lib/search.ts'
 import type { Course } from '../lib/types.ts'
 
@@ -65,10 +66,10 @@ export function CodeInput({
             style={courseColor(code)}
             title={
               known.has(code)
-                ? '点击移除'
+                ? t('点击移除')
                 : variant === 'taken'
-                  ? '未在本学年课程目录中找到，仅供留档'
-                  : '本学期没有开设这门课'
+                  ? t('未在本学年课程目录中找到，仅供留档')
+                  : t('本学期没有开设这门课')
             }
             type="button"
             onClick={(event) => {

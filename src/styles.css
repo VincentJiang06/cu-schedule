@@ -375,7 +375,8 @@ select {
   opacity: 1;
 }
 
-.bar__theme {
+.bar__theme,
+.bar__lang {
   border: 1px solid var(--line);
   background: var(--surface-2);
   border-radius: 11px;
@@ -386,7 +387,15 @@ select {
   line-height: 1;
 }
 
-.bar__theme:hover {
+/* 语言切换按钮:显示当前档「简/繁/EN」,EN 两字母略缩以塞进方钮。 */
+.bar__lang {
+  font-size: 14px;
+  font-weight: 750;
+  color: var(--ink-2);
+}
+
+.bar__theme:hover,
+.bar__lang:hover {
   border-color: var(--brand);
 }
 
@@ -5251,12 +5260,12 @@ select {
   font-size: 14px;
   font-weight: 600;
   color: var(--ink);
-  line-height: 1.4;
+  line-height: 20px;
 }
 
 .pg-leaf__marker {
   font-family: var(--mono);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--ink);
   /* 卡底降淡后,药丸用 --surface-2(略深于卡底)保持可辨。 */
@@ -5266,12 +5275,12 @@ select {
   white-space: nowrap;
 }
 
-/* 正文用中等字重(500),给数字锚点的加粗留出反差空间。 */
+/* 正文用中等字重(500),给数字锚点的加粗留出反差空间。字号/行高统一到 14px / 20px。 */
 .pg-leaf__text {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--ink);
-  line-height: 1.4;
+  line-height: 20px;
 }
 
 /* 数字锚点(「3 units」「6 units」「3000」)——叶子正文里最易漏的信息,用最重字重(900)从

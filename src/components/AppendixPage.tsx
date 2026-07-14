@@ -7,6 +7,8 @@
 
 import type { CSSProperties } from 'react'
 
+import { t } from '../i18n/index.ts'
+
 const CALENDAR_LINKS = [
   {
     label: '繁体中文版',
@@ -134,11 +136,11 @@ function EnrolCards({ items }: { items: EnrolCard[] }) {
         >
           <div className="appendix-enrol-card__badge">
             <span className="appendix-enrol-card__day">{item.dayNum}</span>
-            <span className="appendix-enrol-card__month">{item.month}</span>
+            <span className="appendix-enrol-card__month">{t(item.month)}</span>
           </div>
           <div className="appendix-enrol-card__body">
-            <span className="appendix-enrol-card__when">{item.when}</span>
-            <span className="appendix-enrol-card__desc">{item.desc}</span>
+            <span className="appendix-enrol-card__when">{t(item.when)}</span>
+            <span className="appendix-enrol-card__desc">{t(item.desc)}</span>
           </div>
         </div>
       ))}
@@ -171,17 +173,16 @@ function EssentialAppCard() {
           🍪
         </span>
         <span className="rec-card__by">by</span>
-        <span className="rec-card__name">{UEATWHAT_AUTHOR}</span>
+        <span className="rec-card__name">{t(UEATWHAT_AUTHOR)}</span>
       </div>
 
       <div className="rec-card__body">
         <div className="rec-card__title-row">
-          <span className="rec-card__product">可以吃点什么捏</span>
+          <span className="rec-card__product">{t('可以吃点什么捏')}</span>
           <span className="rec-card__product-en">ueatwhat</span>
         </div>
         <p className="rec-card__desc">
-          专治「今天吃什么」的选择困难——随机推荐、按口味与距离筛选，做得很顺手。作者手艺很
-          好，单独开一列推荐给你。
+          {t('专治「今天吃什么」的选择困难——随机推荐、按口味与距离筛选，做得很顺手。作者手艺很好，单独开一列推荐给你。')}
         </p>
       </div>
 
@@ -192,7 +193,7 @@ function EssentialAppCard() {
           rel="noopener noreferrer"
           target="_blank"
         >
-          <span>进入网页</span>
+          <span>{t('进入网页')}</span>
           <span aria-hidden>→</span>
         </a>
       </div>
@@ -209,7 +210,7 @@ export function AppendixPage({
     <div className="page-center page-center--appendix">
       <section className="card">
         <h2 className="card__title">
-          校历 2026-27
+          {t('校历 2026-27')}
           <span className="card__note">CUHK Academic Calendar</span>
         </h2>
         <div className="appendix-cal-grid">
@@ -222,24 +223,24 @@ export function AppendixPage({
               target="_blank"
             >
               <DocIcon />
-              <span>{item.label}</span>
+              <span>{t(item.label)}</span>
             </a>
           ))}
         </div>
         <p className="card__sub">
           <a href={CALENDAR_SOURCE_URL} rel="noopener noreferrer" target="_blank">
-            更多校历信息 →
+            {t('更多校历信息 →')}
           </a>
         </p>
         <ul className="appendix-dates">
-          <li>上学期（全日制本科，MBChB 除外）：2026-09-07（一）– 2026-12-05（六）</li>
-          <li>农历年假：2027-02-05 – 2027-02-11</li>
+          <li>{t('上学期（全日制本科，MBChB 除外）：2026-09-07（一）– 2026-12-05（六）')}</li>
+          <li>{t('农历年假：2027-02-05 – 2027-02-11')}</li>
         </ul>
       </section>
 
       <section className="card">
         <h2 className="card__title">
-          本学期选课时间
+          {t('本学期选课时间')}
           <span className="card__note">1st Term 2026-27</span>
         </h2>
 
@@ -250,7 +251,7 @@ export function AppendixPage({
           target="_blank"
         >
           <DocIcon />
-          <span>官方原文 · RES：First Term 2026-27 Course Registration &amp; Add/Drop</span>
+          <span>{t('官方原文 · RES：First Term 2026-27 Course Registration & Add/Drop')}</span>
           <span aria-hidden className="appendix-source-link__arrow">
             →
           </span>
@@ -260,53 +261,57 @@ export function AppendixPage({
           <span aria-hidden className="appendix-callout__icon">
             ⚠️
           </span>
-          <span>
-            <b>无论天气如何</b>，CUSIS 选课与加退选一律照常，<b>不会暂停或延期</b>。请务必以
-            CUSIS 个人「Enrolment Dates」显示的登入时间为准。
-          </span>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t(
+                '<b>无论天气如何</b>，CUSIS 选课与加退选一律照常，<b>不会暂停或延期</b>。请务必以 CUSIS 个人「Enrolment Dates」显示的登入时间为准。',
+              ),
+            }}
+          />
         </p>
 
-        <p className="appendix-subhead">在校生选课 · Current Students</p>
-        <p className="appendix-body">全日制本科在校生按年级分三天，每日 10:00–22:00：</p>
+        <p className="appendix-subhead">{t('在校生选课 · Current Students')}</p>
+        <p className="appendix-body">{t('全日制本科在校生按年级分三天，每日 10:00–22:00：')}</p>
         <EnrolCards items={CURRENT_ENROL} />
         <p className="appendix-body">
-          登入时间：10:00am 起 = Year 5+ / 以 Advanced Standing 入学的 Year 4+ / 以
-          senior-year places 入学的 Year 3+；11:00am 起 = 其他学生。CUSIS「Enrolment
-          Dates」自 8 月 4 日起可查个人登入时间。
+          {t(
+            '登入时间：10:00am 起 = Year 5+ / 以 Advanced Standing 入学的 Year 4+ / 以 senior-year places 入学的 Year 3+；11:00am 起 = 其他学生。CUSIS「Enrolment Dates」自 8 月 4 日起可查个人登入时间。',
+          )}
         </p>
 
-        <p className="appendix-subhead">新生选课 · New Students</p>
+        <p className="appendix-subhead">{t('新生选课 · New Students')}</p>
         <EnrolCards items={NEW_ENROL} />
 
-        <p className="appendix-subhead">加退选 · Add / Drop</p>
+        <p className="appendix-subhead">{t('加退选 · Add / Drop')}</p>
         <EnrolCards items={ADD_DROP} />
 
-        <p className="appendix-subhead">准备与超修 · Preparation &amp; Study Load</p>
+        <p className="appendix-subhead">{t('准备与超修 · Preparation & Study Load')}</p>
         <p className="appendix-body">
-          选课准备：在校生 8 月 4 日起查登入时间、8 月 7 日起用 Shopping Cart 预选与
-          Validate、8 月 12 日前上载预派课程；新生对应为 8 月 18 日 / 8 月 25 日 / 8 月 28 日。
+          {t(
+            '选课准备：在校生 8 月 4 日起查登入时间、8 月 7 日起用 Shopping Cart 预选与 Validate、8 月 12 日前上载预派课程；新生对应为 8 月 18 日 / 8 月 25 日 / 8 月 28 日。',
+          )}
         </p>
         <p className="appendix-body">
-          超修申请（Exceeding Term Course Load，逾期不受理）：在校生 7 月 24 日 – 8 月 3 日
-          （对应 8/14 选课）、9 月 2 日 – 9 月 6 日（对应 9/14 加退选）；新生 8 月 18 – 21 日
-          （对应 9/1 选课）、9 月 2 日 – 9 月 6 日（对应加退选）。
+          {t(
+            '超修申请（Exceeding Term Course Load，逾期不受理）：在校生 7 月 24 日 – 8 月 3 日（对应 8/14 选课）、9 月 2 日 – 9 月 6 日（对应 9/14 加退选）；新生 8 月 18 – 21 日（对应 9/1 选课）、9 月 2 日 – 9 月 6 日（对应加退选）。',
+          )}
         </p>
         <p className="appendix-body">
-          加退选须持有效且已启用的学习签证/许可。查询：RES 电话 3943 9888、传真 2603 5129、
-          ugadmin@cuhk.edu.hk。
+          {t('加退选须持有效且已启用的学习签证/许可。查询：RES 电话 3943 9888、传真 2603 5129、ugadmin@cuhk.edu.hk。')}
         </p>
         <p className="card__sub">
-          内容据 CUHK 教务处注册及考试组（RES）官方页面整理（原文见本栏顶部链接），以 CUSIS /
-          RES 最新公布为准。
+          {t(
+            '内容据 CUHK 教务处注册及考试组（RES）官方页面整理（原文见本栏顶部链接），以 CUSIS / RES 最新公布为准。',
+          )}
         </p>
       </section>
 
       <section className="card">
         <h2 className="card__title">
-          新生资料
+          {t('新生资料')}
           <span className="card__note">Freshers&apos; Resources</span>
         </h2>
-        <p className="appendix-body">常用官方链接，选课、注册、查校历、查手册都在这几个站里。</p>
+        <p className="appendix-body">{t('常用官方链接，选课、注册、查校历、查手册都在这几个站里。')}</p>
         <div className="appendix-sib-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))' }}>
           {NEWCOMER_LINKS.map((item) => (
             <a className="appendix-sib-card" href={item.url} key={item.url} rel="noopener noreferrer" target="_blank">
@@ -327,12 +332,12 @@ export function AppendixPage({
                 {item.icon}
               </span>
               <span className="appendix-sib-card__text">
-                <span className="appendix-sib-card__name">{item.name}</span>
+                <span className="appendix-sib-card__name">{t(item.name)}</span>
                 <span
                   className="appendix-sib-card__desc"
                   style={{ whiteSpace: 'normal', overflow: 'visible', textOverflow: 'clip', lineHeight: 1.5 }}
                 >
-                  {item.desc}
+                  {t(item.desc)}
                 </span>
               </span>
             </a>
@@ -342,26 +347,25 @@ export function AppendixPage({
 
       <section className="card">
         <h2 className="card__title">
-          必备程序
+          {t('必备程序')}
           <span className="card__note">Must-have Apps</span>
         </h2>
         <p className="appendix-body">
-          选课之外，选课季也逃不过「今天吃什么」的世纪难题。这里安利一个独立作者做的小工具，
-          做得很好用：
+          {t('选课之外，选课季也逃不过「今天吃什么」的世纪难题。这里安利一个独立作者做的小工具，做得很好用：')}
         </p>
         <EssentialAppCard />
       </section>
 
       <section className="card">
-        <h2 className="card__title">友链邀请</h2>
-        <p className="card__sub">欢迎逛逛我做的其他站点</p>
+        <h2 className="card__title">{t('友链邀请')}</h2>
+        <p className="card__sub">{t('欢迎逛逛我做的其他站点')}</p>
         <div className="appendix-sib-grid">
           {siblings.map((sib) => (
             <a className="appendix-sib-card" href={sib.url} key={sib.url} rel="noopener noreferrer" target="_blank">
               <img alt="" src={sib.icon} />
               <span className="appendix-sib-card__text">
-                <span className="appendix-sib-card__name">{sib.name}</span>
-                <span className="appendix-sib-card__desc">{sib.desc}</span>
+                <span className="appendix-sib-card__name">{t(sib.name)}</span>
+                <span className="appendix-sib-card__desc">{t(sib.desc)}</span>
               </span>
             </a>
           ))}

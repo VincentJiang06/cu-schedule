@@ -9,6 +9,7 @@ import { DAY_SHORT, hhmm } from '../lib/time.ts'
 import { loadShare, type ShareInstance } from '../lib/shareStore.ts'
 import type { Course, Section } from '../lib/types.ts'
 import { Timetable } from './Timetable.tsx'
+import { t } from '../i18n/index.ts'
 
 /**
  * Read-only share view (approach 2). Rendered when the URL carries `#v=<id>`.
@@ -34,8 +35,8 @@ function sectionTimes(section: Section): string {
   const timed = section.meetings
     .filter((m) => m.dayIndex >= 1 && m.dayIndex <= 7)
     .sort((a, b) => a.dayIndex - b.dayIndex || a.start - b.start)
-  if (timed.length === 0) return '时间待定'
-  return timed.map((m) => `周${DAY_SHORT[m.dayIndex - 1]} ${hhmm(m.start)}–${hhmm(m.end)}`).join(' · ')
+  if (timed.length === 0) return t('时间待定')
+  return timed.map((m) => t('周{day} {start}–{end}', { day: DAY_SHORT[m.dayIndex - 1], start: hhmm(m.start), end: hhmm(m.end) })).join(' · ')
 }
 
 type State =
@@ -115,7 +116,7 @@ export function ShareView({ id }: { id: string }) {
 
   async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
     if (state.phase !== 'ready' || !derived?.planA) return
-    setExportNote('正在导出…')
+    setExportNote(t('正在导出…'))
     const result = await exportPlan({
       format,
       plan: derived.planA,
@@ -126,22 +127,22 @@ export function ShareView({ id }: { id: string }) {
   }
 
   if (state.phase === 'loading') {
-    return <div className="sv sv--msg">正在加载分享的课表…</div>
+    return <div className="sv sv--msg">{t('正在加载分享的课表…')}</div>
   }
   if (state.phase === 'missing') {
     return (
       <div className="sv sv--msg">
-        <p className="sv__msg-title">链接已过期或不存在</p>
-        <p className="sv__msg-sub">只读分享链接的有效期为一天，过期后请让对方重新分享。</p>
-        <a className="sv__home" href={window.location.pathname}>去 CU Schedule 首页</a>
+        <p className="sv__msg-title">{t('链接已过期或不存在')}</p>
+        <p className="sv__msg-sub">{t('只读分享链接的有效期为一天，过期后请让对方重新分享。')}</p>
+        <a className="sv__home" href={window.location.pathname}>{t('去 CU Schedule 首页')}</a>
       </div>
     )
   }
   if (state.phase === 'error' || !derived) {
     return (
       <div className="sv sv--msg">
-        <p className="sv__msg-title">加载失败</p>
-        <a className="sv__home" href={window.location.pathname}>去 CU Schedule 首页</a>
+        <p className="sv__msg-title">{t('加载失败')}</p>
+        <a className="sv__home" href={window.location.pathname}>{t('去 CU Schedule 首页')}</a>
       </div>
     )
   }
@@ -156,7 +157,7 @@ export function ShareView({ id }: { id: string }) {
           <span className="bar__mark" aria-hidden />
           <div>
             <h1 className="sv__title">CU Schedule</h1>
-            <p className="sv__term">{instance.termName || '课表分享'} · 只读分享</p>
+            <p className="sv__term">{instance.termName || t('课表分享')} · {t('只读分享')}</p>
           </div>
         </div>
       </header>
@@ -167,13 +168,13 @@ export function ShareView({ id }: { id: string }) {
       <div className="sv__layout">
         <aside className="sv__col sv__col--list">
           <section className="sv__card">
-            <h2 className="sv__card-head">课程</h2>
+            <h2 className="sv__card-head">{t('课程')}</h2>
             <ul className="sv__courses">
               {committedCourses.map((course) => (
                 <li className="sv__course" key={course.key} style={colorForCode(course.key)}>
                   <div className="sv__course-top">
                     <span className="sv__course-code">{course.code}</span>
-                    <span className="sv__course-units">{course.units} 学分</span>
+                    <span className="sv__course-units">{t('{n} 学分', { n: course.units })}</span>
                   </div>
                   <div className="sv__course-title">{course.title}</div>
                   {course.sections
@@ -186,25 +187,25 @@ export function ShareView({ id }: { id: string }) {
                     ))}
                 </li>
               ))}
-              {committedCourses.length === 0 && <li className="sv__empty empty-hint">这个分享里没有课程</li>}
+              {committedCourses.length === 0 && <li className="sv__empty empty-hint">{t('这个分享里没有课程')}</li>}
             </ul>
-            <p className="sv__meta">{committedCourses.length} 门 · {totalUnits} 学分</p>
+            <p className="sv__meta">{t('{count} 门 · {units} 学分', { count: committedCourses.length, units: totalUnits })}</p>
           </section>
 
-          <a className="sv__cta" href={window.location.pathname}>做自己的课表 →</a>
+          <a className="sv__cta" href={window.location.pathname}>{t('做自己的课表 →')}</a>
 
           <section className="sv__card">
-            <h2 className="sv__card-head">导出</h2>
+            <h2 className="sv__card-head">{t('导出')}</h2>
             <div className="sv__exports">
               <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('pdf')}>
-                表格 PDF
+                {t('表格 PDF')}
               </button>
               <button className="export-btn" disabled={!planA} type="button" onClick={() => void handleExport('wallpaper')}>
-                手机壁纸
+                {t('手机壁纸')}
               </button>
             </div>
             {/* #里程碑4:图片 PNG 先选画面比例，与主 app 导出页同一套六按钮。 */}
-            <p className="sv__exports-label">图片 PNG · 选画面比例</p>
+            <p className="sv__exports-label">{t('图片 PNG · 选画面比例')}</p>
             <div className="aspect-picker">
               {PNG_ASPECTS.map((item) => (
                 <button
@@ -224,12 +225,12 @@ export function ShareView({ id }: { id: string }) {
                 type="button"
                 onClick={() => setCustomAspectOpen((value) => !value)}
               >
-                自定义
+                {t('自定义')}
               </button>
               {customAspectOpen && (
                 <div className="aspect-custom">
                   <input
-                    aria-label="宽"
+                    aria-label={t('宽')}
                     className="aspect-custom__input"
                     inputMode="decimal"
                     value={customAspectW}
@@ -237,7 +238,7 @@ export function ShareView({ id }: { id: string }) {
                   />
                   <span aria-hidden>:</span>
                   <input
-                    aria-label="高"
+                    aria-label={t('高')}
                     className="aspect-custom__input"
                     inputMode="decimal"
                     value={customAspectH}
@@ -253,7 +254,7 @@ export function ShareView({ id }: { id: string }) {
                       void handleExport('image', { w: w > 0 ? w : 1, h: h > 0 ? h : 1 })
                     }}
                   >
-                    按此比例导出
+                    {t('按此比例导出')}
                   </button>
                 </div>
               )}
@@ -265,10 +266,10 @@ export function ShareView({ id }: { id: string }) {
         <section className="sv__col sv__col--tt">
           <div className="sv__card sv__tt-card">
             <div className="sv__card-head">
-              <h2>课表</h2>
+              <h2>{t('课表')}</h2>
             </div>
             <div className="sv__tt">
-              <Timetable colorForCode={colorForCode} emptyMessage="这个分享里没有可排的课表" plan={planA} />
+              <Timetable colorForCode={colorForCode} emptyMessage={t('这个分享里没有可排的课表')} plan={planA} />
             </div>
           </div>
         </section>
