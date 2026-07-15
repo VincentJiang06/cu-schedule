@@ -269,7 +269,7 @@ export function ShareView({ id }: { id: string }) {
               <h2>{t('课表')}</h2>
             </div>
             <div className="sv__tt">
-              <Timetable colorForCode={colorForCode} emptyMessage={t('这个分享里没有可排的课表')} plan={planA} />
+              <Timetable colorForCode={colorForCode} emptyMessage={t('这个分享里没有可排的课表')} plan={planA} portrait />
             </div>
           </div>
         </section>

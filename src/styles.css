@@ -2287,7 +2287,7 @@ select {
      容器查询有个反直觉的限制:一个 @container 规则只能样式化*它自己的后代*,样式不了
      容器元素自身(元素找不到"比自己更近的同名祖先容器"，条件恒不满足)——所以矮块的
      padding 不能靠 @container 再动态收紧，只能在这里把基准值先定得留有余地。 */
-  padding: 4px 7px;
+  padding: 3px 7px;
   /* #容器查询方法论:块本身是内容布局的容器——按它*实际渲染出的*宽高选档,不再靠 lane
      数或 JS 猜。size 容器既能查宽(inline-size)也能查高(block-size);块已有显式的
      top/height/left/width(见下方内联 style 的 calc()),尺寸不依赖内容,满足 size 容器
@@ -2303,12 +2303,32 @@ select {
      断点决定，这里只搭骨架。 */
   flex-flow: row wrap;
   align-items: baseline;
-  column-gap: 6px;
+  /* 多行时各行贴顶排:默认 align-content 会把 flex 行拉伸/散开,让高块(如两小时课)的
+     时间行掉到块底、与相邻矮块不齐——用户拍板 2026-07-15:时间行紧贴地点行、两行连续。 */
+  align-content: flex-start;
+  /* 课号↔地点的间距用 em(随 --blk-fs 缩放),比一个等宽空格再宽一点(用户拍板
+     2026-07-15:「3150 和地址之间多一个空格」)。 */
+  column-gap: 0.7em;
   row-gap: 1px;
   /* 显式定死行高(而不是让浏览器按字体 metrics 取 normal)——.tt2__block 一直是 1.2，
      这里补齐一致，矮块降级时的可用高度预算才算得准，不会因为某个字体栈的 normal 行高
      偏大而在极矮块上溢出。 */
-  line-height: 1.2;
+  line-height: 1.15;
+  /* 课块文字统一等宽 Red Hat Mono——与 PNG/HTML 导出同一套字体/字重(用户拍板
+     2026-07-15)。@font-face 见本文件头(自托管,font-display: swap);未就绪时先用
+     系统等宽 var(--mono) 兜底。课号/地点/时间的字重阶梯(700/600/500)在各片段上分别设,
+     与 exportImage.ts 的 WEIGHT_CODE/LOC/TIME 对齐。 */
+  font-family: 'Red Hat Mono', var(--mono);
+  /* 字号策略(用户拍板 2026-07-15,三段式,目标字号恒 20px):① 横屏两行档保持 20px
+     (--blk-fs,只被 43cqh 在偏矮短课上顺带压小一点点以容下两行,其余恒 20px);② 块窄到
+     两行的「课号 地点」放不下 20px 时 → 堆成竖屏四行档,仍保持 20px(--blk-fs-portrait
+     每行更短,20px 放得下);③ 四行在本块也放不下 20px 时 → 才由 clamp 等比例往下缩
+     (8px 兜底)。大部分块恒 20px,缩放只在最后一步。 */
+  --blk-fs: clamp(10px, 43cqh, 20px);
+  /* 竖屏四行档字号:上限锁 20px(②阶段保持不变),仅当四行在本块放不下 20px 才往下缩
+     (③阶段)——宽按 16.7cqw(四行每行 ≤约 10 个等宽字符)、高按 21.7cqh(四行 lh1.15)
+     取小,夹 8–20px。 */
+  --blk-fs-portrait: clamp(8px, min(16.7cqw, 21.7cqh), 20px);
   background: hsl(var(--hue) var(--sat) calc(var(--fill-l) + var(--shade)));
   border: 1px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
   border-left: 3px solid hsl(var(--hue) var(--sat) calc(var(--edge-l) + var(--shade)));
@@ -2320,9 +2340,9 @@ select {
    其它课号(cl-row__code/ci__chip 等)统一。字号默认给窄档的值，宽档由容器查询覆盖放大
    (见共享规则一节)。 */
 .tt__block-code {
-  font-family: var(--mono);
-  font-size: 12px;
-  font-weight: 750;
+  font-family: inherit;
+  font-size: var(--blk-fs);
+  font-weight: 700;
   letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
@@ -2334,34 +2354,22 @@ select {
   max-width: 100%;
 }
 
-/* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
-   宽档由共享的容器查询规则反过来。地点为空(TBA)时 JSX 根本不渲染这两个 span，天然
-   不占位，不需要额外的"空地点"修饰类。 */
-.tt__block-loc-full {
-  font-size: 13px;
-  font-weight: 600;
-  opacity: 0.82;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: none;
-  min-width: 0;
-  max-width: 100%;
-}
-
+/* 地点——恒用官方简写,只渲染这一个片段(与导出一致,JSX 已删掉全称片段)。跟课号同一
+   行、同字号,字重 600(比课号 700 略轻);放不下时 flex-wrap 自然换行,再放不下靠
+   ellipsis 截断。 */
 .tt__block-loc-abbr {
-  font-size: 10px;
-  opacity: 0.72;
+  font-weight: 600;
+  font-size: var(--blk-fs);
+  opacity: 0.8;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex-basis: 100%;
   min-width: 0;
   max-width: 100%;
 }
 
-/* 时间——独占一行(flex-basis:100%，不论宽窄档都从课号/地点那一行换下来)。默认按窄档
-   给尺寸；容器窄到极限时(见共享规则)再从一行"09:30–12:15"折成两行。 */
+/* 时间——独占一行(flex-basis:100%,从课号/地点那一行换下来)。同字号、字重 500;
+   容器窄到极限时(见共享规则)再从一行"09:30–12:15"折成两行。 */
 .tt__block-time {
   display: flex;
   align-items: baseline;
@@ -2369,10 +2377,39 @@ select {
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
-  font-size: 10.5px;
+  font-weight: 500;
+  font-size: var(--blk-fs);
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
+}
+
+/* 组件(LEC/TUT/LAB)行 + 竖屏时间行——横屏两行档默认隐藏,块「高≥宽」时由下方
+   max-aspect-ratio 容器查询切成竖屏四行档显示。字号继承 --blk-fs(竖屏档另有覆盖)。 */
+.tt__block-comp {
+  display: none;
+  flex-basis: 100%;
+  font-weight: 600;
+  font-size: var(--blk-fs);
+  opacity: 0.72;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tt__block-time-portrait {
+  display: none;
+  flex-basis: 100%;
+  font-weight: 500;
+  font-size: var(--blk-fs);
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* #里程碑2:冲突圆形感叹号——同一天两个时段有重叠时，落在两者碰撞处（重叠区间的
@@ -3067,9 +3104,19 @@ select {
   display: flex;
   flex-flow: row wrap;
   align-items: baseline;
-  column-gap: 5px;
+  /* 各行贴顶排,同 .tt__block(高块的时间行不掉到块底)。 */
+  align-content: flex-start;
+  /* 课号↔地点间距同 .tt__block,用 em 随字号缩放。 */
+  column-gap: 0.7em;
   row-gap: 1px;
-  line-height: 1.2;
+  line-height: 1.15;
+  /* 课块文字统一等宽 Red Hat Mono——与 .tt__block、PNG/HTML 导出同一套字体/字重。 */
+  font-family: 'Red Hat Mono', var(--mono);
+  /* 单一字号 + 自动缩放:与 .tt__block 同一套 --blk-fs(cqw/cqh 相对本块尺寸)。A/B 对比的
+     窄子列自动缩小、solo 全宽自动放大,不再按 solo/AB 分别写死字号。各片段 font-size: var()。 */
+  --blk-fs: clamp(10px, 43cqh, 20px);
+  /* 竖屏四行档字号,同 .tt__block。 */
+  --blk-fs-portrait: clamp(8px, min(16.7cqw, 21.7cqh), 20px);
   color: hsl(var(--hue) var(--sat) calc(var(--text-l) + var(--shade)));
   /* #里程碑6:同 .tt__block 的淡入 mount 动画，见上方 @keyframes blockFadeIn。 */
   animation: blockFadeIn 0.22s ease both;
@@ -3124,9 +3171,9 @@ select {
    LEC/TUT 用一个角标文字区分——现在改用 .tt2__block--lec/--alt 的块底色/边框区分(已保留，
    见上方 background 规则)，角标文字并入课号一起省下的空间给课号+全称地点用。 */
 .tt2__block-code {
-  font-family: var(--mono);
-  font-size: 11.5px;
-  font-weight: 750;
+  font-family: inherit;
+  font-size: var(--blk-fs);
+  font-weight: 700;
   letter-spacing: -0.02em;
   white-space: nowrap;
   overflow: hidden;
@@ -3136,27 +3183,15 @@ select {
   max-width: 100%;
 }
 
-/* 地点——全称/简写两个片段一次性都渲染进 DOM，默认(窄档)只显示简写、隐藏全称；
-   宽档由共享的容器查询规则反过来。地点为空(TBA)时 JSX 不渲染这两个 span，天然不占位。 */
-.tt2__block-loc-full {
-  font-size: 11.5px;
-  font-weight: 600;
-  opacity: 0.85;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: none;
-  min-width: 0;
-  max-width: 100%;
-}
-
+/* 地点——恒用官方简写,只渲染这一个片段(与导出一致,JSX 已删掉全称片段)。跟课号同行、
+   同字号、字重 600;放不下靠 flex-wrap 换行/ellipsis 截断。 */
 .tt2__block-loc-abbr {
-  font-size: 9.5px;
-  opacity: 0.75;
+  font-weight: 600;
+  font-size: var(--blk-fs);
+  opacity: 0.8;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  flex-basis: 100%;
   min-width: 0;
   max-width: 100%;
 }
@@ -3170,10 +3205,38 @@ select {
   min-width: 0;
   max-width: 100%;
   overflow: hidden;
-  font-size: 10px;
+  font-weight: 500;
+  font-size: var(--blk-fs);
   font-variant-numeric: tabular-nums;
   opacity: 0.85;
   white-space: nowrap;
+}
+
+/* 组件行 + 竖屏时间行——同 .tt__block:横屏隐藏,竖屏四行档由容器查询显示。 */
+.tt2__block-comp {
+  display: none;
+  flex-basis: 100%;
+  font-weight: 600;
+  font-size: var(--blk-fs);
+  opacity: 0.72;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tt2__block-time-portrait {
+  display: none;
+  flex-basis: 100%;
+  font-weight: 500;
+  font-size: var(--blk-fs);
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* ---- 课程块自适应方法论:共享的容器查询规则 (.tt__block / .tt2__block 共用) --------
@@ -3201,155 +3264,96 @@ select {
    <48px(45 分钟课进位显示后 60 分钟高,在偏矮的面板/移动端常撞到这一档);极矮
    max-height:26px ≈ 渲染高度 <36px(30 分钟课在很矮的面板上的兜底)。 */
 
-/* 宽档:全称地点现身、简写地点收起，课号/地点/时间字号都放大一档，课号允许用 cqw 随块
-   实际宽度再长一点点。 */
-@container blk (min-width: 130px) {
-  .tt__block-code {
-    font-size: clamp(15px, 7.5cqw, 17px);
-  }
+/* 自动缩放(--blk-fs,见 .tt__block/.tt2__block)后,宽度维已由字号缩放自理:窄块字号
+   自动变小、时间靠 white-space:nowrap + 缩放留在一行,不再折成两行(用户拍板 2026-07-15:
+   时间恒单行压缩)。这里只保留「块太矮、连缩到下限 8px 也放不下」时的逐行收起兜底——
+   阈值按下限字号算:两行需内容盒高 ~20px、单行需 ~10px。 */
 
-  .tt__block-loc-full {
-    display: inline;
-  }
-
-  .tt__block-loc-abbr {
-    display: none;
-  }
-
-  .tt__block-time {
-    font-size: 13px;
-  }
-
-  .tt2__block-code {
-    font-size: clamp(14px, 7cqw, 16px);
-  }
-
-  .tt2__block-loc-full {
-    display: inline;
-  }
-
-  .tt2__block-loc-abbr {
-    display: none;
-  }
-
-  .tt2__block-time {
-    font-size: 12.5px;
-  }
-}
-
-/* 窄档专属子断点(容器宽度仍在窄档才会触发,因为宽档下 min-width:130px 恒真时这条
-   max-width:70px 不可能同时成立):时间从一行"09:30–12:15"折成两行"09:30" / "–12:15"，
-   给课号/简写地点腾出仅剩的横向宽度。 */
-@container blk (max-width: 70px) {
-  .tt__block-time,
-  .tt2__block-time {
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 1.15;
-    gap: 0;
-  }
-
-  .tt__block-time-dash,
-  .tt2__block-time-dash {
-    display: none;
-  }
-
-  .tt__block-time-end::before,
-  .tt2__block-time-end::before {
-    content: '–';
-  }
-}
-
-/* 矮块降级:不论当前落在宽档还是窄档，地点行整个收起，只留课号+时间——短课(45 分钟，
-   进位显示后也就 60 分钟高)最容易撞到这一档。排在宽/窄两条规则之后，display:none 才能
-   稳赢宽档的 display:inline / 窄档的 flex-basis:100%。
-   #实测踩坑:宽档的课号/时间字号比窄档大一截(clamp 最高到 17px)——矮块降级只收起了
-   地点行,如果课号/时间还留着宽档那份大字号,两行照样会比这一档的高度预算还高、照样溢出
-   (播放器逐宽高扫过 14000+ 组合实测出来的)。这里把课号/时间字号统一摁回窄档同一档的
-   紧凑值——"矮块降级"本来就该无论宽窄都长一个样(见上面方法论注释),这样改也更贴合原意。 */
-@container blk (max-height: 38px) {
-  .tt__block-loc-full,
+/* 矮块:两行放不下(内容盒高 < 20px ≈ 渲染高 30px,只有 30 分钟课在很矮的面板上会撞到)——
+   收起地点、时间并进课号那行,单行「课号 + 时间」(与导出矮块一致)。 */
+@container blk (max-height: 20px) {
   .tt__block-loc-abbr,
-  .tt2__block-loc-full,
   .tt2__block-loc-abbr {
     display: none;
   }
 
-  .tt__block-code {
-    font-size: 12px;
-  }
-
-  .tt__block-time {
-    font-size: 10.5px;
-  }
-
-  .tt2__block-code {
-    font-size: 11.5px;
-  }
-
+  .tt__block-time,
   .tt2__block-time {
-    font-size: 10px;
+    flex-basis: auto;
   }
 }
 
-/* 宽+矮的交集:上面的矮块降级阈值(38px)是按窄档字号(课号12/时间10.5px)算的预算——
-   块一旦落进宽档,课号/全称地点/时间都用更大的字号(见宽档规则),同样两行(课号+地点 /
-   时间)要多出一截高度才够。这段"宽档字号、但没矮到 38px 触发降级"的中间地带(实测
-   content-box 高度约 39~49px)会溢出,所以宽档单独续一档、更高的降级线,同样收起全称
-   地点、把字号摁回窄档那份紧凑值。 */
-@container blk (max-height: 49px) and (min-width: 130px) {
-  .tt__block-loc-full,
-  .tt2__block-loc-full {
-    display: none;
-  }
-
-  .tt__block-code {
-    font-size: 12px;
-  }
-
-  .tt__block-time {
-    font-size: 10.5px;
-  }
-
-  .tt2__block-code {
-    font-size: 11.5px;
-  }
-
-  .tt2__block-time {
-    font-size: 10px;
-  }
-}
-
-/* 窄+矮的交集:矮块降级只收起了地点、时间还留着单行的高度预算——但如果同时又窄到
-   触发了上面的两行拆分(时间变成两行"09:00"/"–09:45"),两行时间 + 课号那一行常常已经
-   超出矮档本就紧张的高度预算(实测:45 分钟课在 4 道并排 + 偏矮面板上会这样撞上)。这种
-   窄而矮的组合直接连时间也一并收起,只留课号,比单纯按高度判断的「极矮降级」更早触发。
-   #实测踩坑:这条阈值原来也是 38px,但"两行时间"比"一行地点"更占高度——38px 那一档
-   (课号+地点未拆分单行时间刚好够用)对"课号+地点+两行时间"不够用,content-box 高度要
-   到约 48px 才装得下,所以这条阈值比矮块降级本身的 38px 更高、单独续到 49px(与下面
-   宽档的续档阈值巧合地取了同一个数,纯粹是两边各自实测出来的结果一致，不是刻意对齐)。 */
-@container blk (max-height: 49px) and (max-width: 70px) {
+/* 极矮:连单行「课号 + 时间」也放不下——只留课号一行。 */
+@container blk (max-height: 10px) {
   .tt__block-time,
   .tt2__block-time {
     display: none;
   }
 }
 
-/* 极矮降级:再退一步，时间也收起，只剩课号一行——极端窄+矮(比如 4 道并排的 30 分钟块)
-   兜底，保证课号这条最后一行信息永远不溢出。 */
-@container blk (max-height: 26px) {
+/* ── 竖屏四行档(用户拍板 2026-07-15:预览页整页恒用,不按块形状一个个触发)──────────
+   只读分享/预览页(Timetable portrait → .tt--portrait)整页把每块切成 课号 / 地点简写 /
+   组件 / 「开始+时长」四行,与竖屏 PNG(exportImage.ts drawBlockTextPortrait)同风格。
+   页面级开关(不再用 max-aspect-ratio 按块判定)——避免同一页里「四行/两行」混排;主
+   课表页/A-B 对比不加这个类,保持横屏两行。字号按「四行 + 每行最多约 10 个等宽字符
+   (09:30 +45m)」重算:宽 16cqw、高 18cqh(四行 lh1.15 需 ≤21.7cqh)取小,夹 8–22px、
+   随块尺寸缩放。排在所有横屏高度降级之后,竖屏档的显隐/字号覆盖稳赢。 */
+/* (a) 预览页整页:只读分享/预览页(Timetable portrait → .tt--portrait)每块恒四行。 */
+.tt--portrait .tt__block-code,
+.tt--portrait .tt__block-loc-abbr,
+.tt--portrait .tt__block-comp,
+.tt--portrait .tt__block-time-portrait {
+  flex-basis: 100%;
+  font-size: var(--blk-fs-portrait);
+}
+.tt--portrait .tt__block-comp,
+.tt--portrait .tt__block-time-portrait {
+  display: block;
+}
+.tt--portrait .tt__block-time {
+  display: none;
+}
+
+/* (b) 窄块自动堆叠(用户拍板 2026-07-15):课块内容盒宽 ≤ 175px 时,横屏两行的「课号 地点」
+   放不下 20px → 堆成四行、仍保持 20px(每行更短放得下)。主课表页宽块(>175px)不进这档;
+   并道/窄窗/A-B 子列/预览窄列会进。与 (a) 预览页共用同一套显隐/字号,不冲突。 */
+@container blk (max-width: 175px) {
+  .tt__block-comp,
+  .tt__block-time-portrait,
+  .tt2__block-comp,
+  .tt2__block-time-portrait {
+    display: block;
+  }
   .tt__block-time,
   .tt2__block-time {
     display: none;
   }
-
-  /* 极矮块课号再收一档字号 + 收紧行高——只剩课号一行时,不需要再给行间距留呼吸空间。
-     只能改这两个*后代*选择器的样式(见上面 .tt__block/.tt2__block 里的注释:@container
-     样式不了容器自身),连同基准 padding 已经收紧过,两边一起换出够用的高度预算。 */
   .tt__block-code,
-  .tt2__block-code {
-    font-size: 10.5px;
-    line-height: 1;
+  .tt__block-loc-abbr,
+  .tt__block-comp,
+  .tt__block-time-portrait,
+  .tt2__block-code,
+  .tt2__block-loc-abbr,
+  .tt2__block-comp,
+  .tt2__block-time-portrait {
+    flex-basis: 100%;
+    font-size: var(--blk-fs-portrait);
+  }
+}
+
+/* 四行灵活收行(任意四行档共用,按块高从下往上收):组件 ≤37px 收、时间行 ≤18px 收;
+   地点沿用横屏那档(≤20px 通用降级)顺带收掉。组件/时间行在两行档本就 display:none,
+   这里再收对两行档无副作用。 */
+@container blk (max-height: 37px) {
+  .tt__block-comp,
+  .tt2__block-comp {
+    display: none;
+  }
+}
+@container blk (max-height: 18px) {
+  .tt__block-time-portrait,
+  .tt2__block-time-portrait {
+    display: none;
   }
 }
 

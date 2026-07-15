@@ -2,7 +2,7 @@ import { useRef, type CSSProperties, type PointerEvent as ReactPointerEvent } fr
 import { t } from '../i18n/index.ts'
 import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
-import { displayEndMinutes, hhmm } from '../lib/time.ts'
+import { displayEndMinutes, durationTag, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
 const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -121,17 +121,22 @@ function Column({
             title={`${block.code} ${block.title}${block.cart ? t('（可能学 · 试排，点右上角隐藏）') : ''}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || t('地点待定')}`}
           >
             <span className="tt2__block-code">{block.code}</span>
+            {/* 地点恒用官方简写(与 PNG/HTML 导出一致,不再渲染全称片段)。 */}
             {block.location && (
-              <>
-                <span className="tt2__block-loc-full">{block.location}</span>
-                <span className="tt2__block-loc-abbr">{abbreviateLocation(block.location)}</span>
-              </>
+              <span className="tt2__block-loc-abbr">{abbreviateLocation(block.location)}</span>
             )}
+            {/* 组件(LEC/TUT/LAB)——仅竖屏四行档显示;横屏两行档隐藏。 */}
+            <span className="tt2__block-comp">{block.component}</span>
+            {/* 横屏两行档整段时间;竖屏四行档隐藏,由下面 -time-portrait 取代。 */}
             <time className="tt2__block-time">
               <span className="tt2__block-time-start">{hhmm(block.start)}</span>
               <span className="tt2__block-time-dash">–</span>
               <span className="tt2__block-time-end">{hhmm(block.end)}</span>
             </time>
+            {/* 竖屏四行档时间行:开始时间 + 时长标记(09:30 +45m)。 */}
+            <span className="tt2__block-time-portrait">
+              {hhmm(block.start)} {durationTag(block.start, block.end)}
+            </span>
             {block.cart && onToggleCandidate && (
               <button
                 aria-label={t('停用候选课 {code}', { code: block.code })}

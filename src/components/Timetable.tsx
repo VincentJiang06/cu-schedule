@@ -4,7 +4,7 @@ import { abbreviateLocation } from '../lib/buildingAbbrev.ts'
 import { courseColor } from '../lib/color.ts'
 import { courseKey } from '../lib/courseKey.ts'
 import { overlapMidpoints } from '../lib/overlap.ts'
-import { displayEndMinutes, hhmm } from '../lib/time.ts'
+import { displayEndMinutes, durationTag, hhmm } from '../lib/time.ts'
 import type { Plan } from '../lib/schedule.ts'
 
 const DAYS = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
@@ -47,12 +47,17 @@ export function Timetable({
   plan,
   emptyMessage,
   colorForCode,
+  portrait = false,
 }: {
   plan: Plan | null
   emptyMessage: string
   /** #里程碑3:按课程(不是按学科)上色——不传时退回 courseColor(subject)，但那样同学科
    * 的课会全部撞色，调用方(ShareView)应该总是传一个按课程区分的取色函数。 */
   colorForCode?: (code: string) => CSSProperties
+  /** 竖屏四行渲染(课号/地点/组件/开始+时长):只读分享/预览页整页恒用(用户拍板
+   * 2026-07-15),不按块形状一个个触发、避免同页四行/两行混排;每块仍按自身高度灵活收行
+   * (4→3→2→1)。主课表页/编辑页不传 = 横屏两行。 */
+  portrait?: boolean
 }) {
   const raw: Omit<Block, 'lane' | 'lanes'>[] = (plan?.entries ?? []).flatMap((entry) =>
     entry.section.meetings.map((meeting) => ({
@@ -83,7 +88,7 @@ export function Timetable({
   const pct = (minutes: number) => ((minutes - floorHour * 60) / span) * 100
 
   return (
-    <div className="tt" style={{ '--tt-days': dayCount } as CSSProperties}>
+    <div className={`tt${portrait ? ' tt--portrait' : ''}`} style={{ '--tt-days': dayCount } as CSSProperties}>
       <div className="tt__corner" />
       <div className="tt__head">
         {DAYS.slice(0, dayCount).map((day) => (
@@ -149,17 +154,22 @@ export function Timetable({
                     title={`${block.code} ${block.title}\n${block.component} · ${hhmm(block.start)}–${hhmm(block.end)}\n${block.location || t('地点待定')}`}
                   >
                     <span className="tt__block-code">{block.code}</span>
+                    {/* 地点恒用官方简写(与 PNG/HTML 导出一致,不再渲染全称片段)。 */}
                     {block.location && (
-                      <>
-                        <span className="tt__block-loc-full">{block.location}</span>
-                        <span className="tt__block-loc-abbr">{abbreviateLocation(block.location)}</span>
-                      </>
+                      <span className="tt__block-loc-abbr">{abbreviateLocation(block.location)}</span>
                     )}
+                    {/* 组件(LEC/TUT/LAB)——仅竖屏四行档显示(容器查询 max-aspect-ratio),横屏两行档隐藏。 */}
+                    <span className="tt__block-comp">{block.component}</span>
+                    {/* 横屏两行档的整段时间(09:30–10:15);竖屏四行档隐藏,由下面 -time-portrait 取代。 */}
                     <time className="tt__block-time">
                       <span className="tt__block-time-start">{hhmm(block.start)}</span>
                       <span className="tt__block-time-dash">–</span>
                       <span className="tt__block-time-end">{hhmm(block.end)}</span>
                     </time>
+                    {/* 竖屏四行档的时间行:开始时间 + 时长标记(09:30 +45m),与竖屏 PNG 一致。 */}
+                    <span className="tt__block-time-portrait">
+                      {hhmm(block.start)} {durationTag(block.start, block.end)}
+                    </span>
                   </article>
                 )
               })}

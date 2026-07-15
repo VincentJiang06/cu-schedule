@@ -2,7 +2,7 @@ import { abbreviateLocation } from './buildingAbbrev.ts'
 import { activeTheme, subjectPaint, type CanvasPaint, type PaintTheme } from './color.ts'
 import { t } from '../i18n/index.ts'
 import type { Plan } from './schedule.ts'
-import { displayEndMinutes, hhmm } from './time.ts'
+import { displayEndMinutes, durationTag, hhmm } from './time.ts'
 
 /** Resolve a block's canvas tint. Defaults to the subject-hash colors; App passes the
  * timetable-palette painter so exports carry exactly the on-screen timetable colors.
@@ -154,16 +154,6 @@ function blockFontSize(ctx: CanvasRenderingContext2D, colW: number, linePitch: n
   const textAvail = colW - 6 - 15 // 块宽 = colW-6(左右各 3px 间隙);文字左缩进 9 + 右缓冲 6
   const fitByCol = textAvail / (budget * charW)
   return Math.max(8, Math.floor(Math.min(fitByCol, linePitch * 0.75)))
-}
-
-/** 竖屏时间行的时长标记(用户拍板):45 分钟内 +45m;1 小时内 +1hr;超过 1 小时记
- * +2hr;超过 2 小时一律 +3hr。恒 4 字符。 */
-function durationTag(startMin: number, endMin: number): string {
-  const mins = endMin - startMin
-  if (mins <= 45) return '+45m'
-  if (mins <= 60) return '+1hr'
-  if (mins <= 120) return '+2hr'
-  return '+3hr'
 }
 
 /** Alpha-blend a solid `hsl(...)` paint color toward whatever is already painted behind

@@ -23,4 +23,15 @@ export function displayEndMinutes(minutes: number): number {
   return Math.ceil(minutes / 30) * 30
 }
 
+/** 竖屏(四行)渲染时间行的时长标记(用户拍板 2026-07-14):45 分钟内 +45m;1 小时内
+ * +1hr;超过 1 小时记 +2hr;超过 2 小时一律 +3hr。恒 4 字符。屏上竖屏课块与竖屏 PNG
+ * 导出(exportImage.ts drawBlockTextPortrait)共用同一套,单一真源。 */
+export function durationTag(startMin: number, endMin: number): string {
+  const mins = endMin - startMin
+  if (mins <= 45) return '+45m'
+  if (mins <= 60) return '+1hr'
+  if (mins <= 120) return '+2hr'
+  return '+3hr'
+}
+
 export const DAY_SHORT = ['一', '二', '三', '四', '五', '六', '日']
