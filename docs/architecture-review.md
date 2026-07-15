@@ -16,7 +16,7 @@
 > | #7 programs 双真源 | ✅ all_programs.json 已删,逐文件为唯一真源 |
 > | #8 API 设计 | ✅ docs/api-design.md 落库 |
 > | #9 CI | ✅ .github/workflows/ci.yml:类型检查 + 构建 + data:check + data:audit |
-> | #10 prefs 死路径 | ✅ 选"恢复偏好 UI":课表页「排课筛选」卡已上线,分支不再死 |
+> | #10 prefs 死路径 | ⏪ 结案后回退(2026-07 核查):偏好 UI 已再次移除,`prefs` 恒为 `NO_PREFS`、`blockedByPrefs` 零调用点——现状以 api-design §3 为准(参数面保留,UI 无)。上下班时间窗约束以另一套「导轨」实现存在,与 prefs 无关 |
 > | #11 programs.ts 挂空 | ✅ 已接入信息页(ProgramPicker / ProgramTable / 本专业筛选) |
 > | #12 组合重算缓存 | ⏸ 按审查自己的要求"先测量再做",未出现可感知卡顿,不做 |
 > | #13 localStorage 版本 | ⏸ 静默丢弃可接受(审查原文),失效提示留待 API 动工时随 dataVersion 一起做 |

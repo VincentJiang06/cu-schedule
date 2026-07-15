@@ -24,8 +24,9 @@
    - `Pre-requisite: (A or B) and C` —— 只有在能**证明**条件不满足时才标「缺先修」；铁律是宁可不提示，也不给错误提示。
    - 成绩条件、导师/院系同意、豁免这类没法核验的条件，一律判「不确定」，按满足处理——不会因为我们读不懂一句话，就把你本来能选的课误判成不能选。
 
-5. **对照培养方案**。在信息页选定入学年份和主修后，培养方案按官方日历的层级原样渲染成大课表（编号项 / 分流 / 可选方向逐层展开），点选标记已完成课程；选课页可按「本专业需要」过滤全目录。
-6. **导出与分享**。排好的课表可导出 `.ics` 日历（周期估算，需回 CUSIS 核对实际日期）和 PNG 对比图；整套选择可压进一条 URL 分享链接，打开即恢复。
+5. **对照培养方案**。在信息页选定入学年份和主修后，培养方案按官方日历的层级原样渲染成大课表（编号项 / 分流 / 可选方向逐层展开），点选标记已完成课程；「学分进度」把已修课按方案分区归类，逐组给出已修 / 需修学分；选课页可按「本专业需要」过滤全目录。
+6. **导出与分享**。排好的课表可导出 `.ics` 日历（周期估算，需回 CUSIS 核对实际日期）、PNG（多种画面比例）、明暗双页 PDF、离线可开的自包含 HTML、手机壁纸；整套选择可压进一条 `#st=` URL 打开即恢复，或生成 `#v=` 只读分享短链（1 天有效）；`.md` 配置文件支持导出后再导入。
+7. **三语与账号**。界面简体 / 繁體 / English 一键切换；可选的「云存档」账号（用户名 + 口令，不收集任何个人数据）跨设备同步整套配置——账号依赖部署方的私有扩展 API，没有该服务时自动降级、其余功能不受影响。
 
 ---
 
@@ -68,13 +69,17 @@ npm run data:build                             # 生成前端数据包（含 pub
 ├── src/                    前端（React + Vite，无路由无状态库，App.tsx 是唯一编排层）
 │   ├── lib/                纯逻辑：types.ts（schema 唯一真源）、courseKey.ts（课号身份
 │   │                       唯一裁决处）、requirements.ts（先修三值求值）、schedule.ts（排课）、
-│   │                       candidates.ts（可选课筛选）、programs.ts（培养方案）……不依赖 React 运行时
+│   │                       candidates.ts（可选课筛选）、programs.ts（培养方案）、
+│   │                       programProgress.ts（学分进度）……不依赖 React 运行时
+│   ├── i18n/               三语词典（简体源即 key，gettext 式 t()；繁 / 英词典随包加载）
 │   └── components/         纯展示组件，被 App.tsx 编排
 ├── scripts/                数据管线（用法见下节「数据从哪来」）
 │   ├── cuhk_scraper.py 等  抓取器，vendored 自 EagleZhen（保持原样，见 NOTICE.md）
 │   ├── parse_programs.py   培养方案文本 → 结构化 JSON
 │   ├── build_bundles.mts   唯一的打包脚本：产出全部成品 + public/data 镜像
-│   └── {check_requirements,audit_data}.mts   两个校验门（CI 强制执行）
+│   ├── {check_requirements,audit_data}.mts   两个校验门（CI 强制执行）
+│   ├── audit_programs.mts  方案数据机器门（npm run data:audit-programs，动方案线必跑）
+│   └── i18n-*.mjs / gen-font-inline.mjs      三语词典与自托管字体的维护者工具
 ├── data/                   所有数据的唯一真源（raw → 成品，结构详见 data/README.md）
 ├── public/data/            data/ 成品的生成镜像（勿手改，data:build 整体重写）
 ├── docs/                   见下方阅读地图
@@ -112,8 +117,9 @@ npm run build      # 类型检查 + 生产构建
 改动规则与阅读地图都在那里。改动前后必须过的两道校验门（CI 也会跑）：
 
 ```bash
-npm run data:check   # 先修解析：全目录零误报
-npm run data:audit   # 全量一致性审计：数据包 vs 原始对账
+npm run data:check           # 先修解析：全目录零误报
+npm run data:audit           # 全量一致性审计：数据包 vs 原始对账
+npm run data:audit-programs  # 方案数据机器门（手动；动 parse_programs.py 或方案数据时必跑）
 ```
 
 Python 侧（抓取器与方案解析）的测试：

@@ -3,8 +3,10 @@
 给部署操作者(Claude)的 runbook。本项目是**纯静态站点**:构建产物就是 `dist/`,
 容器里只有一个 nginx,没有后端进程、没有数据库、没有运行时数据写入。
 
-> ⚠️ 仓库里的 Dockerfile / deploy/nginx.conf / docker-compose.yml **写好但未经实机
-> 构建验证**。部署时按本文的验证清单逐项核对,有出入以现场为准并回写修正。
+> ✅ 这套 Dockerfile / deploy/nginx.conf / docker-compose.yml **已在生产实机验证**
+> (2026-07 起以 `svc-cuschedule` 跑在部署方的 Traefik 栈里,HEALTHCHECK 打
+> `127.0.0.1/data/manifest.json` 与仓库定义一致)。§3 的清单从"首次部署必须逐项过"
+> 降级为**变更后回归用**。
 
 ## 1. 服务器要求
 
@@ -48,8 +50,9 @@ docker ps --format '{{.Names}} {{.Status}}'                              # (heal
 - `manifest.json` → **no-cache**:数据版本入口,必须每次再验证(ETag 304 极便宜)。
 - 其余 `/data/**` 与 `/assets/**` → **1 年 immutable**:客户端一律带 `?v=<generatedAt>`
   (数据)/文件名带哈希(资产),版本变则 URL 变,长缓存绝对安全。
-- **例外** `programs.json` → no-cache:前端 `programs.ts` 尚未带 `?v=`(api-design §5
-  已知欠账)。补上后把它并入 immutable 段。
+- **例外** `programs.json` → no-cache:历史原因(前端曾未带 `?v=`)。**前端现已带
+  `?v=`**(api-design §5),此 carve-out 仅剩"少了长缓存"的无害损耗——下次动
+  nginx.conf 时并回 immutable 段并删本条。
 - `index.html` → no-cache:入口再验证,发布即生效。
 
 前面若有 CDN,同样遵守:不要对 manifest.json 做覆盖性长缓存。
