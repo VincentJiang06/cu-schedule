@@ -23,6 +23,10 @@ jobs:
       - name: Type-check
         run: npx tsc -b
 
+      # 第五门(2026-07-15,fable_docs 04 §4.5):lib 纯逻辑单测,快门在前。
+      - name: Unit tests (lib pure logic)
+        run: npm test
+
       - name: Build
         run: npm run build
 

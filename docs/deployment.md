@@ -35,7 +35,7 @@ BASE=http://localhost:8080
 curl -s -o /dev/null -w '%{http_code}\n' $BASE/                          # 200
 curl -sI $BASE/data/manifest.json | grep -i cache-control                # no-cache
 curl -sI $BASE/data/2026-27/2026-27-term-1.json | grep -i cache-control  # max-age=31536000, immutable
-curl -sI $BASE/data/programs.json | grep -i cache-control                # no-cache(见下方说明)
+curl -sI $BASE/data/programs.json | grep -i cache-control                # max-age=31536000, immutable(2026-07-15 起与其余 /data/** 一致)
 curl -sI -H 'Accept-Encoding: gzip' $BASE/data/2026-27/2026-27-term-1.json | grep -i content-encoding  # gzip
 curl -s $BASE/data/manifest.json                                         # 含 generatedAt 字段
 docker ps --format '{{.Names}} {{.Status}}'                              # (healthy)
@@ -50,9 +50,6 @@ docker ps --format '{{.Names}} {{.Status}}'                              # (heal
 - `manifest.json` → **no-cache**:数据版本入口,必须每次再验证(ETag 304 极便宜)。
 - 其余 `/data/**` 与 `/assets/**` → **1 年 immutable**:客户端一律带 `?v=<generatedAt>`
   (数据)/文件名带哈希(资产),版本变则 URL 变,长缓存绝对安全。
-- **例外** `programs.json` → no-cache:历史原因(前端曾未带 `?v=`)。**前端现已带
-  `?v=`**(api-design §5),此 carve-out 仅剩"少了长缓存"的无害损耗——下次动
-  nginx.conf 时并回 immutable 段并删本条。
 - `index.html` → no-cache:入口再验证,发布即生效。
 
 前面若有 CDN,同样遵守:不要对 manifest.json 做覆盖性长缓存。

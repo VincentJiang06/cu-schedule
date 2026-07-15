@@ -102,10 +102,28 @@ export async function loadSubjects(year: string): Promise<SubjectInfo[]> {
 
 export type TermRef = { year: string; slug: string; name: string; courseCount: number }
 
+// index.json 与 manifest 同款 memoize:启动时 loadTermList 与 loadYearOfferings 都要读
+// 同一份年度索引(api-design §5 曾记的「启动双请求」债,2026-07-15 清偿)——按 year 缓存
+// promise,一次页面加载每学年只打一次 index.json(同一次加载里 ?v= 版本恒定);失败清
+// 缓存以便重试,与 programs.ts 的缓存策略一致。
+const yearIndexPromises = new Map<string, Promise<YearIndex>>()
+
+function fetchYearIndex(year: string, version: string): Promise<YearIndex> {
+  let promise = yearIndexPromises.get(year)
+  if (!promise) {
+    promise = fetchJson<YearIndex>(`${year}/index.json`, version).catch((error: unknown) => {
+      yearIndexPromises.delete(year)
+      throw error
+    })
+    yearIndexPromises.set(year, promise)
+  }
+  return promise
+}
+
 export async function loadTermList(): Promise<TermRef[]> {
   const manifest = await fetchManifest()
   const indexes = await Promise.all(
-    manifest.years.map((year) => fetchJson<YearIndex>(`${year}/index.json`, manifest.generatedAt)),
+    manifest.years.map((year) => fetchYearIndex(year, manifest.generatedAt)),
   )
   return indexes.flatMap((index) =>
     index.terms.map((term) => ({
@@ -141,7 +159,7 @@ const MAIN_TERM_RE = /Term\s+([12])\b/
  */
 export async function loadYearOfferings(year: string): Promise<Offering[]> {
   const manifest = await fetchManifest()
-  const index = await fetchJson<YearIndex>(`${year}/index.json`, manifest.generatedAt)
+  const index = await fetchYearIndex(year, manifest.generatedAt)
   const mains = index.terms
     .map((term) => ({ ...term, order: Number(term.name.match(MAIN_TERM_RE)?.[1] ?? 0) }))
     .filter((term) => term.order > 0)
