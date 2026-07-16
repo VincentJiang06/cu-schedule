@@ -284,6 +284,13 @@ export function ShareView({ id }: { id: string }) {
         >
           CUS by VinceJiang
         </a>
+        <p className="sv__foot-note">
+          {t('抓取管线来自')}{' '}
+          <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
+            EagleZhen
+          </a>{' '}
+          (AGPL-3.0)
+        </p>
       </footer>
     </div>
   )

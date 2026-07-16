@@ -3786,6 +3786,18 @@ select {
   color: var(--brand-ink);
 }
 
+/* 上游抓取管线致谢（AGPL-3.0 归属，NOTICE.md 的页面镜像） */
+.foot__note {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.foot__note a {
+  color: var(--brand-ink);
+  text-decoration: none;
+}
+
 /* ---- 友链带（页脚友站 chip 行，与 UniWild 系站点视觉骨架一致） ------------------ */
 
 .foot__sibs {
@@ -5811,6 +5823,18 @@ select {
 
 .sv__foot-byline:hover {
   color: var(--brand-ink);
+}
+
+/* 上游抓取管线致谢（AGPL-3.0 归属，NOTICE.md 的页面镜像） */
+.sv__foot-note {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+.sv__foot-note a {
+  color: var(--brand-ink);
+  text-decoration: none;
 }
 
 .export-note--share {

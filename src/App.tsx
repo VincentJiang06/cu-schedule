@@ -3100,6 +3100,13 @@ export default function App() {
             CUS by VinceJiang
           </a>
         </div>
+        <p className="foot__note">
+          {t('抓取管线来自')}{' '}
+          <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
+            EagleZhen
+          </a>{' '}
+          (AGPL-3.0)
+        </p>
         <div className="foot__sibs">
           <span className="sib-label">{t('友链')}</span>
           <div className="sib-row">
