@@ -13,8 +13,16 @@
       "title": "Artificial Intelligence"
     },
     {
+      "code": "AISC",
+      "title": "Artificial Intelligence for Science"
+    },
+    {
       "code": "AIST",
       "title": "AI: Systems & Tech"
+    },
+    {
+      "code": "AMSC",
+      "title": "Advanced Materials Science"
     },
     {
       "code": "ANIC",
@@ -39,6 +47,10 @@
     {
       "code": "ASEI",
       "title": "Aero Sci and Earth Info & X"
+    },
+    {
+      "code": "BAMS",
+      "title": "Courses offered by Fac of BA"
     },
     {
       "code": "BASA",
@@ -173,6 +185,10 @@
       "title": "Co-operative Education"
     },
     {
+      "code": "CSAT",
+      "title": "Creative Sustainable Arts Technology"
+    },
+    {
       "code": "CSCI",
       "title": "Computer Science"
     },
@@ -195,6 +211,10 @@
     {
       "code": "DBAC",
       "title": "DBA (Chinese) Programme"
+    },
+    {
+      "code": "DIPL",
+      "title": "Diplomacy and International Studies"
     },
     {
       "code": "DOTE",
@@ -429,6 +449,10 @@
       "title": "Integrated BBA Programme"
     },
     {
+      "code": "ICMS",
+      "title": "Microelectronics and Integrated Circuits"
+    },
+    {
       "code": "IEMS",
       "title": "Information Engineering (TPg)"
     },
@@ -455,6 +479,10 @@
     {
       "code": "KORE",
       "title": "Korean"
+    },
+    {
+      "code": "LARC",
+      "title": "Landscape Architecture"
     },
     {
       "code": "LAWS",
@@ -605,6 +633,18 @@
       "title": "Education (PG)"
     },
     {
+      "code": "PGDC",
+      "title": "PgD Education (ECE)"
+    },
+    {
+      "code": "PGDE",
+      "title": "PgD Education"
+    },
+    {
+      "code": "PGDP",
+      "title": "PgD Education (Primary)"
+    },
+    {
       "code": "PHAR",
       "title": "Pharmacy"
     },
@@ -671,6 +711,10 @@
     {
       "code": "SBMS",
       "title": "Biomedical Sciences"
+    },
+    {
+      "code": "SDUP",
+      "title": "Sustainable Urban Planning"
     },
     {
       "code": "SEEM",

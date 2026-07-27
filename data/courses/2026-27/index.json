@@ -4,22 +4,27 @@
     {
       "name": "2026-27 Term 1",
       "slug": "2026-27-term-1",
-      "courseCount": 2973
+      "courseCount": 3069
     },
     {
       "name": "2026-27 Term 2",
       "slug": "2026-27-term-2",
-      "courseCount": 3116
+      "courseCount": 3225
     },
     {
       "name": "2026-27 Summer Session",
       "slug": "2026-27-summer-session",
-      "courseCount": 143
+      "courseCount": 144
     },
     {
       "name": "2026-27 Acad Year (Medicine)",
       "slug": "2026-27-acad-year-medicine",
       "courseCount": 55
+    },
+    {
+      "name": "2026-27 Term 3",
+      "slug": "2026-27-term-3",
+      "courseCount": 1
     }
   ]
 }
