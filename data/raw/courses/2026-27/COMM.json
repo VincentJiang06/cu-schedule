@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T12:49:21.586824+00:00",
+    "scraped_at": "2026-07-27T07:01:18.608513+00:00",
     "subject": "COMM",
     "subject_title": "Communication",
-    "total_courses": 153,
+    "total_courses": 151,
     "scraper_version": "memory-safe-v2.0"
   },
   "courses": [
@@ -454,10 +454,16 @@
               "section": "--LEC (8818)",
               "meetings": [
                 {
-                  "time": "We 2:30PM - 5:15PM",
-                  "location": "Humanities Building 314",
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "T.C. Cheng Bldg 208",
                   "instructor": "Ms. LAM Yok Yiu Agnes",
-                  "dates": "9/9, 16/9, 23/9, 30/9, 7/10, 14/10, 21/10, 28/10, 4/11, 11/11, 18/11, 25/11, 2/12"
+                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
+                },
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "T.C. Cheng Bldg 208",
+                  "instructor": "Ms. LAM Yok Yiu Agnes",
+                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
               "availability": {
@@ -1194,16 +1200,10 @@
               "section": "--LEC (5516)",
               "meetings": [
                 {
-                  "time": "Mo 2:30PM - 5:15PM",
-                  "location": "T.C. Cheng Bldg 208",
+                  "time": "We 2:30PM - 5:15PM",
+                  "location": "Humanities Building 314",
                   "instructor": "Ms. LAM Yok Yiu Agnes",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 2:30PM - 5:15PM",
-                  "location": "T.C. Cheng Bldg 208",
-                  "instructor": "Ms. LAM Yok Yiu Agnes",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
+                  "dates": "9/9, 16/9, 23/9, 30/9, 7/10, 14/10, 21/10, 28/10, 4/11, 11/11, 18/11, 25/11, 2/12"
                 }
               ],
               "availability": {
@@ -1849,6 +1849,72 @@
       "feedback_evaluation": "Course Evaluation",
       "required_readings": "(For reference only, subject to change)\n\nJean-luc Comolli & Jean Narboni (2009), “Cinema/Ideology/Criticism” in Leo Braudy & Marshall Cohen ed., Film Theory and Criticism, New York: Oxford University Press, pp. 686-693.\n\nBordwell and Kristin (2013), Chapter 4 “the Power of Mise-en-scene”\n\nPrince Stephen (2013), Movies and Meaning: An Introduction to Film, Boston: Allyn and Bacon, Chapter 7, pp 213-239.\n\nDavid Desser, “Making Movies Male,” (Pang & Wong 2005)\n\nTony Williams, “Space, Place, and Spectacle: The Crisis Cinema of John Woo” Cinema Journal 36, no. 2 (1997): 67–84.\n\nStephen Teo, Director in Action: Johnnie To and the Hong Kong Action Film, pp. 117-127.\n\nNatalia Chan Sui Hung, “Rewriting History: Hong Kong Nostalgia Cinema and Its Social Practice” (Fu & Desser 2000)\n\nEwa Mazierska and Laura Rascaroli, “Trapped in the Present: Time in the Films of Wong Kar-Wai,” Film Criticism, 25, no. 2 (Winter2000/2001): 2-20.\n\n游靜：〈東方不敗與金枝玉葉的性及性別政治〉，《性／別光影：香港電影中的性與性別文化研究》，香港：香港電影評論學會，2005年。\n\nZoran Lee Pecic, “Crossing Time and Space: Female Desire in Yan Yan Mak’s Butterfly,” New Queer Sinophone Cinema, London: Palgrave Macmillan, 2016, pp. 43-62.",
       "recommended_readings": "(For reference only, subject to change)\n\nAbbas Hong Kong: Culture and the Politics of Disappearance, Hong Kong: HKU press, 1997.\n\nStokes, Lisa Odham, and Michael Hoover. City on Fire: Hong Kong Cinema. London; New York: Verso, 1999.\n\nBordwell, David. Planet Hong Kong: Popular Cinema and The Art of Entertainment. Cambridge, Mass.: Harvard University Press, 2000.\n\nYau, Esther C.M. (ed.) At Full Speed: Hong Kong Cinema in a Borderless World. Minneapolis: University of Minnesota Press, 2001.\n\nCheung, Esther M. K., et al. Hong Kong Screenscapes: From the New Wave to the Digital Frontier. Hong Kong University Press, HKU, 2011.\n\nFan, Victor. Extraterritoriality: Locating Hong Kong Cinema and Media. Edinburgh University Press, 2019.\n\nStephen Teo, Director in Action: Johnnie To and the Hong Kong Action Films. Hong Kong: Hong Kong University Press, 2007.\n\nPang, Laikwan and Day Wong (ed.) Masculinities and Hong Kong Cinema. Hong Kong: Hong Kong University Press, 2005.\n\nMorris, Meaghan, et al., editors. Hong Kong Connections: Transnational Imagination in Action Cinema. Hong Kong University Press, 2005\n\n胡金銓：《胡金銓武俠電影作法》，香港：正文社，1998年。"
+    },
+    {
+      "subject": "COMM",
+      "course_code": "2590",
+      "title": "Global Cinema",
+      "credits": "3.00",
+      "terms": [
+        {
+          "term_code": "2430",
+          "term_name": "2026-27 Term 2",
+          "schedule": [
+            {
+              "section": "--LEC (9728)",
+              "meetings": [
+                {
+                  "time": "Tu 3:30PM - 6:15PM",
+                  "location": "Yasumoto Int'l Acad Park 608",
+                  "instructor": "Dr. CHAN Ka Ming",
+                  "dates": "12/1, 19/1, 26/1, 2/2"
+                },
+                {
+                  "time": "Tu 3:30PM - 6:15PM",
+                  "location": "Yasumoto Int'l Acad Park 608",
+                  "instructor": "Dr. CHAN Ka Ming",
+                  "dates": "16/2, 23/2, 2/3"
+                },
+                {
+                  "time": "Tu 3:30PM - 6:15PM",
+                  "location": "Yasumoto Int'l Acad Park 608",
+                  "instructor": "Dr. CHAN Ka Ming",
+                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
+                }
+              ],
+              "availability": {
+                "capacity": "27",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "27",
+                "status": "Open"
+              },
+              "class_attributes": "English only"
+            }
+          ]
+        }
+      ],
+      "description": "This course explores the complicated political, economic and cultural forces that contribute to the uneven development of global cinema. The first part of the programme will dive into the history and geographical factors of four major types of cinema, including Hollywood’s cinema for entertainment, European’s cinema of auteurism, Latin American’s Third Cinema and Propaganda Cinema. The second part will address the global technological and commercialization forces affecting the interaction of international cinema industries. That includes the choices of popular genres, trans-national stardom, co-production strategies, emergence of festival cinema and more. In addition, the course will also survey the efforts and challenges faced by several major movie production centres.",
+      "enrollment_requirement": "",
+      "course_attributes": "",
+      "academic_career": "Undergraduate",
+      "grading_basis": "Graded",
+      "component": "Lecture",
+      "campus": "Main Campus",
+      "academic_group": "Sch of Journalism and Comm",
+      "academic_org": "Sch of Journalism and Comm",
+      "learning_outcomes": "After completing this course, students should be able to:\n- understand and appreciate the characteristics of different national cinema\n- understand the current trend and major issues of global cinema\n- analyze key movies and assess their position in the global context\n- grasp basic concepts and theoretical framework related to global cinema\n- gain deeper insights on particular researched nations through their understanding of movies",
+      "course_syllabus": "(For reference only, subject to change)\n\n1. Introduction: global/ world cinema in a glance\n2. The Hegemony of Hollywood\n3. The rise of national cinema\n4. European’s auteur Cinema\n5. Latin American’s Third Cinema\n6. Propaganda and war movies\n7. Global/local – the rise of glocal films\n8. Transnational genres (action + horror)\n9. Transnational stardom\n10. Production strategies and Co-production practices\n11. International Film Festivals and festival cinema\n12. Digital technologies on global cinema",
+      "assessment_types": {
+        "Presentation": "20",
+        "Participation": "10",
+        "Report": "30",
+        "Test or quiz": "40"
+      },
+      "feedback_evaluation": "(For reference only, subject to change)\nCourse Evaluation",
+      "required_readings": "(For reference only, subject to change)\n\nChitty, N., Ji, L., Rawnsley, G & Hayden, C. (eds.)(2017) *The Routledge Handbook of Soft Power.* London & New York: Routledge\nFinny, A & Triana, E.(2015) (2nd Ed) *The International film business: a market guide beyond Hollywood*. London; New York: Routledge\nVivian P.Y. Lee (2011) (Ed.) *East* *Asian cinemas: regional flows and global transformations*. Houndmills, Basingstoke, Hampshire ; New York, NY : Palgrave Macmillan\nCostanzo, W. (2014) *World Cinema Through Global Genres*. Chichester, West Sussex, UK: Wiley-Blackwell.\nMeeuf, R & Raphael, R (2013) (eds.) *Transnational Stardom.* Basingstoke, Palgrave Macmillan\nMirrlees, T (2013) Global Entertainment Media: between cultural imperialism and cultural globalization. London New York: Routledge\nIan Robert Smith (2009) (Ed.) Cultural Borrowing: Appropriation, Reworking, Transformation. Scope: an online Journal of Film and TV series\nDaya Kishan Thussu (2007) (ed.) Media on the Move: Global Flow and Contra-flow. London New York: Routledge",
+      "recommended_readings": ""
     },
     {
       "subject": "COMM",
@@ -2764,7 +2830,7 @@
                 {
                   "time": "We 6:30PM - 9:15PM",
                   "location": "Wu Ho Man Yuen Bldg 501",
-                  "instructor": "Staff",
+                  "instructor": "Dr. LEE Ching",
                   "dates": "9/9, 16/9, 23/9, 30/9, 7/10, 14/10, 21/10, 28/10, 4/11, 11/11, 18/11, 25/11, 2/12"
                 }
               ],
@@ -2969,11 +3035,11 @@
                 }
               ],
               "availability": {
-                "capacity": "45",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "45",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3154,72 +3220,6 @@
       "feedback_evaluation": "Course Evaluation",
       "required_readings": "Annie Leibovitz at Work, Annie Leibovitz, Random House, 2008\n\nBerger, John. Ways of Seeing. Great Britain: The British Broadcasting Corporation and Penguin Books Ltd, 1972.\n\nBerger, John. About Looking. New York: Pantheon Books, 1980.\n\nFrank, Robert. The Americans. New York: Pantheon Books, 1969.\n\nVincent Yu. Our home, Shek Kip Mei 1954 – 2006. Hong Kong: MCCM Creations, 2007.\n\nBadger, Barry. The Photobook: A History, Vol. 1 & 2. New York: Phaidon Press, 2004.\n\nBarthes, Roland. Camera Lucida: reflections on photography. New York: Hill and Wang, 1981.\n\nBarthes, Roland. Images, Music, Text. New York: Hill and Wang, 1978.\n\nBright, Susan. Art photography now. London: Thames & Hudson Ltd; New Ed edition, 2006.\n\nGerry Badger. The Genius of Photography: How photography has changed our lives. London: Quadrille Publishing Ltd, 2007.\n\nJaeger, Anne-Celine. Image Makers, Image Takers: The Essential Guide to Photography by Those in the Know. London: Thames & Hudson Ltd, 2007.\n\nJohn Berger. Ways of Seeing. Great Britain: The British Broadcasting Corporation and Penguin Books Ltd, 1972.\n\nJohn Berger. About Looking. New York: Pantheon Books, 1980.\n\nSontag, Susan. On Photography. New York: Farrar, Straus and Giroux, 1977.\n\nWells, Liz. Photography: A Critical Introduction. Routledge; 1 edition, 2001.\n\nWells, Liz. The Photography Reader. Routledge; 3 edition, 2004.\n\n世界攝影史, 顧錚著. 浙江：浙江攝影出版社，2006",
       "recommended_readings": ""
-    },
-    {
-      "subject": "COMM",
-      "course_code": "3130",
-      "title": "Media and Cultural Criticism",
-      "credits": "3.00",
-      "terms": [
-        {
-          "term_code": "2430",
-          "term_name": "2026-27 Term 2",
-          "schedule": [
-            {
-              "section": "--LEC (5087)",
-              "meetings": [
-                {
-                  "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Tsang Shiu Tim Bldg 312",
-                  "instructor": "Staff",
-                  "dates": "12/1, 19/1, 26/1, 2/2"
-                },
-                {
-                  "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Tsang Shiu Tim Bldg 312",
-                  "instructor": "Staff",
-                  "dates": "16/2, 23/2, 2/3"
-                },
-                {
-                  "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Tsang Shiu Tim Bldg 312",
-                  "instructor": "Staff",
-                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
-                }
-              ],
-              "availability": {
-                "capacity": "40",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "40",
-                "status": "Open"
-              },
-              "class_attributes": "Cantonese only"
-            }
-          ]
-        }
-      ],
-      "description": "This course provides an introduction to media and cultural criticism within the context of Hong Kong. By engaging with key concepts and critical theories in media and cultural studies, students are encouraged to reflect on their own experiences with popular culture and develop unique perspectives. Through a series of structured writing exercises and training, they will learn to craft authentic and thoughtful critiques.",
-      "enrollment_requirement": "",
-      "course_attributes": "",
-      "academic_career": "Undergraduate",
-      "grading_basis": "Graded",
-      "component": "Lecture\nInteractive Tutorial",
-      "campus": "Main Campus",
-      "academic_group": "Sch of Journalism and Comm",
-      "academic_org": "Sch of Journalism and Comm",
-      "learning_outcomes": "Upon completion of the course, students will be able to:\n- Understand key theories and concepts in media and cultural criticism, and apply them within the context of Hong Kong society.\n- Analyze media phenomena in popular culture, and reflect on their impact on individuals and society.\n- Develop critical and personally distinctive perspectives in response to contemporary media and cultural issues.\n- Apply key concepts and theories from media and cultural studies to produce in-depth written critiques, demonstrating comprehension and analytical skills in evaluating media texts, products, events, or issues.\n- Enhance expressive, interpretive, and critical thinking skills as active audiences and writers.\n- Cultivate sensitivity to cultural diversity and media ethics, and demonstrate respect and reflection in their critiques.",
-      "course_syllabus": "(For reference only, subject to change)\n\nIntroduction\nAppreciation of Criticism\nStructure, Style and Thinking tools: developing perspectives of media criticism\nEvaluating the Text(I): Film\nEvaluating the Text(II): TV and Drama\nPower relations (I): Production end\nEvaluating the Text(III): Popular Music - Songs, Voice and Performance\nEvaluating the Text (IV): Stars\nPower relations (II): Gender, Race and Identity\nMaking stronger arguments (I): Hong Kong Identity and Popular Culture\nMaking stronger arguments (II): Looking into History\nMaking stronger arguments (III): What does the audience think?\nConclusion: Ethics and risks of media criticism in Hong Kong",
-      "assessment_types": {
-        "Homework or assignment": "40",
-        "Others": "10",
-        "Project": "35",
-        "Participation": "15"
-      },
-      "feedback_evaluation": "Course Evaluation",
-      "required_readings": "(For reference only. Subject to change)\n\nCriticizing the Critics by John English\n\n<https://archive.org/details/criticizingcriti00engl>\n\n“Cultural Criticism A Primer of Key Concepts” by Arthur Berger\n\n“Who needs critics?” Feature article from Sight and Sound magazine\n\nhttp://old.bfi.org.uk/sightandsound/feature/49479\n\nStory: Substance, Structure, Style and the Principles of Screenwriting (故事的解剖) by McKee, Robert\n\nPerforming Rites : On the Value of Popular Music by Simon Frith\n\nSelected articles in Corrigan, Timothy (2015). A Short Guide to Writing About Film, Boston: Pearson.",
-      "recommended_readings": "(For reference only. Subject to change)\n\nWays of Seeing by John Berger\n\n《香港電影2022：沒有神話的日子》，香港電影評論學會著\n\nSelected works by 四維出世\n\nAdorno, T. (1957). Television and the patterns of mass culture. In B. Rosenberg & D. M. White (Eds.), Mass Culture: The popular arts in America. New York: Free Press.\n\nNegus, Keith. 1996. \"Audiences.\" In Popular Music in Theory: An Introduction.\n\nHanover, NH: Wesleyan University Press. Pp. 7-35.\n\n<https://cooley.faculty.music.ucsb.edu/classes/mus114/reading/readings/negus.html>\n\n\"Heavenly Bodies: Film Stars and Society\" by Richard Dyer"
     },
     {
       "subject": "COMM",
@@ -5148,7 +5148,7 @@
                 "available_seats": "20",
                 "status": "Open"
               },
-              "class_attributes": "Putonghua and Cantonese"
+              "class_attributes": "Cantonese only"
             }
           ]
         },
@@ -5554,64 +5554,6 @@
       "title": "Directed Studies in Communication",
       "credits": "3.00",
       "terms": [
-        {
-          "term_code": "2420",
-          "term_name": "2026-27 Term 1",
-          "schedule": [
-            {
-              "section": "AEJ1-PRJ (5159)",
-              "meetings": [
-                {
-                  "time": "Th 2:30PM - 5:15PM",
-                  "location": "T.C. Cheng Bldg 110",
-                  "instructor": "Staff",
-                  "dates": "10/9, 17/9, 24/9"
-                },
-                {
-                  "time": "Th 2:30PM - 5:15PM",
-                  "location": "T.C. Cheng Bldg 110",
-                  "instructor": "Staff",
-                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
-                }
-              ],
-              "availability": {
-                "capacity": "45",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "45",
-                "status": "Open"
-              },
-              "class_attributes": "English only"
-            },
-            {
-              "section": "AGJ1-PRJ (5158)",
-              "meetings": [
-                {
-                  "time": "Th 10:30AM - 1:15PM",
-                  "location": "T.C. Cheng Bldg 111",
-                  "instructor": "Staff",
-                  "dates": "10/9, 17/9, 24/9"
-                },
-                {
-                  "time": "Th 10:30AM - 1:15PM",
-                  "location": "T.C. Cheng Bldg 111",
-                  "instructor": "Staff",
-                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
-                }
-              ],
-              "availability": {
-                "capacity": "50",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "50",
-                "status": "Open"
-              },
-              "class_attributes": "English only"
-            }
-          ]
-        },
         {
           "term_code": "2430",
           "term_name": "2026-27 Term 2",
@@ -6680,11 +6622,11 @@
                 }
               ],
               "availability": {
-                "capacity": "54",
+                "capacity": "50",
                 "enrolled": "47",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "7",
+                "available_seats": "3",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -6733,7 +6675,7 @@
               ],
               "availability": {
                 "capacity": "50",
-                "enrolled": "52",
+                "enrolled": "51",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
                 "available_seats": "0",
@@ -7368,13 +7310,13 @@
                 {
                   "time": "Mo 2:30PM - 5:15PM",
                   "location": "Tsang Shiu Tim Bldg 104",
-                  "instructor": "Staff",
+                  "instructor": "Dr. WONG Yuk Ying",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 2:30PM - 5:15PM",
                   "location": "Tsang Shiu Tim Bldg 104",
-                  "instructor": "Staff",
+                  "instructor": "Dr. WONG Yuk Ying",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
@@ -7620,10 +7562,10 @@
               ],
               "availability": {
                 "capacity": "54",
-                "enrolled": "51",
+                "enrolled": "50",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "3",
+                "available_seats": "4",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -7944,10 +7886,10 @@
               ],
               "availability": {
                 "capacity": "62",
-                "enrolled": "57",
+                "enrolled": "56",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "5",
+                "available_seats": "6",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -8221,61 +8163,6 @@
       "academic_group": "Div of Communication",
       "academic_org": "Div of Communication",
       "learning_outcomes": "Students are expected to acquire the necessary skills to compose a wide variety of different features, as well as to understand the ecology of the mass media from the views of a contributing journalist.",
-      "course_syllabus": "Please refer to the course outline distributed in the first lecture.",
-      "assessment_types": {},
-      "feedback_evaluation": "Course Evaluation Questionnaire",
-      "required_readings": "Please refer to the course outline distributed in the first lecture.",
-      "recommended_readings": "Please refer to the course outline distributed in the first lecture."
-    },
-    {
-      "subject": "COMM",
-      "course_code": "5699",
-      "title": "Future of Journalism",
-      "credits": "3.00",
-      "terms": [
-        {
-          "term_code": "2430",
-          "term_name": "2026-27 Term 2",
-          "schedule": [
-            {
-              "section": "-S01-SEM (1508)",
-              "meetings": [
-                {
-                  "time": "Th 6:30PM - 9:15PM",
-                  "location": "Wu Ho Man Yuen Bldg 303",
-                  "instructor": "Staff",
-                  "dates": "14/1, 21/1, 28/1, 4/2"
-                },
-                {
-                  "time": "Th 6:30PM - 9:15PM",
-                  "location": "Wu Ho Man Yuen Bldg 303",
-                  "instructor": "Staff",
-                  "dates": "18/2, 25/2, 4/3, 11/3, 18/3, 25/3, 1/4, 8/4, 15/4, 22/4, 29/4"
-                }
-              ],
-              "availability": {
-                "capacity": "35",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "35",
-                "status": "Open"
-              },
-              "class_attributes": "English only"
-            }
-          ]
-        }
-      ],
-      "description": "This course will analyze the challenges and opportunities presented by new technologies, changing audience behaviors, and shifting media landscapes. We will scrutinize important innovation cases and discuss the ways in which journalism can adapt to meet the needs of a changing world. Through a combination of lectures, discussions, guest talks, case studies and newsroom practices, the course emphasizes both the normative roles of journalism and a grounded understanding of what is really happening in the global journalism industry.",
-      "enrollment_requirement": "For Students of M.A. in Journalism",
-      "course_attributes": "",
-      "academic_career": "Postgraduate - Taught",
-      "grading_basis": "Graded",
-      "component": "Seminar",
-      "campus": "Main Campus",
-      "academic_group": "Div of Communication",
-      "academic_org": "Div of Communication",
-      "learning_outcomes": "After taking the course, students will be able to analyze the current state of the journalism industry and develop a deep understanding of the challenges it faces; understand innovative technologies, business models, and news products in the journalism industry; keep up with important innovation cases in the industry and examine them with a critical perspective; develop skills necessary to succeed in the evolving field of journalism.",
       "course_syllabus": "Please refer to the course outline distributed in the first lecture.",
       "assessment_types": {},
       "feedback_evaluation": "Course Evaluation Questionnaire",
@@ -9650,11 +9537,11 @@
                 }
               ],
               "availability": {
-                "capacity": "40",
+                "capacity": "35",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "40",
+                "available_seats": "35",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -10329,55 +10216,6 @@
       "academic_group": "Div of Communication",
       "academic_org": "Div of Communication",
       "learning_outcomes": "Students are expected to understand what effective account planning is all about and the changing face of account planning in the digital age; apply account planning thinking mode and practices to any broad-based or brand-based, integrated marketing communications tasks in the real world settings; identify the key attributes and professional expectations required for being an outstanding account planner in action.",
-      "course_syllabus": "Please refer to the course outline distributed in the first lecture.",
-      "assessment_types": {},
-      "feedback_evaluation": "Course Evaluation Questionnaire",
-      "required_readings": "Please refer to the course outline distributed in the first lecture.",
-      "recommended_readings": "Please refer to the course outline distributed in the first lecture."
-    },
-    {
-      "subject": "COMM",
-      "course_code": "6858",
-      "title": "Brand Strategy and Integrated Marketing Communication",
-      "credits": "3.00",
-      "terms": [
-        {
-          "term_code": "2420",
-          "term_name": "2026-27 Term 1",
-          "schedule": [
-            {
-              "section": "--LEC (2431)",
-              "meetings": [
-                {
-                  "time": "Tu 6:30PM - 9:15PM",
-                  "location": "Wu Ho Man Yuen Bldg 405",
-                  "instructor": "Staff",
-                  "dates": "8/9, 15/9, 22/9, 29/9, 6/10, 13/10, 20/10, 27/10, 3/11, 10/11, 17/11, 24/11, 1/12, 8/12"
-                }
-              ],
-              "availability": {
-                "capacity": "40",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "40",
-                "status": "Open"
-              },
-              "class_attributes": "English only"
-            }
-          ]
-        }
-      ],
-      "description": "With a business and competitive landscape complicated by social challenges, media fragmentation, new technologies, and polarized consumer opinions, brands must keep abreast of the fast-changing environment to have relevant presence and behaviour. It is important to have a brand strategy that truly connects and has the potential to create behavioural changes. This course puts focus back on the basics, and align with the students on some of the core concepts on marketing communications, before developing any integrated marketing campaign that would otherwise become just a blinkered approach to multifaceted problems.",
-      "enrollment_requirement": "For Students of M.S.Sc. in Advertising and M.S.Sc. in Corporate Communication",
-      "course_attributes": "",
-      "academic_career": "Postgraduate - Taught",
-      "grading_basis": "Graded",
-      "component": "Lecture",
-      "campus": "Main Campus",
-      "academic_group": "Div of Communication",
-      "academic_org": "Div of Communication",
-      "learning_outcomes": "Students will learn to develop brand strategy with sharpness by asking the right questions, investigating new perspectives, and define what we want people to do, before we are over excited with various tactics and rush to put together campaign. We develop works that work, and not noise in the market.",
       "course_syllabus": "Please refer to the course outline distributed in the first lecture.",
       "assessment_types": {},
       "feedback_evaluation": "Course Evaluation Questionnaire",

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T16:12:23.748897+00:00",
+    "scraped_at": "2026-07-27T11:53:44.958466+00:00",
     "subject": "HIST",
     "subject_title": "History",
     "total_courses": 73,
@@ -419,10 +419,10 @@
               "section": "-T01-TUT (4855)",
               "meetings": [
                 {
-                  "time": "TBA",
-                  "location": "No Room Required",
+                  "time": "We 3:30PM - 4:15PM",
+                  "location": "Yasumoto Int'l Acad Park LT6",
                   "instructor": "Dr. FOK Yeung Yeung",
-                  "dates": "07/09/2026 - 30/11/2026"
+                  "dates": "9/9, 16/9, 23/9, 30/9, 7/10, 14/10, 21/10, 28/10, 4/11, 11/11, 18/11, 25/11, 2/12"
                 }
               ],
               "availability": {
@@ -1109,19 +1109,19 @@
               "meetings": [
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "14/1, 21/1, 28/1, 4/2"
                 },
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "18/2, 25/2, 4/3"
                 },
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
                 }
@@ -1141,19 +1141,19 @@
               "meetings": [
                 {
                   "time": "Th 12:30PM - 1:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "14/1, 21/1, 28/1, 4/2"
                 },
                 {
                   "time": "Th 12:30PM - 1:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "18/2, 25/2, 4/3"
                 },
                 {
                   "time": "Th 12:30PM - 1:15PM",
-                  "location": "Lady Shaw Bldg LT4",
+                  "location": "Lee Shau Kee Building 515",
                   "instructor": "Dr. WOO Tze Yan Jessie",
                   "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
                 }
@@ -1593,7 +1593,7 @@
                 "available_seats": "50",
                 "status": "Open"
               },
-              "class_attributes": "Cantonese only"
+              "class_attributes": "English only"
             },
             {
               "section": "GLF1-FLD (4910)",
@@ -1613,7 +1613,7 @@
                 "available_seats": "50",
                 "status": "Open"
               },
-              "class_attributes": "Cantonese only"
+              "class_attributes": "English only"
             }
           ]
         },
@@ -1904,10 +1904,22 @@
               "section": "-T01-TUT (4928)",
               "meetings": [
                 {
-                  "time": "TBA",
-                  "location": "TBA",
+                  "time": "Tu 9:30AM - 10:15AM",
+                  "location": "Lee Shau Kee Building 308",
                   "instructor": "Professor HE Xi",
-                  "dates": "11/01/2027 - 19/04/2027"
+                  "dates": "12/1, 19/1, 26/1, 2/2"
+                },
+                {
+                  "time": "Tu 9:30AM - 10:15AM",
+                  "location": "Lee Shau Kee Building 308",
+                  "instructor": "Professor HE Xi",
+                  "dates": "16/2, 23/2, 2/3"
+                },
+                {
+                  "time": "Tu 9:30AM - 10:15AM",
+                  "location": "Lee Shau Kee Building 308",
+                  "instructor": "Professor HE Xi",
+                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
                 }
               ],
               "availability": {
@@ -4473,7 +4485,7 @@
               "availability": {
                 "capacity": "150",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "150",
                 "status": "Open"
@@ -4493,7 +4505,7 @@
               "availability": {
                 "capacity": "150",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "150",
                 "status": "Open"
@@ -4531,7 +4543,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -4551,7 +4563,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -4610,7 +4622,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4636,7 +4648,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4691,7 +4703,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4717,7 +4729,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4749,7 +4761,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4775,7 +4787,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4836,7 +4848,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4856,7 +4868,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4905,7 +4917,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4925,7 +4937,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4957,7 +4969,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -4977,7 +4989,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5032,7 +5044,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5058,7 +5070,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5113,7 +5125,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5139,7 +5151,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5194,7 +5206,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5214,7 +5226,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5275,7 +5287,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5295,7 +5307,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5350,7 +5362,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5376,7 +5388,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5425,7 +5437,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5445,7 +5457,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5500,7 +5512,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5526,7 +5538,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5581,7 +5593,7 @@
               "availability": {
                 "capacity": "60",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "60",
                 "status": "Open"
@@ -5607,7 +5619,7 @@
               "availability": {
                 "capacity": "60",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "60",
                 "status": "Open"
@@ -5645,7 +5657,7 @@
               "availability": {
                 "capacity": "70",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "70",
                 "status": "Open"
@@ -5665,7 +5677,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5726,7 +5738,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5758,7 +5770,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -5816,7 +5828,7 @@
               "availability": {
                 "capacity": "70",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "70",
                 "status": "Open"
@@ -5836,7 +5848,7 @@
               "availability": {
                 "capacity": "70",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "70",
                 "status": "Open"
@@ -5889,7 +5901,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5909,7 +5921,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5968,7 +5980,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -5988,7 +6000,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -6040,7 +6052,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -6060,7 +6072,7 @@
               "availability": {
                 "capacity": "50",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "50",
                 "status": "Open"
@@ -6120,7 +6132,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -6140,7 +6152,7 @@
               "availability": {
                 "capacity": "80",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "10",
                 "waitlist_total": "0",
                 "available_seats": "80",
                 "status": "Open"
@@ -6255,16 +6267,10 @@
               "section": "-S01-SEM (2417)",
               "meetings": [
                 {
-                  "time": "Th 4:30PM - 7:15PM",
-                  "location": "Yasumoto Int'l Acad Park 406",
+                  "time": "Fr 4:30PM - 7:15PM",
+                  "location": "Tsang Shiu Tim Bldg 102",
                   "instructor": "Professor PUK Wing Kin",
-                  "dates": "10/9, 17/9, 24/9"
-                },
-                {
-                  "time": "Th 4:30PM - 7:15PM",
-                  "location": "Yasumoto Int'l Acad Park 406",
-                  "instructor": "Professor PUK Wing Kin",
-                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
+                  "dates": "11/9, 18/9, 25/9, 2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11, 20/11, 27/11, 4/12"
                 }
               ],
               "availability": {
@@ -6984,16 +6990,10 @@
               "section": "-S01-SEM (1301)",
               "meetings": [
                 {
-                  "time": "Th 4:30PM - 7:15PM",
-                  "location": "Yasumoto Int'l Acad Park 406",
+                  "time": "Fr 4:30PM - 7:15PM",
+                  "location": "Tsang Shiu Tim Bldg 102",
                   "instructor": "Professor PUK Wing Kin",
-                  "dates": "10/9, 17/9, 24/9"
-                },
-                {
-                  "time": "Th 4:30PM - 7:15PM",
-                  "location": "Yasumoto Int'l Acad Park 406",
-                  "instructor": "Professor PUK Wing Kin",
-                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
+                  "dates": "11/9, 18/9, 25/9, 2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11, 20/11, 27/11, 4/12"
                 }
               ],
               "availability": {

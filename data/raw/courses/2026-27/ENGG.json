@@ -1,9 +1,9 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T14:38:04.837806+00:00",
+    "scraped_at": "2026-07-27T09:35:42.228698+00:00",
     "subject": "ENGG",
     "subject_title": "Courses offered by Fac of Erg",
-    "total_courses": 32,
+    "total_courses": 34,
     "scraper_version": "memory-safe-v2.0"
   },
   "courses": [
@@ -997,10 +997,16 @@
               "section": "BO-LEC (7103)",
               "meetings": [
                 {
-                  "time": "Fr 8:30AM - 10:15AM",
-                  "location": "Lee Shau Kee Building 514",
+                  "time": "Mo 11:30AM - 1:15PM",
+                  "location": "Wu Ho Man Yuen Bldg 508",
                   "instructor": "Staff",
-                  "dates": "11/9, 18/9, 25/9, 2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11, 20/11, 27/11, 4/12"
+                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
+                },
+                {
+                  "time": "Mo 11:30AM - 1:15PM",
+                  "location": "Wu Ho Man Yuen Bldg 508",
+                  "instructor": "Staff",
+                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
               "availability": {
@@ -1017,10 +1023,16 @@
               "section": "BOL1-LAB (7104)",
               "meetings": [
                 {
-                  "time": "Fr 10:30AM - 11:15AM",
-                  "location": "Lee Shau Kee Building 514",
+                  "time": "Mo 1:30PM - 2:15PM",
+                  "location": "Wu Ho Man Yuen Bldg 508",
                   "instructor": "Staff",
-                  "dates": "11/9, 18/9, 25/9, 2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11, 20/11, 27/11, 4/12"
+                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
+                },
+                {
+                  "time": "Mo 1:30PM - 2:15PM",
+                  "location": "Wu Ho Man Yuen Bldg 508",
+                  "instructor": "Staff",
+                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
               "availability": {
@@ -9381,6 +9393,66 @@
     },
     {
       "subject": "ENGG",
+      "course_code": "5101",
+      "title": "Advanced Computer Architecture",
+      "credits": "3.00",
+      "terms": [
+        {
+          "term_code": "2420",
+          "term_name": "2026-27 Term 1",
+          "schedule": [
+            {
+              "section": "--LEC (9890)",
+              "meetings": [
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "TBA",
+                  "instructor": "Professor WANG Zhengrong",
+                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
+                },
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "TBA",
+                  "instructor": "Professor WANG Zhengrong",
+                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
+                }
+              ],
+              "availability": {
+                "capacity": "60",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "60",
+                "status": "Open"
+              },
+              "class_attributes": "English only"
+            }
+          ]
+        }
+      ],
+      "description": "This course is designed to present an overview of some advanced computer architectures and their underlying design principles. Issues discussed will include scalability and performance evaluation. The underlying technologies such as processor and memory hierarchy, cache and shared memory, and advanced pipelining techniques will be presented. Examples of high performance vector\nprocessors, multicomputers and massive parallel processors will be compared. Some novel architectures such as VLIW, fault tolerant systems and data flow machines will also be elaborated.\nAdvisory: Students are expected to have taken CENG3420 or having background knowledge in computer organization.",
+      "enrollment_requirement": "For students in MSc Computer Science or MPhil-PhD programmes under Faculty of Engineering or UG Computer Science or UG Computer Engineering;Exclusion: CENG5410",
+      "course_attributes": "",
+      "academic_career": "Postgraduate - Research",
+      "grading_basis": "Graded",
+      "component": "Lecture\nInteractive Tutorial",
+      "campus": "Main Campus",
+      "academic_group": "Div of Computer Science & Engg",
+      "academic_org": "Div of Computer Science & Engg",
+      "learning_outcomes": "At the end of the course of studies, students will have acquired the ability to\n1. Understand different processor architectures and system-level design processes\n2. Understand the organization and operation of parallel computer systems\n3. Understand memory hierarchy and its implication on system performance\n4. Understand power and reliability of computer systems\n5. Read and evaluate research papers",
+      "course_syllabus": "This course is designed to present an overview of some advanced computer architectures and their underlying design principles. Issues discussed will include scalability and performance evaluation. The underlying technologies such as processor and memory hierarchy, cache and shared memory, and advanced pipelining techniques will be presented. Examples of high performance vector processors, multicomputers and massive parallel processors will be compared. Some novel architectures such as VLIW, fault tolerant systems and data flow machines will also be elaborated.",
+      "assessment_types": {
+        "Essays": "40",
+        "Essay test or exam": "20",
+        "Others": "20",
+        "Presentation": "20"
+      },
+      "feedback_evaluation": "1. Course evaluation and questionnaire\n2. Question-and-answer sessions during class\n3. Student consultation during office hours or online",
+      "required_readings": "To be provided by course teacher.",
+      "recommended_readings": "1. Computer Architecture: A Quantitative Approach, 5th edition"
+    },
+    {
+      "subject": "ENGG",
       "course_code": "5104",
       "title": "Image Processing and Computer Vision",
       "credits": "3.00",
@@ -9979,6 +10051,77 @@
     },
     {
       "subject": "ENGG",
+      "course_code": "5392",
+      "title": "Lightwave System Technologies",
+      "credits": "3.00",
+      "terms": [
+        {
+          "term_code": "2430",
+          "term_name": "2026-27 Term 2",
+          "schedule": [
+            {
+              "section": "--LEC (9732)",
+              "meetings": [
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "Ho Sin-Hang Engg Bldg 833",
+                  "instructor": "Professor CHEN Lian Kuan",
+                  "dates": "11/1, 18/1, 25/1, 1/2"
+                },
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "Ho Sin-Hang Engg Bldg 833",
+                  "instructor": "Professor CHEN Lian Kuan",
+                  "dates": "15/2, 22/2, 1/3"
+                },
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "William M W Mong Eng Bldg 1004",
+                  "instructor": "Professor CHEN Lian Kuan",
+                  "dates": "8/3, 15/3, 22/3"
+                },
+                {
+                  "time": "Mo 2:30PM - 5:15PM",
+                  "location": "William M W Mong Eng Bldg 1004",
+                  "instructor": "Professor CHEN Lian Kuan",
+                  "dates": "12/4, 19/4, 26/4"
+                }
+              ],
+              "availability": {
+                "capacity": "20",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "20",
+                "status": "Open"
+              },
+              "class_attributes": "English only"
+            }
+          ]
+        }
+      ],
+      "description": "This course covers the design of advanced optical fiber communication systems. Topics include: optical signal characterization and spectral efficient optical modulation formats, high-speed signal transmission & multiplexing techniques, linear & nonlinear fiber effects and fiber transmission impairments, basic guided-wave optoelectronics and novel integrated optical devices (tunable lasers, planar lightwave circuits, silicon photonics), optical signal amplification, regeneration and performance monitoring techniques, coherent optical communications and enabling digital signal processing techniques, and examples of optical subsystems for optical networks.\n\nAdvisory: Knowledge of basic optical communication principles is required.",
+      "enrollment_requirement": "For all students in Engineering Faculty;Exclusion: IERG5040",
+      "course_attributes": "",
+      "academic_career": "Postgraduate - Research",
+      "grading_basis": "Graded",
+      "component": "Lecture",
+      "campus": "Main Campus",
+      "academic_group": "Div of Information Engineering",
+      "academic_org": "Div of Information Engineering",
+      "learning_outcomes": "Upon successful completion of the course, the students will have acquired the ability to:\n1. understand the detailed theories and design considerations of optical signals and high-speed optical communication\nsystems,\n2. understand the various key enabling technologies to enhance the capacity and functionality of high-speed optical\ntransmission systems,\n3. appreciate different kind of optical systems and networks in the practical deployment.",
+      "course_syllabus": "This course covers the design of advanced optical fiber communication systems. Topics include: optical signal characterization and spectral efficient optical modulation formats, high-speed signal transmission & multiplexing techniques, linear & nonlinear fiber effects and fiber transmission impairments, basic guided-wave optoelectronics and novel integrated optical devices (tunable lasers, planar lightwave circuits, silicon photonics), optical signal amplification, regeneration and performance monitoring techniques, coherent optical communications and enabling digital signal processing techniques, and examples of optical subsystems for optical networks. The course syllabus may be updated from year to year.",
+      "assessment_types": {
+        "Essays": "20",
+        "Essay test or exam": "40",
+        "Presentation": "40"
+      },
+      "feedback_evaluation": "Students are encouraged to give comments and make suggestions using the following channels:\n1. There are two course evaluations - one before the mid-term, and one at the end of the course. This is a formal channel for students to rate the teacher, the course, and the course tutors. Students can give specific comments or suggestions in addition to the numeric ratings.\n2. Students can provide feedbacks using informal channels, such as email, or simply by discussing with the tutors or the instructor directly.",
+      "required_readings": "1. G. P. Agrawal, Fiber-Optic Communication Systems (4th Edition), Wiley-Interscience, 2010.\n2. G. P. Agrawal, Lightwave Technology: Components and Devices, Wiley-Interscience, 2004.",
+      "recommended_readings": "1. G. P. Agrawal, Lightwave Technology: Telecommunication Systems, Wiley-Interscience, 2005.\n2. G. P. Agrawal, Nonlinear Fiber Optics (4th Edition), Academic Press, 2006.\n3. I. Kaminow, T. Koch, Optical Fiber Telecommunications III-A&B, Academic Press, 1997.\n4. I. Kaminow, T. Li, Optical Fiber Telecommunications IV-A&B, Academic Press, 2002.\n5. I. Kaminow, T. Li, and A. Willner, Optical Fiber Telecommunications V-A&B, Academic Press, 2008."
+    },
+    {
+      "subject": "ENGG",
       "course_code": "5402",
       "title": "Advanced Robotics",
       "credits": "3.00",
@@ -10174,7 +10317,7 @@
       "campus": "Main Campus",
       "academic_group": "Div of System Erg & Erg Mgt",
       "academic_org": "Div of System Erg & Erg Mgt",
-      "learning_outcomes": "At the completion of the course, students should have acquired the ability to\n\n1) formulate various classes of optimization problems (linear program, quadratic program, semidefinite program),",
+      "learning_outcomes": "At the completion of the course, students should have acquired the ability to\n\n1) formulate various classes of optimization problems (linear program, quadratic program, semidefinite program),\n\n2) derive optimality conditions of various optimization problems (conic optimization, general nonlinear optimization) and understand their implications,\n\n3) understand basic algorithmic approaches to optimization problems.",
       "course_syllabus": "Please refer to the course website.",
       "assessment_types": {
         "Essays": "60",
@@ -10182,7 +10325,7 @@
       },
       "feedback_evaluation": "Feedback from Students, Course Evaluation, External Examiners’ Reports",
       "required_readings": "As recommended by course teacher.",
-      "recommended_readings": "1) Ben-Tal, Nemirovski: Lectures on Modern Convex Optimization: Analysis, Algorithms, and Engineering Applications. SIAM, 2001.\n\n2) Boyd, Vandenberghe: Convex Optimization, Cambridge University Press, 2004."
+      "recommended_readings": "1) Ben-Tal, Nemirovski: Lectures on Modern Convex Optimization: Analysis, Algorithms, and Engineering Applications. SIAM, 2001.\n\n2) Boyd, Vandenberghe: Convex Optimization, Cambridge University Press, 2004.\n\n3) Luenberger, Ye: Linear and Nonlinear Programming (3rd Edition), Springer, 2008."
     },
     {
       "subject": "ENGG",

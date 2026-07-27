@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T15:32:17.833312+00:00",
+    "scraped_at": "2026-07-27T10:56:15.804631+00:00",
     "subject": "GENA",
-    "subject_title": "GE - New Asia College",
+    "subject_title": "General Education - New Asia College",
     "total_courses": 21,
     "scraper_version": "memory-safe-v2.0"
   },
@@ -1199,19 +1199,19 @@
               "meetings": [
                 {
                   "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Basic Med Sci Bldg Rm2",
+                  "location": "Wu Ho Man Yuen Bldg 504",
                   "instructor": "Staff",
                   "dates": "12/1, 19/1, 26/1, 2/2"
                 },
                 {
                   "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Basic Med Sci Bldg Rm2",
+                  "location": "Wu Ho Man Yuen Bldg 504",
                   "instructor": "Staff",
                   "dates": "16/2, 23/2, 2/3"
                 },
                 {
                   "time": "Tu 2:30PM - 5:15PM",
-                  "location": "Basic Med Sci Bldg Rm2",
+                  "location": "Wu Ho Man Yuen Bldg 504",
                   "instructor": "Staff",
                   "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
                 }
@@ -2407,7 +2407,7 @@
         "Participation": "15"
       },
       "feedback_evaluation": "1. Course and Teaching Evaluation Survey\n\n2. Internal Course Review",
-      "required_readings": "Zechenter, Elizabeth M. 1997. \"In the Name of Culture: Cultural Relativism and the Abuse of the Individual.\" Journal of Anthropological Research 53: 319-347.\n\nIndividual Belief and Behavior",
+      "required_readings": "Zechenter, Elizabeth M. 1997. \"In the Name of Culture: Cultural Relativism and the Abuse of the Individual.\" Journal of Anthropological Research 53: 319-347.\n\nIndividual Belief and Behavior\n\nJackson-Jacobs, Curtis. 2004. “Hard Drugs in a Soft Context: Managing Crack Use on a College Campus.” The Sociological Quarterly 45(4): 835-856.\n\nMartin, Patricia Y. and Robert A. Hummer. 1989. “Fraternities and Rape on Campus.” Gender and Society 3(4): 457-473.\n\nYip, A. K. T. 1997a. ‘Attacking the Attacker: Gay Christians Talk Back.’ British Journal of Sociology 48(1):113-127.\n\nMetraux, Daniel A. 1995. “Religious Terrorism in Japan: The Fatal Appeal of Aum Shrinrikyo.” Asian Survey 35(12):1140–54.\n\nGoffman, Erving. 1994. “The Moral Career of the Mental Patient.” In Patricia A. Alder and Peter Alder, eds., Constructions of Deviance: Social Power, Context, and Interaction, pp. 185-203. Belmont: Wadsworth Pub. Co.\n\nCassidy, Claire. 1991. “The Good Body: When Big is Better.” Medical Anthropology 13(3): 181-214. Social and World System\n\nLock, Margaret. 1990. “On Being Ethnic: The Politics of Identity Breaking and Making In Canada, or Nevra on Sunday.” Culture, Medicine and Psychiatry 14: 237-254.\n\nFarmer, Paul. 1990. “The Exotic and the Mundane: Human Immunodeficiency Virus in the Caribbean.” Human Nature 1(4): 415-445.\n\nOng, Aihwa. 1988. “The Production of Possession: Spirits and the Multinational Corporation in Malaysia.” American Ethnologist 15: 28-42.\n\nFriedman, Thomas L. 2007. “11/9 Versus 9/11.” In The World Is Flat: A Brief History of the Twenty-First Century, pp. 607-636. New York: Farrar, Straus and Giroux.",
       "recommended_readings": ""
     },
     {
@@ -2519,7 +2519,7 @@
                 {
                   "time": "Fr 2:30PM - 4:15PM",
                   "location": "Humanities Building 12",
-                  "instructor": "Professor PENG Peng",
+                  "instructor": "Staff",
                   "dates": "11/9, 18/9, 25/9, 2/10, 9/10, 16/10, 23/10, 30/10, 6/11, 13/11, 20/11, 27/11, 4/12"
                 }
               ],
@@ -2572,19 +2572,19 @@
               "meetings": [
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "T.C. Cheng Bldg C2",
+                  "location": "William M W Mong Eng Bldg 713",
                   "instructor": "Miss Aimee Catherine CHANG",
                   "dates": "14/1, 21/1, 28/1, 4/2"
                 },
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "T.C. Cheng Bldg C2",
+                  "location": "William M W Mong Eng Bldg 713",
                   "instructor": "Miss Aimee Catherine CHANG",
                   "dates": "18/2, 25/2, 4/3"
                 },
                 {
                   "time": "Th 10:30AM - 12:15PM",
-                  "location": "T.C. Cheng Bldg C2",
+                  "location": "William M W Mong Eng Bldg 713",
                   "instructor": "Miss Aimee Catherine CHANG",
                   "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
                 }

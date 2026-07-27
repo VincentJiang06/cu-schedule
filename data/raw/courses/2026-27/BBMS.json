@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T11:04:01.362109+00:00",
+    "scraped_at": "2026-07-27T04:29:57.398149+00:00",
     "subject": "BBMS",
-    "subject_title": "Biochemical & Biomedical Sci",
+    "subject_title": "Biochemical and Biomedical Sciences",
     "total_courses": 10,
     "scraper_version": "memory-safe-v2.0"
   },
@@ -195,7 +195,7 @@
               "availability": {
                 "capacity": "90",
                 "enrolled": "0",
-                "waitlist_capacity": "0",
+                "waitlist_capacity": "5",
                 "waitlist_total": "0",
                 "available_seats": "90",
                 "status": "Open"

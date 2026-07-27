@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T17:35:31.078304+00:00",
+    "scraped_at": "2026-07-27T13:56:36.335763+00:00",
     "subject": "MATH",
     "subject_title": "Mathematics",
     "total_courses": 81,
@@ -874,11 +874,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -894,11 +894,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -926,11 +926,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -952,11 +952,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -5416,7 +5416,7 @@
         }
       ],
       "description": "This course is intended to introduce the basics of the calculus of functions of several variables. Topics include: vectors, geometry of Euclidean spaces, curves, limits, partial derivatives, differentiability, chain rule, first and second derivative test, maximum and minimum, Taylor polynomials, Lagrange multipliers, implicit function theorem.\nAdvisory: MATH Majors should select not more than 5 MATH courses in a term.",
-      "enrollment_requirement": "Not for students who took MATH2018/2020/2028 or taking MATH2530 in the same term. Pre-requisite: [Option 1] MATH1010/1018 [Option 2] Grade B or above in MATH1510/1520. Check dept website for more options. Co-requisite MATH1030/1038/1050/1058/1090/1098.",
+      "enrollment_requirement": "Not for students who took MATH2018/2020/2028,IMSC2018,2028,2058,2068,2230 or taking MATH2530 in same term. Pre-requisite: [Option 1] MATH1010/1018. Check dept website for more options. Co-requisite MATH1030/1038/1050/1058/1090/1098/1630.",
       "course_attributes": "",
       "academic_career": "Undergraduate",
       "grading_basis": "Graded",
@@ -6049,11 +6049,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -6075,11 +6075,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -6101,11 +6101,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -6139,11 +6139,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -6165,11 +6165,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -6191,11 +6191,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "60",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "60",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -8832,40 +8832,40 @@
               "section": "--LEC (8316)",
               "meetings": [
                 {
-                  "time": "Tu 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT3",
-                  "instructor": "Professor AU Kwok Keung",
-                  "dates": "12/1, 19/1, 26/1, 2/2"
-                },
-                {
-                  "time": "Tu 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT3",
-                  "instructor": "Professor AU Kwok Keung",
-                  "dates": "16/2, 23/2, 2/3"
-                },
-                {
-                  "time": "Tu 10:30AM - 12:15PM",
-                  "location": "Lady Shaw Bldg LT3",
-                  "instructor": "Professor AU Kwok Keung",
-                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
-                },
-                {
-                  "time": "Th 11:30AM - 12:15PM",
+                  "time": "Th 11:30AM - 1:15PM",
                   "location": "Science Centre LG23",
                   "instructor": "Professor AU Kwok Keung",
                   "dates": "14/1, 21/1, 28/1, 4/2"
                 },
                 {
-                  "time": "Th 11:30AM - 12:15PM",
+                  "time": "Th 11:30AM - 1:15PM",
                   "location": "Science Centre LG23",
                   "instructor": "Professor AU Kwok Keung",
                   "dates": "18/2, 25/2, 4/3"
                 },
                 {
-                  "time": "Th 11:30AM - 12:15PM",
+                  "time": "Th 11:30AM - 1:15PM",
                   "location": "Science Centre LG23",
                   "instructor": "Professor AU Kwok Keung",
                   "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
+                },
+                {
+                  "time": "Tu 10:30AM - 11:15AM",
+                  "location": "Lady Shaw Bldg LT3",
+                  "instructor": "Professor AU Kwok Keung",
+                  "dates": "12/1, 19/1, 26/1, 2/2"
+                },
+                {
+                  "time": "Tu 10:30AM - 11:15AM",
+                  "location": "Lady Shaw Bldg LT3",
+                  "instructor": "Professor AU Kwok Keung",
+                  "dates": "16/2, 23/2, 2/3"
+                },
+                {
+                  "time": "Tu 10:30AM - 11:15AM",
+                  "location": "Lady Shaw Bldg LT3",
+                  "instructor": "Professor AU Kwok Keung",
+                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
                 }
               ],
               "availability": {
@@ -8882,22 +8882,22 @@
               "section": "-T01-TUT (8349)",
               "meetings": [
                 {
-                  "time": "Th 12:30PM - 1:15PM",
-                  "location": "Science Centre LG23",
+                  "time": "Tu 11:30AM - 12:15PM",
+                  "location": "Lady Shaw Bldg LT3",
                   "instructor": "Professor AU Kwok Keung",
-                  "dates": "14/1, 21/1, 28/1, 4/2"
+                  "dates": "12/1, 19/1, 26/1, 2/2"
                 },
                 {
-                  "time": "Th 12:30PM - 1:15PM",
-                  "location": "Science Centre LG23",
+                  "time": "Tu 11:30AM - 12:15PM",
+                  "location": "Lady Shaw Bldg LT3",
                   "instructor": "Professor AU Kwok Keung",
-                  "dates": "18/2, 25/2, 4/3"
+                  "dates": "16/2, 23/2, 2/3"
                 },
                 {
-                  "time": "Th 12:30PM - 1:15PM",
-                  "location": "Science Centre LG23",
+                  "time": "Tu 11:30AM - 12:15PM",
+                  "location": "Lady Shaw Bldg LT3",
                   "instructor": "Professor AU Kwok Keung",
-                  "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
+                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
                 }
               ],
               "availability": {
@@ -12544,13 +12544,13 @@
                 {
                   "time": "Mo 9:30AM - 12:15PM",
                   "location": "Lady Shaw Bldg 222",
-                  "instructor": "Staff",
+                  "instructor": "Dr. ZOU Liangchen",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 9:30AM - 12:15PM",
                   "location": "Lady Shaw Bldg 222",
-                  "instructor": "Staff",
+                  "instructor": "Dr. ZOU Liangchen",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],

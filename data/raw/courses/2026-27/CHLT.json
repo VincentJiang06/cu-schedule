@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T12:12:36.641743+00:00",
+    "scraped_at": "2026-07-27T06:06:37.974639+00:00",
     "subject": "CHLT",
     "subject_title": "Chinese Proficiency Courses",
     "total_courses": 13,
@@ -188,12 +188,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -448,12 +448,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -630,12 +630,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -850,12 +850,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -1030,12 +1030,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -1250,12 +1250,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -1510,12 +1510,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -1630,12 +1630,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -1790,12 +1790,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             }
@@ -2024,12 +2024,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -2138,12 +2138,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -2394,12 +2394,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -2650,12 +2650,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -2874,12 +2874,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -3258,12 +3258,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -3600,12 +3600,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -4056,12 +4056,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -4472,12 +4472,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             }
@@ -4687,12 +4687,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -4921,12 +4921,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -4954,7 +4954,7 @@
                 "available_seats": "25",
                 "status": "Open"
               },
-              "class_attributes": "Cantonese only"
+              "class_attributes": "Putonghua only"
             },
             {
               "section": "CB-LEC (7284)",
@@ -4981,32 +4981,6 @@
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
-            },
-            {
-              "section": "CC-LEC (7282)",
-              "meetings": [
-                {
-                  "time": "Mo 8:30AM - 10:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 503",
-                  "instructor": "Dr. CAI Xuanhui",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 8:30AM - 10:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 503",
-                  "instructor": "Dr. CAI Xuanhui",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
-                }
-              ],
-              "availability": {
-                "capacity": "25",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
-              },
-              "class_attributes": "Putonghua only"
             },
             {
               "section": "CD-LEC (4780)",
@@ -5103,12 +5077,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -5303,12 +5277,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -5503,12 +5477,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -5518,13 +5492,13 @@
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Hui Yeung Shing Bldg G03",
-                  "instructor": "Dr. NG Ting Yan",
+                  "instructor": "Dr. LAM Chi Chiu",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Hui Yeung Shing Bldg G03",
-                  "instructor": "Dr. NG Ting Yan",
+                  "instructor": "Dr. LAM Chi Chiu",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
@@ -5544,13 +5518,13 @@
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Sino Building 239",
-                  "instructor": "Dr. HUNG Yeuk Chun",
+                  "instructor": "Dr. WONG Mei Yan",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Sino Building 239",
-                  "instructor": "Dr. HUNG Yeuk Chun",
+                  "instructor": "Dr. WONG Mei Yan",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
@@ -5570,13 +5544,13 @@
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Wu Ho Man Yuen Bldg 405",
-                  "instructor": "Dr. KWOK Kim Fung",
+                  "instructor": "Dr. WONG Kam Pang",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 2:30PM - 4:15PM",
                   "location": "Wu Ho Man Yuen Bldg 405",
-                  "instructor": "Dr. KWOK Kim Fung",
+                  "instructor": "Dr. WONG Kam Pang",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
@@ -5669,110 +5643,6 @@
               "class_attributes": "Putonghua only"
             },
             {
-              "section": "FG-LEC (5621)",
-              "meetings": [
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "T.C. Cheng Bldg 206",
-                  "instructor": "Dr. YIM Chi Sing",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "T.C. Cheng Bldg 206",
-                  "instructor": "Dr. YIM Chi Sing",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
-                }
-              ],
-              "availability": {
-                "capacity": "25",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
-              },
-              "class_attributes": "Cantonese only"
-            },
-            {
-              "section": "FH-LEC (4722)",
-              "meetings": [
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Tsang Shiu Tim Bldg 102",
-                  "instructor": "Dr. LAM Chi Chiu",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Tsang Shiu Tim Bldg 102",
-                  "instructor": "Dr. LAM Chi Chiu",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
-                }
-              ],
-              "availability": {
-                "capacity": "25",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
-              },
-              "class_attributes": "Cantonese only"
-            },
-            {
-              "section": "FJ-LEC (4721)",
-              "meetings": [
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Y.C. Liang Hall 101",
-                  "instructor": "Dr. WONG Kam Pang",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Y.C. Liang Hall 101",
-                  "instructor": "Dr. WONG Kam Pang",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
-                }
-              ],
-              "availability": {
-                "capacity": "25",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
-              },
-              "class_attributes": "Cantonese only"
-            },
-            {
-              "section": "FK-LEC (4720)",
-              "meetings": [
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "T.C. Cheng Bldg 207",
-                  "instructor": "Dr. WONG Mei Yan",
-                  "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
-                },
-                {
-                  "time": "Mo 2:30PM - 4:15PM",
-                  "location": "T.C. Cheng Bldg 207",
-                  "instructor": "Dr. WONG Mei Yan",
-                  "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
-                }
-              ],
-              "availability": {
-                "capacity": "25",
-                "enrolled": "0",
-                "waitlist_capacity": "0",
-                "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
-              },
-              "class_attributes": "Putonghua only"
-            },
-            {
               "section": "FY-LEC (5206)",
               "meetings": [
                 {
@@ -5789,12 +5659,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -5929,12 +5799,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -6147,18 +6017,44 @@
               "class_attributes": "Cantonese only"
             },
             {
-              "section": "HY-LEC (5178)",
+              "section": "HJ-LEC (10066)",
               "meetings": [
                 {
                   "time": "Th 8:30AM - 10:15AM",
                   "location": "Lee Shau Kee Building 301",
-                  "instructor": "Staff",
+                  "instructor": "Dr. CAI Xuanhui",
                   "dates": "10/9, 17/9, 24/9"
                 },
                 {
                   "time": "Th 8:30AM - 10:15AM",
                   "location": "Lee Shau Kee Building 301",
-                  "instructor": "Staff",
+                  "instructor": "Dr. CAI Xuanhui",
+                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
+                }
+              ],
+              "availability": {
+                "capacity": "25",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "25",
+                "status": "Open"
+              },
+              "class_attributes": "Putonghua only"
+            },
+            {
+              "section": "HK-LEC (10067)",
+              "meetings": [
+                {
+                  "time": "Th 8:30AM - 10:15AM",
+                  "location": "Esther Lee Bldg 306",
+                  "instructor": "Ms. LEUNG Wai Sze",
+                  "dates": "10/9, 17/9, 24/9"
+                },
+                {
+                  "time": "Th 8:30AM - 10:15AM",
+                  "location": "Esther Lee Bldg 306",
+                  "instructor": "Ms. LEUNG Wai Sze",
                   "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
                 }
               ],
@@ -6171,6 +6067,32 @@
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
+            },
+            {
+              "section": "HL-LEC (10068)",
+              "meetings": [
+                {
+                  "time": "Th 8:30AM - 10:15AM",
+                  "location": "Esther Lee Bldg 308",
+                  "instructor": "Miss WONG Ling Ling",
+                  "dates": "10/9, 17/9, 24/9"
+                },
+                {
+                  "time": "Th 8:30AM - 10:15AM",
+                  "location": "Esther Lee Bldg 308",
+                  "instructor": "Miss WONG Ling Ling",
+                  "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
+                }
+              ],
+              "availability": {
+                "capacity": "25",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "25",
+                "status": "Open"
+              },
+              "class_attributes": "Putonghua only"
             },
             {
               "section": "JA-LEC (5059)",
@@ -6243,12 +6165,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             }
@@ -6409,12 +6331,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -6665,12 +6587,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -6921,12 +6843,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -7337,12 +7259,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -7753,12 +7675,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -8019,12 +7941,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -8563,12 +8485,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -8659,12 +8581,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             },
@@ -8851,12 +8773,12 @@
                 }
               ],
               "availability": {
-                "capacity": "25",
+                "capacity": "0",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "25",
-                "status": "Open"
+                "available_seats": "0",
+                "status": "Closed"
               },
               "class_attributes": "Cantonese only"
             }
@@ -9531,11 +9453,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "30",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "30",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -9595,11 +9517,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "35",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "35",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -9665,11 +9587,11 @@
                 }
               ],
               "availability": {
-                "capacity": "50",
+                "capacity": "33",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "50",
+                "available_seats": "33",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"

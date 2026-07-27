@@ -4,12 +4,12 @@
     {
       "name": "2026-27 Term 1",
       "slug": "2026-27-term-1",
-      "courseCount": 3069
+      "courseCount": 3079
     },
     {
       "name": "2026-27 Term 2",
       "slug": "2026-27-term-2",
-      "courseCount": 3225
+      "courseCount": 3241
     },
     {
       "name": "2026-27 Summer Session",
@@ -24,7 +24,12 @@
     {
       "name": "2026-27 Term 3",
       "slug": "2026-27-term-3",
-      "courseCount": 1
+      "courseCount": 164
+    },
+    {
+      "name": "2026-27 Term 4",
+      "slug": "2026-27-term-4",
+      "courseCount": 21
     }
   ]
 }

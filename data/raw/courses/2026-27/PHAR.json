@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T19:38:02.101375+00:00",
+    "scraped_at": "2026-07-27T16:52:17.825046+00:00",
     "subject": "PHAR",
     "subject_title": "Pharmacy",
     "total_courses": 70,
@@ -4127,11 +4127,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "43",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "49",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4344,11 +4344,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "43",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "49",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4426,11 +4426,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "43",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "49",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4502,11 +4502,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "43",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "49",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4602,11 +4602,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "43",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "49",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4660,11 +4660,11 @@
                 }
               ],
               "availability": {
-                "capacity": "92",
+                "capacity": "100",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "92",
+                "available_seats": "100",
                 "status": "Open"
               },
               "class_attributes": "English only"

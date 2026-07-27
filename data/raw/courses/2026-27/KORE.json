@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T16:44:41.748892+00:00",
+    "scraped_at": "2026-07-27T12:43:28.577513+00:00",
     "subject": "KORE",
     "subject_title": "Korean",
     "total_courses": 9,
@@ -1367,28 +1367,22 @@
               "section": "BC01-CLW (7014)",
               "meetings": [
                 {
-                  "time": "Fr 8:30AM - 11:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 405",
+                  "time": "Tu 9:30AM - 12:15PM",
+                  "location": "T.C. Cheng Bldg 208",
                   "instructor": "Ms KWON Hyung Gi",
-                  "dates": "15/1, 22/1, 29/1"
+                  "dates": "12/1, 19/1, 26/1, 2/2"
                 },
                 {
-                  "time": "Fr 8:30AM - 11:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 405",
+                  "time": "Tu 9:30AM - 12:15PM",
+                  "location": "T.C. Cheng Bldg 208",
                   "instructor": "Ms KWON Hyung Gi",
-                  "dates": "12/2, 19/2, 26/2, 5/3"
+                  "dates": "16/2, 23/2, 2/3"
                 },
                 {
-                  "time": "Fr 8:30AM - 11:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 405",
+                  "time": "Tu 9:30AM - 12:15PM",
+                  "location": "T.C. Cheng Bldg 208",
                   "instructor": "Ms KWON Hyung Gi",
-                  "dates": "19/3"
-                },
-                {
-                  "time": "Fr 8:30AM - 11:15AM",
-                  "location": "Wu Ho Man Yuen Bldg 405",
-                  "instructor": "Ms KWON Hyung Gi",
-                  "dates": "2/4, 9/4, 16/4, 23/4"
+                  "dates": "16/3, 23/3, 30/3, 6/4, 13/4, 20/4"
                 }
               ],
               "availability": {
@@ -1484,7 +1478,7 @@
       },
       "feedback_evaluation": "Our language programme highly values students’ feedback and comments and is happy to use them for reflection on our teaching and improvement. Students are very welcome to provide comments and feedback on the course any time to their course teacher or the course level coordinator through email or in personal conversation. In addition, students’ feedbacks will be collected in the middle of the term through an open-end questionnaire and the teacher will discuss the feedbacks in class and make improvements if necessary. The course will also follow the university’s course evaluation exercise at the end of the term, and students’ feedbacks will be used for future course planning and teaching.",
       "required_readings": "There is no particular textbook for this course. Handouts will be given by the teacher.",
-      "recommended_readings": "외국인을 위한 한국어 발음 47 -1, Language Education Institute, Seoul National University, Korea Language Plus, 2009.\n외국인을 위한 한국어 발음 47 -2, Language Education Institute, Seoul National University, Korea Language Plus, 2009.\n서울대 한국어 1A – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 1B – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 2A – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013."
+      "recommended_readings": "외국인을 위한 한국어 발음 47 -1, Language Education Institute, Seoul National University, Korea Language Plus, 2009.\n외국인을 위한 한국어 발음 47 -2, Language Education Institute, Seoul National University, Korea Language Plus, 2009.\n서울대 한국어 1A – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 1B – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 2A – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 2B – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2013.\n서울대 한국어 3A – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2015.\n서울대 한국어 3B – Student’s book, Language Education Institute, Seoul National University, Two Ponds, 2015.\nLee, Iksop and Ramsey, S. Robert. (2001). The Korean Language. New York: State University of New York Press.\n\nIT Resources:\n- All the teaching materials and homework will be uploaded on Blackboard:\nhttps://blackboard.cuhk.edu.hk/\n- 국립국어원 표준국어대사전:\nhttp://stdweb2.korean.go.kr/main.jsp"
     },
     {
       "subject": "KORE",

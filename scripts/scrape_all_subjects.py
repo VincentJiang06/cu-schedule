@@ -9,6 +9,7 @@ Usage:
 """
 
 import logging
+import os
 import sys
 
 from cuhk_scraper import CuhkScraper
@@ -33,6 +34,10 @@ def main():
 
         config = ScrapingConfig.for_production()
         # config.save_debug_files = True  # Enable debug HTML saving for investigation
+        term_prefix = os.environ.get("CUS_TERM_PREFIX")
+        if term_prefix:
+            config.term_prefix = term_prefix
+            logger.info(f"Term filter active: only terms starting with '{term_prefix}'")
         scraper = CuhkScraper(config)
 
         # Get subjects (from args or live website)

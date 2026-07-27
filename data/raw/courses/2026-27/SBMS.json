@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T20:30:50.954264+00:00",
+    "scraped_at": "2026-07-27T17:51:24.370686+00:00",
     "subject": "SBMS",
     "subject_title": "Biomedical Sciences",
     "total_courses": 46,
@@ -602,19 +602,19 @@
                 {
                   "time": "Th 2:30PM - 4:15PM",
                   "location": "Science Centre L5",
-                  "instructor": "Professor WANG Dan",
+                  "instructor": "Dr. ZHOU Yuhuan",
                   "dates": "14/1, 21/1, 28/1, 4/2"
                 },
                 {
                   "time": "Th 2:30PM - 4:15PM",
                   "location": "Science Centre L5",
-                  "instructor": "Professor WANG Dan",
+                  "instructor": "Dr. ZHOU Yuhuan",
                   "dates": "18/2, 25/2, 4/3"
                 },
                 {
                   "time": "Th 2:30PM - 4:15PM",
                   "location": "Science Centre L5",
-                  "instructor": "Professor WANG Dan",
+                  "instructor": "Dr. ZHOU Yuhuan",
                   "dates": "18/3, 25/3, 1/4, 8/4, 15/4, 22/4"
                 }
               ],
@@ -3401,10 +3401,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "38",
+                "enrolled": "36",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "42",
+                "available_seats": "44",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3421,10 +3421,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "38",
+                "enrolled": "36",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "42",
+                "available_seats": "44",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3725,10 +3725,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "39",
+                "enrolled": "37",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "41",
+                "available_seats": "43",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3745,10 +3745,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "39",
+                "enrolled": "37",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "41",
+                "available_seats": "43",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3794,10 +3794,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "40",
+                "enrolled": "38",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "40",
+                "available_seats": "42",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3814,10 +3814,10 @@
               ],
               "availability": {
                 "capacity": "80",
-                "enrolled": "40",
+                "enrolled": "38",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "40",
+                "available_seats": "42",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3863,10 +3863,10 @@
               ],
               "availability": {
                 "capacity": "160",
-                "enrolled": "152",
+                "enrolled": "150",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "8",
+                "available_seats": "10",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -3991,10 +3991,10 @@
               ],
               "availability": {
                 "capacity": "160",
-                "enrolled": "104",
+                "enrolled": "102",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "56",
+                "available_seats": "58",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4017,10 +4017,10 @@
               ],
               "availability": {
                 "capacity": "160",
-                "enrolled": "105",
+                "enrolled": "103",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "55",
+                "available_seats": "57",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -4066,10 +4066,10 @@
               ],
               "availability": {
                 "capacity": "160",
-                "enrolled": "58",
+                "enrolled": "56",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "102",
+                "available_seats": "104",
                 "status": "Open"
               },
               "class_attributes": "English only"

@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T15:29:12.356183+00:00",
+    "scraped_at": "2026-07-27T10:51:41.236596+00:00",
     "subject": "GECW",
-    "subject_title": "GE - CW Chu College",
+    "subject_title": "General Education - CW Chu College",
     "total_courses": 8,
     "scraper_version": "memory-safe-v2.0"
   },
@@ -147,8 +147,8 @@
       "campus": "Main Campus",
       "academic_group": "CW Chu College",
       "academic_org": "CW Chu College",
-      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Extended orientation (required)",
-      "course_syllabus": "(1) Extended orientation (required)\n\n1a. The extended orientation is compulsory for all CW Chu College freshmen.",
+      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Extended orientation (required)\n\n1a. It aims to help students of CW Chu College to make adjustments to university life smoothly and become part of the College community.\n\n1b. It is expected that through a series of designed College talks, workshops and activities, freshmen will develop a positive attitude towards university life.\n\n(2) Communal dining and high table dinners (required)\n\n2a. Provide the occasions for interaction among students and also with College teachers.\n\n2b. Students may take these opportunities to share news/ interests and exchange ideas with other College members which may help enhance their bonding and sense of belongings to the College.\n\n2c. Students will be encouraged to express their views/ ideas/ opinions through the casual sharing sessions held at the communal dinners.\n\n2d. With the guidance from College teachers, students will learn proper presentation skills and social manners via these College gatherings.\n\n2e. Guest speakers from all walks of life will be invited to deliver short dinner talks which will help widen students’ horizons and range of experiences.\n\n2f. Students will be able to meet distinguished persons/ leading figures from different sectors of the community who will share their wisdom and insights through high table dinners.\n\n(3) Service (voluntary)\n\n3a. In line with the Vision Statement of the College to be ‘involved’, students will be encouraged to participate in social and community services that reflect their interests and engage their passions; they may also make use of their own skills and aptitudes in the service of others.\n\n3b. Through such service opportunities, students will learn and grow, and develop responsibility and leadership.",
+      "course_syllabus": "(1) Extended orientation (required)\n\n1a. The extended orientation is compulsory for all CW Chu College freshmen.\n\n1b. It is planned to be organized in the first weeks of the first term, right after the College’s student orientation camp.\n\n1c. It will focus on the non-academic elements of adjustments to university life, which may cover orientation talks/ workshops/ activities with topics on stress/ time management, codes of conduct, disciplinary issues, plagiarism etc.\n\n1d. The Student Affairs Committee of CW Chu College will work out a detailed plan and co-ordinate activities for the extended orientation.\n\n1e. Extended orientation is for first-year students only.\n\n(2) Communal dining and high table dinners (required)\n\n2a. The College will organize communal dining three times a week, usually on every Tuesday, Wednesday and Thursday.\n\n2b. There will be short after-dinner presentations on selected nights by invited speakers.\n\n2c. Casual sharing sessions initiated by students will be organized with communal dinners. Students (either on individual or group basis) may take these opportunities to share their field trip/ exchange/ service-learning experiences with other College members; amusements/ leisure activities may also be arranged in these sessions.\n\n2d. High table dinners will be arranged several times a year.\n\n2e. Students must enrol in the College meal plan for communal dining.\n\n2f. The requirement of communal dining will only apply to those in residence, but students who are not in residence (e.g., MBChB students after the fourth year) may participate in some communal dining on a voluntary basis.\n\n(3) Service (voluntary)\n\n3a. Students of CW Chu College will be encouraged to take part in a range of social and civic service activities, on a voluntary basis. Some of these activities may be organized by the College; others may be organized by various units within CUHK/ partner organizations. Such service per se is not credit earning.\n\n3b. Students may consider combining the service activities with Senior Seminar. If so, they need to plan ahead of time, and submit to the College GE Office a preliminary project proposal for Senior Seminar before the service activities take place.\n\n3c. Detailed arrangements on social and community services will be worked out by the Mentorship and Internship Committee of CW Chu College in due course.",
       "assessment_types": {},
       "feedback_evaluation": "Internal review via questionnaires",
       "required_readings": "None.",
@@ -407,7 +407,7 @@
         "Participation": "20",
         "Short answer test or exam": "40"
       },
-      "feedback_evaluation": "(1) Course and Teaching Evaluation Survey\n\n(2) Internal Course Review",
+      "feedback_evaluation": "(1) Course and Teaching Evaluation Survey\n\n(2) Internal Course Review\n\n(3) Others: An informal and optional session will be organized after the end of term, for an overall wrap-up, discussion and feedback.",
       "required_readings": "Required reading\nUniversity and Society, Six Lectures for GECW1010\n(Total of around 140 pages)\n\nFor details of the required reading, please refer to the course materials provided by the College.\n\nRecommended reading\nSee bibliography in required reading",
       "recommended_readings": ""
     },
@@ -503,8 +503,8 @@
       "campus": "Main Campus",
       "academic_group": "CW Chu College",
       "academic_org": "CW Chu College",
-      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Communal dining and high table dinners (required)",
-      "course_syllabus": "1) Communal dining and high table dinners (required)\n\n1a. The College will organize communal dining three times a week, usually on every Tuesday, Wednesday and Thursday.",
+      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Communal dining and high table dinners (required)\n\n1a. Provide the occasions for interaction among students and also with College teachers.\n\n1b. Students may take these opportunities to share news/ interests and exchange ideas with other College members which may help enhance their bonding and sense of belongings to the College.\n\n1c. Students will be encouraged to express their views/ ideas/ opinions through the casual sharing sessions held at the communal dinners.\n\n1d. With the guidance from College teachers, students will learn proper presentation skills and social manners via these College gatherings.\n\n1e. Guest speakers from all walks of life will be invited to deliver short dinner talks which will help widen students’ horizons and range of experiences.\n\n1f. Students will be able to meet distinguished persons/ leading figures from different sectors of the community who will share their wisdom and insights through high table dinners.\n\n(2) Service (voluntary)\n\n2a. In line with the Vision Statement of the College to be ‘involved’, students will be encouraged to participate in social and community services that reflect their interests and engage their passions; they may also make use of their own skills and aptitudes in the service of others.\n\n2b. Through such service opportunities, students will learn and grow, and develop responsibility and leadership.",
+      "course_syllabus": "1) Communal dining and high table dinners (required)\n\n1a. The College will organize communal dining three times a week, usually on every Tuesday, Wednesday and Thursday.\n\n1b. There will be short after-dinner presentations on selected nights by invited speakers.\n\n1c. Casual sharing sessions initiated by students will be organized with communal dinners. Students (either on individual or group basis) may take these opportunities to share their field trip/ exchange/ service-learning experiences with other College members; amusements/ leisure activities may also be arranged in these sessions.\n\n1d. High table dinners will be arranged several times a year.\n\n1e. Students must enrol in the College meal plan for communal dining.\n\n1f. The requirement of communal dining will only apply to those in residence, but students who are not in residence (e.g., MBChB students after the fourth year) may participate in some communal dining on a voluntary basis.\n\n(2) Service (voluntary)\n\n2a. Students of CW Chu College will be encouraged to take part in a range of social and civic service activities, on a voluntary basis. Some of these activities may be organized by the College; others may be organized by various units within CUHK/ partner organizations. Such service per se is not credit earning.\n\n2b. Students may consider combining the service activities with Senior Seminar. If so, they need to plan ahead of time, and submit to the College GE Office a preliminary project proposal for Senior Seminar before the service activities take place.\n\n2c. Detailed arrangements on social and community services will be worked out by the Mentorship and Internship Committee of CW Chu College in due course.",
       "assessment_types": {},
       "feedback_evaluation": "Internal review via questionnaires",
       "required_readings": "None",
@@ -602,8 +602,8 @@
       "campus": "Main Campus",
       "academic_group": "CW Chu College",
       "academic_org": "CW Chu College",
-      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Communal dining and high table dinners (required)",
-      "course_syllabus": "1) Communal dining and high table dinners (required)\n\n1a. The College will organize communal dining three times a week, usually on every Tuesday, Wednesday and Thursday.",
+      "learning_outcomes": "The expected learning outcomes of the non-credit bearing components of the General Education Programme at CW Chu College are as follows:\n\n(1) Communal dining and high table dinners (required)\n\n1a. Provide the occasions for interaction among students and also with College teachers.\n\n1b. Students may take these opportunities to share news/ interests and exchange ideas with other College members which may help enhance their bonding and sense of belongings to the College.\n\n1c. Students will be encouraged to express their views/ ideas/ opinions through the casual sharing sessions held at the communal dinners.\n\n1d. With the guidance from College teachers, students will learn proper presentation skills and social manners via these College gatherings.\n\n1e. Guest speakers from all walks of life will be invited to deliver short dinner talks which will help widen students’ horizons and range of experiences.\n\n1f. Students will be able to meet distinguished persons/ leading figures from different sectors of the community who will share their wisdom and insights through high table dinners.\n\n(2) Service (voluntary)\n\n2a. In line with the Vision Statement of the College to be ‘involved’, students will be encouraged to participate in social and community services that reflect their interests and engage their passions; they may also make use of their own skills and aptitudes in the service of others.\n\n2b. Through such service opportunities, students will learn and grow, and develop responsibility and leadership.",
+      "course_syllabus": "1) Communal dining and high table dinners (required)\n\n1a. The College will organize communal dining three times a week, usually on every Tuesday, Wednesday and Thursday.\n\n1b. There will be short after-dinner presentations on selected nights by invited speakers.\n\n1c. Casual sharing sessions initiated by students will be organized with communal dinners. Students (either on individual or group basis) may take these opportunities to share their field trip/ exchange/ service-learning experiences with other College members; amusements/ leisure activities may also be arranged in these sessions.\n\n1d. High table dinners will be arranged several times a year.\n\n1e. Students must enrol in the College meal plan for communal dining.\n\n1f. The requirement of communal dining will only apply to those in residence, but students who are not in residence (e.g., MBChB students after the fourth year) may participate in some communal dining on a voluntary basis.\n\n(2) Service (voluntary)\n\n2a. Students of CW Chu College will be encouraged to take part in a range of social and civic service activities, on a voluntary basis. Some of these activities may be organized by the College; others may be organized by various units within CUHK/ partner organizations. Such service per se is not credit earning.\n\n2b. Students may consider combining the service activities with Senior Seminar. If so, they need to plan ahead of time, and submit to the College GE Office a preliminary project proposal for Senior Seminar before the service activities take place.\n\n2c. Detailed arrangements on social and community services will be worked out by the Mentorship and Internship Committee of CW Chu College in due course.",
       "assessment_types": {},
       "feedback_evaluation": "Internal review via questionnaires",
       "required_readings": "None",
@@ -725,7 +725,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "26/10/2026 - 09/11/2026"
                 }
               ],
               "availability": {
@@ -745,7 +745,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Dr. CHEUNG Ho Yan Yannie, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "26/10/2026 - 09/11/2026"
                 }
               ],
               "availability": {
@@ -825,7 +825,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor Kenneth YOUNG, \nProfessor WONG Suk Ying Veronica",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -845,7 +845,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Dr. CHOI Sze Hang, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -865,7 +865,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor CHEUNG Chi Kwan Vincent, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -885,7 +885,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor KO Ho, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -905,7 +905,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor FUNG Hoi Lam Helene, \nProfessor Kenneth YOUNG, \nProfessor ZHAO Jingjing",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -925,7 +925,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Dr. HUANG Yu, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -945,7 +945,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor CHAIR Sek Ying, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -965,7 +965,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor Kenneth YOUNG, \nProfessor TSUI Tsz Ki Martin",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -985,7 +985,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Professor GU Shen, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {
@@ -1005,7 +1005,7 @@
                   "time": "TBA",
                   "location": "TBA",
                   "instructor": "Dr. LAI Yu Hang, \nProfessor Kenneth YOUNG",
-                  "dates": "19/10/2026 - 02/11/2026"
+                  "dates": "07/09/2026 - 30/11/2026"
                 }
               ],
               "availability": {

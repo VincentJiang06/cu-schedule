@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T19:58:24.254307+00:00",
+    "scraped_at": "2026-07-27T17:14:41.305123+00:00",
     "subject": "PHPC",
     "subject_title": "Public Health",
     "total_courses": 35,
@@ -867,11 +867,11 @@
                 }
               ],
               "availability": {
-                "capacity": "118",
+                "capacity": "128",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "118",
+                "available_seats": "128",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -967,7 +967,7 @@
     {
       "subject": "PHPC",
       "course_code": "2019",
-      "title": "Practical Skills in Literature Search and Review",
+      "title": "Practical Skills in Literature Search and Ethical Use of AI",
       "credits": "1.00",
       "terms": [
         {

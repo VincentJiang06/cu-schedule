@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T14:52:00.535328+00:00",
+    "scraped_at": "2026-07-27T09:53:54.831289+00:00",
     "subject": "ESTR",
     "subject_title": "Courses for ELITE Stream",
     "total_courses": 30,
@@ -1955,7 +1955,7 @@
         }
       ],
       "description": "The course covers the following two related topics.\nDiscrete Structures: Graphs, Combinatorics - sums and asymptotics, recurrences, counting\nProbability: Random Variables and Probability density functions, conditional probability, independence, expectations, Markov and Chebychev inequalities, laws of large numbers, Random Walks, basic Markov Chains.",
-      "enrollment_requirement": "Pre-requisite: MATH1050. Not for students who have taken CSCI2110, ENGG2430, ENGG2440, ENGG2450, ENGG2460, ENGG2470, ENGG2760, ESTR2002, ESTR2004, ESTR2005, ESTR2010, ESTR2012, ESTR2018, ESTR2308, IERG2470, MATH3280 or MIEG2440.",
+      "enrollment_requirement": "Pre-requisite: MATH1025/1028 and MATH1090/1098 \nNot for students who have taken CSCI2110, ENGG2430, ENGG2440, ENGG2450, ENGG2460, ENGG2470, ENGG2760, ESTR2002, ESTR2004, ESTR2005, ESTR2010, ESTR2012, ESTR2018, ESTR2308, IERG2470, MATH3280 or MIEG2440.",
       "course_attributes": "",
       "academic_career": "Undergraduate",
       "grading_basis": "Graded",
@@ -2437,13 +2437,13 @@
                   "dates": "8/9, 15/9, 22/9, 29/9, 6/10, 13/10, 20/10, 27/10, 3/11, 10/11, 17/11, 24/11, 1/12"
                 },
                 {
-                  "time": "Th 11:30AM - 1:15PM",
+                  "time": "Th 11:30AM - 12:15PM",
                   "location": "Science Centre L1",
                   "instructor": "Professor DOU Qi",
                   "dates": "10/9, 17/9, 24/9"
                 },
                 {
-                  "time": "Th 11:30AM - 1:15PM",
+                  "time": "Th 11:30AM - 12:15PM",
                   "location": "Science Centre L1",
                   "instructor": "Professor DOU Qi",
                   "dates": "8/10, 15/10, 22/10, 29/10, 5/11, 12/11, 19/11, 26/11, 3/12"
@@ -3349,19 +3349,25 @@
                   "time": "Fr 9:30AM - 11:15AM",
                   "location": "Basic Med Sci Bldg G18",
                   "instructor": "Professor LAU Wing Cheong",
-                  "dates": "15/1, 22/1, 29/1, 5/2"
+                  "dates": "15/1, 22/1, 29/1"
                 },
                 {
                   "time": "Fr 9:30AM - 11:15AM",
                   "location": "Basic Med Sci Bldg G18",
                   "instructor": "Professor LAU Wing Cheong",
-                  "dates": "19/2, 26/2, 5/3"
+                  "dates": "12/2, 19/2, 26/2, 5/3"
                 },
                 {
                   "time": "Fr 9:30AM - 11:15AM",
                   "location": "Basic Med Sci Bldg G18",
                   "instructor": "Professor LAU Wing Cheong",
-                  "dates": "19/3, 26/3, 2/4, 9/4, 16/4, 23/4"
+                  "dates": "2/4, 9/4, 16/4, 23/4"
+                },
+                {
+                  "time": "Fr 9:30AM - 11:15AM",
+                  "location": "Basic Med Sci Bldg G18",
+                  "instructor": "Professor LAU Wing Cheong",
+                  "dates": "19/3"
                 }
               ],
               "availability": {

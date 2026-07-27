@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T21:03:27.344101+00:00",
+    "scraped_at": "2026-07-27T18:27:09.133627+00:00",
     "subject": "SPED",
-    "subject_title": "Sports Science & Physical Educ",
+    "subject_title": "Sports Science & Physical Education",
     "total_courses": 44,
     "scraper_version": "memory-safe-v2.0"
   },
@@ -679,11 +679,11 @@
                 }
               ],
               "availability": {
-                "capacity": "15",
+                "capacity": "16",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "15",
+                "available_seats": "16",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -705,11 +705,11 @@
                 }
               ],
               "availability": {
-                "capacity": "15",
+                "capacity": "16",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "15",
+                "available_seats": "16",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -976,11 +976,11 @@
                 }
               ],
               "availability": {
-                "capacity": "30",
+                "capacity": "31",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "30",
+                "available_seats": "31",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -1206,11 +1206,11 @@
                 }
               ],
               "availability": {
-                "capacity": "116",
+                "capacity": "118",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "116",
+                "available_seats": "118",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -1718,11 +1718,11 @@
                 }
               ],
               "availability": {
-                "capacity": "108",
+                "capacity": "110",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "108",
+                "available_seats": "110",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -1888,11 +1888,11 @@
                 }
               ],
               "availability": {
-                "capacity": "15",
+                "capacity": "14",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "15",
+                "available_seats": "14",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -2055,11 +2055,11 @@
                 }
               ],
               "availability": {
-                "capacity": "41",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "41",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
@@ -3435,6 +3435,26 @@
                 "status": "Open"
               },
               "class_attributes": "Cantonese and English"
+            },
+            {
+              "section": "KJ01-PRJ (9724)",
+              "meetings": [
+                {
+                  "time": "TBA",
+                  "location": "No Room Required",
+                  "instructor": "Professor Jozo GRGIC",
+                  "dates": "11/01/2027 - 19/04/2027"
+                }
+              ],
+              "availability": {
+                "capacity": "6",
+                "enrolled": "0",
+                "waitlist_capacity": "0",
+                "waitlist_total": "0",
+                "available_seats": "6",
+                "status": "Open"
+              },
+              "class_attributes": "English only"
             }
           ]
         }

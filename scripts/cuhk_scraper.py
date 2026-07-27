@@ -60,6 +60,7 @@ class ScrapingConfig:
     progress_update_interval: int = 60  # Save progress every N seconds
 
     # Scraping scope configuration
+    term_prefix: Optional[str] = None  # Only scrape terms whose name starts with this (e.g. "2026-27"); None = all terms
     get_details: bool = False  # Get detailed course information beyond basic listings
     get_enrollment_details: bool = False  # Get section-level enrollment numbers and availability
     get_course_outcome: bool = (
@@ -1026,6 +1027,11 @@ class CuhkScraper:
         # Scrape details for each term
         all_term_info = []
         for i, (term_code, term_name) in enumerate(available_terms):
+            if self.config.term_prefix and not term_name.startswith(self.config.term_prefix):
+                self.logger.info(
+                    f"Skipping term {term_name} for {base_course.course_code} (term_prefix={self.config.term_prefix})"
+                )
+                continue
             try:
                 self.logger.info(
                     f"Scraping term {i + 1}/{len(available_terms)}: {term_name} for {base_course.course_code}"

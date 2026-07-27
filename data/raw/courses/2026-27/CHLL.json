@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T12:03:17.637266+00:00",
+    "scraped_at": "2026-07-27T05:54:49.489334+00:00",
     "subject": "CHLL",
     "subject_title": "Chinese Language & Literature",
     "total_courses": 63,
@@ -34,11 +34,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -60,11 +60,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -86,11 +86,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -112,11 +112,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -326,11 +326,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Putonghua and Cantonese"
@@ -352,11 +352,11 @@
                 }
               ],
               "availability": {
-                "capacity": "38",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "38",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "Putonghua and Cantonese"
@@ -378,11 +378,11 @@
                 }
               ],
               "availability": {
-                "capacity": "37",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "37",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "Putonghua and Cantonese"
@@ -398,11 +398,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "80",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "80",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -424,11 +424,11 @@
                 }
               ],
               "availability": {
-                "capacity": "38",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "38",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -450,11 +450,11 @@
                 }
               ],
               "availability": {
-                "capacity": "37",
+                "capacity": "40",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "37",
+                "available_seats": "40",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -719,11 +719,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "70",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "70",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -745,11 +745,11 @@
                 }
               ],
               "availability": {
-                "capacity": "38",
+                "capacity": "35",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "38",
+                "available_seats": "35",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -771,11 +771,11 @@
                 }
               ],
               "availability": {
-                "capacity": "37",
+                "capacity": "35",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "37",
+                "available_seats": "35",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -791,11 +791,11 @@
                 }
               ],
               "availability": {
-                "capacity": "75",
+                "capacity": "70",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "75",
+                "available_seats": "70",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -1540,11 +1540,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -1560,11 +1560,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -1619,11 +1619,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "55",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "55",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -1639,11 +1639,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "28",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "28",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -1659,11 +1659,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "27",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "27",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -1718,11 +1718,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -1744,11 +1744,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -2328,11 +2328,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -2354,11 +2354,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -2380,11 +2380,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -3640,11 +3640,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3666,11 +3666,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3725,11 +3725,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3751,11 +3751,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3777,11 +3777,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3895,11 +3895,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3915,11 +3915,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -3968,11 +3968,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -3988,11 +3988,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -4311,23 +4311,23 @@
               "meetings": [
                 {
                   "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Yasumoto Int'l Acad Park 201",
+                  "location": "Humanities Building 114",
                   "instructor": "Professor KWONG Ho Yee Connie",
                   "dates": "7/9, 14/9, 21/9, 28/9, 5/10, 12/10"
                 },
                 {
                   "time": "Mo 2:30PM - 4:15PM",
-                  "location": "Yasumoto Int'l Acad Park 201",
+                  "location": "Humanities Building 114",
                   "instructor": "Professor KWONG Ho Yee Connie",
                   "dates": "26/10, 2/11, 9/11, 16/11, 23/11, 30/11"
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "68",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "68",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -4343,11 +4343,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -4363,11 +4363,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "34",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "34",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -4563,11 +4563,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "55",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "55",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -4589,11 +4589,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "55",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "55",
                 "status": "Open"
               },
               "class_attributes": "Cantonese only"
@@ -4648,11 +4648,11 @@
                 }
               ],
               "availability": {
-                "capacity": "70",
+                "capacity": "55",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "70",
+                "available_seats": "55",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -4668,11 +4668,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "28",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "28",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"
@@ -4688,11 +4688,11 @@
                 }
               ],
               "availability": {
-                "capacity": "35",
+                "capacity": "27",
                 "enrolled": "0",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "35",
+                "available_seats": "27",
                 "status": "Open"
               },
               "class_attributes": "Putonghua only"

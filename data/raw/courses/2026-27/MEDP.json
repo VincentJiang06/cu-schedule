@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "scraped_at": "2026-07-09T17:42:13.095851+00:00",
+    "scraped_at": "2026-07-27T14:06:35.049637+00:00",
     "subject": "MEDP",
-    "subject_title": "Molecular Med & Biostatistics",
+    "subject_title": "Molecular Medicine and Biostatistics",
     "total_courses": 3,
     "scraper_version": "memory-safe-v2.0"
   },
@@ -110,14 +110,20 @@
                   "location": "Prince of Wales Hospital",
                   "instructor": "Dr LEE Jock Wai, \nDr. WANG Jingxuan, \nProfessor CAO Lirong, \nProfessor WANG Haitian",
                   "dates": "1/12"
+                },
+                {
+                  "time": "We 2:30PM - 6:30PM",
+                  "location": "Prince of Wales Hospital",
+                  "instructor": "Dr LEE Jock Wai, \nDr. WANG Jingxuan, \nProfessor CAO Lirong, \nProfessor WANG Haitian",
+                  "dates": "16/9"
                 }
               ],
               "availability": {
                 "capacity": "250",
-                "enrolled": "18",
+                "enrolled": "31",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "232",
+                "available_seats": "219",
                 "status": "Open"
               },
               "class_attributes": "English only"
@@ -196,10 +202,10 @@
               ],
               "availability": {
                 "capacity": "250",
-                "enrolled": "18",
+                "enrolled": "32",
                 "waitlist_capacity": "0",
                 "waitlist_total": "0",
-                "available_seats": "232",
+                "available_seats": "218",
                 "status": "Open"
               },
               "class_attributes": "English only"

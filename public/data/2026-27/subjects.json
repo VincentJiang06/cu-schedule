@@ -6,7 +6,7 @@
     },
     {
       "code": "ACPY",
-      "title": "Anatomical & Cellular Patholog"
+      "title": "Anatomical & Cellular Pathology"
     },
     {
       "code": "AIMS",
@@ -18,7 +18,7 @@
     },
     {
       "code": "AIST",
-      "title": "AI: Systems & Tech"
+      "title": "Artificial Intelligence: Systems and Technologies"
     },
     {
       "code": "AMSC",
@@ -42,11 +42,11 @@
     },
     {
       "code": "ARTS",
-      "title": "Courses offered by Arts Fac"
+      "title": "Courses offered by Arts Faculty"
     },
     {
       "code": "ASEI",
-      "title": "Aero Sci and Earth Info & X"
+      "title": "Aero Science and Earth Informatics & X D Maj Pgm"
     },
     {
       "code": "BAMS",
@@ -54,11 +54,11 @@
     },
     {
       "code": "BASA",
-      "title": "General Business Administratio"
+      "title": "General Business Administration"
     },
     {
       "code": "BBMS",
-      "title": "Biochemical & Biomedical Sci"
+      "title": "Biochemical and Biomedical Sciences"
     },
     {
       "code": "BCHE",
@@ -74,7 +74,7 @@
     },
     {
       "code": "BEHM",
-      "title": "Biotech, Entrep & Healthc Mgt"
+      "title": "Biotechnology, Entrepreneurship and Healthcare Mgt"
     },
     {
       "code": "BEST",
@@ -94,7 +94,7 @@
     },
     {
       "code": "BMED",
-      "title": "Maths & Maths Education"
+      "title": "Mathematics and Mathematics Educatioin"
     },
     {
       "code": "BMEG",
@@ -114,7 +114,7 @@
     },
     {
       "code": "CGEN",
-      "title": "Clinical Gerontology & ELC"
+      "title": "Clinical Gerontology & End-of-Life Care"
     },
     {
       "code": "CHED",
@@ -162,7 +162,7 @@
     },
     {
       "code": "CLED",
-      "title": "Chinese Language Education"
+      "title": "Chin Lang & Literature & Chin Lang Education"
     },
     {
       "code": "CMBI",
@@ -210,7 +210,7 @@
     },
     {
       "code": "DBAC",
-      "title": "DBA (Chinese) Programme"
+      "title": "Doctor of Business Administration (Chinese)"
     },
     {
       "code": "DIPL",
@@ -218,15 +218,15 @@
     },
     {
       "code": "DOTE",
-      "title": "Dept of Decis, Oper & Tech"
+      "title": "Department of Decisions, Operations and Technology"
     },
     {
       "code": "DROI",
-      "title": "Diagnostic Radiology & Organ I"
+      "title": "Diagnostic Radiology & Organ Imaging"
     },
     {
       "code": "DSPS",
-      "title": "Data Science & Policy Studies"
+      "title": "Data Science and Policy Studies"
     },
     {
       "code": "EASC",
@@ -234,7 +234,7 @@
     },
     {
       "code": "ECLT",
-      "title": "E-Commerce (Business Programme"
+      "title": "E-Commerce (Business Programme)"
     },
     {
       "code": "ECON",
@@ -246,15 +246,15 @@
     },
     {
       "code": "EEEN",
-      "title": "Energy and Environmental Erg"
+      "title": "Energy and Environmental Engineering"
     },
     {
       "code": "EESC",
-      "title": "Earth & Environmental Sci"
+      "title": "Earth and Environmental Sciences"
     },
     {
       "code": "ELED",
-      "title": "English Language Education"
+      "title": "English Studies & English Language Education"
     },
     {
       "code": "ELEG",
@@ -290,19 +290,19 @@
     },
     {
       "code": "EPID",
-      "title": "Epidemiology of Infectious Dis"
+      "title": "Epidemiology of Infectious Diseases"
     },
     {
       "code": "EPIN",
-      "title": "Entrepreneurship & Innovation"
+      "title": "Entrepreneurship and Innovation"
     },
     {
       "code": "EPSY",
-      "title": "Prof Educational Psychology"
+      "title": "Professional Educational Psychology"
     },
     {
       "code": "ESGS",
-      "title": "Earth System and GeoInfo Sci"
+      "title": "Earth System and GeoInformation Science"
     },
     {
       "code": "ESTR",
@@ -338,19 +338,19 @@
     },
     {
       "code": "GECC",
-      "title": "GE - Chung Chi College"
+      "title": "General Education - Chung Chi College"
     },
     {
       "code": "GECW",
-      "title": "GE - CW Chu College"
+      "title": "General Education - CW Chu College"
     },
     {
       "code": "GEMC",
-      "title": "GE - Morningside College"
+      "title": "General Education - Morningside College"
     },
     {
       "code": "GENA",
-      "title": "GE - New Asia College"
+      "title": "General Education - New Asia College"
     },
     {
       "code": "GERM",
@@ -358,23 +358,23 @@
     },
     {
       "code": "GESC",
-      "title": "GE - Shaw College"
+      "title": "General Education - Shaw College"
     },
     {
       "code": "GESH",
-      "title": "GE - S.H. Ho College"
+      "title": "General Education - S.H. Ho College"
     },
     {
       "code": "GEUC",
-      "title": "GE - United College"
+      "title": "General Education - United College"
     },
     {
       "code": "GEWS",
-      "title": "GE - Lee Woo Sing College"
+      "title": "General Education - Lee Woo Sing College"
     },
     {
       "code": "GEYS",
-      "title": "GE - Wu Yee Sun College"
+      "title": "General Education - Wu Yee Sun College"
     },
     {
       "code": "GISM",
@@ -394,7 +394,7 @@
     },
     {
       "code": "GPAD",
-      "title": "Government & Public Admin"
+      "title": "Government & Public Administration"
     },
     {
       "code": "GPEC",
@@ -402,15 +402,15 @@
     },
     {
       "code": "GPGC",
-      "title": "Govt & Poli (Greater Chi)"
+      "title": "Government and Politics (Greater China)"
     },
     {
       "code": "GPSU",
-      "title": "Global Physician-Leadership St"
+      "title": "Global Physician-Leadership Stream"
     },
     {
       "code": "GRMD",
-      "title": "Geography & Resource Mgt"
+      "title": "Geography & Resource Management"
     },
     {
       "code": "GRON",
@@ -462,7 +462,7 @@
     },
     {
       "code": "IMSC",
-      "title": "Artic BSc PhD Pgm in Math Sci"
+      "title": "Articulated B.Sc. – Ph.D. Pgm in Math Sci"
     },
     {
       "code": "INFD",
@@ -506,11 +506,11 @@
     },
     {
       "code": "MAEG",
-      "title": "Mechanical & Automation Engg"
+      "title": "Mechanical & Automation Engineering"
     },
     {
       "code": "MASE",
-      "title": "Materials Sci & Erg"
+      "title": "Materials Science and Engineering"
     },
     {
       "code": "MATH",
@@ -526,11 +526,11 @@
     },
     {
       "code": "MCLE",
-      "title": "Chinese Lang Education (TPg)"
+      "title": "Chinese Language Education (TPg)"
     },
     {
       "code": "MCNS",
-      "title": "Stroke & Clinical Neuroscience"
+      "title": "Stroke and Clinical Neurosciences"
     },
     {
       "code": "MECM",
@@ -542,11 +542,11 @@
     },
     {
       "code": "MEDM",
-      "title": "Endo, Diabetes & Metabolism"
+      "title": "Endocrinology, Diabetes & Metabolism"
     },
     {
       "code": "MEDP",
-      "title": "Molecular Med & Biostatistics"
+      "title": "Molecular Medicine and Biostatistics"
     },
     {
       "code": "MEDU",
@@ -554,7 +554,7 @@
     },
     {
       "code": "MESC",
-      "title": "Medical Sciences (PG)"
+      "title": "Medical Sciences (Postgraduate)"
     },
     {
       "code": "MGNT",
@@ -566,7 +566,7 @@
     },
     {
       "code": "MIEG",
-      "title": "MIEG"
+      "title": "Mathematics and Information Engineering"
     },
     {
       "code": "MKTG",
@@ -586,11 +586,11 @@
     },
     {
       "code": "MRGO",
-      "title": "Musculo Med, Rehab & Ger Orth"
+      "title": "Musculoskeletal Med, Rehab and Geriatric Orthopaed"
     },
     {
       "code": "MSEG",
-      "title": "Materials Sci & Engineering"
+      "title": "Materials Science & Engineering"
     },
     {
       "code": "MUSC",
@@ -610,11 +610,11 @@
     },
     {
       "code": "OENV",
-      "title": "Occupational & Environmental H"
+      "title": "Occupational & Environmental Health"
     },
     {
       "code": "ORLC",
-      "title": "Otorhinol, Head & Neck Surgery"
+      "title": "Otorhinolaryngology, Head and Neck Surgery"
     },
     {
       "code": "ORTY",
@@ -622,7 +622,7 @@
     },
     {
       "code": "OVSC",
-      "title": "Ophthalmology & Visual Science"
+      "title": "Ophthalmology & Visual Sciences"
     },
     {
       "code": "PBHT",
@@ -690,7 +690,7 @@
     },
     {
       "code": "RMCE",
-      "title": "Reprod Med & Clin Embry"
+      "title": "Reproductive Medicine and Clinical Embryology"
     },
     {
       "code": "RMED",
@@ -718,7 +718,7 @@
     },
     {
       "code": "SEEM",
-      "title": "Systems Engineering & Engg Mgt"
+      "title": "Systems Engineering & Engineering Management"
     },
     {
       "code": "SGCL",
@@ -726,7 +726,7 @@
     },
     {
       "code": "SILP",
-      "title": "School Improvement and Leaders"
+      "title": "School Improvement and Leadership"
     },
     {
       "code": "SLPA",
@@ -738,7 +738,7 @@
     },
     {
       "code": "SOSC",
-      "title": "Courses offered by SSc Faculty"
+      "title": "Courses offered by Social Science Faculty"
     },
     {
       "code": "SOWK",
@@ -750,7 +750,7 @@
     },
     {
       "code": "SPED",
-      "title": "Sports Science & Physical Educ"
+      "title": "Sports Science & Physical Education"
     },
     {
       "code": "SSMU",
@@ -758,11 +758,11 @@
     },
     {
       "code": "SSPA",
-      "title": "MSc Sports Sci & Phy Activity"
+      "title": "MSc in Sports Science and Physical Activity"
     },
     {
       "code": "SSPE",
-      "title": "Sports Sci & Phy Edu (TPg)"
+      "title": "Sports Science and Physical Education (TPg)"
     },
     {
       "code": "STAR",
@@ -782,7 +782,7 @@
     },
     {
       "code": "TESL",
-      "title": "Teach Eng Spkrs Oth Langs"
+      "title": "Teaching English to Speakers of Other Languages"
     },
     {
       "code": "THAI",
@@ -798,31 +798,31 @@
     },
     {
       "code": "UGCP",
-      "title": "China Programme"
+      "title": "UGCP: China Programme"
     },
     {
       "code": "UGEA",
-      "title": "Chinese Cultural Heritage"
+      "title": "UGEA: Chinese Cultural Heritage"
     },
     {
       "code": "UGEB",
-      "title": "Nature, Science and Technology"
+      "title": "UGEB: Nature, Science and Technology"
     },
     {
       "code": "UGEC",
-      "title": "Society and Culture"
+      "title": "UGEC: Society and Culture"
     },
     {
       "code": "UGED",
-      "title": "Self and Humanity"
+      "title": "UGED: Self and Humanity"
     },
     {
       "code": "UGFH",
-      "title": "In Dialogue with Humanity"
+      "title": "UGFH: In Dialogue with Humanity"
     },
     {
       "code": "UGFN",
-      "title": "In Dialogue with Nature"
+      "title": "UGFN: In Dialogue with Nature"
     },
     {
       "code": "URBD",
