@@ -61,6 +61,7 @@ class ScrapingConfig:
 
     # Scraping scope configuration
     term_prefix: Optional[str] = None  # Only scrape terms whose name starts with this (e.g. "2026-27"); None = all terms
+    only_course_codes: Optional[set] = None  # Only fetch details for these 4-digit codes (adjudication); None = all
     get_details: bool = False  # Get detailed course information beyond basic listings
     get_enrollment_details: bool = False  # Get section-level enrollment numbers and availability
     get_course_outcome: bool = (
@@ -762,6 +763,13 @@ class CuhkScraper:
 
                 # Get detailed information if requested
                 if self.config.get_details and courses:
+                    if self.config.only_course_codes is not None:
+                        courses = [
+                            c for c in courses if c.course_code in self.config.only_course_codes
+                        ]
+                        self.logger.info(
+                            f"Course filter active: detailing only {len(courses)} selected courses"
+                        )
                     # Apply course limit based on configuration
                     if self.config.max_courses_per_subject is not None:
                         courses_to_detail = courses[: self.config.max_courses_per_subject]
