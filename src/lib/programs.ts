@@ -1,6 +1,6 @@
 /**
  * Program (major) data access — the interface the personal-info card + search logic
- * read from. Loads the bundle built by scripts/build_program_bundle.py and exposes
+ * read from. Loads the bundle built by scripts/build_bundles.mts and exposes
  * typed lookups: type-ahead search over programme names, and the set of course keys
  * a programme requires (for "本专业需要"-style filtering).
  *
@@ -8,14 +8,14 @@
  * Course codes are plain 8-char SUBJ#### tokens; helpers normalize them to the same
  * course key (courseKey.ts) the catalog uses, so they match Course.key directly.
  *
- * See docs/programs-data.md for the full contract.
+ * See docs/contracts/interfaces.md for the machine-checked contract.
  *
- * STATUS: in-flight, unreferenced by the app UI. The upstream data pipeline is done —
- * public/data/programs.json is already built and ships with the site. What's missing
- * is the frontend wiring: the personal-info card (App.tsx's "我的情况") should load
- * this module to resolve the student's programme, and the search/candidate filters
- * should gain a "本专业需要" toggle driven by requiredCourseKeys() / programCourseKeys() above.
- * Do not delete this file — it is the intended landing spot for that work.
+ * IO NOTE: despite living in lib/ next to the pure logic, this module does its OWN
+ * fetch (loadPrograms below) instead of going through data.ts — it only borrows
+ * data.ts's dataVersion() for the `?v=` cache key. So the catalogue has TWO fetch
+ * channels, and the cache/version protocol has two edit sites: change one without the
+ * other and the course bundle refreshes while the programme bundle keeps serving a
+ * stale cache. See docs/contracts/structure.md (依赖方向铁律) before "tidying" this.
  */
 import { courseKey, keySet } from './courseKey.ts'
 import { dataVersion } from './data.ts'

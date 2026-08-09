@@ -103,7 +103,7 @@ export async function loadSubjects(year: string): Promise<SubjectInfo[]> {
 export type TermRef = { year: string; slug: string; name: string; courseCount: number }
 
 // index.json 与 manifest 同款 memoize:启动时 loadTermList 与 loadYearOfferings 都要读
-// 同一份年度索引(api-design §5 曾记的「启动双请求」债,2026-07-15 清偿)——按 year 缓存
+// 同一份年度索引(旧文档记过的「启动双请求」债,2026-07-15 清偿)——按 year 缓存
 // promise,一次页面加载每学年只打一次 index.json(同一次加载里 ?v= 版本恒定);失败清
 // 缓存以便重试,与 programs.ts 的缓存策略一致。
 const yearIndexPromises = new Map<string, Promise<YearIndex>>()

@@ -1,8 +1,7 @@
-# Deletion manifest — 待人工审核后执行
+# Deletion manifest — ✅ 已执行(2026-08-10,用户批准「老的删了」)
 
-> **本文件不会自动执行任何删除。** 新契约(`architecture.md` / `structure.md` /
-> `interfaces.md`)已写完并通过机器门;下面是被它们取代的旧文档,连同各自的理由。
-> 你看过、同意了,再自己动手删——git 是安全网。
+> 保留本文作为**存档**:记录删了什么、为什么删、入链改指到哪里。
+> 被删文件的内容在 git 历史里,`git show HEAD~1:docs/api-design.md` 之类随时可取回。
 
 用户裁决(本轮开工前确认):**`docs/` 整体替换**;`fable_docs/`(哲学与方向,只存部署机)
 **完全不动**——它管的是「为什么 / 往哪去」,本次重建管的是「现在是什么」,两者不冲突。
@@ -28,13 +27,14 @@
 | `README.md` · `NOTICE.md` | 项目门面与许可,与契约层无关。 |
 | `docs/contracts/_legacy-context.md` | 已 gitignore。是本次重建的临时上下文,**重建完就该删**——它按设计不入库,留在工作区只会让人误以为它是现行文档。建议连同上面五份一起清掉。 |
 
-## 执行(你自己跑,我不代跑)
+## 已执行的命令
 
 ```bash
 cd ~/cu-schedule && git rm docs/api-design.md docs/schema.md docs/programs-data.md docs/architecture-review.md docs/deployment.md && rm -f docs/contracts/_legacy-context.md
 ```
 
-**删之前必须一起改的入链**(已扫过全仓库,只有这两个文件指过来,共 10 处):
+**同时改掉的入链**(全仓库扫过;除下表外还有两处代码注释:`src/lib/programs.ts:11`
+指向 programs-data、`src/lib/data.ts:106` 提到 api-design §5,均已改):
 
 | 位置 | 现在指向 | 应改指 |
 |---|---|---|

@@ -82,21 +82,29 @@ npm run data:build                             # 生成前端数据包（含 pub
 │   └── i18n-*.mjs / gen-font-inline.mjs      三语词典与自托管字体的维护者工具
 ├── data/                   所有数据的唯一真源（raw → 成品，结构详见 data/README.md）
 ├── public/data/            data/ 成品的生成镜像（勿手改，data:build 整体重写）
-├── docs/                   见下方阅读地图
-├── deploy/ + Dockerfile    静态站点的 nginx 容器化（docs/deployment.md 是 runbook）
+├── docs/contracts/         设计契约三件套（见下方阅读地图；interfaces.md 有机器门守着）
+└── deploy/ + Dockerfile    静态站点的 nginx 容器化（边界与缓存策略见 architecture.md）
 └── .github/workflows/      CI：类型检查 + 构建 + 两个数据校验门
 ```
 
 ### 文档阅读地图
 
+契约层是**从代码推导出来的**，`interfaces.md` 由机器门逐符号对着代码校验，所以它不会悄悄
+过期——改了公开面而没同步这张表，门就不过。
+
 | 你要做的事 | 从哪读起 |
 | --- | --- |
-| 改前端（UI / 交互 / 筛选逻辑） | [docs/api-design.md](docs/api-design.md) —— **前端唯一入口**，数据契约与改动规则 |
-| 理解课程数据字段 / 课号 key / 先修解析 | [docs/schema.md](docs/schema.md) |
-| 理解培养方案数据与 `structure` 树 | [docs/programs-data.md](docs/programs-data.md) |
-| 更新 / 重建数据 | [data/README.md](data/README.md) + 本文「数据从哪来」 |
-| 部署 | [docs/deployment.md](docs/deployment.md) |
-| 了解架构决策的来龙去脉 | [docs/architecture-review.md](docs/architecture-review.md)（已结案的审查记录） |
+| 先搞清这是个什么系统 | [docs/contracts/architecture.md](docs/contracts/architecture.md) —— 组件、数据流、六条信任线 |
+| 改前端 / 查某个符号的契约 | [docs/contracts/interfaces.md](docs/contracts/interfaces.md) —— 264 个公开符号逐行钉到 `file:line` |
+| 模块边界、依赖方向、哪份数据谁写 | [docs/contracts/structure.md](docs/contracts/structure.md) |
+| 更新 / 重建数据 | [structure.md 末尾的两条硬路径](docs/contracts/structure.md) + [data/README.md](data/README.md) |
+| 部署 | [architecture.md §部署边界](docs/contracts/architecture.md) |
+
+契约与代码不一致时**以代码为准**，然后回来修契约。校验：
+
+```bash
+node ~/.claude/skills/reorganize-logic/scripts/verify_contracts.mjs .
+```
 
 ## 开发
 
@@ -111,9 +119,9 @@ npm run build      # 类型检查 + 生产构建
 `/api` 代理到这个 Node 服务（内存存储、1 天 TTL）。不跑它时其余功能不受影响，只是分享
 按钮会提示连不上服务。生产环境由同容器的 nginx 反代 `/api` 到该服务（见 `deploy/`）。
 「账号」（右上角登录，云端保存配置）依赖部署方的私有扩展 API（`/api/v1/*`，不随本仓库
-分发，见 [docs/api-design.md](docs/api-design.md) §6）——没有该服务时账号功能自动降级。
+分发，见 [architecture.md §边界与信任线](docs/contracts/architecture.md)）——没有该服务时账号功能自动降级。
 
-**前端开发从 [docs/api-design.md](docs/api-design.md) 入手**——数据契约、运行时接口面、
+**前端开发从 [docs/contracts/](docs/contracts/) 三件套入手**——架构、模块边界、公开接口。
 改动规则与阅读地图都在那里。改动前后必须过的两道校验门（CI 也会跑）：
 
 ```bash

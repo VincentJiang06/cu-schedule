@@ -53,7 +53,7 @@ public/data/                            ← 生成的镜像（每次构建整体
 ## 两组数据的连接点
 
 方案的 `all_course_codes[]` 就是课程码，与课程数据的 `Course.key`（前 8 字符，见
-[docs/schema.md](../docs/schema.md)）同一套命名，可直接匹配——这是把「培养方案」接到
+[contracts/interfaces.md](../docs/contracts/interfaces.md) 的 `courseKey` 段）同一套命名，可直接匹配——这是把「培养方案」接到
 「课程」上的桥。
 
 ## 命名约定
@@ -68,7 +68,7 @@ public/data/                            ← 生成的镜像（每次构建整体
 `fetch(..., { cache: 'no-cache' })` 强制走网络再验证（几十字节，代价可忽略），拿到
 `generatedAt` 后给其余每个数据请求的 URL 追加 `?v=<generatedAt>`：手动重跑 `data:build` 换出新
 版本号，浏览器旧缓存的 URL 不再命中，用户不会无限期吃到旧数据；版本没变时新请求仍能命中缓存。
-详见 [docs/schema.md](../docs/schema.md) 与 `src/lib/data.ts` 的 `fetchManifest`。
+详见 [contracts/architecture.md](../docs/contracts/architecture.md) §数据流 与 `src/lib/data.ts` 的 `fetchManifest`。
 
 ## 校验
 
