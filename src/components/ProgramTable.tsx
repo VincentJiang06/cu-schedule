@@ -4,7 +4,7 @@ import { courseKey } from '../lib/courseKey.ts'
 import { detectChooseRule, type ChooseRule } from '../lib/programChoose.ts'
 import type { ProgramCourse, Program, SectionNode } from '../lib/programs.ts'
 import type { Course } from '../lib/types.ts'
-import { t } from '../i18n/index.ts'
+import { getLang, t } from '../i18n/index.ts'
 
 /**
  * The big study-scheme table on the 信息 page. Renders a programme's faithful
@@ -105,7 +105,9 @@ function groupLeafRuns(children: SectionNode[]): ChildGroup[] {
 function TitleLabel({ title }: { title: string }) {
   if (!title) return null
   const zh = GLOSS[title]
-  if (zh) {
+  // 中文标签是给中文读者的辅助,日历原文才是分区的权威名字:中文/繁体界面「标签 + 原文小字」,
+  // 英文界面直接用原文(再翻一次只会得到一个与旁边原文打架的二手英文名)。
+  if (zh && getLang() !== 'en') {
     return (
       <span className="pg-section__title">
         {t(zh)}
@@ -117,14 +119,17 @@ function TitleLabel({ title }: { title: string }) {
   if (/^choose/i.test(title)) {
     return <span className="pg-section__title">{t('分流')}</span>
   }
-  return <span className="pg-section__title pg-section__title--plain">{title}</span>
+  // 专名(General …/Stream N: …)原样;唯一的例外是解析器写进数据里的固定中文标题
+  // (兜底节「其他相关课程」),它有词典条目,t() 查得到就译、查不到原样回落。
+  return <span className="pg-section__title pg-section__title--plain">{t(title)}</span>
 }
 
 // Prose rule text (glossed when it matches a known要求词), shared by the muted
 // note paragraph (NoteLine) and the leaf requirement card's right-hand cell (LeafCard).
 function NoteContent({ note }: { note: string }) {
   const zh = GLOSS[note]
-  if (!zh) return <>{note}</>
+  // 兜底节的中文说明句同样走 t()(词典里有就译,没有就原样回落)。
+  if (!zh || getLang() === 'en') return <>{t(note)}</>
   return (
     <>
       {t(zh)}

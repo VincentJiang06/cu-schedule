@@ -200,10 +200,21 @@ allCourseKeys(program): Set<string>                               // 整个 inve
 返回的都是规范化 course key（`keySet` 处理过），直接和 `Course.key` 比。
 
 ### 下游消费者：学分进度（`src/lib/programProgress.ts`）
-`computeProgramProgress` 直接消费 `structure` 树做「已修/需修」学分统计——它对本文档
-schema 的额外语义依赖：同一课程在一个节的子树内重复出现只计一次；`units` 为 null 的节
-不显示上限；课程学分不在本包里（由课程目录解析，目录查不到按 3 学分估算）。改
-`SectionNode`/`ProgramCourse` 字段时把它列入回归对象。
+`computeProgramProgress` 直接消费 `structure` 树做「已修/需修」学分统计。它对本文档 schema 的
+额外语义依赖，改 `SectionNode`/`ProgramCourse` 字段时逐条列入回归对象：
+
+- 同一课程在一个节的子树内重复出现只计一次；跨节则各节都算，方案累计只算一次。
+- `units` 为 null 的节不显示上限；各节推导学分加总 == `total_units` 时才按推导值显示（`reconciled`）。
+- 课程学分不在本包里（由课程目录解析）。**解析在整个等价组内回退**：`code` 与 `alts` 组成一门课的
+  等价码组，学生成绩单上可能记的是旧课号（`DSME1030`）或孪生码（`ESTR2102`），组里任一码今年开着
+  就用它的学分；整组都查不到才按 3 学分估算并如实标注门数。
+- **有 `units` 预算但整棵子树一门课都没列**的节（如 Economics §3「36 units of elective ECON courses
+  at 3000 or above level」）标 `countable:false`：它的进度不可能靠课单算出来，UI 不画进度条、明说
+  无法自动统计——画一条永远停在 0/N 的条是谎报。
+- **`all` ⊋ structure**：`all_course_codes` 取自整页文本（含建议修读次序、副修课单、附录课表），
+  `structure` 只覆盖 Major 块。落在 `all` 却不在任何节里的已完成课程单列一档 `unplaced`
+  （「方案页有列出，但不属于任何一组」），既不混进「不在本方案内」，也不计入方案累计——那份课单
+  未必属于本专业要求（例：中文系那 141 个 CHLL 码其实印在**副修**课表里）。
 
 ---
 
