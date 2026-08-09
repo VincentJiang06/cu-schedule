@@ -56,6 +56,15 @@ export type SectionNode = {
   units: number | null
   /** Prose rule, e.g. "Any one course from the following" / "Required Courses". */
   note: string | null
+  /**
+   * The节点自己的约束句, for the prose-subdivided groups whose `note` is taken up by their
+   * LABEL ("Elective Courses" / "Remaining units can be chosen from the following"). It is
+   * where the calendar states what the course cards cannot — "Choose 17 units from … and the
+   * AIST/CENG/CSCI courses of which at least 12 units must be from courses at 3000 or above
+   * level" — with the inline course list itself collapsed to "…". Absent on every other node
+   * (their rule already lives in `note`).
+   */
+  rule?: string | null
   /** Courses attached directly to this node. */
   courses: ProgramCourse[]
   children: SectionNode[]

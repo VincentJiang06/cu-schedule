@@ -1273,7 +1273,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "12-18 units from …; and 0-3 units from …; and 0-3 units from …"
             },
             {
               "marker": "",
@@ -1310,7 +1311,8 @@
                   ]
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "…; and 9-12 units from …, 32xx, 33xx, 42xx, 43xx, in which 0-3 units may be chosen from …"
             },
             {
               "marker": "",
@@ -1381,7 +1383,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "9-12 units from …; and 3-9 units from …, in which 0-3 units may be chosen from …"
             },
             {
               "marker": "",
@@ -1389,7 +1392,8 @@
               "units": 12,
               "note": "For students in the Mathematics Stream",
               "courses": [],
-              "children": []
+              "children": [],
+              "rule": "MATH courses at 3000 or above level, and/or courses at 2000 or above level of one other subject area offered by the Faculties/Departments of Science, Engineering, Economics and Finance, with at least 12 units of MATH courses at 3000 or above level. The specific subject area codes are given in explanatory note."
             },
             {
               "marker": "",
@@ -1397,7 +1401,8 @@
               "units": 9,
               "note": "For students who specialize in Mathematics-Education Stream",
               "courses": [],
-              "children": []
+              "children": [],
+              "rule": "MATH and BMED courses at 3000 or above level, with at least 9 units of BMED courses."
             },
             {
               "marker": "",
@@ -1405,7 +1410,8 @@
               "units": 9,
               "note": "For students who specialize in Mathematics-Multidisciplinary Stream",
               "courses": [],
-              "children": []
+              "children": [],
+              "rule": "MATH courses at 3000 or above level, and/or courses at 2000 or above level of at most two other subject areas offered by the Faculties/Departments of Science, Engineering, Economics, and Finance, with at least 9 units of non-MATH courses. The specific subject area codes are given in explanatory note."
             }
           ]
         }

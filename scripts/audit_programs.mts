@@ -28,6 +28,8 @@ type SectionNode = {
   title: string
   units: number | null
   note: string | null
+  /** 散文子分区(note=标签)自己的约束句;其余节点不带(规则就在 note 里)。 */
+  rule?: string | null
   courses: ProgramCourse[]
   children: SectionNode[]
   kind?: string
@@ -215,7 +217,7 @@ function childByMarker(node: SectionNode | undefined, marker: string): SectionNo
 }
 const CHOOSE_RE = /at\s+least|choose|any|elective|following|select|minimum|units of|or above|or below/i
 function isChooseNode(n: SectionNode): boolean {
-  return CHOOSE_RE.test(n.title || '') || CHOOSE_RE.test(n.note || '')
+  return CHOOSE_RE.test(n.title || '') || CHOOSE_RE.test(n.note || '') || CHOOSE_RE.test(n.rule || '')
 }
 /** 节点有效学分:自身 units,若为 null 则回退子节点求和(处理「units 记在子节点」的方案)。 */
 function effUnits(n: SectionNode): number {
@@ -318,7 +320,7 @@ function main() {
     const visit = (n: SectionNode) => {
       // P3 —— hasContent:本节自带课单/子节点时,规则以 from/of/following 收尾是引子非截断
       const hasContent = n.courses.length > 0 || n.children.length > 0
-      for (const [field, val] of [['title', n.title], ['note', n.note]] as const) {
+      for (const [field, val] of [['title', n.title], ['note', n.note], ['rule', n.rule ?? null]] as const) {
         const flag = lintText(val, hasContent)
         if (flag) {
           const line = `[${n.marker}] ${field}: ${flag} :: ${norm(String(val)).slice(0, 60)}`
@@ -582,6 +584,54 @@ function main() {
     const ok = !!a && a.units === 15 && want.every((c) => codes.includes(c))
     assert('GDRS2025 §1(a) 折行裸续号回收:5门=15学分', ok,
       `units=${a?.units} courses=[${codes.join(',')}]`)
+  }
+
+  // case 16: I4 分流标题保真(R8)—— "(b) | Stream 1: Intelligence Science" 的冠标签剥离把
+  // "Stream 1" 当节标签、把学科名当内联规则,于是名字既没进 title 也没进 note,整届 CS/CENG/AIST
+  // 的分流只剩 "Stream 1…4",学生看不出每条流是什么。修复:枚举式标签("Stream 1"/"Option A")
+  // 只有在冒号后确实是规则时才剥离,否则整句留作标题(硬折行的下半句由标题续行拼回)。
+  {
+    const p = byId.get('2025:B.Sc. in Computer Science')
+    const four = p && topByMarker(p, '4.')
+    const want: Record<string, string> = {
+      '(b)': 'Stream 1: Intelligence Science',
+      '(c)': 'Stream 2: Database and Information Systems',   // 原文硬折行,续行拼回
+      '(e)': 'Stream 4: Distributed Systems, Networks and Security',
+      '(g)': 'Stream 6: Data Analytics',
+    }
+    const got = Object.fromEntries(
+      Object.keys(want).map((m) => [m, childByMarker(four, m)?.title ?? '']),
+    )
+    const ok = Object.entries(want).every(([m, t]) => got[m] === t)
+    assert('CSCI2025 §4 分流标题带学科名(Stream N: …)', ok, JSON.stringify(got))
+  }
+  // case 17: I5 散文子分区的约束句(R8)—— "Elective Courses:" / "Remaining units can be chosen
+  // from the following:" 这类子分区把标签占住了 note,于是分区正文里的规则句整条被丢:CS 的
+  // General Computer Science 少了「除列出的课外还可修 AIST/CENG/CSCI,其中至少 12 学分须在 3000
+  // 级以上」,各分流少了「余下学分可修 2000 级以上的 AIST/CENG/CSCI」——都是课卡表达不了、漏掉
+  // 就让人以为清单封闭的约束。修复:规则句存进 node.rule(内联课单折成 "…")。
+  {
+    const p = byId.get('2025:B.Sc. in Computer Science')
+    const four = p && topByMarker(p, '4.')
+    const gcsElective = childByMarker(four, '(a)')?.children?.[0]
+    const s1Remaining = childByMarker(four, '(b)')?.children?.find((c) => /^Remaining units/i.test(c.note || ''))
+    const okA = /and the AIST\/CENG\/CSCI courses of which at least 12 units must be from courses at 3000 or above level$/i
+      .test(norm(gcsElective?.rule || ''))
+    const okB = /^AIST\/CENG\/CSCI courses at 2000 or above level$/i.test(norm(s1Remaining?.rule || ''))
+    assert('CSCI2025 §4 子分区约束句保真(rule)', okA && okB,
+      `GCS="${norm(gcsElective?.rule || '')}" | S1-remaining="${norm(s1Remaining?.rule || '')}"`)
+  }
+  // case 18: 同族,课单为空的纯规则子分区(R8)—— 2023 数学系「For students in the Mathematics
+  // Stream:」整段没有一个课号,规则一旦丢就什么都不剩(2025 起日历改用 (i)/(ii) 编号,规则本来
+  // 就落在 note 上,故本 case 钉 2023)。
+  {
+    const p = byId.get('2023:B.Sc. in Mathematics')
+    const three = p && topByMarker(p, '3.')
+    const b = childByMarker(three, '(b)')
+    const mathStream = b?.children?.find((c) => /For students in the Mathematics Stream$/i.test(c.note || ''))
+    const ok = /^MATH courses at 3000 or above level, and\/or courses at 2000 or above level/i
+      .test(norm(mathStream?.rule || ''))
+    assert('MATH2023 §3(b) 无课号纯规则子分区保真', ok, `rule="${norm(mathStream?.rule || '').slice(0, 70)}…"`)
   }
 
   const p6Fail = p6.filter((c) => !c.ok).length

@@ -2166,13 +2166,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose 17 units from … and the AIST/CENG/CSCI courses of which at least 12 units must be from courses at 3000 or above level"
             }
           ]
         },
         {
           "marker": "(b)",
-          "title": "Stream 1",
+          "title": "Stream 1: Intelligence Science",
           "units": null,
           "note": null,
           "courses": [],
@@ -2295,7 +2296,8 @@
                   ]
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units"
             },
             {
               "marker": "",
@@ -2324,13 +2326,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(c)",
-          "title": "Stream 2",
+          "title": "Stream 2: Database and Information Systems",
           "units": null,
           "note": null,
           "courses": [],
@@ -2463,7 +2466,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units"
             },
             {
               "marker": "",
@@ -2492,13 +2496,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(d)",
-          "title": "Stream 3",
+          "title": "Stream 3: Rich Media",
           "units": null,
           "note": null,
           "courses": [],
@@ -2597,7 +2602,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units"
             },
             {
               "marker": "",
@@ -2632,13 +2638,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(e)",
-          "title": "Stream 4",
+          "title": "Stream 4: Distributed Systems, Networks and Security",
           "units": null,
           "note": null,
           "courses": [],
@@ -2744,7 +2751,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units"
             },
             {
               "marker": "",
@@ -2773,13 +2781,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(f)",
-          "title": "Stream 5",
+          "title": "Stream 5: Algorithms and Complexity",
           "units": null,
           "note": null,
           "courses": [],
@@ -2847,7 +2856,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 12 units"
             },
             {
               "marker": "",
@@ -2878,13 +2888,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(g)",
-          "title": "Stream 6",
+          "title": "Stream 6: Data Analytics",
           "units": null,
           "note": null,
           "courses": [],
@@ -3005,7 +3016,8 @@
                   ]
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 6 units"
             },
             {
               "marker": "",
@@ -3034,7 +3046,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 3 units"
             },
             {
               "marker": "",
@@ -3069,7 +3082,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI courses at 2000 or above level"
             }
           ]
         }

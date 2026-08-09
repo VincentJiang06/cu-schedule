@@ -697,7 +697,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose 9 units"
             }
           ]
         },
@@ -796,7 +797,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose 6 units"
             }
           ]
         }

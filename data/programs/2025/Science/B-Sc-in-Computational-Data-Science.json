@@ -1560,7 +1560,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 3 units from the following: … Remaining units can be chosen from any courses under item 5(a) Computational Data Science"
             }
           ]
         },
@@ -1713,7 +1714,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units from the following: … Remaining units can be chosen from any courses under item 5(a) Computational Data Science"
             }
           ]
         }

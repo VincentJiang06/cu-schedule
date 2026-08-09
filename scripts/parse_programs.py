@@ -131,24 +131,20 @@ def norm(t: str) -> str:
 
 
 # --------------------------------------------------------------------------- courses
-def extract_courses(text: str) -> list[dict]:
-    """Extract course references from a chunk of requirement text.
+def _scan_courses(text: str) -> tuple[str, list[tuple[int, int, str, list[str], bool]]]:
+    """Core scanner behind `extract_courses`: returns the annotation-stripped view of
+    `text` plus one `(start, end, raw, codes, alt)` hit per token ACCEPTED as a course
+    reference, in source order (duplicates included, offsets into the stripped text).
 
-    Handles:
-      * canonical codes            CENG2010
-      * '/ESTR' alternatives       CSCI2100/ESTR2102  -> one entry, alt=True
-      * cross-listed brackets      DOTE[DSME]2021     -> DOTE2021 / DSME2021, alt=True
-      * shorthand continuation     'CENG2010, 2030'   -> CENG2010, CENG2030
-      * 'and' continuation pairs   'ENGG3802 and 3803' -> ENGG3802, ENGG3803
-    Returns a de-duplicated list of {raw, codes, alt} in first-seen order.
-    Note refs like '[b]' and prose ('Chemistry Courses:') are ignored.
+    Split out so the prose recovery below (`list_prose`) can erase exactly the spans that
+    were read as courses — one tokenizer, so a note can never disagree with the course
+    list it accompanies.
     """
     # Strip footnote markers ([a], [bc], …) up front: left in place they wedge into the
     # continuation gap ("ECON1101[a], 1111") and orphan every following shorthand number.
     # Offsets below are all relative to this cleaned text, so gap computation stays exact.
     text = ANNOT_STRIP_RE.sub("", text)
-    out: list[dict] = []
-    seen: set[str] = set()
+    hits: list[tuple[int, int, str, list[str], bool]] = []
     current_subj: str | None = None
     last_end: int | None = None
     last_was_course = False
@@ -172,9 +168,7 @@ def extract_courses(text: str) -> list[dict]:
             primary, alt_subj, num = bm.group(1), bm.group(2), bm.group(3)
             current_subj = primary
             codes = [primary + num, alt_subj + num]
-            if s not in seen:
-                seen.add(s)
-                out.append({"raw": s, "codes": codes, "alt": True})
+            hits.append((tok.start(), tok.end(), s, codes, True))
             last_end = tok.end()
             last_was_course = True
             continue
@@ -206,11 +200,32 @@ def extract_courses(text: str) -> list[dict]:
                 # (Physics §2(a), Law §1 cascades). A genuine non-course number keeps the
                 # widened gap full of prose words and still fails to bind, so this is safe.
                 continue
-        if codes and raw not in seen:
-            seen.add(raw)
-            out.append({"raw": raw, "codes": codes, "alt": "/" in raw})
+        if codes:
+            hits.append((tok.start(), tok.end(), raw, codes, "/" in raw))
         last_end = tok.end()
         last_was_course = True
+    return text, hits
+
+
+def extract_courses(text: str) -> list[dict]:
+    """Extract course references from a chunk of requirement text.
+
+    Handles:
+      * canonical codes            CENG2010
+      * '/ESTR' alternatives       CSCI2100/ESTR2102  -> one entry, alt=True
+      * cross-listed brackets      DOTE[DSME]2021     -> DOTE2021 / DSME2021, alt=True
+      * shorthand continuation     'CENG2010, 2030'   -> CENG2010, CENG2030
+      * 'and' continuation pairs   'ENGG3802 and 3803' -> ENGG3802, ENGG3803
+    Returns a de-duplicated list of {raw, codes, alt} in first-seen order.
+    Note refs like '[b]' and prose ('Chemistry Courses:') are ignored.
+    """
+    out: list[dict] = []
+    seen: set[str] = set()
+    for _s, _e, raw, codes, alt in _scan_courses(text)[1]:
+        if raw in seen:
+            continue
+        seen.add(raw)
+        out.append({"raw": raw, "codes": codes, "alt": alt})
     return out
 
 
@@ -387,6 +402,12 @@ _SECTION_LABEL_NOUN = re.compile(
     r"(Courses?|Requirements?|Electives?|Studies|Package|Component|Options?|Stream)\s*$",
     re.I,
 )
+# A label that ends on a bare ENUMERATOR ("Stream 1", "Stream 4", "Option A") is not a
+# section label at all — it is the head of a name the calendar completes after the colon
+# ("Stream 1: Intelligence Science"). Peeling those left the node titled "Stream 1" and
+# threw the discipline away, so an enumerator-headed label only gets peeled when what
+# follows the colon really is a rule (see _convert_row).
+_ENUMERATOR_TAIL = re.compile(r"\b(?:\d+|[A-Z]|[IVX]+)\s*$")
 # Prose sub-labels that subdivide a leaf node's own text into pseudo-children.
 PROSE_HEADER_RE = re.compile(
     r"(?:"
@@ -397,6 +418,10 @@ PROSE_HEADER_RE = re.compile(
     r")\s*:",
     re.I,
 )
+# The opening word of a prose sub-label, for the case where Word's hard wrap splits the
+# label itself ("Required\nCourses (7 units): …") so PROSE_HEADER_RE — which needs the
+# whole "<label>:" on one line — cannot see it.
+PROSE_HEADER_LEAD_RE = re.compile(r"^(?:Required|Elective|Remaining)\b", re.I)
 # The grand total line that closes the Major Programme Requirement items.
 TOTAL_RE = re.compile(r"^\s*Total\b")
 # A free-text fragment is only kept as a `note` if it reads like an actual rule,
@@ -404,7 +429,7 @@ TOTAL_RE = re.compile(r"^\s*Total\b")
 # continuation-number tail the course extractor couldn't re-attach.
 RULE_KW = re.compile(
     r"\b(units?|courses?|level|following|choose|chosen|least|most|except|"
-    r"excluding|stream|option|concentration|prescribed|specialize|any\s+one)\b",
+    r"excluding|streams?|options?|concentrations?|prescribed|specialize|any\s+one)\b",
     re.I,
 )
 
@@ -438,6 +463,78 @@ _INTRO_TAIL_RE = re.compile(
     r"taken|drawn|listed|as|any|an?|those|these)\b|[\s,;:])+$",
     re.I,
 )
+
+
+# Two accepted course references belong to the SAME printed list when the text between
+# them is nothing but list plumbing — separators, brackets, and "and"/"or" connectors —
+# e.g. "STAT2005, 2006", "CSCI3220/ESTR3110, (ENGG3802 and 3803), IERG4300". Used by
+# `list_prose` to collapse a whole printed list into one ellipsis instead of peppering
+# the recovered rule with one "…" per course.
+_LIST_RUN_GAP_WORD = re.compile(r"[A-Za-z]+")
+
+
+def _same_list_run(gap: str) -> bool:
+    if len(gap) > 40:
+        return False
+    return all(w.lower() in ("and", "or") for w in _LIST_RUN_GAP_WORD.findall(gap))
+
+
+# Trailing separators/brackets left dangling once a course run is cut out of the prose.
+_PROSE_EDGE_RE = re.compile(r"^[\s,;:/&*()\[\].|-]+|[\s,;/&*()\[\].|-]+$")
+ELLIPSIS = "…"
+
+
+def list_prose(text: str) -> str | None:
+    """Recover the prose RULE the calendar wraps around an inline course list, with the
+    list itself collapsed to an ellipsis.
+
+    The calendar routinely states a constraint the course cards alone cannot express —
+    "Choose 17 units from <list> **and the AIST/CENG/CSCI courses of which at least 12
+    units must be from courses at 3000 or above level**", "**AIST/CENG/CSCI courses at
+    2000 or above level**, ENGG1820, …". Splitting on the leading colon (`_lead_note`)
+    only ever catches prose that sits BEFORE the list, so a trailing or bracketing clause
+    — precisely the "you may also take any 3000+ course in these subjects" rule — was
+    dropped on the floor.
+
+    Erasing exactly the spans `_scan_courses` accepted (so a "3000 or above level"
+    descriptor, which is NOT a course, always survives) leaves the full prose skeleton.
+    A pure list yields None; a rule whose list sits at the very end drops the trailing
+    ellipsis and its list-introducer plumbing, matching the note style already in the
+    corpus ("Choose at least 9 units").
+    """
+    clean, hits = _scan_courses(text)
+    if not hits:
+        n = normalize_label(clean)
+        return n if _looks_like_rule(n) else None
+    # Merge hits printed as one list into a single span.
+    runs: list[list[int]] = []
+    for start, end, *_rest in hits:
+        if runs and _same_list_run(clean[runs[-1][1] : start]):
+            runs[-1][1] = end
+        else:
+            runs.append([start, end])
+    parts: list[str] = []
+    cursor = 0
+    for start, end in runs:
+        parts.append(clean[cursor:start])
+        parts.append(f" {ELLIPSIS} ")
+        cursor = end
+    parts.append(clean[cursor:])
+    # Trim the punctuation the excision leaves dangling FIRST — a list printed inside
+    # brackets ("…, (ENGG3802 and 3803)") strands its closing paren after the placeholder,
+    # which would otherwise hide a sentence-final list from the check below.
+    prose = _PROSE_EDGE_RE.sub("", re.sub(r"\s+([;,.])", r"\1", norm("".join(parts))))
+    # One list, printed at the very end: it needs no placeholder at all — the cards sit
+    # right below — so trim it and the plumbing that introduced it ("Choose at least 9
+    # units from the following:" -> "Choose at least 9 units"). With SEVERAL lists the
+    # placeholders are load-bearing punctuation ("12-18 units from …; and 0-3 units from
+    # …"), and trimming the last one would leave the sentence hanging mid-clause.
+    if len(runs) == 1 and prose.endswith(ELLIPSIS):
+        prose = _INTRO_TAIL_RE.sub("", _PROSE_EDGE_RE.sub("", prose[: -len(ELLIPSIS)]))
+    prose = normalize_label(_PROSE_EDGE_RE.sub("", prose))
+    if not prose or prose == ELLIPSIS:
+        return None
+    return prose if _looks_like_rule(prose.replace(ELLIPSIS, " ")) else None
 
 
 def _is_courselist_tail(s: str) -> bool:
@@ -556,6 +653,11 @@ def _join_title_continuation(
         s = line.strip()
         if not s or extract_courses(s) or PROSE_HEADER_RE.match(s) or len(s) > 60:
             break
+        # A prose sub-label wrapped mid-phrase ("Required" / "Courses (7 units): …") is
+        # body, not title: absorbing its first line ate the word out of the note and
+        # glued it onto the heading ("Stream 1: Biomedical Intelligence Required").
+        if PROSE_HEADER_LEAD_RE.match(s):
+            break
         u, s_wo = strip_units(s)
         if u is not None and units is None:
             units = u
@@ -595,16 +697,23 @@ def _parse_body(text: str) -> tuple[list[dict], str | None, list[dict]]:
     children: list[dict] = []
     for i, m in enumerate(matches):
         seg = text[m.end() : (matches[i + 1].start() if i + 1 < len(matches) else len(text))]
-        children.append(
-            {
-                "marker": "",
-                "title": "",
-                "units": _seg_units(seg),
-                "note": normalize_label(m.group(0)) or None,
-                "courses": to_program_courses(extract_courses(seg)),
-                "children": [],
-            }
-        )
+        child = {
+            "marker": "",
+            "title": "",
+            "units": _seg_units(seg),
+            "note": normalize_label(m.group(0)) or None,
+            "courses": to_program_courses(extract_courses(seg)),
+            "children": [],
+        }
+        # A prose sub-label's `note` is its LABEL ("Elective Courses"), so the segment's own
+        # rule sentence has nowhere to go — and it is exactly where the calendar hides the
+        # constraints no course card can express ("…and the AIST/CENG/CSCI courses of which
+        # at least 12 units must be from courses at 3000 or above level"). Keep it in `rule`
+        # (I5), beside the label rather than instead of it.
+        rule = list_prose(seg)
+        if rule:
+            child["rule"] = rule
+        children.append(child)
     return lead_courses, lead_note, children
 
 
@@ -725,6 +834,13 @@ def _convert_row(row: _Row) -> dict:
         # The pre-colon text must itself read like a label (a short, non-rule phrase ending
         # on a section noun), so a genuine rule that merely contains a colon before its
         # course list ("At least 6 units from the following courses: PSYC…") is NOT peeled.
+        # An ENUMERATOR-headed label is the exception: the calendar uses the very same
+        # "<label>: <rest>" shape to print a section's NAME ("Stream 1: Intelligence Science",
+        # "Stream 4: Distributed Systems, Networks and Security"), and peeling those left the
+        # node titled a bare "Stream 1" with the discipline it names silently discarded (I4).
+        # There the colon is only peeled when what follows it genuinely reads like a rule
+        # ("Group 2: At least 6 units from …"); a name stays with the title, and the heading
+        # path below stitches any hard-wrapped remainder back on.
         lead_label: str | None = None
         lead_after: str | None = None
         cpos = rest_wo.find(":")
@@ -737,6 +853,10 @@ def _convert_row(row: _Row) -> dict:
                 and not _looks_like_rule(cand)
                 and len(cand.split()) <= 6
                 and (_SECTION_LABEL_NOUN.search(cand) or HEADER_TITLE_KW.search(cand))
+                and (
+                    not _ENUMERATOR_TAIL.search(cand)
+                    or _looks_like_rule(normalize_label(after))
+                )
             ):
                 lead_label, lead_after = cand, after
         # Same peel for a "<Section Label> (<inline rule>):" heading whose rule is

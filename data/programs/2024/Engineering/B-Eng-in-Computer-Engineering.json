@@ -1258,7 +1258,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 6 units"
             },
             {
               "marker": "",
@@ -1279,13 +1280,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI/ELEG courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(b)",
-          "title": "Stream 1",
+          "title": "Stream 1: Embedded Systems",
           "units": null,
           "note": null,
           "courses": [],
@@ -1363,7 +1365,8 @@
                   ]
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 6 units"
             },
             {
               "marker": "",
@@ -1384,13 +1387,14 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI/ELEG courses at 2000 or above level"
             }
           ]
         },
         {
           "marker": "(c)",
-          "title": "Stream 2",
+          "title": "Stream 2: VLSI Design and EDA",
           "units": null,
           "note": null,
           "courses": [],
@@ -1436,7 +1440,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 6 units"
             },
             {
               "marker": "",
@@ -1463,7 +1468,8 @@
                   ]
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "AIST/CENG/CSCI/ELEG courses at 2000 or above level"
             }
           ]
         }

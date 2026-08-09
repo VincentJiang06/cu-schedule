@@ -97,6 +97,7 @@ type SectionNode = {
   title: string               // 分区标题，如 "Faculty Package" / "Stream 2: …"；纯课组为 ""
   units: number | null        // 本区要求学分；未标注为 null（区间取下限，如 "15-18" → 15）
   note: string | null         // 散文规则，如 "Choose any one course from the following"；无则 null
+  rule?: string | null        // 散文子分区专用的约束句（见下「rule 与 note 的分工」）；其余节点不带
   courses: ProgramCourse[]    // 直接挂在本节点的课程
   children: SectionNode[]     // 嵌套子节点
   kind?: 'concentration' | 'stream'   // 仅特殊可选段的顶层节点带；其余节点不带（见下）
@@ -107,6 +108,34 @@ type ProgramCourse = {
   alts: string[]              // 等价 key（如 ESTR 孪生课：["ESTR2102"]），命中任一即算修过
 }
 ```
+
+### `rule` 与 `note` 的分工（散文子分区）
+
+日历在一个编号节内部用散文小标题再分层——`Required Courses:` / `Elective Courses:` / `Elective Course 1:` /
+`Remaining units can be chosen from the following:` / `For students who specialize in … Stream:`。解析器把每个这样的
+小标题拆成一个 `marker:""`、`title:""` 的**伪子节点**，并把**小标题本身**放进 `note`（前端 `ProgramTable` 靠这一点
+把它提升为该组的标题并 gloss 成中文）。
+
+于是这一段正文里的**规则句无处可放**，而那正是课卡表达不了的约束：
+
+```jsonc
+// 4(a) General Computer Science → Elective Courses（B.Sc. in Computer Science）
+{ "marker": "", "title": "", "units": 17,
+  "note": "Elective Courses",                       // ← 组标签
+  "rule": "Choose 17 units from … and the AIST/CENG/CSCI courses of which at least 12 units must be from courses at 3000 or above level",
+  "courses": [ /* 14 门 */ ], "children": [] }
+```
+
+`rule` 的口径：
+
+- **只出现在散文子分区上**。其余节点的规则本来就在 `note` 里，不带 `rule`。
+- **内联课单折成 `…`**：正文里被 `extract_courses()` 认作课程的 token 连片抹掉换成一个省略号，规则前后的散文原样保留
+  （`3000 or above level` 这类级别描述词不是课号，不会被抹）。整段只有一处课单且落在句尾时，省略号连同
+  `chosen from the following:` 这类引子一并删掉（→ `"Choose at least 9 units"`）；有多处时省略号是句子的一部分，保留。
+- **可以只有 `rule` 没有课**：`For students in the Mathematics Stream:` 整段没有一个课号，规则就是这一节的全部内容。
+- 前端把它渲染成课程网格首位的规则卡，并纳入 `detectChooseRule` 的判据。卡宽两种模式：**与课卡混排**时守
+  1×1 / 1×2（文字长的取 1×2，不打乱课卡的网格节奏）；**本节没有可列的课**（整段就是规则）时放开到整行
+  （`.pg-rule--full` = `grid-column: 1 / -1`，宽屏下即五张课卡宽），长约束按段落宽度排，而不是挤成瘦高一条。
 
 ### 顶层节点构成
 

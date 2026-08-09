@@ -115,7 +115,11 @@ function matchPickN(text: string): ChooseRule | null {
 export function detectChooseRule(node: SectionNode): ChooseRule | null {
   const title = (node.title ?? '').trim()
   const note = (node.note ?? '').trim()
-  const text = `${title} ${note}`.toLowerCase()
+  // A prose-subdivided group states its rule in `rule` — its `note` is the group LABEL
+  // ("Elective Courses") — so reading note alone left every stream's elective pool
+  // unclassified and its units chip un-emphasised.
+  const rule = (node.rule ?? '').trim()
+  const text = `${title} ${note} ${rule}`.toLowerCase()
 
   // A units budget or an additive compound is NOT a clean "pick N of these cards" rule —
   // skip the course-count hints and let it fall through to the units logic below.
@@ -133,8 +137,10 @@ export function detectChooseRule(node: SectionNode): ChooseRule | null {
     for (const re of PICK_UNITS) if (re.test(text)) return { kind: 'pick-units' }
   }
 
-  // A bare "Elective Courses" pool with a stated units figure is a units budget too.
-  if (title.toLowerCase() === ELECTIVE_TITLE && node.units != null) return { kind: 'pick-units' }
+  // A bare "Elective Courses" pool with a stated units figure is a units budget too —
+  // whether that label arrived as the node's title or as a prose subdivision's `note`.
+  const label = (title || note).toLowerCase()
+  if (label === ELECTIVE_TITLE && node.units != null) return { kind: 'pick-units' }
 
   return null
 }

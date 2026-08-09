@@ -1524,7 +1524,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose 3 units"
             }
           ]
         },
@@ -1673,7 +1674,8 @@
                   "alts": []
                 }
               ],
-              "children": []
+              "children": [],
+              "rule": "Choose at least 9 units"
             }
           ]
         }

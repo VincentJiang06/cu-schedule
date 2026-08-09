@@ -10489,7 +10489,7 @@
           "marker": "(c)",
           "title": "Capstone courses",
           "units": 6,
-          "note": null,
+          "note": "one of the three options",
           "courses": [],
           "children": [
             {

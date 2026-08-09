@@ -297,6 +297,8 @@ type SectionNode = {
   title: string
   units: number | null
   note: string | null
+  /** Constraint prose for a prose-subdivided group, whose `note` holds its label instead. */
+  rule?: string | null
   courses: ProgramCourse[]
   children: SectionNode[]
   /** Set on the top node of an optional post-total segment: 'concentration' for a

@@ -206,23 +206,32 @@ function CourseGrid({
   takenSet: Set<string>
   onToggleTaken: (code: string) => void
   /**
-   * 选择规则(任选一门 / N 门即可)独立成一张卡:置于课程网格首位,横跨两列(1×2),
-   * 与课程卡同高。null = 不是 pick-one/pick-n 节点(不显示规则卡)。
+   * 本组的选课规则独立成一张卡:置于课程网格首位,横跨两列(1×2),与课程卡同高。两种来源——
+   * 「任选一门 / N 门即可」的中文提示(zh),以及日历原文的约束句(en,如「Choose 17 units from …
+   * and the AIST/CENG/CSCI courses … at 3000 or above level」)。两者可各自缺席;都缺 = null,
+   * 不显示规则卡。
    */
   rule?: { zh: string; en: string } | null
 }) {
-  // 规则卡宽度随文字长短:短(如「任选 2 门即可 / two courses selected from」)占一张课卡的
-  // 位置(1×1);英文引子偏长时拓成 1×2,免得挤成瘦高多行。阈值卡在语料里的自然断点——干净的
-  // 引子 ≤28 字符,再长的都带描述/内嵌课号(见 build 期语料统计,断在 44+)。
-  const ruleWide = Boolean(rule && rule.en.length > 30)
+  // 规则卡宽度两种模式。
+  // ① 与课卡混排:只在 1×1 / 1×2 之间取——短(如「任选 2 门即可 / two courses selected from」)
+  //    占一张课卡的位置,英文引子偏长时拓成 1×2,免得挤成瘦高多行。阈值卡在语料里的自然断点
+  //    ——干净的引子 ≤28 字符,再长的都带描述/内嵌课号(见 build 期语料统计,断在 44+)。
+  // ② 本节没有可列的课(整段就是规则):没有课卡要对齐,放开到整行,长约束按段落宽度排。
+  const ruleFull = Boolean(rule) && courses.length === 0
+  const ruleWide = !ruleFull && Boolean(rule && rule.en.length > 30)
   // 规则卡底色跟着本组课程的「常见配色」走(dominant subject hue),读起来就是这一组的选课规则;
   // CSS 里再取比课卡略淡的一档 lightness。无课程时(不会发生,rule 必伴 ≥2 门课)回落到中性底。
   const ruleColor = rule ? dominantCourseColor(courses) : undefined
   return (
     <div className="pg-grid">
       {rule && (
-        <div className={`pg-rule${ruleWide ? ' pg-rule--wide' : ''}`} role="note" style={ruleColor}>
-          <span className="pg-rule__zh">{rule.zh}</span>
+        <div
+          className={`pg-rule${ruleFull ? ' pg-rule--full' : ruleWide ? ' pg-rule--wide' : ''}`}
+          role="note"
+          style={ruleColor}
+        >
+          {rule.zh && <span className="pg-rule__zh">{rule.zh}</span>}
           {rule.en && <span className="pg-rule__en">{rule.en}</span>}
         </div>
       )}
@@ -301,7 +310,11 @@ function SectionBlock({
   // unless it was promoted into the head label (then the head already shows it).
   const chooseRule = detectChooseRule(node)
   const pickHint = pickHintText(chooseRule, node.courses.length)
-  const ruleCard = pickHint ? { zh: pickHint, en: promoteNote ? '' : (node.note ?? '') } : null
+  // 卡片正文取日历原文的约束句。prose-subdivided 组把标签占用了 note,规则另存 node.rule ——
+  // 那正是「除列出的课外,还可修 3000 级以上的 AIST/CENG/CSCI」这类课卡表达不了的约束,漏掉它
+  // 学生就以为清单是封闭的。其余节点仍用 note 当英文引子(promoteNote 时 note 已在标题里)。
+  const ruleEn = node.rule ?? (promoteNote ? '' : (node.note ?? ''))
+  const ruleCard = pickHint || node.rule ? { zh: pickHint ?? '', en: ruleEn } : null
 
   return (
     <div
@@ -330,7 +343,9 @@ function SectionBlock({
         )}
       </div>
       {node.note && !promoteNote && !ruleCard && <NoteLine note={node.note} />}
-      {node.courses.length > 0 && (
+      {/* 规则卡也要出:有些约束节点本就没有可列的课(「MATH courses at 3000 or above level …」
+          整段是规则),课单为空时若跳过网格,这条约束就无处可显。 */}
+      {(node.courses.length > 0 || ruleCard) && (
         <CourseGrid
           catalogByKey={catalogByKey}
           courses={node.courses}
