@@ -17,3 +17,6 @@ fable_docs/
 
 # 站点私有扩展(部署方自备,不随仓库分发)
 server/private-api.mjs
+
+# reorganize-logic 的旧契约压缩件:只作重建期上下文,不入库
+docs/contracts/_legacy-context.md

@@ -102,7 +102,12 @@ export function evaluateCandidates(params: {
       const fitsAlternate = alternates.some((meetings) =>
         timed.some((combo) => !meetingsClash(comboMeetings(combo), meetings)),
       )
-      status = fitsAlternate ? 'rearrange' : 'conflict'
+      // 「冲突」是一句断言:这门课排不进去。对**同时开出待定时段组次**的课(全目录 516 门,
+      // 约 8%——如 ARCH7030 一个有时间 + 17 个待定),这句断言是假的:选那个待定组次就能修。
+      // 它的可用组次没有固定时间,所以真实状态是「时间待定」而不是「时间冲突」。两者在 UI 里
+      // 同样挡住「马上学」,这里只把一句错话换成对的话,不放宽任何限制。
+      const hasUntimedFallback = combos.length > timed.length
+      status = fitsAlternate ? 'rearrange' : hasUntimedFallback ? 'tba' : 'conflict'
       shown = timed[0]
     }
 

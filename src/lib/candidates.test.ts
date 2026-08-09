@@ -111,6 +111,26 @@ describe('evaluateCandidates 归类与计数', () => {
     expect(summary.ruledOut).toBe(1)
   })
 
+  it('有待定组次可退的课不报「冲突」——冲突是断言「排不进去」,而它排得进去', () => {
+    // 真实形态:ARCH7030 一个有时间组次 + 17 个待定组次(全目录 516 门这样,约 8%)。
+    // 有时间的那个和两份排法都撞,但选待定组次照样能修——报 conflict 就是说了假话。
+    const mixed = mkCourse('MIXD1000', [
+      // 周一+周二各一段,把两个排法都撞死(同 conflict 用例的构造)
+      mkSection('S-CLASH', { meetings: [mkMeeting(1, 540, 600), mkMeeting(2, 540, 600)] }),
+      mkSection('S-TBA'), // 无时间组次:总是塞得下,所以「排不进去」是假的
+    ])
+    const { rows } = run([mixed])
+    expect(rows.find((r) => r.course.code === 'MIXD1000')?.status).toBe('tba')
+  })
+
+  it('全部组次都有时间且都撞 → 仍然是 conflict(没退路才叫冲突)', () => {
+    const hard = mkCourse('HARD1000', [
+      mkSection('S1', { meetings: [mkMeeting(1, 540, 600), mkMeeting(2, 540, 600)] }),
+    ])
+    const { rows } = run([hard])
+    expect(rows.find((r) => r.course.code === 'HARD1000')?.status).toBe('conflict')
+  })
+
   it('summary 各态计数与 rows 一致', () => {
     const free = mkCourse('BBBB1000', [mkSection('L1', { meetings: [mkMeeting(3, 540, 600)] })])
     const tba = mkCourse('EEEE1000', [mkSection('L1')])
