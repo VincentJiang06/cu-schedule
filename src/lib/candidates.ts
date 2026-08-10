@@ -102,10 +102,13 @@ export function evaluateCandidates(params: {
       const fitsAlternate = alternates.some((meetings) =>
         timed.some((combo) => !meetingsClash(comboMeetings(combo), meetings)),
       )
-      // 「冲突」是一句断言:这门课排不进去。对**同时开出待定时段组次**的课(全目录 516 门,
-      // 约 8%——如 ARCH7030 一个有时间 + 17 个待定),这句断言是假的:选那个待定组次就能修。
-      // 它的可用组次没有固定时间,所以真实状态是「时间待定」而不是「时间冲突」。两者在 UI 里
-      // 同样挡住「马上学」,这里只把一句错话换成对的话,不放宽任何限制。
+      // 「冲突」是一句断言:这门课排不进去。对**整组待定的备选组次**存在的课,这句断言是假的
+      // ——选那个组次就能修,只是没有固定时间。判据必须落在【组次】而不是【section】上:
+      // 多 component 的课(LEC 有时间 + WBL 待定)那个待定 section 是必须一起修的伴随组件,
+      // 不是退路,它的组次仍然带时间,所以 combos.length 不会大于 timed.length。真正踩到的是
+      // ARCH7030 那种同 component 的 18 个平行组次(1 个有时间 + 17 个待定)——全目录 11 门
+      // (0.2%,其中本科 2 门:GECC3130 / GECC4130)。
+      // conflict 与 tba 在 UI 里同样挡住「马上学」,所以这里只把一句错话换成对的话,不放宽限制。
       const hasUntimedFallback = combos.length > timed.length
       status = fitsAlternate ? 'rearrange' : hasUntimedFallback ? 'tba' : 'conflict'
       shown = timed[0]
