@@ -1,0 +1,807 @@
+{
+  "program_en": "B.Sc. in Mathematical Sciences",
+  "program_chi": "數學科學理學士",
+  "admission_year": "2026",
+  "faculty": "Others",
+  "degree": "B.Sc",
+  "total_units": 71,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHLT1001",
+    "CHLT1002",
+    "ELTU1001",
+    "ELTU2019",
+    "ELTU3018",
+    "ENGG1003",
+    "IMSC1038",
+    "IMSC1113",
+    "IMSC1122",
+    "IMSC2018",
+    "IMSC2028",
+    "IMSC2041",
+    "IMSC2048",
+    "IMSC2058",
+    "IMSC2068",
+    "IMSC2078",
+    "IMSC2230",
+    "IMSC2240",
+    "IMSC3250",
+    "IMSC3260",
+    "IMSC3270",
+    "IMSC3280",
+    "IMSC3290",
+    "IMSC3300",
+    "IMSC4011",
+    "IMSC4012",
+    "IMSC4021",
+    "IMSC4022",
+    "IMSC4031",
+    "IMSC4032",
+    "IMSC4041",
+    "IMSC4042",
+    "IMSC4051",
+    "IMSC4052",
+    "IMSC4061",
+    "IMSC4062",
+    "IMSC4800",
+    "IMSC4900",
+    "IMSC5011",
+    "IMSC5012",
+    "IMSC5021",
+    "IMSC5022",
+    "IMSC5031",
+    "IMSC5032",
+    "IMSC5041",
+    "IMSC5042",
+    "IMSC5051",
+    "IMSC5052",
+    "IMSC5061",
+    "IMSC5062",
+    "MATH2066",
+    "MATH2221",
+    "MATH3070",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3250",
+    "MATH3270",
+    "MATH3290",
+    "MATH3320",
+    "MATH3340",
+    "MATH4030",
+    "MATH4210",
+    "MATH4220",
+    "MATH4240",
+    "MATH4250",
+    "MATH5021",
+    "MATH5022",
+    "MATH5061",
+    "MATH5070",
+    "MATH5211",
+    "MATH5212",
+    "PHYS3011",
+    "PHYS3021",
+    "PHYS3031",
+    "PHYS3041",
+    "PHYS4031",
+    "UGCP1001",
+    "UGCP1002",
+    "UGFH1000",
+    "UGFN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "IMSC1113",
+        "codes": [
+          "IMSC1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC1122",
+        "codes": [
+          "IMSC1122"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC2028",
+        "codes": [
+          "IMSC2028"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC1038",
+        "codes": [
+          "IMSC1038"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2018",
+        "codes": [
+          "IMSC2018"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2048",
+        "codes": [
+          "IMSC2048"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2058",
+        "codes": [
+          "IMSC2058"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "MATH2066",
+        "codes": [
+          "MATH2066"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2068",
+        "codes": [
+          "IMSC2068"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2078",
+        "codes": [
+          "IMSC2078"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2240",
+        "codes": [
+          "IMSC2240"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC2230",
+        "codes": [
+          "IMSC2230"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "(a) IMSC1038,"
+      },
+      {
+        "raw": "IMSC4800",
+        "codes": [
+          "IMSC4800"
+        ],
+        "alt": false,
+        "from": "(b) Capstone"
+      },
+      {
+        "raw": "IMSC4900",
+        "codes": [
+          "IMSC4900"
+        ],
+        "alt": false,
+        "from": "(b) Capstone"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "IMSC2041",
+        "codes": [
+          "IMSC2041"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC2078",
+        "codes": [
+          "IMSC2078"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC2240",
+        "codes": [
+          "IMSC2240"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3250",
+        "codes": [
+          "IMSC3250"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5061",
+        "codes": [
+          "MATH5061"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3260",
+        "codes": [
+          "IMSC3260"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5070",
+        "codes": [
+          "MATH5070"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3270",
+        "codes": [
+          "IMSC3270"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4220",
+        "codes": [
+          "MATH4220"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5021",
+        "codes": [
+          "MATH5021"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5022",
+        "codes": [
+          "MATH5022"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3280",
+        "codes": [
+          "IMSC3280"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3290",
+        "codes": [
+          "IMSC3290"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5211",
+        "codes": [
+          "MATH5211"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH5212",
+        "codes": [
+          "MATH5212"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC3300",
+        "codes": [
+          "IMSC3300"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC4800",
+        "codes": [
+          "IMSC4800"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "IMSC4900",
+        "codes": [
+          "IMSC4900"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3250",
+        "codes": [
+          "MATH3250"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "3. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "IMSC1038,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 16
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 30
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "IMSC1113",
+          "alts": []
+        },
+        {
+          "code": "IMSC1122",
+          "alts": []
+        },
+        {
+          "code": "IMSC2028",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 38,
+          "note": null,
+          "courses": [
+            {
+              "code": "IMSC1038",
+              "alts": []
+            },
+            {
+              "code": "IMSC2018",
+              "alts": []
+            },
+            {
+              "code": "IMSC2048",
+              "alts": []
+            },
+            {
+              "code": "IMSC2058",
+              "alts": []
+            },
+            {
+              "code": "MATH2066",
+              "alts": []
+            },
+            {
+              "code": "IMSC2068",
+              "alts": []
+            },
+            {
+              "code": "IMSC2078",
+              "alts": []
+            },
+            {
+              "code": "IMSC2240",
+              "alts": []
+            },
+            {
+              "code": "IMSC2230",
+              "alts": []
+            },
+            {
+              "code": "MATH2221",
+              "alts": []
+            },
+            {
+              "code": "MATH3270",
+              "alts": []
+            },
+            {
+              "code": "PHYS3011",
+              "alts": []
+            },
+            {
+              "code": "PHYS3021",
+              "alts": []
+            },
+            {
+              "code": "PHYS3031",
+              "alts": []
+            },
+            {
+              "code": "PHYS4031",
+              "alts": []
+            },
+            {
+              "code": "PHYS3041",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Capstone course",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "IMSC4800",
+              "alts": []
+            },
+            {
+              "code": "IMSC4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 21,
+      "note": null,
+      "courses": [
+        {
+          "code": "IMSC2041",
+          "alts": []
+        },
+        {
+          "code": "IMSC2078",
+          "alts": []
+        },
+        {
+          "code": "IMSC2240",
+          "alts": []
+        },
+        {
+          "code": "IMSC3250",
+          "alts": []
+        },
+        {
+          "code": "MATH4030",
+          "alts": []
+        },
+        {
+          "code": "MATH5061",
+          "alts": []
+        },
+        {
+          "code": "IMSC3260",
+          "alts": []
+        },
+        {
+          "code": "MATH3070",
+          "alts": []
+        },
+        {
+          "code": "MATH5070",
+          "alts": []
+        },
+        {
+          "code": "IMSC3270",
+          "alts": []
+        },
+        {
+          "code": "MATH4220",
+          "alts": []
+        },
+        {
+          "code": "MATH5021",
+          "alts": []
+        },
+        {
+          "code": "MATH5022",
+          "alts": []
+        },
+        {
+          "code": "IMSC3280",
+          "alts": []
+        },
+        {
+          "code": "MATH4240",
+          "alts": []
+        },
+        {
+          "code": "IMSC3290",
+          "alts": []
+        },
+        {
+          "code": "MATH3230",
+          "alts": []
+        },
+        {
+          "code": "MATH3240",
+          "alts": []
+        },
+        {
+          "code": "MATH5211",
+          "alts": []
+        },
+        {
+          "code": "MATH5212",
+          "alts": []
+        },
+        {
+          "code": "IMSC3300",
+          "alts": []
+        },
+        {
+          "code": "MATH3320",
+          "alts": []
+        },
+        {
+          "code": "MATH3340",
+          "alts": []
+        },
+        {
+          "code": "IMSC4800",
+          "alts": []
+        },
+        {
+          "code": "IMSC4900",
+          "alts": []
+        },
+        {
+          "code": "MATH3215",
+          "alts": []
+        },
+        {
+          "code": "MATH3250",
+          "alts": []
+        },
+        {
+          "code": "MATH3290",
+          "alts": []
+        },
+        {
+          "code": "MATH4210",
+          "alts": []
+        },
+        {
+          "code": "MATH4250",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
+}

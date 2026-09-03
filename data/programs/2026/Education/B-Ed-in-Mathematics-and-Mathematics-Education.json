@@ -1,0 +1,873 @@
+{
+  "program_en": "B.Ed. in Mathematics and Mathematics Education",
+  "program_chi": "數學及數學教育教育學士",
+  "admission_year": "2026",
+  "faculty": "Faculty of Education",
+  "degree": "B.Ed",
+  "total_units": 102,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "BMED3011",
+    "BMED3021",
+    "BMED3031",
+    "BMED3051",
+    "BMED3071",
+    "BMED3081",
+    "BMED3091",
+    "BMED4510",
+    "BMED4520",
+    "BMED4910",
+    "BMED4920",
+    "DSPS3801",
+    "DSPS4801",
+    "DSPS4802",
+    "EDUC2120",
+    "EDUC2140",
+    "EDUC2240",
+    "EDUC3160",
+    "EDUC3201",
+    "EDUC3330",
+    "EDUC4030",
+    "EDUC4040",
+    "EDUC4360",
+    "EESC2009",
+    "EESC2019",
+    "EESC2119",
+    "EESC2129",
+    "EESC2517",
+    "EESC2909",
+    "EESC3130",
+    "EESC3417",
+    "EESC3522",
+    "EESC3530",
+    "EESC3900",
+    "EESC4119",
+    "EESC4129",
+    "EESC4810",
+    "EESC4820",
+    "EESC4909",
+    "LSCI1001",
+    "LSCI1002",
+    "LSCI2003",
+    "MATH1010",
+    "MATH1018",
+    "MATH1025",
+    "MATH1028",
+    "MATH1030",
+    "MATH1038",
+    "MATH1090",
+    "MATH1098",
+    "MATH2010",
+    "MATH2018",
+    "MATH2020",
+    "MATH2028",
+    "MATH2040",
+    "MATH2048",
+    "MATH2050",
+    "MATH2058",
+    "MATH2060",
+    "MATH2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2221",
+    "MATH2230",
+    "MATH3020",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3250",
+    "MATH3260",
+    "MATH3270",
+    "MATH3280",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3340",
+    "MATH3360",
+    "MATH4010",
+    "MATH4020",
+    "MATH4030",
+    "MATH4050",
+    "MATH4060",
+    "MATH4080",
+    "MATH4210",
+    "MATH4220",
+    "MATH4230",
+    "MATH4240",
+    "MATH4250",
+    "MATH4260",
+    "MATH4280",
+    "MATH4400",
+    "MATH4900"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "EDUC3330",
+        "codes": [
+          "EDUC3330"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH1025/1028",
+        "codes": [
+          "MATH1025",
+          "MATH1028"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH1090/1098",
+        "codes": [
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(i) 23 units of courses chosen from the"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(ii) 3 units of course chosen from"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(ii) 3 units of course chosen from"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(ii) 3 units of course chosen from"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(iii) 3 units of course chosen from"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "(iii) 3 units of course chosen from"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(iii) 3 units of course chosen from"
+      },
+      {
+        "raw": "BMED3011",
+        "codes": [
+          "BMED3011"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3021",
+        "codes": [
+          "BMED3021"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3031",
+        "codes": [
+          "BMED3031"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3051",
+        "codes": [
+          "BMED3051"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3071",
+        "codes": [
+          "BMED3071"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3081",
+        "codes": [
+          "BMED3081"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "BMED3091",
+        "codes": [
+          "BMED3091"
+        ],
+        "alt": false,
+        "from": "(b) Pedagogy[a]"
+      },
+      {
+        "raw": "EDUC2140",
+        "codes": [
+          "EDUC2140"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC2240",
+        "codes": [
+          "EDUC2240"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC3160",
+        "codes": [
+          "EDUC3160"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC3201",
+        "codes": [
+          "EDUC3201"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC4360",
+        "codes": [
+          "EDUC4360"
+        ],
+        "alt": false,
+        "from": "(c) Educational Studies"
+      },
+      {
+        "raw": "EDUC4030",
+        "codes": [
+          "EDUC4030"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
+        "raw": "EDUC4040",
+        "codes": [
+          "EDUC4040"
+        ],
+        "alt": false,
+        "from": "(d) Teaching Practice"
+      },
+      {
+        "raw": "BMED4510",
+        "codes": [
+          "BMED4510"
+        ],
+        "alt": false,
+        "from": "(e) Research Experience"
+      },
+      {
+        "raw": "BMED4520",
+        "codes": [
+          "BMED4520"
+        ],
+        "alt": false,
+        "from": "(e) Research Experience"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) 6 units of courses that have not"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) 6 units of courses that have not"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(a) 6 units of courses that have not"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(a) 6 units of courses that have not"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(a) 6 units of courses that have not"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(b) 9 units of courses that have not"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(b) 9 units of courses that have not"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Subject Knowledge",
+      "units": "29",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "23 units of courses chosen from the",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "3 units of course chosen from",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "3 units of course chosen from",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Pedagogy[a]",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Educational Studies",
+      "units": "12",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Teaching Practice",
+      "units": "10",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Research Experience",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "6 units of courses that have not",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "9 units of courses that have not",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": null,
+      "note": null,
+      "courses": [
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "EDUC3330",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": [
+            "MATH1018"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Subject Knowledge",
+          "units": 29,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "23 units of courses",
+              "courses": [
+                {
+                  "code": "MATH1030",
+                  "alts": [
+                    "MATH1038"
+                  ]
+                },
+                {
+                  "code": "MATH1025",
+                  "alts": [
+                    "MATH1028"
+                  ]
+                },
+                {
+                  "code": "MATH1090",
+                  "alts": [
+                    "MATH1098"
+                  ]
+                },
+                {
+                  "code": "MATH2010",
+                  "alts": [
+                    "MATH2018"
+                  ]
+                },
+                {
+                  "code": "MATH2020",
+                  "alts": [
+                    "MATH2028"
+                  ]
+                },
+                {
+                  "code": "MATH2040",
+                  "alts": [
+                    "MATH2048"
+                  ]
+                },
+                {
+                  "code": "MATH2050",
+                  "alts": [
+                    "MATH2058"
+                  ]
+                },
+                {
+                  "code": "MATH2221",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "3 units of course",
+              "courses": [
+                {
+                  "code": "MATH2060",
+                  "alts": [
+                    "MATH2068"
+                  ]
+                },
+                {
+                  "code": "MATH2070",
+                  "alts": [
+                    "MATH2078"
+                  ]
+                },
+                {
+                  "code": "MATH2230",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "3 units of course",
+              "courses": [
+                {
+                  "code": "MATH3270",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3290",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Pedagogy",
+          "units": 21,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMED3011",
+              "alts": []
+            },
+            {
+              "code": "BMED3021",
+              "alts": []
+            },
+            {
+              "code": "BMED3031",
+              "alts": []
+            },
+            {
+              "code": "BMED3051",
+              "alts": []
+            },
+            {
+              "code": "BMED3071",
+              "alts": []
+            },
+            {
+              "code": "BMED3081",
+              "alts": []
+            },
+            {
+              "code": "BMED3091",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Educational Studies",
+          "units": 12,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC2140",
+              "alts": []
+            },
+            {
+              "code": "EDUC2240",
+              "alts": []
+            },
+            {
+              "code": "EDUC3160",
+              "alts": []
+            },
+            {
+              "code": "EDUC3201",
+              "alts": []
+            },
+            {
+              "code": "EDUC4360",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Teaching Practice",
+          "units": 10,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC4030",
+              "alts": []
+            },
+            {
+              "code": "EDUC4040",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "Research Experience",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "BMED4510",
+              "alts": []
+            },
+            {
+              "code": "BMED4520",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 15,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "6 units of courses that have not",
+          "courses": [
+            {
+              "code": "MATH2060",
+              "alts": [
+                "MATH2068"
+              ]
+            },
+            {
+              "code": "MATH2070",
+              "alts": [
+                "MATH2078"
+              ]
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
+            },
+            {
+              "code": "MATH4400",
+              "alts": []
+            },
+            {
+              "code": "MATH4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "9 units of courses that have not been used to fulfill requirements of 2(a) and 3(a), chosen according to either (I) or (II) below: (I) 9 units of MATH courses at 3000 or above level except MATH4400 and 4900 (II) 9 units of courses chosen from one of the following groups of subject areas Group 1: CHEM, EESC, LSCI, PHYS Group 2: DSPS, RMSC, STAT Group 3: DOTE, ECON Group 4: AIST, CSCI, IERG",
+          "courses": [
+            {
+              "code": "MATH4400",
+              "alts": []
+            },
+            {
+              "code": "MATH4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

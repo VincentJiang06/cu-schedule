@@ -4,7 +4,7 @@
  * typed lookups: type-ahead search over programme names, and the set of course keys
  * a programme requires (for "本专业需要"-style filtering).
  *
- * Data source: public/data/programs.json  (UG, admission years 2023-2025).
+ * Data source: public/data/programs.json  (UG; the admission years the scrape covers).
  * Course codes are plain 8-char SUBJ#### tokens; helpers normalize them to the same
  * course key (courseKey.ts) the catalog uses, so they match Course.key directly.
  *
@@ -83,7 +83,7 @@ export type ProgramParseStatus = 'full' | 'prose_only' | 'partial' | 'empty'
 export type Program = {
   /** Stable id: `${year}:${name_en}`, e.g. "2024:B.Eng. in Computer Engineering". */
   id: string
-  /** Admission year: "2023" | "2024" | "2025". */
+  /** Admission year the study scheme belongs to, e.g. "2026". */
   year: string
   name_en: string
   name_chi: string
@@ -154,9 +154,32 @@ export function getProgram(programs: Program[], id: string): Program | undefined
 }
 
 /**
+ * The admission year a search is actually scoped to: `year` itself when the programme
+ * data covers it, otherwise the nearest year it does cover (ties go to the later one).
+ * A cohort whose study scheme is not published yet — or one older than the scraped
+ * range — therefore still gets a full single-year candidate list instead of an empty
+ * dropdown. Returns undefined when no year was asked for (or the bundle is empty), which
+ * means "don't scope at all".
+ */
+export function nearestDataYear(programs: Program[], year?: string): string | undefined {
+  if (!year) return undefined
+  const target = Number(year)
+  if (!Number.isFinite(target)) return undefined
+  const years = listYears(programs) // ascending, so `<=` below keeps the later of a tie
+  if (years.includes(year)) return year
+  return years.reduce<string | undefined>(
+    (best, y) =>
+      best === undefined || Math.abs(Number(y) - target) <= Math.abs(Number(best) - target) ? y : best,
+    undefined,
+  )
+}
+
+/**
  * Type-ahead search over programme names (English + Chinese). Scores an exact/prefix
  * name match above a word-start above a loose substring, mirroring the course search.
- * Pass `year` to scope to one admission year (recommended once the user picked a year).
+ * Pass `year` to scope to one admission year (recommended once the user picked a year);
+ * a year the data doesn't cover falls back to the nearest one it does (nearestDataYear),
+ * never to an empty result.
  */
 export type SubjectTitle = { code: string; title: string }
 
@@ -165,7 +188,8 @@ export function searchPrograms(
   query: string,
   opts: { year?: string; limit?: number; subjects?: SubjectTitle[] } = {},
 ): Program[] {
-  const pool = opts.year ? programs.filter((p) => p.year === opts.year) : programs
+  const scopedYear = nearestDataYear(programs, opts.year)
+  const pool = scopedYear ? programs.filter((p) => p.year === scopedYear) : programs
   const needle = query.trim().toLowerCase()
   if (!needle) return pool.slice(0, opts.limit ?? 8)
   const subjects = opts.subjects ?? []

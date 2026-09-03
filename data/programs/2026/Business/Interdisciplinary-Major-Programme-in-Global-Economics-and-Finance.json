@@ -1,0 +1,1814 @@
+{
+  "program_en": "Interdisciplinary Major Programme in Global Economics and Finance",
+  "program_chi": "環球經濟與金融跨學科主修課程",
+  "admission_year": "2026",
+  "faculty": "Faculty of Business Administration",
+  "degree": "Interdisciplinary Major Programme",
+  "total_units": 67,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT1111",
+    "ACCT2151",
+    "ACCT3151",
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2011",
+    "DOTE2021",
+    "DOTE3010",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "ECON1101",
+    "ECON1111",
+    "ECON2011",
+    "ECON2021",
+    "ECON2121",
+    "ECON3011",
+    "ECON3021",
+    "ECON3121",
+    "ECON3140",
+    "ECON3150",
+    "ECON3160",
+    "ECON3230",
+    "ECON3240",
+    "ECON3320",
+    "ECON3350",
+    "ECON3420",
+    "ECON3430",
+    "ECON3460",
+    "ECON3530",
+    "ECON3570",
+    "ECON3580",
+    "ECON3590",
+    "ECON3620",
+    "ECON4110",
+    "ECON4120",
+    "ECON4130",
+    "ECON4430",
+    "ECON4470",
+    "FINA2010",
+    "FINA3020",
+    "FINA3030",
+    "FINA3040",
+    "FINA3060",
+    "FINA3070",
+    "FINA3080",
+    "FINA3090",
+    "FINA3310",
+    "FINA3320",
+    "FINA3330",
+    "FINA3340",
+    "FINA3350",
+    "FINA3360",
+    "FINA3370",
+    "FINA3398",
+    "FINA3399",
+    "FINA3420",
+    "FINA4010",
+    "FINA4020",
+    "FINA4030",
+    "FINA4040",
+    "FINA4050",
+    "FINA4060",
+    "FINA4110",
+    "FINA4120",
+    "FINA4130",
+    "FINA4160",
+    "FINA4310",
+    "FINA4320",
+    "FINA4330",
+    "FINA4340",
+    "FINA4350",
+    "FINA4370",
+    "FINA4380",
+    "FINA4400",
+    "FINA4410",
+    "FINA4420",
+    "FINA4430",
+    "GLEF3010",
+    "GLEF3020",
+    "GLEF3030",
+    "GLEF3040",
+    "GLEF3050",
+    "GLEF4010",
+    "GLEF4020",
+    "GLEF4070",
+    "GLEF4080",
+    "GLEF4090",
+    "GLSD1001",
+    "GPAD1020",
+    "GPAD1076",
+    "GPAD1077",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "IBBA3040",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "PSYC1000",
+    "PSYC1630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ACCT1111",
+        "codes": [
+          "ACCT1111"
+        ],
+        "alt": false,
+        "from": "(a) ACCT1111"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "(b) DOTE1030 or"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "(b) DOTE1030 or"
+      },
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "(c) Any one course"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "2. Faculty of"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "2. Faculty of"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "2. Faculty of"
+      },
+      {
+        "raw": "ECON1101",
+        "codes": [
+          "ECON1101"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "ECON1111",
+        "codes": [
+          "ECON1111"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "FINA3020",
+        "codes": [
+          "FINA3020"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "GLEF3010",
+        "codes": [
+          "GLEF3010"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "GLEF3020",
+        "codes": [
+          "GLEF3020"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "GLEF3030",
+        "codes": [
+          "GLEF3030"
+        ],
+        "alt": false,
+        "from": "(a) ECON1101,"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "(b) DOTE1040 or"
+      },
+      {
+        "raw": "ECON2021",
+        "codes": [
+          "ECON2021"
+        ],
+        "alt": false,
+        "from": "(b) DOTE1040 or"
+      },
+      {
+        "raw": "DOTE2011",
+        "codes": [
+          "DOTE2011"
+        ],
+        "alt": false,
+        "from": "(c) DOTE2011# or ECON2121#"
+      },
+      {
+        "raw": "ECON2121",
+        "codes": [
+          "ECON2121"
+        ],
+        "alt": false,
+        "from": "(c) DOTE2011# or ECON2121#"
+      },
+      {
+        "raw": "DOTE2021",
+        "codes": [
+          "DOTE2021"
+        ],
+        "alt": false,
+        "from": "(d) DOTE2021# or ECON3121#"
+      },
+      {
+        "raw": "ECON3121",
+        "codes": [
+          "ECON3121"
+        ],
+        "alt": false,
+        "from": "(d) DOTE2021# or ECON3121#"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "ECON3011",
+        "codes": [
+          "ECON3011"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3021",
+        "codes": [
+          "ECON3021"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3140",
+        "codes": [
+          "ECON3140"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3150",
+        "codes": [
+          "ECON3150"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3160",
+        "codes": [
+          "ECON3160"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3230",
+        "codes": [
+          "ECON3230"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3240",
+        "codes": [
+          "ECON3240"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3320",
+        "codes": [
+          "ECON3320"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3350",
+        "codes": [
+          "ECON3350"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3420",
+        "codes": [
+          "ECON3420"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3430",
+        "codes": [
+          "ECON3430"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3460",
+        "codes": [
+          "ECON3460"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3530",
+        "codes": [
+          "ECON3530"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3570",
+        "codes": [
+          "ECON3570"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3580",
+        "codes": [
+          "ECON3580"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3590",
+        "codes": [
+          "ECON3590"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON3620",
+        "codes": [
+          "ECON3620"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4110",
+        "codes": [
+          "ECON4110"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4120",
+        "codes": [
+          "ECON4120"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4130",
+        "codes": [
+          "ECON4130"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4430",
+        "codes": [
+          "ECON4430"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ECON4470",
+        "codes": [
+          "ECON4470"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "GLEF4010",
+        "codes": [
+          "GLEF4010"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "GLEF4020",
+        "codes": [
+          "GLEF4020"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "GLEF4090",
+        "codes": [
+          "GLEF4090"
+        ],
+        "alt": false,
+        "from": "(a) Economics (at least 9 units from the following)"
+      },
+      {
+        "raw": "ACCT2151",
+        "codes": [
+          "ACCT2151"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "ACCT3151",
+        "codes": [
+          "ACCT3151"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3030",
+        "codes": [
+          "FINA3030"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3040",
+        "codes": [
+          "FINA3040"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3060",
+        "codes": [
+          "FINA3060"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3070",
+        "codes": [
+          "FINA3070"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3090",
+        "codes": [
+          "FINA3090"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3310",
+        "codes": [
+          "FINA3310"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3320",
+        "codes": [
+          "FINA3320"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3330",
+        "codes": [
+          "FINA3330"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3340",
+        "codes": [
+          "FINA3340"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3350",
+        "codes": [
+          "FINA3350"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3360",
+        "codes": [
+          "FINA3360"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3370",
+        "codes": [
+          "FINA3370"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3398",
+        "codes": [
+          "FINA3398"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3399",
+        "codes": [
+          "FINA3399"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA3420",
+        "codes": [
+          "FINA3420"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4010",
+        "codes": [
+          "FINA4010"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4020",
+        "codes": [
+          "FINA4020"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4030",
+        "codes": [
+          "FINA4030"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4040",
+        "codes": [
+          "FINA4040"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4050",
+        "codes": [
+          "FINA4050"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4060",
+        "codes": [
+          "FINA4060"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4130",
+        "codes": [
+          "FINA4130"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4160",
+        "codes": [
+          "FINA4160"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4310",
+        "codes": [
+          "FINA4310"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4320",
+        "codes": [
+          "FINA4320"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4330",
+        "codes": [
+          "FINA4330"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4340",
+        "codes": [
+          "FINA4340"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4350",
+        "codes": [
+          "FINA4350"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4370",
+        "codes": [
+          "FINA4370"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4380",
+        "codes": [
+          "FINA4380"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4400",
+        "codes": [
+          "FINA4400"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4410",
+        "codes": [
+          "FINA4410"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4420",
+        "codes": [
+          "FINA4420"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "FINA4430",
+        "codes": [
+          "FINA4430"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "GLEF3040",
+        "codes": [
+          "GLEF3040"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "GLEF3050",
+        "codes": [
+          "GLEF3050"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "(b) Finance and Business (at least 9 units from the following, including"
+      },
+      {
+        "raw": "GLEF4070",
+        "codes": [
+          "GLEF4070"
+        ],
+        "alt": false,
+        "from": "(c) Capstone (3 units from the following)"
+      },
+      {
+        "raw": "GLEF4080",
+        "codes": [
+          "GLEF4080"
+        ],
+        "alt": false,
+        "from": "(c) Capstone (3 units from the following)"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ACCT1111",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "DOTE1030 or",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Any one course",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Faculty of",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "ECON1101,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "DOTE1040 or",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "DOTE2011# or ECON2121#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "DOTE2021# or ECON3121#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Overseas Experience",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Economics (at least 9 units from the following)",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 25
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Finance and Business (at least 9 units from the following, including",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 43
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Capstone (3 units from the following)",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ACCT1111",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE1030",
+              "alts": []
+            },
+            {
+              "code": "ECON2011",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Any one course",
+          "courses": [
+            {
+              "code": "ARCH1001",
+              "alts": []
+            },
+            {
+              "code": "ARCH1002",
+              "alts": []
+            },
+            {
+              "code": "ARCH1003",
+              "alts": []
+            },
+            {
+              "code": "COMM1110",
+              "alts": []
+            },
+            {
+              "code": "COMM1120",
+              "alts": []
+            },
+            {
+              "code": "COMM1150",
+              "alts": []
+            },
+            {
+              "code": "COMM1500",
+              "alts": []
+            },
+            {
+              "code": "DSPS1001",
+              "alts": []
+            },
+            {
+              "code": "DSPS1003",
+              "alts": []
+            },
+            {
+              "code": "DSPS1004",
+              "alts": []
+            },
+            {
+              "code": "GLSD1001",
+              "alts": []
+            },
+            {
+              "code": "GPAD1020",
+              "alts": []
+            },
+            {
+              "code": "GPAD1076",
+              "alts": []
+            },
+            {
+              "code": "GPAD1077",
+              "alts": []
+            },
+            {
+              "code": "GRMD1302",
+              "alts": []
+            },
+            {
+              "code": "GRMD1401",
+              "alts": []
+            },
+            {
+              "code": "GRMD1402",
+              "alts": []
+            },
+            {
+              "code": "PSYC1000",
+              "alts": []
+            },
+            {
+              "code": "PSYC1630",
+              "alts": []
+            },
+            {
+              "code": "SOCI1001",
+              "alts": []
+            },
+            {
+              "code": "SOCI1201",
+              "alts": []
+            },
+            {
+              "code": "SOSC1001",
+              "alts": []
+            },
+            {
+              "code": "SOSC1002",
+              "alts": []
+            },
+            {
+              "code": "SOSC1003",
+              "alts": []
+            },
+            {
+              "code": "SOWK1001",
+              "alts": []
+            },
+            {
+              "code": "SOWK1113",
+              "alts": []
+            },
+            {
+              "code": "SOWK1114",
+              "alts": []
+            },
+            {
+              "code": "URSP1001",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "2.",
+      "title": "Faculty of Business Administration Co-curricular Courses",
+      "units": 3,
+      "note": null,
+      "courses": [
+        {
+          "code": "IBBA3040",
+          "alts": []
+        },
+        {
+          "code": "MGNT2511",
+          "alts": []
+        },
+        {
+          "code": "MGNT2512",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 31,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ECON1101",
+              "alts": []
+            },
+            {
+              "code": "ECON1111",
+              "alts": []
+            },
+            {
+              "code": "FINA2010",
+              "alts": []
+            },
+            {
+              "code": "FINA3020",
+              "alts": []
+            },
+            {
+              "code": "GLEF3010",
+              "alts": []
+            },
+            {
+              "code": "GLEF3020",
+              "alts": []
+            },
+            {
+              "code": "GLEF3030",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE1040",
+              "alts": []
+            },
+            {
+              "code": "ECON2021",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE2011",
+              "alts": []
+            },
+            {
+              "code": "ECON2121",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "DOTE2021",
+              "alts": []
+            },
+            {
+              "code": "ECON3121",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": ": Students are required to complete at least one of the following: (1) a regular term-time academic exchange (organized by OAL or the Colleges); (2) a summer/winter study abroad programme. Students should complete 3 units of business-related courses from (1) or (2) with prior approval from the major programme. Academic results obtained will not be included in the calculation of the Major GPA. Under special circumstances, students who are unable to fulfil this requirement, must make up for the shortfall in units by completing appropriate courses at CUHK, subject to the approval of the major programme.",
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 24,
+      "note": "The minimum number of units is 24.",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Economics (at least 9 units from the following)",
+          "courses": [
+            {
+              "code": "ECON3011",
+              "alts": []
+            },
+            {
+              "code": "ECON3021",
+              "alts": []
+            },
+            {
+              "code": "ECON3140",
+              "alts": []
+            },
+            {
+              "code": "ECON3150",
+              "alts": []
+            },
+            {
+              "code": "ECON3160",
+              "alts": []
+            },
+            {
+              "code": "ECON3230",
+              "alts": []
+            },
+            {
+              "code": "ECON3240",
+              "alts": []
+            },
+            {
+              "code": "ECON3320",
+              "alts": []
+            },
+            {
+              "code": "ECON3350",
+              "alts": []
+            },
+            {
+              "code": "ECON3420",
+              "alts": []
+            },
+            {
+              "code": "ECON3430",
+              "alts": []
+            },
+            {
+              "code": "ECON3460",
+              "alts": []
+            },
+            {
+              "code": "ECON3530",
+              "alts": []
+            },
+            {
+              "code": "ECON3570",
+              "alts": []
+            },
+            {
+              "code": "ECON3580",
+              "alts": []
+            },
+            {
+              "code": "ECON3590",
+              "alts": []
+            },
+            {
+              "code": "ECON3620",
+              "alts": []
+            },
+            {
+              "code": "ECON4110",
+              "alts": []
+            },
+            {
+              "code": "ECON4120",
+              "alts": []
+            },
+            {
+              "code": "ECON4130",
+              "alts": []
+            },
+            {
+              "code": "ECON4430",
+              "alts": []
+            },
+            {
+              "code": "ECON4470",
+              "alts": []
+            },
+            {
+              "code": "GLEF4010",
+              "alts": []
+            },
+            {
+              "code": "GLEF4020",
+              "alts": []
+            },
+            {
+              "code": "GLEF4090",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Finance and Business (at least 9 units from the following, including at least 9 units of FINA courses, with no more than six one-unit FINA courses)",
+          "courses": [
+            {
+              "code": "ACCT2151",
+              "alts": []
+            },
+            {
+              "code": "ACCT3151",
+              "alts": []
+            },
+            {
+              "code": "DOTE3010",
+              "alts": []
+            },
+            {
+              "code": "FINA3030",
+              "alts": []
+            },
+            {
+              "code": "FINA3040",
+              "alts": []
+            },
+            {
+              "code": "FINA3060",
+              "alts": []
+            },
+            {
+              "code": "FINA3070",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "FINA3090",
+              "alts": []
+            },
+            {
+              "code": "FINA3310",
+              "alts": []
+            },
+            {
+              "code": "FINA3320",
+              "alts": []
+            },
+            {
+              "code": "FINA3330",
+              "alts": []
+            },
+            {
+              "code": "FINA3340",
+              "alts": []
+            },
+            {
+              "code": "FINA3350",
+              "alts": []
+            },
+            {
+              "code": "FINA3360",
+              "alts": []
+            },
+            {
+              "code": "FINA3370",
+              "alts": []
+            },
+            {
+              "code": "FINA3398",
+              "alts": []
+            },
+            {
+              "code": "FINA3399",
+              "alts": []
+            },
+            {
+              "code": "FINA3420",
+              "alts": []
+            },
+            {
+              "code": "FINA4010",
+              "alts": []
+            },
+            {
+              "code": "FINA4020",
+              "alts": []
+            },
+            {
+              "code": "FINA4030",
+              "alts": []
+            },
+            {
+              "code": "FINA4040",
+              "alts": []
+            },
+            {
+              "code": "FINA4050",
+              "alts": []
+            },
+            {
+              "code": "FINA4060",
+              "alts": []
+            },
+            {
+              "code": "FINA4110",
+              "alts": []
+            },
+            {
+              "code": "FINA4120",
+              "alts": []
+            },
+            {
+              "code": "FINA4130",
+              "alts": []
+            },
+            {
+              "code": "FINA4160",
+              "alts": []
+            },
+            {
+              "code": "FINA4310",
+              "alts": []
+            },
+            {
+              "code": "FINA4320",
+              "alts": []
+            },
+            {
+              "code": "FINA4330",
+              "alts": []
+            },
+            {
+              "code": "FINA4340",
+              "alts": []
+            },
+            {
+              "code": "FINA4350",
+              "alts": []
+            },
+            {
+              "code": "FINA4370",
+              "alts": []
+            },
+            {
+              "code": "FINA4380",
+              "alts": []
+            },
+            {
+              "code": "FINA4400",
+              "alts": []
+            },
+            {
+              "code": "FINA4410",
+              "alts": []
+            },
+            {
+              "code": "FINA4420",
+              "alts": []
+            },
+            {
+              "code": "FINA4430",
+              "alts": []
+            },
+            {
+              "code": "GLEF3040",
+              "alts": []
+            },
+            {
+              "code": "GLEF3050",
+              "alts": []
+            },
+            {
+              "code": "MGNT2611",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Capstone (3 units from the following)",
+          "courses": [
+            {
+              "code": "GLEF4070",
+              "alts": []
+            },
+            {
+              "code": "GLEF4080",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

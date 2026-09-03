@@ -1,0 +1,963 @@
+{
+  "program_en": "B.S.Sc. in Diplomacy and International Studies",
+  "program_chi": "外交與國際事務社會科學學士",
+  "admission_year": "2026",
+  "faculty": "Others",
+  "degree": "B.S.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ARCH1001",
+    "ARCH1002",
+    "ARCH1003",
+    "CHES3006",
+    "COMM1110",
+    "COMM1120",
+    "COMM1150",
+    "COMM1500",
+    "DIPL1001",
+    "DIPL1002",
+    "DIPL1003",
+    "DIPL2001",
+    "DIPL2002",
+    "DIPL2003",
+    "DIPL3001",
+    "DIPL3002",
+    "DIPL4001",
+    "DSPS1001",
+    "DSPS1003",
+    "DSPS1004",
+    "DSPS2320",
+    "ECON1210",
+    "ECON1220",
+    "ECON2011",
+    "GDRS3999",
+    "GLSD1001",
+    "GLSD3201",
+    "GLSD3301",
+    "GLSD3403",
+    "GLSD3404",
+    "GLSD3405",
+    "GLSD4402",
+    "GPAD1020",
+    "GPAD1066",
+    "GPAD1076",
+    "GPAD1077",
+    "GPAD2185",
+    "GPAD2375",
+    "GPAD3161",
+    "GPAD3260",
+    "GRMD1302",
+    "GRMD1401",
+    "GRMD1402",
+    "LAWS1209",
+    "LAWS1219",
+    "LAWS1229",
+    "LAWS2009",
+    "LAWS3209",
+    "PSYC1000",
+    "PSYC1630",
+    "SOCI1001",
+    "SOCI1201",
+    "SOSC1001",
+    "SOSC1002",
+    "SOSC1003",
+    "SOWK1001",
+    "SOWK1113",
+    "SOWK1114",
+    "URSP1001"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ARCH1001",
+        "codes": [
+          "ARCH1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1002",
+        "codes": [
+          "ARCH1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ARCH1003",
+        "codes": [
+          "ARCH1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1110",
+        "codes": [
+          "COMM1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1120",
+        "codes": [
+          "COMM1120"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1150",
+        "codes": [
+          "COMM1150"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "COMM1500",
+        "codes": [
+          "COMM1500"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1001",
+        "codes": [
+          "DSPS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1003",
+        "codes": [
+          "DSPS1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DSPS1004",
+        "codes": [
+          "DSPS1004"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON1220",
+        "codes": [
+          "ECON1220"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ECON2011",
+        "codes": [
+          "ECON2011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GLSD1001",
+        "codes": [
+          "GLSD1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1020",
+        "codes": [
+          "GPAD1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1076",
+        "codes": [
+          "GPAD1076"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GPAD1077",
+        "codes": [
+          "GPAD1077"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1302",
+        "codes": [
+          "GRMD1302"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1402",
+        "codes": [
+          "GRMD1402"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1000",
+        "codes": [
+          "PSYC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PSYC1630",
+        "codes": [
+          "PSYC1630"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1001",
+        "codes": [
+          "SOCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOCI1201",
+        "codes": [
+          "SOCI1201"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1001",
+        "codes": [
+          "SOSC1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1002",
+        "codes": [
+          "SOSC1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOSC1003",
+        "codes": [
+          "SOSC1003"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1001",
+        "codes": [
+          "SOWK1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1113",
+        "codes": [
+          "SOWK1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "SOWK1114",
+        "codes": [
+          "SOWK1114"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "URSP1001",
+        "codes": [
+          "URSP1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DIPL1001",
+        "codes": [
+          "DIPL1001"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "ECON1210",
+        "codes": [
+          "ECON1210"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "DIPL3001",
+        "codes": [
+          "DIPL3001"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "DIPL1002",
+        "codes": [
+          "DIPL1002"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "GLSD4402",
+        "codes": [
+          "GLSD4402"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "LAWS1209",
+        "codes": [
+          "LAWS1209"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "LAWS2009",
+        "codes": [
+          "LAWS2009"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "LAWS3209",
+        "codes": [
+          "LAWS3209"
+        ],
+        "alt": false,
+        "from": "(a) Core Courses"
+      },
+      {
+        "raw": "DIPL2001",
+        "codes": [
+          "DIPL2001"
+        ],
+        "alt": false,
+        "from": "(c) Summer Course"
+      },
+      {
+        "raw": "DIPL3002",
+        "codes": [
+          "DIPL3002"
+        ],
+        "alt": false,
+        "from": "(d) Internship"
+      },
+      {
+        "raw": "DIPL4001",
+        "codes": [
+          "DIPL4001"
+        ],
+        "alt": false,
+        "from": "(e) Capstone"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "DIPL2002",
+        "codes": [
+          "DIPL2002"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GDRS3999",
+        "codes": [
+          "GDRS3999"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GLSD3201",
+        "codes": [
+          "GLSD3201"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "DIPL2003",
+        "codes": [
+          "DIPL2003"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GLSD3403",
+        "codes": [
+          "GLSD3403"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GLSD3404",
+        "codes": [
+          "GLSD3404"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GLSD3405",
+        "codes": [
+          "GLSD3405"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GPAD1066",
+        "codes": [
+          "GPAD1066"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GPAD3161",
+        "codes": [
+          "GPAD3161"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GPAD3260",
+        "codes": [
+          "GPAD3260"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "CHES3006",
+        "codes": [
+          "CHES3006"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "DIPL1003",
+        "codes": [
+          "DIPL1003"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "DSPS2320",
+        "codes": [
+          "DSPS2320"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GPAD2185",
+        "codes": [
+          "GPAD2185"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GPAD2375",
+        "codes": [
+          "GPAD2375"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "GLSD3301",
+        "codes": [
+          "GLSD3301"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "LAWS1219",
+        "codes": [
+          "LAWS1219"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      },
+      {
+        "raw": "LAWS1229",
+        "codes": [
+          "LAWS1229"
+        ],
+        "alt": false,
+        "from": "3. Elective"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 31
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Core Courses",
+      "units": "24",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Language Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Summer Course",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Internship",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Capstone",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Exchange",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": "Any three courses, offered by three different Programmes/ Departments/Schools",
+      "courses": [
+        {
+          "code": "ARCH1001",
+          "alts": []
+        },
+        {
+          "code": "ARCH1002",
+          "alts": []
+        },
+        {
+          "code": "ARCH1003",
+          "alts": []
+        },
+        {
+          "code": "COMM1110",
+          "alts": []
+        },
+        {
+          "code": "COMM1120",
+          "alts": []
+        },
+        {
+          "code": "COMM1150",
+          "alts": []
+        },
+        {
+          "code": "COMM1500",
+          "alts": []
+        },
+        {
+          "code": "DSPS1001",
+          "alts": []
+        },
+        {
+          "code": "DSPS1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS1004",
+          "alts": []
+        },
+        {
+          "code": "ECON1210",
+          "alts": []
+        },
+        {
+          "code": "ECON1220",
+          "alts": []
+        },
+        {
+          "code": "ECON2011",
+          "alts": []
+        },
+        {
+          "code": "GLSD1001",
+          "alts": []
+        },
+        {
+          "code": "GPAD1020",
+          "alts": []
+        },
+        {
+          "code": "GPAD1076",
+          "alts": []
+        },
+        {
+          "code": "GPAD1077",
+          "alts": []
+        },
+        {
+          "code": "GRMD1302",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "GRMD1402",
+          "alts": []
+        },
+        {
+          "code": "PSYC1000",
+          "alts": []
+        },
+        {
+          "code": "PSYC1630",
+          "alts": []
+        },
+        {
+          "code": "SOCI1001",
+          "alts": []
+        },
+        {
+          "code": "SOCI1201",
+          "alts": []
+        },
+        {
+          "code": "SOSC1001",
+          "alts": []
+        },
+        {
+          "code": "SOSC1002",
+          "alts": []
+        },
+        {
+          "code": "SOSC1003",
+          "alts": []
+        },
+        {
+          "code": "SOWK1001",
+          "alts": []
+        },
+        {
+          "code": "SOWK1113",
+          "alts": []
+        },
+        {
+          "code": "SOWK1114",
+          "alts": []
+        },
+        {
+          "code": "URSP1001",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Core Courses",
+          "units": 24,
+          "note": null,
+          "courses": [
+            {
+              "code": "DIPL1001",
+              "alts": []
+            },
+            {
+              "code": "ECON1210",
+              "alts": []
+            },
+            {
+              "code": "DIPL3001",
+              "alts": []
+            },
+            {
+              "code": "DIPL1002",
+              "alts": []
+            },
+            {
+              "code": "GLSD4402",
+              "alts": []
+            },
+            {
+              "code": "LAWS1209",
+              "alts": []
+            },
+            {
+              "code": "LAWS2009",
+              "alts": []
+            },
+            {
+              "code": "LAWS3209",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Language Courses",
+          "units": 6,
+          "note": "Students are required to take 6 units of language courses other than those on Chinese (Cantonese/Putonghua), English and Hong Kong Sign Language. Non-local students whose native language is not Chinese or English must take courses on a language that is approved by the Programme Director.",
+          "courses": [],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "Summer Course",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "DIPL2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Internship",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "DIPL3002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "Capstone Course",
+          "units": 3,
+          "note": null,
+          "courses": [
+            {
+              "code": "DIPL4001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(f)",
+          "title": "Exchange Studies",
+          "units": 9,
+          "note": "Students are required to study outside Hong Kong for one academic term in a partner institution via an exchange programme administered by the Programme, the Office of Academic Links or the Colleges, and complete at least 9 units of courses related to Diplomacy/International Relations/Law approved by the Programme Director. Grades obtained in these courses are not included in the calculation of GPA. Students who are unable to obtain the required units from partner institutions must make up the shortfall by completing appropriate courses at CUHK, subject to the approval of the Programme Director.",
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 12,
+      "note": "12 units of courses chosen from the following, with at least 3 units of courses from each area of electives and a minimum of two courses at 2000 or above level from Areas 1 to 3: Area 1: Intercultural and Interpersonal Competence DIPL2002, GDRS3999#, GLSD3201# Area 2: Area Studies DIPL2003, GLSD3403#, 3404#, 3405#, GPAD1066, 3161#, 3260# Area 3: Diplomatic Policy Analysis and International Cooperation CHES3006#, DIPL1003, DSPS2320#, GPAD2185#, 2375# Area 4: International Law and International Dispute Resolution GLSD3301#, LAWS1219#, 1229#",
+      "courses": [
+        {
+          "code": "DIPL2002",
+          "alts": []
+        },
+        {
+          "code": "GDRS3999",
+          "alts": []
+        },
+        {
+          "code": "GLSD3201",
+          "alts": []
+        },
+        {
+          "code": "DIPL2003",
+          "alts": []
+        },
+        {
+          "code": "GLSD3403",
+          "alts": []
+        },
+        {
+          "code": "GLSD3404",
+          "alts": []
+        },
+        {
+          "code": "GLSD3405",
+          "alts": []
+        },
+        {
+          "code": "GPAD1066",
+          "alts": []
+        },
+        {
+          "code": "GPAD3161",
+          "alts": []
+        },
+        {
+          "code": "GPAD3260",
+          "alts": []
+        },
+        {
+          "code": "CHES3006",
+          "alts": []
+        },
+        {
+          "code": "DIPL1003",
+          "alts": []
+        },
+        {
+          "code": "DSPS2320",
+          "alts": []
+        },
+        {
+          "code": "GPAD2185",
+          "alts": []
+        },
+        {
+          "code": "GPAD2375",
+          "alts": []
+        },
+        {
+          "code": "GLSD3301",
+          "alts": []
+        },
+        {
+          "code": "LAWS1219",
+          "alts": []
+        },
+        {
+          "code": "LAWS1229",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
+}

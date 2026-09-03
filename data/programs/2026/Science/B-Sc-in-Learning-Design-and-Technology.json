@@ -1,0 +1,741 @@
+{
+  "program_en": "B.Sc. in Learning Design and Technology",
+  "program_chi": "學習設計與科技理學士",
+  "admission_year": "2026",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 72,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "AIST2010",
+    "AIST3510",
+    "CHEM1070",
+    "CHEM1072",
+    "CSCI1130",
+    "CSCI2040",
+    "CSCI2100",
+    "CSCI2720",
+    "CSCI3170",
+    "CSCI3230",
+    "CSCI3310",
+    "EDUC2120",
+    "EDUC2140",
+    "EDUC3160",
+    "EDUC3330",
+    "EDUC4360",
+    "ENGG1110",
+    "ENGG1920",
+    "ENGG2440",
+    "LDTE1300",
+    "LDTE2100",
+    "LDTE3100",
+    "LDTE3110",
+    "LDTE3120",
+    "LDTE3200",
+    "LDTE3500",
+    "LDTE3510",
+    "LDTE4200",
+    "LDTE4210",
+    "LDTE4300",
+    "LDTE4500",
+    "LSCI1012",
+    "LSCI2002",
+    "MAEG1020",
+    "MAEG2050",
+    "PHYS1002",
+    "PHYS1004",
+    "PHYS1712",
+    "PHYS2061",
+    "SEEM3510",
+    "STAT1011",
+    "STAT2005"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1110",
+        "codes": [
+          "ENGG1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LDTE1300",
+        "codes": [
+          "LDTE1300"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CSCI1130",
+        "codes": [
+          "CSCI1130"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "EDUC2120",
+        "codes": [
+          "EDUC2120"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "ENGG2440",
+        "codes": [
+          "ENGG2440"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "LDTE2100",
+        "codes": [
+          "LDTE2100"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "STAT2005",
+        "codes": [
+          "STAT2005"
+        ],
+        "alt": false,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "EDUC3330",
+        "codes": [
+          "EDUC3330"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "LDTE3100",
+        "codes": [
+          "LDTE3100"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "LDTE3110",
+        "codes": [
+          "LDTE3110"
+        ],
+        "alt": false,
+        "from": "(a) Educational"
+      },
+      {
+        "raw": "CSCI2040",
+        "codes": [
+          "CSCI2040"
+        ],
+        "alt": false,
+        "from": "(b) Software"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(b) Software"
+      },
+      {
+        "raw": "ENGG1920",
+        "codes": [
+          "ENGG1920"
+        ],
+        "alt": false,
+        "from": "(b) Software"
+      },
+      {
+        "raw": "LDTE3120",
+        "codes": [
+          "LDTE3120"
+        ],
+        "alt": false,
+        "from": "(c) STEM"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "(c) STEM"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(c) STEM"
+      },
+      {
+        "raw": "PHYS1004",
+        "codes": [
+          "PHYS1004"
+        ],
+        "alt": false,
+        "from": "(c) STEM"
+      },
+      {
+        "raw": "LDTE3500",
+        "codes": [
+          "LDTE3500"
+        ],
+        "alt": false,
+        "from": "(d) Internship"
+      },
+      {
+        "raw": "LDTE3510",
+        "codes": [
+          "LDTE3510"
+        ],
+        "alt": false,
+        "from": "(e) Research"
+      },
+      {
+        "raw": "LDTE4500",
+        "codes": [
+          "LDTE4500"
+        ],
+        "alt": false,
+        "from": "(e) Research"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "AIST2010",
+        "codes": [
+          "AIST2010"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "AIST3510",
+        "codes": [
+          "AIST3510"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "SEEM3510",
+        "codes": [
+          "SEEM3510"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI2720",
+        "codes": [
+          "CSCI2720"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI3170",
+        "codes": [
+          "CSCI3170"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI3230",
+        "codes": [
+          "CSCI3230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "CSCI3310",
+        "codes": [
+          "CSCI3310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "EDUC2140",
+        "codes": [
+          "EDUC2140"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "EDUC3160",
+        "codes": [
+          "EDUC3160"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "EDUC4360",
+        "codes": [
+          "EDUC4360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "LDTE3200",
+        "codes": [
+          "LDTE3200"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "LDTE4200",
+        "codes": [
+          "LDTE4200"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "LDTE4210",
+        "codes": [
+          "LDTE4210"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "LDTE4300",
+        "codes": [
+          "LDTE4300"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "MAEG2050",
+        "codes": [
+          "MAEG2050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "35",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Educational",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Software",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "STEM",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Internship",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "7",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "AIST, CSCI, EDUC, ENGG, LDTE,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "ENGG1110",
+          "alts": []
+        },
+        {
+          "code": "LDTE1300",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 21,
+      "note": null,
+      "courses": [
+        {
+          "code": "CSCI1130",
+          "alts": []
+        },
+        {
+          "code": "EDUC2120",
+          "alts": []
+        },
+        {
+          "code": "ENGG2440",
+          "alts": []
+        },
+        {
+          "code": "LDTE2100",
+          "alts": []
+        },
+        {
+          "code": "LSCI1012",
+          "alts": []
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "STAT2005",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 35,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "EDUC3330",
+              "alts": []
+            },
+            {
+              "code": "LDTE3100",
+              "alts": []
+            },
+            {
+              "code": "LDTE3110",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Software Design and Application Component",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2040",
+              "alts": []
+            },
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "ENGG1920",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "STEM Education and Lab-based Learning Component",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3120",
+              "alts": []
+            },
+            {
+              "code": "MAEG1020",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1004",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3500",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "LDTE3510",
+              "alts": []
+            },
+            {
+              "code": "LDTE4500",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 7,
+      "note": null,
+      "courses": [
+        {
+          "code": "AIST2010",
+          "alts": []
+        },
+        {
+          "code": "AIST3510",
+          "alts": []
+        },
+        {
+          "code": "SEEM3510",
+          "alts": []
+        },
+        {
+          "code": "CSCI2720",
+          "alts": []
+        },
+        {
+          "code": "CSCI3170",
+          "alts": []
+        },
+        {
+          "code": "CSCI3230",
+          "alts": []
+        },
+        {
+          "code": "CSCI3310",
+          "alts": []
+        },
+        {
+          "code": "EDUC2140",
+          "alts": []
+        },
+        {
+          "code": "EDUC3160",
+          "alts": []
+        },
+        {
+          "code": "EDUC4360",
+          "alts": []
+        },
+        {
+          "code": "LDTE3200",
+          "alts": []
+        },
+        {
+          "code": "LDTE4200",
+          "alts": []
+        },
+        {
+          "code": "LDTE4210",
+          "alts": []
+        },
+        {
+          "code": "LDTE4300",
+          "alts": []
+        },
+        {
+          "code": "LSCI2002",
+          "alts": []
+        },
+        {
+          "code": "MAEG2050",
+          "alts": []
+        },
+        {
+          "code": "PHYS1712",
+          "alts": []
+        },
+        {
+          "code": "PHYS2061",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
+}

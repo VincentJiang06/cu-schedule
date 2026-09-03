@@ -29,8 +29,9 @@ function toTraditional(query: string): string {
  * Type-ahead picker for the student's major (培养方案). Mirrors SubjectPicker's
  * dropdown interaction, but holds a single selection: once a programme is chosen it
  * collapses to a chip showing the Chinese/English name, clearable with ×. Stores the
- * stable `program.id` upstream. `year` narrows the candidate list when the admission
- * year matches a year the programme data covers (loose: unmatched years are ignored).
+ * stable `program.id` upstream. `year` narrows the candidate list to that admission
+ * year; a year the programme data doesn't cover falls back to the nearest one it does
+ * (programs.ts's nearestDataYear), so the dropdown is never empty.
  */
 export function ProgramPicker({
   programs,
@@ -43,7 +44,7 @@ export function ProgramPicker({
   /** Subject code→title list, so a code query (CSCI) resolves via the subject's title. */
   subjects: SubjectTitle[]
   selectedId: string
-  /** Admission year; passed to searchPrograms only when the data actually has it. */
+  /** Admission year; searchPrograms maps it to the nearest year the data covers. */
   year?: string
   onChange: (id: string | null) => void
 }) {

@@ -30,9 +30,9 @@ The .html.gz is the untouched server response, kept so later schema/post-process
 re-parse from ground truth rather than trusting the text extraction. gunzip to inspect.
 
 Usage:
-    uv run python scripts/scrape_programs.py                 # years 2023 2024 2025
+    uv run python scripts/scrape_programs.py                 # years 2023 2024 2025 2026
     uv run python scripts/scrape_programs.py 2024            # one year
-    uv run python scripts/scrape_programs.py 2023 2024 2025  # several
+    uv run python scripts/scrape_programs.py 2023 2024 2025 2026  # several
     uv run python scripts/scrape_programs.py --force         # re-scrape (ignore existing)
 """
 from __future__ import annotations
@@ -53,7 +53,11 @@ from bs4 import BeautifulSoup
 BASE_URL = "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/tt_dsp_acad_prog.aspx"
 DIR_URL = "http://rgsntl.rgs.cuhk.edu.hk/aqs_prd_applx/Public/"
 
-DEFAULT_YEARS = ["2023", "2024", "2025"]
+# Every admission year the app offers in 「入学年份」. Keep this in step with the
+# dropdown in src/App.tsx: a year the app offers but the data never covers falls back
+# to the nearest scraped year (src/lib/programs.ts nearestDataYear), which is a safety
+# net, not a substitute for that cohort's real study scheme.
+DEFAULT_YEARS = ["2023", "2024", "2025", "2026"]
 CAREER = "UG"          # undergraduate only, per request
 STUDY_LOAD = "F"       # Full-time
 STUDY_MODE_LABEL = "Full-time"

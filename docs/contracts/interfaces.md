@@ -141,19 +141,20 @@
 | `loadPrograms` | `loadPrograms(): Promise<Program[]>` | `src/lib/programs.ts:128` |
 | `listYears` | `listYears(programs: Program[]): string[]` | `src/lib/programs.ts:148` |
 | `getProgram` | `getProgram(programs: Program[], id: string): Program \| undefined` | `src/lib/programs.ts:152` |
-| `SubjectTitle` | `type SubjectTitle = { code: string; title: string }` | `src/lib/programs.ts:161` |
-| `searchPrograms` | `searchPrograms(programs, query, opts?): Program[]` | `src/lib/programs.ts:163` |
-| `canonicalSubject` | `canonicalSubject(p: Program, subjects: SubjectTitle[]): string \| null` | `src/lib/programs.ts:242` |
-| `CourseScope` | `type CourseScope = { electives?: boolean; streams?: boolean }` | `src/lib/programs.ts:281` |
-| `programCourseKeys` | `programCourseKeys(program: Program, scope?: CourseScope): Set<string>` | `src/lib/programs.ts:293` |
-| `requiredCourseKeys` | `requiredCourseKeys(program: Program): Set<string>` | `src/lib/programs.ts:302` |
-| `allCourseKeys` | `allCourseKeys(program: Program): Set<string>` | `src/lib/programs.ts:307` |
-| `StandingKind` | `type StandingKind = 'required' \| 'elective' \| 'free'` | `src/lib/programs.ts:314` |
-| `BiLabel` | `type BiLabel = { zh: string; en: string }` | `src/lib/programs.ts:318` |
-| `CourseStanding` | `type CourseStanding = required \| elective \| free（带 section 标签）` | `src/lib/programs.ts:325` |
-| `STANDING_LABEL` | `const STANDING_LABEL: Record<StandingKind, BiLabel>` | `src/lib/programs.ts:331` |
-| `glossSection` | `glossSection(title: string): BiLabel` | `src/lib/programs.ts:350` |
-| `classifyPrograms` | `classifyPrograms(program: Program): Map<string, CourseStanding>` | `src/lib/programs.ts:364` |
+| `nearestDataYear` | `nearestDataYear(programs: Program[], year?: string): string \| undefined` | `src/lib/programs.ts:164` |
+| `SubjectTitle` | `type SubjectTitle = { code: string; title: string }` | `src/lib/programs.ts:184` |
+| `searchPrograms` | `searchPrograms(programs, query, opts?): Program[]` | `src/lib/programs.ts:186` |
+| `canonicalSubject` | `canonicalSubject(p: Program, subjects: SubjectTitle[]): string \| null` | `src/lib/programs.ts:266` |
+| `CourseScope` | `type CourseScope = { electives?: boolean; streams?: boolean }` | `src/lib/programs.ts:305` |
+| `programCourseKeys` | `programCourseKeys(program: Program, scope?: CourseScope): Set<string>` | `src/lib/programs.ts:317` |
+| `requiredCourseKeys` | `requiredCourseKeys(program: Program): Set<string>` | `src/lib/programs.ts:326` |
+| `allCourseKeys` | `allCourseKeys(program: Program): Set<string>` | `src/lib/programs.ts:331` |
+| `StandingKind` | `type StandingKind = 'required' \| 'elective' \| 'free'` | `src/lib/programs.ts:338` |
+| `BiLabel` | `type BiLabel = { zh: string; en: string }` | `src/lib/programs.ts:342` |
+| `CourseStanding` | `type CourseStanding = required \| elective \| free（带 section 标签）` | `src/lib/programs.ts:349` |
+| `STANDING_LABEL` | `const STANDING_LABEL: Record<StandingKind, BiLabel>` | `src/lib/programs.ts:355` |
+| `glossSection` | `glossSection(title: string): BiLabel` | `src/lib/programs.ts:374` |
+| `classifyPrograms` | `classifyPrograms(program: Program): Map<string, CourseStanding>` | `src/lib/programs.ts:388` |
 
 ### `src/lib/programProgress.ts` — 学分进度归并
 

@@ -1,0 +1,1403 @@
+{
+  "program_en": "B.A. in Music",
+  "program_chi": "音樂文學士",
+  "admission_year": "2026",
+  "faculty": "Faculty of Arts",
+  "degree": "B.A",
+  "total_units": 66,
+  "parse_status": "full",
+  "has_senior_year_variant": true,
+  "has_streams": false,
+  "all_course_codes": [
+    "ANTH1020",
+    "ARTS1009",
+    "ARTS1010",
+    "BMBL1001",
+    "CHES1101",
+    "CHES1102",
+    "CHLL1900",
+    "CHLL1902",
+    "CHLL1903",
+    "CURE1000",
+    "CURE1110",
+    "CURE1400",
+    "ENGE1000",
+    "FAAS1900",
+    "HIST1000",
+    "HIST1700",
+    "HIST1701",
+    "JASP1090",
+    "LING1000",
+    "MUSC1000",
+    "MUSC1001",
+    "MUSC1002",
+    "MUSC1011",
+    "MUSC1012",
+    "MUSC1013",
+    "MUSC1014",
+    "MUSC1017",
+    "MUSC1018",
+    "MUSC1019",
+    "MUSC1021",
+    "MUSC1022",
+    "MUSC1023",
+    "MUSC1024",
+    "MUSC1027",
+    "MUSC1028",
+    "MUSC1029",
+    "MUSC1031",
+    "MUSC1032",
+    "MUSC1041",
+    "MUSC1042",
+    "MUSC1051",
+    "MUSC1061",
+    "MUSC1212",
+    "MUSC1222",
+    "MUSC2001",
+    "MUSC2002",
+    "MUSC2011",
+    "MUSC2012",
+    "MUSC2013",
+    "MUSC2014",
+    "MUSC2017",
+    "MUSC2018",
+    "MUSC2019",
+    "MUSC2021",
+    "MUSC2022",
+    "MUSC2023",
+    "MUSC2024",
+    "MUSC2027",
+    "MUSC2028",
+    "MUSC2029",
+    "MUSC2031",
+    "MUSC2032",
+    "MUSC2041",
+    "MUSC2042",
+    "MUSC2051",
+    "MUSC2061",
+    "MUSC2252",
+    "MUSC2262",
+    "MUSC2333",
+    "MUSC2540",
+    "MUSC2542",
+    "MUSC2543",
+    "MUSC2545",
+    "MUSC2552",
+    "MUSC2562",
+    "MUSC2872",
+    "MUSC2882",
+    "MUSC2913",
+    "MUSC3001",
+    "MUSC3002",
+    "MUSC3011",
+    "MUSC3012",
+    "MUSC3013",
+    "MUSC3014",
+    "MUSC3017",
+    "MUSC3018",
+    "MUSC3019",
+    "MUSC3021",
+    "MUSC3022",
+    "MUSC3023",
+    "MUSC3024",
+    "MUSC3027",
+    "MUSC3028",
+    "MUSC3029",
+    "MUSC3031",
+    "MUSC3032",
+    "MUSC3041",
+    "MUSC3042",
+    "MUSC3051",
+    "MUSC3061",
+    "MUSC3213",
+    "MUSC3223",
+    "MUSC3233",
+    "MUSC3243",
+    "MUSC3323",
+    "MUSC3333",
+    "MUSC3343",
+    "MUSC3353",
+    "MUSC3363",
+    "MUSC3373",
+    "MUSC3383",
+    "MUSC3432",
+    "MUSC3442",
+    "MUSC3452",
+    "MUSC3462",
+    "MUSC3472",
+    "MUSC3482",
+    "MUSC3492",
+    "MUSC3502",
+    "MUSC3512",
+    "MUSC3522",
+    "MUSC3530",
+    "MUSC3532",
+    "MUSC3533",
+    "MUSC3542",
+    "MUSC3562",
+    "MUSC3582",
+    "MUSC3712",
+    "MUSC3722",
+    "MUSC3732",
+    "MUSC3742",
+    "MUSC3802",
+    "MUSC3852",
+    "MUSC3892",
+    "MUSC3902",
+    "MUSC3912",
+    "MUSC3922",
+    "MUSC3923",
+    "MUSC3932",
+    "MUSC3933",
+    "MUSC3942",
+    "MUSC4000",
+    "MUSC4001",
+    "MUSC4002",
+    "MUSC4003",
+    "MUSC4011",
+    "MUSC4013",
+    "MUSC4014",
+    "MUSC4017",
+    "MUSC4018",
+    "MUSC4019",
+    "MUSC4021",
+    "MUSC4023",
+    "MUSC4024",
+    "MUSC4027",
+    "MUSC4028",
+    "MUSC4029",
+    "MUSC4031",
+    "MUSC4032",
+    "MUSC4041",
+    "MUSC4042",
+    "MUSC4051",
+    "MUSC4061",
+    "MUSC4613",
+    "MUSC4623",
+    "MUSC4943",
+    "PHIL1110",
+    "THEO1000",
+    "TRAN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MUSC1000",
+        "codes": [
+          "MUSC1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ANTH1020",
+        "codes": [
+          "ANTH1020"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARTS1009",
+        "codes": [
+          "ARTS1009"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ARTS1010",
+        "codes": [
+          "ARTS1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "BMBL1001",
+        "codes": [
+          "BMBL1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHES1101",
+        "codes": [
+          "CHES1101"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHES1102",
+        "codes": [
+          "CHES1102"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHLL1900",
+        "codes": [
+          "CHLL1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHLL1902",
+        "codes": [
+          "CHLL1902"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CHLL1903",
+        "codes": [
+          "CHLL1903"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1000",
+        "codes": [
+          "CURE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1400",
+        "codes": [
+          "CURE1400"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "CURE1110",
+        "codes": [
+          "CURE1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "ENGE1000",
+        "codes": [
+          "ENGE1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "FAAS1900",
+        "codes": [
+          "FAAS1900"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1000",
+        "codes": [
+          "HIST1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1700",
+        "codes": [
+          "HIST1700"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "HIST1701",
+        "codes": [
+          "HIST1701"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "JASP1090",
+        "codes": [
+          "JASP1090"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "LING1000",
+        "codes": [
+          "LING1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "PHIL1110",
+        "codes": [
+          "PHIL1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "THEO1000",
+        "codes": [
+          "THEO1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "TRAN1000",
+        "codes": [
+          "TRAN1000"
+        ],
+        "alt": false,
+        "from": "1. Faculty"
+      },
+      {
+        "raw": "MUSC1001",
+        "codes": [
+          "MUSC1001"
+        ],
+        "alt": false,
+        "from": "(a) Choir"
+      },
+      {
+        "raw": "MUSC1002",
+        "codes": [
+          "MUSC1002"
+        ],
+        "alt": false,
+        "from": "(a) Choir"
+      },
+      {
+        "raw": "MUSC2001",
+        "codes": [
+          "MUSC2001"
+        ],
+        "alt": false,
+        "from": "(a) Choir"
+      },
+      {
+        "raw": "MUSC2002",
+        "codes": [
+          "MUSC2002"
+        ],
+        "alt": false,
+        "from": "(a) Choir"
+      },
+      {
+        "raw": "MUSC1011",
+        "codes": [
+          "MUSC1011"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC1051",
+        "codes": [
+          "MUSC1051"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC1012",
+        "codes": [
+          "MUSC1012"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC1021",
+        "codes": [
+          "MUSC1021"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC1061",
+        "codes": [
+          "MUSC1061"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC1022",
+        "codes": [
+          "MUSC1022"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2011",
+        "codes": [
+          "MUSC2011"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2051",
+        "codes": [
+          "MUSC2051"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2012",
+        "codes": [
+          "MUSC2012"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2021",
+        "codes": [
+          "MUSC2021"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2061",
+        "codes": [
+          "MUSC2061"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2022",
+        "codes": [
+          "MUSC2022"
+        ],
+        "alt": false,
+        "from": "(b) Applied"
+      },
+      {
+        "raw": "MUSC2552",
+        "codes": [
+          "MUSC2552"
+        ],
+        "alt": false,
+        "from": "(c) Music,"
+      },
+      {
+        "raw": "MUSC2562",
+        "codes": [
+          "MUSC2562"
+        ],
+        "alt": false,
+        "from": "(c) Music,"
+      },
+      {
+        "raw": "MUSC2872",
+        "codes": [
+          "MUSC2872"
+        ],
+        "alt": false,
+        "from": "(c) Music,"
+      },
+      {
+        "raw": "MUSC2882",
+        "codes": [
+          "MUSC2882"
+        ],
+        "alt": false,
+        "from": "(c) Music,"
+      },
+      {
+        "raw": "MUSC1212",
+        "codes": [
+          "MUSC1212"
+        ],
+        "alt": false,
+        "from": "(d) Theory,"
+      },
+      {
+        "raw": "MUSC1222",
+        "codes": [
+          "MUSC1222"
+        ],
+        "alt": false,
+        "from": "(d) Theory,"
+      },
+      {
+        "raw": "MUSC2252",
+        "codes": [
+          "MUSC2252"
+        ],
+        "alt": false,
+        "from": "(d) Theory,"
+      },
+      {
+        "raw": "MUSC2262",
+        "codes": [
+          "MUSC2262"
+        ],
+        "alt": false,
+        "from": "(d) Theory,"
+      },
+      {
+        "raw": "MUSC3343",
+        "codes": [
+          "MUSC3343"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3323",
+        "codes": [
+          "MUSC3323"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3333",
+        "codes": [
+          "MUSC3333"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3373",
+        "codes": [
+          "MUSC3373"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3383",
+        "codes": [
+          "MUSC3383"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3712",
+        "codes": [
+          "MUSC3712"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3722",
+        "codes": [
+          "MUSC3722"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3732",
+        "codes": [
+          "MUSC3732"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3742",
+        "codes": [
+          "MUSC3742"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3353",
+        "codes": [
+          "MUSC3353"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3363",
+        "codes": [
+          "MUSC3363"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3012",
+        "codes": [
+          "MUSC3012"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3022",
+        "codes": [
+          "MUSC3022"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC4000",
+        "codes": [
+          "MUSC4000"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC4003",
+        "codes": [
+          "MUSC4003"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC2543",
+        "codes": [
+          "MUSC2543"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3213",
+        "codes": [
+          "MUSC3213"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3223",
+        "codes": [
+          "MUSC3223"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3233",
+        "codes": [
+          "MUSC3233"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3243",
+        "codes": [
+          "MUSC3243"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3452",
+        "codes": [
+          "MUSC3452"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3462",
+        "codes": [
+          "MUSC3462"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3472",
+        "codes": [
+          "MUSC3472"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3482",
+        "codes": [
+          "MUSC3482"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3502",
+        "codes": [
+          "MUSC3502"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3512",
+        "codes": [
+          "MUSC3512"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3522",
+        "codes": [
+          "MUSC3522"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3532",
+        "codes": [
+          "MUSC3532"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3533",
+        "codes": [
+          "MUSC3533"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3542",
+        "codes": [
+          "MUSC3542"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3562",
+        "codes": [
+          "MUSC3562"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3582",
+        "codes": [
+          "MUSC3582"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3802",
+        "codes": [
+          "MUSC3802"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3852",
+        "codes": [
+          "MUSC3852"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3892",
+        "codes": [
+          "MUSC3892"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3902",
+        "codes": [
+          "MUSC3902"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3912",
+        "codes": [
+          "MUSC3912"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3922",
+        "codes": [
+          "MUSC3922"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3932",
+        "codes": [
+          "MUSC3932"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC3942",
+        "codes": [
+          "MUSC3942"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC4613",
+        "codes": [
+          "MUSC4613"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      },
+      {
+        "raw": "MUSC4623",
+        "codes": [
+          "MUSC4623"
+        ],
+        "alt": false,
+        "from": "(e) Stream-specific"
+      }
+    ],
+    "elective": [],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 23
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Choir",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Applied",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Music,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Theory,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Stream-specific",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 42
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "MUSC1000",
+          "alts": []
+        },
+        {
+          "code": "ANTH1020",
+          "alts": []
+        },
+        {
+          "code": "ARTS1009",
+          "alts": []
+        },
+        {
+          "code": "ARTS1010",
+          "alts": []
+        },
+        {
+          "code": "BMBL1001",
+          "alts": []
+        },
+        {
+          "code": "CHES1101",
+          "alts": []
+        },
+        {
+          "code": "CHES1102",
+          "alts": []
+        },
+        {
+          "code": "CHLL1900",
+          "alts": []
+        },
+        {
+          "code": "CHLL1902",
+          "alts": []
+        },
+        {
+          "code": "CHLL1903",
+          "alts": []
+        },
+        {
+          "code": "CURE1000",
+          "alts": []
+        },
+        {
+          "code": "CURE1400",
+          "alts": []
+        },
+        {
+          "code": "CURE1110",
+          "alts": []
+        },
+        {
+          "code": "ENGE1000",
+          "alts": []
+        },
+        {
+          "code": "FAAS1900",
+          "alts": []
+        },
+        {
+          "code": "HIST1000",
+          "alts": []
+        },
+        {
+          "code": "HIST1700",
+          "alts": []
+        },
+        {
+          "code": "HIST1701",
+          "alts": []
+        },
+        {
+          "code": "JASP1090",
+          "alts": []
+        },
+        {
+          "code": "LING1000",
+          "alts": []
+        },
+        {
+          "code": "PHIL1110",
+          "alts": []
+        },
+        {
+          "code": "THEO1000",
+          "alts": []
+        },
+        {
+          "code": "TRAN1000",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": 4,
+          "note": null,
+          "courses": [
+            {
+              "code": "MUSC1001",
+              "alts": []
+            },
+            {
+              "code": "MUSC1002",
+              "alts": []
+            },
+            {
+              "code": "MUSC2001",
+              "alts": []
+            },
+            {
+              "code": "MUSC2002",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": 8,
+          "note": null,
+          "courses": [
+            {
+              "code": "MUSC1011",
+              "alts": []
+            },
+            {
+              "code": "MUSC1051",
+              "alts": []
+            },
+            {
+              "code": "MUSC1012",
+              "alts": []
+            },
+            {
+              "code": "MUSC1021",
+              "alts": []
+            },
+            {
+              "code": "MUSC1061",
+              "alts": []
+            },
+            {
+              "code": "MUSC1022",
+              "alts": []
+            },
+            {
+              "code": "MUSC2011",
+              "alts": []
+            },
+            {
+              "code": "MUSC2051",
+              "alts": []
+            },
+            {
+              "code": "MUSC2012",
+              "alts": []
+            },
+            {
+              "code": "MUSC2021",
+              "alts": []
+            },
+            {
+              "code": "MUSC2061",
+              "alts": []
+            },
+            {
+              "code": "MUSC2022",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": 8,
+          "note": null,
+          "courses": [
+            {
+              "code": "MUSC2552",
+              "alts": []
+            },
+            {
+              "code": "MUSC2562",
+              "alts": []
+            },
+            {
+              "code": "MUSC2872",
+              "alts": []
+            },
+            {
+              "code": "MUSC2882",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": 8,
+          "note": null,
+          "courses": [
+            {
+              "code": "MUSC1212",
+              "alts": []
+            },
+            {
+              "code": "MUSC1222",
+              "alts": []
+            },
+            {
+              "code": "MUSC2252",
+              "alts": []
+            },
+            {
+              "code": "MUSC2262",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "Stream-specific",
+          "units": 10,
+          "note": "courses (Students must declare one of the following areas of study) (1) Composition Supporting courses: MUSC3343, and one course from MUSC3323, 3333, 3373, 3383, 3712, 3722, 3732, 3742 Capstone courses: MUSC3353, 3363 (2) Performance Supporting courses: MUSC3012, 3022 Capstone courses: MUSC4000, 4003 (3) Research Supporting courses: Two courses from MUSC2543, 3213, 3223, 3233, 3243, 3452, 3462, 3472, 3482, 3502, 3512, 3522, 3532, 3533, 3542, 3562, 3582, 3802, 3852, 3892, 3902, 3912, 3922, 3932, 3942 Capstone courses",
+          "courses": [
+            {
+              "code": "MUSC3343",
+              "alts": []
+            },
+            {
+              "code": "MUSC3323",
+              "alts": []
+            },
+            {
+              "code": "MUSC3333",
+              "alts": []
+            },
+            {
+              "code": "MUSC3373",
+              "alts": []
+            },
+            {
+              "code": "MUSC3383",
+              "alts": []
+            },
+            {
+              "code": "MUSC3712",
+              "alts": []
+            },
+            {
+              "code": "MUSC3722",
+              "alts": []
+            },
+            {
+              "code": "MUSC3732",
+              "alts": []
+            },
+            {
+              "code": "MUSC3742",
+              "alts": []
+            },
+            {
+              "code": "MUSC3353",
+              "alts": []
+            },
+            {
+              "code": "MUSC3363",
+              "alts": []
+            },
+            {
+              "code": "MUSC3012",
+              "alts": []
+            },
+            {
+              "code": "MUSC3022",
+              "alts": []
+            },
+            {
+              "code": "MUSC4000",
+              "alts": []
+            },
+            {
+              "code": "MUSC4003",
+              "alts": []
+            },
+            {
+              "code": "MUSC2543",
+              "alts": []
+            },
+            {
+              "code": "MUSC3213",
+              "alts": []
+            },
+            {
+              "code": "MUSC3223",
+              "alts": []
+            },
+            {
+              "code": "MUSC3233",
+              "alts": []
+            },
+            {
+              "code": "MUSC3243",
+              "alts": []
+            },
+            {
+              "code": "MUSC3452",
+              "alts": []
+            },
+            {
+              "code": "MUSC3462",
+              "alts": []
+            },
+            {
+              "code": "MUSC3472",
+              "alts": []
+            },
+            {
+              "code": "MUSC3482",
+              "alts": []
+            },
+            {
+              "code": "MUSC3502",
+              "alts": []
+            },
+            {
+              "code": "MUSC3512",
+              "alts": []
+            },
+            {
+              "code": "MUSC3522",
+              "alts": []
+            },
+            {
+              "code": "MUSC3532",
+              "alts": []
+            },
+            {
+              "code": "MUSC3533",
+              "alts": []
+            },
+            {
+              "code": "MUSC3542",
+              "alts": []
+            },
+            {
+              "code": "MUSC3562",
+              "alts": []
+            },
+            {
+              "code": "MUSC3582",
+              "alts": []
+            },
+            {
+              "code": "MUSC3802",
+              "alts": []
+            },
+            {
+              "code": "MUSC3852",
+              "alts": []
+            },
+            {
+              "code": "MUSC3892",
+              "alts": []
+            },
+            {
+              "code": "MUSC3902",
+              "alts": []
+            },
+            {
+              "code": "MUSC3912",
+              "alts": []
+            },
+            {
+              "code": "MUSC3922",
+              "alts": []
+            },
+            {
+              "code": "MUSC3932",
+              "alts": []
+            },
+            {
+              "code": "MUSC3942",
+              "alts": []
+            },
+            {
+              "code": "MUSC4613",
+              "alts": []
+            },
+            {
+              "code": "MUSC4623",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 18,
+      "note": "Any MUSC courses other than the courses taken to fulfill requirement (2) above, with at least one course from Area 3 and two courses from Area 4, and up to six units from Area 2C “Other Ensemble Courses”.",
+      "courses": [],
+      "children": []
+    }
+  ]
+}

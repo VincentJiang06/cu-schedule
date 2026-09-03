@@ -1,0 +1,3345 @@
+{
+  "program_en": "B.Sc. in Mathematics and Information Engineering",
+  "program_chi": "數學與信息工程學理學士",
+  "admission_year": "2026",
+  "faculty": "Others",
+  "degree": "B.Sc",
+  "total_units": 87,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "AIST1110",
+    "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
+    "CSCI1120",
+    "CSCI1130",
+    "CSCI2100",
+    "CSCI3130",
+    "CSCI3150",
+    "CSCI3160",
+    "CSCI3230",
+    "CSCI3320",
+    "CSCI4130",
+    "CSCI5030",
+    "CSCI5150",
+    "CSCI5320",
+    "ENGG1110",
+    "ENGG1310",
+    "ENGG1820",
+    "ENGG5301",
+    "ENGG5302",
+    "ENGG5303",
+    "ENGG5383",
+    "ENGG5392",
+    "ENGG5501",
+    "ESTR1002",
+    "ESTR1003",
+    "ESTR1100",
+    "ESTR1102",
+    "ESTR2002",
+    "ESTR2004",
+    "ESTR2102",
+    "ESTR2300",
+    "ESTR2304",
+    "ESTR2306",
+    "ESTR2360",
+    "ESTR2362",
+    "ESTR3102",
+    "ESTR3104",
+    "ESTR3108",
+    "ESTR3300",
+    "ESTR3302",
+    "ESTR3304",
+    "ESTR3306",
+    "ESTR3308",
+    "ESTR3310",
+    "ESTR4300",
+    "ESTR4302",
+    "ESTR4304",
+    "ESTR4306",
+    "ESTR4308",
+    "ESTR4312",
+    "ESTR4314",
+    "ESTR4316",
+    "ESTR4320",
+    "ESTR4322",
+    "ESTR4324",
+    "ESTR4326",
+    "ESTR4328",
+    "ESTR4998",
+    "ESTR4999",
+    "FTEC4004",
+    "IERG1080",
+    "IERG2060",
+    "IERG2080",
+    "IERG2310",
+    "IERG2820",
+    "IERG3010",
+    "IERG3050",
+    "IERG3060",
+    "IERG3080",
+    "IERG3280",
+    "IERG3300",
+    "IERG3310",
+    "IERG3320",
+    "IERG3800",
+    "IERG3810",
+    "IERG3820",
+    "IERG3830",
+    "IERG4004",
+    "IERG4030",
+    "IERG4060",
+    "IERG4080",
+    "IERG4090",
+    "IERG4100",
+    "IERG4110",
+    "IERG4120",
+    "IERG4130",
+    "IERG4150",
+    "IERG4160",
+    "IERG4180",
+    "IERG4190",
+    "IERG4210",
+    "IERG4220",
+    "IERG4230",
+    "IERG4240",
+    "IERG4300",
+    "IERG4320",
+    "IERG4330",
+    "IERG4340",
+    "IERG4350",
+    "IERG4360",
+    "IERG4831",
+    "IERG4841",
+    "IERG4851",
+    "IERG4998",
+    "IERG4999",
+    "IERG5020",
+    "IERG5040",
+    "IERG5050",
+    "IERG5090",
+    "IERG5100",
+    "IERG5110",
+    "IERG5130",
+    "IERG5140",
+    "IERG5154",
+    "IERG5200",
+    "IERG5230",
+    "IERG5240",
+    "IERG5250",
+    "IERG5254",
+    "IERG5280",
+    "IERG5290",
+    "IERG5300",
+    "IERG5310",
+    "IERG5320",
+    "IERG5330",
+    "IERG5340",
+    "IERG5350",
+    "IERG5360",
+    "IERG5380",
+    "IERG5400",
+    "IERG5450",
+    "IERG5460",
+    "IERG5470",
+    "IERG5590",
+    "IERG5670",
+    "LSCI1001",
+    "LSCI1002",
+    "MATH1010",
+    "MATH1018",
+    "MATH1025",
+    "MATH1028",
+    "MATH1030",
+    "MATH1038",
+    "MATH1090",
+    "MATH1098",
+    "MATH2010",
+    "MATH2018",
+    "MATH2020",
+    "MATH2028",
+    "MATH2040",
+    "MATH2048",
+    "MATH2050",
+    "MATH2058",
+    "MATH2060",
+    "MATH2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2230",
+    "MATH3020",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3250",
+    "MATH3260",
+    "MATH3270",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3340",
+    "MATH3360",
+    "MATH4010",
+    "MATH4020",
+    "MATH4030",
+    "MATH4230",
+    "MATH4240",
+    "MATH4260",
+    "MATH4280",
+    "MIEG2051",
+    "MIEG2440",
+    "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
+    "STAT1011"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "1."
+      },
+      {
+        "raw": "MATH1025/1028",
+        "codes": [
+          "MATH1025",
+          "MATH1028"
+        ],
+        "alt": true,
+        "from": "1."
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "1."
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018[a]"
+      },
+      {
+        "raw": "AIST1110",
+        "codes": [
+          "AIST1110"
+        ],
+        "alt": false,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100, CSCI1130/ESTR1102,"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100, CSCI1130/ESTR1102,"
+      },
+      {
+        "raw": "CSCI1130/ESTR1102",
+        "codes": [
+          "CSCI1130",
+          "ESTR1102"
+        ],
+        "alt": true,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100, CSCI1130/ESTR1102,"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "(b) One of the following courses: AIST1110, CSCI1120/ESTR1100, CSCI1130/ESTR1102,"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "(c) One"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2060/ESTR2304",
+        "codes": [
+          "IERG2060",
+          "ESTR2304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2080/ESTR2306",
+        "codes": [
+          "IERG2080",
+          "ESTR2306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2310/ESTR2300",
+        "codes": [
+          "IERG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG2820",
+        "codes": [
+          "IERG2820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3080/ESTR3308",
+        "codes": [
+          "IERG3080",
+          "ESTR3308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3310/ESTR3310",
+        "codes": [
+          "IERG3310",
+          "ESTR3310"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3800",
+        "codes": [
+          "IERG3800"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH1090/1098",
+        "codes": [
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MIEG2051/ESTR2360",
+        "codes": [
+          "MIEG2051",
+          "ESTR2360"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "MIEG2440/ESTR2362",
+        "codes": [
+          "MIEG2440",
+          "ESTR2362"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104,"
+      },
+      {
+        "raw": "IERG4998",
+        "codes": [
+          "IERG4998"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "IERG4999",
+        "codes": [
+          "IERG4999"
+        ],
+        "alt": false,
+        "from": "(b) Research"
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "1. Science Faculty Package"
+      },
+      {
+        "raw": "ENGG1110/ESTR1002",
+        "codes": [
+          "ENGG1110",
+          "ESTR1002"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "MATH1025/1028",
+        "codes": [
+          "MATH1025",
+          "MATH1028"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "2. Foundation"
+      },
+      {
+        "raw": "CSCI2100/ESTR2102",
+        "codes": [
+          "CSCI2100",
+          "ESTR2102"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "CSCI3160/ESTR3104",
+        "codes": [
+          "CSCI3160",
+          "ESTR3104"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2060/ESTR2304",
+        "codes": [
+          "IERG2060",
+          "ESTR2304"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2080/ESTR2306",
+        "codes": [
+          "IERG2080",
+          "ESTR2306"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2310/ESTR2300",
+        "codes": [
+          "IERG2310",
+          "ESTR2300"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG2820",
+        "codes": [
+          "IERG2820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3080/ESTR3308",
+        "codes": [
+          "IERG3080",
+          "ESTR3308"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3310/ESTR3310",
+        "codes": [
+          "IERG3310",
+          "ESTR3310"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3800",
+        "codes": [
+          "IERG3800"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "IERG3820",
+        "codes": [
+          "IERG3820"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH1090/1098",
+        "codes": [
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MIEG2051/ESTR2360",
+        "codes": [
+          "MIEG2051",
+          "ESTR2360"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "MIEG2440/ESTR2362",
+        "codes": [
+          "MIEG2440",
+          "ESTR2362"
+        ],
+        "alt": true,
+        "from": "(a) CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,"
+      },
+      {
+        "raw": "AIST1110",
+        "codes": [
+          "AIST1110"
+        ],
+        "alt": false,
+        "from": "(b) 3 units to be counted from ONE of the"
+      },
+      {
+        "raw": "CSCI1120/ESTR1100",
+        "codes": [
+          "CSCI1120",
+          "ESTR1100"
+        ],
+        "alt": true,
+        "from": "(b) 3 units to be counted from ONE of the"
+      },
+      {
+        "raw": "CSCI1130/ESTR1102",
+        "codes": [
+          "CSCI1130",
+          "ESTR1102"
+        ],
+        "alt": true,
+        "from": "(b) 3 units to be counted from ONE of the"
+      },
+      {
+        "raw": "IERG1080",
+        "codes": [
+          "IERG1080"
+        ],
+        "alt": false,
+        "from": "(b) 3 units to be counted from ONE of the"
+      },
+      {
+        "raw": "IERG4998",
+        "codes": [
+          "IERG4998"
+        ],
+        "alt": false,
+        "from": "(c) Research"
+      },
+      {
+        "raw": "IERG4999",
+        "codes": [
+          "IERG4999"
+        ],
+        "alt": false,
+        "from": "(c) Research"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI5030",
+        "codes": [
+          "CSCI5030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI5150",
+        "codes": [
+          "CSCI5150"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5050",
+        "codes": [
+          "IERG5050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5130",
+        "codes": [
+          "IERG5130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5250",
+        "codes": [
+          "IERG5250"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5450",
+        "codes": [
+          "IERG5450"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5460",
+        "codes": [
+          "IERG5460"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5670",
+        "codes": [
+          "IERG5670"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI3130",
+        "codes": [
+          "CSCI3130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI5320",
+        "codes": [
+          "CSCI5320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3260",
+        "codes": [
+          "MATH3260"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "ENGG5501",
+        "codes": [
+          "ENGG5501"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3300/ESTR3304",
+        "codes": [
+          "IERG3300",
+          "ESTR3304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5154/ENGG5301",
+        "codes": [
+          "IERG5154",
+          "ENGG5301"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5200",
+        "codes": [
+          "IERG5200"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4260",
+        "codes": [
+          "MATH4260"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5254",
+        "codes": [
+          "IERG5254"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5290",
+        "codes": [
+          "IERG5290"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5300/ENGG5302",
+        "codes": [
+          "IERG5300",
+          "ENGG5302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5380",
+        "codes": [
+          "IERG5380"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5400",
+        "codes": [
+          "IERG5400"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5470",
+        "codes": [
+          "IERG5470"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3020",
+        "codes": [
+          "MATH3020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3080",
+        "codes": [
+          "MATH3080"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4020",
+        "codes": [
+          "MATH4020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3010/ESTR3300",
+        "codes": [
+          "IERG3010",
+          "ESTR3300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4030/ESTR4320",
+        "codes": [
+          "IERG4030",
+          "ESTR4320"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4100/ESTR4304",
+        "codes": [
+          "IERG4100",
+          "ESTR4304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4110/ESTR4314",
+        "codes": [
+          "IERG4110",
+          "ESTR4314"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4240",
+        "codes": [
+          "IERG4240"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5020",
+        "codes": [
+          "IERG5020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5040/ENGG5392",
+        "codes": [
+          "IERG5040",
+          "ENGG5392"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5100/ENGG5303",
+        "codes": [
+          "IERG5100",
+          "ENGG5303"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5110",
+        "codes": [
+          "IERG5110"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5140",
+        "codes": [
+          "IERG5140"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4120/ESTR4328",
+        "codes": [
+          "IERG4120",
+          "ESTR4328"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4300/ESTR4300",
+        "codes": [
+          "IERG4300",
+          "ESTR4300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4320/ESTR4324",
+        "codes": [
+          "IERG4320",
+          "ESTR4324"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4330/ESTR4316",
+        "codes": [
+          "IERG4330",
+          "ESTR4316"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4130/CSCI4130/ESTR4306",
+        "codes": [
+          "IERG4130",
+          "CSCI4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4150/ESTR4322",
+        "codes": [
+          "IERG4150",
+          "ESTR4322"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4360/ESTR4326",
+        "codes": [
+          "IERG4360",
+          "ESTR4326"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4851",
+        "codes": [
+          "IERG4851"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5240/ENGG5383",
+        "codes": [
+          "IERG5240",
+          "ENGG5383"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5310",
+        "codes": [
+          "IERG5310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5320",
+        "codes": [
+          "IERG5320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5360",
+        "codes": [
+          "IERG5360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5590",
+        "codes": [
+          "IERG5590"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3320/ESTR3306",
+        "codes": [
+          "IERG3320",
+          "ESTR3306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4090/ESTR4302",
+        "codes": [
+          "IERG4090",
+          "ESTR4302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4180/ESTR4308",
+        "codes": [
+          "IERG4180",
+          "ESTR4308"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4841",
+        "codes": [
+          "IERG4841"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5090",
+        "codes": [
+          "IERG5090"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5230",
+        "codes": [
+          "IERG5230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5280",
+        "codes": [
+          "IERG5280"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5330",
+        "codes": [
+          "IERG5330"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4060",
+        "codes": [
+          "IERG4060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "IERG5340",
+        "codes": [
+          "IERG5340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 9 units of elective courses from the courses below"
+      },
+      {
+        "raw": "CSCI3230/ESTR3108",
+        "codes": [
+          "CSCI3230",
+          "ESTR3108"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI3320",
+        "codes": [
+          "CSCI3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI5030",
+        "codes": [
+          "CSCI5030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI5150",
+        "codes": [
+          "CSCI5150"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4160",
+        "codes": [
+          "IERG4160"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4190",
+        "codes": [
+          "IERG4190"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5050",
+        "codes": [
+          "IERG5050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5130",
+        "codes": [
+          "IERG5130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5250",
+        "codes": [
+          "IERG5250"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5350",
+        "codes": [
+          "IERG5350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5450",
+        "codes": [
+          "IERG5450"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5460",
+        "codes": [
+          "IERG5460"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5670",
+        "codes": [
+          "IERG5670"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI3130",
+        "codes": [
+          "CSCI3130"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI5320",
+        "codes": [
+          "CSCI5320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3260",
+        "codes": [
+          "MATH3260"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "ENGG5501",
+        "codes": [
+          "ENGG5501"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3300/ESTR3304",
+        "codes": [
+          "IERG3300",
+          "ESTR3304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5154/ENGG5301",
+        "codes": [
+          "IERG5154",
+          "ENGG5301"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5200",
+        "codes": [
+          "IERG5200"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4260",
+        "codes": [
+          "MATH4260"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5254",
+        "codes": [
+          "IERG5254"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5290",
+        "codes": [
+          "IERG5290"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5300/ENGG5302",
+        "codes": [
+          "IERG5300",
+          "ENGG5302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5380",
+        "codes": [
+          "IERG5380"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5400",
+        "codes": [
+          "IERG5400"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5470",
+        "codes": [
+          "IERG5470"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3020",
+        "codes": [
+          "MATH3020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3080",
+        "codes": [
+          "MATH3080"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4020",
+        "codes": [
+          "MATH4020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3010/ESTR3300",
+        "codes": [
+          "IERG3010",
+          "ESTR3300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4030/ESTR4320",
+        "codes": [
+          "IERG4030",
+          "ESTR4320"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4100/ESTR4304",
+        "codes": [
+          "IERG4100",
+          "ESTR4304"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4110/ESTR4314",
+        "codes": [
+          "IERG4110",
+          "ESTR4314"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4240",
+        "codes": [
+          "IERG4240"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5020",
+        "codes": [
+          "IERG5020"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5040/ENGG5392",
+        "codes": [
+          "IERG5040",
+          "ENGG5392"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5100/ENGG5303",
+        "codes": [
+          "IERG5100",
+          "ENGG5303"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5110",
+        "codes": [
+          "IERG5110"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5140",
+        "codes": [
+          "IERG5140"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "CSCI3150/ESTR3102",
+        "codes": [
+          "CSCI3150",
+          "ESTR3102"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4120/ESTR4328",
+        "codes": [
+          "IERG4120",
+          "ESTR4328"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4300/ESTR4300",
+        "codes": [
+          "IERG4300",
+          "ESTR4300"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4320/ESTR4324",
+        "codes": [
+          "IERG4320",
+          "ESTR4324"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4330/ESTR4316",
+        "codes": [
+          "IERG4330",
+          "ESTR4316"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4004/FTEC4004",
+        "codes": [
+          "IERG4004",
+          "FTEC4004"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4130/CSCI4130/ESTR4306",
+        "codes": [
+          "IERG4130",
+          "CSCI4130",
+          "ESTR4306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4150/ESTR4322",
+        "codes": [
+          "IERG4150",
+          "ESTR4322"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4210",
+        "codes": [
+          "IERG4210"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4220",
+        "codes": [
+          "IERG4220"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4350",
+        "codes": [
+          "IERG4350"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4360/ESTR4326",
+        "codes": [
+          "IERG4360",
+          "ESTR4326"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4851",
+        "codes": [
+          "IERG4851"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5240/ENGG5383",
+        "codes": [
+          "IERG5240",
+          "ENGG5383"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5310",
+        "codes": [
+          "IERG5310"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5320",
+        "codes": [
+          "IERG5320"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5360",
+        "codes": [
+          "IERG5360"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5590",
+        "codes": [
+          "IERG5590"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3050",
+        "codes": [
+          "IERG3050"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3280/ESTR3302",
+        "codes": [
+          "IERG3280",
+          "ESTR3302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3320/ESTR3306",
+        "codes": [
+          "IERG3320",
+          "ESTR3306"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4090/ESTR4302",
+        "codes": [
+          "IERG4090",
+          "ESTR4302"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4180/ESTR4308",
+        "codes": [
+          "IERG4180",
+          "ESTR4308"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4230",
+        "codes": [
+          "IERG4230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4340",
+        "codes": [
+          "IERG4340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4831",
+        "codes": [
+          "IERG4831"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4841",
+        "codes": [
+          "IERG4841"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5090",
+        "codes": [
+          "IERG5090"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5230",
+        "codes": [
+          "IERG5230"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5280",
+        "codes": [
+          "IERG5280"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5330",
+        "codes": [
+          "IERG5330"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3060",
+        "codes": [
+          "IERG3060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3810",
+        "codes": [
+          "IERG3810"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4060",
+        "codes": [
+          "IERG4060"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "ENGG1820",
+        "codes": [
+          "ENGG1820"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG3830",
+        "codes": [
+          "IERG3830"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG4080/ESTR4312",
+        "codes": [
+          "IERG4080",
+          "ESTR4312"
+        ],
+        "alt": true,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      },
+      {
+        "raw": "IERG5340",
+        "codes": [
+          "IERG5340"
+        ],
+        "alt": false,
+        "from": "4. Elective Courses: 6 units of elective courses from the"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "MATH1010/1018[a]",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "One of the following courses: AIST1110, CSCI1120/ESTR1100, CSCI1130/ESTR1102,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "One",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100/ESTR2102, CSCI3160/ESTR3104,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 20
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses: 9 units of elective courses from the courses below",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 97
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Science Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Foundation",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "CSCI2100/ESTR2102, CSCI3160/ESTR3104, IERG2060/ESTR2304,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 20
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "3 units to be counted from ONE of the",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Elective Courses: 6 units of elective courses from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 97
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": [
+            "ESTR1002"
+          ]
+        },
+        {
+          "code": "MATH1025",
+          "alts": [
+            "MATH1028"
+          ]
+        },
+        {
+          "code": "MATH1030",
+          "alts": [
+            "MATH1038"
+          ]
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Foundation Courses",
+      "units": 9,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": [
+                "MATH1018"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "One of the following courses",
+          "courses": [
+            {
+              "code": "AIST1110",
+              "alts": []
+            },
+            {
+              "code": "CSCI1120",
+              "alts": [
+                "ESTR1100"
+              ]
+            },
+            {
+              "code": "CSCI1130",
+              "alts": [
+                "ESTR1102"
+              ]
+            },
+            {
+              "code": "IERG1080",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "One of the following courses",
+          "courses": [
+            {
+              "code": "ENGG1310",
+              "alts": []
+            },
+            {
+              "code": "PHYS1001",
+              "alts": []
+            },
+            {
+              "code": "PHYS1002",
+              "alts": []
+            },
+            {
+              "code": "PHYS1111",
+              "alts": []
+            },
+            {
+              "code": "STAT1011",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Required Courses",
+      "units": 54,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2100",
+              "alts": [
+                "ESTR2102"
+              ]
+            },
+            {
+              "code": "CSCI3160",
+              "alts": [
+                "ESTR3104"
+              ]
+            },
+            {
+              "code": "IERG2060",
+              "alts": [
+                "ESTR2304"
+              ]
+            },
+            {
+              "code": "IERG2080",
+              "alts": [
+                "ESTR2306"
+              ]
+            },
+            {
+              "code": "IERG2310",
+              "alts": [
+                "ESTR2300"
+              ]
+            },
+            {
+              "code": "IERG2820",
+              "alts": []
+            },
+            {
+              "code": "IERG3080",
+              "alts": [
+                "ESTR3308"
+              ]
+            },
+            {
+              "code": "IERG3310",
+              "alts": [
+                "ESTR3310"
+              ]
+            },
+            {
+              "code": "IERG3800",
+              "alts": []
+            },
+            {
+              "code": "IERG3820",
+              "alts": []
+            },
+            {
+              "code": "MATH1090",
+              "alts": [
+                "MATH1098"
+              ]
+            },
+            {
+              "code": "MATH2010",
+              "alts": [
+                "MATH2018"
+              ]
+            },
+            {
+              "code": "MATH2020",
+              "alts": [
+                "MATH2028"
+              ]
+            },
+            {
+              "code": "MATH2040",
+              "alts": [
+                "MATH2048"
+              ]
+            },
+            {
+              "code": "MATH2050",
+              "alts": [
+                "MATH2058"
+              ]
+            },
+            {
+              "code": "MATH2060",
+              "alts": [
+                "MATH2068"
+              ]
+            },
+            {
+              "code": "MATH2070",
+              "alts": [
+                "MATH2078"
+              ]
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
+            },
+            {
+              "code": "MIEG2051",
+              "alts": [
+                "ESTR2360"
+              ]
+            },
+            {
+              "code": "MIEG2440",
+              "alts": [
+                "ESTR2362"
+              ]
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Research Component Courses",
+          "units": 6,
+          "note": null,
+          "courses": [
+            {
+              "code": "IERG4998",
+              "alts": []
+            },
+            {
+              "code": "IERG4999",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Elective Courses",
+      "units": 9,
+      "note": "9 units of elective courses from the courses below: Artificial Intelligence, Machine Learning, Computer Vision CSCI3230/ESTR3108, CSCI3320, 5030, 5150, IERG4160, 4190, 5050, 5130, 5250, 5350, 5450, 5460, 5670 Theoretical Topics in Information Sciences CSCI3130, 5320 (or MATH3260), ENGG5501, IERG3300/ESTR3304 (or MATH4240), IERG5154/ENGG5301, IERG5200 (or MATH4260), IERG5254, 5290, IERG5300/ENGG5302, IERG5380, 5400, 5470 Theoretical Mathematics MATH3020, 3030, 3040, 3060, 3070, 3080, 3093, 4010, 4020, 4030 Applied Mathematics MATH3215, 3230, 3270, 3290, 3310, 3320, 3330, 3340, 3360, 4230, 4280 Communications IERG3010/ESTR3300, IERG4030/ESTR4320, IERG4100/ESTR4304, IERG4110/ESTR4314, IERG4240, 5020, IERG5040/ENGG5392, IERG5100/ENGG5303, IERG5110, 5140 Software Engineering and Data Science CSCI3150/ESTR3102, IERG4120/ESTR4328, IERG4300/ESTR4300, IERG4320/ESTR4324, IERG4330/ESTR4316 Cyber Security and Applied Cryptography IERG4004/FTEC4004, IERG4130/CSCI4130/ESTR4306, IERG4150/ESTR4322, IERG4210, 4220, 4350, IERG4360/ESTR4326, IERG4851, IERG5240/ENGG5383, IERG5310, 5320, 5360, 5590 Internet Engineering and Networks IERG3050, IERG3280/ESTR3302, IERG3320/ESTR3306, IERG4090/ESTR4302, IERG4180/ESTR4308, IERG4230, 4340, 4831, 4841, 5090, 5230, 5280, 5330 Hardware IERG3060, 3810, 4060 Software and Professional Practice ENGG1820, IERG3830, IERG4080/ESTR4312, IERG5340 Students may also take the following courses to fulfill the unit requirements: AIST course(s) at 3000 and above level, CSCI course(s) at 3000 and above level, ENGG course(s) at 5000 level, FTEC course(s) at 3000 and above level, SEEM course(s) at 3000 and above level, STAT course(s) at 3000 and above level",
+      "courses": [
+        {
+          "code": "CSCI3230",
+          "alts": [
+            "ESTR3108"
+          ]
+        },
+        {
+          "code": "CSCI3320",
+          "alts": []
+        },
+        {
+          "code": "CSCI5030",
+          "alts": []
+        },
+        {
+          "code": "CSCI5150",
+          "alts": []
+        },
+        {
+          "code": "IERG4160",
+          "alts": []
+        },
+        {
+          "code": "IERG4190",
+          "alts": []
+        },
+        {
+          "code": "IERG5050",
+          "alts": []
+        },
+        {
+          "code": "IERG5130",
+          "alts": []
+        },
+        {
+          "code": "IERG5250",
+          "alts": []
+        },
+        {
+          "code": "IERG5350",
+          "alts": []
+        },
+        {
+          "code": "IERG5450",
+          "alts": []
+        },
+        {
+          "code": "IERG5460",
+          "alts": []
+        },
+        {
+          "code": "IERG5670",
+          "alts": []
+        },
+        {
+          "code": "CSCI3130",
+          "alts": []
+        },
+        {
+          "code": "CSCI5320",
+          "alts": []
+        },
+        {
+          "code": "MATH3260",
+          "alts": []
+        },
+        {
+          "code": "ENGG5501",
+          "alts": []
+        },
+        {
+          "code": "IERG3300",
+          "alts": [
+            "ESTR3304"
+          ]
+        },
+        {
+          "code": "MATH4240",
+          "alts": []
+        },
+        {
+          "code": "IERG5154",
+          "alts": [
+            "ENGG5301"
+          ]
+        },
+        {
+          "code": "IERG5200",
+          "alts": []
+        },
+        {
+          "code": "MATH4260",
+          "alts": []
+        },
+        {
+          "code": "IERG5254",
+          "alts": []
+        },
+        {
+          "code": "IERG5290",
+          "alts": []
+        },
+        {
+          "code": "IERG5300",
+          "alts": [
+            "ENGG5302"
+          ]
+        },
+        {
+          "code": "IERG5380",
+          "alts": []
+        },
+        {
+          "code": "IERG5400",
+          "alts": []
+        },
+        {
+          "code": "IERG5470",
+          "alts": []
+        },
+        {
+          "code": "MATH3020",
+          "alts": []
+        },
+        {
+          "code": "MATH3030",
+          "alts": []
+        },
+        {
+          "code": "MATH3040",
+          "alts": []
+        },
+        {
+          "code": "MATH3060",
+          "alts": []
+        },
+        {
+          "code": "MATH3070",
+          "alts": []
+        },
+        {
+          "code": "MATH3080",
+          "alts": []
+        },
+        {
+          "code": "MATH3093",
+          "alts": []
+        },
+        {
+          "code": "MATH4010",
+          "alts": []
+        },
+        {
+          "code": "MATH4020",
+          "alts": []
+        },
+        {
+          "code": "MATH4030",
+          "alts": []
+        },
+        {
+          "code": "MATH3215",
+          "alts": []
+        },
+        {
+          "code": "MATH3230",
+          "alts": []
+        },
+        {
+          "code": "MATH3270",
+          "alts": []
+        },
+        {
+          "code": "MATH3290",
+          "alts": []
+        },
+        {
+          "code": "MATH3310",
+          "alts": []
+        },
+        {
+          "code": "MATH3320",
+          "alts": []
+        },
+        {
+          "code": "MATH3330",
+          "alts": []
+        },
+        {
+          "code": "MATH3340",
+          "alts": []
+        },
+        {
+          "code": "MATH3360",
+          "alts": []
+        },
+        {
+          "code": "MATH4230",
+          "alts": []
+        },
+        {
+          "code": "MATH4280",
+          "alts": []
+        },
+        {
+          "code": "IERG3010",
+          "alts": [
+            "ESTR3300"
+          ]
+        },
+        {
+          "code": "IERG4030",
+          "alts": [
+            "ESTR4320"
+          ]
+        },
+        {
+          "code": "IERG4100",
+          "alts": [
+            "ESTR4304"
+          ]
+        },
+        {
+          "code": "IERG4110",
+          "alts": [
+            "ESTR4314"
+          ]
+        },
+        {
+          "code": "IERG4240",
+          "alts": []
+        },
+        {
+          "code": "IERG5020",
+          "alts": []
+        },
+        {
+          "code": "IERG5040",
+          "alts": [
+            "ENGG5392"
+          ]
+        },
+        {
+          "code": "IERG5100",
+          "alts": [
+            "ENGG5303"
+          ]
+        },
+        {
+          "code": "IERG5110",
+          "alts": []
+        },
+        {
+          "code": "IERG5140",
+          "alts": []
+        },
+        {
+          "code": "CSCI3150",
+          "alts": [
+            "ESTR3102"
+          ]
+        },
+        {
+          "code": "IERG4120",
+          "alts": [
+            "ESTR4328"
+          ]
+        },
+        {
+          "code": "IERG4300",
+          "alts": [
+            "ESTR4300"
+          ]
+        },
+        {
+          "code": "IERG4320",
+          "alts": [
+            "ESTR4324"
+          ]
+        },
+        {
+          "code": "IERG4330",
+          "alts": [
+            "ESTR4316"
+          ]
+        },
+        {
+          "code": "IERG4004",
+          "alts": [
+            "FTEC4004"
+          ]
+        },
+        {
+          "code": "IERG4130",
+          "alts": [
+            "CSCI4130",
+            "ESTR4306"
+          ]
+        },
+        {
+          "code": "IERG4150",
+          "alts": [
+            "ESTR4322"
+          ]
+        },
+        {
+          "code": "IERG4210",
+          "alts": []
+        },
+        {
+          "code": "IERG4220",
+          "alts": []
+        },
+        {
+          "code": "IERG4350",
+          "alts": []
+        },
+        {
+          "code": "IERG4360",
+          "alts": [
+            "ESTR4326"
+          ]
+        },
+        {
+          "code": "IERG4851",
+          "alts": []
+        },
+        {
+          "code": "IERG5240",
+          "alts": [
+            "ENGG5383"
+          ]
+        },
+        {
+          "code": "IERG5310",
+          "alts": []
+        },
+        {
+          "code": "IERG5320",
+          "alts": []
+        },
+        {
+          "code": "IERG5360",
+          "alts": []
+        },
+        {
+          "code": "IERG5590",
+          "alts": []
+        },
+        {
+          "code": "IERG3050",
+          "alts": []
+        },
+        {
+          "code": "IERG3280",
+          "alts": [
+            "ESTR3302"
+          ]
+        },
+        {
+          "code": "IERG3320",
+          "alts": [
+            "ESTR3306"
+          ]
+        },
+        {
+          "code": "IERG4090",
+          "alts": [
+            "ESTR4302"
+          ]
+        },
+        {
+          "code": "IERG4180",
+          "alts": [
+            "ESTR4308"
+          ]
+        },
+        {
+          "code": "IERG4230",
+          "alts": []
+        },
+        {
+          "code": "IERG4340",
+          "alts": []
+        },
+        {
+          "code": "IERG4831",
+          "alts": []
+        },
+        {
+          "code": "IERG4841",
+          "alts": []
+        },
+        {
+          "code": "IERG5090",
+          "alts": []
+        },
+        {
+          "code": "IERG5230",
+          "alts": []
+        },
+        {
+          "code": "IERG5280",
+          "alts": []
+        },
+        {
+          "code": "IERG5330",
+          "alts": []
+        },
+        {
+          "code": "IERG3060",
+          "alts": []
+        },
+        {
+          "code": "IERG3810",
+          "alts": []
+        },
+        {
+          "code": "IERG4060",
+          "alts": []
+        },
+        {
+          "code": "ENGG1820",
+          "alts": []
+        },
+        {
+          "code": "IERG3830",
+          "alts": []
+        },
+        {
+          "code": "IERG4080",
+          "alts": [
+            "ESTR4312"
+          ]
+        },
+        {
+          "code": "IERG5340",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
+}

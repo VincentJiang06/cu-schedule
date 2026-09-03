@@ -1,0 +1,852 @@
+{
+  "program_en": "B.Sc. in Mathematical Sciences and Artificial Intelligence Double Major Programme",
+  "program_chi": "數學科學及人工智能理學士雙主修課程",
+  "admission_year": "2026",
+  "faculty": "Others",
+  "degree": "B.Sc",
+  "total_units": 90,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHLT1001",
+    "CHLT1002",
+    "ELTU1001",
+    "ELTU2019",
+    "ELTU3018",
+    "ENGG1003",
+    "IMSC1038",
+    "IMSC1113",
+    "IMSC1122",
+    "IMSC2018",
+    "IMSC2028",
+    "IMSC2041",
+    "IMSC2048",
+    "IMSC2058",
+    "IMSC2068",
+    "IMSC2078",
+    "IMSC2230",
+    "IMSC2240",
+    "IMSC3250",
+    "IMSC3260",
+    "IMSC3270",
+    "IMSC3280",
+    "IMSC3290",
+    "IMSC3300",
+    "IMSC4011",
+    "IMSC4012",
+    "IMSC4021",
+    "IMSC4022",
+    "IMSC4031",
+    "IMSC4032",
+    "IMSC4041",
+    "IMSC4042",
+    "IMSC4051",
+    "IMSC4052",
+    "IMSC4061",
+    "IMSC4062",
+    "IMSC4800",
+    "IMSC4900",
+    "IMSC5011",
+    "IMSC5012",
+    "IMSC5021",
+    "IMSC5022",
+    "IMSC5031",
+    "IMSC5032",
+    "IMSC5041",
+    "IMSC5042",
+    "IMSC5051",
+    "IMSC5052",
+    "IMSC5061",
+    "IMSC5062",
+    "MATH2046",
+    "MATH2066",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3250",
+    "MATH3290",
+    "MATH3320",
+    "MATH3340",
+    "MATH4210",
+    "MATH4220",
+    "MATH4240",
+    "MATH4250",
+    "MATH4400",
+    "MATH4900",
+    "MATH5021",
+    "MATH5022",
+    "MATH5061",
+    "MATH5070",
+    "MATH5211",
+    "MATH5212",
+    "UGCP1001",
+    "UGCP1002",
+    "UGFH1000",
+    "UGFN1000"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "IMSC2028",
+        "codes": [
+          "IMSC2028"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "IMSC1038",
+        "codes": [
+          "IMSC1038"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "IMSC2230",
+        "codes": [
+          "IMSC2230"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "IMSC3290",
+        "codes": [
+          "IMSC3290"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH5211",
+        "codes": [
+          "MATH5211"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH5212",
+        "codes": [
+          "MATH5212"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "IMSC3300",
+        "codes": [
+          "IMSC3300"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH2046",
+        "codes": [
+          "MATH2046"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      },
+      {
+        "raw": "MATH2066",
+        "codes": [
+          "MATH2066"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major: Mathematical Sciences (CUHK)"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "IMSC2048",
+        "codes": [
+          "IMSC2048"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC2058",
+        "codes": [
+          "IMSC2058"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC2068",
+        "codes": [
+          "IMSC2068"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC2078",
+        "codes": [
+          "IMSC2078"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC2240",
+        "codes": [
+          "IMSC2240"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC3250",
+        "codes": [
+          "IMSC3250"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC3260",
+        "codes": [
+          "IMSC3260"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC3270",
+        "codes": [
+          "IMSC3270"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC3280",
+        "codes": [
+          "IMSC3280"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4011",
+        "codes": [
+          "IMSC4011"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4012",
+        "codes": [
+          "IMSC4012"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4021",
+        "codes": [
+          "IMSC4021"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4022",
+        "codes": [
+          "IMSC4022"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4031",
+        "codes": [
+          "IMSC4031"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4032",
+        "codes": [
+          "IMSC4032"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4041",
+        "codes": [
+          "IMSC4041"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4042",
+        "codes": [
+          "IMSC4042"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4051",
+        "codes": [
+          "IMSC4051"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4052",
+        "codes": [
+          "IMSC4052"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4061",
+        "codes": [
+          "IMSC4061"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC4062",
+        "codes": [
+          "IMSC4062"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5011",
+        "codes": [
+          "IMSC5011"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5012",
+        "codes": [
+          "IMSC5012"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5021",
+        "codes": [
+          "IMSC5021"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5022",
+        "codes": [
+          "IMSC5022"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5031",
+        "codes": [
+          "IMSC5031"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5032",
+        "codes": [
+          "IMSC5032"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5041",
+        "codes": [
+          "IMSC5041"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "IMSC5042",
+        "codes": [
+          "IMSC5042"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH3250",
+        "codes": [
+          "MATH3250"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH4250",
+        "codes": [
+          "MATH4250"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH5021",
+        "codes": [
+          "MATH5021"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH5022",
+        "codes": [
+          "MATH5022"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH5061",
+        "codes": [
+          "MATH5061"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      },
+      {
+        "raw": "MATH5070",
+        "codes": [
+          "MATH5070"
+        ],
+        "alt": false,
+        "from": "(a) 1st Major"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "1st Major: Mathematical Sciences (CUHK)",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "2nd Major: Artificial Intelligence (CUHK(SZ))",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "1st Major",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 38
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "2nd Major: Artificial Intelligence (CUHK(SZ))",
+      "units": "17",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "4.",
+      "level": 1,
+      "title": "Research",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": "Courses offered by CUHK: IMSC2028 Courses offered by CUHK(SZ): AIE2040, MAT1011",
+      "courses": [
+        {
+          "code": "IMSC2028",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "1st Major: Mathematical Sciences (CUHK) Courses offered by CUHK",
+          "units": 21,
+          "note": "IMSC1038#, 2230, IMSC3290 or MATH3230 or 3240 or 5211 or 5212, IMSC3300 or MATH3320 or 3340, MATH2046, 2066 Courses offered by CUHK(SZ): AIE3007",
+          "courses": [
+            {
+              "code": "IMSC1038",
+              "alts": []
+            },
+            {
+              "code": "IMSC2230",
+              "alts": []
+            },
+            {
+              "code": "IMSC3290",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3240",
+              "alts": []
+            },
+            {
+              "code": "MATH5211",
+              "alts": []
+            },
+            {
+              "code": "MATH5212",
+              "alts": []
+            },
+            {
+              "code": "IMSC3300",
+              "alts": []
+            },
+            {
+              "code": "MATH3320",
+              "alts": []
+            },
+            {
+              "code": "MATH3340",
+              "alts": []
+            },
+            {
+              "code": "MATH2046",
+              "alts": []
+            },
+            {
+              "code": "MATH2066",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "2nd Major: Artificial Intelligence (CUHK(SZ)) AIE1001#, 1903, 3203#, CSC3200#, DDA2001#, MAT2040#",
+          "units": 18,
+          "note": null,
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "1st Major",
+          "units": null,
+          "note": "Mathematical Sciences (CUHK) | 21 Choose at least 21 units from the following, of which at least 6 units of courses should be from 3000 level or 4000 level and at most 3 units from MATH courses, offered by CUHK",
+          "courses": [
+            {
+              "code": "IMSC2048",
+              "alts": []
+            },
+            {
+              "code": "IMSC2058",
+              "alts": []
+            },
+            {
+              "code": "IMSC2068",
+              "alts": []
+            },
+            {
+              "code": "IMSC2078",
+              "alts": []
+            },
+            {
+              "code": "IMSC2240",
+              "alts": []
+            },
+            {
+              "code": "IMSC3250",
+              "alts": []
+            },
+            {
+              "code": "IMSC3260",
+              "alts": []
+            },
+            {
+              "code": "IMSC3270",
+              "alts": []
+            },
+            {
+              "code": "IMSC3280",
+              "alts": []
+            },
+            {
+              "code": "IMSC4011",
+              "alts": []
+            },
+            {
+              "code": "IMSC4012",
+              "alts": []
+            },
+            {
+              "code": "IMSC4021",
+              "alts": []
+            },
+            {
+              "code": "IMSC4022",
+              "alts": []
+            },
+            {
+              "code": "IMSC4031",
+              "alts": []
+            },
+            {
+              "code": "IMSC4032",
+              "alts": []
+            },
+            {
+              "code": "IMSC4041",
+              "alts": []
+            },
+            {
+              "code": "IMSC4042",
+              "alts": []
+            },
+            {
+              "code": "IMSC4051",
+              "alts": []
+            },
+            {
+              "code": "IMSC4052",
+              "alts": []
+            },
+            {
+              "code": "IMSC4061",
+              "alts": []
+            },
+            {
+              "code": "IMSC4062",
+              "alts": []
+            },
+            {
+              "code": "IMSC5011",
+              "alts": []
+            },
+            {
+              "code": "IMSC5012",
+              "alts": []
+            },
+            {
+              "code": "IMSC5021",
+              "alts": []
+            },
+            {
+              "code": "IMSC5022",
+              "alts": []
+            },
+            {
+              "code": "IMSC5031",
+              "alts": []
+            },
+            {
+              "code": "IMSC5032",
+              "alts": []
+            },
+            {
+              "code": "IMSC5041",
+              "alts": []
+            },
+            {
+              "code": "IMSC5042",
+              "alts": []
+            },
+            {
+              "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "MATH3250",
+              "alts": []
+            },
+            {
+              "code": "MATH3290",
+              "alts": []
+            },
+            {
+              "code": "MATH4210",
+              "alts": []
+            },
+            {
+              "code": "MATH4250",
+              "alts": []
+            },
+            {
+              "code": "MATH5021",
+              "alts": []
+            },
+            {
+              "code": "MATH5022",
+              "alts": []
+            },
+            {
+              "code": "MATH5061",
+              "alts": []
+            },
+            {
+              "code": "MATH5070",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "2nd Major: Artificial Intelligence (CUHK(SZ)) Choose at least 7 units of",
+          "units": 17,
+          "note": "3000-level courses and at least 9 units of 4000-level courses from the following offered by CUHK(SZ): ACT2111, 4244, AIE1003, 1004, 2001, 3001, 3002, 3003, 3004, 3005, 3006, 3201, 3202, CHM1001, 2210, 2310, 4342, CSC3001, 3050, 3060, 3150, 3160, 3170, 3185, 4001, 4005, 4012, 4107, 4120, 4160, 4220, 4240, DDA3005, ECE3060, 3080, 3300, 4011, 4310, 4513, ECO3090, FIN2010, 3090, MGT2020, 4230, PHY1001, 1010, 2020, 3110, 3260, 3410",
+          "courses": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "4.",
+      "title": "Research Component/Capstone Course/Final Year Project",
+      "units": 4,
+      "note": "Courses offered by CUHK(SZ): AIE3902, 4902",
+      "courses": [],
+      "children": []
+    }
+  ]
+}

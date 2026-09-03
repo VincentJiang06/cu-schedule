@@ -1,0 +1,1799 @@
+{
+  "program_en": "B.Sc. in Mathematics",
+  "program_chi": "數學理學士",
+  "admission_year": "2026",
+  "faculty": "Faculty of Science",
+  "degree": "B.Sc",
+  "total_units": 71,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "CHEM1070",
+    "CHEM1072",
+    "CHEM1280",
+    "CSCI1540",
+    "ESTR3506",
+    "ESTR3508",
+    "IERG5124",
+    "LSCI1001",
+    "LSCI1002",
+    "MATH1010",
+    "MATH1018",
+    "MATH1020",
+    "MATH1025",
+    "MATH1028",
+    "MATH1030",
+    "MATH1038",
+    "MATH1050",
+    "MATH1058",
+    "MATH1090",
+    "MATH1098",
+    "MATH1510",
+    "MATH1520",
+    "MATH1525",
+    "MATH1530",
+    "MATH1540",
+    "MATH1550",
+    "MATH2010",
+    "MATH2018",
+    "MATH2020",
+    "MATH2028",
+    "MATH2040",
+    "MATH2048",
+    "MATH2050",
+    "MATH2058",
+    "MATH2060",
+    "MATH2068",
+    "MATH2070",
+    "MATH2078",
+    "MATH2221",
+    "MATH2230",
+    "MATH2530",
+    "MATH2550",
+    "MATH3020",
+    "MATH3030",
+    "MATH3040",
+    "MATH3060",
+    "MATH3070",
+    "MATH3080",
+    "MATH3093",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH3250",
+    "MATH3260",
+    "MATH3270",
+    "MATH3280",
+    "MATH3290",
+    "MATH3310",
+    "MATH3320",
+    "MATH3330",
+    "MATH3340",
+    "MATH3360",
+    "MATH4010",
+    "MATH4020",
+    "MATH4030",
+    "MATH4050",
+    "MATH4060",
+    "MATH4080",
+    "MATH4210",
+    "MATH4220",
+    "MATH4230",
+    "MATH4240",
+    "MATH4250",
+    "MATH4260",
+    "MATH4280",
+    "MATH4400",
+    "MATH4900",
+    "MATH5011",
+    "MATH5012",
+    "MATH5021",
+    "MATH5022",
+    "MATH5031",
+    "MATH5032",
+    "MATH5051",
+    "MATH5052",
+    "MATH5061",
+    "MATH5062",
+    "MATH5070",
+    "PHYS1001",
+    "PHYS1002",
+    "PHYS1111",
+    "PHYS1113",
+    "SEEM3550",
+    "SEEM3570",
+    "STAR2000",
+    "STAR2050",
+    "STAR3000",
+    "STAR3050",
+    "STAR4000",
+    "STAR4050",
+    "STAT1011",
+    "STAT2001",
+    "STAT4005"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1001",
+        "codes": [
+          "LSCI1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "CHEM1280",
+        "codes": [
+          "CHEM1280"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1001",
+        "codes": [
+          "PHYS1001"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1002",
+        "codes": [
+          "PHYS1002"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "PHYS1113",
+        "codes": [
+          "PHYS1113"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH1025/1028",
+        "codes": [
+          "MATH1025",
+          "MATH1028"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH1090/1098",
+        "codes": [
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(a) MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(b) Capstone"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(b) Capstone"
+      },
+      {
+        "raw": "MATH1010/1018",
+        "codes": [
+          "MATH1010",
+          "MATH1018"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH1030/1038",
+        "codes": [
+          "MATH1030",
+          "MATH1038"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH1025/1028",
+        "codes": [
+          "MATH1025",
+          "MATH1028"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH1090/1098",
+        "codes": [
+          "MATH1090",
+          "MATH1098"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2010/2018",
+        "codes": [
+          "MATH2010",
+          "MATH2018"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2020/2028",
+        "codes": [
+          "MATH2020",
+          "MATH2028"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2040/2048",
+        "codes": [
+          "MATH2040",
+          "MATH2048"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2050/2058",
+        "codes": [
+          "MATH2050",
+          "MATH2058"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2060/2068",
+        "codes": [
+          "MATH2060",
+          "MATH2068"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2221",
+        "codes": [
+          "MATH2221"
+        ],
+        "alt": false,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(a) MATH1010/1018 or 1030/1038,"
+      },
+      {
+        "raw": "MATH4400",
+        "codes": [
+          "MATH4400"
+        ],
+        "alt": false,
+        "from": "(b) Capstone course: Either"
+      },
+      {
+        "raw": "MATH4900",
+        "codes": [
+          "MATH4900"
+        ],
+        "alt": false,
+        "from": "(b) Capstone course: Either"
+      },
+      {
+        "raw": "STAR2000",
+        "codes": [
+          "STAR2000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR3000",
+        "codes": [
+          "STAR3000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR4000",
+        "codes": [
+          "STAR4000"
+        ],
+        "alt": false,
+        "from": "(b) Research Courses"
+      },
+      {
+        "raw": "STAR2050",
+        "codes": [
+          "STAR2050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR3050",
+        "codes": [
+          "STAR3050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      },
+      {
+        "raw": "STAR4050",
+        "codes": [
+          "STAR4050"
+        ],
+        "alt": false,
+        "from": "(c) Seminar Courses"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "MATH2070/2078",
+        "codes": [
+          "MATH2070",
+          "MATH2078"
+        ],
+        "alt": true,
+        "from": "(a) 9 units from MATH2070/2078, 2230, 3270, 3280 (or"
+      },
+      {
+        "raw": "MATH2230",
+        "codes": [
+          "MATH2230"
+        ],
+        "alt": false,
+        "from": "(a) 9 units from MATH2070/2078, 2230, 3270, 3280 (or"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(a) 9 units from MATH2070/2078, 2230, 3270, 3280 (or"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "(a) 9 units from MATH2070/2078, 2230, 3270, 3280 (or"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "(a) 9 units from MATH2070/2078, 2230, 3270, 3280 (or"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(i) CSCI1540# and MATH3230; and"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(i) CSCI1540# and MATH3230; and"
+      },
+      {
+        "raw": "IERG5124",
+        "codes": [
+          "IERG5124"
+        ],
+        "alt": false,
+        "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
+      },
+      {
+        "raw": "SEEM3550/ESTR3506",
+        "codes": [
+          "SEEM3550",
+          "ESTR3506"
+        ],
+        "alt": true,
+        "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
+      },
+      {
+        "raw": "SEEM3570/ESTR3508",
+        "codes": [
+          "SEEM3570",
+          "ESTR3508"
+        ],
+        "alt": true,
+        "from": "(ii) 9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(i) 9-12 units from MATH3320, 3330, 3340, 4280; and"
+      },
+      {
+        "raw": "MATH3330",
+        "codes": [
+          "MATH3330"
+        ],
+        "alt": false,
+        "from": "(i) 9-12 units from MATH3320, 3330, 3340, 4280; and"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "(i) 9-12 units from MATH3320, 3330, 3340, 4280; and"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "(i) 9-12 units from MATH3320, 3330, 3340, 4280; and"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3290",
+        "codes": [
+          "MATH3290"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3310",
+        "codes": [
+          "MATH3310"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3360",
+        "codes": [
+          "MATH3360"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH4240",
+        "codes": [
+          "MATH4240"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "IERG5124",
+        "codes": [
+          "IERG5124"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "SEEM3550/ESTR3506",
+        "codes": [
+          "SEEM3550",
+          "ESTR3506"
+        ],
+        "alt": true,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "(ii) 3-9 units from MATH3215, 3230, 3280, 3290, 3310,"
+      },
+      {
+        "raw": "MATH3030",
+        "codes": [
+          "MATH3030"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3040",
+        "codes": [
+          "MATH3040"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3060",
+        "codes": [
+          "MATH3060"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3070",
+        "codes": [
+          "MATH3070"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3093",
+        "codes": [
+          "MATH3093"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3340",
+        "codes": [
+          "MATH3340"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4010",
+        "codes": [
+          "MATH4010"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4030",
+        "codes": [
+          "MATH4030"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4050",
+        "codes": [
+          "MATH4050"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4060",
+        "codes": [
+          "MATH4060"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4080",
+        "codes": [
+          "MATH4080"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH4220",
+        "codes": [
+          "MATH4220"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5011",
+        "codes": [
+          "MATH5011"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5012",
+        "codes": [
+          "MATH5012"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5021",
+        "codes": [
+          "MATH5021"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5022",
+        "codes": [
+          "MATH5022"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5031",
+        "codes": [
+          "MATH5031"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5032",
+        "codes": [
+          "MATH5032"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5051",
+        "codes": [
+          "MATH5051"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5052",
+        "codes": [
+          "MATH5052"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5061",
+        "codes": [
+          "MATH5061"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5062",
+        "codes": [
+          "MATH5062"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH5070",
+        "codes": [
+          "MATH5070"
+        ],
+        "alt": false,
+        "from": "(a) 15-21 units from MATH3030, 3040,"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(b) 0-3 units"
+      },
+      {
+        "raw": "MATH4280",
+        "codes": [
+          "MATH4280"
+        ],
+        "alt": false,
+        "from": "(b) 0-3 units"
+      },
+      {
+        "raw": "MATH3320",
+        "codes": [
+          "MATH3320"
+        ],
+        "alt": false,
+        "from": "(c) 0-3 units"
+      },
+      {
+        "raw": "MATH4230",
+        "codes": [
+          "MATH4230"
+        ],
+        "alt": false,
+        "from": "(c) 0-3 units"
+      },
+      {
+        "raw": "MATH3270",
+        "codes": [
+          "MATH3270"
+        ],
+        "alt": false,
+        "from": "(d) 0-6 units"
+      },
+      {
+        "raw": "MATH3280",
+        "codes": [
+          "MATH3280"
+        ],
+        "alt": false,
+        "from": "(d) 0-6 units"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "29",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "MATH1010/1018 or 1030/1038, 1025/1028, 1090/1098, 2010/2018,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "33",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "9 units from MATH2070/2078, 2230, 3270, 3280 (or",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "24 units from at most one stream below[a][b]",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "CSCI1540# and MATH3230; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "6 units of MATH courses at 3000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "9-12 units from MATH3320, 3330, 3340, 4280; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "3-9 units from MATH3215, 3230, 3280, 3290, 3310,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "(iii)",
+      "level": 3,
+      "title": "6 units of MATH courses at 3000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "18-24 units of MATH courses at 3000 or above level; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "0-6 units of either BMED courses at 3000 or above",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "9-18 units of BMED courses at 3000 or above level; and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "6-15 units of MATH courses at 3000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "9-18 units of courses at 2000 or above level of at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(ii)",
+      "level": 3,
+      "title": "6-15 units of MATH courses at 3000 or above level",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "35",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "MATH1010/1018 or 1030/1038,",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Capstone course: Either",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "27",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "15-21 units from MATH3030, 3040,",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 24
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "0-3 units",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "0-3 units",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "0-6 units",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "0-6 units",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "One Faculty Package Course",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Research Courses",
+      "units": "6",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Seminar Courses",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Experiential Learning",
+      "units": "---",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": "Group C: MATH1010/1018 or 1030/1038 Group E: STAT1011 A course from the following Group A: LSCI1001 or 1002 Group B: CHEM1070 or 1072 or 1280 Group D: PHYS1001 or 1002 or 1111 or 1113 For students who specialize in streams other than Enrichment Stream",
+      "courses": [
+        {
+          "code": "MATH1010",
+          "alts": [
+            "MATH1018"
+          ]
+        },
+        {
+          "code": "MATH1030",
+          "alts": [
+            "MATH1038"
+          ]
+        },
+        {
+          "code": "STAT1011",
+          "alts": []
+        },
+        {
+          "code": "LSCI1001",
+          "alts": []
+        },
+        {
+          "code": "LSCI1002",
+          "alts": []
+        },
+        {
+          "code": "CHEM1070",
+          "alts": []
+        },
+        {
+          "code": "CHEM1072",
+          "alts": []
+        },
+        {
+          "code": "CHEM1280",
+          "alts": []
+        },
+        {
+          "code": "PHYS1001",
+          "alts": []
+        },
+        {
+          "code": "PHYS1002",
+          "alts": []
+        },
+        {
+          "code": "PHYS1111",
+          "alts": []
+        },
+        {
+          "code": "PHYS1113",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": 29,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1010",
+              "alts": [
+                "MATH1018"
+              ]
+            },
+            {
+              "code": "MATH1030",
+              "alts": [
+                "MATH1038"
+              ]
+            },
+            {
+              "code": "MATH1025",
+              "alts": [
+                "MATH1028"
+              ]
+            },
+            {
+              "code": "MATH1090",
+              "alts": [
+                "MATH1098"
+              ]
+            },
+            {
+              "code": "MATH2010",
+              "alts": [
+                "MATH2018"
+              ]
+            },
+            {
+              "code": "MATH2020",
+              "alts": [
+                "MATH2028"
+              ]
+            },
+            {
+              "code": "MATH2040",
+              "alts": [
+                "MATH2048"
+              ]
+            },
+            {
+              "code": "MATH2050",
+              "alts": [
+                "MATH2058"
+              ]
+            },
+            {
+              "code": "MATH2060",
+              "alts": [
+                "MATH2068"
+              ]
+            },
+            {
+              "code": "MATH2221",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "Capstone course",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH4400",
+              "alts": []
+            },
+            {
+              "code": "MATH4900",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 33,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH2070",
+              "alts": [
+                "MATH2078"
+              ]
+            },
+            {
+              "code": "MATH2230",
+              "alts": []
+            },
+            {
+              "code": "MATH3270",
+              "alts": []
+            },
+            {
+              "code": "MATH3280",
+              "alts": []
+            },
+            {
+              "code": "STAT2001",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "24 units from at most one stream below",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "",
+              "title": "",
+              "units": null,
+              "note": "For students who specialize in Computational and Applied Mathematics Stream",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CSCI1540",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "9-12 units from MATH32xx, 33xx, 42xx, 43xx; and 0-3",
+              "courses": [
+                {
+                  "code": "IERG5124",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3550",
+                  "alts": [
+                    "ESTR3506"
+                  ]
+                },
+                {
+                  "code": "SEEM3570",
+                  "alts": [
+                    "ESTR3508"
+                  ]
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "6 units of MATH courses at 3000 or above level",
+              "courses": [],
+              "children": [
+                {
+                  "marker": "",
+                  "title": "",
+                  "units": null,
+                  "note": "For students who specialize in Computational Big Data Analytics Stream",
+                  "courses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH3320",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3330",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3340",
+                  "alts": []
+                },
+                {
+                  "code": "MATH4280",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MATH3215",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3230",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3280",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3290",
+                  "alts": []
+                },
+                {
+                  "code": "MATH3310",
+                  "alts": []
+                },
+                {
+                  "code": "IERG5124",
+                  "alts": []
+                },
+                {
+                  "code": "SEEM3550",
+                  "alts": [
+                    "ESTR3506"
+                  ]
+                },
+                {
+                  "code": "STAT4005",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "(iii)",
+              "title": "",
+              "units": null,
+              "note": "6 units of MATH courses at 3000 or above level",
+              "courses": [],
+              "children": [
+                {
+                  "marker": "",
+                  "title": "",
+                  "units": null,
+                  "note": "For students in the Mathematics Stream",
+                  "courses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "18-24 units of MATH courses at 3000 or above level; and",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "0-6 units of either BMED courses at 3000 or above level, or courses at 2000 or above level of one non-MATH subject area offered by the Faculties/Departments of Science, Engineering, Economics and Finance. The specific subject area codes are given in explanatory note.",
+              "courses": [],
+              "children": [
+                {
+                  "marker": "",
+                  "title": "",
+                  "units": null,
+                  "note": "For students who specialize in Mathematics-Education Stream",
+                  "courses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "9-18 units of BMED courses at 3000 or above level; and",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "6-15 units of MATH courses at 3000 or above level",
+              "courses": [],
+              "children": [
+                {
+                  "marker": "",
+                  "title": "",
+                  "units": null,
+                  "note": "For students who specialize in Mathematics-Multidisciplinary Stream",
+                  "courses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": "9-18 units of courses at 2000 or above level of at most two non-MATH subject areas offered by the Faculties/Departments of Science, Engineering, Economics, and Finance. The specific subject area codes are given in explanatory note; and",
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(ii)",
+              "title": "",
+              "units": null,
+              "note": "6-15 units of MATH courses at 3000 or above level",
+              "courses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "",
+      "title": "其他相关课程",
+      "units": null,
+      "note": "本方案文本中列出、未归入上述分区的课程",
+      "courses": [
+        {
+          "code": "MATH3360",
+          "alts": []
+        },
+        {
+          "code": "MATH4230",
+          "alts": []
+        },
+        {
+          "code": "MATH4240",
+          "alts": []
+        },
+        {
+          "code": "MATH3030",
+          "alts": []
+        },
+        {
+          "code": "MATH3040",
+          "alts": []
+        },
+        {
+          "code": "MATH3060",
+          "alts": []
+        },
+        {
+          "code": "MATH3070",
+          "alts": []
+        },
+        {
+          "code": "MATH3093",
+          "alts": []
+        },
+        {
+          "code": "MATH4010",
+          "alts": []
+        },
+        {
+          "code": "MATH4030",
+          "alts": []
+        },
+        {
+          "code": "MATH4050",
+          "alts": []
+        },
+        {
+          "code": "MATH4060",
+          "alts": []
+        },
+        {
+          "code": "MATH4080",
+          "alts": []
+        },
+        {
+          "code": "MATH4220",
+          "alts": []
+        },
+        {
+          "code": "MATH5011",
+          "alts": []
+        },
+        {
+          "code": "MATH5012",
+          "alts": []
+        },
+        {
+          "code": "MATH5021",
+          "alts": []
+        },
+        {
+          "code": "MATH5022",
+          "alts": []
+        },
+        {
+          "code": "MATH5031",
+          "alts": []
+        },
+        {
+          "code": "MATH5032",
+          "alts": []
+        },
+        {
+          "code": "MATH5051",
+          "alts": []
+        },
+        {
+          "code": "MATH5052",
+          "alts": []
+        },
+        {
+          "code": "MATH5061",
+          "alts": []
+        },
+        {
+          "code": "MATH5062",
+          "alts": []
+        },
+        {
+          "code": "MATH5070",
+          "alts": []
+        },
+        {
+          "code": "MATH3240",
+          "alts": []
+        },
+        {
+          "code": "STAR2000",
+          "alts": []
+        },
+        {
+          "code": "STAR3000",
+          "alts": []
+        },
+        {
+          "code": "STAR4000",
+          "alts": []
+        },
+        {
+          "code": "STAR2050",
+          "alts": []
+        },
+        {
+          "code": "STAR3050",
+          "alts": []
+        },
+        {
+          "code": "STAR4050",
+          "alts": []
+        }
+      ],
+      "children": []
+    }
+  ]
+}

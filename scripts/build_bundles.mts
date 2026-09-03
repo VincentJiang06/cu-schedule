@@ -283,7 +283,17 @@ function buildYear(yearName: string): TermSizeReport[] {
 // review). parse_programs.py no longer writes that file.
 // ============================================================================
 
-const PROGRAM_YEARS = ['2023', '2024', '2025']
+// Admission years are DISCOVERED from data/programs/<year>/, never listed here: the
+// scrape adds a year directory (scripts/scrape_programs.py) and parse_programs.py fills
+// it, so a hard-coded list would silently drop the newest cohort from the bundle —
+// which is exactly how the 2026 intake ended up with an empty 主修 picker.
+function programYears(): string[] {
+  if (!fs.existsSync(PROGRAMS_DIR)) return []
+  return fs
+    .readdirSync(PROGRAMS_DIR)
+    .filter((name) => /^\d{4}$/.test(name) && fs.statSync(path.join(PROGRAMS_DIR, name)).isDirectory())
+    .sort()
+}
 
 type ProgramCourseRef = { codes?: string[] }
 type ProgramStreamBucket = { stream?: string; from?: string; courses?: ProgramCourseRef[] }
@@ -385,9 +395,9 @@ function richnessCompare(a: BuiltProgram, b: BuiltProgram): number {
   return a.required.length + a.elective.length - (b.required.length + b.elective.length)
 }
 
-function listProgramFiles(): string[] {
+function listProgramFiles(years: string[]): string[] {
   const files: string[] = []
-  for (const year of PROGRAM_YEARS) {
+  for (const year of years) {
     const yearDir = path.join(PROGRAMS_DIR, year)
     if (!fs.existsSync(yearDir) || !fs.statSync(yearDir).isDirectory()) continue
     for (const faculty of fs.readdirSync(yearDir).sort()) {
@@ -410,7 +420,8 @@ function buildProgramsBundle(): {
   program_count: number
   programs: BuiltProgram[]
 } {
-  const files = listProgramFiles()
+  const years = programYears()
+  const files = listProgramFiles(years)
   // De-duplicate by (year, name_en) — cross-listed programmes appear under several
   // faculties; keep the richest listing.
   const best = new Map<string, BuiltProgram>()
@@ -418,7 +429,7 @@ function buildProgramsBundle(): {
 
   for (const file of files) {
     const rec: ProgramFile = JSON.parse(fs.readFileSync(file, 'utf8'))
-    if (!PROGRAM_YEARS.includes(rec.admission_year)) continue // defensive; dir scan is already scoped
+    if (!years.includes(rec.admission_year)) continue // defensive; dir scan is already scoped
     const prog = buildProgram(rec)
     const key = `${prog.year} ${prog.name_en}`
     if (!faculties.has(key)) faculties.set(key, new Set())
@@ -442,7 +453,7 @@ function buildProgramsBundle(): {
     source_page: 'tt_dsp_acad_prog.aspx',
     academic_career: 'UG',
     study_mode: 'Full-time',
-    years: [...PROGRAM_YEARS],
+    years,
     program_count: programs.length,
     programs,
   }

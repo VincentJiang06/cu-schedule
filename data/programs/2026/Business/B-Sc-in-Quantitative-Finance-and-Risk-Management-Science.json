@@ -1,0 +1,1200 @@
+{
+  "program_en": "B.Sc. in Quantitative Finance and Risk Management Science",
+  "program_chi": "計量金融學及風險管理科學理學士",
+  "admission_year": "2026",
+  "faculty": "Faculty of Business Administration",
+  "degree": "B.Sc",
+  "total_units": 78,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ACCT1002",
+    "ACCT1111",
+    "ACCT2111",
+    "ACCT3151",
+    "ACCT4212",
+    "ACCT4213",
+    "ACCT4214",
+    "ACCT4251",
+    "BUST1001",
+    "BUST1002",
+    "BUST1014",
+    "CHLT1100",
+    "CHLT1200",
+    "CMSE1000",
+    "CSCI1510",
+    "CSCI1520",
+    "CSCI1530",
+    "CSCI1540",
+    "CSCI1550",
+    "CSCI1580",
+    "CSCI2100",
+    "CSCI2520",
+    "DOTE1030",
+    "DOTE1040",
+    "DOTE2051",
+    "DOTE3010",
+    "ELTU1001",
+    "ELTU2012",
+    "ENGG1003",
+    "FINA2010",
+    "FINA3010",
+    "FINA3020",
+    "FINA3030",
+    "FINA3040",
+    "FINA3060",
+    "FINA3070",
+    "FINA3080",
+    "FINA3090",
+    "FINA3110",
+    "FINA3210",
+    "FINA3230",
+    "FINA3240",
+    "FINA3310",
+    "FINA3320",
+    "FINA3330",
+    "FINA3340",
+    "FINA3350",
+    "FINA3360",
+    "FINA3370",
+    "FINA3398",
+    "FINA3399",
+    "FINA3420",
+    "FINA4010",
+    "FINA4020",
+    "FINA4030",
+    "FINA4040",
+    "FINA4050",
+    "FINA4060",
+    "FINA4110",
+    "FINA4120",
+    "FINA4130",
+    "FINA4140",
+    "FINA4150",
+    "FINA4160",
+    "FINA4190",
+    "FINA4310",
+    "FINA4320",
+    "FINA4330",
+    "FINA4340",
+    "FINA4350",
+    "FINA4370",
+    "FINA4380",
+    "FINA4390",
+    "FINA4400",
+    "FINA4410",
+    "FINA4420",
+    "FINA4430",
+    "FINA6232",
+    "FINA6242",
+    "FINA6252",
+    "IBBA3040",
+    "MATH1000",
+    "MATH1002",
+    "MATH1003",
+    "MATH1005",
+    "MATH1006",
+    "MATH1009",
+    "MATH1010",
+    "MATH1018",
+    "MATH1030",
+    "MATH1038",
+    "MATH1050",
+    "MATH1120",
+    "MATH1530",
+    "MATH1630",
+    "MATH2010",
+    "MATH2018",
+    "MATH3215",
+    "MATH3230",
+    "MATH3240",
+    "MATH4210",
+    "MGNT1020",
+    "MGNT2511",
+    "MGNT2512",
+    "MGNT2611",
+    "MGNT4010",
+    "MKTG2010",
+    "RMSC2001",
+    "RMSC3001",
+    "RMSC4001",
+    "RMSC4002",
+    "RMSC4003",
+    "RMSC4004",
+    "RMSC4005",
+    "RMSC4006",
+    "RMSC4007",
+    "RMSC4102",
+    "RMSC4202",
+    "SEEM3080",
+    "SEEM3550",
+    "STAT2001",
+    "STAT2006",
+    "STAT3007",
+    "STAT3008",
+    "STAT4001",
+    "STAT4004",
+    "STAT4005",
+    "STAT4010",
+    "STAT4011",
+    "STAT4012",
+    "UGCP1001",
+    "UGCP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1018",
+        "codes": [
+          "MATH1018"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1030",
+        "codes": [
+          "DOTE1030"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "DOTE1040",
+        "codes": [
+          "DOTE1040"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "FINA2010",
+        "codes": [
+          "FINA2010"
+        ],
+        "alt": false,
+        "from": "(a) (b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#"
+      },
+      {
+        "raw": "FINA3080",
+        "codes": [
+          "FINA3080"
+        ],
+        "alt": false,
+        "from": "(a) (b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#"
+      },
+      {
+        "raw": "STAT2001",
+        "codes": [
+          "STAT2001"
+        ],
+        "alt": false,
+        "from": "(a) (b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#"
+      },
+      {
+        "raw": "STAT2006",
+        "codes": [
+          "STAT2006"
+        ],
+        "alt": false,
+        "from": "(a) (b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#"
+      },
+      {
+        "raw": "STAT3008",
+        "codes": [
+          "STAT3008"
+        ],
+        "alt": false,
+        "from": "(a) (b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#"
+      },
+      {
+        "raw": "MATH1030",
+        "codes": [
+          "MATH1030"
+        ],
+        "alt": false,
+        "from": "(c) MATH1030 or 1038 or 1630, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH1038",
+        "codes": [
+          "MATH1038"
+        ],
+        "alt": false,
+        "from": "(c) MATH1030 or 1038 or 1630, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH1630",
+        "codes": [
+          "MATH1630"
+        ],
+        "alt": false,
+        "from": "(c) MATH1030 or 1038 or 1630, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH2010",
+        "codes": [
+          "MATH2010"
+        ],
+        "alt": false,
+        "from": "(c) MATH1030 or 1038 or 1630, 2010# or 2018#"
+      },
+      {
+        "raw": "MATH2018",
+        "codes": [
+          "MATH2018"
+        ],
+        "alt": false,
+        "from": "(c) MATH1030 or 1038 or 1630, 2010# or 2018#"
+      },
+      {
+        "raw": "ACCT1111",
+        "codes": [
+          "ACCT1111"
+        ],
+        "alt": false,
+        "from": "(d) ACCT1111 or 2111"
+      },
+      {
+        "raw": "ACCT2111",
+        "codes": [
+          "ACCT2111"
+        ],
+        "alt": false,
+        "from": "(d) ACCT1111 or 2111"
+      },
+      {
+        "raw": "CSCI1510",
+        "codes": [
+          "CSCI1510"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1520",
+        "codes": [
+          "CSCI1520"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1530",
+        "codes": [
+          "CSCI1530"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1540",
+        "codes": [
+          "CSCI1540"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1550",
+        "codes": [
+          "CSCI1550"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI1580",
+        "codes": [
+          "CSCI1580"
+        ],
+        "alt": false,
+        "from": "(e) CSCI1510 or 1520 or 1530 or 1540"
+      },
+      {
+        "raw": "CSCI2100",
+        "codes": [
+          "CSCI2100"
+        ],
+        "alt": false,
+        "from": "(f) CSCI2100# or 2520# or DOTE2051#"
+      },
+      {
+        "raw": "CSCI2520",
+        "codes": [
+          "CSCI2520"
+        ],
+        "alt": false,
+        "from": "(f) CSCI2100# or 2520# or DOTE2051#"
+      },
+      {
+        "raw": "DOTE2051",
+        "codes": [
+          "DOTE2051"
+        ],
+        "alt": false,
+        "from": "(f) CSCI2100# or 2520# or DOTE2051#"
+      },
+      {
+        "raw": "SEEM3550",
+        "codes": [
+          "SEEM3550"
+        ],
+        "alt": false,
+        "from": "(f) CSCI2100# or 2520# or DOTE2051#"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "DOTE3010",
+        "codes": [
+          "DOTE3010"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "IBBA3040",
+        "codes": [
+          "IBBA3040"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MGNT1020",
+        "codes": [
+          "MGNT1020"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MGNT2511",
+        "codes": [
+          "MGNT2511"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MGNT2512",
+        "codes": [
+          "MGNT2512"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MGNT2611",
+        "codes": [
+          "MGNT2611"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MGNT4010",
+        "codes": [
+          "MGNT4010"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "MKTG2010",
+        "codes": [
+          "MKTG2010"
+        ],
+        "alt": false,
+        "from": "(a) Business (choose at least 6 units of courses from the"
+      },
+      {
+        "raw": "FINA4110",
+        "codes": [
+          "FINA4110"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "FINA4120",
+        "codes": [
+          "FINA4120"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "FINA4150",
+        "codes": [
+          "FINA4150"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "FINA4160",
+        "codes": [
+          "FINA4160"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "FINA4370",
+        "codes": [
+          "FINA4370"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "FINA4420",
+        "codes": [
+          "FINA4420"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "MATH3215",
+        "codes": [
+          "MATH3215"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "MATH3230",
+        "codes": [
+          "MATH3230"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "MATH3240",
+        "codes": [
+          "MATH3240"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "MATH4210",
+        "codes": [
+          "MATH4210"
+        ],
+        "alt": false,
+        "from": "(b) Quantitative/Mathematical Finance (choose at least 9"
+      },
+      {
+        "raw": "RMSC2001",
+        "codes": [
+          "RMSC2001"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC3001",
+        "codes": [
+          "RMSC3001"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC4002",
+        "codes": [
+          "RMSC4002"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC4004",
+        "codes": [
+          "RMSC4004"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC4005",
+        "codes": [
+          "RMSC4005"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC4006",
+        "codes": [
+          "RMSC4006"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "RMSC4007",
+        "codes": [
+          "RMSC4007"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT3007",
+        "codes": [
+          "STAT3007"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT4001",
+        "codes": [
+          "STAT4001"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT4004",
+        "codes": [
+          "STAT4004"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT4005",
+        "codes": [
+          "STAT4005"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT4010",
+        "codes": [
+          "STAT4010"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "STAT4012",
+        "codes": [
+          "STAT4012"
+        ],
+        "alt": false,
+        "from": "(c) Risk Management/Data Analytics"
+      },
+      {
+        "raw": "FINA4130",
+        "codes": [
+          "FINA4130"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA4140",
+        "codes": [
+          "FINA4140"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA4190",
+        "codes": [
+          "FINA4190"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA4380",
+        "codes": [
+          "FINA4380"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA4390",
+        "codes": [
+          "FINA4390"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA4430",
+        "codes": [
+          "FINA4430"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA6232",
+        "codes": [
+          "FINA6232"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA6242",
+        "codes": [
+          "FINA6242"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "FINA6252",
+        "codes": [
+          "FINA6252"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "RMSC4102",
+        "codes": [
+          "RMSC4102"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "RMSC4202",
+        "codes": [
+          "RMSC4202"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      },
+      {
+        "raw": "STAT4011",
+        "codes": [
+          "STAT4011"
+        ],
+        "alt": false,
+        "from": "(d) Capstone/Research (choose at"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "Required Courses",
+      "units": "36",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "(b) | FINA2010, 3080, RMSC, 4001, 4003 STAT2001#, 2006#, 3008#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "MATH1030 or 1038 or 1630, 2010# or 2018#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "ACCT1111 or 2111",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "CSCI1510 or 1520 or 1530 or 1540",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "CSCI2100# or 2520# or DOTE2051#",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 4
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "Elective Courses",
+      "units": "33",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Business (choose at least 6 units of courses from the",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Quantitative/Mathematical Finance (choose at least 9",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Risk Management/Data Analytics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 13
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Capstone/Research (choose at",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 12
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1018",
+          "alts": []
+        },
+        {
+          "code": "DOTE1030",
+          "alts": []
+        },
+        {
+          "code": "DOTE1040",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "Required Courses",
+      "units": 36,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "FINA2010",
+              "alts": []
+            },
+            {
+              "code": "FINA3080",
+              "alts": []
+            },
+            {
+              "code": "STAT2001",
+              "alts": []
+            },
+            {
+              "code": "STAT2006",
+              "alts": []
+            },
+            {
+              "code": "STAT3008",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "MATH1030",
+              "alts": []
+            },
+            {
+              "code": "MATH1038",
+              "alts": []
+            },
+            {
+              "code": "MATH1630",
+              "alts": []
+            },
+            {
+              "code": "MATH2010",
+              "alts": []
+            },
+            {
+              "code": "MATH2018",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "ACCT1111",
+              "alts": []
+            },
+            {
+              "code": "ACCT2111",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(e)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI1510",
+              "alts": []
+            },
+            {
+              "code": "CSCI1520",
+              "alts": []
+            },
+            {
+              "code": "CSCI1530",
+              "alts": []
+            },
+            {
+              "code": "CSCI1540",
+              "alts": []
+            },
+            {
+              "code": "CSCI1550",
+              "alts": []
+            },
+            {
+              "code": "CSCI1580",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(f)",
+          "title": "",
+          "units": null,
+          "note": null,
+          "courses": [
+            {
+              "code": "CSCI2100",
+              "alts": []
+            },
+            {
+              "code": "CSCI2520",
+              "alts": []
+            },
+            {
+              "code": "DOTE2051",
+              "alts": []
+            },
+            {
+              "code": "SEEM3550",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "Elective Courses",
+      "units": 33,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "",
+          "units": null,
+          "note": "Business (choose at least 6 units of courses from the following list, but no more than six 1-unit courses): ACCT 3151#, 4212# or 4213# or 4214#, 4251#, DOTE3010#, FINA, 3010, 3020, 3030, 3040, 3060, 3070, 3090, 3110, 3210, 3230, 3240, 3310, 3320, 3330, 3340, 3350, 3360, 3370, 3398, 3399, 3420, 4010, 4020, 4030, 4040, 4050, 4060, 4310, 4320, 4330, 4340, 4350, 4400, 4410, IBBA3040, MGNT1020, 2511, 2512, 2611, 4010#, MKTG2010#",
+          "courses": [
+            {
+              "code": "DOTE3010",
+              "alts": []
+            },
+            {
+              "code": "IBBA3040",
+              "alts": []
+            },
+            {
+              "code": "MGNT1020",
+              "alts": []
+            },
+            {
+              "code": "MGNT2511",
+              "alts": []
+            },
+            {
+              "code": "MGNT2512",
+              "alts": []
+            },
+            {
+              "code": "MGNT2611",
+              "alts": []
+            },
+            {
+              "code": "MGNT4010",
+              "alts": []
+            },
+            {
+              "code": "MKTG2010",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(b)",
+          "title": "",
+          "units": null,
+          "note": "Quantitative/Mathematical Finance (choose at least 9 units of courses from the following list)",
+          "courses": [
+            {
+              "code": "FINA4110",
+              "alts": []
+            },
+            {
+              "code": "FINA4120",
+              "alts": []
+            },
+            {
+              "code": "FINA4150",
+              "alts": []
+            },
+            {
+              "code": "FINA4160",
+              "alts": []
+            },
+            {
+              "code": "FINA4370",
+              "alts": []
+            },
+            {
+              "code": "FINA4420",
+              "alts": []
+            },
+            {
+              "code": "MATH3215",
+              "alts": []
+            },
+            {
+              "code": "MATH3230",
+              "alts": []
+            },
+            {
+              "code": "MATH3240",
+              "alts": []
+            },
+            {
+              "code": "MATH4210",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(c)",
+          "title": "",
+          "units": null,
+          "note": "Risk Management/Data Analytics (choose at least 15 units of courses from the following list)",
+          "courses": [
+            {
+              "code": "RMSC2001",
+              "alts": []
+            },
+            {
+              "code": "RMSC3001",
+              "alts": []
+            },
+            {
+              "code": "RMSC4002",
+              "alts": []
+            },
+            {
+              "code": "RMSC4004",
+              "alts": []
+            },
+            {
+              "code": "RMSC4005",
+              "alts": []
+            },
+            {
+              "code": "RMSC4006",
+              "alts": []
+            },
+            {
+              "code": "RMSC4007",
+              "alts": []
+            },
+            {
+              "code": "STAT3007",
+              "alts": []
+            },
+            {
+              "code": "STAT4001",
+              "alts": []
+            },
+            {
+              "code": "STAT4004",
+              "alts": []
+            },
+            {
+              "code": "STAT4005",
+              "alts": []
+            },
+            {
+              "code": "STAT4010",
+              "alts": []
+            },
+            {
+              "code": "STAT4012",
+              "alts": []
+            }
+          ],
+          "children": []
+        },
+        {
+          "marker": "(d)",
+          "title": "Capstone/Research",
+          "units": null,
+          "note": "(choose at least 3 units of courses from the following list)",
+          "courses": [
+            {
+              "code": "FINA4130",
+              "alts": []
+            },
+            {
+              "code": "FINA4140",
+              "alts": []
+            },
+            {
+              "code": "FINA4190",
+              "alts": []
+            },
+            {
+              "code": "FINA4380",
+              "alts": []
+            },
+            {
+              "code": "FINA4390",
+              "alts": []
+            },
+            {
+              "code": "FINA4430",
+              "alts": []
+            },
+            {
+              "code": "FINA6232",
+              "alts": []
+            },
+            {
+              "code": "FINA6242",
+              "alts": []
+            },
+            {
+              "code": "FINA6252",
+              "alts": []
+            },
+            {
+              "code": "RMSC4102",
+              "alts": []
+            },
+            {
+              "code": "RMSC4202",
+              "alts": []
+            },
+            {
+              "code": "STAT4011",
+              "alts": []
+            }
+          ],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

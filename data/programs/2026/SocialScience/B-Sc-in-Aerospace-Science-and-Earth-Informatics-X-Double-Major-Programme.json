@@ -1,0 +1,8790 @@
+{
+  "program_en": "B.Sc. in Aerospace Science and Earth Informatics & X Double Major Programme",
+  "program_chi": "航天科學與地球信息學及X理學士雙主修課程",
+  "admission_year": "2026",
+  "faculty": "Faculty of Social Science",
+  "degree": "B.Sc",
+  "total_units": 90,
+  "parse_status": "full",
+  "has_senior_year_variant": false,
+  "has_streams": false,
+  "all_course_codes": [
+    "ASEI1090",
+    "ASEI2010",
+    "ASEI2090",
+    "ASEI3010",
+    "ASEI3020",
+    "ASEI4010",
+    "BIOL2210",
+    "BIOL2213",
+    "BIOL3410",
+    "BIOL3710",
+    "BIOL4012",
+    "BIOL4230",
+    "BIOL4260",
+    "BIOL4420",
+    "BIOL4510",
+    "CHEM1070",
+    "CHEM1072",
+    "CHEM1870",
+    "CHLT1001",
+    "CHLT1002",
+    "COOP1001",
+    "COOP2001",
+    "COOP4001",
+    "EEEN2020",
+    "EEEN2030",
+    "EEEN2040",
+    "EEEN3020",
+    "EEEN3030",
+    "EEEN4010",
+    "EEEN4020",
+    "EEEN4050",
+    "EEEN4060",
+    "EEEN4070",
+    "EEEN4998",
+    "EESC1009",
+    "EESC2009",
+    "EESC2010",
+    "EESC2019",
+    "EESC2020",
+    "EESC2030",
+    "EESC2119",
+    "EESC2129",
+    "EESC2160",
+    "EESC2270",
+    "EESC2515",
+    "EESC2517",
+    "EESC2800",
+    "EESC2909",
+    "EESC3020",
+    "EESC3100",
+    "EESC3120",
+    "EESC3130",
+    "EESC3140",
+    "EESC3200",
+    "EESC3220",
+    "EESC3230",
+    "EESC3300",
+    "EESC3320",
+    "EESC3330",
+    "EESC3415",
+    "EESC3417",
+    "EESC3510",
+    "EESC3520",
+    "EESC3522",
+    "EESC3530",
+    "EESC3540",
+    "EESC3600",
+    "EESC3601",
+    "EESC3800",
+    "EESC3900",
+    "EESC4010",
+    "EESC4020",
+    "EESC4030",
+    "EESC4040",
+    "EESC4110",
+    "EESC4119",
+    "EESC4120",
+    "EESC4129",
+    "EESC4130",
+    "EESC4140",
+    "EESC4150",
+    "EESC4160",
+    "EESC4170",
+    "EESC4180",
+    "EESC4210",
+    "EESC4220",
+    "EESC4230",
+    "EESC4240",
+    "EESC4250",
+    "EESC4260",
+    "EESC4270",
+    "EESC4280",
+    "EESC4325",
+    "EESC4330",
+    "EESC4335",
+    "EESC4340",
+    "EESC4342",
+    "EESC4350",
+    "EESC4510",
+    "EESC4520",
+    "EESC4540",
+    "EESC4550",
+    "EESC4810",
+    "EESC4820",
+    "EESC4909",
+    "ELEG2202",
+    "ELEG3207",
+    "ELEG3601",
+    "ELTU1001",
+    "ELTU2005",
+    "ELTU2007",
+    "ELTU2014",
+    "ELTU2018",
+    "ELTU2019",
+    "ELTU2020",
+    "ELTU2412",
+    "ELTU3014",
+    "ELTU3018",
+    "ELTU3020",
+    "ENGG1003",
+    "ENGG1110",
+    "ENGG1120",
+    "ENGG1125",
+    "ENGG1130",
+    "ENGG1310",
+    "ENGG2020",
+    "ENGG2720",
+    "ENGG2740",
+    "GRMD1401",
+    "GRMD1403",
+    "GRMD2102",
+    "GRMD2104",
+    "GRMD2105",
+    "GRMD2106",
+    "GRMD2111",
+    "GRMD2209",
+    "GRMD2221",
+    "GRMD2292",
+    "GRMD2303",
+    "GRMD2321",
+    "GRMD2401",
+    "GRMD2402",
+    "GRMD2403",
+    "GRMD2501",
+    "GRMD3102",
+    "GRMD3104",
+    "GRMD3106",
+    "GRMD3108",
+    "GRMD3202",
+    "GRMD3203",
+    "GRMD3205",
+    "GRMD3209",
+    "GRMD3224",
+    "GRMD3301",
+    "GRMD3302",
+    "GRMD3304",
+    "GRMD3305",
+    "GRMD3323",
+    "GRMD3401",
+    "GRMD3402",
+    "GRMD3404",
+    "GRMD4001",
+    "GRMD4003",
+    "GRMD4004",
+    "GRMD4101",
+    "GRMD4202",
+    "GRMD4203",
+    "GRMD4204",
+    "GRMD4302",
+    "GRMD4403",
+    "GRMD4502",
+    "GRMD4503",
+    "GRMD5110",
+    "LSCI1002",
+    "LSCI1012",
+    "LSCI2002",
+    "MAEG1020",
+    "MAEG2020",
+    "MAEG2030",
+    "MAEG2050",
+    "MAEG3010",
+    "MAEG3020",
+    "MAEG3030",
+    "MAEG3040",
+    "MAEG3050",
+    "MAEG3060",
+    "MAEG3070",
+    "MAEG3080",
+    "MAEG4030",
+    "MAEG4070",
+    "MAEG4080",
+    "MAEG4998",
+    "MATH1010",
+    "MATH1520",
+    "MATH2550",
+    "PHYS1110",
+    "PHYS1111",
+    "PHYS1122",
+    "PHYS1712",
+    "PHYS2041",
+    "PHYS2051",
+    "PHYS2061",
+    "PHYS2401",
+    "PHYS2711",
+    "PHYS3011",
+    "PHYS3021",
+    "PHYS3022",
+    "PHYS3031",
+    "PHYS3041",
+    "PHYS3051",
+    "PHYS3061",
+    "PHYS3410",
+    "PHYS4011",
+    "PHYS4031",
+    "PHYS4041",
+    "PHYS4050",
+    "PHYS4061",
+    "PHYS4420",
+    "PHYS4430",
+    "PHYS4450",
+    "PHYS4460",
+    "PHYS4610",
+    "STAT1011",
+    "STAT1012",
+    "UGCP1001",
+    "UGCP1002"
+  ],
+  "buckets": {
+    "required": [
+      {
+        "raw": "ENGG1110",
+        "codes": [
+          "ENGG1110"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "GRMD1401",
+        "codes": [
+          "GRMD1401"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1125",
+        "codes": [
+          "ENGG1125"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1010",
+        "codes": [
+          "MATH1010"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "MATH1520",
+        "codes": [
+          "MATH1520"
+        ],
+        "alt": false,
+        "from": "1. Faculty Package"
+      },
+      {
+        "raw": "ENGG1120",
+        "codes": [
+          "ENGG1120"
+        ],
+        "alt": false,
+        "from": "i) Mathematics and"
+      },
+      {
+        "raw": "PHYS1110",
+        "codes": [
+          "PHYS1110"
+        ],
+        "alt": false,
+        "from": "i) Mathematics and"
+      },
+      {
+        "raw": "PHYS1111",
+        "codes": [
+          "PHYS1111"
+        ],
+        "alt": false,
+        "from": "i) Mathematics and"
+      },
+      {
+        "raw": "ASEI2010",
+        "codes": [
+          "ASEI2010"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "ASEI3010",
+        "codes": [
+          "ASEI3010"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "ASEI3020",
+        "codes": [
+          "ASEI3020"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "ASEI4010",
+        "codes": [
+          "ASEI4010"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "GRMD2104",
+        "codes": [
+          "GRMD2104"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "GRMD2105",
+        "codes": [
+          "GRMD2105"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "GRMD2106",
+        "codes": [
+          "GRMD2106"
+        ],
+        "alt": false,
+        "from": "ii) 18"
+      },
+      {
+        "raw": "ASEI1090",
+        "codes": [
+          "ASEI1090"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "ASEI2090",
+        "codes": [
+          "ASEI2090"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "COOP1001",
+        "codes": [
+          "COOP1001"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "COOP2001",
+        "codes": [
+          "COOP2001"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC1009",
+        "codes": [
+          "EESC1009"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC2009",
+        "codes": [
+          "EESC2009"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC2119",
+        "codes": [
+          "EESC2119"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC2129",
+        "codes": [
+          "EESC2129"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC2909",
+        "codes": [
+          "EESC2909"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EESC3900",
+        "codes": [
+          "EESC3900"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "GRMD2111",
+        "codes": [
+          "GRMD2111"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "MAEG2050",
+        "codes": [
+          "MAEG2050"
+        ],
+        "alt": false,
+        "from": "iii) 3 units"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN2030",
+        "codes": [
+          "EEEN2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN2040",
+        "codes": [
+          "EEEN2040"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2030",
+        "codes": [
+          "MAEG2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG3030",
+        "codes": [
+          "MAEG3030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EEEN4998",
+        "codes": [
+          "EEEN4998"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "EEEN3030",
+        "codes": [
+          "EEEN3030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ELEG2202",
+        "codes": [
+          "ELEG2202"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "ENGG1130",
+        "codes": [
+          "ENGG1130"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2020",
+        "codes": [
+          "MAEG2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG2030",
+        "codes": [
+          "MAEG2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG3030",
+        "codes": [
+          "MAEG3030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "MAEG4998",
+        "codes": [
+          "MAEG4998"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC2270",
+        "codes": [
+          "EESC2270"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "EESC4810",
+        "codes": [
+          "EESC4810"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "EESC4820",
+        "codes": [
+          "EESC4820"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "PHYS4610",
+        "codes": [
+          "PHYS4610"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      },
+      {
+        "raw": "GRMD1403",
+        "codes": [
+          "GRMD1403"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "GRMD2102",
+        "codes": [
+          "GRMD2102"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "GRMD3102",
+        "codes": [
+          "GRMD3102"
+        ],
+        "alt": false,
+        "from": "i) Required Courses"
+      },
+      {
+        "raw": "GRMD4001",
+        "codes": [
+          "GRMD4001"
+        ],
+        "alt": false,
+        "from": "ii) Research Component"
+      }
+    ],
+    "elective": [
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "ENGG2020",
+        "codes": [
+          "ENGG2020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "MAEG3080",
+        "codes": [
+          "MAEG3080"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "MAEG4070",
+        "codes": [
+          "MAEG4070"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "i) Energy and"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "ENGG2020",
+        "codes": [
+          "ENGG2020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "MAEG3080",
+        "codes": [
+          "MAEG3080"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "MAEG4070",
+        "codes": [
+          "MAEG4070"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "ii) Mechanical and"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "STAT1012",
+        "codes": [
+          "STAT1012"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "ENGG2020",
+        "codes": [
+          "ENGG2020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "MAEG3080",
+        "codes": [
+          "MAEG3080"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "MAEG4070",
+        "codes": [
+          "MAEG4070"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "iii) Earth"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "ENGG2020",
+        "codes": [
+          "ENGG2020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "MAEG3080",
+        "codes": [
+          "MAEG3080"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "MAEG4070",
+        "codes": [
+          "MAEG4070"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "iv) Physics"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN4020",
+        "codes": [
+          "EEEN4020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN4050",
+        "codes": [
+          "EEEN4050"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "ELEG3601",
+        "codes": [
+          "ELEG3601"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "ENGG2020",
+        "codes": [
+          "ENGG2020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "MAEG3080",
+        "codes": [
+          "MAEG3080"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "MAEG4070",
+        "codes": [
+          "MAEG4070"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS1122",
+        "codes": [
+          "PHYS1122"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS2041",
+        "codes": [
+          "PHYS2041"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3011",
+        "codes": [
+          "PHYS3011"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3021",
+        "codes": [
+          "PHYS3021"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3041",
+        "codes": [
+          "PHYS3041"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "v) Geography"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "MAEG3060",
+        "codes": [
+          "MAEG3060"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "PHYS2051",
+        "codes": [
+          "PHYS2051"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "vi) Data"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "vii) Urban"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "viii) Electrical"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "ix) New"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EEEN2020",
+        "codes": [
+          "EEEN2020"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EEEN3020",
+        "codes": [
+          "EEEN3020"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EEEN4010",
+        "codes": [
+          "EEEN4010"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EEEN4070",
+        "codes": [
+          "EEEN4070"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC2010",
+        "codes": [
+          "EESC2010"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC2020",
+        "codes": [
+          "EESC2020"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC2030",
+        "codes": [
+          "EESC2030"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "ENGG1310",
+        "codes": [
+          "ENGG1310"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "MAEG1020",
+        "codes": [
+          "MAEG1020"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "STAT1011",
+        "codes": [
+          "STAT1011"
+        ],
+        "alt": false,
+        "from": "x) Physics"
+      },
+      {
+        "raw": "EEEN3030",
+        "codes": [
+          "EEEN3030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EEEN4060",
+        "codes": [
+          "EEEN4060"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2800",
+        "codes": [
+          "EESC2800"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ELEG3207",
+        "codes": [
+          "ELEG3207"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ENGG1130",
+        "codes": [
+          "ENGG1130"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4030",
+        "codes": [
+          "MAEG4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4080",
+        "codes": [
+          "MAEG4080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ENGG2720",
+        "codes": [
+          "ENGG2720"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "ENGG2740",
+        "codes": [
+          "ENGG2740"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3010",
+        "codes": [
+          "MAEG3010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3020",
+        "codes": [
+          "MAEG3020"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3040",
+        "codes": [
+          "MAEG3040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3050",
+        "codes": [
+          "MAEG3050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG3070",
+        "codes": [
+          "MAEG3070"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4030",
+        "codes": [
+          "MAEG4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MAEG4080",
+        "codes": [
+          "MAEG4080"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL2210",
+        "codes": [
+          "BIOL2210"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL2213",
+        "codes": [
+          "BIOL2213"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL3410",
+        "codes": [
+          "BIOL3410"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL3710",
+        "codes": [
+          "BIOL3710"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL4012",
+        "codes": [
+          "BIOL4012"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL4230",
+        "codes": [
+          "BIOL4230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL4260",
+        "codes": [
+          "BIOL4260"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL4420",
+        "codes": [
+          "BIOL4420"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "BIOL4510",
+        "codes": [
+          "BIOL4510"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM1070",
+        "codes": [
+          "CHEM1070"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM1072",
+        "codes": [
+          "CHEM1072"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "CHEM1870",
+        "codes": [
+          "CHEM1870"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2009",
+        "codes": [
+          "EESC2009"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2019",
+        "codes": [
+          "EESC2019"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2119",
+        "codes": [
+          "EESC2119"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2129",
+        "codes": [
+          "EESC2129"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2160",
+        "codes": [
+          "EESC2160"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2515",
+        "codes": [
+          "EESC2515"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2517",
+        "codes": [
+          "EESC2517"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC2800",
+        "codes": [
+          "EESC2800"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3020",
+        "codes": [
+          "EESC3020"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3100",
+        "codes": [
+          "EESC3100"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3120",
+        "codes": [
+          "EESC3120"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3130",
+        "codes": [
+          "EESC3130"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3140",
+        "codes": [
+          "EESC3140"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3200",
+        "codes": [
+          "EESC3200"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3220",
+        "codes": [
+          "EESC3220"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3230",
+        "codes": [
+          "EESC3230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3300",
+        "codes": [
+          "EESC3300"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3320",
+        "codes": [
+          "EESC3320"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3330",
+        "codes": [
+          "EESC3330"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3415",
+        "codes": [
+          "EESC3415"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3417",
+        "codes": [
+          "EESC3417"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3510",
+        "codes": [
+          "EESC3510"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3520",
+        "codes": [
+          "EESC3520"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3522",
+        "codes": [
+          "EESC3522"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3530",
+        "codes": [
+          "EESC3530"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3540",
+        "codes": [
+          "EESC3540"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3600",
+        "codes": [
+          "EESC3600"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3601",
+        "codes": [
+          "EESC3601"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC3800",
+        "codes": [
+          "EESC3800"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4010",
+        "codes": [
+          "EESC4010"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4020",
+        "codes": [
+          "EESC4020"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4030",
+        "codes": [
+          "EESC4030"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4040",
+        "codes": [
+          "EESC4040"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4110",
+        "codes": [
+          "EESC4110"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4119",
+        "codes": [
+          "EESC4119"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4120",
+        "codes": [
+          "EESC4120"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4129",
+        "codes": [
+          "EESC4129"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4130",
+        "codes": [
+          "EESC4130"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4140",
+        "codes": [
+          "EESC4140"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4150",
+        "codes": [
+          "EESC4150"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4160",
+        "codes": [
+          "EESC4160"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4170",
+        "codes": [
+          "EESC4170"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4180",
+        "codes": [
+          "EESC4180"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4210",
+        "codes": [
+          "EESC4210"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4220",
+        "codes": [
+          "EESC4220"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4230",
+        "codes": [
+          "EESC4230"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4240",
+        "codes": [
+          "EESC4240"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4250",
+        "codes": [
+          "EESC4250"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4260",
+        "codes": [
+          "EESC4260"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4270",
+        "codes": [
+          "EESC4270"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4280",
+        "codes": [
+          "EESC4280"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4325",
+        "codes": [
+          "EESC4325"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4330",
+        "codes": [
+          "EESC4330"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4335",
+        "codes": [
+          "EESC4335"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4340",
+        "codes": [
+          "EESC4340"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4342",
+        "codes": [
+          "EESC4342"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4350",
+        "codes": [
+          "EESC4350"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4510",
+        "codes": [
+          "EESC4510"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4520",
+        "codes": [
+          "EESC4520"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4540",
+        "codes": [
+          "EESC4540"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4550",
+        "codes": [
+          "EESC4550"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "EESC4909",
+        "codes": [
+          "EESC4909"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "LSCI1002",
+        "codes": [
+          "LSCI1002"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "LSCI1012",
+        "codes": [
+          "LSCI1012"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "LSCI2002",
+        "codes": [
+          "LSCI2002"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "MATH2550",
+        "codes": [
+          "MATH2550"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS1712",
+        "codes": [
+          "PHYS1712"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2061",
+        "codes": [
+          "PHYS2061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2401",
+        "codes": [
+          "PHYS2401"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS2711",
+        "codes": [
+          "PHYS2711"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3022",
+        "codes": [
+          "PHYS3022"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3031",
+        "codes": [
+          "PHYS3031"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4031",
+        "codes": [
+          "PHYS4031"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3051",
+        "codes": [
+          "PHYS3051"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3061",
+        "codes": [
+          "PHYS3061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS3410",
+        "codes": [
+          "PHYS3410"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4011",
+        "codes": [
+          "PHYS4011"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4041",
+        "codes": [
+          "PHYS4041"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4050",
+        "codes": [
+          "PHYS4050"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4061",
+        "codes": [
+          "PHYS4061"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4420",
+        "codes": [
+          "PHYS4420"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4430",
+        "codes": [
+          "PHYS4430"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4450",
+        "codes": [
+          "PHYS4450"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "PHYS4460",
+        "codes": [
+          "PHYS4460"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2209",
+        "codes": [
+          "GRMD2209"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2221",
+        "codes": [
+          "GRMD2221"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2292",
+        "codes": [
+          "GRMD2292"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2303",
+        "codes": [
+          "GRMD2303"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2321",
+        "codes": [
+          "GRMD2321"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2401",
+        "codes": [
+          "GRMD2401"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2402",
+        "codes": [
+          "GRMD2402"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2403",
+        "codes": [
+          "GRMD2403"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD2501",
+        "codes": [
+          "GRMD2501"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3104",
+        "codes": [
+          "GRMD3104"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3106",
+        "codes": [
+          "GRMD3106"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3108",
+        "codes": [
+          "GRMD3108"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3202",
+        "codes": [
+          "GRMD3202"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3203",
+        "codes": [
+          "GRMD3203"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3205",
+        "codes": [
+          "GRMD3205"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3209",
+        "codes": [
+          "GRMD3209"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3224",
+        "codes": [
+          "GRMD3224"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3301",
+        "codes": [
+          "GRMD3301"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3302",
+        "codes": [
+          "GRMD3302"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3304",
+        "codes": [
+          "GRMD3304"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3305",
+        "codes": [
+          "GRMD3305"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3323",
+        "codes": [
+          "GRMD3323"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3401",
+        "codes": [
+          "GRMD3401"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3402",
+        "codes": [
+          "GRMD3402"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD3404",
+        "codes": [
+          "GRMD3404"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4003",
+        "codes": [
+          "GRMD4003"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4004",
+        "codes": [
+          "GRMD4004"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4101",
+        "codes": [
+          "GRMD4101"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4202",
+        "codes": [
+          "GRMD4202"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4203",
+        "codes": [
+          "GRMD4203"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4204",
+        "codes": [
+          "GRMD4204"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4302",
+        "codes": [
+          "GRMD4302"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4403",
+        "codes": [
+          "GRMD4403"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4502",
+        "codes": [
+          "GRMD4502"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD4503",
+        "codes": [
+          "GRMD4503"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      },
+      {
+        "raw": "GRMD5110",
+        "codes": [
+          "GRMD5110"
+        ],
+        "alt": false,
+        "from": "iii) Elective Courses"
+      }
+    ],
+    "stream_elective": []
+  },
+  "groups_outline": [
+    {
+      "marker": "1.",
+      "level": 1,
+      "title": "Faculty Package",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 5
+    },
+    {
+      "marker": "2.",
+      "level": 1,
+      "title": "1st Major: Aerospace Science and Earth Informatics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Required",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Mathematics and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "18",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 7
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "3 units",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 12
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Elective",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Energy and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 60
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Mechanical and",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 60
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Earth",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 61
+    },
+    {
+      "marker": "iv)",
+      "level": 3,
+      "title": "Physics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 57
+    },
+    {
+      "marker": "v)",
+      "level": 3,
+      "title": "Geography",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 57
+    },
+    {
+      "marker": "vi)",
+      "level": 3,
+      "title": "Data",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 11
+    },
+    {
+      "marker": "vii)",
+      "level": 3,
+      "title": "Urban",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 22
+    },
+    {
+      "marker": "viii)",
+      "level": 3,
+      "title": "Electrical",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 28
+    },
+    {
+      "marker": "ix)",
+      "level": 3,
+      "title": "New",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 27
+    },
+    {
+      "marker": "x)",
+      "level": 3,
+      "title": "Physics",
+      "units": null,
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 26
+    },
+    {
+      "marker": "3.",
+      "level": 1,
+      "title": "2nd Major",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(a)",
+      "level": 2,
+      "title": "Energy and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "(b)",
+      "level": 2,
+      "title": "Mechanical and",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 6
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 9
+    },
+    {
+      "marker": "(c)",
+      "level": 2,
+      "title": "Earth",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 10
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 2
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 80
+    },
+    {
+      "marker": "(d)",
+      "level": 2,
+      "title": "Physics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "21",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 8
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "9",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 18
+    },
+    {
+      "marker": "(e)",
+      "level": 2,
+      "title": "Geography",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 3
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 1
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 36
+    },
+    {
+      "marker": "(f)",
+      "level": 2,
+      "title": "Data",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "18",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "12",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(g)",
+      "level": 2,
+      "title": "Urban",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "15",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "15",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(h)",
+      "level": 2,
+      "title": "Electrical",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "9",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "21",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(i)",
+      "level": 3,
+      "title": "New",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "11",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "19",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "(j)",
+      "level": 2,
+      "title": "Physics",
+      "units": null,
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "i)",
+      "level": 3,
+      "title": "Required Courses",
+      "units": "24",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "ii)",
+      "level": 3,
+      "title": "Research Component",
+      "units": "3",
+      "bucket": "required",
+      "stream": null,
+      "n_courses": 0
+    },
+    {
+      "marker": "iii)",
+      "level": 3,
+      "title": "Elective Courses",
+      "units": "6",
+      "bucket": "elective",
+      "stream": null,
+      "n_courses": 0
+    }
+  ],
+  "structure": [
+    {
+      "marker": "1.",
+      "title": "Faculty Package",
+      "units": 9,
+      "note": null,
+      "courses": [
+        {
+          "code": "ENGG1110",
+          "alts": []
+        },
+        {
+          "code": "GRMD1401",
+          "alts": []
+        },
+        {
+          "code": "ENGG1125",
+          "alts": []
+        },
+        {
+          "code": "MATH1010",
+          "alts": []
+        },
+        {
+          "code": "MATH1520",
+          "alts": []
+        }
+      ],
+      "children": []
+    },
+    {
+      "marker": "2.",
+      "title": "1st Major: Aerospace Science and Earth Informatics",
+      "units": null,
+      "note": null,
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Required Courses",
+          "units": 27,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Mathematics and Physics",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ENGG1120",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1110",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1111",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "",
+              "units": null,
+              "note": "units from the Aerospace Science and Earth Informatics Foundations",
+              "courses": [
+                {
+                  "code": "ASEI2010",
+                  "alts": []
+                },
+                {
+                  "code": "ASEI3010",
+                  "alts": []
+                },
+                {
+                  "code": "ASEI3020",
+                  "alts": []
+                },
+                {
+                  "code": "ASEI4010",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2105",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2106",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": null,
+              "note": "3 units from the following courses",
+              "courses": [
+                {
+                  "code": "ASEI1090",
+                  "alts": []
+                },
+                {
+                  "code": "ASEI2090",
+                  "alts": []
+                },
+                {
+                  "code": "COOP1001",
+                  "alts": []
+                },
+                {
+                  "code": "COOP2001",
+                  "alts": []
+                },
+                {
+                  "code": "EESC1009",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2009",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2119",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2129",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2909",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3900",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2111",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2050",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Elective Courses",
+          "units": 21,
+          "note": "Students are required to take a total of 21 units of elective courses from the area which corresponds to the 2nd Major chosen by them. 6-9 units to be taken from Group A, and 12-15 units from Group B, of which at least 15 units of courses should be from 2000 or above level. Among the 15 units of courses, 9 units of courses should be from 3000 or above level (including at least 6 units of courses at 4000 level). Areas",
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4050",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3601",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2020",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4050",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3601",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1012",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4050",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3601",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2020",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4070",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iv)",
+              "title": "Physics (CUHK) Group A",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4050",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3601",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2020",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4070",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "v)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4050",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3601",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3080",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4070",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "vi)",
+              "title": "",
+              "units": null,
+              "note": "Science and Big Data Technology (CUHK(SZ)) Group A: Courses offered by CUHK(SZ): CSC1002, DDA3005, 3020, 4220, MAT1002, 3007, STA2001 Group B: Courses offered by CUHK(SZ): CHM1001, ECE2001, 2050, 4010, MAT2001, PHY1010, 2020, 2650, 3650, URM3030, 3120, 4020 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "courses": [
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3060",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "vii)",
+              "title": "Urban Management (CUHK(SZ)) Group A",
+              "units": null,
+              "note": "Courses offered by CUHK(SZ): URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ECE2001, 2050, 3060, 4010, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT1002, 2001, 3007, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "courses": [
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "viii)",
+              "title": "",
+              "units": null,
+              "note": "Group A: Courses offered by CUHK(SZ): ECE2001, 2050, 3060, 4010, MAT1002, 3007 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT2001, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "courses": [
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ix)",
+              "title": "",
+              "units": null,
+              "note": "Group A: Courses offered by CUHK(SZ): CHM1001, ECE2001, ENE3004, 3005, 3006, 3050, 4007, 4008, PHY1010 Group B: Course offered by CUHK(SZ): CSC1002, DDA3005, 3020, 4220, ECE2050, 3060, 4010, MAT1002, 2001, 3007, PHY2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "courses": [
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "x)",
+              "title": "Physics (CUHK(SZ)) Group A",
+              "units": null,
+              "note": "Courses offered by CUHK(SZ): MAT1002, 2001, PHY1010, 2002, 2020, 2610, 2650, 3002, 3110, 3240, 3410, 3650, 3710, 3810, 3820, 3950, 3960, 4001, 4510 Group B: Course offered by CUHK(SZ): CHM1001, CSC1002, DDA3005, 3020, 4220, ECE2001, 2050, 3060, 4010, ENE3004, 3005, 3006, 3050, 4007, 4008, MAT3007, STA2001, URM3010, 3030, 3120, 4010, 4020, 4110, 4150 Students can also take the following elective courses offered by CUHK to fulfill the requirements of Group B",
+              "courses": [
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN3020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4010",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4070",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1310",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG1020",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "marker": "3.",
+      "title": "2nd Major Students",
+      "units": null,
+      "note": "are required to choose one of the Majors offered by CUHK or CUHK(SZ) as their second Major.",
+      "courses": [],
+      "children": [
+        {
+          "marker": "(a)",
+          "title": "Energy and Environmental Engineering (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 18,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN2020",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2030",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN2040",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG2202",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3030",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN4998",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 12,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN3030",
+                  "alts": []
+                },
+                {
+                  "code": "EEEN4060",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG3207",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1130",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4080",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(b)",
+          "title": "Mechanical and Automation Engineering (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 18,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EEEN3030",
+                  "alts": []
+                },
+                {
+                  "code": "ELEG2202",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG1130",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG2030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3030",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "MAEG4998",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 12,
+              "note": null,
+              "courses": [
+                {
+                  "code": "ENGG2720",
+                  "alts": []
+                },
+                {
+                  "code": "ENGG2740",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3010",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3020",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3040",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3050",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG3070",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4030",
+                  "alts": []
+                },
+                {
+                  "code": "MAEG4080",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(c)",
+          "title": "Earth and Environmental Sciences (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 18,
+              "note": null,
+              "courses": [
+                {
+                  "code": "STAT1011",
+                  "alts": []
+                },
+                {
+                  "code": "STAT1012",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2270",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2030",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "EESC4810",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4820",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 12,
+              "note": null,
+              "courses": [
+                {
+                  "code": "BIOL2210",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL2213",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL3410",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL3710",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL4012",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL4230",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL4260",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL4420",
+                  "alts": []
+                },
+                {
+                  "code": "BIOL4510",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1070",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1072",
+                  "alts": []
+                },
+                {
+                  "code": "CHEM1870",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2009",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2019",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2119",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2129",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2160",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2515",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2517",
+                  "alts": []
+                },
+                {
+                  "code": "EESC2800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3100",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3120",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3130",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3140",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3200",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3230",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3300",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3320",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3330",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3415",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3417",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3522",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3530",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3600",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3601",
+                  "alts": []
+                },
+                {
+                  "code": "EESC3800",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4010",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4020",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4030",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4040",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4110",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4119",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4120",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4129",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4130",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4140",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4150",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4160",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4170",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4180",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4210",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4220",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4230",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4240",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4250",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4260",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4270",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4280",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4325",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4330",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4335",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4340",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4342",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4350",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4510",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4520",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4540",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4550",
+                  "alts": []
+                },
+                {
+                  "code": "EESC4909",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI1002",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI1012",
+                  "alts": []
+                },
+                {
+                  "code": "LSCI2002",
+                  "alts": []
+                },
+                {
+                  "code": "MATH2550",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(d)",
+          "title": "Physics (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 21,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHYS1122",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3021",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3041",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHYS4610",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "PHYS1712",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2401",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS2711",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3022",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4031",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3051",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS3410",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4011",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4041",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4050",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4061",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4420",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4430",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4450",
+                  "alts": []
+                },
+                {
+                  "code": "PHYS4460",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(e)",
+          "title": "Geography and Resource Management (CUHK)",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 9,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GRMD1403",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2102",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3102",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GRMD4001",
+                  "alts": []
+                }
+              ],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 21,
+              "note": null,
+              "courses": [
+                {
+                  "code": "GRMD2209",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2221",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2292",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2303",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2321",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2401",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2403",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD2501",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3104",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3106",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3108",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3202",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3203",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3205",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3209",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3224",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3301",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3302",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3304",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3305",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3323",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3401",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3402",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD3404",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4003",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4004",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4101",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4202",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4203",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4204",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4302",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4403",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4502",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD4503",
+                  "alts": []
+                },
+                {
+                  "code": "GRMD5110",
+                  "alts": []
+                }
+              ],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(f)",
+          "title": "Data Science and Big Data Technology (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 18,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 12,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(g)",
+          "title": "Urban Management (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 15,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(h)",
+          "title": "Electrical and Computer Engineering (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 9,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 21,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "(i)",
+              "title": "",
+              "units": null,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 11,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 19,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        },
+        {
+          "marker": "(j)",
+          "title": "Physics (CUHK(SZ))",
+          "units": null,
+          "note": null,
+          "courses": [],
+          "children": [
+            {
+              "marker": "i)",
+              "title": "Required Courses",
+              "units": 24,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "ii)",
+              "title": "Research Component",
+              "units": 3,
+              "note": null,
+              "courses": [],
+              "children": []
+            },
+            {
+              "marker": "iii)",
+              "title": "Elective Courses",
+              "units": 6,
+              "note": null,
+              "courses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
