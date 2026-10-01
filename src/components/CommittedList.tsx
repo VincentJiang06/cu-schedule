@@ -342,6 +342,8 @@ export function CommittedList({
                     </span>
                   )}
                 </div>
+                {/* 课名:以前列表只有课号,记不住课号就认不出是哪门课。 */}
+                {course && <div className="cl-row__title" title={course.title}>{course.title}</div>}
                 {/* #修复3/#修复4:折叠态(手动折叠，或候选课被隐藏)下每门课只剩上面的 head
                     一行，时间/地点/pin 选择器/「本学期无此课」提示统统收起，不渲染。 */}
                 {course && !rowCollapsed ? (

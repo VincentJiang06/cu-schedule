@@ -1,3 +1,4 @@
+import { courseKey } from './courseKey.ts'
 import { evaluateRequirement } from './requirements.ts'
 import type { RequirementStatus } from './types.ts'
 import { comboMeetings, courseCombos, meetingsClash, type Plan, type Prefs } from './schedule.ts'
@@ -49,6 +50,9 @@ export function evaluateCandidates(params: {
 }): CandidateResult {
   const takenSet = new Set(params.taken)
   const committedSet = new Set(params.committed)
+  // Membership is by course key (stored codes may carry a variant suffix, e.g. ENGG1000A).
+  const takenKeys = new Set(params.taken.map(courseKey))
+  const committedKeys = new Set(params.committed.map(courseKey))
   const selected = params.plans[params.selectedPlanIndex] ?? null
   const selectedMeetings = selected ? planMeetings(selected) : []
   // 「冲突」的判定基准是已选课的**全部**可行排法(不再截断到前几个):候选课只要能与其中
@@ -63,8 +67,8 @@ export function evaluateCandidates(params: {
   const summary: CandidateSummary = { open: 0, rearrange: 0, conflict: 0, tba: 0, taken: 0, ruledOut: 0 }
 
   for (const course of params.courses) {
-    if (committedSet.has(course.code)) continue
-    if (takenSet.has(course.code)) {
+    if (committedKeys.has(course.key)) continue
+    if (takenKeys.has(course.key)) {
       summary.taken += 1
       continue
     }

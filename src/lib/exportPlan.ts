@@ -12,6 +12,10 @@ export type ExportRequest = {
   /** The one user-selected timetable to export — every format renders this and only this. */
   plan: Plan
   termName: string
+  /** Term slug — the .ics export looks up the official teaching period with it. */
+  termSlug?: string | null
+  /** Display label of the plan, e.g. "排法 3" (calendar name, wallpaper/HTML caption). */
+  planLabel?: string
   /** Per-course canvas tint. App passes the timetable-palette painter so PNG/PDF/壁纸/HTML
    * carry the same colors as the on-screen timetable; omitted (ShareView) = subject colors. */
   paint?: PaintFn
@@ -26,8 +30,8 @@ export type ExportResult = { ok: true; note: string } | { ok: false; reason: str
  * Export one timetable. Dispatches to the encoders:
  *   - `ics`      → RFC 5545 calendar (download)
  *   - `image`    → hand-drawn 2× PNG (download)
- *   - `pdf`      → single-page A4 PDF (download)
- *   - `wallpaper`→ two portrait PNGs, iPhone ratio (download)
+ *   - `pdf`      → two-page (light + dark) A4 landscape PDF (download)
+ *   - `wallpaper`→ portrait PNG with the timetable, iPhone ratio (share sheet / download)
  *   - `html`     → self-contained offline-openable .html (download)
  * Async because several encoders resolve through `canvas.toBlob`.
  */
@@ -35,23 +39,27 @@ export async function exportPlan(request: ExportRequest): Promise<ExportResult> 
   try {
     switch (request.format) {
       case 'ics': {
-        const filename = exportIcs(request.plan, request.termName)
+        const filename = exportIcs(request.plan, request.termName, {
+          termSlug: request.termSlug,
+          planLabel: request.planLabel,
+        })
         return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
       case 'image': {
         const filename = await exportImage(request.plan, request.termName, request.paint, request.aspect)
-        return { ok: true, note: t('已下载 {filename}', { filename }) }
+        if (!filename) return { ok: true, note: t('已取消') }
+        return { ok: true, note: t('已导出 {filename}', { filename }) }
       }
       case 'pdf': {
         const filename = await exportPdf(request.plan, request.termName, request.paint)
         return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
       case 'wallpaper': {
-        const note = await exportWallpaper(request.plan, request.termName, request.paint)
+        const note = await exportWallpaper(request.plan, request.termName, request.paint, request.planLabel)
         return { ok: true, note }
       }
       case 'html': {
-        const filename = exportHtmlFile(request.plan, request.termName, request.paint)
+        const filename = exportHtmlFile(request.plan, request.termName, request.paint, request.planLabel)
         return { ok: true, note: t('已下载 {filename}', { filename }) }
       }
     }

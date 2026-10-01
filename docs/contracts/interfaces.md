@@ -91,11 +91,11 @@
 
 | Symbol | Signature | Source |
 |---|---|---|
-| `CandidateStatus` | `type CandidateStatus = 'open' \| 'rearrange' \| 'conflict' \| 'tba'` | `src/lib/candidates.ts:13` |
-| `Candidate` | `type Candidate = { course, status, slots, instructors, prereqStatus, prereqText }` | `src/lib/candidates.ts:15` |
-| `CandidateSummary` | `type CandidateSummary = { open, rearrange, conflict, tba, taken, ruledOut }` | `src/lib/candidates.ts:27` |
-| `CandidateResult` | `type CandidateResult = { rows: Candidate[]; summary: CandidateSummary }` | `src/lib/candidates.ts:36` |
-| `evaluateCandidates` | `evaluateCandidates(params): CandidateResult` | `src/lib/candidates.ts:42` |
+| `CandidateStatus` | `type CandidateStatus = 'open' \| 'rearrange' \| 'conflict' \| 'tba'` | `src/lib/candidates.ts:14` |
+| `Candidate` | `type Candidate = { course, status, slots, instructors, prereqStatus, prereqText }` | `src/lib/candidates.ts:16` |
+| `CandidateSummary` | `type CandidateSummary = { open, rearrange, conflict, tba, taken, ruledOut }` | `src/lib/candidates.ts:28` |
+| `CandidateResult` | `type CandidateResult = { rows: Candidate[]; summary: CandidateSummary }` | `src/lib/candidates.ts:37` |
+| `evaluateCandidates` | `evaluateCandidates(params): CandidateResult` | `src/lib/candidates.ts:43` |
 | `TimeSpan` | `type TimeSpan = { start: number; end: number }` | `src/lib/overlap.ts:5` |
 | `overlapMidpoints` | `overlapMidpoints<T extends TimeSpan>(spans: T[]): number[]` | `src/lib/overlap.ts:7` |
 | `parseCourseCodes` | `parseCourseCodes(value: string): string[]` | `src/lib/search.ts:7` |
@@ -206,11 +206,11 @@
 | `copyShareLink` | `copyShareLink(payload): Promise<{ copied: boolean; url: string }>` | `src/lib/shareLink.ts:164` |
 | `ShareInstance` | `type ShareInstance = { termSlug, termName, committed, taken, pins }` | `src/lib/shareStore.ts:14` |
 | `readShareId` | `readShareId(): string \| null` | `src/lib/shareStore.ts:25` |
-| `shareUrl` | `shareUrl(id: string): string` | `src/lib/shareStore.ts:34` |
-| `CreateResult` | `type CreateResult = ok(id,url,expiresAt) \| fail(reason)` | `src/lib/shareStore.ts:38` |
-| `createShare` | `createShare(instance: ShareInstance): Promise<CreateResult>` | `src/lib/shareStore.ts:42` |
-| `LoadResult` | `type LoadResult = ok(instance,expiresAt) \| fail('not_found' \| 'error')` | `src/lib/shareStore.ts:58` |
-| `loadShare` | `loadShare(id: string): Promise<LoadResult>` | `src/lib/shareStore.ts:62` |
+| `shareUrl` | `shareUrl(id: string): string` | `src/lib/shareStore.ts:35` |
+| `CreateResult` | `type CreateResult = ok(id,url,expiresAt) \| fail(reason)` | `src/lib/shareStore.ts:39` |
+| `createShare` | `createShare(instance: ShareInstance): Promise<CreateResult>` | `src/lib/shareStore.ts:43` |
+| `LoadResult` | `type LoadResult = ok(instance,expiresAt) \| fail('not_found' \| 'error')` | `src/lib/shareStore.ts:59` |
+| `loadShare` | `loadShare(id: string): Promise<LoadResult>` | `src/lib/shareStore.ts:63` |
 | `copyText` | `copyText(text: string): Promise<boolean>` | `src/lib/clipboard.ts:14` |
 
 ### `src/lib/export*.ts` · `ics.ts` — 导出
@@ -218,21 +218,32 @@
 | Symbol | Signature | Source |
 |---|---|---|
 | `ExportFormat` | `type ExportFormat = 'ics' \| 'image' \| 'pdf' \| 'wallpaper' \| 'html'` | `src/lib/exportPlan.ts:8` |
-| `ExportRequest` | `type ExportRequest = { format, plan, termName, paint?, aspect? }` | `src/lib/exportPlan.ts:10` |
-| `ExportResult` | `type ExportResult = ok(note) \| fail(reason)` | `src/lib/exportPlan.ts:23` |
-| `exportPlan` | `exportPlan(request: ExportRequest): Promise<ExportResult>` | `src/lib/exportPlan.ts:34` |
+| `ExportRequest` | `type ExportRequest = { format, plan, termName, termSlug?, planLabel?, paint?, aspect? }` | `src/lib/exportPlan.ts:10` |
+| `ExportResult` | `type ExportResult = ok(note) \| fail(reason)` | `src/lib/exportPlan.ts:27` |
+| `exportPlan` | `exportPlan(request: ExportRequest): Promise<ExportResult>` | `src/lib/exportPlan.ts:38` |
 | `PaintFn` | `type PaintFn = (code, subject, theme?) => CanvasPaint` | `src/lib/exportImage.ts:11` |
 | `Aspect` | `type Aspect = { w: number; h: number }` | `src/lib/exportImage.ts:33` |
 | `canvasSize` | `canvasSize(aspect: Aspect): { W: number; H: number }` | `src/lib/exportImage.ts:41` |
-| `slugTerm` | `slugTerm(name: string): string` | `src/lib/exportImage.ts:458` |
-| `downloadBlob` | `downloadBlob(blob: Blob, filename: string): void` | `src/lib/exportImage.ts:463` |
-| `exportImage` | `exportImage(plan, termName, paint?, aspect?, theme?): Promise<string>` | `src/lib/exportImage.ts:498` |
-| `exportPdf` | `exportPdf(plan, termName, paint?): Promise<string>` | `src/lib/exportImage.ts:527` |
-| `buildScheduleHtml` | `buildScheduleHtml(plan, termName, paint?): string` | `src/lib/exportHtml.ts:83` |
-| `exportHtmlFile` | `exportHtmlFile(plan, termName, paint?): string` | `src/lib/exportHtml.ts:435` |
-| `exportWallpaper` | `exportWallpaper(_plan, termName, _paint?): Promise<string>` | `src/lib/exportWallpaper.ts:110` |
-| `buildIcs` | `buildIcs(plan: Plan, termName: string, now?: Date): string` | `src/lib/ics.ts:77` |
-| `exportIcs` | `exportIcs(plan: Plan, termName: string): string` | `src/lib/ics.ts:123` |
+| `slugTerm` | `slugTerm(name: string): string` | `src/lib/exportImage.ts:469` |
+| `downloadBlob` | `downloadBlob(blob: Blob, filename: string): void` | `src/lib/exportImage.ts:476` |
+| `deliverImage` | `deliverImage(blob, filename): Promise<'shared' \| 'downloaded' \| 'cancelled'>` | `src/lib/exportImage.ts:502` |
+| `ThemeInk` | `type ThemeInk = { page, ink, faint, faintHalf, muted }` | `src/lib/exportImage.ts:302` |
+| `DrawFrame` | `type DrawFrame = { bare?: boolean; ink?: ThemeInk }` | `src/lib/exportImage.ts:312` |
+| `draw` | `draw(ctx, plan, termName, paint, theme?, W?, H?, frame?): void` | `src/lib/exportImage.ts:317` |
+| `ensureExportFonts` | `ensureExportFonts(): Promise<void>` | `src/lib/exportImage.ts:123` |
+| `exportImage` | `exportImage(plan, termName, paint?, aspect?, theme?): Promise<string>` | `src/lib/exportImage.ts:543` |
+| `exportPdf` | `exportPdf(plan, termName, paint?): Promise<string>` | `src/lib/exportImage.ts:574` |
+| `buildScheduleHtml` | `buildScheduleHtml(plan, termName, paint?, planLabel?): string` | `src/lib/exportHtml.ts:83` |
+| `exportHtmlFile` | `exportHtmlFile(plan, termName, paint?, planLabel?): string` | `src/lib/exportHtml.ts:478` |
+| `exportWallpaper` | `exportWallpaper(plan, termName, paint?, planLabel?): Promise<string>` | `src/lib/exportWallpaper.ts:94` |
+| `IcsOptions` | `type IcsOptions = { termSlug?, planLabel?, now? }` | `src/lib/ics.ts:74` |
+| `buildIcs` | `buildIcs(plan: Plan, termName: string, options?: IcsOptions): string` | `src/lib/ics.ts:82` |
+| `exportIcs` | `exportIcs(plan: Plan, termName: string, options?: IcsOptions): string` | `src/lib/ics.ts:158` |
+| `TermCalendar` | `type TermCalendar = { start, end, noClass: Array<string \| [string, string]> }` | `src/lib/termCalendar.ts:10` |
+| `TERM_CALENDARS` | `const TERM_CALENDARS: Record<termSlug, TermCalendar>`(官方校历) | `src/lib/termCalendar.ts:20` |
+| `parseLocalDate` | `parseLocalDate(value: 'YYYY-MM-DD'): Date` | `src/lib/termCalendar.ts:45` |
+| `noClassDates` | `noClassDates(calendar: TermCalendar): Date[]` | `src/lib/termCalendar.ts:51` |
+| `termCalendarFor` | `termCalendarFor(termSlug): TermCalendar \| null` | `src/lib/termCalendar.ts:65` |
 
 ### `src/i18n/index.ts` — 三语
 
@@ -250,20 +261,20 @@
 
 | Symbol | Signature | Source |
 |---|---|---|
-| `App` | `export default function App()` — 根组件,无 props | `src/App.tsx:525` |
+| `App` | `export default function App()` — 根组件,无 props | `src/App.tsx:584` |
 | `AppendixPage` | `({ siblings })` | `src/components/AppendixPage.tsx:204` |
 | `CodeInput` | `({ codes, onChange, courses, placeholder, variant })` | `src/components/CodeInput.tsx:7` |
 | `CommittedList` | `({ codes, byCode, onRemove?, pins?, onPin?, … })` | `src/components/CommittedList.tsx:196` |
 | `CourseModal` | `({ course, standing, isTaken, isCommitted, isCart, blockedReason, onToggle*, onClose })` | `src/components/CourseModal.tsx:29` |
-| `ProgramPicker` | `({ programs, subjects, selectedId, year?, onChange })` | `src/components/ProgramPicker.tsx:35` |
+| `ProgramPicker` | `({ programs, subjects, selectedId, year?, onChange })` | `src/components/ProgramPicker.tsx:36` |
 | `ProgramProgress` | `({ data, takenTotal })` | `src/components/ProgramProgress.tsx:112` |
 | `ProgramTable` | `({ program, catalogByKey, takenSet, onToggleTaken, onBulkTaken })` | `src/components/ProgramTable.tsx:389` |
-| `UnitPick` | `type UnitPick = '1' \| '2' \| '3' \| '4plus'` | `src/components/SearchResults.tsx:13` |
-| `LevelBucket` | `type LevelBucket = '1' \| '2' \| '3' \| '4plus'` | `src/components/SearchResults.tsx:15` |
-| `LecBusy` | `type LecBusy = { dayIndex: number; start: number; end: number }` | `src/components/SearchResults.tsx:18` |
-| `SearchFilters` | `type SearchFilters = { query, includeSubjects, excludeSubjects, …(15 项) }` | `src/components/SearchResults.tsx:20` |
-| `PrereqInfo` | `type PrereqInfo = { status: RequirementStatus; text: string }` | `src/components/SearchResults.tsx:77` |
-| `SearchResults` | `({ offerings, statusByCode, prereqByCode, …(18 props) })` | `src/components/SearchResults.tsx:79` |
+| `UnitPick` | `type UnitPick = '1' \| '2' \| '3' \| '4plus'` | `src/components/SearchResults.tsx:14` |
+| `LevelBucket` | `type LevelBucket = '1' \| '2' \| '3' \| '4plus'` | `src/components/SearchResults.tsx:16` |
+| `LecBusy` | `type LecBusy = { dayIndex: number; start: number; end: number }` | `src/components/SearchResults.tsx:19` |
+| `SearchFilters` | `type SearchFilters = { query, includeSubjects, excludeSubjects, …(15 项) }` | `src/components/SearchResults.tsx:21` |
+| `PrereqInfo` | `type PrereqInfo = { status: RequirementStatus; text: string }` | `src/components/SearchResults.tsx:111` |
+| `SearchResults` | `({ offerings, statusByCode, prereqByCode, …(18 props) })` | `src/components/SearchResults.tsx:113` |
 | `ShareView` | `({ id }: { id: string })` | `src/components/ShareView.tsx:56` |
 | `SubjectPicker` | `({ subjects, selected, onChange, variant?, placeholder?, single? })` | `src/components/SubjectPicker.tsx:7` |
 | `GhostBlock` | `type GhostBlock = Omit<Block, 'lane' \| 'lanes'>` | `src/components/TimetableCompare.tsx:29` |
@@ -326,12 +337,12 @@
 | `Course` | `@dataclass class Course` | `scripts/cuhk_scraper.py:106` |
 | `ScrapingProgressTracker` | `class ScrapingProgressTracker` | `scripts/cuhk_scraper.py:149` |
 | `CuhkScraper` | `class CuhkScraper` | `scripts/cuhk_scraper.py:355` |
-| `log` | `def log(msg: str) -> None` | `scripts/scrape_programs.py:81` |
-| `utc_now` | `def utc_now() -> str` | `scripts/scrape_programs.py:85` |
-| `slugify` | `def slugify(name: str) -> str` | `scripts/scrape_programs.py:89` |
-| `faculty_short` | `def faculty_short(faculty: str) -> str` | `scripts/scrape_programs.py:94` |
-| `ProgramScraper` | `class ProgramScraper` | `scripts/scrape_programs.py:98` |
-| `scrape` | `def scrape(years: list[str], force: bool) -> None` | `scripts/scrape_programs.py:303` |
+| `log` | `def log(msg: str) -> None` | `scripts/scrape_programs.py:85` |
+| `utc_now` | `def utc_now() -> str` | `scripts/scrape_programs.py:89` |
+| `slugify` | `def slugify(name: str) -> str` | `scripts/scrape_programs.py:93` |
+| `faculty_short` | `def faculty_short(faculty: str) -> str` | `scripts/scrape_programs.py:98` |
+| `ProgramScraper` | `class ProgramScraper` | `scripts/scrape_programs.py:102` |
+| `scrape` | `def scrape(years: list[str], force: bool) -> None` | `scripts/scrape_programs.py:307` |
 | `load_raw_codes` | `def load_raw_codes(year: str, subject: str) -> list[str]` | `scripts/verify_catalog_parity.py:33` |
 | `load_codes` | `def load_codes(year: str) -> dict[str, str]` | `scripts/verify_serper.py:36` |
 | `classify` | `def classify(code: str, organic: list[dict]) -> str` | `scripts/verify_serper.py:46` |
@@ -417,6 +428,8 @@ Python 顶层 `def`)会把它们算进公开面,但它们不是契约。按文�
 **`src/App.tsx`** — App 内部助手,未导出
 
 - `PlanStripRail`
+- `Sheet`
+- `useIsMobile`
 - `Toggle`
 - `loadLang`
 - `loadSaved`
@@ -485,6 +498,8 @@ Python 顶层 `def`)会把它们算进公开面,但它们不是契约。按文�
 
 **`src/components/SearchResults.tsx`** — SearchResults 的内部子组件/助手,未导出
 
+- `cardSummary`
+- `meetingText`
 - `flagFor`
 
 **`src/components/ShareView.tsx`** — ShareView 的内部子组件/助手,未导出
@@ -566,10 +581,9 @@ Python 顶层 `def`)会把它们算进公开面,但它们不是契约。按文�
 - `blockFontSize`
 - `buildImagePdf`
 - `canvasToJpegBytes`
-- `draw`
 - `drawBlockText`
 - `drawBlockTextPortrait`
-- `ensureExportFonts`
+- `isTouchDevice`
 - `renderTimetable`
 - `roundRect`
 - `themeInk`
@@ -593,6 +607,10 @@ Python 顶层 `def`)会把它们算进公开面,但它们不是契约。按文�
 **`src/lib/programChoose.ts`** — programChoose 的模块内实现,未导出
 
 - `matchPickN`
+
+**`src/lib/programs.test.ts`** — 单测内部助手,不是产品接口
+
+- `prog`
 
 **`src/lib/programProgress.test.ts`** — 单测内部助手,不是产品接口
 

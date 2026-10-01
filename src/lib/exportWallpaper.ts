@@ -1,24 +1,35 @@
 import { subjectPaint } from './color.ts'
 import { t } from '../i18n/index.ts'
 import type { Plan } from './schedule.ts'
-import { downloadBlob, slugTerm, type PaintFn } from './exportImage.ts'
+import { deliverImage, draw, ensureExportFonts, slugTerm, type PaintFn, type ThemeInk } from './exportImage.ts'
 
 /**
- * Phone-wallpaper export. A single portrait PNG at the iPhone 17 Pro screen ratio
- * (1206 × 2622): a clean indigo gradient, a soft glow, and a small centered brand
- * mark — no timetable, no grid. The top ~34% and bottom ~24% are deliberately left
- * empty so the wallpaper never fights the iOS clock/status area up top or the home
- * indicator / lock-screen date down below.
+ * Phone-wallpaper export: one portrait PNG at the iPhone 17 Pro screen ratio
+ * (1206 × 2622) — an indigo gradient with the chosen timetable laid into the band
+ * between the lock-screen clock (top ~30%) and the flashlight / camera buttons
+ * (bottom ~11%), so the clock and controls never sit on top of a course block.
+ * The grid itself is the same renderer as the PNG/PDF exports (exportImage.draw in
+ * bare mode, portrait four-line blocks), recoloured for the dark background.
  */
 
 const W = 1206
 const H = 2622
 
-// Vertical safe zones — everything above TOP_SAFE and below BOTTOM_SAFE stays plain
-// gradient (aside from the faint corner signature), so the wallpaper reads as
-// generous top/bottom whitespace rather than a filled screen.
-const TOP_SAFE = H * 0.34
-const BOTTOM_SAFE = H * 0.76
+// Vertical safe zones — the lock-screen clock/date live above TOP_SAFE and the
+// flashlight/camera buttons + home indicator below BOTTOM_SAFE; the timetable panel
+// only occupies the band between them.
+const TOP_SAFE = Math.round(H * 0.3)
+const BOTTOM_SAFE = H - 290
+const SIDE = 44
+
+// Grid ink tuned for the indigo gradient (light lines / text on dark).
+const WALL_INK: ThemeInk = {
+  page: '#1e1b4b',
+  ink: '#eef2ff',
+  faint: 'rgba(199, 210, 254, 0.22)',
+  faintHalf: 'rgba(199, 210, 254, 0.09)',
+  muted: 'rgba(199, 210, 254, 0.72)',
+}
 
 function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number): void {
   const radius = Math.min(r, w / 2, h / 2)
@@ -31,13 +42,9 @@ function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: numbe
   ctx.closePath()
 }
 
-/**
- * Paint the whole wallpaper: a smooth vertical indigo gradient, a soft radial glow
- * behind the middle band, a small app-icon-style rounded-square mark with the term
- * name under it, and a faint "CUS by VinceJiang" signature tucked into the bottom
- * safe zone. No grid, no hour lines, no course blocks — the image is background only.
- */
-function paintBackground(ctx: CanvasRenderingContext2D, termName: string): void {
+/** Background layer: vertical indigo gradient, a soft glow behind the timetable band,
+ * the term caption, and a faint signature inside the bottom safe zone. */
+function paintBackground(ctx: CanvasRenderingContext2D, caption: string): void {
   const grad = ctx.createLinearGradient(0, 0, 0, H)
   grad.addColorStop(0, '#2c2761')
   grad.addColorStop(0.45, '#1e1b4b')
@@ -45,8 +52,7 @@ function paintBackground(ctx: CanvasRenderingContext2D, termName: string): void 
   ctx.fillStyle = grad
   ctx.fillRect(0, 0, W, H)
 
-  // Soft glow centered on the middle band, behind the brand mark — the only texture
-  // besides the gradient itself.
+  // Soft glow centered on the timetable band — the only texture besides the gradient.
   const midY = (TOP_SAFE + BOTTOM_SAFE) / 2
   const glow = ctx.createRadialGradient(W / 2, midY, 40, W / 2, midY, W * 0.75)
   glow.addColorStop(0, 'rgba(129, 140, 248, 0.22)')
@@ -54,30 +60,12 @@ function paintBackground(ctx: CanvasRenderingContext2D, termName: string): void 
   ctx.fillStyle = glow
   ctx.fillRect(0, 0, W, H)
 
-  // Small app-icon-style mark, centered in the middle band between the two safe zones.
-  const markSize = 132
-  const markX = W / 2 - markSize / 2
-  const markY = midY - markSize / 2 - 60
-  const markGrad = ctx.createLinearGradient(markX, markY, markX, markY + markSize)
-  markGrad.addColorStop(0, 'rgba(165, 180, 252, 0.92)')
-  markGrad.addColorStop(1, 'rgba(99, 102, 241, 0.92)')
-  roundRect(ctx, markX, markY, markSize, markSize, 34)
-  ctx.fillStyle = markGrad
-  ctx.fill()
-  ctx.fillStyle = 'rgba(30, 27, 75, 0.85)'
-  ctx.beginPath()
-  ctx.arc(markX + markSize * 0.72, markY + markSize * 0.72, 13, 0, Math.PI * 2)
-  ctx.fill()
-
-  // Title + term name, small and centered just below the mark.
+  // Term + plan caption just above the timetable panel.
   ctx.textAlign = 'center'
   ctx.textBaseline = 'alphabetic'
-  ctx.fillStyle = '#eef2ff'
-  ctx.font = '700 46px system-ui, -apple-system, "PingFang SC", sans-serif'
-  ctx.fillText('CU Schedule', W / 2, markY + markSize + 78)
-  ctx.fillStyle = 'rgba(199, 210, 254, 0.7)'
-  ctx.font = '400 28px system-ui, -apple-system, "PingFang SC", sans-serif'
-  ctx.fillText(termName || t('本学期课表'), W / 2, markY + markSize + 122)
+  ctx.fillStyle = 'rgba(199, 210, 254, 0.78)'
+  ctx.font = '600 30px system-ui, -apple-system, "PingFang SC", sans-serif'
+  ctx.fillText(caption, W / 2, TOP_SAFE - 26)
 
   // Faint signature, tucked well inside the bottom safe zone — doesn't compete with
   // the lock-screen date.
@@ -101,22 +89,40 @@ function freshCanvas(): { canvas: HTMLCanvasElement; ctx: CanvasRenderingContext
   return { canvas, ctx }
 }
 
-/**
- * Produce and download one wallpaper PNG: a clean indigo gradient with generous
- * empty space top and bottom, no timetable. `plan` and `paint` stay in the signature
- * for call-site compatibility with exportPlan.ts, but the wallpaper never renders
- * course data, so neither is used here.
- */
+/** Produce the wallpaper (gradient + timetable) and hand it to the user — share sheet
+ * on phones (save to Photos), plain download elsewhere. */
 export async function exportWallpaper(
-  _plan: Plan,
+  plan: Plan,
   termName: string,
-  _paint: PaintFn = (_code, subject) => subjectPaint(subject),
+  paint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme),
+  planLabel = '',
 ): Promise<string> {
+  await ensureExportFonts()
   const slug = slugTerm(termName)
 
   const { canvas, ctx } = freshCanvas()
-  paintBackground(ctx, termName)
-  downloadBlob(await canvasToPng(canvas), `cu-schedule-${t('壁纸')}-${slug}.png`)
+  paintBackground(ctx, [termName || t('本学期课表'), planLabel].filter(Boolean).join(' · '))
 
-  return t('已下载壁纸（纯渐变，无课表），iPhone 比例 1206×2622')
+  // Frosted panel the grid sits on.
+  const panelX = SIDE
+  const panelY = TOP_SAFE
+  const panelW = W - SIDE * 2
+  const panelH = BOTTOM_SAFE - TOP_SAFE
+  roundRect(ctx, panelX, panelY, panelW, panelH, 40)
+  ctx.fillStyle = 'rgba(12, 10, 34, 0.5)'
+  ctx.fill()
+  ctx.strokeStyle = 'rgba(165, 180, 252, 0.18)'
+  ctx.lineWidth = 2
+  ctx.stroke()
+
+  ctx.save()
+  ctx.translate(panelX + 14, panelY + 18)
+  draw(ctx, plan, termName, paint, 'dark', panelW - 28, panelH - 30, { bare: true, ink: WALL_INK })
+  ctx.restore()
+
+  const how = await deliverImage(await canvasToPng(canvas), `cu-schedule-${t('壁纸')}-${slug}.png`)
+  if (how === 'cancelled') return t('已取消')
+  return how === 'shared'
+    ? t('已打开系统分享，可「存储图像」到相册后设为锁屏壁纸')
+    : t('已下载壁纸（{w}×{h}），在相册里设为锁屏壁纸即可', { w: W, h: H })
 }

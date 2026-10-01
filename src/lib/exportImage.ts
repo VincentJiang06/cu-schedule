@@ -120,7 +120,7 @@ const WEIGHT_TIME = 500
  * (用户拍板 2026-07-15):字体已自托管同源(styles.css @font-face,可变字体单文件),
  * load 后仍不可用只会是极早期竞态——小睡重试一次,再不行直接报错中止导出,绝不让
  * 兜底字体混进导出物(兜底 mono 无 500/600 档,字重阶梯会塌)。 */
-async function ensureExportFonts(): Promise<void> {
+export async function ensureExportFonts(): Promise<void> {
   const specs = [WEIGHT_CODE, WEIGHT_LOC, WEIGHT_TIME].map((weight) => `${weight} 16px "Red Hat Mono"`)
   const ready = () => specs.every((spec) => document.fonts.check(spec))
   await Promise.all(specs.map((spec) => document.fonts.load(spec)))
@@ -299,16 +299,22 @@ function drawBlockTextPortrait(
  * 和屏幕上的对应主题读起来一致。#里程碑4:补上 mid 档——mid 的 --surface/--ink 与 light
  * 相同，只有 --line/--line-soft 更深一档，所以 mid 复用 light 的 page/ink/muted，只有
  * faint/faintHalf(网格线)跟着 mid 的 --line 走。 */
-function themeInk(theme: PaintTheme): { page: string; ink: string; faint: string; faintHalf: string; muted: string } {
+export type ThemeInk = { page: string; ink: string; faint: string; faintHalf: string; muted: string }
+function themeInk(theme: PaintTheme): ThemeInk {
   if (theme === 'dark') return { page: '#35373e', ink: '#f0f1f4', faint: '#4b4e57', faintHalf: '#3f424a', muted: '#a1a7b2' }
   if (theme === 'mid') return { page: '#ffffff', ink: '#1e2532', faint: '#c5c8cf', faintHalf: '#d7d9df', muted: '#575c67' }
   return { page: '#ffffff', ink: '#1e2532', faint: '#e6e8ee', faintHalf: '#f0f1f5', muted: '#5c616c' }
 }
 
+/** Optional framing for draw(): `bare` skips the page fill, title and signature and
+ * tightens the margins so the grid can be embedded inside another composition (the
+ * phone wallpaper); `ink` overrides the theme's line/text colors. */
+export type DrawFrame = { bare?: boolean; ink?: ThemeInk }
+
 /** #里程碑4:board size 是参数而不是模块常量——PNG 按选中的画面比例算出自己的
  * W/H(canvasSize),PDF 仍固定传 1600×1000。参数名故意仍叫 W/H,函数体内其余代码
  * 不用改。 */
-function draw(
+export function draw(
   ctx: CanvasRenderingContext2D,
   plan: Plan,
   termName: string,
@@ -316,8 +322,10 @@ function draw(
   theme: PaintTheme = 'light',
   W: number = BOARD_W,
   H: number = BOARD_H,
+  frame: DrawFrame = {},
 ): void {
   const raw = blocksOf(plan)
+  const bare = frame.bare ?? false
 
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
   const dayCount = usesWeekend ? 7 : 5
@@ -326,22 +334,24 @@ function draw(
   const ceilHour = Math.ceil(Math.max(CEIL, ...raw.map((block) => displayEndMinutes(block.end))) / 60)
   const span = (ceilHour - floorHour) * 60
 
-  const { page, ink, faint, faintHalf, muted } = themeInk(theme)
+  const { page, ink, faint, faintHalf, muted } = frame.ink ?? themeInk(theme)
 
-  ctx.fillStyle = page
-  ctx.fillRect(0, 0, W, H)
+  if (!bare) {
+    ctx.fillStyle = page
+    ctx.fillRect(0, 0, W, H)
 
-  // Title.
-  ctx.fillStyle = ink
-  ctx.font = '700 26px system-ui, -apple-system, "PingFang SC", sans-serif'
-  ctx.textBaseline = 'alphabetic'
-  ctx.textAlign = 'left'
-  ctx.fillText(t('CU Schedule · {termName} 课表', { termName }), 28, 44)
+    // Title.
+    ctx.fillStyle = ink
+    ctx.font = '700 26px system-ui, -apple-system, "PingFang SC", sans-serif'
+    ctx.textBaseline = 'alphabetic'
+    ctx.textAlign = 'left'
+    ctx.fillText(t('CU Schedule · {termName} 课表', { termName }), 28, 44)
+  }
 
-  const gridTop = 108
-  const gridBottom = H - 48
-  const gridLeft = 28 + 60
-  const gridRight = W - 28
+  const gridTop = bare ? 44 : 108
+  const gridBottom = bare ? H - 6 : H - 48
+  const gridLeft = (bare ? 6 : 28) + 60
+  const gridRight = bare ? W - 6 : W - 28
   const gridW = gridRight - gridLeft
   const gridH = gridBottom - gridTop
   const colW = gridW / dayCount
@@ -447,6 +457,7 @@ function draw(
     drawColumn(raw.filter((block) => block.dayIndex === day), gridLeft + (day - 1) * colW)
   }
 
+  if (bare) return
   // 角标署名:只保留「CUS by VinceJiang」(数据来源归属留在仓库 NOTICE.md,不再印在导出物上)。
   ctx.textAlign = 'right'
   ctx.textBaseline = 'alphabetic'
@@ -459,16 +470,50 @@ export function slugTerm(name: string): string {
   return name.replace(/[^\w一-龥-]+/g, '-').replace(/^-+|-+$/g, '') || 'term'
 }
 
-/** Push a blob to the browser as a file download. Shared by every exporter. */
+/** Push a blob to the browser as a file download. Shared by every exporter.
+ * The object URL is revoked only after a delay: revoking synchronously right after
+ * click() cancels the download in Safari / Firefox (the navigation is async). */
 export function downloadBlob(blob: Blob, filename: string): void {
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
   anchor.download = filename
+  anchor.rel = 'noopener'
+  anchor.style.display = 'none'
   document.body.appendChild(anchor)
   anchor.click()
   anchor.remove()
-  URL.revokeObjectURL(url)
+  window.setTimeout(() => URL.revokeObjectURL(url), 60_000)
+}
+
+/** Touch-first devices (phones/tablets): no hover, coarse pointer. */
+function isTouchDevice(): boolean {
+  return typeof window !== 'undefined' && Boolean(window.matchMedia?.('(hover: none) and (pointer: coarse)').matches)
+}
+
+/**
+ * Deliver an exported image. On phones, `a[download]` lands in Files/Downloads where
+ * nobody finds it (iOS) or is blocked outright (in-app browsers), so when the Web Share
+ * API can carry files we open the system share sheet instead — "存储图像" saves straight
+ * to Photos, which is what a wallpaper / timetable PNG is for. Falls back to a plain
+ * download when sharing is unavailable or rejected (e.g. the user gesture expired).
+ * Returns 'shared' | 'downloaded' | 'cancelled'.
+ */
+export async function deliverImage(blob: Blob, filename: string): Promise<'shared' | 'downloaded' | 'cancelled'> {
+  if (isTouchDevice() && typeof navigator !== 'undefined' && 'canShare' in navigator) {
+    const file = new File([blob], filename, { type: blob.type })
+    if (navigator.canShare({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file], title: filename })
+        return 'shared'
+      } catch (error) {
+        if (error instanceof DOMException && error.name === 'AbortError') return 'cancelled'
+        // NotAllowedError (gesture expired) etc. → fall through to a normal download.
+      }
+    }
+  }
+  downloadBlob(blob, filename)
+  return 'downloaded'
 }
 
 /** Draw one timetable onto a fresh 2× canvas (shared by PNG and PDF exports). */
@@ -507,8 +552,10 @@ export async function exportImage(
   const canvas = renderTimetable(plan, termName, paint, theme ?? activeTheme(), W, H)
   const blob = await new Promise<Blob | null>((resolve) => canvas.toBlob(resolve, 'image/png'))
   if (!blob) throw new Error(t('生成图片失败'))
-  const filename = `cu-schedule-${slugTerm(termName)}.png`
-  downloadBlob(blob, filename)
+  const ratio = `${aspect.w}x${aspect.h}`.replace(/[^\dx.]/g, '')
+  const filename = `cu-schedule-${slugTerm(termName)}-${ratio}.png`
+  const how = await deliverImage(blob, filename)
+  if (how === 'cancelled') return ''
   return filename
 }
 
@@ -520,8 +567,8 @@ function canvasToJpegBytes(canvas: HTMLCanvasElement): Uint8Array {
 /**
  * Export the same timetable as a two-page PDF. No PDF library: each page's canvas is
  * encoded to a JPEG and embedded directly as a `/DCTDecode` image XObject in a minimal,
- * hand-assembled PDF — the standard dependency-free trick. Both pages are A4 landscape,
- * image scaled to fit. #里程碑2:一次导出即含两页——第一页浅色主题、第二页深色主题，
+ * hand-assembled PDF — the standard dependency-free trick. Both pages are true A4
+ * landscape (842 × 595 pt), drawn at that aspect ratio so the image fills the page. #里程碑2:一次导出即含两页——第一页浅色主题、第二页深色主题，
  * 同一份课表两种配色各一页，不用分两次导出。
  */
 export async function exportPdf(
@@ -530,11 +577,14 @@ export async function exportPdf(
   paint: PaintFn = defaultPaint,
 ): Promise<string> {
   await ensureExportFonts()
-  const pageW = 842 // A4 landscape width, points.
+  // True A4 landscape (842 × 595 pt): the board is drawn at the A4 aspect ratio so the
+  // image fills the page edge to edge and prints without being rescaled to a odd size.
+  const pageW = 842
+  const pageH = 595
+  const boardH = Math.round((BOARD_W * pageH) / pageW)
   const pages = (['light', 'dark'] as const).map((theme) => {
-    const canvas = renderTimetable(plan, termName, paint, theme)
+    const canvas = renderTimetable(plan, termName, paint, theme, BOARD_W, boardH)
     const jpeg = canvasToJpegBytes(canvas)
-    const pageH = Math.round((pageW * canvas.height) / canvas.width)
     return { jpeg, imgW: canvas.width, imgH: canvas.height, pageW, pageH }
   })
 

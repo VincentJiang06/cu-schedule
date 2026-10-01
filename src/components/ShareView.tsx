@@ -121,6 +121,7 @@ export function ShareView({ id }: { id: string }) {
       format,
       plan: derived.planA,
       termName: state.instance.termName,
+      termSlug: state.instance.termSlug,
       aspect,
     })
     setExportNote(result.ok ? result.note : result.reason)
@@ -134,7 +135,7 @@ export function ShareView({ id }: { id: string }) {
       <div className="sv sv--msg">
         <p className="sv__msg-title">{t('链接已过期或不存在')}</p>
         <p className="sv__msg-sub">{t('只读分享链接的有效期为一天，过期后请让对方重新分享。')}</p>
-        <a className="sv__home" href={window.location.pathname}>{t('去 CU Schedule 首页')}</a>
+        <a className="sv__home" href="/">{t('去 CU Schedule 首页')}</a>
       </div>
     )
   }
@@ -142,7 +143,7 @@ export function ShareView({ id }: { id: string }) {
     return (
       <div className="sv sv--msg">
         <p className="sv__msg-title">{t('加载失败')}</p>
-        <a className="sv__home" href={window.location.pathname}>{t('去 CU Schedule 首页')}</a>
+        <a className="sv__home" href="/">{t('去 CU Schedule 首页')}</a>
       </div>
     )
   }
@@ -192,7 +193,7 @@ export function ShareView({ id }: { id: string }) {
             <p className="sv__meta">{t('{count} 门 · {units} 学分', { count: committedCourses.length, units: totalUnits })}</p>
           </section>
 
-          <a className="sv__cta" href={window.location.pathname}>{t('做自己的课表 →')}</a>
+          <a className="sv__cta" href="/">{t('做自己的课表 →')}</a>
 
           <section className="sv__card">
             <h2 className="sv__card-head">{t('导出')}</h2>

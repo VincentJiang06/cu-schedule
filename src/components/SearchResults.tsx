@@ -1,4 +1,4 @@
-import { Fragment, useMemo, type PointerEvent as ReactPointerEvent } from 'react'
+import { Fragment, useEffect, useMemo, useState, type PointerEvent as ReactPointerEvent } from 'react'
 import { t } from '../i18n/index.ts'
 import type { CandidateStatus } from '../lib/candidates.ts'
 import { courseColor } from '../lib/color.ts'
@@ -7,7 +7,8 @@ import { STANDING_LABEL, type CourseStanding } from '../lib/programs.ts'
 import { scoreCourse } from '../lib/search.ts'
 import { courseFitsWindow, type TimeWindow } from '../lib/schedule.ts'
 import { subjectBlurb } from '../lib/subjectNames.ts'
-import type { Course, RequirementStatus } from '../lib/types.ts'
+import { DAY_SHORT, hhmm } from '../lib/time.ts'
+import type { Course, RequirementStatus, Section } from '../lib/types.ts'
 
 /** Credit bucket by floor(course.units): '1' / '2' / '3' / '4plus' (floor >= 4). */
 export type UnitPick = '1' | '2' | '3' | '4plus'
@@ -46,6 +47,9 @@ export type SearchFilters = {
    * (course.key ∈ barredKeys — see App's barredKeys). Off just shows them again with
    * the existing 已修替代课 tag (flagFor) instead of hiding them outright. */
   hideSuperseded: boolean
+  /** Keep only current-term courses that can be committed right now (status open /
+   * rearrange, not barred) — the 「只看能直接加入的课」 toggle. */
+  selectableOnly: boolean
 }
 
 // A course's standing outside any chosen programme — 自由选修. Reused so we never
@@ -59,7 +63,10 @@ const FREE_STANDING: CourseStanding = { kind: 'free' }
 // apart from 时间待定 (course has no fixed time → 灰), even though both block committing.
 type CardFlag = { kind: 'blocked' | 'neutral'; tone: 'bad' | 'warn' | 'mute'; text: string }
 
-function flagFor(status: CandidateStatus | undefined, isBarred: boolean): CardFlag | null {
+function flagFor(status: CandidateStatus | undefined, isBarred: boolean, otherTerm: boolean): CardFlag | null {
+  // 不在当前学期开的课(关掉「只包括当前学期」时会出现):加进必定学只会得到「本学期没有
+  // 开设」,所以同样挡住「必定学」,提示去顶部切学期。
+  if (otherTerm) return { kind: 'blocked', tone: 'mute', text: t('非本学期') }
   if (isBarred) return { kind: 'blocked', tone: 'bad', text: t('已修替代课') }
   if (status === 'conflict') return { kind: 'blocked', tone: 'bad', text: t('时间冲突') }
   if (status === 'tba') return { kind: 'blocked', tone: 'mute', text: t('时间待定') }
@@ -69,7 +76,34 @@ function flagFor(status: CandidateStatus | undefined, isBarred: boolean): CardFl
 }
 
 const TERM_LABEL: Record<number, string> = { 1: '上学期', 2: '下学期' }
-const RENDER_CAP = 500
+const RENDER_STEP = 300
+
+function meetingText(section: Section): string {
+  const timed = section.meetings
+    .filter((m) => m.dayIndex >= 1 && m.dayIndex <= 7)
+    .sort((a, b) => a.dayIndex - b.dayIndex || a.start - b.start)
+  return timed
+    .map((m) => t('周{day} {start}–{end}', { day: DAY_SHORT[m.dayIndex - 1], start: hhmm(m.start), end: hhmm(m.end) }))
+    .join(' · ')
+}
+
+/** One-line time summary for a course card: the LEC times (or the first component's,
+ * when the course has no LEC), "+n 组" when there are alternative sections with other
+ * times, and the named instructors. Lets students judge a course without opening it. */
+function cardSummary(course: Course): { time: string; who: string } {
+  const component = course.components.includes('LEC') ? 'LEC' : course.components[0]
+  const sections = course.sections.filter((section) => section.component === component)
+  const signatures = [...new Set(sections.map(meetingText).filter(Boolean))]
+  const time =
+    signatures.length === 0
+      ? t('时间待定')
+      : `${component} ${signatures[0]}${signatures.length > 1 ? t(' 等 {n} 组', { n: signatures.length }) : ''}`
+  const names = [...new Set(sections.flatMap((section) => section.instructors))].filter(
+    (name) => name && name !== 'Staff',
+  )
+  const who = names.length > 2 ? `${names.slice(0, 2).join(', ')} +${names.length - 2}` : names.join(', ')
+  return { time, who }
+}
 
 type TermGroup = { termOrder: number; courses: Course[] }
 type SubjectGroup = { subject: string; count: number; terms: TermGroup[] }
@@ -90,6 +124,7 @@ export function SearchResults({
   officeEnd,
   filters,
   titleByCode,
+  dataStamp,
   onCommit,
   onTaken,
   onCart,
@@ -117,6 +152,8 @@ export function SearchResults({
   officeEnd: number | null
   filters: SearchFilters
   titleByCode: Map<string, string>
+  /** 课程数据抓取日期(YYYY-MM-DD),显示在结果计数行;空串 = 未知。 */
+  dataStamp?: string
   onCommit: (code: string) => void
   onTaken: (code: string) => void
   onCart: (code: string) => void
@@ -198,12 +235,37 @@ export function SearchResults({
       if (filters.lecFits && !lecFitSet.has(course)) return false
       // 符合上下班时间:只保留有组合能全落进 [上班,下班] 窗口的课(见 officeFitSet)。
       if (filters.meetsOfficeHours && !officeFitSet.has(course)) return false
+      if (filters.selectableOnly) {
+        if (termSlug !== filters.currentTermSlug || barredKeys.has(course.key)) return false
+        const status = statusByCode.get(course.key)
+        if (status !== 'open' && status !== 'rearrange') return false
+      }
       if (filters.query.trim() && scoreCourse(course, filters.query) <= 0) return false
       return true
     })
   }, [barredKeys, filters, lecFitSet, offerings, officeFitSet, prereqByCode, statusByCode, takenSet])
 
+  const query = filters.query.trim()
   const groups = useMemo<SubjectGroup[]>(() => {
+    // 有关键词时按相关度排序(课号精确 > 课号前缀 > 课名词首 > 子串),不再按学科字母分组
+    // ——以前搜 "data structure" 最相关的课可能排在几十个学科之后。
+    if (query) {
+      const ranked = filtered
+        .map((offering) => ({ offering, score: scoreCourse(offering.course, query) }))
+        .sort(
+          (a, b) =>
+            b.score - a.score ||
+            a.offering.course.code.localeCompare(b.offering.course.code) ||
+            a.offering.termOrder - b.offering.termOrder,
+        )
+      return [
+        {
+          subject: '',
+          count: ranked.length,
+          terms: [{ termOrder: 0, courses: ranked.map((entry) => entry.offering.course) }],
+        },
+      ]
+    }
     const bySubject = new Map<string, Map<number, Course[]>>()
     for (const { course, termOrder } of filtered) {
       let terms = bySubject.get(course.subject)
@@ -229,13 +291,21 @@ export function SearchResults({
           terms: termGroups,
         }
       })
-  }, [filtered])
+  }, [filtered, query])
+
+  // termOrder of each rendered course object (offerings carry one Course per term).
+  const termOrderOf = useMemo(() => new Map(filtered.map((o) => [o.course, o.termOrder])), [filtered])
+  const termSlugOf = useMemo(() => new Map(filtered.map((o) => [o.course, o.termSlug])), [filtered])
+  const subjectCount = useMemo(() => new Set(filtered.map((o) => o.course.subject)).size, [filtered])
 
   const total = filtered.length
-  const capped = total > RENDER_CAP
+  // 渲染上限分批放开(「再显示 N 门」),换了筛选条件就回到第一批。
+  const [renderCap, setRenderCap] = useState(RENDER_STEP)
+  useEffect(() => setRenderCap(RENDER_STEP), [filtered])
+  const capped = total > renderCap
 
-  // Render at most RENDER_CAP courses, walking groups in order.
-  let budget = RENDER_CAP
+  // Render at most renderCap courses, walking groups in order.
+  let budget = renderCap
   const shownGroups: SubjectGroup[] = []
   for (const group of groups) {
     if (budget <= 0) break
@@ -252,8 +322,9 @@ export function SearchResults({
   return (
     <div className="cg">
       <p className="cg__count">
-        {t('共')} <b>{total}</b> {t('门')} · {groups.length} {t('个学科')}
-        {capped ? t(' · 已显示前 {cap} 门，请缩小范围', { cap: RENDER_CAP }) : ''}
+        {t('共')} <b>{total}</b> {t('门')} · {subjectCount} {t('个学科')}
+        {query ? t(' · 按相关度排序') : ''}
+        {dataStamp ? <span className="cg__stamp">{t('数据 {date}', { date: dataStamp })}</span> : null}
       </p>
       <div className="cg__scroll">
         {total === 0 ? (
@@ -261,14 +332,16 @@ export function SearchResults({
         ) : (
           shownGroups.map((group) => (
             <Fragment key={group.subject}>
-              <div className="sr__group" style={courseColor(group.subject)}>
-                <b>{group.subject}</b>
-                <span>{subjectBlurb(group.subject, titleByCode.get(group.subject))}</span>
-                <i>{group.count}</i>
-              </div>
+              {group.subject && (
+                <div className="sr__group" style={courseColor(group.subject)}>
+                  <b>{group.subject}</b>
+                  <span>{subjectBlurb(group.subject, titleByCode.get(group.subject))}</span>
+                  <i>{group.count}</i>
+                </div>
+              )}
               {group.terms.map((term) => (
                 <Fragment key={term.termOrder}>
-                  <div className="cg__term">{t(TERM_LABEL[term.termOrder] ?? '其他')}</div>
+                  {term.termOrder > 0 && <div className="cg__term">{t(TERM_LABEL[term.termOrder] ?? '其他')}</div>}
                   <div className="cg__grid">
                     {term.courses.map((course) => {
                       const status = statusByCode.get(course.key)
@@ -279,7 +352,10 @@ export function SearchResults({
                       const isBarred = barredKeys.has(course.key)
                       // 统一「不可选」判定:已修互斥课 / 时间冲突 / 时间待定 → 硬挡(灰化 + 禁用马上学);
                       // 时间可能冲突(rearrange) → 中性提示但不禁用;open 保持醒目可点。
-                      const flag = flagFor(status, isBarred)
+                      const courseTermOrder = termOrderOf.get(course) ?? term.termOrder
+                      const otherTerm = termSlugOf.get(course) !== filters.currentTermSlug
+                      const flag = isCommitted ? null : flagFor(status, isBarred, otherTerm)
+                      const summary = cardSummary(course)
                       const blocked = flag?.kind === 'blocked'
                       // 本专业地位:选了主修才有(map 命中 = 必修/选修,未命中 = 自由选修);未选主修则不标。
                       const standing = standingByKey
@@ -306,7 +382,7 @@ export function SearchResults({
                       return (
                         <article
                           className={`cc${isCommitted ? ' cc--committed' : ''}${isCart ? ' cc--cart' : ''}${isTaken ? ' cc--taken' : ''}${blocked ? ' cc--blocked' : ''}`}
-                          key={`${course.code}-${term.termOrder}`}
+                          key={`${course.code}-${courseTermOrder}`}
                           style={courseColor(course.subject)}
                           onPointerDown={
                             onCardPointerDown ? (event) => onCardPointerDown(course, event) : undefined
@@ -355,6 +431,13 @@ export function SearchResults({
                             <div className="cc__title" title={course.title}>
                               {course.title}
                             </div>
+                            <div className="cc__when">
+                              {query && otherTerm && (
+                                <span className="cc__term">{t(TERM_LABEL[courseTermOrder] ?? '其他')}</span>
+                              )}
+                              <span className="cc__time">{summary.time}</span>
+                              {summary.who && <span className="cc__who">{summary.who}</span>}
+                            </div>
                           </div>
                           <div className="cc__acts">
                             <button
@@ -389,6 +472,11 @@ export function SearchResults({
               ))}
             </Fragment>
           ))
+        )}
+        {capped && (
+          <button className="cg__more" type="button" onClick={() => setRenderCap((cap) => cap + RENDER_STEP)}>
+            {t('再显示 {n} 门（还有 {left} 门）', { n: Math.min(RENDER_STEP, total - renderCap), left: total - renderCap })}
+          </button>
         )}
       </div>
     </div>

@@ -84,6 +84,7 @@ export function buildScheduleHtml(
   plan: Plan,
   termName: string,
   paint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme),
+  planLabel = '',
 ): string {
   const raw = blocksOf(plan)
   const usesWeekend = raw.some((block) => block.dayIndex > 5)
@@ -177,6 +178,31 @@ export function buildScheduleHtml(
     .map((minutes) => `<div class="grid-line${minutes % 60 === 0 ? '' : ' grid-line--half'}" style="top:${pct(minutes)}%"></div>`)
     .join('')
 
+  // Course list under the grid: the timetable only shows codes, so the file also needs
+  // the titles, the exact sections chosen, full room names and instructors.
+  const courseRows = [...new Set(plan.entries.map((entry) => entry.course.code))]
+    .map((code) => {
+      const entries = plan.entries.filter((entry) => entry.course.code === code)
+      const course = entries[0].course
+      const tint = paint(course.code, course.subject, 'light')
+      const sections = entries
+        .map((entry) => {
+          const label = `${entry.section.cohort}${entry.section.group}` || entry.section.id
+          const times = entry.section.meetings.length
+            ? entry.section.meetings
+                .map((m) => `${t(DAYS[m.dayIndex - 1] ?? '')} ${hhmm(m.start)}–${hhmm(m.end)}${m.location ? ` · ${escapeHtml(m.location)}` : ''}`)
+                .join('<br>')
+            : t('时间待定')
+          const teachers = entry.section.instructors.filter((name) => name && name !== 'Staff').map(escapeHtml).join(', ')
+          return `<tr><td class="cl__comp">${escapeHtml(entry.section.component)} ${escapeHtml(label)}</td><td>${times}</td><td class="cl__inst">${teachers}</td></tr>`
+        })
+        .join('')
+      return `<section class="cl__course" style="--edge-l:${tint.edge}">` +
+        `<h2><span class="cl__code">${escapeHtml(course.code)}</span> ${escapeHtml(course.title)}<span class="cl__units">${t('{n} 学分', { n: course.units })}</span></h2>` +
+        `<table>${sections}</table></section>`
+    })
+    .join('')
+
   const now = new Date()
   const generated = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
 
@@ -185,7 +211,7 @@ export function buildScheduleHtml(
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CU Schedule · ${escapeHtml(termName)}</title>
+<title>CU Schedule · ${escapeHtml([termName, planLabel].filter(Boolean).join(' · '))}</title>
 <style>
 /* 课块等宽字体 Red Hat Mono **内嵌**进本文件(可变字体 300–700 latin 子集 data URI,
    用户拍板 2026-07-15)——离线打开照常渲染,不依赖任何 CDN,字体绝不兜底。 */
@@ -220,7 +246,23 @@ export function buildScheduleHtml(
     background: #e7e9f0;
   }
   /* 固定版面宽(v3 硬编码):列宽/字号都按这个宽度算死,窄屏横向滚动,不缩排版。 */
-  .wrap { width: ${PAGE_W}px; margin: 0 auto; }
+  .wrap { max-width: ${PAGE_W}px; margin: 0 auto; }
+  /* 课表本身仍是固定宽度版面(字号按 PAGE_W 算死),窄屏只让课表区域横向滚动,
+     标题与下方课程清单照常按屏宽排版。 */
+  .tt-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; }
+  .tt-scroll .tt { width: ${PAGE_W}px; }
+  .cl { margin-top: 18px; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 10px; }
+  .cl__course { background: #ffffff; border: 1px solid #ccd2df; border-left: 4px solid var(--edge-l); border-radius: 10px; padding: 10px 12px; }
+  .cl__course h2 { margin: 0 0 6px; font-size: 14px; font-weight: 650; display: flex; gap: 6px; align-items: baseline; flex-wrap: wrap; }
+  .cl__code { font-family: "Red Hat Mono", Menlo, Consolas, monospace; font-weight: 700; }
+  .cl__units { margin-left: auto; font-size: 12px; font-weight: 500; color: #6c7488; }
+  .cl__course table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  .cl__course td { padding: 3px 6px 3px 0; vertical-align: top; }
+  .cl__comp { white-space: nowrap; font-family: "Red Hat Mono", Menlo, Consolas, monospace; font-weight: 600; }
+  .cl__inst { color: #6c7488; }
+  :root[data-theme='dark'] .cl__course { background: #141926; border-color: #2e3648; border-left-color: var(--edge-l); }
+  :root[data-theme='dark'] .cl__units, :root[data-theme='dark'] .cl__inst { color: #7a8397; }
+  @media (max-width: 640px) { body { padding: 14px; } }
   h1 { margin: 0 0 2px; font-size: 22px; font-weight: 750; }
   .sub { margin: 0 0 18px; font-size: 13px; color: #6c7488; }
   .tt {
@@ -395,9 +437,9 @@ export function buildScheduleHtml(
 <body>
   <button aria-label="${t('切换明暗主题')}" class="theme-toggle" id="theme-toggle" type="button">🌙</button>
   <div class="wrap">
-    <h1>CU Schedule · ${escapeHtml(termName || t('课表'))}</h1>
+    <h1>CU Schedule · ${escapeHtml([termName || t('课表'), planLabel].filter(Boolean).join(' · '))}</h1>
     <p class="sub">${t('导出于 {date} · 离线可直接打开 · 时间以 CUSIS 为准', { date: generated })}</p>
-    <div class="tt">
+    <div class="tt-scroll"><div class="tt">
       <div class="corner"></div>
       ${dayHeaders}
       <div class="body-row">
@@ -405,7 +447,8 @@ export function buildScheduleHtml(
         <div class="days">${dayColumns}</div>
         ${gridLines}
       </div>
-    </div>
+    </div></div>
+    <div class="cl">${courseRows}</div>
     <footer>
       <a class="foot-byline" href="https://github.com/VincentJiang06/cu-schedule" rel="noreferrer" target="_blank">CUS by VinceJiang</a>
     </footer>
@@ -436,8 +479,9 @@ export function exportHtmlFile(
   plan: Plan,
   termName: string,
   paint: PaintFn = (_code, subject, theme) => subjectPaint(subject, theme),
+  planLabel = '',
 ): string {
-  const html = buildScheduleHtml(plan, termName, paint)
+  const html = buildScheduleHtml(plan, termName, paint, planLabel)
   const blob = new Blob([html], { type: 'text/html;charset=utf-8' })
   const filename = `cu-schedule-${slugTerm(termName)}.html`
   downloadBlob(blob, filename)

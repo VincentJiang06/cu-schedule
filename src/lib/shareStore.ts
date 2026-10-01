@@ -30,9 +30,10 @@ export function readShareId(): string | null {
   return /^[A-Za-z0-9]+$/.test(id) ? id : null
 }
 
-/** Build the shareable read-only URL for an id (`…/#v=<id>`, at the app root). */
+/** Build the shareable read-only URL for an id (`…/#v=<id>`, at the app root — the
+ * app now has real page paths like /export, which don't belong in a share link). */
 export function shareUrl(id: string): string {
-  return `${window.location.origin}${window.location.pathname}${HASH_MARKER}${id}`
+  return `${window.location.origin}/${HASH_MARKER}${id}`
 }
 
 export type CreateResult =

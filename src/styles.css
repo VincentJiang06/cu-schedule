@@ -3239,6 +3239,15 @@ select {
   max-width: 100%;
 }
 
+/* 横屏两行档:地点简写与课号同行,放不下时在本行内省略号截断,而不是 flex-wrap 换到
+   第 2 行把时间挤到第 3 行——45 分钟课(显示 2 格高)在块宽 176–200px 时原来正好被截掉
+   时间行。flex-basis:0 让它不参与换行判定;竖屏四行档的容器查询把 flex-basis 改回 100%
+   (源码在后,照常覆盖)。 */
+.tt__block-loc-abbr,
+.tt2__block-loc-abbr {
+  flex: 1 1 0;
+}
+
 /* ---- 课程块自适应方法论:共享的容器查询规则 (.tt__block / .tt2__block 共用) --------
    两组组件(单排法课表 .tt__block、A/B 对比课表 .tt2__block)各自的课程块都已在上面声明
    `container-type: size; container-name: blk`——按块自己*实际渲染出的*宽高来选布局,不再
@@ -5951,6 +5960,739 @@ select {
   .tt2__block,
   .acct-dot--syncing,
   .bar__acct--in.acct-sync--syncing {
+    animation: none;
+  }
+}
+
+/* ---- 导出反馈浮层(toast) ---------------------------------------------------
+   导出结果原来写在导出页最底部,点完按钮在视口外看不到;改为底部居中浮层,4.5s 自动消失。 */
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(24px + env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 300;
+  max-width: min(560px, calc(100vw - 32px));
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--ink);
+  color: var(--surface);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+  box-shadow: 0 8px 24px -8px rgb(0 0 0 / 0.35);
+  word-break: break-word;
+}
+
+/* ---- 课程信息补全(2026-10):列表行课名 / 课程卡时间与教师摘要 / 分批显示 ------------- */
+.cl-row__title {
+  margin: 1px 0 3px 18px;
+  font-size: 12px;
+  color: var(--ink-2);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cc__when {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 8px;
+  margin-top: 3px;
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: var(--ink-3);
+  min-width: 0;
+}
+
+.cc__time {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.cc__who {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  opacity: 0.85;
+}
+
+.cc__term {
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink-2);
+}
+
+.cg__more {
+  display: block;
+  width: 100%;
+  margin: 12px 0 4px;
+  padding: 10px;
+  border: 1.5px dashed var(--line);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink-2);
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.cg__more:hover {
+  border-color: var(--brand);
+  color: var(--brand-ink);
+}
+
+.cg__stamp {
+  float: right;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ===========================================================================
+   移动形态(≤700px,05-mobile §4):独立设计,不是桌面布局的单列退化。
+   - 顶栏只留 品牌 · 学期切换 · 账号/语言/主题;五页导航挪到底部 tab bar(拇指区);
+   - 选课页:吸顶搜索条 + 「筛选」bottom sheet;结果全宽单列;底部浮动「选择摘要条」
+     (必定 N · 可能 M · 学分),点开「当前选择」sheet;
+   - 课表页:排法横条(原生横滑 + snap)+ 全宽课表优先,排课设置收进 sheet;
+   - 信息页:我的情况 / 已完成课程 / 学分进度在前,培养方案大表在后;
+   - 热区 ≥44px;100dvh + safe-area。桌面(>700px)规则一条不动。
+   =========================================================================== */
+
+/* 底部导航与摘要条在桌面不出现(JS 也只在 isMobile 时渲染,这里是双保险)。 */
+.tabbar,
+.m-summary,
+.m-toolbar,
+.bar__term {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --tabbar-h: 58px;
+    --bar-h: 52px;
+    --summary-h: 54px;
+  }
+
+  .app {
+    padding: 0 0 calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 12px);
+    gap: 10px;
+  }
+
+  .app-body {
+    gap: 10px;
+  }
+
+  /* ---- 顶栏:一行 ---- */
+  .bar {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: 'left term tools';
+    padding: calc(6px + env(safe-area-inset-top)) 12px 6px;
+    gap: 8px;
+    row-gap: 0;
+  }
+
+  .bar__nav {
+    display: none;
+  }
+
+  .bar__left {
+    grid-area: left;
+    min-width: 0;
+  }
+
+  .bar__tools {
+    grid-area: tools;
+    gap: 6px;
+  }
+
+  .bar__brand {
+    min-width: 0;
+  }
+
+  .bar__brand h1 {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+  }
+
+  .bar__mark {
+    width: 28px;
+    height: 28px;
+  }
+
+  .bar__acct,
+  .bar__lang,
+  .bar__theme {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    padding: 0;
+  }
+
+  .bar__term {
+    grid-area: term;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+
+  .bar__term-swap {
+    color: var(--ink-3);
+    font-size: 12px;
+  }
+
+  /* ---- 主内容:整页随文档滚动 ---- */
+  .viewport {
+    display: block;
+    flex: none;
+    padding: 0 12px;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .side {
+    position: static;
+    overflow: visible;
+    max-height: none;
+    padding-right: 0;
+  }
+
+  .card {
+    border-radius: 14px;
+  }
+
+  /* ---- 底部 tab bar ---- */
+  .tabbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: calc(var(--tabbar-h) + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    backdrop-filter: saturate(1.4) blur(14px);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    border-top: 1px solid var(--line);
+  }
+
+  .tabbar__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-height: 44px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-3);
+    font-size: 11px;
+    font-weight: 650;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .tabbar__icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 26px;
+    border-radius: 999px;
+    transition: background 0.15s;
+  }
+
+  .tabbar__item--on {
+    color: var(--ink);
+  }
+
+  .tabbar__item--on .tabbar__icon {
+    background: color-mix(in srgb, var(--brand) 16%, transparent);
+    color: var(--brand-ink);
+  }
+
+  /* ---- 选课页 ---- */
+  .m-toolbar {
+    position: sticky;
+    top: calc(var(--bar-h, 52px) + env(safe-area-inset-top));
+    z-index: 30;
+    display: flex;
+    gap: 8px;
+    padding: 6px 0 8px;
+    background: var(--bg);
+  }
+
+  .m-toolbar__search {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    font-size: 16px; /* ≥16px:iOS 聚焦输入框时不自动放大页面 */
+  }
+
+  .m-toolbar__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 44px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1.5px solid var(--line);
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .m-badge {
+    display: inline-grid;
+    place-items: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 5px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fff;
+    font-size: 11.5px;
+    font-weight: 750;
+  }
+
+  .grid--select .results-pane {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding-bottom: calc(var(--summary-h) + 8px);
+  }
+
+  .grid--select .cg__scroll {
+    overflow: visible;
+    border: 0;
+  }
+
+  .grid--select .cg__grid {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 0;
+  }
+
+  .grid--select .sr__group {
+    position: sticky;
+    top: calc(var(--bar-h, 52px) + env(safe-area-inset-top) + 58px);
+    z-index: 5;
+    border-radius: 10px;
+  }
+
+  .cc__btn {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .cc__title {
+    font-size: 13px;
+    white-space: normal;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+  .cg__stamp {
+    float: none;
+    display: block;
+  }
+
+  /* ---- 浮动选择摘要条(选课页 / 课表页) ---- */
+  .m-summary {
+    position: fixed;
+    left: 10px;
+    right: 10px;
+    bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 8px);
+    z-index: 55;
+    display: flex;
+    gap: 6px;
+    height: var(--summary-h);
+    padding: 5px;
+    border-radius: 16px;
+    background: var(--ink);
+    color: var(--surface);
+    box-shadow: 0 10px 28px -10px rgb(0 0 0 / 0.45);
+  }
+
+  .m-summary__main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+    border: 0;
+    border-radius: 12px;
+    background: transparent;
+    color: inherit;
+    font-size: 12.5px;
+    text-align: left;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .m-summary__stat b {
+    font-size: 16px;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .m-summary__warn {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: #e5484d;
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .m-summary__more {
+    margin-left: auto;
+    opacity: 0.7;
+    font-weight: 650;
+  }
+
+  .m-summary__more::after {
+    content: ' ▴';
+  }
+
+  .m-summary__go {
+    flex: none;
+    padding: 0 16px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--surface);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 750;
+    cursor: pointer;
+  }
+
+  .m-summary__go:disabled {
+    opacity: 0.45;
+  }
+
+  /* ---- bottom sheet ---- */
+  .sheet-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    display: flex;
+    align-items: flex-end;
+    background: rgb(0 0 0 / 0.38);
+    animation: sheetFade 0.18s ease both;
+  }
+
+  .sheet {
+    width: 100%;
+    max-height: 88dvh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    border-radius: 20px 20px 0 0;
+    box-shadow: 0 -10px 40px -12px rgb(0 0 0 / 0.4);
+    animation: sheetUp 0.22s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .sheet__head {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 16px 16px 8px;
+  }
+
+  .sheet__grip {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    width: 38px;
+    height: 4px;
+    margin-left: -19px;
+    border-radius: 999px;
+    background: var(--line);
+  }
+
+  .sheet__title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 750;
+  }
+
+  .sheet__x {
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    margin-right: -8px;
+    border: 0;
+    background: transparent;
+    color: var(--ink-2);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .sheet__body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 12px 14px;
+  }
+
+  .sheet__foot {
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+  }
+
+  .m-sheet-btn {
+    flex: 1;
+    height: 46px;
+    border: 0;
+    border-radius: 12px;
+    background: var(--brand);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 750;
+    cursor: pointer;
+  }
+
+  .m-sheet-btn--ghost {
+    flex: 0 0 34%;
+    background: var(--surface-2);
+    color: var(--ink);
+    border: 1.5px solid var(--line);
+  }
+
+  .m-sheet-btn:disabled {
+    opacity: 0.5;
+  }
+
+  .sheet .search-card .search-box {
+    font-size: 16px;
+  }
+
+  .sheet .switch,
+  .sheet .chip {
+    min-height: 40px;
+  }
+
+  .sheet .cl-row__x,
+  .sheet .cl-row__eye,
+  .sheet .cl-row__fold {
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  /* ---- 课表页:课表全宽全高优先 ---- */
+  .grid--timetable .stage {
+    height: auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: calc(var(--summary-h) + 8px);
+  }
+
+  .grid--timetable .stage > :last-child {
+    height: calc(100dvh - var(--bar-h, 52px) - var(--tabbar-h) - var(--summary-h) - 110px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+    min-height: 460px;
+  }
+
+  .plan-strip__rail {
+    touch-action: pan-x pan-y;
+    scroll-snap-type: x proximity;
+    cursor: auto;
+  }
+
+  .plan-strip__rail > * {
+    scroll-snap-align: start;
+  }
+
+  .plan-card__pick,
+  .plan-card__del {
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .stage .card--problem {
+    margin: 0;
+  }
+
+  .grid--timetable .stage {
+    padding: 8px 6px calc(var(--summary-h) + 8px) 4px;
+  }
+
+  /* 移动端恒单排法:排法卡收起 A/B 按钮,删除角标收进卡内,卡片更窄、一屏能看到 3 张。 */
+  .plan-card__actions {
+    display: none;
+  }
+
+  .plan-card {
+    padding: 8px 30px 8px 10px;
+    min-height: 48px;
+  }
+
+  .plan-card__del {
+    top: 2px;
+    right: 2px;
+    transform: none;
+  }
+
+  /* 5 天列在 ~360px 里:时间轴收窄、课块内边距收紧,课号优先可读。 */
+  .tt2 {
+    grid-template-columns: 34px minmax(0, 1fr);
+    column-gap: 2px;
+  }
+
+  .tt2__block {
+    padding: 2px 3px;
+    border-radius: 7px;
+    --blk-fs-portrait: clamp(8.5px, min(19cqw, 21.7cqh), 14px);
+  }
+
+  .tt2__block--lec {
+    border-left-width: 3px;
+  }
+
+  .tt2__block-code {
+    letter-spacing: -0.04em;
+    text-overflow: clip;
+  }
+
+  /* ---- 信息页:个人卡片在前,方案大表在后 ---- */
+  .grid > * {
+    width: 100%;
+    max-width: none;
+  }
+
+  .grid--info .side--info {
+    order: -1;
+  }
+
+  .grid--info .prog-pane {
+    height: auto;
+    max-height: none;
+  }
+
+  /* ---- 导出页 ---- */
+  .page-center--export {
+    width: 100%;
+  }
+
+  .export-methods-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .export-btn,
+  .aspect-btn {
+    min-height: 44px;
+  }
+
+  .export-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* ---- 课程详情:底部 sheet 形态 ---- */
+  .cmodal-overlay {
+    z-index: 95; /* 盖过底部摘要条(55)与 tab bar(60),否则操作按钮被挡住 */
+    place-items: end stretch;
+    padding: 0;
+    background: rgb(0 0 0 / 0.38);
+  }
+
+  .cmodal {
+    width: 100%;
+    max-height: 88dvh;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .cmodal__act,
+  .cmodal__google {
+    min-height: 44px;
+  }
+
+  .cmodal__x {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* ---- 页脚、浮层 ---- */
+  .foot {
+    padding: 0 16px;
+  }
+
+  .toast {
+    bottom: calc(var(--tabbar-h) + var(--summary-h) + env(safe-area-inset-bottom) + 18px);
+  }
+
+  .acct-pop {
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
+}
+
+/* 小屏(≤400px,如 iPhone SE / mini):顶栏放不下站名 + 学期 + 三个按钮,只留 logo。 */
+@media (max-width: 400px) {
+  .bar__brand h1 {
+    display: none;
+  }
+}
+
+@keyframes sheetUp {
+  from {
+    transform: translateY(24px);
+    opacity: 0.6;
+  }
+}
+
+@keyframes sheetFade {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet,
+  .sheet-overlay {
     animation: none;
   }
 }

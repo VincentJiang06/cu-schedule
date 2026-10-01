@@ -1,5 +1,6 @@
 import {
   useCallback,
+  useDeferredValue,
   useEffect,
   useMemo,
   useRef,
@@ -60,6 +61,7 @@ import { computeProgramProgress } from './lib/programProgress.ts'
 import { decodeLiveState, decodeShare, encodeLiveState, type LiveState } from './lib/shareLink.ts'
 import { createShare } from './lib/shareStore.ts'
 import {
+  dataVersion,
   loadSubjects,
   loadTermList,
   loadYearOfferings,
@@ -522,7 +524,68 @@ function PlanStripRail({ selectedId, children }: { selectedId: string | null; ch
   )
 }
 
+// 移动形态开关(05-mobile §2 P1/P6):≤700px 是独立设计的移动形态,由 CSS 断点 + 这一个
+// matchMedia 驱动,不做 UA 嗅探。
+const MOBILE_QUERY = '(max-width: 700px)'
+function useIsMobile(): boolean {
+  const [mobile, setMobile] = useState(() => window.matchMedia?.(MOBILE_QUERY).matches ?? false)
+  useEffect(() => {
+    const media = window.matchMedia?.(MOBILE_QUERY)
+    if (!media) return
+    const onChange = (): void => setMobile(media.matches)
+    media.addEventListener('change', onChange)
+    return () => media.removeEventListener('change', onChange)
+  }, [])
+  return mobile
+}
+
+/** 移动端底部弹层(bottom sheet):遮罩点击 / Esc / 关闭按钮收起;内容区内部滚动。 */
+function Sheet({
+  title,
+  onClose,
+  children,
+  footer,
+}: {
+  title: string
+  onClose: () => void
+  children: ReactNode
+  footer?: ReactNode
+}) {
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent): void => {
+      if (event.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', onKey)
+    // 弹层打开时锁住背后页面滚动,避免在 sheet 里滑到底时带着整页一起滚。
+    const previous = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = previous
+    }
+  }, [onClose])
+  return (
+    <div className="sheet-overlay" onClick={onClose}>
+      <div aria-label={title} aria-modal="true" className="sheet" role="dialog" onClick={(event) => event.stopPropagation()}>
+        <div className="sheet__head">
+          <span aria-hidden className="sheet__grip" />
+          <h2 className="sheet__title">{title}</h2>
+          <button aria-label={t('关闭')} className="sheet__x" type="button" onClick={onClose}>
+            ×
+          </button>
+        </div>
+        <div className="sheet__body">{children}</div>
+        {footer && <div className="sheet__foot">{footer}</div>}
+      </div>
+    </div>
+  )
+}
+
 export default function App() {
+  const isMobile = useIsMobile()
+  // 移动端两个底部弹层:选课页的「筛选」与「当前选择」(含课表页的「排课设置」)。
+  const [mobileSheet, setMobileSheet] = useState<'filters' | 'selection' | 'ttsettings' | null>(null)
+  const closeSheet = useCallback(() => setMobileSheet(null), [])
   const [theme, setTheme] = useState<Theme>(bootTheme)
   const [lang, setLangState] = useState<Lang>(bootLang)
   // 在渲染顶层同步落地当前语言,使本轮所有 t() 立即用新语言(项目无 memo,子树随父重渲染读到)。
@@ -592,6 +655,8 @@ export default function App() {
     (to: Page) => {
       if (to === page) return
       setPage(to)
+      setMobileSheet(null)
+      window.scrollTo({ top: 0 })
       const hash = liveHashBuilderRef.current()
       window.history.pushState(null, '', `${PAGE_PATH[to]}${window.location.search}${hash}`)
     },
@@ -647,6 +712,8 @@ export default function App() {
   const [units, setUnits] = useState<UnitPick[]>([])
   const [levels, setLevels] = useState<LevelBucket[]>([])
   const [hideCompleted, setHideCompleted] = useState(live?.hideCompleted ?? true)
+  // 只看能直接加入的课(本学期、可选/换排法、未被互斥挡下)。会话内筛选,同 units/levels 不进 URL。
+  const [selectableOnly, setSelectableOnly] = useState(false)
   const [currentTermOnly, setCurrentTermOnly] = useState(live?.currentTermOnly ?? true)
   const [excludeTba, setExcludeTba] = useState(live?.excludeTba ?? false)
   // 隐藏已替代修课:默认开——把 barredKeys(已修互斥/替代课挡下的课)从课程列表里滤掉；
@@ -778,6 +845,19 @@ export default function App() {
       '',
       `${PAGE_PATH[bootPage]}${window.location.search}${window.location.hash}`,
     )
+  }, [])
+
+  // 课程数据版本(manifest.generatedAt)→ 页脚与选课页显示「课程数据更新于 …」,用户能判断
+  // 看到的时间/课室是不是最新抓取的(工具不是权威,CUSIS 才是)。
+  const [dataStamp, setDataStamp] = useState('')
+  useEffect(() => {
+    dataVersion()
+      .then((iso) => {
+        const date = new Date(iso)
+        if (Number.isNaN(date.getTime())) return
+        setDataStamp(date.toLocaleDateString('sv-SE', { timeZone: 'Asia/Hong_Kong' }))
+      })
+      .catch(() => {})
   }, [])
 
   useEffect(() => {
@@ -1097,9 +1177,12 @@ export default function App() {
   // 以后约束/删除撤销、这个排法又满足过滤条件时也会自动恢复选中，比数组下标更贴合
   // "约束只是过滤、不改变身份"的模型。
   const soloActive = soloPlanId !== null && shownById.has(soloPlanId)
+  // 手机竖屏放不下 A/B 两套并排的 5 天课表:移动形态恒按单排法展示(A 或被点的那个),
+  // A/B 对比留给桌面。只影响展示,不改 planAId/planBId,回到桌面对比照旧。
+  const showSolo = soloActive || isMobile
   // 大课表实际展示的排法:单方案模式 → 只有被点的那个;否则 A / B 对比。
   const shownPlanA = soloActive ? (shownById.get(soloPlanId!) ?? null) : planA
-  const shownPlanB = soloActive ? null : planB
+  const shownPlanB = showSolo ? null : planB
   // #里程碑6(左栏 section 高亮):当前实际展示的排法(单方案模式的那个，或对比模式的 A / B)
   // 各自拆成 code → component → sectionId,喂给左栏「当前课程」列表的 section 选择器
   // (CoursePicker)去标出"这个 section 属于 A/B/两者都是"。solo 模式下 shownPlanB 恒为
@@ -1356,6 +1439,14 @@ export default function App() {
   const cartGhostsB = useMemo(() => ghostBlocksFor(shownPlanB), [ghostBlocksFor, shownPlanB])
 
   const [exportNote, setExportNote] = useState('')
+  // 正在进行的导出格式(防连点 + 按钮显示「导出中…」);null = 空闲。
+  const [exportBusy, setExportBusy] = useState<ExportFormat | null>(null)
+  // 导出结果用底部浮层提示(toast)——原来写在导出页最底部,点完按钮根本看不到反馈。
+  useEffect(() => {
+    if (!exportNote || exportNote === t('正在导出…')) return
+    const timer = window.setTimeout(() => setExportNote(''), 4500)
+    return () => window.clearTimeout(timer)
+  }, [exportNote])
   // #里程碑4:图片 PNG 导出前先选画面比例——六个按钮之一是「自定义」，点开才展示 w:h 输入框。
   const [customAspectOpen, setCustomAspectOpen] = useState(false)
   const [customAspectW, setCustomAspectW] = useState('1')
@@ -1367,12 +1458,15 @@ export default function App() {
     if (shareBusy) return
     setShareBusy(true)
     setShareNote(t('正在生成只读分享链接…'))
+    // 分享的是导出页选中的那一个排法:把它的 section 选择整份写进 pins,只读页
+    // generatePlans(pins) 排出来的第一个方案就恰好是它(否则对方看到的是排法 1)。
+    const exportPins = selectedExportPlan ? { ...pins, ...planSectionMap(selectedExportPlan) } : pins
     const result = await createShare({
       termSlug,
       termName: term?.name ?? '',
       committed,
       taken,
-      pins,
+      pins: exportPins,
     })
     if (!result.ok) {
       setShareNote(t('生成失败：{reason}', { reason: result.reason }))
@@ -1392,17 +1486,21 @@ export default function App() {
   // #里程碑3(核实):exportPlan 只收 selectedExportPlan 这一个 Plan，从不带 cart/ghost 数据——
   // 见 ghostBlocksFor 注释,候选课(可能学)不管是否被眼睛隐藏,本就从未出现在任何导出物里。
   async function handleExport(format: ExportFormat, aspect?: Aspect): Promise<void> {
-    if (!selectedExportPlan) return
+    if (!selectedExportPlan || exportBusy) return
+    setExportBusy(format)
     setExportNote(t('正在导出…'))
     const result = await exportPlan({
       format,
       plan: selectedExportPlan,
       termName: term?.name ?? '',
+      termSlug,
+      planLabel: t('排法 {n}', { n: allPlanNumberById.get(selectedExportPlan.id) ?? '?' }),
       // #1 导出图配色与大课表一致(同一 colorSlot → hue 映射);theme 透传给 PDF 的明暗两页。
       paint: (code, _subject, theme) => paintForCode(code, theme),
       aspect,
     })
-    setExportNote(result.ok ? result.note : result.reason)
+    setExportNote(result.ok ? result.note : t('导出失败：{reason}', { reason: result.reason }))
+    setExportBusy(null)
   }
   // 底部「其他」栏:导出全部配置(committed/taken/cart/pins/term/开关)为一份 Markdown，
   // 人肉可读 + 末尾机读块(见 configMd.ts),下载文件名用当天日期。
@@ -1432,7 +1530,7 @@ export default function App() {
       titleFor: (code) => catalogByKey.get(courseKey(code))?.title,
     })
     downloadBlob(new Blob([md], { type: 'text/markdown;charset=utf-8' }), configMdFilename())
-    setConfigNote(t('已下载配置文件'))
+    setExportNote(t('已下载配置文件'))
   }
 
   // 信息页「我的情况」区「导入之前的配置」:读取 .md 文件 → decodeConfigMd → 整体恢复状态。
@@ -1566,8 +1664,13 @@ export default function App() {
 
   const candidates = useMemo(() => {
     if (courses.length === 0) return { rows: [], summary: { open: 0, rearrange: 0, conflict: 0, tba: 0, taken: 0, ruledOut: 0 } }
-    return evaluateCandidates({ courses, taken, committed, plans, selectedPlanIndex: planIndex, prefs })
-  }, [committed, courses, planIndex, plans, prefs, taken])
+    // 「可选」的基准是课表页当前正在看的那个排法(单方案模式的那个,否则 A)——以前固定用
+    // plans[planIndex],而 planIndex 几乎永远是 0,于是选了排法 5 之后选课页的可选/冲突
+    // 标注仍按排法 1 算,与课表页所见不一致。
+    const focusId = soloActive ? soloPlanId : (planA?.id ?? null)
+    const focusIndex = Math.max(0, plans.findIndex((plan) => plan.id === focusId))
+    return evaluateCandidates({ courses, taken, committed, plans, selectedPlanIndex: focusIndex, prefs })
+  }, [committed, courses, planA, plans, prefs, soloActive, soloPlanId, taken])
 
   // Selectability status is per current-term timetable; other-term courses have none.
   // Keyed by course.key — SearchResults looks these up by course.key too.
@@ -1635,8 +1738,11 @@ export default function App() {
           ? t('时间待定，暂不能加入排课')
           : null
 
+  // 关键词过滤 3000+ 门课在中端手机上每次按键要几十毫秒;useDeferredValue 让输入框先
+  // 更新、结果列表在空闲时跟上,打字不卡。
+  const deferredSearch = useDeferredValue(search)
   const filters: SearchFilters = {
-    query: search,
+    query: deferredSearch,
     includeSubjects,
     excludeSubjects,
     meetsPrereq,
@@ -1650,8 +1756,41 @@ export default function App() {
     currentTermOnly,
     excludeTba,
     hideSuperseded,
+    selectableOnly,
     currentTermSlug: termSlug,
     majorKeys,
+  }
+  // 偏离默认值的筛选条件个数(搜索卡标题的徽标 + 移动端筛选按钮);「重置」一键回到默认。
+  const activeFilterCount =
+    (search.trim() ? 1 : 0) +
+    (includeSubjects.length > 0 ? 1 : 0) +
+    (excludeSubjects.length > 0 ? 1 : 0) +
+    (programScope === 'program' ? 1 : 0) +
+    (meetsPrereq ? 1 : 0) +
+    (!hideCompleted ? 1 : 0) +
+    (!hideSuperseded ? 1 : 0) +
+    (lecFits ? 1 : 0) +
+    (meetsOfficeHours ? 1 : 0) +
+    (!currentTermOnly ? 1 : 0) +
+    (excludeTba ? 1 : 0) +
+    (selectableOnly ? 1 : 0) +
+    (units.length > 0 ? 1 : 0) +
+    (levels.length > 0 ? 1 : 0)
+  function resetFilters(): void {
+    setSearch('')
+    setIncludeSubjects([])
+    setExcludeSubjects([])
+    setProgramScope('all')
+    setMeetsPrereq(false)
+    setHideCompleted(true)
+    setHideSuperseded(true)
+    setLecFits(false)
+    setMeetsOfficeHours(false)
+    setCurrentTermOnly(true)
+    setExcludeTba(false)
+    setSelectableOnly(false)
+    setUnits([])
+    setLevels([])
   }
   // Membership sets keyed by course.key — every identity test in the UI goes through
   // the key, while localStorage keeps the raw codes (storage vs identity separation).
@@ -2353,12 +2492,23 @@ export default function App() {
 
   const searchCard = (
     <section className="card search-card">
-      <h2 className="card__title">{t('搜索')}</h2>
+      <h2 className="card__title">
+        {t('搜索')}
+        <span className="card__title-actions">
+          {activeFilterCount > 0 && (
+            <button className="card__clear" type="button" onClick={resetFilters}>
+              {t('重置筛选（{n}）', { n: activeFilterCount })}
+            </button>
+          )}
+        </span>
+      </h2>
       <label className="field">
         <span className="field__label">{t('关键词')}</span>
         <input
           className="search-box"
-          placeholder={t('课号或课名…')}
+          enterKeyHint="search"
+          placeholder={t('课号、课名或教师…')}
+          type="search"
           value={search}
           onChange={(event) => setSearch(event.target.value)}
         />
@@ -2405,6 +2555,9 @@ export default function App() {
       </div>
       <div className="filter-block">
         <span className="filter-block__title">{t('时间约束 · 可选性')}</span>
+        <Toggle checked={selectableOnly} onChange={setSelectableOnly}>
+          {t('只看能直接加入的课')}
+        </Toggle>
         <Toggle checked={lecFits} onChange={setLecFits}>
           {t('符合时间表（仅LEC）')}
         </Toggle>
@@ -2626,7 +2779,7 @@ export default function App() {
       {PNG_ASPECTS.map((item) => (
         <button
           className="aspect-btn"
-          disabled={!selectedExportPlan}
+          disabled={!selectedExportPlan || exportBusy !== null}
           key={item.label}
           type="button"
           onClick={() => void handleExport('image', item.aspect)}
@@ -2691,6 +2844,7 @@ export default function App() {
     busy?: boolean
     onClick: () => void
     footer?: ReactNode
+    note?: ReactNode
   }> = [
     {
       key: 'wallpaper',
@@ -2701,9 +2855,9 @@ export default function App() {
         </svg>
       ),
       title: t('手机壁纸'),
-      desc: t('竖屏壁纸图，把选中的课表铺成手机锁屏背景，顶部留白避开系统时间。导出两张：纯背景 + 带课表。'),
-      ctaLabel: t('下载壁纸'),
-      disabled: !selectedExportPlan,
+      desc: t('竖屏壁纸图，把选中的课表铺在锁屏时钟与底部按钮之间。手机上会打开系统分享，可直接存到相册。'),
+      ctaLabel: exportBusy === 'wallpaper' ? t('导出中…') : t('下载壁纸'),
+      disabled: !selectedExportPlan || exportBusy !== null,
       onClick: () => void handleExport('wallpaper'),
     },
     {
@@ -2715,9 +2869,9 @@ export default function App() {
         </svg>
       ),
       title: t('日历（.ics）'),
-      desc: t('导入手机系统日历 / Google Calendar，每周自动重复。周期为按学期估算，开学后请回 CUSIS 核对真实起止日期。'),
-      ctaLabel: t('下载 .ics'),
-      disabled: !selectedExportPlan,
+      desc: t('导入手机系统日历 / Google Calendar。按中大官方校历从第一个教学日重复到最后一个教学日，自动跳过公众假期、农历新年与阅读周。'),
+      ctaLabel: exportBusy === 'ics' ? t('导出中…') : t('下载 .ics'),
+      disabled: !selectedExportPlan || exportBusy !== null,
       onClick: () => void handleExport('ics'),
     },
     {
@@ -2738,6 +2892,7 @@ export default function App() {
       disabled: committed.length === 0 || shareBusy,
       busy: shareBusy,
       onClick: () => void handleCreateShare(),
+      note: shareNote ? <p className="export-note export-note--share">{shareNote}</p> : null,
     },
     {
       key: 'pdf',
@@ -2752,9 +2907,9 @@ export default function App() {
         </svg>
       ),
       title: t('表格 PDF'),
-      desc: t('一页 A4 的课表，线条清晰，适合打印出来贴在墙上或夹进笔记本。'),
-      ctaLabel: t('下载 PDF'),
-      disabled: !selectedExportPlan,
+      desc: t('A4 横向的课表（浅色、深色各一页），线条清晰，适合打印出来贴在墙上或夹进笔记本。'),
+      ctaLabel: exportBusy === 'pdf' ? t('导出中…') : t('下载 PDF'),
+      disabled: !selectedExportPlan || exportBusy !== null,
       onClick: () => void handleExport('pdf'),
     },
     {
@@ -2787,9 +2942,9 @@ export default function App() {
         </svg>
       ),
       title: t('导出为 HTML'),
-      desc: t('独立的自包含网页文件，不依赖网络，离线也能双击打开，内含完整课表，适合长期留存。'),
-      ctaLabel: t('下载 HTML'),
-      disabled: !selectedExportPlan,
+      desc: t('独立的自包含网页文件，离线也能打开，内含课表与每门课的时段、课室、教师清单，适合长期留存。'),
+      ctaLabel: exportBusy === 'html' ? t('导出中…') : t('下载 HTML'),
+      disabled: !selectedExportPlan || exportBusy !== null,
       onClick: () => void handleExport('html'),
     },
   ]
@@ -2841,6 +2996,7 @@ export default function App() {
                 {method.ctaLabel}
               </button>
             )}
+            {method.note}
           </section>
         ))}
       </div>
@@ -2858,9 +3014,6 @@ export default function App() {
         </button>
       </section>
 
-      {shareNote && <p className="export-note export-note--share">{shareNote}</p>}
-      {exportNote && <p className="export-note">{exportNote}</p>}
-      {configNote && <p className="export-note">{configNote}</p>}
     </div>
   )
 
@@ -2882,6 +3035,55 @@ export default function App() {
       </button>
     ) : null
 
+  const searchResultsView = loading ? (
+    <div className="pane__loading">{t('正在加载 {year} 全部课程…', { year: year ?? '' })}</div>
+  ) : (
+    <SearchResults
+      barredKeys={barredKeys}
+      cartSet={cartSet}
+      committedSet={committedSet}
+      filters={filters}
+      lecBusy={lecBusy}
+      offerings={offerings}
+      officeEnd={workEnd}
+      officeStart={workStart}
+      standingByKey={standingByKey}
+      statusByCode={statusByCode}
+      prereqByCode={prereqByCode}
+      takenSet={takenSet}
+      titleByCode={titleByCode}
+      dataStamp={dataStamp}
+      onCardPointerDown={isMobile ? undefined : (course, event) => beginCourseDrag(course.code, 'catalog', event)}
+      onCart={toggleCart}
+      onCommit={toggleCommitted}
+      onOpenDetail={setDetailCourse}
+      onTaken={toggleTaken}
+    />
+  )
+
+  const timetableView = (
+    <TimetableCompare
+      cartA={cartGhostsA}
+      cartB={cartGhostsB}
+      colorForCode={colorForCode}
+      emptyMessage={
+        committedCourses.length === 0
+          ? t('在左侧选择当前选择课程，A / B 两种排法会自动排出来')
+          : t('当前无可行方案')
+      }
+      guides={guideLines}
+      locked={workTimeLocked}
+      planA={shownPlanA}
+      planB={shownPlanB}
+      showEmptyGrid={committedCourses.length > 0}
+      solo={showSolo}
+      onGuideChange={(tone, minutes) =>
+        tone === 'am' ? setWorkStart(minutes) : setWorkEnd(minutes)
+      }
+      onToggleCandidate={toggleCandidateDisabled}
+    />
+  )
+
   // 每一页的内容体（<main> 的直接子节点）。切页动画期间会同时挂载「来向页」与「目标页」两层，
   // 各自套上不同的 grid 列布局与滑动 class，动画结束后只剩目标页（solo）。
   const pageInner = (p: Page): ReactNode => {
@@ -2899,35 +3101,32 @@ export default function App() {
           </>
         )
       case 'select':
+        if (isMobile) {
+          return (
+            <>
+              <div className="m-toolbar">
+                <input
+                  aria-label={t('搜索课程')}
+                  className="search-box m-toolbar__search"
+                  enterKeyHint="search"
+                  placeholder={t('课号、课名或教师…')}
+                  type="search"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                />
+                <button className="m-toolbar__btn" type="button" onClick={() => setMobileSheet('filters')}>
+                  {t('筛选')}
+                  {activeFilterCount > 0 && <span className="m-badge">{activeFilterCount}</span>}
+                </button>
+              </div>
+              <section className="results-pane">{searchResultsView}</section>
+            </>
+          )
+        }
         return (
           <>
             <aside className="side side--filters">{searchCard}</aside>
-            <section className="results-pane">
-              {loading ? (
-                <div className="pane__loading">{t('正在加载 {year} 全部课程…', { year: year ?? '' })}</div>
-              ) : (
-                <SearchResults
-                  barredKeys={barredKeys}
-                  cartSet={cartSet}
-                  committedSet={committedSet}
-                  filters={filters}
-                  lecBusy={lecBusy}
-                  offerings={offerings}
-                  officeEnd={workEnd}
-                  officeStart={workStart}
-                  standingByKey={standingByKey}
-                  statusByCode={statusByCode}
-                  prereqByCode={prereqByCode}
-                  takenSet={takenSet}
-                  titleByCode={titleByCode}
-                  onCardPointerDown={(course, event) => beginCourseDrag(course.code, 'catalog', event)}
-                  onCart={toggleCart}
-                  onCommit={toggleCommitted}
-                  onOpenDetail={setDetailCourse}
-                  onTaken={toggleTaken}
-                />
-              )}
-            </section>
+            <section className="results-pane">{searchResultsView}</section>
             <aside className="side side--commit">
               {committedCard}
               {cartCard}
@@ -2939,6 +3138,15 @@ export default function App() {
           </>
         )
       case 'timetable':
+        if (isMobile) {
+          return (
+            <section className="stage">
+              {planStrip}
+              {problemsCard}
+              {timetableView}
+            </section>
+          )
+        }
         return (
           <>
             {/* #4 左右对调：左窄栏（排课筛选→当前选择→问题/清空）先，右宽栏（排法横条→大课表）后。 */}
@@ -2950,26 +3158,7 @@ export default function App() {
             </aside>
             <section className="stage">
               {planStrip}
-              <TimetableCompare
-                cartA={cartGhostsA}
-                cartB={cartGhostsB}
-                colorForCode={colorForCode}
-                emptyMessage={
-                  committedCourses.length === 0
-                    ? t('在左侧选择当前选择课程，A / B 两种排法会自动排出来')
-                    : t('当前无可行方案')
-                }
-                guides={guideLines}
-                locked={workTimeLocked}
-                planA={shownPlanA}
-                planB={shownPlanB}
-                showEmptyGrid={committedCourses.length > 0}
-                solo={soloActive}
-                onGuideChange={(tone, minutes) =>
-                  tone === 'am' ? setWorkStart(minutes) : setWorkEnd(minutes)
-                }
-                onToggleCandidate={toggleCandidateDisabled}
-              />
+              {timetableView}
             </section>
           </>
         )
@@ -2981,7 +3170,7 @@ export default function App() {
   }
 
   return (
-    <div className={`app${dragCourse ? ' app--dragging' : ''}`}>
+    <div className={`app${dragCourse ? ' app--dragging' : ''}${isMobile ? ' app--mobile' : ''}`}>
       {/* #4 拖拽跟随 ghost:固定定位小签,pointermove 直接改 transform(不经 React)。 */}
       {dragCourse && (
         <div aria-hidden className="drag-ghost" ref={dragGhostRef}>
@@ -3008,6 +3197,21 @@ export default function App() {
               <h1>CU Schedule</h1>
             </div>
           </div>
+          {isMobile && mainTerms.length > 1 && (
+            <button
+              aria-label={t('切换学期')}
+              className="bar__term"
+              type="button"
+              onClick={() => {
+                const index = mainTerms.findIndex((item) => item.slug === termSlug)
+                setTermSlug(mainTerms[(index + 1) % mainTerms.length].slug)
+                setPlanIndex(0)
+              }}
+            >
+              {term?.name.match(/Term\s*[12]/)?.[0] ?? term?.name ?? ''}
+              <span aria-hidden className="bar__term-swap">⇄</span>
+            </button>
+          )}
           <nav className="bar__nav">
             {PAGES.map(({ value, label }) => (
               <button
@@ -3086,6 +3290,109 @@ export default function App() {
         </main>
       </div>
 
+      {isMobile && (page === 'select' || page === 'timetable') && (
+        <div className="m-summary">
+          <button
+            className="m-summary__main"
+            type="button"
+            onClick={() => setMobileSheet(page === 'select' ? 'selection' : 'ttsettings')}
+          >
+            <span className="m-summary__stat">
+              <b>{committedCourses.length}</b> {t('必定学')}
+            </span>
+            <span className="m-summary__stat">
+              <b>{cart.length}</b> {t('可能学')}
+            </span>
+            <span className="m-summary__stat">
+              <b>{totalUnits}</b> {t('学分')}
+            </span>
+            {clashes.length > 0 && <span className="m-summary__warn">{t('排不出')}</span>}
+            <span className="m-summary__more">{page === 'select' ? t('查看') : t('设置')}</span>
+          </button>
+          {page === 'select' ? (
+            <button
+              className="m-summary__go"
+              disabled={committedCourses.length === 0}
+              type="button"
+              onClick={() => go('timetable')}
+            >
+              {t('看课表')}
+            </button>
+          ) : (
+            <button className="m-summary__go" type="button" onClick={() => go('select')}>
+              {t('去选课')}
+            </button>
+          )}
+        </div>
+      )}
+
+      {isMobile && mobileSheet === 'filters' && (
+        <Sheet
+          footer={
+            <>
+              <button className="m-sheet-btn m-sheet-btn--ghost" disabled={activeFilterCount === 0} type="button" onClick={resetFilters}>
+                {t('重置')}
+              </button>
+              <button className="m-sheet-btn" type="button" onClick={closeSheet}>
+                {t('看结果')}
+              </button>
+            </>
+          }
+          title={t('筛选课程')}
+          onClose={closeSheet}
+        >
+          {searchCard}
+        </Sheet>
+      )}
+      {isMobile && mobileSheet === 'selection' && (
+        <Sheet
+          footer={
+            <button
+              className="m-sheet-btn"
+              disabled={committedCourses.length === 0}
+              type="button"
+              onClick={() => go('timetable')}
+            >
+              {t('排课表 →')}
+            </button>
+          }
+          title={t('当前选择')}
+          onClose={closeSheet}
+        >
+          {committedCard}
+          {cartCard}
+          {autoRemovedNote}
+          {problemsCard}
+          {progressCard}
+          {resetButton}
+        </Sheet>
+      )}
+      {isMobile && mobileSheet === 'ttsettings' && (
+        <Sheet title={t('排课设置')} onClose={closeSheet}>
+          {scheduleFilterCard}
+          {committedCardTT}
+          {resetButton}
+        </Sheet>
+      )}
+
+      {/* 移动端底部导航(05-mobile §4):五页 tab,拇指区可达;桌面由 CSS 隐藏。 */}
+      {isMobile && (
+        <nav aria-label={t('页面导航')} className="tabbar">
+          {PAGES.map(({ value, label }) => (
+            <button
+              aria-current={page === value ? 'page' : undefined}
+              className={page === value ? 'tabbar__item tabbar__item--on' : 'tabbar__item'}
+              key={value}
+              type="button"
+              onClick={() => go(value)}
+            >
+              <span className="tabbar__icon">{PAGE_ICON[value]}</span>
+              <span className="tabbar__label">{t(label)}</span>
+            </button>
+          ))}
+        </nav>
+      )}
+
       <footer className="foot">
         <div className="foot__main">
           <a
@@ -3100,6 +3407,11 @@ export default function App() {
             CUS by VinceJiang
           </a>
         </div>
+        {dataStamp && (
+          <p className="foot__note">
+            {t('课程数据更新于 {date}（香港时间），课程和项目信息以 CUSIS 为准', { date: dataStamp })}
+          </p>
+        )}
         <p className="foot__note">
           {t('抓取管线来自')}{' '}
           <a href="https://github.com/EagleZhen/another-cuhk-course-planner" rel="noreferrer" target="_blank">
@@ -3125,6 +3437,12 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {exportNote && (
+        <div aria-live="polite" className="toast" role="status">
+          {exportNote}
+        </div>
+      )}
 
       {detailCourse && (
         <CourseModal
